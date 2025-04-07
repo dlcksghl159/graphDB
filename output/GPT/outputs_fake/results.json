@@ -1,0 +1,113 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "properties": {
+                "name": "오브젠",
+                "founded_year": "2000",
+                "headquarters": "서울",
+                "CEO": "김지훈",
+                "products": "CDXP+, Obzen Sales Cloud",
+                "ticker_code": "OBZ123",
+                "stock_price": "32000",
+                "market_cap": "1600000000000",
+                "dividend_yield": "2.1",
+                "revenue": "500000000000",
+                "operating_income": "80000000000",
+                "net_income": "55000000000"
+            }
+        },
+        {
+            "label": "Company",
+            "properties": {
+                "name": "네오소프트",
+                "revenue": "350000000000",
+                "net_income": "40000000000",
+                "market_cap": "1000000000000"
+            }
+        },
+        {
+            "label": "Company",
+            "properties": {
+                "name": "데이터메이트",
+                "revenue": "280000000000",
+                "net_income": "30000000000",
+                "market_cap": "800000000000"
+            }
+        },
+        {
+            "label": "Product",
+            "properties": {
+                "name": "CDXP+",
+                "type": "CRM Solution"
+            }
+        },
+        {
+            "label": "Product",
+            "properties": {
+                "name": "Obzen Sales Cloud",
+                "type": "CRM Solution"
+            }
+        },
+        {
+            "label": "Person",
+            "properties": {
+                "name": "김지훈",
+                "role": "CEO"
+            }
+        },
+        {
+            "label": "InvestmentFirm",
+            "properties": {
+                "name": "스타벤처캐피탈",
+                "investment_amount": "15000000000",
+                "equity_percentage": "10"
+            }
+        },
+        {
+            "label": "AIResearch",
+            "properties": {
+                "name": "Obzen AI Lab",
+                "projects": "AI 금융 데이터 정제 및 추천 엔진 개발"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "CEO_OF",
+            "end_node": "Person",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "DEVELOPED_BY",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "INVESTED_BY",
+            "end_node": "InvestmentFirm",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "COMPETITION_WITH",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES",
+            "end_node": "AIResearch",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+{
+    "nodes": [
+        {
+            "label": "DataIntelligence",
+            "properties": {
+                "features": "",
+                "use_case": ""
+            }
+        },
+        {
+            "label": "ObzenAnalytics",
+            "properties": {
+                "features": "",
+                "use_case": ""
+            }
+        },
+        {
+            "label": "ProductPricing",
+            "properties": {
+                "factors": "",
+                "variability": ""
+            }
+        },
+        {
+            "label": "RawMaterials",
+            "properties": {
+                "business_activity": "",
+                "materials_purchase": "",
+                "outsourcing": ""
+            }
+        },
+        {
+            "label": "OutsourcingCosts",
+            "properties": {
+                "year2023": "",
+                "year2022": "",
+                "year2021": "",
+                "year2020": "",
+                "notes": ""
+            }
+        },
+        {
+            "label": "ProductionCapacity",
+            "properties": {
+                "business_nature": "",
+                "production_activity": ""
+            }
+        },
+        {
+            "label": "ProductionFacilities",
+            "properties": {
+                "tangible_assets": "",
+                "initial_value": "",
+                "acquisition": "",
+                "disposal": "",
+                "depreciation": "",
+                "closing_value": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "DataIntelligence",
+            "relationship": "utilizes",
+            "end_node": "ObzenAnalytics",
+            "properties": {}
+        },
+        {
+            "start_node": "DataIntelligence",
+            "relationship": "used_for",
+            "end_node": "ProductPricing",
+            "properties": {}
+        },
+        {
+            "start_node": "DataIntelligence",
+            "relationship": "related_to",
+            "end_node": "RawMaterials",
+            "properties": {}
+        },
+        {
+            "start_node": "RawMaterials",
+            "relationship": "incurs",
+            "end_node": "OutsourcingCosts",
+            "properties": {}
+        },
+        {
+            "start_node": "RawMaterials",
+            "relationship": "supports",
+            "end_node": "ProductionCapacity",
+            "properties": {}
+        },
+        {
+            "start_node": "ProductionCapacity",
+            "relationship": "connected_to",
+            "end_node": "ProductionFacilities",
+            "properties": {}
+        }
+    ]
+}

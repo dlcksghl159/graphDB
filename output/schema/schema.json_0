@@ -1,0 +1,110 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "properties": {
+                "name": "",
+                "industry": "",
+                "established_years": "",
+                "specialization": "",
+                "headquarters": ""
+            }
+        },
+        {
+            "label": "Technology",
+            "properties": {
+                "name": "",
+                "type": "",
+                "application": ""
+            }
+        },
+        {
+            "label": "Project",
+            "properties": {
+                "name": "",
+                "start_date": "",
+                "end_date": "",
+                "client": "",
+                "impact": ""
+            }
+        },
+        {
+            "label": "Market",
+            "properties": {
+                "name": "",
+                "focus_industries": "",
+                "strategy": ""
+            }
+        },
+        {
+            "label": "Service",
+            "properties": {
+                "name": "",
+                "type": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "Client",
+            "properties": {
+                "name": "",
+                "industry": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "uses_technology",
+            "end_node": "Technology",
+            "properties": {
+                "purpose": "",
+                "integration_level": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "executes_project",
+            "end_node": "Project",
+            "properties": {
+                "success_level": "",
+                "technologies_used": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "targets_market",
+            "end_node": "Market",
+            "properties": {
+                "market_share": "",
+                "expansion_strategy": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "offers_service",
+            "end_node": "Service",
+            "properties": {
+                "client_satisfaction_level": ""
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "serves_client",
+            "end_node": "Client",
+            "properties": {
+                "scope": "",
+                "duration": ""
+            }
+        },
+        {
+            "start_node": "Service",
+            "relationship": "provides_to",
+            "end_node": "Client",
+            "properties": {
+                "customization_level": "",
+                "support_level": ""
+            }
+        }
+    ]
+}

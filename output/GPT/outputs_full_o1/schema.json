@@ -1,0 +1,129 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "properties": {
+                "company_name": "",
+                "foundation_year": "",
+                "industry": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "Solution",
+            "properties": {
+                "solution_name": "",
+                "solution_type": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "Service",
+            "properties": {
+                "service_name": "",
+                "service_type": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "Client",
+            "properties": {
+                "client_name": "",
+                "client_industry": "",
+                "location": ""
+            }
+        },
+        {
+            "label": "Project",
+            "properties": {
+                "project_name": "",
+                "project_description": "",
+                "start_date": "",
+                "end_date": ""
+            }
+        },
+        {
+            "label": "Technology",
+            "properties": {
+                "technology_name": "",
+                "technology_field": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "ResearchDevelopment",
+            "properties": {
+                "rd_name": "",
+                "rd_scope": "",
+                "start_date": "",
+                "end_date": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS_SOLUTION",
+            "end_node": "Solution",
+            "properties": {
+                "start_date": "",
+                "end_date": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PROVIDES",
+            "end_node": "Service",
+            "properties": {
+                "start_date": "",
+                "end_date": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_CLIENT",
+            "end_node": "Client",
+            "properties": {
+                "contract_date": "",
+                "sales_volume": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_PROJECT",
+            "end_node": "Project",
+            "properties": {
+                "start_date": "",
+                "end_date": "",
+                "status": ""
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "integration_level": "",
+                "usage_scope": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "CONDUCTS_RND",
+            "end_node": "ResearchDevelopment",
+            "properties": {
+                "focus_area": "",
+                "budget": ""
+            }
+        },
+        {
+            "start_node": "ResearchDevelopment",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "integration_level": "",
+                "usage_scope": ""
+            }
+        }
+    ]
+}

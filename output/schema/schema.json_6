@@ -1,0 +1,86 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "properties": {
+                "name": "",
+                "market_risk_exposure": "",
+                "foreign_exchange_derivatives": "",
+                "research_and_development_organization": "",
+                "research_and_development_sections": []
+            }
+        },
+        {
+            "label": "ResearchAndDevelopmentSection",
+            "properties": {
+                "name": "",
+                "responsibility": []
+            }
+        },
+        {
+            "label": "Product",
+            "properties": {
+                "name": "",
+                "type": "",
+                "responsible_section": ""
+            }
+        },
+        {
+            "label": "Technology",
+            "properties": {
+                "name": "",
+                "application": []
+            }
+        },
+        {
+            "label": "ResearchProject",
+            "properties": {
+                "name": "",
+                "details": ""
+            }
+        },
+        {
+            "label": "Financials",
+            "properties": {
+                "year": "",
+                "revenue": "",
+                "total_research_expenses": "",
+                "development_expenses": "",
+                "current_research_expenses": "",
+                "revenue_ratio": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "has_section",
+            "end_node": "ResearchAndDevelopmentSection",
+            "properties": {}
+        },
+        {
+            "start_node": "ResearchAndDevelopmentSection",
+            "relationship": "responsible_for",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "ResearchAndDevelopmentSection",
+            "relationship": "utilizes",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "ResearchAndDevelopmentSection",
+            "relationship": "oversees",
+            "end_node": "ResearchProject",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "records_financials",
+            "end_node": "Financials",
+            "properties": {}
+        }
+    ]
+}

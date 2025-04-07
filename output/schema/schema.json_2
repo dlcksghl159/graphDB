@@ -1,0 +1,79 @@
+{
+    "nodes": [
+        {
+            "label": "Product",
+            "properties": {
+                "name": "",
+                "sales_2023": "",
+                "sales_percentage_2023": "",
+                "sales_2022": "",
+                "sales_percentage_2022": "",
+                "sales_2021": "",
+                "sales_percentage_2021": ""
+            }
+        },
+        {
+            "label": "Service",
+            "properties": {
+                "name": "",
+                "sales_2023": "",
+                "sales_percentage_2023": "",
+                "sales_2022": "",
+                "sales_percentage_2022": "",
+                "sales_2021": "",
+                "sales_percentage_2021": ""
+            }
+        },
+        {
+            "label": "Company",
+            "properties": {
+                "name": ""
+            }
+        },
+        {
+            "label": "Solution",
+            "properties": {
+                "name": "",
+                "description": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Service",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "PART_OF",
+            "end_node": "Solution",
+            "properties": {}
+        },
+        {
+            "start_node": "Service",
+            "relationship": "PART_OF",
+            "end_node": "Solution",
+            "properties": {}
+        },
+        {
+            "start_node": "Solution",
+            "relationship": "HAS_COMPONENT",
+            "end_node": "Service",
+            "properties": {}
+        },
+        {
+            "start_node": "Solution",
+            "relationship": "HAS_COMPONENT",
+            "end_node": "Product",
+            "properties": {}
+        }
+    ]
+}

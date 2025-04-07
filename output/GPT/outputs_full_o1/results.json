@@ -1,0 +1,129 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "properties": {
+                "company_name": "오브젠",
+                "foundation_year": "",
+                "industry": "AI-based CRM Software",
+                "description": "AI 기반 CRM 소프트웨어 전문 기업으로 금융, 유통 등 다양한 산업 분야에 마케팅 자동화, 데이터 분석, 개인화된 고객 경험을 제공"
+            }
+        },
+        {
+            "label": "Solution",
+            "properties": {
+                "solution_name": "CDXP+ (Customer Data & Experience Platform Plus)",
+                "solution_type": "CRM Solution",
+                "description": "데이터 수집, 분석, 마케팅 자동화, AI 적용을 통해 개인화된 고객 경험을 제공하는 통합 솔루션"
+            }
+        },
+        {
+            "label": "Service",
+            "properties": {
+                "service_name": "Professional Service",
+                "service_type": "Implementation and Maintenance",
+                "description": "CRM 솔루션 구축, 커스터마이징, 운영 및 유지보수 등 전문 서비스"
+            }
+        },
+        {
+            "label": "Client",
+            "properties": {
+                "client_name": "KB국민카드",
+                "client_industry": "Financial Services",
+                "location": "South Korea"
+            }
+        },
+        {
+            "label": "Project",
+            "properties": {
+                "project_name": "KB국민카드 AIMs (AI Marketing System)",
+                "project_description": "AI를 기반으로 모든 마케팅 요소를 최적화하고 프로세스를 자동화하는 프로젝트, 2023년 1월 본격 가동",
+                "start_date": "2022-01",
+                "end_date": "2023-01"
+            }
+        },
+        {
+            "label": "Technology",
+            "properties": {
+                "technology_name": "AI Marketing",
+                "technology_field": "Artificial Intelligence",
+                "description": "고객 데이터를 실시간 분석하고 자동화된 마케팅 캠페인을 수행하기 위한 AI 기반 기술"
+            }
+        },
+        {
+            "label": "ResearchDevelopment",
+            "properties": {
+                "rd_name": "Financial Synthetic Data Project",
+                "rd_scope": "금융 분야 AI 학습용 합성 데이터 알고리즘 연구 및 개발",
+                "start_date": "2022",
+                "end_date": "2023"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS_SOLUTION",
+            "end_node": "Solution",
+            "properties": {
+                "start_date": "",
+                "end_date": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PROVIDES",
+            "end_node": "Service",
+            "properties": {
+                "start_date": "",
+                "end_date": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_CLIENT",
+            "end_node": "Client",
+            "properties": {
+                "contract_date": "2022-01",
+                "sales_volume": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_PROJECT",
+            "end_node": "Project",
+            "properties": {
+                "start_date": "2022-01",
+                "end_date": "2023-01",
+                "status": "Completed"
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "integration_level": "",
+                "usage_scope": ""
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "CONDUCTS_RND",
+            "end_node": "ResearchDevelopment",
+            "properties": {
+                "focus_area": "AI, data analysis",
+                "budget": ""
+            }
+        },
+        {
+            "start_node": "ResearchDevelopment",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "integration_level": "",
+                "usage_scope": ""
+            }
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "nodes": [
+        {
+            "label": "RevenueType",
+            "properties": {
+                "name": "",
+                "unit": ""
+            }
+        },
+        {
+            "label": "Year",
+            "properties": {
+                "year": ""
+            }
+        },
+        {
+            "label": "Revenue",
+            "properties": {
+                "amount": "",
+                "percentage": ""
+            }
+        },
+        {
+            "label": "Company",
+            "properties": {
+                "name": ""
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "properties": {
+                "name": ""
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "properties": {
+                "description": ""
+            }
+        },
+        {
+            "label": "ContractType",
+            "properties": {
+                "type": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "RevenueType",
+            "relationship": "HAS_REVENUE",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "Year",
+            "relationship": "RECORDED_REVENUE",
+            "end_node": "Revenue",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "USES_SALES_CHANNEL",
+            "end_node": "SalesChannel",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "EMPLOYS_STRATEGY",
+            "end_node": "SalesStrategy",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "CONTRACTS_WITH",
+            "end_node": "ContractType",
+            "properties": {}
+        }
+    ]
+}

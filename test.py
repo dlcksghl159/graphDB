@@ -184,9 +184,9 @@ while True:
         ]
     )
 
-    # 결과 출력
-    print("📄 GPT 응답:")
-    print(response.choices[0].message.content)
+    # # 결과 출력
+    # print("📄 GPT 응답:")
+    # print(response.choices[0].message.content)
 
     # 응답 내용 가져오기
     gpt_output = response.choices[0].message.content
@@ -206,12 +206,9 @@ while True:
         print("❌ JSON 구조가 감지되지 않음")
         parsed_json = {}
 
-    schema_path = "schema.json"
-
+    schema_path = 'schema.json'
     with open(schema_path+f'_{i}.json', "w", encoding="utf-8") as f:
-            json.dump(parsed_json, f, ensure_ascii=False, indent=4)
-
-    
+        json.dump(parsed_json, f, ensure_ascii=False, indent=4)
 
     if not os.path.exists(schema_path):
         # 파일이 없으면 새로 생성 + parsed_json 저장
@@ -225,15 +222,11 @@ while True:
             old_schema = json.load(f)
         print("📄 기존 schema.json을 old_schema로 불러왔습니다.")
         merged_schema = merge_schema_with_relations(old_schema, parsed_json)
-        print("old schema")
-        print(old_schema)
-        print("schema")
-        print(parsed_json)
-        print("new schema")
-        print(merged_schema)
         with open(schema_path, "w", encoding="utf-8") as f:
             json.dump(merged_schema, f, ensure_ascii=False, indent=4)
         print("✅ 병합된 schema 저장 완료: schema.json")
+
+    
 
     
     i += 1
@@ -244,6 +237,61 @@ while True:
 
 
 # --------------------------------------------------------------------------
+
+def merge_nodes_and_relations(old_schema: dict, new_schema: dict) -> dict:
+    # --- 노드 병합 (label + name 기준) ---
+    def build_node_dict(nodes):
+        result = {}
+        for node in nodes:
+            label = node["label"]
+            properties = node.get("properties", {})
+            name = properties.get("name")
+            if name is None:
+                continue  # name이 없으면 병합 기준에 부합하지 않음
+            key = (label, name)
+            if key in result:
+                result[key].update(properties)
+            else:
+                result[key] = properties.copy()
+        return result
+
+    old_nodes = build_node_dict(old_schema.get("nodes", []))
+    new_nodes = build_node_dict(new_schema.get("nodes", []))
+    all_keys = set(old_nodes.keys()).union(new_nodes.keys())
+
+    merged_nodes = []
+    for key in all_keys:
+        merged_props = {**old_nodes.get(key, {}), **new_nodes.get(key, {})}
+        label, _ = key
+        merged_nodes.append({
+            "label": label,
+            "properties": merged_props
+        })
+
+    # --- 관계 병합 (start_node, relationship, end_node 기준) ---
+    def rel_key(rel):
+        return (rel["start_node"], rel["relationship"], rel["end_node"])
+
+    old_rels_dict = {rel_key(r): r.get("properties", {}) for r in old_schema.get("relations", [])}
+    new_rels_dict = {rel_key(r): r.get("properties", {}) for r in new_schema.get("relations", [])}
+    all_keys = set(old_rels_dict.keys()).union(new_rels_dict.keys())
+
+    merged_relations = []
+    for key in all_keys:
+        start_node, relationship, end_node = key
+        merged_props = {**old_rels_dict.get(key, {}), **new_rels_dict.get(key, {})}
+        merged_relations.append({
+            "start_node": start_node,
+            "relationship": relationship,
+            "end_node": end_node,
+            "properties": merged_props
+        })
+
+    return {
+        "nodes": merged_nodes,
+        "relations": merged_relations
+    }
+
 # 1. JSON 파일 로딩
 with open("schema.json", "r", encoding="utf-8") as f:
     schema_json = json.load(f)
@@ -269,7 +317,7 @@ while True:
 
     with open(filename, "r", encoding="utf-8") as f:
         content = f.read()
-        print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
+        # print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
 
     prompt = f'''
     Text : {content}, 
@@ -289,9 +337,9 @@ while True:
     )
 
     
-    # 결과 출력
-    print("📄 GPT 응답:")
-    print(response.choices[0].message.content)
+    # # 결과 출력
+    # print("📄 GPT 응답:")
+    # print(response.choices[0].message.content)
 
         
     # 응답 내용 가져오기
@@ -321,42 +369,30 @@ while True:
         print("❌ JSON 구조가 감지되지 않음")
         print("⚠️ GPT 출력 원문:\n", gpt_output)
 
-    result_path = 'result,json'
+    result_path = "result.json"
+
+    with open(result_path+f'_{i}.json', "w", encoding="utf-8") as f:
+            json.dump(parsed_json, f, ensure_ascii=False, indent=4)
+
+    
 
     if not os.path.exists(result_path):
         # 파일이 없으면 새로 생성 + parsed_json 저장
         with open(result_path, "w", encoding="utf-8") as f:
             json.dump(parsed_json, f, ensure_ascii=False, indent=4)
-        print("✅ schema.json이 없어서 새로 생성했습니다.")
-        old_schema = None
+        print("✅ result.json이 없어서 새로 생성했습니다.")
+        old_result = None
     else:
         # 파일이 있으면 기존 스키마 로드
         with open(result_path, "r", encoding="utf-8") as f:
-            old_schema = json.load(f)
-        print("📄 기존 schema.json을 old_schema로 불러왔습니다.")
-        merged_schema = merge_schema_nodes_by_label(old_schema, parsed_json)
-        print("old schema")
-        print(old_schema)
-        print("schema")
-        print(parsed_json)
-        print("new schema")
-        print(merged_schema)
+            old_result = json.load(f)
+        print("📄 기존 result.json을 old_result로 불러왔습니다.")
+        merged_result = merge_nodes_and_relations(old_result, parsed_json)
         with open(result_path, "w", encoding="utf-8") as f:
-            json.dump(merged_schema, f, ensure_ascii=False, indent=4)
-        print("✅ 병합된 schema 저장 완료: schema.json")
+            json.dump(merged_result, f, ensure_ascii=False, indent=4)
+        print("✅ 병합된 result 저장 완료: result.json")
+    
 
         
     i += 1
-
-
-
-
-
-
-
-
-
-
-
-
 

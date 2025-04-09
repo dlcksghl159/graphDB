@@ -1,0 +1,45 @@
+{
+    "nodes": [
+        {
+            "label": "SoftwareSolution",
+            "name": "Datalntelligence",
+            "properties": {
+                "solution_type": "Excel Integration",
+                "features": "Real-time OLAP analysis and Excel report merging, automation of business reports"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "obzen Analytics",
+            "properties": {
+                "description": "Omnichannel customer behavior analysis",
+                "features": "Customer behavior data processing and real-time analysis",
+                "version": "",
+                "technology": "",
+                "productType": "",
+                "capabilities": "Online and offline integration"
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "Digital & Omnichannel",
+            "properties": {
+                "channel_description": "Real-time data collection and integration of online and offline customer behavior"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Datalntelligence",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "obzen Analytics",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "SalesChannel",
+            "properties": {}
+        }
+    ]
+}

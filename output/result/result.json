@@ -1,0 +1,765 @@
+{
+    "nodes": [
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 16986,
+                "rndCost": 4068
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "Data Intelligence",
+            "properties": {
+                "solution_type": "Business Intelligence",
+                "features": "강력한 분석 엔진과 풍부한 시각요소, 자연어로 차트 생성 기능"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Global Consulting Firm",
+            "properties": {
+                "partnerType": "Consulting",
+                "areaOfCollaboration": "Joint Sales, New Product Development"
+            }
+        },
+        {
+            "label": "Cost",
+            "name": "Outsourcing Cost",
+            "properties": {
+                "year": 2020,
+                "amount": 5470
+            }
+        },
+        {
+            "label": "Company",
+            "name": "CRM 전문 기업",
+            "properties": {
+                "foundation_date": "",
+                "business_domain": "AI 기반 CRM 소프트웨어",
+                "years_in_business": 20,
+                "description": "AI, 빅데이터, 클라우드 기술 기반의 CRM 솔루션 제공",
+                "headquarters": "",
+                "companyName": "CRM 전문 기업",
+                "industry": "소프트웨어",
+                "businessScope": "CRM 솔루션 개발 및 맞춤형 서비스 제공",
+                "has_export_sales": true,
+                "category": "소프트웨어",
+                "foundationYear": 0,
+                "location": "대한민국"
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "판매경로",
+            "properties": {
+                "channel_description": "당사의 판매경로는 고객사와 직접 계약하는 경우, 고객사 IT 계열사와 계약하는 경우, 주사업자와 계약하는 경우로 구분됩니다."
+            }
+        },
+        {
+            "label": "Project",
+            "name": "KB국민카드 AIMs 프로젝트",
+            "properties": {
+                "client": "KB국민카드",
+                "start_date": "2022년 초",
+                "description": "AI 기반 마케팅 최적화 및 자동화 프로젝트",
+                "projectType": "AI 마케팅 시스템",
+                "scale": "대형",
+                "startDate": "",
+                "endDate": "2023년 1월"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "제품 라이선스비",
+            "properties": {
+                "sales_2021": 2818,
+                "share_2021": "14.00%",
+                "sales_2022": 4940,
+                "share_2022": "19.05%",
+                "sales_2023": 2594,
+                "share_2023": "15.27%"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Unnamed Company",
+            "properties": {
+                "business_domain": "AI 기반 CRM(Customer Relationship Management) 소프트웨어 개발 및 공급",
+                "description": "사업은 일반 제조업과 달리 원재료 매입이 존재하지 않고 외주 인력을 통해 제품 공급"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "Kubernetes-based Real-time Model Serving Technology Development",
+            "properties": {
+                "client": "",
+                "start_date": "",
+                "description": "Development of REST API-based container wrapping for model deployment, supporting AutoScaling and resource monitoring",
+                "projectType": "Technology",
+                "scale": "Medium",
+                "startDate": "",
+                "endDate": ""
+            }
+        },
+        {
+            "label": "Company",
+            "name": "UnknownCompany",
+            "properties": {
+                "companyName": "당사",
+                "industry": "Finance and Retail",
+                "description": "Engages in CRM solutions for financial and retail sectors using AI and big data technologies."
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "고객사의 사업 계획 시점부터 관여",
+            "properties": {
+                "strategy_description": "당사는 선제적이고 적극적인 사전 영업을 통해 본 입찰에 들어가기 전에 수의계약/단독입찰로 판매가 결정되는 것을 우선적으로 추진하고 있습니다. 이를 위해 Sales Lab은 AI마케팅 솔루션을 고민하는 고객사를 파악하여 사업 계획 수립 시점부터 지속적으로 관여합니다."
+            }
+        },
+        {
+            "label": "Service",
+            "name": "커스터마이징",
+            "properties": {
+                "serviceType": "소프트웨어 서비스",
+                "description": "CRM 솔루션 커스터마이징 및 운영 관리 제공"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Partner Collaboration",
+            "properties": {
+                "strategy_description": "Collaborate with leading partners for joint sales efforts and shared projects."
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "CDXP+",
+            "properties": {
+                "type": "Customer Data & Experience Platform Plus",
+                "description": "다양한 채널에서 발생하는 데이터를 수집하여 고객 중심으로 통합하고 AI 등을 적용하여 개인화된 고객 경험을 제공"
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2021",
+            "properties": {
+                "year": 2021,
+                "revenue": 20075,
+                "rndCost": 4971
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Existing Customer Upgrade",
+            "properties": {
+                "strategy_description": "Promote new features and advanced technologies to encourage upgrades and additional purchases."
+            }
+        },
+        {
+            "label": "Product",
+            "name": "CDXP+",
+            "properties": {
+                "description": "End-to-End customer data and experience management platform",
+                "features": "Integration of data collection, analysis, AI application, and marketing automation",
+                "version": "",
+                "technology": "Workflow technology",
+                "productType": "Platform",
+                "capabilities": "High compatibility with existing software, supporting flexible product adoption and expansion"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "Obzen Analytics",
+            "properties": {
+                "solution_type": "Data Analysis and Visualization",
+                "features": "행동 데이터 수집, 고객 데이터 통합, 행동 데이터 시각화"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "Datalntelligence",
+            "properties": {
+                "solution_type": "Excel Integration",
+                "features": "Real-time OLAP analysis and Excel report merging, automation of business reports"
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "Digital & Omnichannel",
+            "properties": {
+                "channel_description": "Real-time data collection and integration of online and offline customer behavior"
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Products Contract",
+            "properties": {
+                "totalAmount": 1744,
+                "recognizedRevenue": 1247,
+                "backlog": 497
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Professional Services Contract",
+            "properties": {
+                "totalAmount": 5931,
+                "recognizedRevenue": 3698,
+                "backlog": 2233
+            }
+        },
+        {
+            "label": "Project",
+            "name": "SmartAI Cloud Version Development",
+            "properties": {
+                "client": "NaverCloudPlatform",
+                "start_date": "PoC stage",
+                "description": "Development of IaaS-based cloud version",
+                "projectType": "Cloud",
+                "scale": "Large",
+                "startDate": "PoC stage",
+                "endDate": "~2024"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "obzen Daisy Suite",
+            "properties": {
+                "description": "Pre-defined standardized marketing solution with industry-based data model and feature set",
+                "features": "Standardized functions and contents for quick deployment",
+                "version": "",
+                "technology": "",
+                "productType": "Solution",
+                "capabilities": "Allows quick application in mid-sized enterprises without modifications"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "서비스 매출 2023",
+            "properties": {
+                "revenueMillionWon": 14392,
+                "percentage": 84.73
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "라이선스 매출 2023",
+            "properties": {
+                "revenueMillionWon": 2594,
+                "percentage": 15.27
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Our Company",
+            "properties": {
+                "description": "",
+                "companyName": "Our Company",
+                "industry": "Technology",
+                "businessScope": "Marketing, AI, Financial Solutions"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "금융 및 유통업",
+            "properties": {
+                "industry_name": "금융 및 유통업",
+                "description": "고객 데이터를 축적하고 분석하여 빈번하게 고객과 커뮤니케이션"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "라이선스",
+            "properties": {
+                "sales_2021": 2818,
+                "share_2021": "14.00%",
+                "sales_2022": 4940,
+                "share_2022": "19.05%",
+                "sales_2023": 2594,
+                "share_2023": "15.27%"
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Technology Fees",
+            "properties": {
+                "totalAmount": 1981,
+                "recognizedRevenue": 135,
+                "backlog": 1846
+            }
+        },
+        {
+            "label": "Product",
+            "name": "SmartAI v1.1",
+            "properties": {
+                "description": "Security enhancement with Single Sign On, automated installation using Ansible, improved monitoring including GPU, Kubernetes, Hadoop, and real-time analysis with Impala.",
+                "features": "Single Sign On, Ansible automation, monitoring, real-time analysis",
+                "version": "v1.1",
+                "technology": "Kerberos, Keycloak, oAuth, Ansible, Kubernetes, Hadoop, Impala",
+                "productType": "Software",
+                "capabilities": "Dynamic response through automatic build, improved response time with Impala"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "AI Marketing Product",
+            "properties": {
+                "version": "New Version",
+                "technology": "AI, Data Processing",
+                "productType": "Software",
+                "features": "Advanced AI, Improved Data Processing"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Finance",
+            "properties": {
+                "sector": "Banking, Insurance, Securities",
+                "characteristics": "Banking, Securities, Card companies"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "국내 빅테크 기업",
+            "properties": {
+                "partnerType": "기술 파트너",
+                "areaOfCollaboration": "CRM 솔루션 제공 및 해외 진출"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "프로페셔널 서비스",
+            "properties": {
+                "sales_2021": 14735,
+                "share_2021": "73.40%",
+                "sales_2022": 17687,
+                "share_2022": "68.20%",
+                "sales_2023": 10572,
+                "share_2023": "62.24%"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "확장 전략",
+            "properties": {
+                "strategy_description": "CRM 전 영역의 솔루션 제품화를 통한 시장 확장, 국내 빅테크 기업과 협업, 해외 진출 계획"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "당사",
+            "properties": {
+                "has_export_sales": false
+            }
+        },
+        {
+            "label": "Project",
+            "name": "Marketing AI Module Development",
+            "properties": {
+                "client": "onCMS",
+                "start_date": "",
+                "description": "Development of recommendation model management, auto-targeting module, and AI-based AB test module",
+                "projectType": "AI",
+                "scale": "Platform-wide",
+                "startDate": "",
+                "endDate": ""
+            }
+        },
+        {
+            "label": "Product",
+            "name": "AI 기반 CRM 소프트웨어",
+            "properties": {
+                "description": "마케팅 자동화 및 실시간 마케팅 솔루션",
+                "features": "AI, 빅데이터, 클라우드 기술 활용",
+                "version": "",
+                "technology": "AI, 빅데이터, 클라우드",
+                "productType": "CRM 소프트웨어",
+                "capabilities": "고객 맞춤형 마케팅 및 업무 효율성 향상"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "제품 운영비",
+            "properties": {
+                "sales_2021": 1277,
+                "share_2021": "6.40%",
+                "sales_2022": 1821,
+                "share_2022": "7.02%",
+                "sales_2023": 2257,
+                "share_2023": "13.29%"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Large System Integrator",
+            "properties": {
+                "partnerType": "System Integration",
+                "areaOfCollaboration": "Joint Sales in AI Marketing"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Retail",
+            "properties": {
+                "sector": "Department Stores, Home Shopping",
+                "characteristics": "Leading companies in distribution"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Enhanced Market Share Strategy",
+            "properties": {
+                "strategy_description": "To continuously enhance high market share in the major enterprise sector through collaboration with strategic investors."
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2022",
+            "properties": {
+                "year": 2022,
+                "revenue": 25933,
+                "rndCost": 4712
+            }
+        },
+        {
+            "label": "Product",
+            "name": "obzen Analytics",
+            "properties": {
+                "description": "Omnichannel customer behavior analysis",
+                "features": "Customer behavior data processing and real-time analysis",
+                "version": "",
+                "technology": "",
+                "productType": "",
+                "capabilities": "Online and offline integration"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "서비스",
+            "properties": {
+                "sales_2021": 17258,
+                "share_2021": "86.00%",
+                "sales_2022": 20993,
+                "share_2022": "80.95%",
+                "sales_2023": 14392,
+                "share_2023": "84.73%"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "제품 기술비",
+            "properties": {
+                "sales_2021": 1246,
+                "share_2021": "6.20%",
+                "sales_2022": 1485,
+                "share_2022": "5.73%",
+                "sales_2023": 1563,
+                "share_2023": "9.20%"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "CRM 솔루션",
+            "properties": {
+                "solution_type": "구축형 및 SaaS 플랫폼",
+                "features": "데이터 기반의 고객 맞춤형 경험 제공, 영업관리 및 분석"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "당사",
+            "relationship": "PROVIDES",
+            "end_node": "제품 운영비",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "UPSELLS",
+            "end_node": "커스터마이징",
+            "properties": {}
+        },
+        {
+            "start_node": "당사",
+            "relationship": "PROVIDES",
+            "end_node": "제품 기술비",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Professional Services Contract",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Technology Fees",
+            "properties": {}
+        },
+        {
+            "start_node": "라이선스",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "라이선스 매출 2023",
+            "properties": {}
+        },
+        {
+            "start_node": "obzen Analytics",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "SalesChannel",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OFFERS_PRODUCT",
+            "end_node": "AI Marketing Product",
+            "properties": {}
+        },
+        {
+            "start_node": "당사",
+            "relationship": "PROVIDES",
+            "end_node": "제품 라이선스비",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_PARTNER",
+            "end_node": "Large System Integrator",
+            "properties": {}
+        },
+        {
+            "start_node": "Unnamed Company",
+            "relationship": "INCURS",
+            "end_node": "Outsourcing Cost",
+            "properties": {}
+        },
+        {
+            "start_node": "Company Financials 2023",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "당사",
+            "relationship": "USES_SALES_CHANNEL",
+            "end_node": "판매경로",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "HAS_SOLUTION",
+            "end_node": "CRM 솔루션",
+            "properties": {
+                "since": ""
+            }
+        },
+        {
+            "start_node": "SmartAI v1.1",
+            "relationship": "LEVERAGES",
+            "end_node": "Kubernetes",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "금융 및 유통업",
+            "properties": {
+                "priority": "우선"
+            }
+        },
+        {
+            "start_node": "Datalntelligence",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "SmartAI v1.1",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Single Sign On",
+            "properties": {
+                "priority_level": "High"
+            }
+        },
+        {
+            "start_node": "SmartAI v1.1",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Ansible automation",
+            "properties": {
+                "priority_level": "High"
+            }
+        },
+        {
+            "start_node": "SmartAI Cloud Version Development",
+            "relationship": "USES",
+            "end_node": "NaverCloudPlatform",
+            "properties": {}
+        },
+        {
+            "start_node": "서비스",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "서비스 매출 2023",
+            "properties": {}
+        },
+        {
+            "start_node": "Unnamed Company",
+            "relationship": "HAS_SOLUTION",
+            "end_node": "Data Intelligence",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_PARTNER",
+            "end_node": "Global Consulting Firm",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "EXECUTES",
+            "end_node": "KB국민카드 AIMs 프로젝트",
+            "properties": {
+                "role": "주도"
+            }
+        },
+        {
+            "start_node": "Company Financials 2021",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "확장 전략",
+            "properties": {}
+        },
+        {
+            "start_node": "CDXP+",
+            "relationship": "HAS_FEATURE",
+            "end_node": "라이선스",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Partner Collaboration",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Finance",
+            "properties": {}
+        },
+        {
+            "start_node": "CDXP+",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Data integration",
+            "properties": {}
+        },
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "OPERATES_IN",
+            "end_node": "Finance",
+            "properties": {
+                "since": "Unknown"
+            }
+        },
+        {
+            "start_node": "당사",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "고객사의 사업 계획 시점부터 관여",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Retail",
+            "properties": {}
+        },
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "OPERATES_IN",
+            "end_node": "Retail",
+            "properties": {
+                "since": "Unknown"
+            }
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "HAS_PARTNER",
+            "end_node": "국내 빅테크 기업",
+            "properties": {}
+        },
+        {
+            "start_node": "SmartAI v1.1",
+            "relationship": "LEVERAGES",
+            "end_node": "Hadoop",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Existing Customer Upgrade",
+            "properties": {}
+        },
+        {
+            "start_node": "CRM 전문 기업",
+            "relationship": "OFFERS",
+            "end_node": "AI 기반 CRM 소프트웨어",
+            "properties": {}
+        },
+        {
+            "start_node": "obzen Daisy Suite",
+            "relationship": "DEPLOYED_ON",
+            "end_node": "Standard data model",
+            "properties": {}
+        },
+        {
+            "start_node": "Company Financials 2022",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Enhanced Market Share Strategy",
+            "properties": {}
+        },
+        {
+            "start_node": "당사",
+            "relationship": "PROVIDES",
+            "end_node": "프로페셔널 서비스",
+            "properties": {}
+        },
+        {
+            "start_node": "Marketing AI Module Development",
+            "relationship": "USES",
+            "end_node": "onCMS",
+            "properties": {}
+        },
+        {
+            "start_node": "CDXP+",
+            "relationship": "HAS_FEATURE",
+            "end_node": "서비스",
+            "properties": {}
+        },
+        {
+            "start_node": "Unnamed Company",
+            "relationship": "HAS_SOLUTION",
+            "end_node": "Obzen Analytics",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Products Contract",
+            "properties": {}
+        }
+    ]
+}

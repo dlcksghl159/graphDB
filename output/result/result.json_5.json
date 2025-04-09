@@ -1,0 +1,157 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Our Company",
+            "properties": {
+                "description": "",
+                "companyName": "Our Company",
+                "industry": "Technology",
+                "businessScope": "Marketing, AI, Financial Solutions"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Global Consulting Firm",
+            "properties": {
+                "partnerType": "Consulting",
+                "areaOfCollaboration": "Joint Sales, New Product Development"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Large System Integrator",
+            "properties": {
+                "partnerType": "System Integration",
+                "areaOfCollaboration": "Joint Sales in AI Marketing"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "AI Marketing Product",
+            "properties": {
+                "version": "New Version",
+                "technology": "AI, Data Processing",
+                "productType": "Software",
+                "features": "Advanced AI, Improved Data Processing"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Existing Customer Upgrade",
+            "properties": {
+                "strategy_description": "Promote new features and advanced technologies to encourage upgrades and additional purchases."
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Partner Collaboration",
+            "properties": {
+                "strategy_description": "Collaborate with leading partners for joint sales efforts and shared projects."
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Finance",
+            "properties": {
+                "sector": "Banking, Insurance, Securities"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Retail",
+            "properties": {
+                "sector": "Department Stores, Home Shopping"
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Products Contract",
+            "properties": {
+                "totalAmount": 1744,
+                "recognizedRevenue": 1247,
+                "backlog": 497
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Professional Services Contract",
+            "properties": {
+                "totalAmount": 5931,
+                "recognizedRevenue": 3698,
+                "backlog": 2233
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "Technology Fees",
+            "properties": {
+                "totalAmount": 1981,
+                "recognizedRevenue": 135,
+                "backlog": 1846
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_PARTNER",
+            "end_node": "Global Consulting Firm",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_PARTNER",
+            "end_node": "Large System Integrator",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OFFERS_PRODUCT",
+            "end_node": "AI Marketing Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Existing Customer Upgrade",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Partner Collaboration",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Products Contract",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Professional Services Contract",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Technology Fees",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Finance",
+            "properties": {}
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Retail",
+            "properties": {}
+        }
+    ]
+}

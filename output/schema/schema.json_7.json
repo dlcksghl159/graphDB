@@ -1,0 +1,120 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "string",
+            "properties": {
+                "industry": "string",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "startDate": "date",
+                "endDate": "date"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "version": "string",
+                "capabilities": "string"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "category": "string"
+            }
+        },
+        {
+            "label": "Dataset",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "source": "string"
+            }
+        },
+        {
+            "label": "UseCase",
+            "name": "string",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "Algorithm",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "CustomerSegment",
+            "name": "string",
+            "properties": {
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "EXECUTES",
+            "end_node": "Project",
+            "properties": {
+                "role": "string"
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "USES",
+            "end_node": "Dataset",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "TARGETS",
+            "end_node": "CustomerSegment",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "APPLIES",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "LEVERAGES",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Algorithm",
+            "relationship": "ENABLED_BY",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "OFFERS",
+            "end_node": "UseCase",
+            "properties": {}
+        }
+    ]
+}

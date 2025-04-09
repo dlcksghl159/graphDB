@@ -1,0 +1,68 @@
+{
+    "nodes": [
+        {
+            "label": "Product",
+            "name": "String",
+            "properties": {
+                "version": "String",
+                "description": "String"
+            }
+        },
+        {
+            "label": "Module",
+            "name": "String",
+            "properties": {
+                "description": "String"
+            }
+        },
+        {
+            "label": "Feature",
+            "name": "String",
+            "properties": {
+                "description": "String"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "String",
+            "properties": {
+                "category": "String",
+                "description": "String"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "String",
+            "properties": {
+                "type": "String",
+                "description": "String"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Product",
+            "relationship": "HAS_MODULE",
+            "end_node": "Module",
+            "properties": {}
+        },
+        {
+            "start_node": "Module",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Feature",
+            "properties": {}
+        },
+        {
+            "start_node": "Feature",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "DEPLOYED_ON",
+            "end_node": "Platform",
+            "properties": {}
+        }
+    ]
+}

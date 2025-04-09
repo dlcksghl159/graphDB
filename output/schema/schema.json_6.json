@@ -1,0 +1,114 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "String",
+            "properties": {
+                "foundationYear": "Number",
+                "location": "String",
+                "industry": "String"
+            }
+        },
+        {
+            "label": "ResearchLab",
+            "name": "String",
+            "properties": {
+                "focusArea": "String",
+                "staffCount": "Number"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "String",
+            "properties": {
+                "description": "String",
+                "productType": "String"
+            }
+        },
+        {
+            "label": "Contract",
+            "name": "String",
+            "properties": {
+                "contractDate": "String",
+                "contractValue": "Number",
+                "contractType": "String"
+            }
+        },
+        {
+            "label": "Risk",
+            "name": "String",
+            "properties": {
+                "riskType": "String",
+                "description": "String"
+            }
+        },
+        {
+            "label": "ResearchActivity",
+            "name": "String",
+            "properties": {
+                "topic": "String",
+                "startYear": "Number",
+                "details": "String"
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "String",
+            "properties": {
+                "year": "Number",
+                "revenue": "Number",
+                "rndCost": "Number"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "HAS_RESEARCHLAB",
+            "end_node": "ResearchLab",
+            "properties": {
+                "since": "String"
+            }
+        },
+        {
+            "start_node": "ResearchLab",
+            "relationship": "DEVELOPS_PRODUCT",
+            "end_node": "Product",
+            "properties": {
+                "startDate": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ENGAGES_CONTRACT",
+            "end_node": "Contract",
+            "properties": {
+                "purpose": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "IS_EXPOSED_TO",
+            "end_node": "Risk",
+            "properties": {
+                "exposureLevel": "String"
+            }
+        },
+        {
+            "start_node": "ResearchLab",
+            "relationship": "CONDUCTS",
+            "end_node": "ResearchActivity",
+            "properties": {
+                "assignedTeam": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_FINANCIAL_INFO",
+            "end_node": "FinancialInfo",
+            "properties": {
+                "reportDate": "String"
+            }
+        }
+    ]
+}

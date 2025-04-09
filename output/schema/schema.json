@@ -1,1084 +1,589 @@
 {
-  "nodes": [
-    {
-      "label": "ProductOrService",
-      "properties": {
-        "type": "",
-        "name": ""
-      }
-    },
-    {
-      "label": "Partnership",
-      "properties": {
-        "partner": "",
-        "objective": ""
-      }
-    },
-    {
-      "label": "ClientCompany",
-      "properties": {
-        "industry": ""
-      }
-    },
-    {
-      "label": "Module",
-      "properties": {
-        "name": "",
-        "purpose": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "LLM",
-      "properties": {
-        "name": "",
-        "provider": ""
-      }
-    },
-    {
-      "label": "Environment",
-      "properties": {
-        "name": ""
-      }
-    },
-    {
-      "label": "Consultant",
-      "properties": {
-        "name": ""
-      }
-    },
-    {
-      "label": "CRMFeature",
-      "properties": {
-        "industry": "",
-        "requirement": "",
-        "functionality": ""
-      }
-    },
-    {
-      "label": "Algorithm",
-      "properties": {
-        "type": "",
-        "function": "",
-        "name": "",
-        "application": ""
-      }
-    },
-    {
-      "label": "Data_Intelligence",
-      "properties": {
-        "name": "",
-        "features": ""
-      }
-    },
-    {
-      "label": "Goal",
-      "properties": {
-        "description": ""
-      }
-    },
-    {
-      "label": "ProductionCapacity",
-      "properties": {
-        "software_development": "",
-        "no_physical_products": "",
-        "business_nature": "",
-        "production_activity": ""
-      }
-    },
-    {
-      "label": "MarketingProduct",
-      "properties": {
-        "version": "",
-        "features": "",
-        "technologies": ""
-      }
-    },
-    {
-      "label": "FinancialData",
-      "properties": {
-        "type": "",
-        "source": "",
-        "usage": ""
-      }
-    },
-    {
-      "label": "Order",
-      "properties": {
-        "order_date": "",
-        "delivery_date": "",
-        "total_value": "",
-        "recognized_revenue": "",
-        "remaining_balance": "",
-        "item": "",
-        "total_amount": "",
-        "outstanding_balance": ""
-      }
-    },
-    {
-      "label": "ProductionFacility",
-      "properties": {
-        "fixed_assets": ""
-      }
-    },
-    {
-      "label": "AIModel",
-      "properties": {
-        "type": "",
-        "algorithm": "",
-        "purpose": ""
-      }
-    },
-    {
-      "label": "DataProduct",
-      "properties": {
-        "features": "",
-        "technologies": ""
-      }
-    },
-    {
-      "label": "Outsourcing_Costs",
-      "properties": {
-        "year": "",
-        "amount": ""
-      }
-    },
-    {
-      "label": "ProductPriceTrend",
-      "properties": {
-        "service_provision": "",
-        "supply_amount_variation": ""
-      }
-    },
-    {
-      "label": "ProductionFacilities",
-      "properties": {
-        "tangible_assets": "",
-        "initial_value": "",
-        "acquisition": "",
-        "disposal": "",
-        "depreciation": "",
-        "closing_value": ""
-      }
-    },
-    {
-      "label": "Functionality",
-      "properties": {
-        "name": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "Partner",
-      "properties": {
-        "name": "",
-        "type": "",
-        "industry": "",
-        "role": ""
-      }
-    },
-    {
-      "label": "Asset",
-      "properties": {
-        "category": "",
-        "cost": ""
-      }
-    },
-    {
-      "label": "Channel",
-      "properties": {
-        "type": ""
-      }
-    },
-    {
-      "label": "Dataset",
-      "properties": {
-        "name": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "Year",
-      "properties": {
-        "name": "",
-        "year": ""
-      }
-    },
-    {
-      "label": "R&DProject",
-      "properties": {
-        "name": "",
-        "details": ""
-      }
-    },
-    {
-      "label": "ProductPricing",
-      "properties": {
-        "factors": "",
-        "variability": ""
-      }
-    },
-    {
-      "label": "OutsourceCost",
-      "properties": {
-        "year2023": "",
-        "year2022": "",
-        "year2021": "",
-        "year2020": "",
-        "includes_management": ""
-      }
-    },
-    {
-      "label": "Company",
-      "properties": {
-        "name": "",
-        "industry": "",
-        "location": "",
-        "years_in_business": "",
-        "market_position": "",
-        "technology_focus": "",
-        "years_active": "",
-        "expertise": "",
-        "market_reputation": "",
-        "customer_base": "",
-        "strategic_collaborations": "",
-        "market_share_growth": "",
-        "type": "",
-        "market_risk_exposure": "",
-        "forex_contracts": "",
-        "reporting_date": "",
-        "description": "",
-        "established_years": "",
-        "specialization": "",
-        "headquarters": "",
-        "strategy": "",
-        "technology": "",
-        "competitive_advantage": "",
-        "foreign_exchange_derivatives": "",
-        "research_and_development_organization": "",
-        "research_and_development_sections": []
-      }
-    },
-    {
-      "label": "OutsourcingCosts",
-      "properties": {
-        "year2023": "",
-        "year2022": "",
-        "year2021": "",
-        "year2020": "",
-        "notes": ""
-      }
-    },
-    {
-      "label": "Client",
-      "properties": {
-        "industry": "",
-        "type": "",
-        "name": ""
-      }
-    },
-    {
-      "label": "RevenueType",
-      "properties": {
-        "name": "",
-        "unit": ""
-      }
-    },
-    {
-      "label": "Product",
-      "properties": {
-        "name": "",
-        "type": "",
-        "features": "",
-        "category": "",
-        "year": "",
-        "sales": "",
-        "percentage": "",
-        "price_factors": "",
-        "version": "",
-        "functionality": "",
-        "platform": "",
-        "development_stage": "",
-        "description": "",
-        "application_area": "",
-        "sales_2023": "",
-        "sales_percentage_2023": "",
-        "sales_2022": "",
-        "sales_percentage_2022": "",
-        "sales_2021": "",
-        "sales_percentage_2021": "",
-        "technology": "",
-        "responsible_section": ""
-      }
-    },
-    {
-      "label": "Service",
-      "properties": {
-        "name": "",
-        "description": "",
-        "category": "",
-        "year": "",
-        "sales": "",
-        "percentage": "",
-        "type": "",
-        "sales_2023": "",
-        "sales_percentage_2023": "",
-        "sales_2022": "",
-        "sales_percentage_2022": "",
-        "sales_2021": "",
-        "sales_percentage_2021": "",
-        "functionality": ""
-      }
-    },
-    {
-      "label": "Platform",
-      "properties": {
-        "type": "",
-        "features": "",
-        "name": "",
-        "environment": "",
-        "model": "",
-        "technology": ""
-      }
-    },
-    {
-      "label": "SalesData",
-      "properties": {
-        "year": "",
-        "item": "",
-        "sales": "",
-        "percentage": "",
-        "proportion": ""
-      }
-    },
-    {
-      "label": "Data_Set",
-      "properties": {
-        "name": "",
-        "description": "",
-        "source": "",
-        "usage": ""
-      }
-    },
-    {
-      "label": "AIProduct",
-      "properties": {
-        "features": "",
-        "technologies": ""
-      }
-    },
-    {
-      "label": "SalesChannel",
-      "properties": {
-        "channel_type": "",
-        "description": "",
-        "name": ""
-      }
-    },
-    {
-      "label": "AI_Model",
-      "properties": {
-        "name": "",
-        "purpose": "",
-        "technique": "",
-        "target_audience": ""
-      }
-    },
-    {
-      "label": "Collaboration",
-      "properties": {
-        "partner_company": "",
-        "goal": ""
-      }
-    },
-    {
-      "label": "Contract",
-      "properties": {
-        "date": "",
-        "total_amount": "",
-        "revenue_recognized": "",
-        "order_balance": ""
-      }
-    },
-    {
-      "label": "Project",
-      "properties": {
-        "name": "",
-        "start_date": "",
-        "end_date": "",
-        "description": "",
-        "year": "",
-        "goal": "",
-        "status": "",
-        "type": "",
-        "client": "",
-        "impact": ""
-      }
-    },
-    {
-      "label": "Obzen_Analytics",
-      "properties": {
-        "name": "",
-        "features": ""
-      }
-    },
-    {
-      "label": "Report",
-      "properties": {
-        "name": "",
-        "description": "",
-        "type": "",
-        "format": ""
-      }
-    },
-    {
-      "label": "Technology",
-      "properties": {
-        "name": "",
-        "category": "",
-        "type": "",
-        "application": [],
-        "application_area": "",
-        "feature": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "SICompany",
-      "properties": {
-        "expertise_area": ""
-      }
-    },
-    {
-      "label": "Function",
-      "properties": {
-        "name": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "RawMaterials",
-      "properties": {
-        "purchase_status": "",
-        "outsourcing": "",
-        "production_support": "",
-        "business_activity": "",
-        "materials_purchase": ""
-      }
-    },
-    {
-      "label": "ObzenAnalytics",
-      "properties": {
-        "real_time_data_collection": "",
-        "insights_generation": "",
-        "data_fusion": "",
-        "customer_prediction": "",
-        "features": "",
-        "use_case": ""
-      }
-    },
-    {
-      "label": "Feature",
-      "properties": {
-        "name": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "SalesStrategy",
-      "properties": {
-        "strategy_type": "",
-        "description": ""
-      }
-    },
-    {
-      "label": "Revenue",
-      "properties": {
-        "amount": "",
-        "percentage": ""
-      }
-    },
-    {
-      "label": "Assets",
-      "properties": {
-        "right_of_use_asset": "",
-        "equipment": "",
-        "vehicle": "",
-        "acquisition": "",
-        "disposal": "",
-        "depreciation": "",
-        "closing_balance": ""
-      }
-    },
-    {
-      "label": "ConsultingCompany",
-      "properties": {
-        "global": "",
-        "expertise": ""
-      }
-    },
-    {
-      "label": "Market",
-      "properties": {
-        "name": "",
-        "focus_industry": "",
-        "characteristics": "",
-        "focus_industries": "",
-        "strategy": ""
-      }
-    },
-    {
-      "label": "ResearchDivision",
-      "properties": {
-        "name": "",
-        "responsibility": ""
-      }
-    },
-    {
-      "label": "DevelopmentStage",
-      "properties": {
-        "name": ""
-      }
-    },
-    {
-      "label": "DataIntelligence",
-      "properties": {
-        "analysis_engine": "",
-        "chart_generation": "",
-        "usability": "",
-        "no_code_development": "",
-        "collaboration_features": "",
-        "features": "",
-        "use_case": ""
-      }
-    },
-    {
-      "label": "Production_Resources",
-      "properties": {
-        "type": "",
-        "usage": ""
-      }
-    },
-    {
-      "label": "ResearchProject",
-      "properties": {
-        "name": "",
-        "details": ""
-      }
-    },
-    {
-      "label": "Customer",
-      "properties": {
-        "industry": "",
-        "name": "",
-        "type": ""
-      }
-    },
-    {
-      "label": "ResearchExpenditure",
-      "properties": {
-        "year": "",
-        "revenue": "",
-        "total_rnd_costs": "",
-        "government_grant": "",
-        "development_costs": "",
-        "ratio_to_sales": ""
-      }
-    },
-    {
-      "label": "Industry",
-      "properties": {
-        "name": ""
-      }
-    },
-    {
-      "label": "ContractType",
-      "properties": {
-        "type": ""
-      }
-    },
-    {
-      "label": "CustomerData",
-      "properties": {
-        "source": "",
-        "type": ""
-      }
-    },
-    {
-      "label": "CRM_Software",
-      "properties": {
-        "name": "",
-        "basis": "",
-        "business_nature": ""
-      }
-    },
-    {
-      "label": "ResearchAndDevelopmentSection",
-      "properties": {
-        "name": "",
-        "responsibility": []
-      }
-    },
-    {
-      "label": "Solution",
-      "properties": {
-        "industry": "",
-        "requirements": "",
-        "capabilities": "",
-        "name": "",
-        "description": "",
-        "category": "",
-        "targetIndustry": ""
-      }
-    },
-    {
-      "label": "Department",
-      "properties": {
-        "name": "",
-        "leader": "",
-        "teams": ""
-      }
-    },
-    {
-      "label": "Node",
-      "properties": {
-        "label": "",
-        "properties": ""
-      }
-    },
-    {
-      "label": "Financial_Entity",
-      "properties": {
-        "name": "",
-        "type": ""
-      }
-    },
-    {
-      "label": "Financials",
-      "properties": {
-        "year": "",
-        "revenue": "",
-        "total_research_expenses": "",
-        "development_expenses": "",
-        "current_research_expenses": "",
-        "revenue_ratio": ""
-      }
-    }
-  ],
-  "relations": [
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "DataIntelligence",
-      "relationship": "utilizes",
-      "end_node": "ObzenAnalytics",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "provides_to",
-      "end_node": "Client",
-      "properties": {
-        "customization_level": "",
-        "support_level": ""
-      }
-    },
-    {
-      "start_node": "Year",
-      "relationship": "RECORDED_REVENUE",
-      "end_node": "Revenue",
-      "properties": {}
-    },
-    {
-      "start_node": "DataIntelligence",
-      "relationship": "related_to",
-      "end_node": "RawMaterials",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "USES_SALES_CHANNEL",
-      "end_node": "SalesChannel",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Industry",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "uses_technology",
-      "end_node": "Technology",
-      "properties": {
-        "purpose": "",
-        "integration_level": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Product",
-      "properties": {
-        "context": ""
-      }
-    },
-    {
-      "start_node": "CustomerData",
-      "relationship": "FEEDS",
-      "end_node": "AIModel",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "DEPLOYED_IN",
-      "end_node": "Environment",
-      "properties": {}
-    },
-    {
-      "start_node": "Module",
-      "relationship": "PROVIDES_SERVICE",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Solution",
-      "relationship": "HAS_COMPONENT",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "SICompany",
-      "properties": {
-        "project_type": "",
-        "joint_bids": ""
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "PART_OF",
-      "end_node": "Solution",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEPLOYS",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "offers_service",
-      "end_node": "Service",
-      "properties": {
-        "client_satisfaction_level": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "has_section",
-      "end_node": "ResearchAndDevelopmentSection",
-      "properties": {}
-    },
-    {
-      "start_node": "Contract",
-      "relationship": "INVOLVES",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Industry",
-      "relationship": "HAS_FEATURE",
-      "end_node": "CRMFeature",
-      "properties": {}
-    },
-    {
-      "start_node": "Solution",
-      "relationship": "HAS_COMPONENT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "INTEGRATES",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "BELONGS_TO_SOLUTION",
-      "end_node": "Solution",
-      "properties": {}
-    },
-    {
-      "start_node": "DevelopmentStage",
-      "relationship": "APPLIES_TO",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "USES",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "ProductionCapacity",
-      "relationship": "connected_to",
-      "end_node": "ProductionFacilities",
-      "properties": {}
-    },
-    {
-      "start_node": "Technology",
-      "relationship": "ENHANCES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SERVES",
-      "end_node": "Client",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "AIMS_TO",
-      "end_node": "Goal",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchAndDevelopmentSection",
-      "relationship": "utilizes",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "CustomerData",
-      "relationship": "UTILIZED_BY",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "RevenueType",
-      "relationship": "HAS_REVENUE",
-      "end_node": "Year",
-      "properties": {}
-    },
-    {
-      "start_node": "FinancialData",
-      "relationship": "USED_FOR",
-      "end_node": "AIModel",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchAndDevelopmentSection",
-      "relationship": "oversees",
-      "end_node": "ResearchProject",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "CONTRACTS_WITH",
-      "end_node": "ContractType",
-      "properties": {}
-    },
-    {
-      "start_node": "AIModel",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "LLM",
-      "relationship": "ENABLED_BY",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_MODULE",
-      "end_node": "Module",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "executes_project",
-      "end_node": "Project",
-      "properties": {
-        "success_level": "",
-        "technologies_used": ""
-      }
-    },
-    {
-      "start_node": "RawMaterials",
-      "relationship": "incurs",
-      "end_node": "OutsourcingCosts",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "PROVIDES",
-      "end_node": "Function",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_CLIENT",
-      "end_node": "ClientCompany",
-      "properties": {
-        "case_study": "",
-        "success_story": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS_STRATEGY",
-      "end_node": "SalesStrategy",
-      "properties": {}
-    },
-    {
-      "start_node": "Technology",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "DataIntelligence",
-      "relationship": "used_for",
-      "end_node": "ProductPricing",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "records_financials",
-      "end_node": "Financials",
-      "properties": {}
-    },
-    {
-      "start_node": "Function",
-      "relationship": "SUPPORTS",
-      "end_node": "Goal",
-      "properties": {}
-    },
-    {
-      "start_node": "Node",
-      "relationship": "RELATES_TO",
-      "end_node": "Node",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "DataProduct",
-      "properties": {}
-    },
-    {
-      "start_node": "Module",
-      "relationship": "HAS_FUNCTIONALITY",
-      "end_node": "Functionality",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "PART_OF",
-      "end_node": "Solution",
-      "properties": {}
-    },
-    {
-      "start_node": "Feature",
-      "relationship": "USES_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "targets_market",
-      "end_node": "Market",
-      "properties": {
-        "market_share": "",
-        "expansion_strategy": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "ConsultingCompany",
-      "properties": {
-        "project_type": "",
-        "consulting_role": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "AIProduct",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "USES",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Partner",
-      "properties": {
-        "area": ""
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ENTERED_CONTRACT",
-      "end_node": "Contract",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "serves_client",
-      "end_node": "Client",
-      "properties": {
-        "scope": "",
-        "duration": ""
-      }
-    },
-    {
-      "start_node": "RawMaterials",
-      "relationship": "supports",
-      "end_node": "ProductionCapacity",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "GENERATES",
-      "end_node": "Report",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchAndDevelopmentSection",
-      "relationship": "responsible_for",
-      "end_node": "Product",
-      "properties": {}
-    }
-  ]
+    "nodes": [
+        {
+            "label": "ProductCategory",
+            "name": "String",
+            "properties": {
+                "sales_2021": "Number",
+                "share_2021": "String",
+                "sales_2022": "Number",
+                "share_2022": "String",
+                "sales_2023": "Number",
+                "share_2023": "String"
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "String",
+            "properties": {
+                "year": "Number",
+                "revenue": "Number",
+                "rndCost": "Number"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "string",
+            "properties": {
+                "partnerType": "string",
+                "areaOfCollaboration": "string"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "String",
+            "properties": {
+                "strategy_description": "String"
+            }
+        },
+        {
+            "label": "Module",
+            "name": "String",
+            "properties": {
+                "description": "String"
+            }
+        },
+        {
+            "label": "Contract",
+            "name": "String",
+            "properties": {
+                "contractDate": "String",
+                "contractValue": "Number",
+                "contractType": "String"
+            }
+        },
+        {
+            "label": "ResearchActivity",
+            "name": "String",
+            "properties": {
+                "topic": "String",
+                "startYear": "Number",
+                "details": "String"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "string",
+            "properties": {
+                "solution_type": "string",
+                "features": "string"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "string",
+            "properties": {
+                "revenueMillionWon": "int",
+                "percentage": "float"
+            }
+        },
+        {
+            "label": "ResearchLab",
+            "name": "String",
+            "properties": {
+                "focusArea": "String",
+                "staffCount": "Number"
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "String",
+            "properties": {
+                "channel_description": "String"
+            }
+        },
+        {
+            "label": "Service",
+            "name": "string",
+            "properties": {
+                "serviceType": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "String",
+            "properties": {
+                "description": "String",
+                "features": "string",
+                "version": "String",
+                "technology": "string",
+                "productType": "String",
+                "capabilities": "string"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "string",
+            "properties": {
+                "industry_name": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Cost",
+            "name": "String",
+            "properties": {
+                "year": "Integer",
+                "amount": "Integer"
+            }
+        },
+        {
+            "label": "SaleContract",
+            "name": "string",
+            "properties": {
+                "orderDate": "date",
+                "deliveryDate": "date",
+                "totalAmount": "number",
+                "recognizedRevenue": "number",
+                "backlog": "number"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "string",
+            "properties": {
+                "client": "string",
+                "start_date": "string",
+                "description": "string",
+                "projectType": "string",
+                "scale": "string",
+                "startDate": "date",
+                "endDate": "date"
+            }
+        },
+        {
+            "label": "UseCase",
+            "name": "string",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "Dataset",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "source": "string"
+            }
+        },
+        {
+            "label": "Asset",
+            "name": "String",
+            "properties": {
+                "assetType": "String",
+                "initialValue": "Integer",
+                "accumulatedDepreciation": "Integer"
+            }
+        },
+        {
+            "label": "Risk",
+            "name": "String",
+            "properties": {
+                "riskType": "String",
+                "description": "String"
+            }
+        },
+        {
+            "label": "Feature",
+            "name": "String",
+            "properties": {
+                "functionality": "String",
+                "description": "String"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "string",
+            "properties": {
+                "tech_category": "string",
+                "description": "String",
+                "category": "String"
+            }
+        },
+        {
+            "label": "Year",
+            "name": "string",
+            "properties": {
+                "fiscalYear": "int"
+            }
+        },
+        {
+            "label": "CDXPFeature",
+            "name": "string",
+            "properties": {
+                "featureName": "string",
+                "featureDescription": "string"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "string",
+            "properties": {
+                "foundation_date": "string",
+                "business_domain": "string",
+                "years_in_business": "int",
+                "description": "string",
+                "headquarters": "String",
+                "companyName": "string",
+                "industry": "string",
+                "businessScope": "String",
+                "has_export_sales": "Boolean",
+                "category": "string",
+                "foundationYear": "Number",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Algorithm",
+            "name": "string",
+            "properties": {
+                "description": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "String",
+            "properties": {
+                "characteristics": "String",
+                "sector": "string"
+            }
+        },
+        {
+            "label": "CustomerSegment",
+            "name": "string",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "CDXPModule",
+            "name": "string",
+            "properties": {
+                "moduleName": "string",
+                "moduleDescription": "string"
+            }
+        },
+        {
+            "label": "Offering",
+            "name": "string",
+            "properties": {
+                "offeringType": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "String",
+            "properties": {
+                "type": "String",
+                "description": "String"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Feature",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "efficiency_rating": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ENGAGES_CONTRACT",
+            "end_node": "Contract",
+            "properties": {
+                "purpose": "String"
+            }
+        },
+        {
+            "start_node": "ResearchLab",
+            "relationship": "CONDUCTS",
+            "end_node": "ResearchActivity",
+            "properties": {
+                "assignedTeam": "String"
+            }
+        },
+        {
+            "start_node": "Feature",
+            "relationship": "APPLIES_TO_INDUSTRY",
+            "end_node": "Industry",
+            "properties": {
+                "notes": "String"
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "TARGETS",
+            "end_node": "CustomerSegment",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Feature",
+            "properties": {
+                "priority_level": "String"
+            }
+        },
+        {
+            "start_node": "Partner",
+            "relationship": "JOINT_PROJECT",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "DEVELOPED_PROJECT",
+            "end_node": "Project",
+            "properties": {
+                "year": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "INCURS",
+            "end_node": "Cost",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "IS_EXPOSED_TO",
+            "end_node": "Risk",
+            "properties": {
+                "exposureLevel": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_FINANCIAL_INFO",
+            "end_node": "FinancialInfo",
+            "properties": {
+                "reportDate": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_SOLUTION",
+            "end_node": "SoftwareSolution",
+            "properties": {
+                "since": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "EXECUTES",
+            "end_node": "Project",
+            "properties": {
+                "role": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_PARTNER",
+            "end_node": "Partner",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Offering",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "USES",
+            "end_node": "Dataset",
+            "properties": {}
+        },
+        {
+            "start_node": "Algorithm",
+            "relationship": "ENABLED_BY",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Offering",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData",
+            "properties": {}
+        },
+        {
+            "start_node": "SalesData",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Industry",
+            "properties": {
+                "since": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "SalesStrategy",
+            "properties": {}
+        },
+        {
+            "start_node": "Service",
+            "relationship": "DESIGNED_FOR",
+            "end_node": "Industry",
+            "properties": {}
+        },
+        {
+            "start_node": "CDXPModule",
+            "relationship": "HAS_FEATURE",
+            "end_node": "CDXPFeature",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "UPSELLS",
+            "end_node": "Service",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "DEPLOYED_ON",
+            "end_node": "Platform",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OWNS",
+            "end_node": "Asset",
+            "properties": {}
+        },
+        {
+            "start_node": "Module",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Feature",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS_PRODUCT",
+            "end_node": "Product",
+            "properties": {
+                "launch_date": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PROVIDES",
+            "end_node": "ProductCategory",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_MODULE",
+            "end_node": "Module",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "LEVERAGES",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "OFFERS",
+            "end_node": "UseCase",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_RESEARCHLAB",
+            "end_node": "ResearchLab",
+            "properties": {
+                "since": "String"
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "APPLIES",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ENGAGES_IN",
+            "end_node": "SaleContract",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "INTRODUCES",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {
+                "since": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "USES_SALES_CHANNEL",
+            "end_node": "SalesChannel",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "Market",
+            "properties": {
+                "priority": "string"
+            }
+        },
+        {
+            "start_node": "Product",
+            "relationship": "UTILIZES_TECH",
+            "end_node": "Industry",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_CDXP_MODULE",
+            "end_node": "CDXPModule",
+            "properties": {}
+        },
+        {
+            "start_node": "ResearchLab",
+            "relationship": "DEVELOPS_PRODUCT",
+            "end_node": "Product",
+            "properties": {
+                "startDate": "String"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "UPSELLS",
+            "end_node": "Product",
+            "properties": {}
+        }
+    ]
 }

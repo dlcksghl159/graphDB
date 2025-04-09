@@ -1,0 +1,51 @@
+{
+    "nodes": [
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2021",
+            "properties": {
+                "year": 2021,
+                "revenue": 20075,
+                "rndCost": 4971
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2022",
+            "properties": {
+                "year": 2022,
+                "revenue": 25933,
+                "rndCost": 4712
+            }
+        },
+        {
+            "label": "FinancialInfo",
+            "name": "Company Financials 2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 16986,
+                "rndCost": 4068
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company Financials 2021",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "Company Financials 2022",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        },
+        {
+            "start_node": "Company Financials 2023",
+            "relationship": "IS_FOR_YEAR",
+            "end_node": "Year",
+            "properties": {}
+        }
+    ]
+}

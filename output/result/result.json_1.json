@@ -1,0 +1,60 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "UnknownCompany",
+            "properties": {
+                "companyName": "당사",
+                "industry": "Finance and Retail",
+                "description": "Engages in CRM solutions for financial and retail sectors using AI and big data technologies."
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Enhanced Market Share Strategy",
+            "properties": {
+                "strategy_description": "To continuously enhance high market share in the major enterprise sector through collaboration with strategic investors."
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Finance",
+            "properties": {
+                "sector": "Financial Institutions",
+                "characteristics": "Banking, Securities, Card companies"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Retail",
+            "properties": {
+                "sector": "Retail",
+                "characteristics": "Leading companies in distribution"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "OPERATES_IN",
+            "end_node": "Finance",
+            "properties": {
+                "since": "Unknown"
+            }
+        },
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "OPERATES_IN",
+            "end_node": "Retail",
+            "properties": {
+                "since": "Unknown"
+            }
+        },
+        {
+            "start_node": "UnknownCompany",
+            "relationship": "HAS_STRATEGY",
+            "end_node": "Enhanced Market Share Strategy",
+            "properties": {}
+        }
+    ]
+}

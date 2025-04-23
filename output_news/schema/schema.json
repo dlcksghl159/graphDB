@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "foundationYear": "Integer",
+        "industry": "String",
+        "customersCount": "Integer"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "String",
+      "properties": {
+        "productType": "String",
+        "keyFeatures": "String"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "String",
+      "properties": {
+        "region": "String"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "LAUNCHES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "Market",
+      "properties": {}
+    }
+  ]
+}

@@ -44,5 +44,5 @@ def generate_create_match_cypher(json_path: str, output_path: str):
 
     print("✅ Cypher 쿼리가 'output.cypher'에 저장되었습니다.")
 
-generate_create_match_cypher("./output/result/result.json", "./output/output.cypher")
+generate_create_match_cypher("./output/result/result_naive.json", "./output/output.cypher")
 

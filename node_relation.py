@@ -3,6 +3,7 @@ import json
 import openai
 from util import merge_json, parse_json
 from dotenv import load_dotenv
+from dereplication import dereplicate
 
 result_dir = "./output/result"
 os.makedirs(result_dir, exist_ok=True)
@@ -38,14 +39,24 @@ while True:
         content = f.read()
         # print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
 
-    prompt = f'''
-    Text : {content}, 
-    Schema : {schema_json}, 
-    Extract specific nodes and relations in JSON format from the given text using the given schema for a knowledge graph 
-    to be used in a RAG system focused on '{purpose}'. 
-    The values should match the data type written in the schema.
-    For Relations, start_node and end_nodes have NodeLabel as data type, which you should replace as specific node name.
-    '''
+    prompt = f"""
+    Text:
+    {content}
+
+    Schema:
+    {schema_json}
+
+    Your task is to extract specific nodes and relations from the given text according to the schema provided.
+
+    ### Objective:
+    Build a structured JSON representation for a knowledge graph that will be used in a RAG (Retrieval-Augmented Generation) system focused on **'{purpose}'**.
+
+    ### Guidelines:
+    - Match each extracted value with its corresponding data type as defined in the schema.
+    - All string values must be **nouns** or **noun phrases**.
+    - For **relations**, replace `NodeLabel` in `start_node` and `end_node` with the actual node **name** from the extracted data.
+    - Ensure the output strictly follows the structure defined in the schema.
+    """
 
     
     # OpenAI GPT 호출
@@ -63,12 +74,13 @@ while True:
 
     parsed_json = parse_json(gpt_output)
 
-    result_path = result_dir+"/result.json"
+    result_path = result_dir+"/result"
 
     with open(result_path+f'_{i}.json', "w", encoding="utf-8") as f:
             json.dump(parsed_json, f, ensure_ascii=False, indent=4)
 
-    
+    result_path += '.json'
+
     if not os.path.exists(result_path):
         # 파일이 없으면 새로 생성 + parsed_json 저장
         with open(result_path, "w", encoding="utf-8") as f:
@@ -85,6 +97,7 @@ while True:
             json.dump(merged_result, f, ensure_ascii=False, indent=4)
         print("✅ 병합된 result 저장 완료: result.json")
     
-
+    dereplicate(result_path)
         
     i += 1
+

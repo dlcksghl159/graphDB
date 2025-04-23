@@ -9,7 +9,7 @@ os.makedirs(output_dir, exist_ok=True)
 load_dotenv()   
 api_key = os.getenv("UPSTAGE_API_KEY")
 
-filename = "./data/document/report.pdf"  # 파일 경로
+filename = "./data/document/news.pdf"  # 파일 경로
 
 url = "https://api.upstage.ai/v1/document-digitization"
 headers = {"Authorization": f"Bearer {api_key}"}

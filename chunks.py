@@ -7,7 +7,7 @@ os.makedirs(chunks_dir, exist_ok=True)
 
 document_dir = "./output/parsed_document"
 
-def split_html_by_sentence(html: str, chunk_size: int = 3000) -> list[str]:
+def split_html_by_sentence(html: str, chunk_size: int = 15000) -> list[str]:
     soup = BeautifulSoup(html, "html.parser")
     
     # 텍스트 블록들 HTML 그대로 유지

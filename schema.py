@@ -62,10 +62,12 @@ while True:
     # 응답 내용 가져오기
     gpt_output = response.choices[0].message.content
     parsed_json = parse_json(gpt_output)
-    schema_path = schema_dir+'/schema.json'
+    schema_path = schema_dir+'/schema'
     
     with open(schema_path+f'_{i}.json', "w", encoding="utf-8") as f:
         json.dump(parsed_json, f, ensure_ascii=False, indent=4)
+        
+    schema_path += '.json'
 
     if not os.path.exists(schema_path):
         # 파일이 없으면 새로 생성 + parsed_json 저장

@@ -37,7 +37,7 @@ while True:
 
     with open(filename, "r", encoding="utf-8") as f:
         content = f.read()
-        # print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
+        print(f"📄 reading chunked_output_{i}.txt")
 
     prompt = f"""
     Text:
@@ -46,7 +46,7 @@ while True:
     Schema:
     {schema_json}
 
-    Your task is to extract specific nodes and relations from the given text according to the schema provided.
+    Your task is to extract specific and meaningful nodes and relations from the given text according to the schema provided.
 
     ### Objective:
     Build a structured JSON representation for a knowledge graph that will be used in a RAG (Retrieval-Augmented Generation) system focused on **'{purpose}'**.
@@ -54,6 +54,8 @@ while True:
     ### Guidelines:
     - Match each extracted value with its corresponding data type as defined in the schema.
     - All string values must be **nouns** or **noun phrases**.
+    - Use the clearest, concise **name** for the node. Do NOT mix description into name.
+    - Do NOT create nodes for generic concepts.
     - For **relations**, replace `NodeLabel` in `start_node` and `end_node` with the actual node **name** from the extracted data.
     - Ensure the output strictly follows the structure defined in the schema.
     """
@@ -91,11 +93,9 @@ while True:
         # 파일이 있으면 기존 스키마 로드
         with open(result_path, "r", encoding="utf-8") as f:
             old_result = json.load(f)
-        print("📄 기존 result.json을 old_result로 불러왔습니다.")
         merged_result = merge_json(old_result, parsed_json, node_key=("label", "name"))
         with open(result_path, "w", encoding="utf-8") as f:
             json.dump(merged_result, f, ensure_ascii=False, indent=4)
-        print("✅ 병합된 result 저장 완료: result.json")
     
     dereplicate(result_path)
         

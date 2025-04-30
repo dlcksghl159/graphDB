@@ -4,7 +4,7 @@ import openai
 from util import parse_json
 from dotenv import load_dotenv
 
-def dereplicate(data_path):
+def deduplicate(data_path):
 
     # 1. JSON 파일 로딩
     with open(data_path, "r", encoding="utf-8") as f:

@@ -3,15 +3,17 @@ import json
 import openai
 from util import merge_json, parse_json
 from dotenv import load_dotenv
-from dereplication import dereplicate
+from deduplication import deduplicate
 
 result_dir = "./output/result"
+os.makedirs(result_dir, exist_ok=True)
+
 chunks_dir = "./output/chunked_document"
+schema_dir = "./output/schema"
 
 # 1. JSON 파일 로딩
-with open(f"{result_dir}/result.json", "r", encoding="utf-8") as f:
-    result_json = json.load(f)
-    nodes = result_json["nodes"]
+with open(f"{schema_dir}/schema.json", "r", encoding="utf-8") as f:
+    schema_json = json.load(f)
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -21,7 +23,7 @@ client = openai.OpenAI(api_key=api_key)
 purpose = input('목적 입력 : ')
 
 system_msg = (
-    "You extract relation using entitiy from text for knowledge graphs used in RAG systems. "
+    "You extract entity/relation from text for knowledge graphs used in RAG systems. "
     "Respond with valid JSON only."
 )
 
@@ -35,44 +37,28 @@ while True:
 
     with open(filename, "r", encoding="utf-8") as f:
         content = f.read()
-        # print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
-
+        print(f"📄 reading chunked_output_{i}.txt")
 
     prompt = f"""
     Text:
     {content}
 
-    Entities (Nodes):
-    {nodes}
-    
-    Extract all meaningful *relations* between the given entities mentioned in the text above.
+    Schema:
+    {schema_json}
 
-    Instructions:
-    - Do **not** modify or invent entities. Use the provided nodes *exactly as they are*.
-    - For each relation, identify the correct `start_node` and `end_node` by matching the `name` field in the given nodes.
-    - Set the `relationship` field using only **SCREAMING_SNAKE_CASE**
-    - Add appropriate key-value pairs in the `properties` field based on contextual information in the text.
-    - Be accurate and specific. Use information from the text only.
+    Your task is to extract specific and meaningful nodes and relations from the given text according to the schema provided.
 
-    Output Format (JSON):
-    {{
-        "nodes": {nodes},  # Keep the nodes exactly the same
-        "relations": [
-            {{
-                "start_node": "<ExactEntityName>",
-                "relationship": "<RELATION_TYPE>",
-                "end_node": "<ExactEntityName>",
-                "properties": {{
-                    "key1": "value1",
-                    "key2": "value2"
-                }}
-            }},
-            ...
-        ]
-    }}
+    ### Objective:
+    Build a structured JSON representation for a knowledge graph that will be used in a RAG (Retrieval-Augmented Generation) system focused on **'{purpose}'**.
 
+    ### Guidelines:
+    - Match each extracted value with its corresponding data type as defined in the schema.
+    - All string values must be **nouns** or **noun phrases**.
+    - Use the clearest, concise **name** for the node. Do NOT mix description into name.
+    - Do NOT create nodes for generic concepts.
+    - For **relations**, replace `NodeLabel` in `start_node` and `end_node` with the actual node **name** from the extracted data.
+    - Ensure the output strictly follows the structure defined in the schema.
     """
-
 
     
     # OpenAI GPT 호출
@@ -90,7 +76,7 @@ while True:
 
     parsed_json = parse_json(gpt_output)
 
-    result_path = result_dir+"/result_naive"
+    result_path = result_dir+"/result"
 
     with open(result_path+f'_{i}.json', "w", encoding="utf-8") as f:
             json.dump(parsed_json, f, ensure_ascii=False, indent=4)
@@ -107,13 +93,11 @@ while True:
         # 파일이 있으면 기존 스키마 로드
         with open(result_path, "r", encoding="utf-8") as f:
             old_result = json.load(f)
-        print("📄 기존 result.json을 old_result로 불러왔습니다.")
         merged_result = merge_json(old_result, parsed_json, node_key=("label", "name"))
         with open(result_path, "w", encoding="utf-8") as f:
             json.dump(merged_result, f, ensure_ascii=False, indent=4)
-        print("✅ 병합된 result 저장 완료: result.json")
     
-    dereplicate(result_path)
+    deduplicate(result_path)
         
     i += 1
 

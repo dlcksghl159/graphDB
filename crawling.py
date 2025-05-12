@@ -27,7 +27,8 @@ if not API_KEY:
 client = OpenAI(api_key=API_KEY)
 
 # 산출물을 저장할 폴더 ────────────────
-OUTPUT_DIR = "./output/news"
+OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")   # 기본값 "output"
+OUTPUT_DIR = os.path.join(OUTPUT_ROOT, "news")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 TOP_N = 100                       # 크롤링·임베딩할 기사 수

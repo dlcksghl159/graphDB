@@ -6,12 +6,8 @@ from dotenv import load_dotenv
 from deduplication import deduplicate
 
 def extract():
-    OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")  # 기본값: "output"
-
-    result_dir  = os.path.join(OUTPUT_ROOT, "result")
-    chunks_dir  = os.path.join(OUTPUT_ROOT, "chunked_document")
-
-    os.makedirs(result_dir, exist_ok=True)
+    result_dir = "./output/result"
+    chunks_dir = "./output/chunked_document"
 
     # 1. JSON 파일 로딩
     with open(f"{result_dir}/result.json", "r", encoding="utf-8") as f:
@@ -23,11 +19,11 @@ def extract():
 
     client = openai.OpenAI(api_key=api_key)
 
-    purpose = input('지식 그래프 구축 목적을 입력하세요: ')
+    purpose = input('목적 입력 : ')
 
     system_msg = (
-        "당신은 RAG 시스템에 사용되는 지식 그래프 작성을 위해 텍스트에서 엔티티를 활용하여 관계를 추출하는 역할을 합니다. "
-        "반드시 올바른 JSON 형식으로만 응답하세요."
+        "You extract relation using entitiy from text for knowledge graphs used in RAG systems. "
+        "Respond with valid JSON only."
     )
 
     i = 0
@@ -35,46 +31,47 @@ def extract():
         filename = f"{chunks_dir}/chunked_output_{i}.txt"
         
         if not os.path.exists(filename):
-            print(f"파일 없음: {filename} → 종료합니다.")
+            print(f"📁 파일 없음: {filename} → 종료합니다.")
             break
 
         with open(filename, "r", encoding="utf-8") as f:
             content = f.read()
+            # print(f"✅ chunked_output_{i}.txt 내용:\n{content}\n")
 
 
-        prompt = f""" 
+        prompt = f"""
+        Text:
+        {content}
 
-        주어진 텍스트에 언급된 엔티티 간의 의미 있는 *관계*를 모두 추출하세요.
+        Entities (Nodes):
+        {nodes}
+        
+        Extract all meaningful *relations* between the given entities mentioned in the text above.
 
-        ### 지침:
-        - 엔티티를 수정하거나 새로 만들지 마세요. 제공된 노드를 *그대로* 사용하세요.
-        - 각 관계마다 `start_node`와 `end_node`는 노드의 `name` 필드를 정확히 일치시켜 지정하세요.
-        - `relationship` 필드는 반드시 **SCREAMING_SNAKE_CASE**로 작성하세요.
-        - `properties` 필드에는 텍스트 문맥에서 추론 가능한 핵심 정보를 적절한 키-값 쌍으로 추가하세요.
-        - 오로지 텍스트에 기반하여 정확하고 구체적으로 작성하세요.
+        Instructions:
+        - Do **not** modify or invent entities. Use the provided nodes *exactly as they are*.
+        - For each relation, identify the correct `start_node` and `end_node` by matching the `name` field in the given nodes.
+        - Set the `relationship` field using only **SCREAMING_SNAKE_CASE**
+        - Add appropriate key-value pairs in the `properties` field based on contextual information in the text.
+        - Be accurate and specific. Use information from the text only.
 
-        ### 출력 형식(JSON):
+        Output Format (JSON):
         {{
-            "nodes": {nodes},  # 노드를 그대로 유지
+            "nodes": {nodes},  # Keep the nodes exactly the same
             "relations": [
                 {{
-                    "start_node": "<정확한엔티티이름>",
+                    "start_node": "<ExactEntityName>",
                     "relationship": "<RELATION_TYPE>",
-                    "end_node": "<정확한엔티티이름>",
+                    "end_node": "<ExactEntityName>",
                     "properties": {{
                         "key1": "value1",
                         "key2": "value2"
                     }}
-                }}
+                }},
                 ...
             ]
         }}
 
-        ### 텍스트:
-        {content}
-
-        ### 엔티티(노드):
-        {nodes}
         """
 
 
@@ -82,7 +79,6 @@ def extract():
         # OpenAI GPT 호출
         response = client.chat.completions.create(
             model="gpt-4o",
-            response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": system_msg},
                 {"role": "user", "content": prompt}
@@ -106,18 +102,19 @@ def extract():
             # 파일이 없으면 새로 생성 + parsed_json 저장
             with open(result_path, "w", encoding="utf-8") as f:
                 json.dump(parsed_json, f, ensure_ascii=False, indent=4)
+            print("✅ result.json이 없어서 새로 생성했습니다.")
             old_result = None
         else:
             # 파일이 있으면 기존 스키마 로드
             with open(result_path, "r", encoding="utf-8") as f:
                 old_result = json.load(f)
+            print("📄 기존 result.json을 old_result로 불러왔습니다.")
             merged_result = merge_json(old_result, parsed_json, node_key=("label", "name"))
             with open(result_path, "w", encoding="utf-8") as f:
                 json.dump(merged_result, f, ensure_ascii=False, indent=4)
-            
+            print("✅ 병합된 result 저장 완료: result.json")
         
         deduplicate(result_path)
-        print(f"[{i}] relation 추출 완료")
             
         i += 1
 

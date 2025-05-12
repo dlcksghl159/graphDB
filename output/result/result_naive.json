@@ -1,0 +1,401 @@
+{
+    "nodes": [
+        {
+            "label": "Product",
+            "name": "AI 상품추천모델",
+            "properties": {
+                "description": "recommends products to customers",
+                "technology": "AI algorithm, deep learning",
+                "productType": "recommendation model",
+                "features": "customer interaction, preference calculation",
+                "capabilities": "similarity-based, preference-based recommendations"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Large System Integrator",
+            "properties": {
+                "partnerType": "System Integration",
+                "areaOfCollaboration": "Joint Sales in AI Marketing"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Obzen Daisy Suite",
+            "properties": {
+                "description": "Pre-defined, standardized marketing solution development",
+                "features": "Based on standard data models, industry-specific standardized features and content",
+                "productType": "Software",
+                "capabilities": "Solutions for medium-sized enterprises, minimizes data work"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "End-to-End 고객 데이터 및 경험 관리 플랫폼 CDXP+",
+            "properties": {
+                "description": "데이터, 분석, 마케팅, AI 통합 플랫폼",
+                "features": "데이터 수집, 통합, 분석, AI 적용, 마케팅 자동화",
+                "productType": "Platform",
+                "capabilities": "데이터 흐름 최적화, 다양한 데이터 작업 구성"
+            }
+        },
+        {
+            "label": "ResearchLab",
+            "name": "Digital LAB",
+            "properties": {
+                "focusArea": "marketing, sales management, CRM and data-related product development"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Global Consulting Firm",
+            "properties": {
+                "partnerType": "Consulting",
+                "areaOfCollaboration": "Joint sales, new product development, and consulting projects"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "Obzen Analytics",
+            "properties": {
+                "solution_type": "Customer Data Integration and Behavior Data Visualization",
+                "features": "real-time behavior data collection, App/Web log integration, offline data mash-up, ML-based customer conversion and churn prediction"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "Domestic Big Tech Companies",
+            "properties": {
+                "partnerType": "Big Tech",
+                "areaOfCollaboration": "Collaboration for expanding Total Addressable Market and overseas expansion."
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Kubernetes 기반 실시간 Model Serving 기술",
+            "properties": {
+                "description": "모델 배포 기술 개발",
+                "technology": "Kubernetes, REST API",
+                "features": "REST API 기반 container wrapping, AutoScaling, 자원 사용량 모니터링",
+                "productType": "Software",
+                "capabilities": "실시간 모델 예측, 트래픽 대응"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "SmartAl Cloud",
+            "properties": {
+                "type": "Cloud",
+                "description": "Cloud 버전 개발의 PoC 단계, NaverCloudPlatform 환경에서 laaS 기반 개발 환경 구축"
+            }
+        },
+        {
+            "label": "Module",
+            "name": "마케팅 AI 모듈",
+            "properties": {
+                "description": "onCMS 용 추천 모델 관리 기능 개발, Auto 타겟팅 모듈 적용, AI 기반 AB 테스트 모듈 개발"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Our Company",
+            "properties": {
+                "industry": "Technology",
+                "businessScope": "Marketing, AI, Financial Solutions",
+                "companyName": "Our Company"
+            }
+        },
+        {
+            "label": "ResearchLab",
+            "name": "AI LAB",
+            "properties": {
+                "focusArea": "AI-related product development"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Obzen",
+            "properties": {
+                "companyName": "Obzen",
+                "description": "specializes in digital and AI-related product development",
+                "business_domain": "technology",
+                "industry": "technology"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "AI 기반 CRM 소프트웨어",
+            "properties": {
+                "description": "마케팅 자동화 및 실시간 마케팅 솔루션",
+                "technology": "AI, 빅데이터, 클라우드",
+                "capabilities": "고객 맞춤형 마케팅 및 업무 효율성 향상",
+                "productType": "CRM 소프트웨어"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Big Data and AI",
+            "properties": {
+                "description": "Big Data and AI technology for data-driven customer experiences.",
+                "category": "Data Technology"
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "고객사 IT 계열사와 계약",
+            "properties": {
+                "channel_description": "IT 계열사가 계약의 주체."
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "TagManager",
+            "properties": {
+                "solution_type": "data collection tool",
+                "features": "customer behavior tracking"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "기술비",
+            "properties": {
+                "sales_2021": 1246,
+                "share_2021": "6.20%",
+                "sales_2022": 1485,
+                "share_2022": "5.73%",
+                "sales_2023": 1563,
+                "share_2023": "9.20%"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "SmartAI v1.1",
+            "properties": {
+                "version": "1.1",
+                "technology": "Kerberos, Keycloak, oAuth, Ansible, Kubernetes, Impala",
+                "features": "보안 강화, 관리/운영 기능 강화, 신규 기능 추가",
+                "description": "제품 개발",
+                "productType": "Software",
+                "capabilities": "Single Sign On, laC 도구, 시스템 이벤트 알림, GPU 모니터링"
+            }
+        },
+        {
+            "label": "ResearchActivity",
+            "name": "Development of OSC",
+            "properties": {
+                "topic": "Sales SaaS development",
+                "details": "development of a B2B sales supporting system in SaaS form, customer and information management"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Finance and Distribution",
+            "properties": {
+                "characteristics": "Leading companies as clients, market-leading requirements.",
+                "sector": "Finance"
+            }
+        },
+        {
+            "label": "SalesStrategy",
+            "name": "Upgrade Sales Strategy",
+            "properties": {
+                "strategy_description": "Explaining new features and technologies of the company's new marketing product to induce upgrade repurchase; introducing data and AI products if issues are related to data processing and AI analysis"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "Data Intelligence",
+            "properties": {
+                "solution_type": "BI platform",
+                "features": "automatic report generation, conversation interaction"
+            }
+        },
+        {
+            "label": "SoftwareSolution",
+            "name": "CRM Solutions",
+            "properties": {
+                "solution_type": "On-Premise and SaaS",
+                "features": "Data refinement technology, personalized recommendation, customer behavior prediction, synthetic data algorithm."
+            }
+        },
+        {
+            "label": "SalesChannel",
+            "name": "고객사와 직접 계약",
+            "properties": {
+                "channel_description": "고객사와 직접 계약 진행."
+            }
+        },
+        {
+            "label": "Dataset",
+            "name": "금융 합성 데이터셋",
+            "properties": {
+                "description": "synthetic dataset for financial AI learning",
+                "source": "internal data from financial institutions"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "CRM Solutions",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Big Data and AI",
+            "properties": {
+                "purpose": "Customer-driven Experience"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "Domestic Big Tech Companies",
+            "properties": {
+                "goal": "Expanding Total Addressable Market and overseas expansion"
+            }
+        },
+        {
+            "start_node": "Obzen",
+            "relationship": "DEVELOPS",
+            "end_node": "Obzen Analytics",
+            "properties": {
+                "function": "Behavior data collection and customer data integration",
+                "domain": "Digital and AI-related product development"
+            }
+        },
+        {
+            "start_node": "AI LAB",
+            "relationship": "DEVELOPS",
+            "end_node": "AI 기반 CRM 소프트웨어",
+            "properties": {
+                "technology": "AI, Big Data, Cloud"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "Large System Integrator",
+            "properties": {
+                "area": "Joint Sales in AI Marketing"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "PROVIDES",
+            "end_node": "AI 기반 CRM 소프트웨어",
+            "properties": {
+                "context": "CRM solutions",
+                "industries": "Finance and Distribution"
+            }
+        },
+        {
+            "start_node": "Kubernetes 기반 실시간 Model Serving 기술",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Big Data and AI",
+            "properties": {
+                "purpose": "for real-time model prediction and traffic management"
+            }
+        },
+        {
+            "start_node": "AI LAB",
+            "relationship": "RESEARCHES",
+            "end_node": "SmartAI v1.1",
+            "properties": {
+                "technology": "AI-related product development and technology research"
+            }
+        },
+        {
+            "start_node": "Obzen Analytics",
+            "relationship": "INTEGRATES_WITH",
+            "end_node": "TagManager",
+            "properties": {
+                "scope": "Customer behavior data collection and analysis"
+            }
+        },
+        {
+            "start_node": "AI 상품추천모델",
+            "relationship": "UTILIZES_TECHNOLOGY_FROM",
+            "end_node": "Big Data and AI",
+            "properties": {
+                "category": "AI"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "Global Consulting Firm",
+            "properties": {
+                "collaboration_area": "Joint sales, new product development, and consulting projects"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_RESEARCH_LAB",
+            "end_node": "AI LAB",
+            "properties": {
+                "description": "Focuses on AI-related product development"
+            }
+        },
+        {
+            "start_node": "End-to-End 고객 데이터 및 경험 관리 플랫폼 CDXP+",
+            "relationship": "USES_SOLUTIONS",
+            "end_node": "Obzen Analytics",
+            "properties": {
+                "purpose": "Customer behavior visualization and prediction"
+            }
+        },
+        {
+            "start_node": "TagManager",
+            "relationship": "COLLECTS_DATA_FOR",
+            "end_node": "AI 상품추천모델",
+            "properties": {
+                "description": "Uses customer behavior data for recommendations"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "USES_SALES_CHANNEL",
+            "end_node": "고객사 IT 계열사와 계약",
+            "properties": {
+                "context": "Contracts are led by IT subsidiaries based on client's request"
+            }
+        },
+        {
+            "start_node": "SmartAI v1.1",
+            "relationship": "INTEGRATES_WITH",
+            "end_node": "Kubernetes 기반 실시간 Model Serving 기술",
+            "properties": {
+                "integration_features": "Single Sign-On, AutoScaling"
+            }
+        },
+        {
+            "start_node": "AI LAB",
+            "relationship": "ENGAGES_IN",
+            "end_node": "Development of OSC",
+            "properties": {
+                "task": "Sales SaaS development"
+            }
+        },
+        {
+            "start_node": "Digital LAB",
+            "relationship": "DEVELOPS",
+            "end_node": "End-to-End 고객 데이터 및 경험 관리 플랫폼 CDXP+",
+            "properties": {
+                "leadingDevelopment": "CDXP+"
+            }
+        },
+        {
+            "start_node": "Obzen Daisy Suite",
+            "relationship": "IS_PART_OF",
+            "end_node": "Obzen",
+            "properties": {
+                "context": "developed as a standardized marketing solution for mid-sized enterprises"
+            }
+        },
+        {
+            "start_node": "Our Company",
+            "relationship": "HAS_RESEARCH_LAB",
+            "end_node": "Digital LAB",
+            "properties": {
+                "description": "Focuses on marketing, sales management, CRM, and data-related product development"
+            }
+        }
+    ]
+}

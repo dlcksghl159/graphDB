@@ -1,0 +1,4875 @@
+{
+  "nodes": [
+    {
+      "label": "Movie",
+      "name": "가디언즈 오브 갤럭시",
+      "properties": {
+        "releaseYear": 2014,
+        "voteAverage": 7.904,
+        "runtime": 122
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {
+        "releaseYear": 2017,
+        "voteAverage": 7.612,
+        "runtime": 136
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {
+        "releaseYear": 2023,
+        "voteAverage": 7.949,
+        "runtime": 150
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.11,
+        "runtime": 45
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "그루트의 마스터피스",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.256,
+        "runtime": 5
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "그루트의 샤워타임",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.123,
+        "runtime": 6
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "그루트의 수사",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.1,
+        "runtime": 6
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "그루트의 첫 발자국",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.0,
+        "runtime": 6
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "닥터 스트레인지",
+      "properties": {
+        "releaseYear": 2016,
+        "voteAverage": 7.418,
+        "runtime": 115
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.3,
+        "runtime": 126
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "더 마블스",
+      "properties": {
+        "releaseYear": 2023,
+        "voteAverage": 6.001,
+        "runtime": 105
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "데드풀과 울버린",
+      "properties": {
+        "releaseYear": 2024,
+        "voteAverage": 7.597,
+        "runtime": 128
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "마블 원-샷: 카터 요원",
+      "properties": {
+        "releaseYear": 2013,
+        "voteAverage": 7.248,
+        "runtime": 15
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "마블 원-샷: 컨설턴트",
+      "properties": {
+        "releaseYear": 2011,
+        "voteAverage": 6.319,
+        "runtime": 4
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "블랙 위도우",
+      "properties": {
+        "releaseYear": 2021,
+        "voteAverage": 7.207,
+        "runtime": 134
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "블랙 팬서",
+      "properties": {
+        "releaseYear": 2018,
+        "voteAverage": 7.373,
+        "runtime": 135
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "블랙 팬서: 와칸다 포에버",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.063,
+        "runtime": 162
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "블레이드",
+      "properties": {}
+    },
+    {
+      "label": "Movie",
+      "name": "샹치와 텐 링즈의 전설",
+      "properties": {
+        "releaseYear": 2021,
+        "voteAverage": 7.524,
+        "runtime": 132
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "스파이더맨: 노 웨이 홈",
+      "properties": {
+        "releaseYear": 2021,
+        "voteAverage": 7.945,
+        "runtime": 148
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "스파이더맨: 브랜드 뉴 데이",
+      "properties": {
+        "releaseYear": 2026
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "스파이더맨: 파 프롬 홈",
+      "properties": {
+        "releaseYear": 2019,
+        "voteAverage": 7.41,
+        "runtime": 129
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "스파이더맨: 홈커밍",
+      "properties": {
+        "releaseYear": 2017,
+        "voteAverage": 7.331,
+        "runtime": 133
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "썬더볼츠",
+      "properties": {
+        "releaseYear": 2025,
+        "voteAverage": 7.513,
+        "runtime": 127
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "아이언맨",
+      "properties": {
+        "releaseYear": 2008,
+        "voteAverage": 7.7,
+        "runtime": 125
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "아이언맨 2",
+      "properties": {
+        "releaseYear": 2010,
+        "voteAverage": 6.849,
+        "runtime": 125
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "아이언맨 3",
+      "properties": {
+        "releaseYear": 2013,
+        "voteAverage": 6.93,
+        "runtime": 129
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "앤트맨",
+      "properties": {
+        "releaseYear": 2015,
+        "voteAverage": 7.071,
+        "runtime": 117
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "앤트맨과 와스프",
+      "properties": {
+        "releaseYear": 2018,
+        "voteAverage": 6.92,
+        "runtime": 118
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {
+        "releaseYear": 2023,
+        "voteAverage": 6.289,
+        "runtime": 125
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스",
+      "properties": {
+        "releaseYear": 2012,
+        "voteAverage": 7.747,
+        "runtime": 142
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스: 둠스데이",
+      "properties": {
+        "releaseYear": 2026
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스: 시크릿 워즈",
+      "properties": {
+        "releaseYear": 2027
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스: 에이지 오브 울트론",
+      "properties": {
+        "releaseYear": 2015,
+        "voteAverage": 7.271,
+        "runtime": 141
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스: 엔드게임",
+      "properties": {
+        "releaseYear": 2019,
+        "voteAverage": 8.238,
+        "runtime": 181
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어벤져스: 인피니티 워",
+      "properties": {
+        "releaseYear": 2018,
+        "voteAverage": 8.236,
+        "runtime": 149
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 7.036,
+        "runtime": 55
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "웨어울프 바이 나이트",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 6.979,
+        "runtime": 55
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "이터널스",
+      "properties": {
+        "releaseYear": 2021,
+        "voteAverage": 6.82,
+        "runtime": 156
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "인크레더블 헐크",
+      "properties": {
+        "releaseYear": 2008,
+        "voteAverage": 6.221,
+        "runtime": 113
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "캡틴 마블",
+      "properties": {
+        "releaseYear": 2019,
+        "voteAverage": 6.802,
+        "runtime": 124
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {
+        "releaseYear": 2025,
+        "voteAverage": 6.1,
+        "runtime": 119
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "캡틴 아메리카: 시빌 워",
+      "properties": {
+        "releaseYear": 2016,
+        "voteAverage": 7.446,
+        "runtime": 147
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "캡틴 아메리카: 윈터 솔져",
+      "properties": {
+        "releaseYear": 2014,
+        "voteAverage": 7.655,
+        "runtime": 136
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "토르: 다크 월드",
+      "properties": {
+        "releaseYear": 2013,
+        "voteAverage": 6.516,
+        "runtime": 112
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "토르: 라그나로크",
+      "properties": {
+        "releaseYear": 2017,
+        "voteAverage": 7.584,
+        "runtime": 130
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "토르: 러브 앤 썬더",
+      "properties": {
+        "releaseYear": 2022,
+        "voteAverage": 6.417,
+        "runtime": 119
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "토르: 천둥의 신",
+      "properties": {
+        "releaseYear": 2011,
+        "voteAverage": 6.769,
+        "runtime": 115
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "판타스틱 4: 새로운 출발",
+      "properties": {
+        "releaseYear": 2025
+      }
+    },
+    {
+      "label": "Movie",
+      "name": "퍼스트 어벤져",
+      "properties": {
+        "releaseYear": 2011,
+        "voteAverage": 7.001,
+        "runtime": 123
+      }
+    },
+    {
+      "label": "Director",
+      "name": "Alan Taylor",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Brad Baruh",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Jake Schreier",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Kirsten Lepore",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Leythum",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Louis Leterrier",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "Shane Black",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "니아 다코스타",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "데스틴 다니엘 크레턴",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "라이언 쿠글러",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "라이언 플렉",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "루이 데스포시토",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "마이클 자키노",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "맷 샤크먼",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "샘 레이미",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "숀 레비",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "스콧 데릭슨",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "안소니 루소",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "제임스 건",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "조 루소",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "조 존스턴",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "조스 웨던",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "존 왓츠",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "존 패브로",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "줄리어스 오나",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "케네스 브래너",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "케이트 쇼트랜드",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "클로이 자오",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "타이카 와이티티",
+      "properties": {}
+    },
+    {
+      "label": "Director",
+      "name": "페이턴 리드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Abby Ryder Fortson",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Al Hamacher",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Andy Le",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Bill Smitrovich",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Brian Chapek",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Carey Jones",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Christina Cabot",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Colm Feore",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Daniel J. Watts",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Deborah Knox",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Eugenie Bondurant",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Florence Kasumba",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Florian Munteanu",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Fred Tatasciore",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Garry Shandling",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Greg Haines",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Harriet Sansom Harris",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Jett Klyne",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Jon Barinholtz",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Julian Hilliard",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Jóhannes Haukur Jóhannesson",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Kaitlyn Robrock",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Ken Bethea",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Kirk R. Thatcher",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Laura Donnelly",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Lauren Ridloff",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Lia McHugh",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Lou Ferrigno",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Maximiliano Hernández",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Murry Hammond",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "O. T. 패그벤레이",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Paul Soles",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Peter Mensah",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Rhett Miller",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Saagar Shaikh",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Sarah Schreiber",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Sayed Badreya",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Shane Black",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Stephanie Szostak",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Tenoch Huerta Mejía",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Terri Douglas",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Tim Trobec",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Xochitl Gomez",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "Zara Phythian",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "张梦儿",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "陳法拉",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "가엘 가르시아 베르날",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "가이 피어스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "게리 루이스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "기네스 팰트로",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "나타샤 리온",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "나탈리 포트만",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "닐 맥도너",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "다나이 구리라",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "다니엘 칼루야",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "다프네 킨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "대니 라미레즈",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "데이브 바티스타",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "데이비드 다스트말치안",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "데이비드 실버먼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "데이비드 하버",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "도널드 글로버",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "도미니크 손",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "도미닉 쿠퍼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "돈 치들",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "라샤나 린치",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "라이언 레이놀즈",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "랄프 이네슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "랜들 박",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "러셀 크로우",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레미 히",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레베카 홀",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레슬리 비브",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레슬리 어검스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레오나르도 남",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레이 스티븐슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레이 윈스턴",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레이첼 맥아담스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레이첼 와이즈",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "레티티아 라이트",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "로라 해리어",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "로렌스 피시번",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "로버트 다우니 주니어",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "로버트 레드포드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "롭 딜레이니",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "루이스 풀먼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "루피타 뇽오",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "리 페이스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "리브 타일러",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "리자 콜론-자야스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "리차드 매든",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "리차드 아미티지",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마동석",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마리사 토메이",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 B. 조던",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 더글라스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 루커",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 스툴바그",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 키튼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마이클 페나",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마크 러팔로",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마틴 프리먼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "마허샬라 알리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "매즈 미켈슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "매튜 맥패디언",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "모레나 바카린",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "모한 카푸르",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "미셸 파이퍼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "미아 고스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "미키 루크",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "바네사 커비",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "바비 카나베일",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "바이올렛 맥그로우",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "박서준",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "배리 키오건",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "베네딕트 웡",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "베네딕트 컴버배치",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "벤 멘델슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "벤 킹슬리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "벤저민 브랫",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "브라이언 타이리 헨리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "브래드 윈더바움",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "브래드리 휘트포드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "브래들리 쿠퍼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "브리 라슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "빈 디젤",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "빌 머레이",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "사무엘 L. 잭슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "샘 록웰",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "세라 나일스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "세바스찬 스탠",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "세이디 싱크",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "셀마 헤이엑",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "쇼샤 로크모어",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "숀 건",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "숀 토브",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "스칼렛 요한슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "스콧 애드킨스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "스탠리 투치",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "스털링 K. 브라운",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "스텔란 스카스가드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "시라 하스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "시무 리우",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "실베스터 스탤론",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "아네트 베닝",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "아사노 타다노부",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "아콰피나",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "안소니 홉킨스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "안젤라 바셋",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "안젤리나 졸리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "알프레드 몰리나",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "앤서니 매키",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "앵거리 라이스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "양자경",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "양조위",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에드워드 노튼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에런 테일러존슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에밀리 밴캠프",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에반젤린 릴리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에버 앤더슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "에번 모스배크랙",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "엘리자베스 올슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "엠마 코린",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "올가 쿠릴렌코",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "와이어트 러셀",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "원화",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "월튼 고긴스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "웬들 피어스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "윈스턴 듀크",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "윌 폴터",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "윌렘 대포",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "윌리엄 잭슨 하퍼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "윌리엄 허트",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "이드리스 엘바",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "이만 벨라니",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "자이먼 혼수",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "재위 애슈턴",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "재커리 레비",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제노비아 샤로프",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제니퍼 가너",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제럴딘 비스워너던",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제레미 레너",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제이미 알렉산더",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제이미 폭스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제이콥 배털런",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제이크 질런홀",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제임스 건",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제임스 뱃지 데일",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제임스 스페이더",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제프 골드블룸",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "제프 브리지스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "젠데이아",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "젬마 찬",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "조 샐다나",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "조너선 메이저스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "조셉 퀸",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "조쉬 브롤린",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "존 C. 라일리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "존 말코비치",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "존 슬래터리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "존 패브로",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "주드 로",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "주디 그리어",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "줄리아 가너",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "줄리아 루이 드레이퍼스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "지안카를로 에스포지토",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "채드윅 보스만",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "추이텔 에지오포",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "추쿠디 이우지",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "카렌 길런",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "칼 럼블리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "칼 어반",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "캐스린 뉴턴",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "캣 데닝스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "커트 러셀",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "케네스 브래너",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "케빈 파이기",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "케이트 블란쳇",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "케이티 M. 오브라이언",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "코리 스톨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "코비 스멀더스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "쿠마일 난지아니",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "크리스 에반스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "크리스 프랫",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "크리스 헴스워스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "크리스찬 베일",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "크리스토퍼 에클스턴",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "클라크 그렉",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "타이 버렐",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "타이카 와이티티",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "테런스 하워드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "테사 톰슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "테요나 패리스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "토니 레볼로리",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "토미 리 존스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "토비 존스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "톰 홀랜드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "톰 히들스턴",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "트레버 드발",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "틸다 스윈튼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "팀 로스",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "팀 블레이크 넬슨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "파란 타히르",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "페드로 파스칼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "폴 러드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "폴 베타니",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "폴 월터 하우저",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "폼 클레멘티에프",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "프랭크 그릴로",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "플로렌스 퓨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "해나 존카먼",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "해리슨 포드",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "헤일리 앳웰",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "휴 잭맨",
+      "properties": {}
+    },
+    {
+      "label": "Actor",
+      "name": "휴고 위빙",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "존 왓츠",
+      "relationship": "DIRECTED",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 홀랜드",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "젠데이아",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "제이콥 배털런",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "제이미 폭스",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "윌렘 대포",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "알프레드 몰리나",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 웡",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "토니 레볼로리",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 노 웨이 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "라이언 플렉",
+      "relationship": "DIRECTED",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "브리 라슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "벤 멘델슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "주드 로",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "아네트 베닝",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "자이먼 혼수",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "리 페이스",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "라샤나 린치",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "젬마 찬",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 마블",
+      "properties": {}
+    },
+    {
+      "start_node": "스콧 데릭슨",
+      "relationship": "DIRECTED",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "추이텔 에지오포",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "레이첼 맥아담스",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 웡",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "매즈 미켈슨",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "틸다 스윈튼",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 스툴바그",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "벤저민 브랫",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "스콧 애드킨스",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "Zara Phythian",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지",
+      "properties": {}
+    },
+    {
+      "start_node": "안소니 루소",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "마크 러팔로",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "제레미 레너",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "조쉬 브롤린",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 러드",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 엔드게임",
+      "properties": {}
+    },
+    {
+      "start_node": "데스틴 다니엘 크레턴",
+      "relationship": "DIRECTED",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "시무 리우",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "양조위",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "아콰피나",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "벤 킹슬리",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "张梦儿",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "陳法拉",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "양자경",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "원화",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "Florian Munteanu",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "Andy Le",
+      "relationship": "ACTED_IN",
+      "end_node": "샹치와 텐 링즈의 전설",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "DIRECTED",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "테런스 하워드",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "제프 브리지스",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "기네스 팰트로",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "레슬리 비브",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "숀 토브",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "파란 타히르",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "Bill Smitrovich",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "Sayed Badreya",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 건",
+      "relationship": "DIRECTED",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "조 샐다나",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "데이브 바티스타",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "카렌 길런",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "폼 클레멘티에프",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "브래들리 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "숀 건",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "추쿠디 이우지",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "윌 폴터",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Volume 3",
+      "properties": {}
+    },
+    {
+      "start_node": "조 루소",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "바네사 커비",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "앤서니 매키",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "레티티아 라이트",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 러드",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "와이어트 러셀",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "Tenoch Huerta Mejía",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "에번 모스배크랙",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "시무 리우",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 둠스데이",
+      "properties": {}
+    },
+    {
+      "start_node": "조스 웨던",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "마크 러팔로",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "제레미 레너",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 스페이더",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "에런 테일러존슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 에이지 오브 울트론",
+      "properties": {}
+    },
+    {
+      "start_node": "라이언 쿠글러",
+      "relationship": "DIRECTED",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "레티티아 라이트",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "Tenoch Huerta Mejía",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "루피타 뇽오",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "다나이 구리라",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "윈스턴 듀크",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "안젤라 바셋",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "마틴 프리먼",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "줄리아 루이 드레이퍼스",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "도미니크 손",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "Florence Kasumba",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서: 와칸다 포에버",
+      "properties": {}
+    },
+    {
+      "start_node": "Jake Schreier",
+      "relationship": "DIRECTED",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "플로렌스 퓨",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "줄리아 루이 드레이퍼스",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "루이스 풀먼",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "데이비드 하버",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "와이어트 러셀",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "해나 존카먼",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "올가 쿠릴렌코",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "제럴딘 비스워너던",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "웬들 피어스",
+      "relationship": "ACTED_IN",
+      "end_node": "썬더볼츠",
+      "properties": {}
+    },
+    {
+      "start_node": "조 루소",
+      "relationship": "DIRECTED",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "앤서니 매키",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "제레미 레너",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "채드윅 보스만",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 베타니",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "엘리자베스 올슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 시빌 워",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "DIRECTED",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "기네스 팰트로",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "샘 록웰",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "미키 루크",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "존 슬래터리",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "Garry Shandling",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 2",
+      "properties": {}
+    },
+    {
+      "start_node": "니아 다코스타",
+      "relationship": "DIRECTED",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "브리 라슨",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "테요나 패리스",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "이만 벨라니",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "재위 애슈턴",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "게리 루이스",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "박서준",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "제노비아 샤로프",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "모한 카푸르",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "Saagar Shaikh",
+      "relationship": "ACTED_IN",
+      "end_node": "더 마블스",
+      "properties": {}
+    },
+    {
+      "start_node": "존 왓츠",
+      "relationship": "DIRECTED",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 홀랜드",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 키튼",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "마리사 토메이",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "기네스 팰트로",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "젠데이아",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "도널드 글로버",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "제이콥 배털런",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "로라 해리어",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 홈커밍",
+      "properties": {}
+    },
+    {
+      "start_node": "라이언 쿠글러",
+      "relationship": "DIRECTED",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "채드윅 보스만",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 B. 조던",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "루피타 뇽오",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "다나이 구리라",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "마틴 프리먼",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "다니엘 칼루야",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "레티티아 라이트",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "윈스턴 듀크",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "스털링 K. 브라운",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "안젤라 바셋",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 팬서",
+      "properties": {}
+    },
+    {
+      "start_node": "맷 샤크먼",
+      "relationship": "DIRECTED",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "페드로 파스칼",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "바네사 커비",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "조셉 퀸",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "에번 모스배크랙",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "랄프 이네슨",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "줄리아 가너",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 월터 하우저",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "존 말코비치",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "나타샤 리온",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "세라 나일스",
+      "relationship": "ACTED_IN",
+      "end_node": "판타스틱 4: 새로운 출발",
+      "properties": {}
+    },
+    {
+      "start_node": "타이카 와이티티",
+      "relationship": "DIRECTED",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "나탈리 포트만",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스찬 베일",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "테사 톰슨",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "타이카 와이티티",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "러셀 크로우",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "제이미 알렉산더",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "이드리스 엘바",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "데이브 바티스타",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 러브 앤 썬더",
+      "properties": {}
+    },
+    {
+      "start_node": "케네스 브래너",
+      "relationship": "DIRECTED",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "나탈리 포트만",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 히들스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "안소니 홉킨스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "스텔란 스카스가드",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "캣 데닝스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "Colm Feore",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "이드리스 엘바",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "레이 스티븐슨",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 천둥의 신",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 건",
+      "relationship": "DIRECTED",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "조 샐다나",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "데이브 바티스타",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "브래들리 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "커트 러셀",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 루커",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "카렌 길런",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "폼 클레멘티에프",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "실베스터 스탤론",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 Vol. 2",
+      "properties": {}
+    },
+    {
+      "start_node": "Louis Leterrier",
+      "relationship": "DIRECTED",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "에드워드 노튼",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "리브 타일러",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "팀 로스",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "윌리엄 허트",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "팀 블레이크 넬슨",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "타이 버렐",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "Christina Cabot",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "Peter Mensah",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "Lou Ferrigno",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "Paul Soles",
+      "relationship": "ACTED_IN",
+      "end_node": "인크레더블 헐크",
+      "properties": {}
+    },
+    {
+      "start_node": "줄리어스 오나",
+      "relationship": "DIRECTED",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "앤서니 매키",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "해리슨 포드",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "대니 라미레즈",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "시라 하스",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "팀 블레이크 넬슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "칼 럼블리",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "지안카를로 에스포지토",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "리브 타일러",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "쇼샤 로크모어",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "Jóhannes Haukur Jóhannesson",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 브레이브 뉴 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "Shane Black",
+      "relationship": "DIRECTED",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "기네스 팰트로",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "가이 피어스",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "레베카 홀",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "벤 킹슬리",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 뱃지 데일",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "Stephanie Szostak",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 베타니",
+      "relationship": "ACTED_IN",
+      "end_node": "아이언맨 3",
+      "properties": {}
+    },
+    {
+      "start_node": "클로이 자오",
+      "relationship": "DIRECTED",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "젬마 찬",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "리차드 매든",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "안젤리나 졸리",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "셀마 헤이엑",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "쿠마일 난지아니",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "Lia McHugh",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "브라이언 타이리 헨리",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "Lauren Ridloff",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "배리 키오건",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "마동석",
+      "relationship": "ACTED_IN",
+      "end_node": "이터널스",
+      "properties": {}
+    },
+    {
+      "start_node": "타이카 와이티티",
+      "relationship": "DIRECTED",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "마크 러팔로",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 히들스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "케이트 블란쳇",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "이드리스 엘바",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "제프 골드블룸",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "테사 톰슨",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "칼 어반",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "안소니 홉킨스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 라그나로크",
+      "properties": {}
+    },
+    {
+      "start_node": "조 존스턴",
+      "relationship": "DIRECTED",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "헤일리 앳웰",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "토미 리 존스",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "휴고 위빙",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "도미닉 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "리차드 아미티지",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "스탠리 투치",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "토비 존스",
+      "relationship": "ACTED_IN",
+      "end_node": "퍼스트 어벤져",
+      "properties": {}
+    },
+    {
+      "start_node": "Alan Taylor",
+      "relationship": "DIRECTED",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "나탈리 포트만",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 히들스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스토퍼 에클스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "안소니 홉킨스",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "제이미 알렉산더",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "재커리 레비",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "레이 스티븐슨",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "아사노 타다노부",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "이드리스 엘바",
+      "relationship": "ACTED_IN",
+      "end_node": "토르: 다크 월드",
+      "properties": {}
+    },
+    {
+      "start_node": "조 루소",
+      "relationship": "DIRECTED",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 레드포드",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "앤서니 매키",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "코비 스멀더스",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "프랭크 그릴로",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "Maximiliano Hernández",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "에밀리 밴캠프",
+      "relationship": "ACTED_IN",
+      "end_node": "캡틴 아메리카: 윈터 솔져",
+      "properties": {}
+    },
+    {
+      "start_node": "페이턴 리드",
+      "relationship": "DIRECTED",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 러드",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 더글라스",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "에반젤린 릴리",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "코리 스톨",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "바비 카나베일",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "앤서니 매키",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "주디 그리어",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "Abby Ryder Fortson",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 페나",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "데이비드 다스트말치안",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨",
+      "properties": {}
+    },
+    {
+      "start_node": "페이턴 리드",
+      "relationship": "DIRECTED",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 러드",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "에반젤린 릴리",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 더글라스",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "미셸 파이퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "조너선 메이저스",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "캐스린 뉴턴",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "코리 스톨",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "빌 머레이",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "케이티 M. 오브라이언",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "윌리엄 잭슨 하퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프: 퀀텀매니아",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 건",
+      "relationship": "DIRECTED",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "조 샐다나",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "데이브 바티스타",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "브래들리 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "리 페이스",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 루커",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "카렌 길런",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "자이먼 혼수",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "존 C. 라일리",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시",
+      "properties": {}
+    },
+    {
+      "start_node": "페이턴 리드",
+      "relationship": "DIRECTED",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "폴 러드",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "에반젤린 릴리",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 더글라스",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "해나 존카먼",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "랜들 박",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "미셸 파이퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "로렌스 피시번",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 페나",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "월튼 고긴스",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "바비 카나베일",
+      "relationship": "ACTED_IN",
+      "end_node": "앤트맨과 와스프",
+      "properties": {}
+    },
+    {
+      "start_node": "샘 레이미",
+      "relationship": "DIRECTED",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "Xochitl Gomez",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "엘리자베스 올슨",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "추이텔 에지오포",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 웡",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "레이첼 맥아담스",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "Jett Klyne",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "Julian Hilliard",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 스툴바그",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "헤일리 앳웰",
+      "relationship": "ACTED_IN",
+      "end_node": "닥터 스트레인지: 대혼돈의 멀티버스",
+      "properties": {}
+    },
+    {
+      "start_node": "안소니 루소",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "페드로 파스칼",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "바네사 커비",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "에번 모스배크랙",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "조셉 퀸",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "세바스찬 스탠",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "플로렌스 퓨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "데이비드 하버",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "와이어트 러셀",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "올가 쿠릴렌코",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 시크릿 워즈",
+      "properties": {}
+    },
+    {
+      "start_node": "데스틴 다니엘 크레턴",
+      "relationship": "DIRECTED",
+      "end_node": "스파이더맨: 브랜드 뉴 데이",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 홀랜드",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 브랜드 뉴 데이",
+      "properties": {}
+    },
+    {
+      "start_node": "세이디 싱크",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 브랜드 뉴 데이",
+      "properties": {}
+    },
+    {
+      "start_node": "리자 콜론-자야스",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 브랜드 뉴 데이",
+      "properties": {}
+    },
+    {
+      "start_node": "마이클 자키노",
+      "relationship": "DIRECTED",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "가엘 가르시아 베르날",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Laura Donnelly",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Harriet Sansom Harris",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Kirk R. Thatcher",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Eugenie Bondurant",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "레오나르도 남",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Daniel J. Watts",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Al Hamacher",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "Carey Jones",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "데이비드 실버먼",
+      "relationship": "ACTED_IN",
+      "end_node": "웨어울프 바이 나이트",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 건",
+      "relationship": "DIRECTED",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "데이브 바티스타",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "카렌 길런",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "폼 클레멘티에프",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "브래들리 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "숀 건",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "Rhett Miller",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "Murry Hammond",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "Ken Bethea",
+      "relationship": "ACTED_IN",
+      "end_node": "가디언즈 오브 갤럭시 홀리데이 스페셜",
+      "properties": {}
+    },
+    {
+      "start_node": "마허샬라 알리",
+      "relationship": "ACTED_IN",
+      "end_node": "블레이드",
+      "properties": {}
+    },
+    {
+      "start_node": "미아 고스",
+      "relationship": "ACTED_IN",
+      "end_node": "블레이드",
+      "properties": {}
+    },
+    {
+      "start_node": "Kirsten Lepore",
+      "relationship": "DIRECTED",
+      "end_node": "그루트의 수사",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 수사",
+      "properties": {}
+    },
+    {
+      "start_node": "제임스 건",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 수사",
+      "properties": {}
+    },
+    {
+      "start_node": "트레버 드발",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 수사",
+      "properties": {}
+    },
+    {
+      "start_node": "Terri Douglas",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 수사",
+      "properties": {}
+    },
+    {
+      "start_node": "Leythum",
+      "relationship": "DIRECTED",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "Maximiliano Hernández",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "윌리엄 허트",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "Deborah Knox",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 컨설턴트",
+      "properties": {}
+    },
+    {
+      "start_node": "Kirsten Lepore",
+      "relationship": "DIRECTED",
+      "end_node": "그루트의 마스터피스",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 마스터피스",
+      "properties": {}
+    },
+    {
+      "start_node": "브래들리 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 마스터피스",
+      "properties": {}
+    },
+    {
+      "start_node": "Fred Tatasciore",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 마스터피스",
+      "properties": {}
+    },
+    {
+      "start_node": "루이 데스포시토",
+      "relationship": "DIRECTED",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "헤일리 앳웰",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "브래드리 휘트포드",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "도미닉 쿠퍼",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "닐 맥도너",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Shane Black",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Greg Haines",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Jon Barinholtz",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Tim Trobec",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Sarah Schreiber",
+      "relationship": "ACTED_IN",
+      "end_node": "마블 원-샷: 카터 요원",
+      "properties": {}
+    },
+    {
+      "start_node": "Kirsten Lepore",
+      "relationship": "DIRECTED",
+      "end_node": "그루트의 샤워타임",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 샤워타임",
+      "properties": {}
+    },
+    {
+      "start_node": "Fred Tatasciore",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 샤워타임",
+      "properties": {}
+    },
+    {
+      "start_node": "Kaitlyn Robrock",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 샤워타임",
+      "properties": {}
+    },
+    {
+      "start_node": "숀 레비",
+      "relationship": "DIRECTED",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "라이언 레이놀즈",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "휴 잭맨",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "엠마 코린",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "매튜 맥패디언",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "다프네 킨",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "모레나 바카린",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "롭 딜레이니",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "레슬리 어검스",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "제니퍼 가너",
+      "relationship": "ACTED_IN",
+      "end_node": "데드풀과 울버린",
+      "properties": {}
+    },
+    {
+      "start_node": "Brad Baruh",
+      "relationship": "DIRECTED",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "케빈 파이기",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "케네스 브래너",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "타이카 와이티티",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "브래드 윈더바움",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "Brian Chapek",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "숀 건",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 프랫",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "폼 클레멘티에프",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "카렌 길런",
+      "relationship": "ACTED_IN",
+      "end_node": "어셈블: 토르: 러브 앤 썬더 비하인드",
+      "properties": {}
+    },
+    {
+      "start_node": "케이트 쇼트랜드",
+      "relationship": "DIRECTED",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "플로렌스 퓨",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "레이첼 와이즈",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "데이비드 하버",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "레이 윈스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "에버 앤더슨",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "바이올렛 맥그로우",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "O. T. 패그벤레이",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "윌리엄 허트",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "올가 쿠릴렌코",
+      "relationship": "ACTED_IN",
+      "end_node": "블랙 위도우",
+      "properties": {}
+    },
+    {
+      "start_node": "존 왓츠",
+      "relationship": "DIRECTED",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 홀랜드",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "제이크 질런홀",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "사무엘 L. 잭슨",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "마리사 토메이",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "존 패브로",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "젠데이아",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "제이콥 배털런",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "토니 레볼로리",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "앵거리 라이스",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "레미 히",
+      "relationship": "ACTED_IN",
+      "end_node": "스파이더맨: 파 프롬 홈",
+      "properties": {}
+    },
+    {
+      "start_node": "Kirsten Lepore",
+      "relationship": "DIRECTED",
+      "end_node": "그루트의 첫 발자국",
+      "properties": {}
+    },
+    {
+      "start_node": "빈 디젤",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 첫 발자국",
+      "properties": {}
+    },
+    {
+      "start_node": "Fred Tatasciore",
+      "relationship": "ACTED_IN",
+      "end_node": "그루트의 첫 발자국",
+      "properties": {}
+    },
+    {
+      "start_node": "조스 웨던",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "마크 러팔로",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "제레미 레너",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 히들스턴",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "클라크 그렉",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "코비 스멀더스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "스텔란 스카스가드",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스",
+      "properties": {}
+    },
+    {
+      "start_node": "조 루소",
+      "relationship": "DIRECTED",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "로버트 다우니 주니어",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 에반스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "크리스 헴스워스",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "조쉬 브롤린",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "마크 러팔로",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "스칼렛 요한슨",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "돈 치들",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "베네딕트 컴버배치",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "톰 홀랜드",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    },
+    {
+      "start_node": "채드윅 보스만",
+      "relationship": "ACTED_IN",
+      "end_node": "어벤져스: 인피니티 워",
+      "properties": {}
+    }
+  ]
+}

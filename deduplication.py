@@ -61,6 +61,5 @@ def deduplicate(data_path):
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(parsed_json, f, ensure_ascii=False, indent=4)
-        print("✅ dereplicated result 저장 완료")
 
 

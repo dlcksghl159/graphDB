@@ -53,5 +53,7 @@ def save_chunks(max_docs: int = 50):
     print(f"\n🎉  총 {min(max_docs, len(articles))} 개 기사 저장 완료")
 
 # ----------------------------- 실행 -----------------------------
-if __name__ == "__main__":
+def main():
     save_chunks(50)
+if __name__ == "__main__":
+    main()

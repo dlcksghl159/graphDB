@@ -53,6 +53,19 @@ HEADERS = {
     "Referer": "https://www.naver.com",
 }
 
+def reset_paths(output_root: str):
+    if not output_root:
+        output_root = "output"
+    global OUTPUT_ROOT, OUTPUT_DIR, JSON_PATH, IDX_PATH, VEC_PATH, RESULT_PATH
+    OUTPUT_ROOT = output_root
+    OUTPUT_DIR  = os.path.join(OUTPUT_ROOT, "news")
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    JSON_PATH   = f"{OUTPUT_DIR}/naver_news_top{TOP_N}.json"
+    IDX_PATH    = f"{OUTPUT_DIR}/news_index_{TOP_N}.faiss"
+    VEC_PATH    = f"{OUTPUT_DIR}/news_vectors_{TOP_N}.npy"
+    RESULT_PATH = f"{OUTPUT_DIR}/keyword_results.json"
+
 def crawl_top_n(n: int = TOP_N) -> List[dict]:
     """오늘 날짜 기준 기업·경영 섹션에서 기사 n개 수집"""
     print(f"📰  네이버 기사 {n}개 크롤링 중…")
@@ -194,7 +207,12 @@ def search_by_keywords(keywords: List[str], top_k: int = 50) -> List[dict]:
     return results
 
 # ---------------------- 4. 실행 ----------------------
-if __name__ == "__main__":
+def main(params_base):
+    global PARAMS_BASE
+    PARAMS_BASE = params_base
+    output_root = os.getenv("OUTPUT_ROOT", "output")
+    reset_paths(output_root)
+    print(PARAMS_BASE)
     kws = input("키워드를 입력하세요 (공백으로 구분): ").split()
     top_results = search_by_keywords(kws, top_k=50)
 
@@ -205,3 +223,11 @@ if __name__ == "__main__":
     with open(RESULT_PATH, "w", encoding="utf-8") as f:
         json.dump(top_results, f, ensure_ascii=False, indent=2)
     print(f"\n✅  결과 → {RESULT_PATH} 저장")
+
+if __name__ == "__main__": 
+    main({
+        "mode": "LS2D",
+        "mid": "sec",
+        "sid1": "101",  # 경제
+        "sid2": "771",  # 기업·경영
+    })

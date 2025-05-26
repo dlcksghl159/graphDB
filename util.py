@@ -69,27 +69,45 @@ def merge_json(
     }
 
 
+import re
+import json
 
-def parse_json(gpt_output):
-    # JSON 구조 감지 및 추출 (전체 JSON 블록을 greedy하게 탐지)
-    match = re.search(r'\{\s*"nodes"\s*:\s*\[.*\],\s*"relations"\s*:\s*\[.*\]\s*\}', gpt_output, re.DOTALL)
-
-    parsed_json = {}
-
-    if match:
-        json_data = match.group()
-        
-        # JSON 정리 (불필요한 공백, 줄 바꿈 제거 가능)
-        json_data = json_data.strip()
-
-        try:
-            # JSON 문자열을 딕셔너리로 파싱
-            parsed_json = json.loads(json_data)
-        except json.JSONDecodeError as e:
-            print("❌ JSON 파싱 실패:", e)
-            print("⚠️ 추출된 JSON 원본:\n", json_data)
+def parse_json(gpt_output: str) -> dict:
+    """
+    GPT 출력 중에서 JSON 블록을 자동으로 탐지하여 파싱한 후 dict로 반환.
+    - ```json ... ``` 코드블록 우선 탐지
+    - 없으면 첫 '{' 위치부터 JSONDecoder.raw_decode 시도
+    - 그래도 실패 시 마지막 '}'까지 슬라이싱 후 json.loads
+    """
+    # 1) ```json ... ``` 또는 ``` ... ``` 블록 탐지
+    fence_pattern = r'```(?:json)?\s*(\{[\s\S]*?\})\s*```'
+    fence_match = re.search(fence_pattern, gpt_output, re.IGNORECASE)
+    if fence_match:
+        json_str = fence_match.group(1)
     else:
-        print("❌ JSON 구조가 감지되지 않음")
-        print("⚠️ GPT 출력 원문:\n", gpt_output)
-    
-    return parsed_json
+        # 2) raw_decode 로 파싱 가능한 구간 자동 탐지
+        start = gpt_output.find("{")
+        if start == -1:
+            print("❌ JSON 구조가 전혀 감지되지 않음")
+            return {}
+        decoder = json.JSONDecoder()
+        try:
+            obj, idx = decoder.raw_decode(gpt_output[start:])
+            return obj
+        except json.JSONDecodeError:
+            # 3) 마지막 '}'까지 잘라서 재시도
+            end = gpt_output.rfind("}")
+            if end == -1 or end <= start:
+                print("❌ 유효한 '}'를 찾을 수 없음")
+                return {}
+            json_str = gpt_output[start:end+1]
+
+    # 공백·줄바꿈 정리
+    json_str = json_str.strip()
+
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError as e:
+        print(f"❌ JSON 파싱 실패: {e}")
+        print("⚠️ 추출된 JSON 원본:\n", json_str)
+        return {}

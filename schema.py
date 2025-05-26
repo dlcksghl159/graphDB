@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 from util import merge_json, parse_json
 
-def extract():
+def main(purpose = "기업판매"):
     OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")
     schema_dir  = os.path.join(OUTPUT_ROOT, "schema")
     chunks_dir  = os.path.join(OUTPUT_ROOT, "chunked_document")
@@ -15,8 +15,6 @@ def extract():
     api_key = os.getenv("OPENAI_API_KEY")
 
     client = openai.OpenAI(api_key=api_key)
-
-    purpose = input("지식 그래프 구축 목적을 입력하세요: ")
 
     system_msg = (
         "당신은 RAG 시스템용 지식 그래프 스키마(엔티티/관계 타입)를 텍스트에서 추출합니다. "
@@ -101,4 +99,4 @@ def extract():
         i += 1
 
 if __name__ == "__main__": 
-    extract()
+    main(purpose = "기업판매")

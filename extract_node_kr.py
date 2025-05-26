@@ -5,7 +5,7 @@ from util import merge_json, parse_json
 from dotenv import load_dotenv
 from deduplication import deduplicate
 
-def extract():
+def main(purpose = "기업판매"):
     # 공통 출력 루트 (main.py에서 미리: os.environ["OUTPUT_ROOT"] = "output_..." 로 설정)
     OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")   # 기본값: "output"
 
@@ -23,8 +23,6 @@ def extract():
     api_key = os.getenv("OPENAI_API_KEY")
 
     client = openai.OpenAI(api_key=api_key)
-
-    purpose = input("지식 그래프 구축 목적을 입력하세요: ")
 
     system_msg = (
         "당신은 RAG 시스템에 사용될 지식 그래프 구축을 위해 텍스트에서 엔티티와 관계를 추출합니다. "
@@ -105,4 +103,4 @@ def extract():
             
         i += 1
 if __name__ == "__main__": 
-    extract()
+    main(purpose = "기업판매")

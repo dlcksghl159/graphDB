@@ -5,7 +5,7 @@ from util import merge_json, parse_json
 from dotenv import load_dotenv
 from deduplication import deduplicate
 
-def extract():
+def main(purpose = "기업판매"):
     OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")  # 기본값: "output"
 
     result_dir  = os.path.join(OUTPUT_ROOT, "result")
@@ -22,8 +22,6 @@ def extract():
     api_key = os.getenv("OPENAI_API_KEY")
 
     client = openai.OpenAI(api_key=api_key)
-
-    purpose = input('지식 그래프 구축 목적을 입력하세요: ')
 
     system_msg = (
         "당신은 RAG 시스템에 사용되는 지식 그래프 작성을 위해 텍스트에서 엔티티를 활용하여 관계를 추출하는 역할을 합니다. "
@@ -82,7 +80,7 @@ def extract():
         # OpenAI GPT 호출
         response = client.chat.completions.create(
             model="gpt-4o",
-            response_format={"type": "json_object"},
+            response_format={"type": "json_object"},# json_schema
             messages=[
                 {"role": "system", "content": system_msg},
                 {"role": "user", "content": prompt}
@@ -122,4 +120,4 @@ def extract():
         i += 1
 
 if __name__ == "__main__": 
-    extract()
+    main(purpose = "기업판매")

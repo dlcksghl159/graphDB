@@ -1,0 +1,91 @@
+{
+    "nodes": [
+        {
+            "label": "ExportReport",
+            "name": "중소기업수출보고서",
+            "properties": {
+                "report_id": "string",
+                "year": "int",
+                "quarter": "string",
+                "total_export_amount_usd": "float",
+                "company_count": "int",
+                "growth_rate_percent": "float"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "수출품목",
+            "properties": {
+                "product_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "수출국가",
+            "properties": {
+                "country_code": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "Agency",
+            "name": "발표기관",
+            "properties": {
+                "agency_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "TariffAction",
+            "name": "관세조치",
+            "properties": {
+                "action_id": "string",
+                "start_date": "string",
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Agency",
+            "relationship": "PUBLISHES",
+            "end_node": "ExportReport",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportReport",
+            "relationship": "INCLUDES_PRODUCT",
+            "end_node": "Product",
+            "properties": {
+                "export_amount_usd": "float",
+                "growth_rate_percent": "float",
+                "rank": "int"
+            }
+        },
+        {
+            "start_node": "ExportReport",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Country",
+            "properties": {
+                "export_amount_usd": "float",
+                "growth_rate_percent": "float",
+                "rank": "int"
+            }
+        },
+        {
+            "start_node": "TariffAction",
+            "relationship": "IMPOSED_BY",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "TariffAction",
+            "relationship": "IMPOSED_ON",
+            "end_node": "Product",
+            "properties": {
+                "export_change_percent": "float"
+            }
+        }
+    ]
+}

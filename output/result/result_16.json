@@ -1,0 +1,61 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "사람인",
+            "properties": {
+                "industry": "",
+                "name": "사람인"
+            }
+        },
+        {
+            "label": "Survey",
+            "name": "인생 이모작 의향 조사",
+            "properties": {
+                "id": "20231014",
+                "title": "인생 이모작 의향 조사",
+                "date": "2023-10-14",
+                "sample_size": 965,
+                "desired_monthly_income_avg": 402
+            }
+        },
+        {
+            "label": "JobCategory",
+            "name": "창업 및 자영업",
+            "properties": {
+                "category": "창업 및 자영업"
+            }
+        },
+        {
+            "label": "JobCategory",
+            "name": "블루칼라",
+            "properties": {
+                "category": "블루칼라"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "사람인",
+            "relationship": "CONDUCTS",
+            "end_node": "인생 이모작 의향 조사",
+            "properties": {}
+        },
+        {
+            "start_node": "인생 이모작 의향 조사",
+            "relationship": "PREFERS_FIELD",
+            "end_node": "창업 및 자영업",
+            "properties": {
+                "percentage": 21.7
+            }
+        },
+        {
+            "start_node": "인생 이모작 의향 조사",
+            "relationship": "PREFERS_FIELD",
+            "end_node": "블루칼라",
+            "properties": {
+                "percentage": 20.4
+            }
+        }
+    ]
+}

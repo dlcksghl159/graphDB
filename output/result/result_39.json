@@ -1,0 +1,264 @@
+{
+    "nodes": [
+        {
+            "label": "Country",
+            "name": "미국",
+            "properties": {
+                "country_code": "USA",
+                "name": "미국",
+                "country_name": "미국"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "중국",
+            "properties": {
+                "country_code": "CHN",
+                "name": "중국",
+                "country_name": "중국"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "일본",
+            "properties": {
+                "country_code": "JPN",
+                "name": "일본",
+                "country_name": "일본"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "홍콩",
+            "properties": {
+                "country_code": "HKG",
+                "name": "홍콩",
+                "country_name": "홍콩"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "대만",
+            "properties": {
+                "country_code": "TWN",
+                "name": "대만",
+                "country_name": "대만"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "태국",
+            "properties": {
+                "country_code": "THA",
+                "name": "태국",
+                "country_name": "태국"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "인도네시아",
+            "properties": {
+                "country_code": "IDN",
+                "name": "인도네시아",
+                "country_name": "인도네시아"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "베트남",
+            "properties": {
+                "country_code": "VNM",
+                "name": "베트남",
+                "country_name": "베트남"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "인도",
+            "properties": {
+                "country_code": "IND",
+                "name": "인도",
+                "country_name": "인도"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "멕시코",
+            "properties": {
+                "country_code": "MEX",
+                "name": "멕시코",
+                "country_name": "멕시코"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "화장품",
+            "properties": {
+                "product_name": "화장품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "자동차",
+            "properties": {
+                "product_name": "자동차"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "플라스틱 제품",
+            "properties": {
+                "product_name": "플라스틱 제품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "자동차 부품",
+            "properties": {
+                "product_name": "자동차 부품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "기타기계류",
+            "properties": {
+                "product_name": "기타기계류"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "전자응용기기",
+            "properties": {
+                "product_name": "전자응용기기"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "철강 제품",
+            "properties": {
+                "product_name": "철강 제품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "알루미늄 제품",
+            "properties": {
+                "product_name": "알루미늄 제품"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업부",
+            "properties": {
+                "region": "대한민국",
+                "agency_id": "sme"
+            }
+        },
+        {
+            "label": "SMEExportQuarter",
+            "name": "중소기업_분기수출",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "total_amount": "270억 달러",
+                "growth_rate": "0.7%"
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "미국 관세 조치",
+            "properties": {
+                "name": "미국 관세 조치",
+                "rate": -0.174,
+                "effective_date": "2023-03-12",
+                "policy_id": "us_tariff",
+                "tariff_type": "철강·알루미늄",
+                "start_date": "2023-03-12",
+                "target_products": "철강 제품, 알루미늄 제품"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "REPORTS",
+            "end_node": "중소기업_분기수출",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "화장품",
+            "properties": {
+                "export_amount": "18억4천만 달러",
+                "growth_rate": "0%",
+                "rank": 1
+            }
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차",
+            "properties": {
+                "export_amount": "17억4천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "플라스틱 제품",
+            "properties": {
+                "export_amount": "11억3천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차 부품",
+            "properties": {
+                "export_amount": "10억4천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 조치",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "기타기계류",
+            "properties": {
+                "impact": "-47.4%"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "전자응용기기",
+            "properties": {
+                "impact": "-25.6%"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "철강 제품",
+            "properties": {
+                "impact": "-17.8%"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "알루미늄 제품",
+            "properties": {
+                "impact": "-7.6%"
+            }
+        }
+    ]
+}

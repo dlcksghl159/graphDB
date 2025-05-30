@@ -10,6 +10,7 @@ def merge_json(
     new_schema: dict,
     node_key=("label",),  # 예: ("label",) 또는 ("label", "name")
 ) -> dict:
+    print("🔗 JSON 병합 시작...")
     # --- 노드 병합 ---
     def build_node_dict(nodes):
         result = {}
@@ -62,7 +63,7 @@ def merge_json(
             "end_node": end_node,
             "properties": merged_props
         })
-
+    print("🔗 JSON 병합 완료")
     return {
         "nodes": merged_nodes,
         "relations": merged_relations

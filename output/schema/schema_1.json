@@ -1,0 +1,55 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "FinancialReport",
+            "name": "FinancialReport",
+            "properties": {
+                "period": "string",
+                "reportDate": "string"
+            }
+        },
+        {
+            "label": "FinancialMetric",
+            "name": "FinancialMetric",
+            "properties": {
+                "metricType": "string",
+                "value": "int",
+                "changePercentage": "float"
+            }
+        },
+        {
+            "label": "EconomicCondition",
+            "name": "EconomicCondition",
+            "properties": {
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "REPORTS",
+            "end_node": "FinancialReport",
+            "properties": {}
+        },
+        {
+            "start_node": "FinancialReport",
+            "relationship": "INCLUDES_METRIC",
+            "end_node": "FinancialMetric",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "FACES",
+            "end_node": "EconomicCondition",
+            "properties": {}
+        }
+    ]
+}

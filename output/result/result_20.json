@@ -1,0 +1,97 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "industry": "N/A",
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품",
+                "name": "롯데웰푸드"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "백년가게",
+            "properties": {
+                "name": "백년가게",
+                "sector": "음식점업"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "백년소공인",
+            "properties": {
+                "name": "백년소공인",
+                "sector": "식품 제조업"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "year": 2025,
+                "description": "백년가게·소공인의 오랜 경험과 비법에 롯데웰푸드의 식품 제조 기술력을 접목해 공동 상표 및 상품 개발",
+                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트"
+            }
+        },
+        {
+            "label": "Collaboration",
+            "name": "업무 협약",
+            "properties": {
+                "date": "2023-03",
+                "purpose": "소진공과 롯데웰푸드 간의 협력"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {
+                "startYear": 2023
+            }
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "COVERS",
+            "end_node": "업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "SUPPORTS",
+            "end_node": "백년가게",
+            "properties": {
+                "support_type": "식자재 납품"
+            }
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "SUPPORTS",
+            "end_node": "백년소공인",
+            "properties": {
+                "support_type": "조리법 제공"
+            }
+        }
+    ]
+}

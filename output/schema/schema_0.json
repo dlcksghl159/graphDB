@@ -1,0 +1,60 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "ticker": "string",
+                "sector": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "category": "string",
+                "powerCapacity": "string",
+                "marketShare": "string"
+            }
+        },
+        {
+            "label": "Acquisition",
+            "name": "Acquisition",
+            "properties": {
+                "date": "string",
+                "stakePercent": "string",
+                "amount": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "PRODUCES",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SUPPLIES",
+            "end_node": "Company",
+            "properties": {
+                "product": "string",
+                "startQuarter": "string",
+                "exclusivity": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ACQUIRED",
+            "end_node": "Company",
+            "properties": {
+                "stakePercent": "string",
+                "amount": "int",
+                "date": "string"
+            }
+        }
+    ]
+}

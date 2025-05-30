@@ -1,0 +1,104 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "industry": "제약",
+                "name": "삼성바이오로직스"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "셀트리온",
+            "properties": {
+                "industry": "제약",
+                "name": "셀트리온"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "삼성바이오로직스 1Q2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 12983000,
+                "growth_rate": 37.1,
+                "overseas_ratio": 91.0
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "셀트리온 1Q2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 8419000,
+                "growth_rate": 14.2,
+                "overseas_ratio": 98.8
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "삼성바이오로직스 2023 목표",
+            "properties": {
+                "year": 2023,
+                "targetRevenue": 55705000
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "셀트리온 2023 목표",
+            "properties": {
+                "year": 2023,
+                "targetRevenue": 50000000
+            }
+        },
+        {
+            "label": "TariffMeasure",
+            "name": "트럼프 의약품 관세",
+            "properties": {
+                "measure_name": "의약품 관세부과",
+                "effective_date": "2023-12",
+                "products_affected": "의약품",
+                "rate_effect": 0.0
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "삼성바이오로직스 1Q2023",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "셀트리온 1Q2023",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "삼성바이오로직스 2023 목표",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "셀트리온 2023 목표",
+            "properties": {}
+        },
+        {
+            "start_node": "트럼프 의약품 관세",
+            "relationship": "IMPOSED_BY",
+            "end_node": "삼성바이오로직스",
+            "properties": {}
+        },
+        {
+            "start_node": "트럼프 의약품 관세",
+            "relationship": "IMPOSED_BY",
+            "end_node": "셀트리온",
+            "properties": {}
+        }
+    ]
+}

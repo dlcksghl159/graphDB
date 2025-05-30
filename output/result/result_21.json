@@ -1,0 +1,70 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "센드버드",
+            "properties": {
+                "industry": "AI 에이전트 플랫폼",
+                "name": "센드버드"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "옴니프레젠트 AI 에이전트",
+            "properties": {
+                "name": "옴니프레젠트 AI 에이전트",
+                "provider": "센드버드"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "커머스",
+            "properties": {
+                "industry_name": "커머스",
+                "name": "커머스"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "핀테크",
+            "properties": {
+                "industry_name": "핀테크",
+                "name": "핀테크"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "리테일",
+            "properties": {
+                "industry_name": "리테일",
+                "name": "리테일"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "센드버드",
+            "relationship": "DEVELOPS",
+            "end_node": "옴니프레젠트 AI 에이전트",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "커머스",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "핀테크",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "리테일",
+            "properties": {}
+        }
+    ]
+}

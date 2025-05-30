@@ -1,0 +1,132 @@
+{
+    "nodes": [
+        {
+            "label": "SMEGroup",
+            "name": "SMEGroup",
+            "properties": {
+                "group_id": "string",
+                "name": "string",
+                "total_companies": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "product_id": "string",
+                "name": "string",
+                "category": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Country",
+            "properties": {
+                "country_id": "string",
+                "name": "string",
+                "region": "string"
+            }
+        },
+        {
+            "label": "ExportStatistic",
+            "name": "ExportStatistic",
+            "properties": {
+                "stat_id": "string",
+                "year": "int",
+                "quarter": "string",
+                "amount_usd": "float",
+                "growth_rate": "float",
+                "ranking": "int"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "GovernmentAgency",
+            "properties": {
+                "agency_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "person_id": "string",
+                "name": "string",
+                "position": "string"
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "TariffPolicy",
+            "properties": {
+                "policy_id": "string",
+                "name": "string",
+                "effective_date": "string",
+                "tariff_type": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "SMEGroup",
+            "relationship": "EXPORTS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "EXPORTED_TO",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "SMEGroup",
+            "relationship": "HAS_STATISTIC",
+            "end_node": "ExportStatistic",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportStatistic",
+            "relationship": "FOR_PRODUCT",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportStatistic",
+            "relationship": "IN_COUNTRY",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "GovernmentAgency",
+            "relationship": "PUBLISHES",
+            "end_node": "ExportStatistic",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "WORKS_FOR",
+            "end_node": "GovernmentAgency",
+            "properties": {}
+        },
+        {
+            "start_node": "TariffPolicy",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "TariffPolicy",
+            "relationship": "APPLIES_TO_COUNTRY",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "GovernmentAgency",
+            "relationship": "SUPPORTS",
+            "end_node": "SMEGroup",
+            "properties": {}
+        }
+    ]
+}

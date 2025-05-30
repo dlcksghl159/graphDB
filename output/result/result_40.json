@@ -1,0 +1,90 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "name": "삼성바이오로직스",
+                "industry": "제약바이오",
+                "revenue": 12983000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null
+            }
+        },
+        {
+            "label": "Company",
+            "name": "셀트리온",
+            "properties": {
+                "name": "셀트리온",
+                "industry": "제약바이오",
+                "revenue": 8419000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null
+            }
+        },
+        {
+            "label": "Company",
+            "name": "유한양행",
+            "properties": {
+                "name": "유한양행",
+                "industry": "전통제약",
+                "revenue": 4916000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null
+            }
+        },
+        {
+            "label": "Product",
+            "name": "피즈치바",
+            "properties": {
+                "product_name": "피즈치바",
+                "category": "바이오시밀러",
+                "marketShare": null
+            }
+        },
+        {
+            "label": "Product",
+            "name": "램시마SC",
+            "properties": {
+                "product_name": "램시마SC",
+                "category": "자가면역질환 치료제",
+                "marketShare": null
+            }
+        },
+        {
+            "label": "Product",
+            "name": "렉라자",
+            "properties": {
+                "product_name": "렉라자",
+                "category": "폐암 신약",
+                "marketShare": null
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PRODUCES",
+            "end_node": "피즈치바",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "램시마SC",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "PRODUCES",
+            "end_node": "렉라자",
+            "properties": {}
+        }
+    ]
+}

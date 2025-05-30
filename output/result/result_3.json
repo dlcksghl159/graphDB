@@ -1,0 +1,174 @@
+{
+    "nodes": [
+        {
+            "label": "Country",
+            "name": "미국",
+            "properties": {
+                "country_code": "",
+                "name": "미국",
+                "country_name": "미국",
+                "export_amount_usd": "4480000000",
+                "growth_rate_percent": "-2.5",
+                "country_id": "",
+                "region": "",
+                "countryName": "미국",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Country",
+            "name": "중국",
+            "properties": {
+                "country_code": "",
+                "name": "중국",
+                "country_name": "중국",
+                "export_amount_usd": "4320000000",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "중국",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Country",
+            "name": "키르기스스탄",
+            "properties": {
+                "country_code": "",
+                "name": "키르기스스탄",
+                "country_name": "키르기스스탄",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "키르기스스탄",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Product",
+            "name": "화장품",
+            "properties": {
+                "product_name": "화장품",
+                "description": "",
+                "price": 0,
+                "type": "",
+                "name": "화장품",
+                "category": "",
+                "powerCapacity": "",
+                "marketShare": "",
+                "export_amount_usd": "1840000000",
+                "growth_rate_percent": "19.6",
+                "generation": "",
+                "releaseDate": "",
+                "product_id": "",
+                "development_status": "",
+                "model": "",
+                "release_date": null,
+                "release_quarter": "",
+                "product_type": "",
+                "launch_year": 0,
+                "launchYear": 0,
+                "funding_amount": 0,
+                "ranking": 0,
+                "generic_name": "",
+                "productName": "화장품",
+                "brand_name": "",
+                "export_usd": 0,
+                "rank": 0
+            }
+        },
+        {
+            "label": "Product",
+            "name": "자동차",
+            "properties": {
+                "product_name": "자동차",
+                "description": "",
+                "price": 0,
+                "type": "",
+                "name": "자동차",
+                "category": "",
+                "powerCapacity": "",
+                "marketShare": "",
+                "export_amount_usd": "1740000000",
+                "growth_rate_percent": "67.4",
+                "generation": "",
+                "releaseDate": "",
+                "product_id": "",
+                "development_status": "",
+                "model": "",
+                "release_date": null,
+                "release_quarter": "",
+                "product_type": "",
+                "launch_year": 0,
+                "launchYear": 0,
+                "funding_amount": 0,
+                "ranking": 0,
+                "generic_name": "",
+                "productName": "자동차",
+                "brand_name": "",
+                "export_usd": 0,
+                "rank": 0
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업부",
+            "properties": {
+                "region": "",
+                "agency_id": "",
+                "name": "중소벤처기업부"
+            }
+        },
+        {
+            "label": "TariffAction",
+            "name": "미국 관세 정책",
+            "properties": {
+                "action_id": "",
+                "start_date": "2023-03-01",
+                "description": "25% 관세 부과"
+            }
+        },
+        {
+            "label": "SMEExportQuarter",
+            "name": "중소기업 분기수출",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "total_amount": "270억 달러",
+                "growth_rate": "0.7%",
+                "company_count": 63135,
+                "company_count_growth": "1.6%"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "미국",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {}
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "키르기스스탄",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "ISSUED",
+            "end_node": "중소기업 분기수출",
+            "properties": {}
+        }
+    ]
+}

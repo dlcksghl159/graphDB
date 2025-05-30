@@ -1,0 +1,49 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "한샘",
+            "properties": {
+                "name": "한샘",
+                "stock_code": "009240"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대리바트",
+            "properties": {
+                "name": "현대리바트",
+                "stock_code": "079430"
+            }
+        },
+        {
+            "label": "MarketCondition",
+            "name": "건설경기 침체",
+            "properties": {
+                "segment": "B2B",
+                "status": "불황",
+                "impact": "매출 감소"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "한샘",
+            "relationship": "COMPETES_WITH",
+            "end_node": "현대리바트",
+            "properties": {}
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "OPERATES_IN",
+            "end_node": "건설경기 침체",
+            "properties": {}
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "OPERATES_IN",
+            "end_node": "건설경기 침체",
+            "properties": {}
+        }
+    ]
+}

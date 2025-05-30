@@ -1,0 +1,147 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "industry": "string",
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품 제조업",
+                "name": "롯데웰푸드"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "year": 2023,
+                "description": "음식점업 및 식품 제조업 경험과 기술력을 개발에 활용",
+                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+                "topic": "밀키트",
+                "type": "상생협력"
+            }
+        },
+        {
+            "label": "BRAND",
+            "name": "식사이론",
+            "properties": {
+                "name": "식사이론",
+                "sector": "식품"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "백년가게·백년소공인 상생프로젝트",
+            "properties": {
+                "name": "백년가게·백년소공인 상생프로젝트",
+                "year": 2023,
+                "application_deadline": "2023-10-23",
+                "description": "백년소상공인의 판로 확대와 K브랜드 구축 목표",
+                "program_id": "string",
+                "program_name": "백년가게·백년소공인 상생프로젝트"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년가게",
+            "properties": {
+                "category": "음식점업",
+                "years_in_business": 30,
+                "name": "백년가게",
+                "businessType": "음식점업",
+                "yearsInBusiness": 30
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년소공인",
+            "properties": {
+                "category": "식품 제조업",
+                "years_in_business": 15,
+                "name": "백년소공인",
+                "businessType": "식품 제조업",
+                "yearsInBusiness": 15
+            }
+        },
+        {
+            "label": "Product",
+            "name": "가정간편식",
+            "properties": {
+                "product_name": "가정간편식",
+                "type": "HMR",
+                "name": "가정간편식",
+                "description": "즉석섭취 및 조리식품"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "박성효",
+            "properties": {
+                "name": "박성효",
+                "role": "이사장"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {}
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "HOSTS",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "RUNS_PROGRAM",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "INCLUDES",
+            "end_node": "백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "DEVELOPS_PRODUCT",
+            "end_node": "가정간편식",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "APPLIED_FOR",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "APPLIED_FOR",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "가정간편식",
+            "relationship": "BRANDED_AS",
+            "end_node": "식사이론",
+            "properties": {}
+        },
+        {
+            "start_node": "박성효",
+            "relationship": "LEADS",
+            "end_node": "소상공인시장진흥공단",
+            "properties": {}
+        }
+    ]
+}

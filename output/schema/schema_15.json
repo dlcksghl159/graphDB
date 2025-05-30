@@ -1,0 +1,132 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "Organization",
+            "properties": {
+                "name": "string",
+                "type": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "name": "string",
+                "title": "string"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "ESGAgreement",
+            "properties": {
+                "date": "string",
+                "purpose": "string"
+            }
+        },
+        {
+            "label": "ESGIndicator",
+            "name": "ESGIndicator",
+            "properties": {
+                "name": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Certificate",
+            "name": "ESGCertificate",
+            "properties": {
+                "name": "string",
+                "date": "string"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "Event",
+            "properties": {
+                "date": "string",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "ESGSupportProgram",
+            "properties": {
+                "name": "string",
+                "year": "int",
+                "participants_count": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "DEVELOPED",
+            "end_node": "ESGIndicator",
+            "properties": {}
+        },
+        {
+            "start_node": "ESGIndicator",
+            "relationship": "APPLIES_TO",
+            "end_node": "Organization",
+            "properties": {
+                "score": "float"
+            }
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "ISSUED",
+            "end_node": "Certificate",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "RECEIVED",
+            "end_node": "Certificate",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "WORKS_FOR",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "ATTENDED",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "RELATED_TO",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SUPPLIES",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "Program",
+            "properties": {}
+        },
+        {
+            "start_node": "Program",
+            "relationship": "SUPPORTS",
+            "end_node": "Organization",
+            "properties": {}
+        }
+    ]
+}

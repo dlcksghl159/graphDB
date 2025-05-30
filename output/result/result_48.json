@@ -1,0 +1,137 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "현대이지웰",
+            "properties": {
+                "industry": "Total Welfare Solution",
+                "name": "현대이지웰"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대백화점그룹",
+            "properties": {
+                "industry": "Retail",
+                "name": "현대백화점그룹"
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "현대이지웰 복지몰",
+            "properties": {
+                "name": "현대이지웰 복지몰",
+                "ranking": "1"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData",
+            "properties": {
+                "year": 2021,
+                "revenue": 9104,
+                "growth_rate": 65.6
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData",
+            "properties": {
+                "year": 2020,
+                "revenue": 5497,
+                "growth_rate": 0
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "한국중소벤처기업유통원",
+            "properties": {
+                "region": "South Korea",
+                "agency_id": "",
+                "name": "한국중소벤처기업유통원"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "name": "소상공인 온라인쇼핑몰 판매지원사업",
+                "type": "Online Sales Support"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "경기도 중소 협력사",
+            "properties": {
+                "name": "경기도 중소 협력사",
+                "industry": "Various"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "Transaction",
+            "properties": {
+                "year": 2021,
+                "amount": 272,
+                "growthRate": 2700
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "현대이지웰",
+            "relationship": "SUBSIDIARY_OF",
+            "end_node": "현대백화점그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "OPERATES",
+            "end_node": "현대이지웰 복지몰",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "Transaction",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "한국중소벤처기업유통원",
+            "relationship": "SUPPORTS",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도 중소 협력사",
+            "relationship": "LOCATED_IN",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도 중소 협력사",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "현대이지웰",
+            "properties": {}
+        }
+    ]
+}

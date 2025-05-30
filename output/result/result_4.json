@@ -1,0 +1,82 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "LG이노텍",
+            "properties": {
+                "industry": "전기전자",
+                "name": "LG이노텍"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "동반성장위원회",
+            "properties": {
+                "region": "",
+                "agency_id": "",
+                "name": "동반성장위원회"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "에이피텍",
+            "properties": {
+                "name": "에이피텍",
+                "sector": "휴대전화 카메라 모듈 제조설비"
+            }
+        },
+        {
+            "label": "ESGSupportProgram",
+            "name": "협력사 ESG 지원사업",
+            "properties": {
+                "program_id": "",
+                "name": "협력사 ESG 지원사업",
+                "year": 2023,
+                "participant_count": 50,
+                "support_scale": "대규모",
+                "avg_compliance_rate": 83.0
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG지원 협약",
+            "properties": {
+                "agreement_id": "",
+                "date": "2023-11-14",
+                "location": "인천 송도",
+                "purpose": "ESG 지원",
+                "name": "협력사 ESG지원 협약",
+                "title": "",
+                "subject": "협력사 ESG지원 협약",
+                "agreement_date": "2023-11-14",
+                "description": "4년 연속 협력사 ESG지원"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "협력사 ESG지원 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "협력사 ESG 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "협력사 ESG 지원사업",
+            "relationship": "SUPPORTS",
+            "end_node": "에이피텍",
+            "properties": {}
+        }
+    ]
+}

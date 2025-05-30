@@ -1,0 +1,88 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "String",
+            "properties": {
+                "type": "string",
+                "website": "string"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "String",
+            "properties": {
+                "start_date": "date",
+                "end_date": "date"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "String",
+            "properties": {
+                "category": "string",
+                "years_in_business": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "String",
+            "properties": {
+                "product_type": "string"
+            }
+        },
+        {
+            "label": "Application",
+            "name": "String",
+            "properties": {
+                "deadline": "date",
+                "platform": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "String",
+            "properties": {
+                "position": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "PARTNERSHIP_WITH",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "INITIATES",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "INCLUDES",
+            "end_node": "SmallBusiness",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "SmallBusiness",
+            "relationship": "APPLIES_VIA",
+            "end_node": "Application",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "LEADS",
+            "end_node": "Project",
+            "properties": {}
+        }
+    ]
+}

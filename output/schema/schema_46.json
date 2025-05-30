@@ -1,0 +1,108 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "string",
+            "properties": {
+                "industry": "string",
+                "founding_year": "int",
+                "revenue": "int",
+                "r_and_d_investment": "int",
+                "market_share": "float",
+                "parent_company": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "string",
+            "properties": {
+                "position": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "string",
+            "properties": {
+                "product_type": "string"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "string",
+            "properties": {
+                "size_2022": "int",
+                "forecast_size_2027": "int"
+            }
+        },
+        {
+            "label": "Litigation",
+            "name": "string",
+            "properties": {
+                "case_type": "string",
+                "year": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Person",
+            "relationship": "LEADS",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "WORKS_FOR",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SUBSIDIARY_OF",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "COMPETES_WITH",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SUPPLIES",
+            "end_node": "Product",
+            "properties": {
+                "year": "int",
+                "contract_value": "int"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ORDERS",
+            "end_node": "Product",
+            "properties": {
+                "year": "int",
+                "contract_value": "int"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "Market",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PLAINTIFF_IN",
+            "end_node": "Litigation",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "DEFENDANT_IN",
+            "end_node": "Litigation",
+            "properties": {}
+        }
+    ]
+}

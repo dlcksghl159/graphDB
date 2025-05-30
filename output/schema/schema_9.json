@@ -1,0 +1,84 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "string",
+            "properties": {
+                "category": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "string",
+            "properties": {
+                "application_deadline": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Funding",
+            "name": "string",
+            "properties": {
+                "min_amount": "int",
+                "max_amount": "int",
+                "currency": "string"
+            }
+        },
+        {
+            "label": "Expert",
+            "name": "string",
+            "properties": {
+                "expertise": "string"
+            }
+        },
+        {
+            "label": "Opportunity",
+            "name": "string",
+            "properties": {
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "APPLIES_TO",
+            "end_node": "Program",
+            "properties": {
+                "application_date": "string"
+            }
+        },
+        {
+            "start_node": "Program",
+            "relationship": "PROVIDES",
+            "end_node": "Funding",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "RECEIVES",
+            "end_node": "Funding",
+            "properties": {
+                "grade": "string"
+            }
+        },
+        {
+            "start_node": "Company",
+            "relationship": "CONNECTED_WITH",
+            "end_node": "Expert",
+            "properties": {}
+        },
+        {
+            "start_node": "Program",
+            "relationship": "OFFERS",
+            "end_node": "Opportunity",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "RECEIVES",
+            "end_node": "Opportunity",
+            "properties": {}
+        }
+    ]
+}

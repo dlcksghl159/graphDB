@@ -1,0 +1,84 @@
+{
+    "nodes": [
+        {
+            "label": "ExportReport",
+            "name": "Export Report",
+            "properties": {
+                "year": "int",
+                "quarter": "string",
+                "total_export_usd": "string",
+                "growth_rate_percent": "string",
+                "num_exporters": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "product_name": "string",
+                "export_amount_usd": "string",
+                "growth_rate_percent": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Country",
+            "properties": {
+                "country_name": "string",
+                "export_amount_usd": "string",
+                "growth_rate_percent": "string"
+            }
+        },
+        {
+            "label": "Agency",
+            "name": "Government Agency",
+            "properties": {
+                "agency_name": "string"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "Official",
+            "properties": {
+                "official_name": "string",
+                "title": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "ExportReport",
+            "relationship": "INCLUDES_PRODUCT",
+            "end_node": "Product",
+            "properties": {
+                "rank": "int"
+            }
+        },
+        {
+            "start_node": "ExportReport",
+            "relationship": "TARGETS_COUNTRY",
+            "end_node": "Country",
+            "properties": {
+                "rank": "int"
+            }
+        },
+        {
+            "start_node": "Agency",
+            "relationship": "PUBLISHES",
+            "end_node": "ExportReport",
+            "properties": {}
+        },
+        {
+            "start_node": "Official",
+            "relationship": "BELONGS_TO",
+            "end_node": "Agency",
+            "properties": {}
+        },
+        {
+            "start_node": "Official",
+            "relationship": "COMMENTS_ON",
+            "end_node": "ExportReport",
+            "properties": {}
+        }
+    ]
+}

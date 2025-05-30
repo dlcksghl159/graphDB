@@ -1,0 +1,101 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "SERVICE",
+            "name": "Service",
+            "properties": {
+                "name": "string",
+                "type": "string",
+                "annual_revenue": "int",
+                "revenue_growth_rate": "float",
+                "customer_count": "int"
+            }
+        },
+        {
+            "label": "BRAND",
+            "name": "Brand",
+            "properties": {
+                "name": "string",
+                "sector": "string"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "Technology",
+            "properties": {
+                "name": "string",
+                "provider": "string"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "Person",
+            "properties": {
+                "name": "string",
+                "role": "string"
+            }
+        },
+        {
+            "label": "AWARD",
+            "name": "Award",
+            "properties": {
+                "name": "string",
+                "year": "int",
+                "tier": "string"
+            }
+        },
+        {
+            "label": "CUSTOMER_SEGMENT",
+            "name": "CustomerSegment",
+            "properties": {
+                "name": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "COMPANY",
+            "relationship": "OFFERS",
+            "end_node": "SERVICE",
+            "properties": {}
+        },
+        {
+            "start_node": "SERVICE",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "BRAND",
+            "properties": {}
+        },
+        {
+            "start_node": "SERVICE",
+            "relationship": "USES",
+            "end_node": "TECHNOLOGY",
+            "properties": {}
+        },
+        {
+            "start_node": "SERVICE",
+            "relationship": "TARGETS",
+            "end_node": "CUSTOMER_SEGMENT",
+            "properties": {}
+        },
+        {
+            "start_node": "SERVICE",
+            "relationship": "ACHIEVED",
+            "end_node": "AWARD",
+            "properties": {}
+        },
+        {
+            "start_node": "PERSON",
+            "relationship": "LEADS",
+            "end_node": "COMPANY",
+            "properties": {}
+        }
+    ]
+}

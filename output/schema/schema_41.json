@@ -1,0 +1,127 @@
+{
+    "nodes": [
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "name": "string",
+                "role": "string"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "Organization",
+            "properties": {
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Division",
+            "name": "Division",
+            "properties": {
+                "name": "string",
+                "focusArea": "string"
+            }
+        },
+        {
+            "label": "TrainingProgram",
+            "name": "TrainingProgram",
+            "properties": {
+                "name": "string",
+                "topic": "string"
+            }
+        },
+        {
+            "label": "Certification",
+            "name": "Certification",
+            "properties": {
+                "name": "string",
+                "issuedBy": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Country",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "BusinessStrategy",
+            "name": "BusinessStrategy",
+            "properties": {
+                "name": "string",
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Person",
+            "relationship": "LEADS",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "FOUNDED",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SUPPORTED_BY",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "HAS_MEMBER",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "HAS_DIVISION",
+            "end_node": "Division",
+            "properties": {}
+        },
+        {
+            "start_node": "Division",
+            "relationship": "PROVIDES",
+            "end_node": "TrainingProgram",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "ISSUES",
+            "end_node": "Certification",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "RECEIVES",
+            "end_node": "Certification",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "OPERATES_IN",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "PURSUES",
+            "end_node": "BusinessStrategy",
+            "properties": {}
+        },
+        {
+            "start_node": "BusinessStrategy",
+            "relationship": "TARGETS",
+            "end_node": "Country",
+            "properties": {}
+        }
+    ]
+}

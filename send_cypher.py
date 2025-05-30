@@ -19,7 +19,7 @@ cypher_query = OUTPUT_ROOT / "graph.cypher"
 # ── 0. 설정 ───────────────────────────────────────────────────────
 NEO4J_URI  = os.getenv("NEO4J_URI",  "bolt://localhost:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASS = os.getenv("NEO4J_PASS", "testtest")  # 반드시 설정!
+NEO4J_PASS = os.getenv("NEO4J_PASSWORD", "testtest")  # 반드시 설정!
 
 BATCH_SIZE = 50          # 한 트랜잭션에 묶을 스테이트먼트 수
 CY_FILE    = Path(cypher_query).expanduser()

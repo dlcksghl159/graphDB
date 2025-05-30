@@ -1,0 +1,111 @@
+{
+    "nodes": [
+        {
+            "label": "TariffAction",
+            "name": "미국 관세 조치",
+            "properties": {
+                "action_id": "0001",
+                "start_date": "2025-03-12",
+                "description": "미국 철강·알루미늄 및 파생상품 관세 부과"
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "중소기업_수출",
+            "properties": {
+                "exportAmount": 270000000000,
+                "currency": "USD",
+                "growthRate": 0.7,
+                "companyCount": 63135
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "화장품_수출",
+            "properties": {
+                "exportAmount": 1840000000,
+                "currency": "USD",
+                "growthRate": 19.6,
+                "companyCount": null
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "자동차_수출",
+            "properties": {
+                "exportAmount": 1740000000,
+                "currency": "USD",
+                "growthRate": 67.4,
+                "companyCount": null
+            }
+        },
+        {
+            "label": "Country",
+            "name": "미국",
+            "properties": {
+                "country_code": "US",
+                "name": "미국",
+                "country_name": "United States",
+                "export_amount_usd": "string",
+                "growth_rate_percent": "string",
+                "country_id": "01",
+                "region": "string",
+                "countryName": "United States",
+                "export_usd": 1840000000,
+                "change_rate": "string"
+            }
+        },
+        {
+            "label": "ExportReport",
+            "name": "2025년 1분기 수출 보고서",
+            "properties": {
+                "year": 2025,
+                "quarter": "Q1",
+                "total_export_usd": 270000000000,
+                "growth_rate_percent": 0.7,
+                "num_exporters": 63135,
+                "report_id": "RPT2025Q1",
+                "total_export_amount_usd": 270000000000,
+                "company_count": 63135,
+                "period": "2025년 1분기",
+                "change_rate": 0.7
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "IMPOSED_BY",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "화장품_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "자동차_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년 1분기 수출 보고서",
+            "relationship": "HAS_COUNTRY_EXPORT",
+            "end_node": "미국",
+            "properties": {
+                "export_amount": 1840000000,
+                "growth_rate": 19.6,
+                "rank": 1
+            }
+        }
+    ]
+}

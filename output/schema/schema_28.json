@@ -1,0 +1,106 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "release_date": "string"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "Industry",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Feature",
+            "name": "Feature",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "IntegrationSystem",
+            "name": "IntegrationSystem",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "Channel",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "UseCase",
+            "name": "UseCase",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "Metric",
+            "name": "Metric",
+            "properties": {
+                "type": "string",
+                "value": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OFFERS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "TARGETS",
+            "end_node": "Industry",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Feature",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "INTEGRATES_WITH",
+            "end_node": "IntegrationSystem",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "OPERATES_ON",
+            "end_node": "Channel",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "ENABLES",
+            "end_node": "UseCase",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "ACHIEVES",
+            "end_node": "Metric",
+            "properties": {}
+        }
+    ]
+}

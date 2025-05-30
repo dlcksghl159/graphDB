@@ -1,301 +1,495 @@
 {
     "nodes": [
         {
-            "label": "Dataset",
-            "name": "금융 합성 데이터셋",
+            "label": "Investment",
+            "name": "Investment",
             "properties": {
-                "description": "synthetic dataset for financial AI learning",
-                "source": "internal data from financial institutions"
-            }
-        },
-        {
-            "label": "Partner",
-            "name": "Large System Integrator",
-            "properties": {
-                "partnerType": "System Integration",
-                "areaOfCollaboration": "Joint Sales in AI Marketing"
-            }
-        },
-        {
-            "label": "SalesChannel",
-            "name": "고객사 IT 계열사와 계약",
-            "properties": {
-                "channel_description": "IT 계열사가 계약의 주체."
+                "amount": 1200000000,
+                "currency": "KRW",
+                "date": "2023-09-14"
             }
         },
         {
             "label": "Product",
-            "name": "SmartAI v1.1",
+            "name": "베그젤마",
             "properties": {
-                "description": "제품 개발",
-                "version": "1.1",
-                "technology": "Kerberos, Keycloak, oAuth, Ansible, Kubernetes, Impala",
-                "productType": "Software",
-                "capabilities": "Single Sign On, laC 도구, 시스템 이벤트 알림, GPU 모니터링",
-                "features": "보안 강화, 관리/운영 기능 강화, 신규 기능 추가"
+                "product_name": "베그젤마",
+                "generic_name": "베바시주맙",
+                "category": "항암제"
             }
         },
         {
-            "label": "Module",
-            "name": "마케팅 AI 모듈",
+            "label": "Company",
+            "name": "아이서트",
             "properties": {
-                "description": "onCMS 용 추천 모델 관리 기능 개발, Auto 타겟팅 모듈 적용, AI 기반 AB 테스트 모듈 개발"
+                "name": "아이서트"
             }
         },
         {
-            "label": "Product",
-            "name": "AI 기반 CRM 소프트웨어",
+            "label": "Statistic",
+            "name": "중소기업 인력 부족 수치",
             "properties": {
-                "description": "마케팅 자동화 및 실시간 마케팅 솔루션",
-                "technology": "AI, 빅데이터, 클라우드",
-                "productType": "CRM 소프트웨어",
-                "capabilities": "고객 맞춤형 마케팅 및 업무 효율성 향상"
+                "description": "중소기업의 인력 부족을 겪고 있는 비율",
+                "value": 28.9,
+                "unit": "%",
+                "year": 2023
             }
         },
         {
-            "label": "SalesChannel",
-            "name": "고객사와 직접 계약",
+            "label": "Consultation",
+            "name": "상담",
             "properties": {
-                "channel_description": "고객사와 직접 계약 진행."
-            }
-        },
-        {
-            "label": "SoftwareSolution",
-            "name": "Data Intelligence",
-            "properties": {
-                "solution_type": "BI platform",
-                "features": "automatic report generation, conversation interaction"
+                "consultation_id": "2025_경기도_동반성장_페어_상담",
+                "count": 640,
+                "amount": 706000000000
             }
         },
         {
             "label": "Product",
-            "name": "End-to-End 고객 데이터 및 경험 관리 플랫폼 CDXP+",
+            "name": "램시마SC",
             "properties": {
-                "description": "데이터, 분석, 마케팅, AI 통합 플랫폼",
-                "features": "데이터 수집, 통합, 분석, AI 적용, 마케팅 자동화",
-                "productType": "Platform",
-                "capabilities": "데이터 흐름 최적화, 다양한 데이터 작업 구성"
+                "product_name": "램시마SC",
+                "category": "자가면역질환 치료제"
             }
         },
         {
-            "label": "Product",
-            "name": "Kubernetes 기반 실시간 Model Serving 기술",
+            "label": "FinancialPerformance",
+            "name": "재무성과",
             "properties": {
-                "description": "모델 배포 기술 개발",
-                "features": "REST API 기반 container wrapping, AutoScaling, 자원 사용량 모니터링",
-                "technology": "Kubernetes, REST API",
-                "productType": "Software",
-                "capabilities": "실시간 모델 예측, 트래픽 대응"
-            }
-        },
-        {
-            "label": "SalesStrategy",
-            "name": "Upgrade Sales Strategy",
-            "properties": {
-                "strategy_description": "Explaining new features and technologies of the company's new marketing product to induce upgrade repurchase; introducing data and AI products if issues are related to data processing and AI analysis"
-            }
-        },
-        {
-            "label": "SoftwareSolution",
-            "name": "Obzen Analytics",
-            "properties": {
-                "solution_type": "Customer Data Integration and Behavior Data Visualization",
-                "features": "real-time behavior data collection, App/Web log integration, offline data mash-up, ML-based customer conversion and churn prediction"
-            }
-        },
-        {
-            "label": "SoftwareSolution",
-            "name": "TagManager",
-            "properties": {
-                "solution_type": "data collection tool",
-                "features": "customer behavior tracking"
-            }
-        },
-        {
-            "label": "Partner",
-            "name": "Global Consulting Firm",
-            "properties": {
-                "partnerType": "Consulting",
-                "areaOfCollaboration": "Joint sales, new product development, and consulting projects"
-            }
-        },
-        {
-            "label": "Industry",
-            "name": "Finance and Distribution",
-            "properties": {
-                "characteristics": "Leading companies as clients, market-leading requirements.",
-                "sector": "Finance"
+                "year": 2023,
+                "quarter": "Q1",
+                "revenue": 814000000,
+                "operatingProfit": 121000000,
+                "netProfit": 95000000,
+                "revenueChangeYoY": -2.8,
+                "operatingProfitChangeYoY": -18.3,
+                "netProfitChangeYoY": -31.7
             }
         },
         {
             "label": "Technology",
-            "name": "Big Data and AI",
+            "name": "클라우드",
             "properties": {
-                "description": "Big Data and AI technology for data-driven customer experiences.",
-                "category": "Data Technology"
+                "category": "기술",
+                "name": "클라우드"
             }
         },
         {
-            "label": "ProductCategory",
-            "name": "기술비",
+            "label": "EducationProgram",
+            "name": "찾아가는 산업재해 예방교육",
             "properties": {
-                "sales_2021": 1246,
-                "share_2021": "6.20%",
-                "sales_2022": 1485,
-                "share_2022": "5.73%",
-                "sales_2023": 1563,
-                "share_2023": "9.20%"
+                "program_desc": "소규모 사업장을 대상으로 한 현장 중심의 산업재해 예방 교육",
+                "start_year": 2020,
+                "target_company_count": 800
             }
         },
         {
-            "label": "SoftwareSolution",
-            "name": "CRM Solutions",
+            "label": "GovernmentAgency",
+            "name": "동반성장위원회",
             "properties": {
-                "solution_type": "On-Premise and SaaS",
-                "features": "Data refinement technology, personalized recommendation, customer behavior prediction, synthetic data algorithm."
-            }
-        },
-        {
-            "label": "ResearchLab",
-            "name": "Digital LAB",
-            "properties": {
-                "focusArea": "marketing, sales management, CRM and data-related product development"
+                "name": "동반성장위원회"
             }
         },
         {
             "label": "Product",
-            "name": "obzen Daisy Suite",
+            "name": "반도체제조용장비",
             "properties": {
-                "description": "Pre-defined 표준화 마케팅 솔루션 개발",
-                "features": "표준 데이터 모델 기반, 산업별 표준화된 기능과 컨텐츠",
-                "productType": "Software",
-                "capabilities": "중견기업 대상 솔루션, 데이터 작업 최소화"
+                "product_name": "반도체제조용장비"
             }
         },
         {
-            "label": "ResearchLab",
-            "name": "AI LAB",
+            "label": "Agreement",
+            "name": "ESG 지원사업 업무협약",
             "properties": {
-                "focusArea": "AI-related product development"
+                "agreement_id": "1",
+                "date": "2023-14-09",
+                "location": "인천 송도",
+                "purpose": "협력사 ESG 지원사업"
             }
         },
         {
-            "label": "Company",
-            "name": "Our Company",
+            "label": "Association",
+            "name": "직업건강간호협회",
             "properties": {
-                "companyName": "Our Company",
-                "industry": "Technology",
-                "businessScope": "Marketing, AI, Financial Solutions"
+                "phone": "032-668-9030",
+                "email": "hsl@kaohn.or.kr"
             }
         },
         {
             "label": "Product",
-            "name": "AI 상품추천모델",
+            "name": "BLDC 에어 서큘레이터 S10 SE",
             "properties": {
-                "description": "recommends products to customers",
-                "features": "customer interaction, preference calculation",
-                "technology": "AI algorithm, deep learning",
-                "productType": "recommendation model",
-                "capabilities": "similarity-based, preference-based recommendations"
-            }
-        },
-        {
-            "label": "ResearchActivity",
-            "name": "Development of OSC",
-            "properties": {
-                "topic": "Sales SaaS development",
-                "details": "development of a B2B sales supporting system in SaaS form, customer and information management"
+                "product_name": "BLDC 에어 서큘레이터 S10 SE",
+                "type": "에어 서큘레이터",
+                "category": "가전",
+                "launch_year": 2023,
+                "price": 159000
             }
         },
         {
             "label": "Platform",
-            "name": "SmartAl Cloud",
+            "name": "스마트트레이드허브",
             "properties": {
-                "type": "Cloud",
-                "description": "Cloud 버전 개발의 PoC 단계, NaverCloudPlatform 환경에서 laaS 기반 개발 환경 구축"
-            }
-        },
-        {
-            "label": "Partner",
-            "name": "Domestic Big Tech Companies",
-            "properties": {
-                "partnerType": "Big Tech",
-                "areaOfCollaboration": "Collaboration for expanding Total Addressable Market and overseas expansion."
+                "platform_name": "스마트트레이드허브",
+                "description": "국내 최초의 중소기업 전용 항공물류센터"
             }
         },
         {
             "label": "Company",
-            "name": "Obzen",
+            "name": "포시에스",
             "properties": {
-                "companyName": "Obzen",
-                "description": "specializes in digital and AI-related product development",
-                "business_domain": "technology",
-                "industry": "technology"
+                "industry": "전자문서",
+                "name": "포시에스"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "백년가게·백년소공인 상생프로젝트",
+            "properties": {
+                "year": 2023,
+                "application_deadline": "2023-10-23",
+                "description": "백년소상공인의 판로 확대와 K브랜드 구축 목표"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "백년소공인",
+            "properties": {
+                "name": "백년소공인",
+                "sector": "식품 제조업"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "FinancialData",
+            "name": "FundingRound",
+            "properties": {
+                "round": "Series C",
+                "amount": 320000000
+            }
+        },
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "name": "삼성바이오로직스",
+                "industry": "제약",
+                "revenue": 12983000000
+            }
+        },
+        {
+            "label": "Company",
+            "name": "셀트리온",
+            "properties": {
+                "industry": "제약",
+                "name": "셀트리온",
+                "revenue": 8419000000,
+                "major_product": "바이오시밀러"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "김혜연",
+            "properties": {
+                "name": "김혜연",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "엔씽",
+            "properties": {
+                "industry": "스마트 수직농장",
+                "name": "엔씽",
+                "founded_year": 2014,
+                "cumulative_investment": 320000000,
+                "ipo_target_year": 2027
+            }
+        },
+        {
+            "label": "Product",
+            "name": "화장품",
+            "properties": {
+                "product_name": "화장품",
+                "export_amount_usd": "1840000000",
+                "growth_rate_percent": "19.6"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품 제조",
+                "name": "롯데웰푸드"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "2025 경기도 동반성장 페어",
+            "properties": {
+                "name": "2025 경기도 동반성장 페어",
+                "type": "동반성장 페어",
+                "location": "수원메쎄 1홀"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "탄소 저감 건재용 도료",
+            "properties": {
+                "product_name": "탄소 저감 건재용 도료",
+                "category": "Construction material paint"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "부산항만공사",
+            "properties": {
+                "name": "부산항만공사",
+                "region": "부산"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "배달의민족",
+            "properties": {
+                "name": "배달의민족",
+                "industry": "배송 서비스"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "물류센터형 수직농장 스마트팜 개발",
+            "properties": {
+                "year": 2023,
+                "description": "1000억원 규모 물류센터형 수직농장 스마트팜 개발 사업"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "GS홈쇼핑",
+            "properties": {
+                "channel_name": "GS홈쇼핑"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "렉라자",
+            "properties": {
+                "product_name": "렉라자",
+                "category": "폐암 신약"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "박미경",
+            "properties": {
+                "official_name": "박미경",
+                "title": "하이서울기업협회장"
+            }
+        },
+        {
+            "label": "Subsidiary",
+            "name": "셀트리온 스페인 법인",
+            "properties": {
+                "name": "셀트리온 스페인 법인",
+                "country": "Spain"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "Global Consulting Firm",
-            "relationship": "JOINT_PROJECT",
-            "end_node": "Upgrade Sales Strategy",
+            "start_node": "파이브클라우드",
+            "relationship": "ACHIEVED",
+            "end_node": "AWS 어드밴스드 티어 파트너",
             "properties": {}
         },
         {
-            "start_node": "SmartAI v1.1",
-            "relationship": "LEVERAGES",
-            "end_node": "Kubernetes",
+            "start_node": "김동선",
+            "relationship": "LEADS",
+            "end_node": "한화세미텍",
             "properties": {}
         },
         {
-            "start_node": "Our Company",
-            "relationship": "HAS_PARTNER",
-            "end_node": "Large System Integrator",
+            "start_node": "셀트리온",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "셀트리온 2023 목표",
             "properties": {}
         },
         {
-            "start_node": "Digital LAB",
-            "relationship": "DEVELOPS_PRODUCT",
-            "end_node": "CDXP+",
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
             "properties": {}
         },
         {
-            "start_node": "CRM 전문 기업",
-            "relationship": "HAS_PARTNER",
-            "end_node": "Domestic Big Tech Companies",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "탄소 저감 건재용 도료",
             "properties": {}
         },
         {
-            "start_node": "SmartAI v1.1",
-            "relationship": "DEPLOYED_ON",
-            "end_node": "SmartAl Cloud",
+            "start_node": "IEG",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
             "properties": {}
         },
         {
-            "start_node": "CRM 전문 기업",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "Finance and Distribution",
+            "start_node": "미국_철강_알루미늄_관세조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "전자응용기기",
             "properties": {
-                "priority": "우선"
+                "impact_rate": "-25.6%"
             }
         },
         {
-            "start_node": "TagManager",
-            "relationship": "HAS_FEATURE",
-            "end_node": "AI 상품추천모델",
-            "properties": {}
+            "start_node": "중소기업_수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {
+                "growth_rate": "19.6%"
+            }
         },
         {
-            "start_node": "Our Company",
-            "relationship": "HAS_PARTNER",
-            "end_node": "Global Consulting Firm",
-            "properties": {}
+            "start_node": "롯데웰푸드",
+            "relationship": "SUPPORTS",
+            "end_node": "백년가게",
+            "properties": {
+                "support_type": "식자재 납품"
+            }
         },
         {
-            "start_node": "Digital LAB",
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "기타기계류",
+            "properties": {
+                "impact": "-47.4%"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "export_amount": "18억 4000만 달러",
+                "growth_rate": "19.6%"
+            }
+        },
+        {
+            "start_node": "경기도 동반성장 페어",
             "relationship": "CONDUCTS",
-            "end_node": "Development of OSC",
+            "end_node": "상담",
             "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "PRODUCES",
+            "end_node": "창문형 에어컨",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "OPERATES",
+            "end_node": "현대이지웰 복지몰",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SUPPORTED_BY",
+            "end_node": "협력사 ESG 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "JOINTLY_DEVELOPS_ESG_INDICATOR",
+            "end_node": "LG이노텍",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PRODUCES",
+            "end_node": "피즈치바",
+            "properties": {}
+        },
+        {
+            "start_node": "LG전자",
+            "relationship": "USES",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "PRODUCES",
+            "end_node": "렉라자",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차 부품",
+            "properties": {
+                "export_amount": "10억4천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "대만",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "일본",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "베트남",
+            "properties": {}
+        },
+        {
+            "start_node": "현대백화점그룹",
+            "relationship": "INCLUDES",
+            "end_node": "현대리지웰",
+            "properties": {}
+        },
+        {
+            "start_node": "금융기관",
+            "relationship": "IS_ABSORBED_BY",
+            "end_node": "TECHNOLOGY",
+            "properties": {}
+        },
+        {
+            "start_node": "중기청",
+            "relationship": "RUNS_PROGRAM",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업진흥공단",
+            "properties": {
+                "role": "이사장"
+            }
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "SUPPLIES",
+            "end_node": "SK하이닉스",
+            "properties": {
+                "product": "TC 본더",
+                "startQuarter": "2017Q1",
+                "exclusivity": "독점"
+            }
         }
     ]
 }

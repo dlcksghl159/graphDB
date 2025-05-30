@@ -1,0 +1,115 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "category": "string",
+                "release_quarter": "string"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Technology",
+            "properties": {
+                "name": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "name": "string",
+                "role": "string"
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "VehicleModel",
+            "properties": {
+                "name": "string",
+                "brand": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "MarketRegion",
+            "name": "MarketRegion",
+            "properties": {
+                "name": "string",
+                "region_type": "string"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData",
+            "properties": {
+                "year": "int",
+                "revenue": "int",
+                "growth_rate": "float",
+                "overseas_ratio": "float"
+            }
+        },
+        {
+            "label": "Certification",
+            "name": "Certification",
+            "properties": {
+                "name": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "TARGETS",
+            "end_node": "VehicleModel",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "EMPLOYS",
+            "end_node": "Person",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES_IN",
+            "end_node": "MarketRegion",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_CERTIFICATION",
+            "end_node": "Certification",
+            "properties": {}
+        }
+    ]
+}

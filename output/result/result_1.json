@@ -1,0 +1,50 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "에이스침대",
+            "properties": {
+                "industry": "",
+                "name": "에이스침대"
+            }
+        },
+        {
+            "label": "FinancialPerformance",
+            "name": "재무성과",
+            "properties": {
+                "year": 2023,
+                "quarter": "Q1",
+                "revenue": 814000000,
+                "operatingProfit": 121000000,
+                "netProfit": 95000000,
+                "revenueChangeYoY": -2.8,
+                "operatingProfitChangeYoY": -18.3,
+                "netProfitChangeYoY": -31.7,
+                "operating_income": 121000000,
+                "revenue_growth_percent": -2.8,
+                "operating_income_growth_percent": -18.3
+            }
+        },
+        {
+            "label": "EconomicCondition",
+            "name": "EconomicCondition",
+            "properties": {
+                "description": "세계 경제 악화와 내부경기 침체"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "에이스침대",
+            "relationship": "HAS_PERFORMANCE",
+            "end_node": "재무성과",
+            "properties": {}
+        },
+        {
+            "start_node": "에이스침대",
+            "relationship": "FACES",
+            "end_node": "EconomicCondition",
+            "properties": {}
+        }
+    ]
+}

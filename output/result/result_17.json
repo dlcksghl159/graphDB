@@ -1,0 +1,92 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "엠투아이",
+            "properties": {
+                "industry": "AI 자율 제조",
+                "name": "엠투아이"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "벰로보틱스",
+            "properties": {
+                "industry": "로봇",
+                "name": "벰로보틱스"
+            }
+        },
+        {
+            "label": "Investment",
+            "name": "Investment",
+            "properties": {
+                "amount": 1200000000,
+                "currency": "KRW",
+                "date": "2023-09-14"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "로봇제어기",
+            "properties": {
+                "category": "로봇 제어",
+                "name": "로봇제어기",
+                "provider": ""
+            }
+        },
+        {
+            "label": "Product",
+            "name": "물류로봇",
+            "properties": {
+                "category": "산업용 로봇",
+                "product_name": "물류로봇",
+                "type": "AMR/AGV"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "엠투아이",
+            "relationship": "ENTERED_COLLABORATION_WITH",
+            "end_node": "벰로보틱스",
+            "properties": {
+                "date": "2023-09-14",
+                "purpose": "로봇 제어기 공동 개발"
+            }
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "MADE_INVESTMENT_IN",
+            "end_node": "벰로보틱스",
+            "properties": {
+                "amount": 1200000000,
+                "currency": "KRW",
+                "date": "2023-09-14"
+            }
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇제어기",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
+            "properties": {}
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇제어기",
+            "properties": {}
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "name": "중소벤처기업진흥공단",
+                "industry": "Government Agency"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "부산항만공사",
+            "properties": {
+                "name": "부산항만공사",
+                "industry": "Logistics"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "스마트트레이드허브",
+            "properties": {
+                "name": "스마트트레이드허브"
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "로스앤젤레스·롱비치 해외물류센터",
+            "properties": {
+                "name": "로스앤젤레스·롱비치 해외물류센터",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {
+                "name": "중소기업 글로벌 물류지원 업무협약",
+                "date": "14일"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED_MOU_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "date": "14일"
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OFFERS",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "OPERATES",
+            "end_node": "로스앤젤레스·롱비치 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "HAS_AGREEMENT",
+            "end_node": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "HAS_AGREEMENT",
+            "end_node": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "가온아이",
+            "properties": {
+                "industry": "",
+                "name": "가온아이"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "아이서트",
+            "properties": {
+                "industry": "",
+                "name": "아이서트"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "조창제",
+            "properties": {
+                "name": "조창제",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "현수환",
+            "properties": {
+                "name": "현수환",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Solution",
+            "name": "세이프아이서트",
+            "properties": {
+                "name": "세이프아이서트",
+                "category": "법인 공동인증서 관리 솔루션"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "클라우드",
+            "properties": {
+                "category": "기술",
+                "name": "클라우드",
+                "provider": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한화오션디지털",
+            "properties": {
+                "industry": "",
+                "name": "한화오션디지털"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "LG전자",
+            "properties": {
+                "industry": "",
+                "name": "LG전자"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "가온아이",
+            "relationship": "DEVELOPS",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "아이서트",
+            "relationship": "DEVELOPED",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "조창제",
+            "relationship": "LEADS",
+            "end_node": "가온아이",
+            "properties": {}
+        },
+        {
+            "start_node": "현수환",
+            "relationship": "LEADS",
+            "end_node": "아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "세이프아이서트",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "클라우드",
+            "properties": {}
+        },
+        {
+            "start_node": "한화오션디지털",
+            "relationship": "USES",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "LG전자",
+            "relationship": "USES",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        }
+    ]
+}

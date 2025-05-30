@@ -1,0 +1,122 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "Event",
+            "properties": {
+                "name": "string",
+                "start_date": "string",
+                "end_date": "string"
+            }
+        },
+        {
+            "label": "Section",
+            "name": "Section",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Technology",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "Program",
+            "properties": {
+                "name": "string",
+                "mode": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "name": "string",
+                "position": "string"
+            }
+        },
+        {
+            "label": "Location",
+            "name": "Location",
+            "properties": {
+                "name": "string",
+                "address": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "HEADQUARTERED_AT",
+            "end_node": "Location",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ORGANIZES",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "OCCURS_AT",
+            "end_node": "Location",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "HAS_SECTION",
+            "end_node": "Section",
+            "properties": {}
+        },
+        {
+            "start_node": "Section",
+            "relationship": "INCLUDES_TECHNOLOGY",
+            "end_node": "Technology",
+            "properties": {}
+        },
+        {
+            "start_node": "Section",
+            "relationship": "INCLUDES_PRODUCT",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "FEATURES",
+            "end_node": "Program",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "SPEAKS_AT",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "WORKS_FOR",
+            "end_node": "Company",
+            "properties": {}
+        }
+    ]
+}

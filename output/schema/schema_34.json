@@ -1,0 +1,103 @@
+{
+    "nodes": [
+        {
+            "label": "Platform",
+            "name": "String",
+            "properties": {
+                "platform_name": "string",
+                "domain": "string"
+            }
+        },
+        {
+            "label": "Category",
+            "name": "String",
+            "properties": {
+                "category_name": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "String",
+            "properties": {
+                "funding_amount": "int",
+                "ranking": "int"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "String",
+            "properties": {
+                "brand_name": "string",
+                "origin_country": "string"
+            }
+        },
+        {
+            "label": "MarketReport",
+            "name": "String",
+            "properties": {
+                "report_title": "string",
+                "year": "int"
+            }
+        },
+        {
+            "label": "ConsumerTrend",
+            "name": "String",
+            "properties": {
+                "trend_name": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "FundingStatistic",
+            "name": "String",
+            "properties": {
+                "avg_per_person_funding": "int",
+                "increase_percentage": "float"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Platform",
+            "relationship": "HOSTS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "BELONGS_TO",
+            "end_node": "Category",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "PRODUCED_BY",
+            "end_node": "Brand",
+            "properties": {}
+        },
+        {
+            "start_node": "Platform",
+            "relationship": "ISSUED",
+            "end_node": "MarketReport",
+            "properties": {}
+        },
+        {
+            "start_node": "MarketReport",
+            "relationship": "DEFINES",
+            "end_node": "ConsumerTrend",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_STATISTIC",
+            "end_node": "FundingStatistic",
+            "properties": {}
+        },
+        {
+            "start_node": "ConsumerTrend",
+            "relationship": "INFLUENCES",
+            "end_node": "Product",
+            "properties": {}
+        }
+    ]
+}

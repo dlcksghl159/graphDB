@@ -1,0 +1,93 @@
+{
+    "nodes": [
+        {
+            "label": "GovernmentAgency",
+            "name": "GovernmentAgency",
+            "properties": {
+                "agency_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "person_id": "string",
+                "name": "string",
+                "position": "string"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "ProductCategory",
+            "properties": {
+                "product_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Country",
+            "properties": {
+                "country_code": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "TimePeriod",
+            "name": "TimePeriod",
+            "properties": {
+                "year": "int",
+                "quarter": "string"
+            }
+        },
+        {
+            "label": "SMEExport",
+            "name": "SMEExport",
+            "properties": {
+                "export_id": "string",
+                "amount_usd": "float",
+                "change_percent": "float",
+                "company_count": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "GovernmentAgency",
+            "relationship": "REPORTS",
+            "end_node": "SMEExport",
+            "properties": {}
+        },
+        {
+            "start_node": "SMEExport",
+            "relationship": "DURING",
+            "end_node": "TimePeriod",
+            "properties": {}
+        },
+        {
+            "start_node": "SMEExport",
+            "relationship": "EXPORTS_PRODUCT",
+            "end_node": "ProductCategory",
+            "properties": {
+                "amount_usd": "float",
+                "change_percent": "float"
+            }
+        },
+        {
+            "start_node": "SMEExport",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Country",
+            "properties": {
+                "amount_usd": "float",
+                "change_percent": "float"
+            }
+        },
+        {
+            "start_node": "Person",
+            "relationship": "AFFILIATED_WITH",
+            "end_node": "GovernmentAgency",
+            "properties": {}
+        }
+    ]
+}

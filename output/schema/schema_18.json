@@ -1,0 +1,96 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "String",
+            "properties": {
+                "org_type": "String"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "String",
+            "properties": {
+                "date": "String"
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "String",
+            "properties": {
+                "center_type": "String",
+                "location": "String"
+            }
+        },
+        {
+            "label": "ExportProgram",
+            "name": "String",
+            "properties": {}
+        },
+        {
+            "label": "Service",
+            "name": "String",
+            "properties": {}
+        },
+        {
+            "label": "Platform",
+            "name": "String",
+            "properties": {}
+        },
+        {
+            "label": "Region",
+            "name": "String",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "INCLUDES_EXPORT_PROGRAM",
+            "end_node": "ExportProgram",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "INCLUDES_SERVICE",
+            "end_node": "Service",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "ESTABLISHES_PLATFORM",
+            "end_node": "Platform",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "OPERATES",
+            "end_node": "LogisticsCenter",
+            "properties": {}
+        },
+        {
+            "start_node": "LogisticsCenter",
+            "relationship": "LOCATED_IN",
+            "end_node": "Region",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "COOPERATES_WITH",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Platform",
+            "relationship": "CONNECTS_WITH",
+            "end_node": "LogisticsCenter",
+            "properties": {}
+        }
+    ]
+}

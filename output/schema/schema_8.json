@@ -1,0 +1,89 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "company_id": "string",
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "WelfareMall",
+            "properties": {
+                "name": "string",
+                "ranking": "string"
+            }
+        },
+        {
+            "label": "SalesRecord",
+            "name": "SalesRecord",
+            "properties": {
+                "year": "int",
+                "amount": "int",
+                "growth_rate": "float"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "Region",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "Program",
+            "properties": {
+                "name": "string",
+                "year": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "AFFILIATED_WITH",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES",
+            "end_node": "WelfareMall",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SUPPLIES_TO",
+            "end_node": "WelfareMall",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_SALES_RECORD",
+            "end_node": "SalesRecord",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "LOCATED_IN",
+            "end_node": "Region",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SELECTED_FOR",
+            "end_node": "Program",
+            "properties": {}
+        },
+        {
+            "start_node": "Program",
+            "relationship": "IMPLEMENTED_BY",
+            "end_node": "Company",
+            "properties": {}
+        }
+    ]
+}

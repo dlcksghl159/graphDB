@@ -1,0 +1,112 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "노루그룹",
+            "properties": {
+                "industry": "Chemical",
+                "name": "노루그룹"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "스텔스 도료",
+            "properties": {
+                "product_name": "스텔스 도료",
+                "category": "Paint"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "우레탄 난연 몰딩제",
+            "properties": {
+                "product_name": "우레탄 난연 몰딩제",
+                "category": "Molding"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "탄소 저감 건재용 도료",
+            "properties": {
+                "product_name": "탄소 저감 건재용 도료",
+                "category": "Construction material paint"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "VOC 저감형 아크릴 수지",
+            "properties": {
+                "product_name": "VOC 저감형 아크릴 수지",
+                "category": "Acrylic resin"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "2025 신기술·신제품 전시회",
+            "properties": {
+                "name": "2025 신기술·신제품 전시회",
+                "type": "Exhibition"
+            }
+        },
+        {
+            "label": "Strategy",
+            "name": "기술 중심 전략",
+            "properties": {
+                "strategy": "기술 중심 전략",
+                "description": "기술 혁신 및 친환경 기술 공유"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "방양국",
+            "properties": {
+                "name": "방양국",
+                "role": "노루페인트 연구소장"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "스텔스 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "우레탄 난연 몰딩제",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "탄소 저감 건재용 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "VOC 저감형 아크릴 수지",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "ORGANIZES",
+            "end_node": "2025 신기술·신제품 전시회",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "ADOPTED_STRATEGY",
+            "end_node": "기술 중심 전략",
+            "properties": {}
+        },
+        {
+            "start_node": "방양국",
+            "relationship": "LEADS",
+            "end_node": "노루그룹",
+            "properties": {}
+        }
+    ]
+}

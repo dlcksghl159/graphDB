@@ -1,0 +1,4259 @@
+{
+    "nodes": [
+        {
+            "label": "Investment",
+            "name": "Investment",
+            "properties": {
+                "amount": 1200000000,
+                "currency": "KRW",
+                "date": "2023-09-14"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "베그젤마",
+            "properties": {
+                "product_name": "베그젤마",
+                "generic_name": "베바시주맙",
+                "category": "항암제"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "아이서트",
+            "properties": {
+                "industry": "",
+                "name": "아이서트"
+            }
+        },
+        {
+            "label": "Statistic",
+            "name": "중소기업 인력 부족 수치",
+            "properties": {
+                "description": "중소기업의 인력 부족을 겪고 있는 비율",
+                "value": 28.9,
+                "unit": "%",
+                "year": 2023
+            }
+        },
+        {
+            "label": "TariffAction",
+            "name": "미국 관세 정책",
+            "properties": {
+                "action_id": "",
+                "start_date": "2023-03-01",
+                "description": "25% 관세 부과"
+            }
+        },
+        {
+            "label": "Consultation",
+            "name": "상담",
+            "properties": {
+                "consultation_id": "2025_경기도_동반성장_페어_상담",
+                "count": 640,
+                "amount": 706000000000
+            }
+        },
+        {
+            "label": "Product",
+            "name": "램시마SC",
+            "properties": {
+                "product_name": "램시마SC",
+                "category": "자가면역질환 치료제",
+                "marketShare": null
+            }
+        },
+        {
+            "label": "Country",
+            "name": "인도네시아",
+            "properties": {
+                "country_code": "",
+                "name": "인도네시아",
+                "country_name": "인도네시아",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "인도네시아",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "동반성장위원회",
+            "properties": {
+                "region": "",
+                "agency_id": "",
+                "name": "동반성장위원회"
+            }
+        },
+        {
+            "label": "FinancialPerformance",
+            "name": "재무성과",
+            "properties": {
+                "year": 2023,
+                "quarter": "Q1",
+                "revenue": 814000000,
+                "operatingProfit": 121000000,
+                "netProfit": 95000000,
+                "revenueChangeYoY": -2.8,
+                "operatingProfitChangeYoY": -18.3,
+                "netProfitChangeYoY": -31.7,
+                "operating_income": 121000000,
+                "revenue_growth_percent": -2.8,
+                "operating_income_growth_percent": -18.3
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "클라우드",
+            "properties": {
+                "category": "기술",
+                "name": "클라우드",
+                "provider": ""
+            }
+        },
+        {
+            "label": "Product",
+            "name": "VOC 저감형 아크릴 수지",
+            "properties": {
+                "product_name": "VOC 저감형 아크릴 수지",
+                "category": "Acrylic resin"
+            }
+        },
+        {
+            "label": "EducationProgram",
+            "name": "찾아가는 산업재해 예방교육",
+            "properties": {
+                "program_desc": "소규모 사업장을 대상으로 한 현장 중심의 산업재해 예방 교육",
+                "start_year": 2020,
+                "target_company_count": 800
+            }
+        },
+        {
+            "label": "TariffMeasure",
+            "name": "트럼프 의약품 관세",
+            "properties": {
+                "measure_name": "의약품 관세부과",
+                "effective_date": "2023-12",
+                "products_affected": "의약품",
+                "rate_effect": 0.0
+            }
+        },
+        {
+            "label": "Product",
+            "name": "반도체제조용장비",
+            "properties": {
+                "product_name": "반도체제조용장비",
+                "description": "",
+                "price": 0,
+                "type": "",
+                "name": "반도체제조용장비",
+                "category": "",
+                "powerCapacity": "",
+                "marketShare": "",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "generation": "",
+                "releaseDate": "",
+                "product_id": "",
+                "development_status": "",
+                "model": "",
+                "release_date": null,
+                "release_quarter": "",
+                "product_type": "",
+                "launch_year": 0,
+                "funding_amount": 0,
+                "ranking": 0,
+                "generic_name": "",
+                "productName": "반도체제조용장비",
+                "brand_name": "",
+                "export_usd": 0,
+                "rank": 0
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "ESG 지원사업 업무협약",
+            "properties": {
+                "agreement_id": "1",
+                "date": "2023-14-09",
+                "location": "인천 송도",
+                "purpose": "협력사 ESG 지원사업"
+            }
+        },
+        {
+            "label": "Association",
+            "name": "직업건강간호협회",
+            "properties": {
+                "phone": "032-668-9030",
+                "email": "hsl@kaohn.or.kr"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "기타기계류",
+            "properties": {
+                "product_name": "기타기계류"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "BLDC 에어 서큘레이터 S10 SE",
+            "properties": {
+                "product_name": "BLDC 에어 서큘레이터 S10 SE",
+                "type": "에어 서큘레이터",
+                "category": "가전",
+                "name": "BLDC 에어 서큘레이터 S10 SE",
+                "launch_year": 2023,
+                "price": 159000
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "스마트트레이드허브",
+            "properties": {
+                "platform_id": "",
+                "platform_name": "스마트트레이드허브",
+                "platform_type": "",
+                "name": "스마트트레이드허브",
+                "description": "국내 최초의 중소기업 전용 항공물류센터",
+                "region": "",
+                "domain": ""
+            }
+        },
+        {
+            "label": "Company",
+            "name": "포시에스",
+            "properties": {
+                "industry": "전자문서",
+                "name": "포시에스"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "한국서부발전",
+            "properties": {
+                "industry": "",
+                "name": "한국서부발전"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "백년가게·백년소공인 상생프로젝트",
+            "properties": {
+                "name": "백년가게·백년소공인 상생프로젝트",
+                "year": 2023,
+                "application_deadline": "2023-10-23",
+                "description": "백년소상공인의 판로 확대와 K브랜드 구축 목표",
+                "program_id": "string",
+                "program_name": "백년가게·백년소공인 상생프로젝트"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "name": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+                "year": 2025,
+                "application_deadline": "2023-09-23"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "백년소공인",
+            "properties": {
+                "name": "백년소공인",
+                "sector": "식품 제조업"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "철강 제품",
+            "properties": {
+                "product_name": "철강 제품"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "네이버",
+            "properties": {
+                "industry": "",
+                "name": "네이버"
+            }
+        },
+        {
+            "label": "SMEExport",
+            "name": "중소기업 화장품 수출",
+            "properties": {
+                "export_id": "export_001",
+                "amount_usd": 1840000000,
+                "change_percent": 19.6,
+                "company_count": 63135
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "2020 거래",
+            "properties": {
+                "year": 2020,
+                "amount": 910400000000,
+                "growthRate": 0
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Japan",
+            "properties": {
+                "name": "Japan",
+                "country_name": "Japan"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "쿠자 멀티핸들 스텐팬",
+            "properties": {
+                "funding_amount": 210000000,
+                "category": "Cookware",
+                "rank": 2
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "창업 7년 이내 중소기업",
+            "properties": {
+                "category": "",
+                "years_in_business": 7,
+                "name": "창업 7년 이내 중소기업",
+                "businessType": "중소기업",
+                "yearsInBusiness": 7
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대중공업",
+            "properties": {
+                "industry": "조선",
+                "name": "HD현대중공업"
+            }
+        },
+        {
+            "label": "Survey",
+            "name": "인생 이모작 의향 조사",
+            "properties": {
+                "id": "20231014",
+                "title": "인생 이모작 의향 조사",
+                "date": "2023-10-14",
+                "sample_size": 965,
+                "desired_monthly_income_avg": 402
+            }
+        },
+        {
+            "label": "Product",
+            "name": "반도체 제조용 장비",
+            "properties": {
+                "product_name": "반도체 제조용 장비",
+                "export_amount_usd": "7억 2000만 달러",
+                "growth_rate_percent": "11.2%"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData",
+            "properties": {
+                "year": 2020,
+                "revenue": 5497,
+                "growth_rate": 0
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "미국_철강_알루미늄_관세조치",
+            "properties": {
+                "name": "미국 철강·알루미늄 관세조치",
+                "tariff_type": "철강/알루미늄",
+                "rate": 0.0
+            }
+        },
+        {
+            "label": "Product",
+            "name": "허쥬마",
+            "properties": {
+                "product_name": "허쥬마",
+                "generic_name": "트라스투주맙",
+                "category": "항암제"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "에이스침대",
+            "properties": {
+                "industry": "",
+                "name": "에이스침대"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대모비스",
+            "properties": {
+                "industry": "",
+                "name": "현대모비스"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "이순배",
+            "properties": {
+                "title": "글로벌성장정책관",
+                "name": "중소벤처기업부",
+                "position": "정책관",
+                "official_name": "이순배"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년소공인",
+            "properties": {
+                "category": "식품 제조업",
+                "years_in_business": 15,
+                "name": "백년소공인",
+                "businessType": "숙련된 소공인",
+                "yearsInBusiness": 15
+            }
+        },
+        {
+            "label": "Company",
+            "name": "파세코",
+            "properties": {
+                "industry": "가전",
+                "name": "파세코"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "야마다 유이치로",
+            "properties": {
+                "name": "야마다 유이치로",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "리테일",
+            "properties": {
+                "industry_name": "리테일",
+                "name": "리테일"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대이지웰",
+            "properties": {
+                "name": "현대이지웰",
+                "industry": "Total Welfare Solution"
+            }
+        },
+        {
+            "label": "Strategy",
+            "name": "기술 중심 전략",
+            "properties": {
+                "strategy": "기술 중심 전략",
+                "description": "기술 혁신 및 친환경 기술 공유"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "스텔스 도료",
+            "properties": {
+                "product_name": "스텔스 도료",
+                "category": "Paint"
+            }
+        },
+        {
+            "label": "EconomicCondition",
+            "name": "EconomicCondition",
+            "properties": {
+                "description": "세계 경제 악화와 내부경기 침체"
+            }
+        },
+        {
+            "label": "Policy",
+            "name": "고령자 계속고용",
+            "properties": {
+                "name": "고령자 계속고용",
+                "issuer": "정일산업",
+                "type": "고용정책",
+                "policyName": "고령자 계속고용"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "기술보증기금 지식재산공제센터",
+            "properties": {
+                "org_type": "String",
+                "industry": "지식재산",
+                "location": "서울",
+                "organization_id": "기술보증기금",
+                "name": "기술보증기금 지식재산공제센터",
+                "org_id": "기술보증기금",
+                "org_name": "기술보증기금",
+                "type": "공제",
+                "website": "",
+                "orgName": "기술보증기금 지식재산공제센터",
+                "orgType": "기술보증",
+                "region": "서울",
+                "sector": "금융"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "AI 에너지 세이빙",
+            "properties": {
+                "category": "에너지 절약 기술",
+                "name": "AI 에너지 세이빙",
+                "provider": "파세코"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "S사이즈 푸드워머",
+            "properties": {
+                "product_name": "S사이즈 푸드워머",
+                "description": "600g으로 가벼워 휴대가 간편함"
+            }
+        },
+        {
+            "label": "ESGIndicator",
+            "name": "전기·전자 산업 ESG 평가지표",
+            "properties": {
+                "name": "전기·전자 산업 ESG 평가지표",
+                "industry": "전기·전자 산업"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "name": "소상공인 온라인쇼핑몰 판매지원사업",
+                "type": "Online Sales Support"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "홈리빙",
+            "properties": {
+                "product_id": "1",
+                "name": "Home Living"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "패스트파이브",
+            "properties": {
+                "name": "패스트파이브",
+                "industry": "클라우드 서비스"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "GS홈쇼핑",
+            "properties": {
+                "channel_name": "GS홈쇼핑",
+                "name": "GS홈쇼핑"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "인도",
+            "properties": {
+                "name": "인도",
+                "country_name": "인도",
+                "country_code": "",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "인도",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Company",
+            "name": "이마트",
+            "properties": {
+                "name": "이마트",
+                "industry": "유통"
+            }
+        },
+        {
+            "label": "Statistics",
+            "name": "2023_고용노동부_산업재해_통계",
+            "properties": {
+                "year": 2023,
+                "annual_fatalities": 200
+            }
+        },
+        {
+            "label": "SMEGroup",
+            "name": "백년가게",
+            "properties": {
+                "group_id": "smegroup_1",
+                "name": "백년가게",
+                "total_companies": 0
+            }
+        },
+        {
+            "label": "Product",
+            "name": "탄소 저감 건재용 도료",
+            "properties": {
+                "product_name": "탄소 저감 건재용 도료",
+                "category": "Construction material paint"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "박미경",
+            "properties": {
+                "official_name": "박미경",
+                "title": "하이서울기업협회장",
+                "name": "박미경",
+                "position": "대표"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "창문형 에어컨",
+            "properties": {
+                "product_name": "창문형 에어컨",
+                "description": "호환성이 높은 창문형 에어컨",
+                "type": "가전 제품"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "김혜연",
+            "properties": {
+                "name": "김혜연",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "태국",
+            "properties": {
+                "name": "태국",
+                "country_name": "태국",
+                "country_code": "",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "태국",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Company",
+            "name": "벰로보틱스",
+            "properties": {
+                "industry": "로봇",
+                "name": "벰로보틱스"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "LG이노텍",
+            "properties": {
+                "name": "LG이노텍",
+                "industry": "전기·전자 산업",
+                "role": "핵심 협력사"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Google Cloud",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "Google Cloud"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "김동선",
+            "properties": {
+                "name": "김동선",
+                "role": "부사장"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {
+                "agreement_id": "기보-인천지식센터-협약",
+                "date": "2023-09-14",
+                "location": "서울",
+                "purpose": "지식재산공제사업 활성화",
+                "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+                "title": "MOU",
+                "subject": "공제사업 활성화 및 인천지역 중소기업 지원",
+                "agreement_date": "2023-09-14",
+                "description": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TV트랜스",
+            "properties": {
+                "category": "TV",
+                "name": "TV트랜스"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "피즈치바",
+            "properties": {
+                "product_name": "피즈치바",
+                "category": "바이오시밀러",
+                "marketShare": null
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한미반도체",
+            "properties": {
+                "industry": "반도체 장비",
+                "name": "한미반도체"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "임용규",
+            "properties": {
+                "official_name": "임용규",
+                "title": "노동안전과장",
+                "name": "임용규",
+                "position": "노동안전과장"
+            }
+        },
+        {
+            "label": "MarketRegion",
+            "name": "United States",
+            "properties": {
+                "name": "United States",
+                "region_type": "Country"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "물류로봇",
+            "properties": {
+                "category": "산업용 로봇",
+                "product_name": "물류로봇",
+                "type": "AMR/AGV"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "동반성장위원회",
+            "properties": {
+                "name": "동반성장위원회",
+                "type": "",
+                "org_name": "동반성장위원회",
+                "region": ""
+            }
+        },
+        {
+            "label": "Country",
+            "name": "베트남",
+            "properties": {
+                "country_code": "",
+                "name": "베트남",
+                "country_name": "베트남",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "베트남",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "중소기업 물류 지원 협약",
+            "properties": {
+                "agreement_id": "",
+                "date": "2023-10-14",
+                "location": "부산항만공사 본사",
+                "purpose": "수출 중소기업의 글로벌 물류 지원",
+                "name": "중소기업 물류 지원 협약",
+                "title": "",
+                "subject": "",
+                "agreement_date": "2023-10-14",
+                "description": ""
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "name": "소상공인시장진흥공단",
+                "region": ""
+            }
+        },
+        {
+            "label": "FinancialData",
+            "name": "FundingRound",
+            "properties": {
+                "round": "Series C",
+                "amount": 320000000
+            }
+        },
+        {
+            "label": "Country",
+            "name": "United States",
+            "properties": {
+                "country_code": "US",
+                "name": "United States",
+                "country_name": "United States",
+                "export_amount_usd": "0",
+                "growth_rate_percent": "0",
+                "country_id": "",
+                "region": "North America",
+                "countryName": "United States",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "옴니프레젠트 AI 에이전트",
+            "properties": {
+                "name": "옴니프레젠트 AI 에이전트",
+                "provider": "센드버드"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "커머스",
+            "properties": {
+                "industry_name": "커머스",
+                "name": "커머스"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "허먼밀러",
+            "properties": {
+                "category": "Office Chair"
+            }
+        },
+        {
+            "label": "Location",
+            "name": "시화공단",
+            "properties": {
+                "name": "시화공단",
+                "type": "산업단지"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "경기도 동반성장 페어",
+            "properties": {
+                "name": "경기도 동반성장 페어",
+                "type": "동반성장 페어",
+                "date": "",
+                "location": "경기도"
+            }
+        },
+        {
+            "label": "MarketForecast",
+            "name": "HBM 시장 전망",
+            "properties": {
+                "source": "JP모건",
+                "forecastRevenue": 1500000000,
+                "period": "2027년"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "name": "삼성바이오로직스",
+                "industry": "제약",
+                "revenue": 12983000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null
+            }
+        },
+        {
+            "label": "Company",
+            "name": "대상",
+            "properties": {
+                "industry": "",
+                "name": "대상"
+            }
+        },
+        {
+            "label": "ESGSupportProgram",
+            "name": "대·중소 자율형 ESG 지원사업",
+            "properties": {
+                "program_id": "string",
+                "name": "대·중소 자율형 ESG 지원사업",
+                "year": 2023,
+                "participant_count": 50,
+                "support_scale": "확대",
+                "program_name": "대·중소 자율형 ESG 지원사업",
+                "avg_compliance_rate": 83.0
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Microsoft 365",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "Microsoft 365"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "곽동신",
+            "properties": {
+                "name": "곽동신",
+                "role": "회장"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "강석훈",
+            "properties": {
+                "name": "강석훈",
+                "role": "법인장"
+            }
+        },
+        {
+            "label": "SMEExportQuarter",
+            "name": "중소기업 분기수출",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "total_amount": "270억 달러",
+                "growth_rate": "0.7%",
+                "company_count": 63135,
+                "company_count_growth": "1.6%"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "부산항만공사",
+            "properties": {
+                "name": "부산항만공사",
+                "industry": "Logistics"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "로봇제어기",
+            "properties": {
+                "category": "로봇 제어",
+                "name": "로봇제어기",
+                "provider": ""
+            }
+        },
+        {
+            "label": "Product",
+            "name": "스테키마",
+            "properties": {
+                "product_name": "스테키마",
+                "generic_name": "우스테키누맙",
+                "category": "자가면역질환 치료제"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "LG이노텍",
+            "properties": {
+                "industry": "전기전자",
+                "name": "LG이노텍"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "노루그룹",
+            "properties": {
+                "industry": "Chemical",
+                "name": "노루그룹"
+            }
+        },
+        {
+            "label": "BRAND",
+            "name": "식사이론",
+            "properties": {
+                "name": "식사이론",
+                "sector": "식품"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Hyundai",
+            "properties": {
+                "industry": "Automotive",
+                "name": "Hyundai"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG지원 협약",
+            "properties": {
+                "agreement_id": "",
+                "date": "2023-11-14",
+                "location": "인천 송도",
+                "purpose": "ESG 지원",
+                "name": "협력사 ESG지원 협약",
+                "title": "",
+                "subject": "협력사 ESG지원 협약",
+                "agreement_date": "2023-11-14",
+                "description": "4년 연속 협력사 ESG지원"
+            }
+        },
+        {
+            "label": "SMEExportQuarter",
+            "name": "중소기업_분기수출",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "total_amount": "270억 달러",
+                "growth_rate": "0.7%",
+                "company_count": 63135,
+                "company_count_growth": "1.6%"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "센드버드",
+            "properties": {
+                "industry": "AI 에이전트 플랫폼",
+                "name": "센드버드"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김재원",
+            "properties": {
+                "name": "김재원",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "방양국",
+            "properties": {
+                "name": "방양국",
+                "role": "노루페인트 연구소장"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "식사이론",
+            "properties": {
+                "name": "식사이론",
+                "sector": "식품"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "동반위와 LG이노텍 협약",
+            "properties": {
+                "agreement_id": "string",
+                "date": "2023-10-14",
+                "location": "인천 송도 에이피텍 본사",
+                "purpose": "ESG 지원",
+                "name": "동반위와 LG이노텍 협약",
+                "title": "업무협약",
+                "subject": "ESG 지원"
+            }
+        },
+        {
+            "label": "MarketCondition",
+            "name": "건설경기 침체",
+            "properties": {
+                "segment": "B2B",
+                "status": "불황",
+                "impact": "매출 감소"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Computational Fluid Dynamics",
+            "properties": {
+                "name": "Computational Fluid Dynamics",
+                "category": "Engineering",
+                "provider": "ADRO"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "셀트리온",
+            "properties": {
+                "industry": "제약",
+                "name": "셀트리온",
+                "revenue": 8419000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null,
+                "major_product": "바이오시밀러"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "뉴에어론 풀 체어",
+            "properties": {
+                "brand_name": "허먼밀러",
+                "funding_amount": 540000000,
+                "category": "Office Chair",
+                "rank": 1
+            }
+        },
+        {
+            "label": "Product",
+            "name": "알루미늄 제품",
+            "properties": {
+                "product_name": "알루미늄 제품"
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "삼성바이오로직스 2023 목표",
+            "properties": {
+                "year": 2023,
+                "targetRevenue": 55705000
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "업무협약",
+            "properties": {
+                "agreement_id": "",
+                "date": "2023-10-14",
+                "location": "",
+                "purpose": "수출 중소벤처기업의 글로벌 물류 지원 협력",
+                "name": "업무협약",
+                "title": "",
+                "subject": "",
+                "agreement_date": "2023-10-14",
+                "description": "중소벤처기업진흥공단과 부산항만공사 간의 협업으로 수출 중소벤처기업의 글로벌 물류 지원 협약 체결"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "가온아이",
+            "properties": {
+                "industry": "",
+                "name": "가온아이"
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "셀트리온 2023 목표",
+            "properties": {
+                "year": 2023,
+                "targetRevenue": 50000000
+            }
+        },
+        {
+            "label": "Award",
+            "name": "AWS 어드밴스드 티어 파트너",
+            "properties": {
+                "name": "AWS 어드밴스드 티어 파트너",
+                "year": 2023,
+                "tier": "Advanced"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "신일전자",
+            "properties": {
+                "industry": "가전",
+                "name": "신일전자"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "중국",
+            "properties": {
+                "name": "중국",
+                "country_name": "중국",
+                "country_code": "",
+                "export_amount_usd": "4320000000",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "중국",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "핀테크",
+            "properties": {
+                "industry_name": "핀테크",
+                "name": "핀테크"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대리바트",
+            "properties": {
+                "name": "현대리바트",
+                "stock_code": "079430"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "한샘",
+            "properties": {
+                "name": "한샘",
+                "stock_code": "009240"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "물류센터형 수직농장 스마트팜 개발",
+            "properties": {
+                "year": 2023,
+                "description": "1000억원 규모 물류센터형 수직농장 스마트팜 개발 사업"
+            }
+        },
+        {
+            "label": "Award",
+            "name": "AWS 한국파트너리그",
+            "properties": {
+                "name": "AWS 한국파트너리그",
+                "year": 2023,
+                "tier": "수상"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "동반성장위원회",
+            "properties": {
+                "name": "동반성장위원회",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "엘리스그룹",
+            "properties": {
+                "name": "엘리스그룹",
+                "industry": "AI 플랫폼"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한화오션디지털",
+            "properties": {
+                "industry": "",
+                "name": "한화오션디지털"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Germany",
+            "properties": {
+                "name": "Germany",
+                "country_name": "Germany"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "LG전자",
+            "properties": {
+                "industry": "",
+                "name": "LG전자"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "고령자",
+            "properties": {
+                "group": "50세 이상"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "Transaction",
+            "properties": {
+                "year": 2021,
+                "amount": 272,
+                "growthRate": 2700
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "셀트리온 1Q2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 8419000,
+                "growth_rate": 14.2,
+                "overseas_ratio": 98.8
+            }
+        },
+        {
+            "label": "Factory",
+            "name": "파세코 안산 공장",
+            "properties": {
+                "location": "경기 안산시 단원구",
+                "workerCount": 60,
+                "dailyCapacity": 1200
+            }
+        },
+        {
+            "label": "Event",
+            "name": "업무협약식",
+            "properties": {
+                "date": "2023-10-14",
+                "location": "인천 송도 에이피텍 본사",
+                "event_id": "string",
+                "name": "업무협약식",
+                "type": "협약"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한화세미텍",
+            "properties": {
+                "industry": "반도체 장비",
+                "name": "한화세미텍"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "삼성바이오로직스 1Q2023",
+            "properties": {
+                "year": 2023,
+                "revenue": 12983000,
+                "growth_rate": 37.1,
+                "overseas_ratio": 91.0
+            }
+        },
+        {
+            "label": "BroadcastEvent",
+            "name": "성유리 에디션 방송",
+            "properties": {
+                "event_time": "14일 오후 9시45분"
+            }
+        },
+        {
+            "label": "SMEGroup",
+            "name": "백년소공인",
+            "properties": {
+                "group_id": "smegroup_2",
+                "name": "백년소공인",
+                "total_companies": 0
+            }
+        },
+        {
+            "label": "Report",
+            "name": "수출보고서",
+            "properties": {
+                "report_id": "456",
+                "year": 2023,
+                "quarter": "1분기",
+                "total_export_amount": 270000000000,
+                "total_growth_rate": 0.7,
+                "export_companies_count": 63135,
+                "title": "2025년도 1분기 중소기업 수출 동향",
+                "releaseDate": "2023-04-14"
+            }
+        },
+        {
+            "label": "SMEExportQuarter",
+            "name": "2025년도 1분기 중소기업 수출 동향",
+            "properties": {
+                "year": 2025,
+                "quarter": 1,
+                "total_amount": "270억달러",
+                "growth_rate": "0.7%",
+                "company_count": 63135,
+                "company_count_growth": "1.6%"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "컨파마",
+            "properties": {
+                "name": "컨파마",
+                "industry": "제약"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "플라스틱 제품",
+            "properties": {
+                "product_name": "플라스틱 제품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "식사이론",
+            "properties": {
+                "name": "식사이론",
+                "product_name": "식사이론",
+                "description": "",
+                "brand_name": "롯데웰푸드",
+                "category": "식품"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "DST",
+            "properties": {
+                "industry": "조선 및 방산업체 부품",
+                "name": "DST"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "소진공",
+            "properties": {
+                "industry": "",
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "와디즈",
+            "properties": {
+                "industry": "Funding Platform"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "파인디",
+            "properties": {
+                "name": "파인디",
+                "industry": "IT 채용 플랫폼"
+            }
+        },
+        {
+            "label": "ExportReport",
+            "name": "2025년 1분기 수출 보고서",
+            "properties": {
+                "year": 2025,
+                "quarter": "Q1",
+                "total_export_usd": 270000000000,
+                "growth_rate_percent": 0.7,
+                "num_exporters": 63135,
+                "report_id": "RPT2025Q1",
+                "total_export_amount_usd": 270000000000,
+                "company_count": 63135,
+                "period": "2025년 1분기",
+                "change_rate": 0.7
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "에이텀",
+            "properties": {
+                "industry": "변압기 제조",
+                "name": "에이텀"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "전기차용 트랜스",
+            "properties": {
+                "category": "전기차",
+                "name": "전기차용 트랜스"
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "BPA 해외물류센터",
+            "properties": {
+                "center_id": "",
+                "center_name": "BPA 해외물류센터",
+                "location": "미국 로스앤젤레스·롱비치 지역",
+                "operator": "부산항만공사",
+                "name": "BPA 해외물류센터",
+                "center_type": "",
+                "type": ""
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "region": "서울",
+                "agency_id": "",
+                "name": "중소벤처기업진흥공단"
+            }
+        },
+        {
+            "label": "Solution",
+            "name": "세이프아이서트",
+            "properties": {
+                "name": "세이프아이서트",
+                "category": "법인 공동인증서 관리 솔루션"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "동성중공업",
+            "properties": {
+                "industry": "조선 및 방산업체 부품",
+                "name": "동성중공업"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "전자응용기기",
+            "properties": {
+                "product_name": "전자응용기기"
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "LA·LB 해외물류센터",
+            "properties": {
+                "center_id": "",
+                "center_name": "LA·LB 해외물류센터",
+                "location": "로스앤젤레스·롱비치",
+                "operator": "부산항만공사",
+                "name": "LA·LB 해외물류센터",
+                "center_type": "해외물류센터",
+                "type": ""
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Body Kit",
+            "properties": {
+                "name": "Body Kit",
+                "product_name": "Body Kit",
+                "category": "Automotive Accessory"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "해외 실증 지원사업",
+            "properties": {
+                "name": "해외 실증 지원사업",
+                "type": ""
+            }
+        },
+        {
+            "label": "Company",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품 제조",
+                "name": "롯데웰푸드",
+                "business": "식품 제조",
+                "founded_year": null,
+                "region": "한국",
+                "company_type": "Corporation"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "조창제",
+            "properties": {
+                "name": "조창제",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "가정간편식",
+            "properties": {
+                "product_name": "가정간편식",
+                "type": "HMR",
+                "name": "가정간편식",
+                "description": "즉석섭취 및 조리식품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "신형 6세대 창문형 에어컨",
+            "properties": {
+                "product_name": "신형 6세대 창문형 에어컨",
+                "description": "호환성이 높고 AI 모드가 있는 에어컨",
+                "type": "가전 제품"
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "미국 관세 조치",
+            "properties": {
+                "name": "미국 관세 조치",
+                "rate": -0.174,
+                "effective_date": "2023-03-12",
+                "policy_id": "us_tariff",
+                "tariff_type": "철강·알루미늄",
+                "start_date": "2023-03-12",
+                "target_products": "철강 제품, 알루미늄 제품"
+            }
+        },
+        {
+            "label": "Tender",
+            "name": "CSC 컨소시엄 입찰",
+            "properties": {
+                "name": "CSC 컨소시엄 입찰"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "홍콩",
+            "properties": {
+                "name": "홍콩",
+                "country_name": "홍콩",
+                "country_code": "",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "홍콩",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "화장품_수출",
+            "properties": {
+                "exportAmount": 1840000000,
+                "currency": "USD",
+                "growthRate": 19.6,
+                "companyCount": null
+            }
+        },
+        {
+            "label": "Program",
+            "name": "백년가게·백년소공인",
+            "properties": {
+                "name": "백년가게·백년소공인",
+                "year": 2025,
+                "application_deadline": "2023-10-23",
+                "description": "",
+                "program_id": "",
+                "program_name": "백년가게·백년소공인",
+                "participants_count": 0,
+                "introduced_year": 0,
+                "purpose": "",
+                "mode": "",
+                "type": ""
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "백년가게",
+            "properties": {
+                "name": "백년가게",
+                "sector": "음식점업"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "사람인",
+            "properties": {
+                "industry": "",
+                "name": "사람인"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도"
+            }
+        },
+        {
+            "label": "JobCategory",
+            "name": "창업 및 자영업",
+            "properties": {
+                "category": "창업 및 자영업"
+            }
+        },
+        {
+            "label": "JobCategory",
+            "name": "블루칼라",
+            "properties": {
+                "category": "블루칼라"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "키르기스스탄",
+            "properties": {
+                "country_code": "",
+                "name": "키르기스스탄",
+                "country_name": "키르기스스탄",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "키르기스스탄",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData_2022",
+            "properties": {
+                "year": 2022,
+                "revenue": 110000000,
+                "growth_rate": 93.0,
+                "overseas_ratio": 86.0
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "중소기업_수출",
+            "properties": {
+                "exportAmount": 270000000000,
+                "currency": "USD",
+                "growthRate": 0.7,
+                "companyCount": 63135
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "AWS",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "AWS"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "자동차 부품",
+            "properties": {
+                "product_name": "자동차 부품"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "스페인",
+            "properties": {
+                "name": "스페인"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "트룩시마",
+            "properties": {
+                "product_name": "트룩시마",
+                "generic_name": "리툭시맙",
+                "category": "항암제"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "박성효",
+            "properties": {
+                "name": "박성효",
+                "role": "이사장"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품 제조업",
+                "name": "롯데웰푸드"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Yoon Seung-hyun",
+            "properties": {
+                "name": "Yoon Seung-hyun",
+                "role": "CEO"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "화장품",
+            "properties": {
+                "product_name": "화장품",
+                "export_amount_usd": "1840000000",
+                "rank": 0,
+                "growth_rate_percent": "19.6",
+                "description": "",
+                "price": 0,
+                "type": "",
+                "name": "화장품",
+                "category": "",
+                "powerCapacity": "",
+                "marketShare": "",
+                "generation": "",
+                "releaseDate": "",
+                "product_id": "",
+                "development_status": "",
+                "model": "",
+                "release_date": null,
+                "release_quarter": "",
+                "product_type": "",
+                "launch_year": 0,
+                "funding_amount": 0,
+                "ranking": 0,
+                "generic_name": "",
+                "productName": "화장품",
+                "brand_name": "",
+                "export_usd": 0,
+                "launchYear": 0
+            }
+        },
+        {
+            "label": "Company",
+            "name": "미국 수출 중소벤처기업",
+            "properties": {
+                "name": "미국 수출 중소벤처기업",
+                "region": "로스앤젤레스"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "락앤락",
+            "properties": {
+                "industry": "글로벌 생활용품",
+                "name": "락앤락"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "일본",
+            "properties": {
+                "country_code": "",
+                "name": "일본",
+                "country_name": "일본",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "일본",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "COLLABORATION",
+            "name": "한일 B2B 비즈니스 협약",
+            "properties": {
+                "date": null,
+                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "인천지식재산센터",
+            "properties": {
+                "org_type": "String",
+                "industry": "지식재산",
+                "location": "인천",
+                "organization_id": "인천지식센터",
+                "name": "인천지식재산센터",
+                "org_id": "인천지식센터",
+                "org_name": "인천지식재산센터",
+                "type": "센터",
+                "website": "",
+                "orgName": "인천지식재산센터",
+                "orgType": "지식재산",
+                "region": "인천",
+                "sector": "금융"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "미국",
+            "properties": {
+                "country_code": "",
+                "name": "미국",
+                "country_name": "미국",
+                "export_amount_usd": "4480000000",
+                "growth_rate_percent": "-2.5",
+                "country_id": "",
+                "region": "",
+                "countryName": "미국",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년가게",
+            "properties": {
+                "category": "음식점업",
+                "years_in_business": 30,
+                "name": "백년가게",
+                "businessType": "우수 소상인",
+                "yearsInBusiness": 30
+            }
+        },
+        {
+            "label": "Product",
+            "name": "M사이즈 푸드워머",
+            "properties": {
+                "product_name": "M사이즈 푸드워머",
+                "description": "가로 길이 42㎝로 2인 이상 식사 시 활용도가 높음"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "패션",
+            "properties": {
+                "product_id": "2",
+                "name": "Fashion"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "엔씽",
+            "properties": {
+                "industry": "스마트 수직농장",
+                "name": "엔씽",
+                "founded_year": 2014,
+                "cumulative_investment": 320000000,
+                "ipo_target_year": 2027
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "SK하이닉스",
+            "properties": {
+                "industry": "반도체",
+                "name": "SK하이닉스"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "부산항만공사",
+            "properties": {
+                "region": "부산",
+                "agency_id": "",
+                "name": "부산항만공사"
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "자동차_수출",
+            "properties": {
+                "exportAmount": 1740000000,
+                "currency": "USD",
+                "growthRate": 67.4,
+                "companyCount": null
+            }
+        },
+        {
+            "label": "Company",
+            "name": "배달의민족",
+            "properties": {
+                "name": "배달의민족",
+                "industry": "배송 서비스"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "우레탄 난연 몰딩제",
+            "properties": {
+                "product_name": "우레탄 난연 몰딩제",
+                "category": "Molding"
+            }
+        },
+        {
+            "label": "TariffAction",
+            "name": "미국 관세 조치",
+            "properties": {
+                "action_id": "0001",
+                "start_date": "2025-03-12",
+                "description": "미국 철강·알루미늄 및 파생상품 관세 부과"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대마린솔루션",
+            "properties": {
+                "industry": "조선",
+                "name": "HD현대마린솔루션"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "industry": "N/A",
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대백화점그룹",
+            "properties": {
+                "name": "현대백화점그룹",
+                "industry": "Retail"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업부",
+            "properties": {
+                "name": "중소벤처기업부",
+                "region": "",
+                "agency_id": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TA트랜스",
+            "properties": {
+                "category": "휴대용 충전기",
+                "name": "TA트랜스"
+            }
+        },
+        {
+            "label": "Subsidiary",
+            "name": "셀트리온 스페인 법인",
+            "properties": {
+                "name": "셀트리온 스페인 법인",
+                "country": "Spain"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "2021 거래",
+            "properties": {
+                "year": 2021,
+                "amount": 549700000000,
+                "growthRate": 0.656
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "Tesla Model Y",
+            "properties": {
+                "name": "Model Y",
+                "brand": "Tesla",
+                "type": "Electric"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "현수환",
+            "properties": {
+                "name": "현수환",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Kia",
+            "properties": {
+                "industry": "Automotive",
+                "name": "Kia"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "포르투갈",
+            "properties": {
+                "name": "포르투갈"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "강석진",
+            "properties": {
+                "position": "이사장",
+                "person_id": "",
+                "name": "강석진",
+                "role": "",
+                "title": "이사장",
+                "personName": "강석진",
+                "person_name": "강석진"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "중소기업",
+            "properties": {
+                "name": "중소기업"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {
+                "name": "중소기업 글로벌 물류지원 업무협약",
+                "date": "14일"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "풀히트 푸드워머",
+            "properties": {
+                "product_name": "풀히트 푸드워머",
+                "description": "바닥 전체에 열선이 내장되어 있어 10초 내 예열 돼 언제 어디서나 따뜻한 음식을 즐길 수 있는 것이 특징"
+            }
+        },
+        {
+            "label": "Partner",
+            "name": "경기도 중소 협력사",
+            "properties": {
+                "name": "경기도 중소 협력사",
+                "industry": "Various"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "에이피텍",
+            "properties": {
+                "name": "에이피텍",
+                "sector": "휴대전화 카메라 모듈 제조설비"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "2025 신기술·신제품 전시회",
+            "properties": {
+                "name": "2025 신기술·신제품 전시회",
+                "type": "Exhibition"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "올리젯 청바지",
+            "properties": {
+                "funding_amount": 93000000,
+                "category": "Denim",
+                "rank": 3
+            }
+        },
+        {
+            "label": "Company",
+            "name": "에이피텍",
+            "properties": {
+                "name": "에이피텍",
+                "industry": "핸드폰 카메라 모듈 제조설비"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "자동차",
+            "properties": {
+                "product_name": "자동차",
+                "export_amount_usd": "1740000000",
+                "rank": 0,
+                "growth_rate_percent": "67.4",
+                "description": "",
+                "price": 0,
+                "type": "",
+                "name": "자동차",
+                "category": "",
+                "powerCapacity": "",
+                "marketShare": "",
+                "generation": "",
+                "releaseDate": "",
+                "product_id": "",
+                "development_status": "",
+                "model": "",
+                "release_date": null,
+                "release_quarter": "",
+                "product_type": "",
+                "launch_year": 0,
+                "funding_amount": 0,
+                "ranking": 0,
+                "generic_name": "",
+                "productName": "자동차",
+                "brand_name": "",
+                "export_usd": 0,
+                "launchYear": 0
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "한국중소벤처기업유통원",
+            "properties": {
+                "region": "South Korea",
+                "agency_id": "",
+                "name": "한국중소벤처기업유통원"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "엠투아이",
+            "properties": {
+                "industry": "AI 자율 제조",
+                "name": "엠투아이"
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "BMW M4",
+            "properties": {
+                "name": "M4",
+                "brand": "BMW",
+                "type": "Internal Combustion"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "name": "중소벤처기업진흥공단",
+                "industry": "Government Agency"
+            }
+        },
+        {
+            "label": "Service",
+            "name": "파이브클라우드",
+            "properties": {
+                "name": "파이브클라우드",
+                "type": "클라우드 서비스",
+                "annual_revenue": 100000000,
+                "revenue_growth_rate": 60.0,
+                "customer_count": 2600
+            }
+        },
+        {
+            "label": "Promotion",
+            "name": "프로모션",
+            "properties": {
+                "description": "제품 출시 기념",
+                "start_date": "2023-09-14",
+                "end_date": "2023-09-21"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "삼성전자",
+            "properties": {
+                "industry": "전자",
+                "name": "삼성전자"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "정광용",
+            "properties": {
+                "name": "정광용",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "김상우",
+            "properties": {
+                "official_name": "김상우",
+                "title": "리테일사업부 상무",
+                "name": "김상우",
+                "position": "상무"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "멕시코",
+            "properties": {
+                "name": "멕시코",
+                "country_name": "멕시코",
+                "country_code": "",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "멕시코",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "Association",
+            "name": "하이서울기업협회",
+            "properties": {
+                "phone": "",
+                "email": ""
+            }
+        },
+        {
+            "label": "TariffAction",
+            "name": "철강·알루미늄 관세 조치",
+            "properties": {
+                "action_id": "",
+                "start_date": "",
+                "description": "미국의 철강·알루미늄 관세 조치"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "글로벌 물류 지원",
+            "properties": {
+                "name": "글로벌 물류 지원",
+                "year": 2023,
+                "application_deadline": "",
+                "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 프로그램",
+                "program_id": "",
+                "program_name": "글로벌 물류 지원",
+                "participants_count": 0,
+                "introduced_year": 2023,
+                "purpose": "수출 중소벤처기업의 안정적인 수출 기반 마련",
+                "mode": "",
+                "type": ""
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "로스앤젤레스·롱비치 해외물류센터",
+            "properties": {
+                "name": "로스앤젤레스·롱비치 해외물류센터",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "year": 2025,
+                "description": "",
+                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+                "topic": "",
+                "type": "",
+                "start_date": "",
+                "end_date": "",
+                "scale_amount": 0,
+                "financing_structure": "",
+                "status": "",
+                "projectName": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "TC 본더",
+            "properties": {
+                "product_name": "TC 본더",
+                "category": "반도체 장비"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "program_name": "소상공인 온라인쇼핑몰 판매지원사업",
+                "year": 2023
+            }
+        },
+        {
+            "label": "Program",
+            "name": "발전정보 활용 창업·벤처기업 협업사업",
+            "properties": {
+                "name": "발전정보 활용 창업·벤처기업 협업사업",
+                "year": 2023,
+                "application_deadline": "2023-12-16",
+                "description": "창업 7년 이내 중소기업이나 창업·벤처기업이 서부발전의 발전정보를 활용해 창의적인 기술을 개발하고 실증하는 사업화 연계 프로그램이다.",
+                "program_id": "",
+                "program_name": "발전정보 활용 창업·벤처기업 협업사업",
+                "participants_count": 25,
+                "introduced_year": 2023,
+                "purpose": "사업화 연계",
+                "mode": "",
+                "type": ""
+            }
+        },
+        {
+            "label": "Event",
+            "name": "2025 경기도 동반성장 페어",
+            "properties": {
+                "name": "2025 경기도 동반성장 페어",
+                "type": "동반성장 페어",
+                "date": "",
+                "location": "수원메쎄 1홀"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "industry": "string",
+                "name": "소상공인시장진흥공단"
+            }
+        },
+        {
+            "label": "Collaboration",
+            "name": "업무 협약",
+            "properties": {
+                "date": "2023-03",
+                "purpose": "소진공과 롯데웰푸드 간의 협력"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "렉라자",
+            "properties": {
+                "product_name": "렉라자",
+                "category": "폐암 신약",
+                "marketShare": null
+            }
+        },
+        {
+            "label": "ESGSupportProgram",
+            "name": "협력사 ESG 지원사업",
+            "properties": {
+                "program_id": "",
+                "name": "협력사 ESG 지원사업",
+                "year": 2023,
+                "participant_count": 50,
+                "support_scale": "대규모",
+                "avg_compliance_rate": 83.0
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "현대이지웰 복지몰",
+            "properties": {
+                "name": "현대이지웰 복지몰",
+                "ranking": "1"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "정일산업",
+            "properties": {
+                "industry": "승강기 제조업",
+                "name": "정일산업"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "ADRO",
+            "properties": {
+                "industry": "Automotive",
+                "name": "ADRO"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "유한양행",
+            "properties": {
+                "name": "유한양행",
+                "industry": "전통제약",
+                "revenue": 4916000000,
+                "operating_in": "글로벌",
+                "employee_size": null,
+                "location": null,
+                "founded_year": null
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "STX엔진",
+            "properties": {
+                "industry": "엔진 제조",
+                "name": "STX엔진"
+            }
+        },
+        {
+            "label": "FundingStatistic",
+            "name": "프리미엄 제품 평균 펀딩",
+            "properties": {
+                "avg_per_person_funding": 180000
+            }
+        },
+        {
+            "label": "Country",
+            "name": "대만",
+            "properties": {
+                "country_code": "",
+                "name": "대만",
+                "country_name": "대만",
+                "export_amount_usd": "",
+                "growth_rate_percent": "",
+                "country_id": "",
+                "region": "",
+                "countryName": "대만",
+                "export_usd": 0,
+                "change_rate": 0
+            }
+        },
+        {
+            "label": "ConsumerTrend",
+            "name": "다각형 소비",
+            "properties": {
+                "trend_name": "Polygon Consumption"
+            }
+        },
+        {
+            "label": "Government",
+            "name": "경기도",
+            "properties": {
+                "region": "경기도"
+            }
+        },
+        {
+            "label": "Litigation",
+            "name": "특허 침해 소송",
+            "properties": {
+                "case_type": "특허 침해",
+                "year": 2021
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "ACHIEVED",
+            "end_node": "AWS 어드밴스드 티어 파트너",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "삼성바이오로직스 2023 목표",
+            "properties": {}
+        },
+        {
+            "start_node": "CSC 컨소시엄 입찰",
+            "relationship": "COVERS_PRODUCT",
+            "end_node": "트룩시마",
+            "properties": {}
+        },
+        {
+            "start_node": "김동선",
+            "relationship": "LEADS",
+            "end_node": "한화세미텍",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "조창제",
+            "relationship": "LEADS",
+            "end_node": "가온아이",
+            "properties": {}
+        },
+        {
+            "start_node": "야마다 유이치로",
+            "relationship": "LEADS",
+            "end_node": "파인디",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "PUBLISHES",
+            "end_node": "중소기업 화장품 수출",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업진흥공단",
+            "properties": {
+                "role": "이사장"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "셀트리온 2023 목표",
+            "properties": {}
+        },
+        {
+            "start_node": "트럼프 의약품 관세",
+            "relationship": "IMPOSED_BY",
+            "end_node": "셀트리온",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "MADE_INVESTMENT_IN",
+            "end_node": "벰로보틱스",
+            "properties": {
+                "amount": 1200000000,
+                "currency": "KRW",
+                "date": "2023-09-14"
+            }
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "REPORTS",
+            "end_node": "중소기업_분기수출",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년도 1분기 중소기업 수출 동향",
+            "relationship": "EXPORTS_PRODUCT",
+            "end_node": "자동차",
+            "properties": {
+                "export_amount": 1740000000,
+                "growth_rate": 67.4,
+                "rank": 2
+            }
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
+            "properties": {}
+        },
+        {
+            "start_node": "곽동신",
+            "relationship": "LEADS",
+            "end_node": "한미반도체",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "허쥬마",
+            "properties": {}
+        },
+        {
+            "start_node": "식사이론",
+            "relationship": "BRANDS",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "한화세미텍",
+            "relationship": "SUPPLIES",
+            "end_node": "SK하이닉스",
+            "properties": {
+                "product": "TC 본더",
+                "startQuarter": "2023Q1",
+                "exclusivity": "첫 계약"
+            }
+        },
+        {
+            "start_node": "에이스침대",
+            "relationship": "HAS_PERFORMANCE",
+            "end_node": "재무성과",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "CREATED_PLATFORM",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "우레탄 난연 몰딩제",
+            "properties": {}
+        },
+        {
+            "start_node": "ESGSupportProgram",
+            "relationship": "SUPPORTS",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년가게",
+            "properties": {}
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "OPERATES_IN",
+            "end_node": "건설경기 침체",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "한국서부발전",
+            "relationship": "IMPLEMENTED_BY",
+            "end_node": "발전정보 활용 창업·벤처기업 협업사업",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "JOINTLY_DEVELOPS_ESG_INDICATOR",
+            "end_node": "LG이노텍",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "커머스",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "반도체 제조용 장비",
+            "properties": {
+                "export_amount": "7억 2000만 달러",
+                "growth_rate": "11.2%",
+                "rank": 6
+            }
+        },
+        {
+            "start_node": "미국_철강_알루미늄_관세조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "기타기계류",
+            "properties": {
+                "impact_rate": "-47.4%"
+            }
+        },
+        {
+            "start_node": "발전정보 활용 창업·벤처기업 협업사업",
+            "relationship": "OFFERS",
+            "end_node": "해외 실증 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "경기도 동반성장 페어",
+            "relationship": "CONDUCTS",
+            "end_node": "상담",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "OPERATES",
+            "end_node": "로스앤젤레스·롱비치 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "OPERATES_IN",
+            "end_node": "건설경기 침체",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년도 1분기 중소기업 수출 동향",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "화장품",
+            "properties": {
+                "export_amount": "18억4000만달러",
+                "growth_rate": "19.6",
+                "rank": 1
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "RUNS_PROGRAM",
+            "end_node": "글로벌 물류 지원",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "중국",
+            "properties": {}
+        },
+        {
+            "start_node": "풀히트 푸드워머",
+            "relationship": "HAS_VARIANT",
+            "end_node": "M사이즈 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "일본",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "알루미늄 제품",
+            "properties": {
+                "impact": "-7.6%"
+            }
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "ADOPTED_STRATEGY",
+            "end_node": "기술 중심 전략",
+            "properties": {}
+        },
+        {
+            "start_node": "화장품_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {
+                "growth_rate": "-2.5%"
+            }
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "AI 에너지 세이빙",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년도 1분기 중소기업 수출 동향",
+            "relationship": "EXPORTS_PRODUCT",
+            "end_node": "반도체제조용장비",
+            "properties": {
+                "export_amount": 0,
+                "growth_rate": 0,
+                "rank": 0
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "중소기업 물류 지원 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Germany",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도 중소 협력사",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "현대이지웰",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "2020 거래",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "SUPPLIES",
+            "end_node": "삼성전자",
+            "properties": {
+                "product": "45W 트랜스",
+                "exclusivity": "독점"
+            }
+        },
+        {
+            "start_node": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "2021 거래",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "일본",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PRODUCES",
+            "end_node": "피즈치바",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "협력사 ESG 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "PRODUCES",
+            "end_node": "창문형 에어컨",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OFFERS",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "ISSUED",
+            "end_node": "중소기업 분기수출",
+            "properties": {}
+        },
+        {
+            "start_node": "글로벌 물류 지원",
+            "relationship": "UTILIZES",
+            "end_node": "LA·LB 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "AWS",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "컨파마",
+            "properties": {}
+        },
+        {
+            "start_node": "현대모비스",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "미국",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국_철강_알루미늄_관세조치",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "COOPERATES_WITH",
+            "end_node": "부산항만공사",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "LOCATED_IN",
+            "end_node": "시화공단",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "Kia",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "PUBLISHES",
+            "end_node": "수출보고서",
+            "properties": {}
+        },
+        {
+            "start_node": "강석훈",
+            "relationship": "LEADS",
+            "end_node": "셀트리온",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "스테키마",
+            "properties": {}
+        },
+        {
+            "start_node": "현수환",
+            "relationship": "LEADS",
+            "end_node": "아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "OPERATES",
+            "end_node": "파세코 안산 공장",
+            "properties": {}
+        },
+        {
+            "start_node": "지식재산공제사업",
+            "relationship": "TARGETS",
+            "end_node": "인천지역 중소기업",
+            "properties": {}
+        },
+        {
+            "start_node": "임용규",
+            "relationship": "AFFILIATED_WITH",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년도 1분기 중소기업 수출 동향",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차",
+            "properties": {
+                "export_amount": "17억4000만달러",
+                "growth_rate": "67.4",
+                "rank": 2
+            }
+        },
+        {
+            "start_node": "와디즈",
+            "relationship": "HOSTS",
+            "end_node": "뉴에어론 풀 체어",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 조치",
+            "properties": {}
+        },
+        {
+            "start_node": "직업건강간호협회",
+            "relationship": "OPERATES",
+            "end_node": "찾아가는 산업재해 예방교육",
+            "properties": {}
+        },
+        {
+            "start_node": "엔씽",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "이마트",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "DEVELOPS_PRODUCT",
+            "end_node": "식사이론",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "APPLIED_FOR",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "세이프아이서트",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "클라우드",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "ACHIEVED",
+            "end_node": "AWS 한국파트너리그",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "HAS_POLICY",
+            "end_node": "고령자 계속고용",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "멕시코",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "SUBSIDIARY_OF",
+            "end_node": "현대백화점그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "뉴에어론 풀 체어",
+            "relationship": "BELONGS_TO",
+            "end_node": "홈리빙",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "HAS_AGREEMENT",
+            "end_node": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "전자응용기기",
+            "properties": {
+                "impact": "-25.6%"
+            }
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "INCLUDES",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "김혜연",
+            "relationship": "LEADS",
+            "end_node": "엔씽",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇제어기",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "홍콩",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "대만",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "ENTERED_COLLABORATION_WITH",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "date": "2023-14-09",
+                "purpose": "협력사 ESG 지원사업"
+            }
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "기술보증기금 지식재산공제센터",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "TARGETS",
+            "end_node": "Tesla Model Y",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "RUNS",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "대만",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "인도네시아",
+            "properties": {}
+        },
+        {
+            "start_node": "협력사 ESG 지원사업",
+            "relationship": "TARGETS",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "CSC 컨소시엄 입찰",
+            "relationship": "COVERS_PRODUCT",
+            "end_node": "허쥬마",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "DEVELOPS",
+            "end_node": "전기차용 트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "TARGETS",
+            "end_node": "BMW M4",
+            "properties": {}
+        },
+        {
+            "start_node": "에이스침대",
+            "relationship": "FACES",
+            "end_node": "EconomicCondition",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "인도네시아",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "MANUFACTURES",
+            "end_node": "TV트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "COMMENTS_ON",
+            "end_node": "중소기업_분기수출",
+            "properties": {
+                "quote": "미국의 관세 조치 영향을 모니터링하고 중소기업의 관세 대응을 위한 추가 지원 방안을 조속히 추진하겠다"
+            }
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "OPERATES",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도 중소 협력사",
+            "relationship": "LOCATED_IN",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "신일전자",
+            "relationship": "LAUNCHES",
+            "end_node": "BLDC 에어 서큘레이터 S10 SE",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "스텔스 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "COMMENTED_ON",
+            "end_node": "수출보고서",
+            "properties": {}
+        },
+        {
+            "start_node": "협력사 ESG 지원사업",
+            "relationship": "SUPPORTS",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "한화오션디지털",
+            "relationship": "USES",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "ORGANIZES",
+            "end_node": "2025 신기술·신제품 전시회",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData_2022",
+            "properties": {}
+        },
+        {
+            "start_node": "박미경",
+            "relationship": "LEADS",
+            "end_node": "하이서울기업협회",
+            "properties": {}
+        },
+        {
+            "start_node": "소진공",
+            "relationship": "RUNS_PROJECT",
+            "end_node": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "탄소 저감 건재용 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "BMW",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "LAUNCHES",
+            "end_node": "스테키마",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "OPERATES_IN",
+            "end_node": "스페인",
+            "properties": {}
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {
+                "startYear": 2023
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "COMMENTED_ON",
+            "end_node": "2025년도 1분기 중소기업 수출 동향",
+            "properties": {}
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "PLAINTIFF_IN",
+            "end_node": "특허 침해 소송",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "VOC 저감형 아크릴 수지",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "IN_INDUSTRY",
+            "end_node": "Pharmaceuticals",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "OPERATES",
+            "end_node": "현대이지웰 복지몰",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "인천지식재산센터",
+            "properties": {
+                "date": "2023-10-14",
+                "agreement_id": "string"
+            }
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "ACQUIRED",
+            "end_node": "DST",
+            "properties": {
+                "acquisition_amount": 14500000000,
+                "stakePercent": "50%",
+                "date": "2023-07-02"
+            }
+        },
+        {
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
+            "start_node": "스마트트레이드허브",
+            "relationship": "CONNECTS_WITH",
+            "end_node": "BPA 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "김상우",
+            "relationship": "WORKS_FOR",
+            "end_node": "파세코",
+            "properties": {
+                "role": "리테일사업부 상무"
+            }
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "물류로봇",
+            "properties": {}
+        },
+        {
+            "start_node": "네이버",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "CSC 컨소시엄 입찰",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "HAS_SUBSIDIARY",
+            "end_node": "셀트리온 스페인 법인",
+            "properties": {}
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "startYear": 2023
+            }
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "핀테크",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "PLANS_TO_SECURE_SPACE_AT",
+            "end_node": "수원메쎄 1홀",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "플라스틱 제품",
+            "properties": {
+                "export_amount": "11억3천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "박성효",
+            "relationship": "LEADS",
+            "end_node": "소상공인시장진흥공단",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "SUPPORTS",
+            "end_node": "백년가게",
+            "properties": {
+                "support_type": "식자재 납품"
+            }
+        },
+        {
+            "start_node": "미국 수출 중소벤처기업",
+            "relationship": "USES",
+            "end_node": "BPA 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
+            "end_node": "트룩시마",
+            "properties": {}
+        },
+        {
+            "start_node": "올리젯 청바지",
+            "relationship": "BELONGS_TO",
+            "end_node": "패션",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "RUNS_PROJECT",
+            "end_node": "백년가게 백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "특허청",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "기술보증기금 지식재산공제센터",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED_MOU_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "date": "14일",
+                "title": "업무협약"
+            }
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "HAS_AGREEMENT",
+            "end_node": "중소기업 글로벌 물류지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "성유리 에디션 방송",
+            "relationship": "ON_CHANNEL",
+            "end_node": "GS홈쇼핑",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "OPERATES_IN",
+            "end_node": "포르투갈",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "셀트리온 1Q2023",
+            "properties": {}
+        },
+        {
+            "start_node": "한국중소벤처기업유통원",
+            "relationship": "SUPPORTS",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "락앤락",
+            "relationship": "OFFERS",
+            "end_node": "프로모션",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "LG이노텍",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "DEVELOPS",
+            "end_node": "옴니프레젠트 AI 에이전트",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "ENTERED_COLLABORATION_WITH",
+            "end_node": "벰로보틱스",
+            "properties": {
+                "date": "2023-09-14",
+                "purpose": "로봇 제어기 공동 개발"
+            }
+        },
+        {
+            "start_node": "방양국",
+            "relationship": "LEADS",
+            "end_node": "노루그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "태국",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "Transaction",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년가게",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "트룩시마",
+            "properties": {}
+        },
+        {
+            "start_node": "트럼프 의약품 관세",
+            "relationship": "IMPOSED_BY",
+            "end_node": "삼성바이오로직스",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "LOCATED_IN",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "LG전자",
+            "relationship": "USES",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "철강·알루미늄 관세 조치",
+            "relationship": "IMPOSED_BY",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "자동차_수출",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "OFFERS",
+            "end_node": "지식재산공제사업 설명회",
+            "properties": {}
+        },
+        {
+            "start_node": "미국_철강_알루미늄_관세조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "전자응용기기",
+            "properties": {
+                "impact_rate": "-25.6%"
+            }
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "SUPPORTS",
+            "end_node": "백년소공인",
+            "properties": {
+                "support_type": "조리법 제공"
+            }
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "DEVELOPS_PRODUCT",
+            "end_node": "가정간편식",
+            "properties": {}
+        },
+        {
+            "start_node": "김재원",
+            "relationship": "LEADS",
+            "end_node": "엘리스그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "베트남",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "중소기업 물류 지원 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "ENTERED_COLLABORATION_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "date": "2023-09-14",
+                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
+            }
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "COVERS",
+            "end_node": "글로벌 물류 지원",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "BPA 해외물류센터",
+            "relationship": "LOCATED_IN",
+            "end_node": "미국 로스앤젤레스·롱비치 지역",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대마린솔루션",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차 부품",
+            "properties": {
+                "export_amount": "10억4천만 달러",
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "베트남",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "PRODUCES",
+            "end_node": "렉라자",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 화장품 수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "중국",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "협력사 ESG지원 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "화장품",
+            "properties": {
+                "export_amount": "18억4천만 달러",
+                "rank": 1,
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Japan",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "기타기계류",
+            "properties": {
+                "impact": "-47.4%"
+            }
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 화장품 수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount_usd": 1840000000,
+                "change_percent": 19.6
+            }
+        },
+        {
+            "start_node": "인생 이모작 의향 조사",
+            "relationship": "PREFERS_FIELD",
+            "end_node": "창업 및 자영업",
+            "properties": {
+                "percentage": 21.7
+            }
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "INCLUDES",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "인생 이모작 의향 조사",
+            "relationship": "PREFERS_FIELD",
+            "end_node": "블루칼라",
+            "properties": {
+                "percentage": 20.4
+            }
+        },
+        {
+            "start_node": "2025년 1분기 수출 보고서",
+            "relationship": "HAS_COUNTRY_EXPORT",
+            "end_node": "미국",
+            "properties": {
+                "export_amount": 1840000000,
+                "growth_rate": 19.6,
+                "rank": 1
+            }
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "Google Cloud",
+            "properties": {}
+        },
+        {
+            "start_node": "박미경",
+            "relationship": "LEADS",
+            "end_node": "포시에스",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "철강 제품",
+            "properties": {
+                "impact": "-17.8%"
+            }
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "Hyundai",
+            "properties": {}
+        },
+        {
+            "start_node": "스마트트레이드허브",
+            "relationship": "INTEGRATES",
+            "end_node": "LA·LB 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "정광용",
+            "relationship": "LEADS",
+            "end_node": "정일산업",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도",
+            "relationship": "OFFERS",
+            "end_node": "찾아가는 산업재해 예방교육",
+            "properties": {}
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "키르기스스탄",
+            "properties": {}
+        },
+        {
+            "start_node": "가정간편식",
+            "relationship": "BRANDED_AS",
+            "end_node": "식사이론",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "DEVELOPED",
+            "end_node": "전기·전자 산업 ESG 평가지표",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "RECEIVES",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "엔씽",
+            "relationship": "RUNS",
+            "end_node": "물류센터형 수직농장 스마트팜 개발",
+            "properties": {}
+        },
+        {
+            "start_node": "프리미엄 제품 평균 펀딩",
+            "relationship": "INFLUENCES",
+            "end_node": "다각형 소비",
+            "properties": {}
+        },
+        {
+            "start_node": "Yoon Seung-hyun",
+            "relationship": "LEADS",
+            "end_node": "ADRO",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "APPLIED_FOR",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇제어기",
+            "properties": {}
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "COMPETES_WITH",
+            "end_node": "현대리바트",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "Microsoft 365",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "STX엔진",
+            "properties": {}
+        },
+        {
+            "start_node": "풀히트 푸드워머",
+            "relationship": "HAS_VARIANT",
+            "end_node": "S사이즈 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "성유리 에디션 방송",
+            "relationship": "PRESENTS",
+            "end_node": "BLDC 에어 서큘레이터 S10 SE",
+            "properties": {}
+        },
+        {
+            "start_node": "아이서트",
+            "relationship": "DEVELOPED",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED",
+            "end_node": "ESG 지원사업 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "EXPORTS_TO",
+            "end_node": "인도",
+            "properties": {}
+        },
+        {
+            "start_node": "가온아이",
+            "relationship": "DEVELOPS",
+            "end_node": "세이프아이서트",
+            "properties": {}
+        },
+        {
+            "start_node": "엔씽",
+            "relationship": "RAISED",
+            "end_node": "FundingRound",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업_분기수출",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "자동차",
+            "properties": {
+                "export_amount": "17억4천만 달러",
+                "rank": 2,
+                "growth_rate": "0%"
+            }
+        },
+        {
+            "start_node": "창업 7년 이내 중소기업",
+            "relationship": "APPLIES_VIA",
+            "end_node": "발전정보 활용 창업·벤처기업 협업사업",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "램시마SC",
+            "properties": {}
+        },
+        {
+            "start_node": "대상",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "엔씽",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "배달의민족",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "LAUNCHES",
+            "end_node": "신형 6세대 창문형 에어컨",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "삼성바이오로직스 1Q2023",
+            "properties": {}
+        },
+        {
+            "start_node": "패스트파이브",
+            "relationship": "OFFERS",
+            "end_node": "파이브클라우드",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Computational Fluid Dynamics",
+            "properties": {}
+        },
+        {
+            "start_node": "2025년도 1분기 중소기업 수출 동향",
+            "relationship": "EXPORTS_PRODUCT",
+            "end_node": "화장품",
+            "properties": {
+                "export_amount": 1840000000,
+                "growth_rate": 19.6,
+                "rank": 1
+            }
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "HOSTS",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "2023_고용노동부_산업재해_통계",
+            "relationship": "APPLIES_TO_REGION",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "export_amount": "18억 4000만 달러",
+                "growth_rate": "19.6%"
+            }
+        },
+        {
+            "start_node": "와디즈",
+            "relationship": "HOSTS",
+            "end_node": "쿠자 멀티핸들 스텐팬",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "RUNS_PROGRAM",
+            "end_node": "백년가게·백년소공인 상생프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "미국",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도",
+            "relationship": "OFFERS",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "한화세미텍",
+            "relationship": "COMPETES_WITH",
+            "end_node": "한미반도체",
+            "properties": {}
+        },
+        {
+            "start_node": "소진공",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {}
+        },
+        {
+            "start_node": "쿠자 멀티핸들 스텐팬",
+            "relationship": "BELONGS_TO",
+            "end_node": "홈리빙",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "INCLUDES",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "RUNS_PROGRAM",
+            "end_node": "백년가게·백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "락앤락",
+            "relationship": "LAUNCHES",
+            "end_node": "풀히트 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "United States",
+            "properties": {}
+        },
+        {
+            "start_node": "사람인",
+            "relationship": "CONDUCTS",
+            "end_node": "인생 이모작 의향 조사",
+            "properties": {}
+        },
+        {
+            "start_node": "와디즈",
+            "relationship": "HOSTS",
+            "end_node": "올리젯 청바지",
+            "properties": {}
+        },
+        {
+            "start_node": "고령자 계속고용",
+            "relationship": "TARGETS",
+            "end_node": "고령자",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "INCLUDES",
+            "end_node": "백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_TO_INDUSTRY",
+            "end_node": "리테일",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SUPPORTED_BY",
+            "end_node": "협력사 ESG 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SIGNED",
+            "end_node": "ESG 지원사업 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 인력 부족 수치",
+            "relationship": "DESCRIBES",
+            "end_node": "정일산업",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "MANUFACTURES",
+            "end_node": "TA트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PRODUCES",
+            "end_node": "Body Kit",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
+            "end_node": "허쥬마",
+            "properties": {}
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "SUPPLIES",
+            "end_node": "SK하이닉스",
+            "properties": {
+                "product": "TC 본더",
+                "startQuarter": "2017Q1",
+                "exclusivity": "독점"
+            }
+        },
+        {
+            "start_node": "한화세미텍",
+            "relationship": "DEFENDANT_IN",
+            "end_node": "특허 침해 소송",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "IMPOSED_BY",
+            "end_node": "미국",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대중공업",
+            "properties": {
+                "product": "실린더"
+            }
+        },
+        {
+            "start_node": "LA·LB 해외물류센터",
+            "relationship": "LOCATED_IN",
+            "end_node": "United States",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "COVERS",
+            "end_node": "업무 협약",
+            "properties": {}
+        }
+    ]
+}

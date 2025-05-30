@@ -1,0 +1,116 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "Organization",
+            "properties": {
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "Project",
+            "properties": {
+                "projectName": "string",
+                "startDate": "string",
+                "endDate": "string"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "Small Business",
+            "properties": {
+                "name": "string",
+                "businessType": "string",
+                "yearsInBusiness": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "category": "string"
+            }
+        },
+        {
+            "label": "Application",
+            "name": "Application",
+            "properties": {
+                "startDate": "string",
+                "endDate": "string"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "Brand",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "Agreement",
+            "properties": {
+                "date": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "HOSTS",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "COVERS",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "INCLUDES",
+            "end_node": "SmallBusiness",
+            "properties": {}
+        },
+        {
+            "start_node": "SmallBusiness",
+            "relationship": "APPLIED_FOR",
+            "end_node": "Application",
+            "properties": {}
+        },
+        {
+            "start_node": "Application",
+            "relationship": "FOR",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "BRANDED_AS",
+            "end_node": "Brand",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "OFFERS",
+            "end_node": "Product",
+            "properties": {}
+        }
+    ]
+}

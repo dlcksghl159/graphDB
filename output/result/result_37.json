@@ -1,0 +1,103 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "패스트파이브",
+            "properties": {
+                "name": "패스트파이브",
+                "industry": "클라우드 서비스"
+            }
+        },
+        {
+            "label": "Service",
+            "name": "파이브클라우드",
+            "properties": {
+                "name": "파이브클라우드",
+                "type": "클라우드 서비스",
+                "annual_revenue": 100000000,
+                "revenue_growth_rate": 60.0,
+                "customer_count": 2600
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "AWS",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "AWS"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Google Cloud",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "Google Cloud"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Microsoft 365",
+            "properties": {
+                "category": "클라우드 컴퓨팅",
+                "name": "Microsoft 365"
+            }
+        },
+        {
+            "label": "Award",
+            "name": "AWS 어드밴스드 티어 파트너",
+            "properties": {
+                "name": "AWS 어드밴스드 티어 파트너",
+                "year": 2023,
+                "tier": "Advanced"
+            }
+        },
+        {
+            "label": "Award",
+            "name": "AWS 한국파트너리그",
+            "properties": {
+                "name": "AWS 한국파트너리그",
+                "year": 2023,
+                "tier": "수상"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "패스트파이브",
+            "relationship": "OFFERS",
+            "end_node": "파이브클라우드",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "AWS",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "Google Cloud",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "USES",
+            "end_node": "Microsoft 365",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "ACHIEVED",
+            "end_node": "AWS 어드밴스드 티어 파트너",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "ACHIEVED",
+            "end_node": "AWS 한국파트너리그",
+            "properties": {}
+        }
+    ]
+}

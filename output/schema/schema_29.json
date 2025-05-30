@@ -1,0 +1,103 @@
+{
+    "nodes": [
+        {
+            "label": "SMEExportQuarter",
+            "name": "중소기업_분기수출",
+            "properties": {
+                "year": "int",
+                "quarter": "int",
+                "total_amount": "string",
+                "growth_rate": "string",
+                "company_count": "int",
+                "company_count_growth": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "수출품목",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "수출국가",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "관세정책",
+            "properties": {
+                "name": "string",
+                "start_date": "string",
+                "target_products": "string"
+            }
+        },
+        {
+            "label": "GovernmentDepartment",
+            "name": "정부부처",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "공무원",
+            "properties": {
+                "name": "string",
+                "position": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "SMEExportQuarter",
+            "relationship": "INCLUDES_PRODUCT_EXPORT",
+            "end_node": "Product",
+            "properties": {
+                "export_amount": "string",
+                "growth_rate": "string",
+                "rank": "int"
+            }
+        },
+        {
+            "start_node": "Product",
+            "relationship": "EXPORTED_TO",
+            "end_node": "Country",
+            "properties": {
+                "export_amount": "string",
+                "growth_rate": "string"
+            }
+        },
+        {
+            "start_node": "TariffPolicy",
+            "relationship": "AFFECTS",
+            "end_node": "Product",
+            "properties": {
+                "impact_rate": "string"
+            }
+        },
+        {
+            "start_node": "SMEExportQuarter",
+            "relationship": "AFFECTED_BY",
+            "end_node": "TariffPolicy",
+            "properties": {}
+        },
+        {
+            "start_node": "Official",
+            "relationship": "COMMENTS_ON",
+            "end_node": "SMEExportQuarter",
+            "properties": {
+                "quote": "string"
+            }
+        },
+        {
+            "start_node": "Official",
+            "relationship": "BELONGS_TO",
+            "end_node": "GovernmentDepartment",
+            "properties": {}
+        }
+    ]
+}

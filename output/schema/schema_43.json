@@ -1,0 +1,91 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "Organization",
+            "properties": {
+                "name": "string",
+                "sector": "string"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "Agreement",
+            "properties": {
+                "agreement_date": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "Project",
+            "properties": {
+                "name": "string",
+                "start_date": "string",
+                "end_date": "string"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "category": "string",
+                "years_in_business": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "Brand",
+            "properties": {
+                "name": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "INITIATES",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "RECRUITS",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "DEVELOPS",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "BRANDED_AS",
+            "end_node": "Brand",
+            "properties": {}
+        }
+    ]
+}

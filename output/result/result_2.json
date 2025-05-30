@@ -1,0 +1,73 @@
+{
+    "nodes": [
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "name": "중소벤처기업진흥공단",
+                "region": "서울"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "부산항만공사",
+            "properties": {
+                "name": "부산항만공사",
+                "region": "부산"
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "BPA 해외물류센터",
+            "properties": {
+                "center_name": "BPA 해외물류센터",
+                "location": "미국 로스앤젤레스·롱비치 지역",
+                "operator": "부산항만공사"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "미국 수출 중소벤처기업",
+            "properties": {
+                "name": "미국 수출 중소벤처기업",
+                "region": "로스앤젤레스"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "스마트트레이드허브",
+            "properties": {
+                "platform_name": "스마트트레이드허브",
+                "description": "국내 최초의 중소기업 전용 항공물류센터"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "BPA 해외물류센터",
+            "relationship": "LOCATED_IN",
+            "end_node": "미국 로스앤젤레스·롱비치 지역",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 수출 중소벤처기업",
+            "relationship": "USES",
+            "end_node": "BPA 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "CREATED_PLATFORM",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        }
+    ]
+}

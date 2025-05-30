@@ -1,0 +1,108 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "기업",
+            "properties": {
+                "company_id": "string",
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "행사",
+            "properties": {
+                "event_id": "string",
+                "name": "string",
+                "date": "string",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "프로그램",
+            "properties": {
+                "program_id": "string",
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Consultation",
+            "name": "상담",
+            "properties": {
+                "consultation_id": "string",
+                "count": "int",
+                "amount": "int"
+            }
+        },
+        {
+            "label": "Agency",
+            "name": "기관",
+            "properties": {
+                "agency_id": "string",
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Plan",
+            "name": "계획",
+            "properties": {
+                "plan_id": "string",
+                "name": "string",
+                "period_start": "string",
+                "period_end": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "Event",
+            "properties": {
+                "role": "string"
+            }
+        },
+        {
+            "start_node": "Program",
+            "relationship": "PART_OF",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Consultation",
+            "relationship": "CONDUCTED_IN",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "INVOLVED_IN",
+            "end_node": "Consultation",
+            "properties": {
+                "role": "string"
+            }
+        },
+        {
+            "start_node": "Agency",
+            "relationship": "ORGANIZES",
+            "end_node": "Event",
+            "properties": {}
+        },
+        {
+            "start_node": "Agency",
+            "relationship": "PROVIDES",
+            "end_node": "Program",
+            "properties": {}
+        },
+        {
+            "start_node": "Plan",
+            "relationship": "INCLUDES",
+            "end_node": "Event",
+            "properties": {}
+        }
+    ]
+}

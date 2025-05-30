@@ -1,0 +1,111 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "동반성장위원회",
+            "properties": {
+                "name": "동반성장위원회",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "LG이노텍",
+            "properties": {
+                "name": "LG이노텍",
+                "industry": "전기·전자 산업"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "에이피텍",
+            "properties": {
+                "name": "에이피텍",
+                "industry": "핸드폰 카메라 모듈 제조설비"
+            }
+        },
+        {
+            "label": "ESGSupportProgram",
+            "name": "대·중소 자율형 ESG 지원사업",
+            "properties": {
+                "program_id": "string",
+                "name": "대·중소 자율형 ESG 지원사업",
+                "year": 2023,
+                "participant_count": 50,
+                "support_scale": "확대",
+                "program_name": "대·중소 자율형 ESG 지원사업",
+                "avg_compliance_rate": 83.0
+            }
+        },
+        {
+            "label": "Event",
+            "name": "업무협약식",
+            "properties": {
+                "date": "2023-10-14",
+                "location": "인천 송도 에이피텍 본사",
+                "event_id": "string",
+                "name": "업무협약식",
+                "type": "협약"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "동반위와 LG이노텍 협약",
+            "properties": {
+                "agreement_id": "string",
+                "date": "2023-10-14",
+                "location": "인천 송도 에이피텍 본사",
+                "purpose": "ESG 지원",
+                "name": "동반위와 LG이노텍 협약",
+                "title": "업무협약",
+                "subject": "ESG 지원"
+            }
+        },
+        {
+            "label": "ESGIndicator",
+            "name": "전기·전자 산업 ESG 평가지표",
+            "properties": {
+                "name": "전기·전자 산업 ESG 평가지표",
+                "industry": "전기·전자 산업"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "JOINTLY_DEVELOPS_ESG_INDICATOR",
+            "end_node": "LG이노텍",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "ESGSupportProgram",
+            "relationship": "SUPPORTS",
+            "end_node": "에이피텍",
+            "properties": {}
+        },
+        {
+            "start_node": "Event",
+            "relationship": "INCLUDES",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "DEVELOPED",
+            "end_node": "전기·전자 산업 ESG 평가지표",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "LG이노텍",
+            "properties": {}
+        }
+    ]
+}

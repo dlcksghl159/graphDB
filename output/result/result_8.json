@@ -1,0 +1,106 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "properties": {
+                "name": "기술보증기금 지식재산공제센터",
+                "type": "string",
+                "region": "string",
+                "industry": "string",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Organization",
+            "properties": {
+                "name": "인천지식재산센터",
+                "type": "string",
+                "region": "string",
+                "industry": "string",
+                "location": "string"
+            }
+        },
+        {
+            "label": "Agreement",
+            "properties": {
+                "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+                "agreement_date": "2023-10-14",
+                "purpose": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "properties": {
+                "name": "지식재산공제사업",
+                "program_type": "financial",
+                "purpose": "지식재산 비용 부담과 분쟁 리스크를 줄이기 위한 금융제도"
+            }
+        },
+        {
+            "label": "Program",
+            "properties": {
+                "name": "지식재산공제사업 설명회",
+                "program_type": "networking",
+                "purpose": "지식재산공제사업 홍보 및 상담 지원"
+            }
+        },
+        {
+            "label": "SMEGroup",
+            "properties": {
+                "name": "인천지역 중소기업",
+                "total_companies": "int",
+                "group_id": "string"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "properties": {
+                "name": "특허청",
+                "region": "string",
+                "agency_id": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "인천지식재산센터",
+            "properties": {
+                "agreement_id": "string",
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "OFFERS",
+            "end_node": "지식재산공제사업 설명회",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "기술보증기금 지식재산공제센터",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "OPERATES",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "특허청",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "기술보증기금 지식재산공제센터",
+            "properties": {}
+        },
+        {
+            "start_node": "지식재산공제사업",
+            "relationship": "TARGETS",
+            "end_node": "인천지역 중소기업",
+            "properties": {}
+        }
+    ]
+}

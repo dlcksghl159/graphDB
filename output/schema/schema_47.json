@@ -1,0 +1,97 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "company",
+            "properties": {
+                "company_id": "string",
+                "company_name": "string",
+                "industry": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "product",
+            "properties": {
+                "product_id": "string",
+                "product_name": "string",
+                "release_date": "date",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Feature",
+            "name": "feature",
+            "properties": {
+                "feature_id": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Material",
+            "name": "material",
+            "properties": {
+                "material_id": "string",
+                "name": "string"
+            }
+        },
+        {
+            "label": "SizeVariant",
+            "name": "size_variant",
+            "properties": {
+                "variant_id": "string",
+                "size": "string",
+                "weight_g": "int",
+                "dimensions": "string"
+            }
+        },
+        {
+            "label": "Promotion",
+            "name": "promotion",
+            "properties": {
+                "promotion_id": "string",
+                "start_date": "date",
+                "end_date": "date",
+                "description": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "LAUNCHES",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_FEATURE",
+            "end_node": "Feature",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "MADE_OF",
+            "end_node": "Material",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_VARIANT",
+            "end_node": "SizeVariant",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "HAS_PROMOTION",
+            "end_node": "Promotion",
+            "properties": {}
+        },
+        {
+            "start_node": "Product",
+            "relationship": "COMPATIBLE_WITH",
+            "end_node": "Material",
+            "properties": {}
+        }
+    ]
+}

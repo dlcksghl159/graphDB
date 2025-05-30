@@ -1,0 +1,92 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "파세코",
+            "properties": {
+                "industry": "가전",
+                "name": "파세코"
+            }
+        },
+        {
+            "label": "Factory",
+            "name": "파세코 안산 공장",
+            "properties": {
+                "location": "경기 안산시 단원구",
+                "workerCount": 60,
+                "dailyCapacity": 1200
+            }
+        },
+        {
+            "label": "Product",
+            "name": "창문형 에어컨",
+            "properties": {
+                "product_name": "창문형 에어컨",
+                "description": "호환성이 높은 창문형 에어컨",
+                "type": "가전 제품"
+            }
+        },
+        {
+            "label": "Official",
+            "name": "김상우",
+            "properties": {
+                "official_name": "김상우",
+                "title": "리테일사업부 상무",
+                "name": "김상우",
+                "position": "상무"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "신형 6세대 창문형 에어컨",
+            "properties": {
+                "product_name": "신형 6세대 창문형 에어컨",
+                "description": "호환성이 높고 AI 모드가 있는 에어컨",
+                "type": "가전 제품"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "AI 에너지 세이빙",
+            "properties": {
+                "category": "에너지 절약 기술",
+                "name": "AI 에너지 세이빙",
+                "provider": "파세코"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "파세코",
+            "relationship": "OPERATES",
+            "end_node": "파세코 안산 공장",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "PRODUCES",
+            "end_node": "창문형 에어컨",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "LAUNCHES",
+            "end_node": "신형 6세대 창문형 에어컨",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "AI 에너지 세이빙",
+            "properties": {}
+        },
+        {
+            "start_node": "김상우",
+            "relationship": "WORKS_FOR",
+            "end_node": "파세코",
+            "properties": {
+                "role": "리테일사업부 상무"
+            }
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "엘리스그룹",
+            "properties": {
+                "name": "엘리스그룹",
+                "industry": "AI 플랫폼"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "파인디",
+            "properties": {
+                "name": "파인디",
+                "industry": "IT 채용 플랫폼"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김재원",
+            "properties": {
+                "name": "김재원",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "야마다 유이치로",
+            "properties": {
+                "name": "야마다 유이치로",
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COLLABORATION",
+            "name": "한일 B2B 비즈니스 협약",
+            "properties": {
+                "date": null,
+                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "startYear": 2023
+            }
+        },
+        {
+            "start_node": "김재원",
+            "relationship": "LEADS",
+            "end_node": "엘리스그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "야마다 유이치로",
+            "relationship": "LEADS",
+            "end_node": "파인디",
+            "properties": {}
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "ENTERED_COLLABORATION_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "date": "2023-09-14",
+                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
+            }
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "기술보증기금 지식재산공제센터",
+            "properties": {
+                "org_type": "String",
+                "industry": "지식재산",
+                "location": "서울",
+                "organization_id": "기술보증기금",
+                "name": "기술보증기금 지식재산공제센터",
+                "org_id": "기술보증기금",
+                "org_name": "기술보증기금",
+                "type": "공제",
+                "website": "",
+                "orgName": "기술보증기금 지식재산공제센터",
+                "orgType": "기술보증",
+                "region": "서울",
+                "sector": "금융"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "인천지식재산센터",
+            "properties": {
+                "org_type": "String",
+                "industry": "지식재산",
+                "location": "인천",
+                "organization_id": "인천지식센터",
+                "name": "인천지식재산센터",
+                "org_id": "인천지식센터",
+                "org_name": "인천지식재산센터",
+                "type": "센터",
+                "website": "",
+                "orgName": "인천지식재산센터",
+                "orgType": "지식재산",
+                "region": "인천",
+                "sector": "금융"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {
+                "agreement_id": "기보-인천지식센터-협약",
+                "date": "2023-09-14",
+                "location": "서울",
+                "purpose": "지식재산공제사업 활성화",
+                "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+                "title": "MOU",
+                "subject": "공제사업 활성화 및 인천지역 중소기업 지원",
+                "agreement_date": "2023-09-14",
+                "description": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "인천지식재산센터",
+            "properties": {
+                "date": "2023-09-14"
+            }
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {}
+        }
+    ]
+}

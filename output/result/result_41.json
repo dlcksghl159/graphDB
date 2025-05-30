@@ -1,0 +1,121 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "한화세미텍",
+            "properties": {
+                "industry": "반도체 장비",
+                "name": "한화세미텍"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한미반도체",
+            "properties": {
+                "industry": "반도체 장비",
+                "name": "한미반도체"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "SK하이닉스",
+            "properties": {
+                "industry": "반도체",
+                "name": "SK하이닉스"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "김동선",
+            "properties": {
+                "name": "김동선",
+                "role": "부사장"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "곽동신",
+            "properties": {
+                "name": "곽동신",
+                "role": "회장"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "TC 본더",
+            "properties": {
+                "product_name": "TC 본더",
+                "category": "반도체 장비"
+            }
+        },
+        {
+            "label": "MarketForecast",
+            "name": "HBM 시장 전망",
+            "properties": {
+                "source": "JP모건",
+                "forecastRevenue": 1500000000,
+                "period": "2027년"
+            }
+        },
+        {
+            "label": "Litigation",
+            "name": "특허 침해 소송",
+            "properties": {
+                "case_type": "특허 침해",
+                "year": 2021
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "한화세미텍",
+            "relationship": "COMPETES_WITH",
+            "end_node": "한미반도체",
+            "properties": {}
+        },
+        {
+            "start_node": "한화세미텍",
+            "relationship": "SUPPLIES",
+            "end_node": "SK하이닉스",
+            "properties": {
+                "product": "TC 본더",
+                "startQuarter": "2023Q1",
+                "exclusivity": "첫 계약"
+            }
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "SUPPLIES",
+            "end_node": "SK하이닉스",
+            "properties": {
+                "product": "TC 본더",
+                "startQuarter": "2017Q1",
+                "exclusivity": "독점"
+            }
+        },
+        {
+            "start_node": "김동선",
+            "relationship": "LEADS",
+            "end_node": "한화세미텍",
+            "properties": {}
+        },
+        {
+            "start_node": "곽동신",
+            "relationship": "LEADS",
+            "end_node": "한미반도체",
+            "properties": {}
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "PLAINTIFF_IN",
+            "end_node": "특허 침해 소송",
+            "properties": {}
+        },
+        {
+            "start_node": "한화세미텍",
+            "relationship": "DEFENDANT_IN",
+            "end_node": "특허 침해 소송",
+            "properties": {}
+        }
+    ]
+}

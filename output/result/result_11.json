@@ -1,0 +1,106 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "현대이지웰",
+            "properties": {
+                "name": "현대이지웰",
+                "industry": "토탈복지솔루션"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대백화점그룹",
+            "properties": {
+                "name": "현대백화점그룹",
+                "industry": "유통업"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "2021 거래",
+            "properties": {
+                "year": 2021,
+                "amount": 549700000000,
+                "growthRate": 0.656
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "2020 거래",
+            "properties": {
+                "year": 2020,
+                "amount": 910400000000,
+                "growthRate": 0
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업부",
+            "properties": {
+                "name": "중소벤처기업부"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "program_name": "소상공인 온라인쇼핑몰 판매지원사업",
+                "year": 2023
+            }
+        },
+        {
+            "label": "Region",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도"
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "현대이지웰 복지몰",
+            "properties": {
+                "name": "현대이지웰 복지몰",
+                "ranking": "1위"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "현대이지웰",
+            "relationship": "SUBSIDIARY_OF",
+            "end_node": "현대백화점그룹",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "RECEIVES",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "LOCATED_IN",
+            "end_node": "경기도",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "2020 거래",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "2021 거래",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "RUNS",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "nodes": [
+        {
+            "label": "Report",
+            "name": "Report",
+            "properties": {
+                "title": "string",
+                "releaseDate": "string"
+            }
+        },
+        {
+            "label": "Period",
+            "name": "Period",
+            "properties": {
+                "year": "int",
+                "quarter": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "productName": "string"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Country",
+            "properties": {
+                "countryName": "string"
+            }
+        },
+        {
+            "label": "ExportData",
+            "name": "ExportData",
+            "properties": {
+                "exportAmount": "float",
+                "currency": "string",
+                "growthRate": "float",
+                "companyCount": "int"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "Organization",
+            "properties": {
+                "orgName": "string",
+                "orgType": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Person",
+            "properties": {
+                "personName": "string",
+                "role": "string"
+            }
+        },
+        {
+            "label": "Policy",
+            "name": "Policy",
+            "properties": {
+                "policyName": "string",
+                "effectiveDate": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "PUBLISHES",
+            "end_node": "Report",
+            "properties": {}
+        },
+        {
+            "start_node": "Report",
+            "relationship": "REPORTS",
+            "end_node": "ExportData",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "DECLARED",
+            "end_node": "Report",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportData",
+            "relationship": "FOR_PRODUCT",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportData",
+            "relationship": "TO_COUNTRY",
+            "end_node": "Country",
+            "properties": {}
+        },
+        {
+            "start_node": "ExportData",
+            "relationship": "IN_PERIOD",
+            "end_node": "Period",
+            "properties": {}
+        },
+        {
+            "start_node": "Policy",
+            "relationship": "AFFECTS",
+            "end_node": "ExportData",
+            "properties": {}
+        }
+    ]
+}

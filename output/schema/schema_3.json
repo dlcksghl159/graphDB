@@ -1,0 +1,100 @@
+{
+    "nodes": [
+        {
+            "label": "GovernmentAgency",
+            "name": "string",
+            "properties": {
+                "region": "string"
+            }
+        },
+        {
+            "label": "EducationProgram",
+            "name": "string",
+            "properties": {
+                "start_year": "int",
+                "target_company_count": "int"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "string",
+            "properties": {
+                "size_category": "string",
+                "region": "string"
+            }
+        },
+        {
+            "label": "EducationType",
+            "name": "string",
+            "properties": {}
+        },
+        {
+            "label": "Contact",
+            "name": "string",
+            "properties": {
+                "phone": "string",
+                "email": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "string",
+            "properties": {
+                "position": "string"
+            }
+        },
+        {
+            "label": "AccidentStatistic",
+            "name": "string",
+            "properties": {
+                "year": "int",
+                "death_count": "int",
+                "small_business_percentage": "int"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "GovernmentAgency",
+            "relationship": "RUNS",
+            "end_node": "EducationProgram",
+            "properties": {}
+        },
+        {
+            "start_node": "EducationProgram",
+            "relationship": "TARGETS",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "EducationProgram",
+            "relationship": "INCLUDES",
+            "end_node": "EducationType",
+            "properties": {}
+        },
+        {
+            "start_node": "EducationProgram",
+            "relationship": "HAS_CONTACT",
+            "end_node": "Contact",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "WORKS_FOR",
+            "end_node": "GovernmentAgency",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "LEADS",
+            "end_node": "EducationProgram",
+            "properties": {}
+        },
+        {
+            "start_node": "AccidentStatistic",
+            "relationship": "APPLIES_TO_REGION",
+            "end_node": "GovernmentAgency",
+            "properties": {}
+        }
+    ]
+}

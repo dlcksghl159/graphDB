@@ -1,0 +1,90 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "기관",
+            "properties": {
+                "name": "string",
+                "org_type": "string"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협약",
+            "properties": {
+                "title": "string",
+                "date": "string"
+            }
+        },
+        {
+            "label": "Program",
+            "name": "지식재산공제사업",
+            "properties": {
+                "name": "string",
+                "introduced_year": "int",
+                "purpose": "string"
+            }
+        },
+        {
+            "label": "Service",
+            "name": "서비스",
+            "properties": {
+                "name": "string",
+                "service_type": "string"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "지역",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "기업",
+            "properties": {
+                "company_type": "string",
+                "size": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED",
+            "end_node": "Agreement",
+            "properties": {}
+        },
+        {
+            "start_node": "Agreement",
+            "relationship": "FOR_PROGRAM",
+            "end_node": "Program",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "PROVIDES",
+            "end_node": "Service",
+            "properties": {}
+        },
+        {
+            "start_node": "Service",
+            "relationship": "TARGETS_REGION",
+            "end_node": "Region",
+            "properties": {}
+        },
+        {
+            "start_node": "Program",
+            "relationship": "SUPPORTS",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "LOCATED_IN",
+            "end_node": "Region",
+            "properties": {}
+        }
+    ]
+}

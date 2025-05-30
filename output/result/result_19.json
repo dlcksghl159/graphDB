@@ -1,0 +1,180 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "ADRO",
+            "properties": {
+                "industry": "Automotive",
+                "name": "ADRO"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Body Kit",
+            "properties": {
+                "name": "Body Kit",
+                "product_name": "Body Kit",
+                "category": "Automotive Accessory"
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "Tesla Model Y",
+            "properties": {
+                "name": "Model Y",
+                "brand": "Tesla",
+                "type": "Electric"
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "BMW M4",
+            "properties": {
+                "name": "M4",
+                "brand": "BMW",
+                "type": "Internal Combustion"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Computational Fluid Dynamics",
+            "properties": {
+                "name": "Computational Fluid Dynamics",
+                "category": "Engineering",
+                "provider": "ADRO"
+            }
+        },
+        {
+            "label": "SalesData",
+            "name": "SalesData_2022",
+            "properties": {
+                "year": 2022,
+                "revenue": 110000000,
+                "growth_rate": 93.0,
+                "overseas_ratio": 86.0
+            }
+        },
+        {
+            "label": "MarketRegion",
+            "name": "United States",
+            "properties": {
+                "name": "United States",
+                "region_type": "Country"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Germany",
+            "properties": {
+                "name": "Germany",
+                "country_name": "Germany"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "Japan",
+            "properties": {
+                "name": "Japan",
+                "country_name": "Japan"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Hyundai",
+            "properties": {
+                "industry": "Automotive",
+                "name": "Hyundai"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Kia",
+            "properties": {
+                "industry": "Automotive",
+                "name": "Kia"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "Yoon Seung-hyun",
+            "properties": {
+                "name": "Yoon Seung-hyun",
+                "role": "CEO"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "ADRO",
+            "relationship": "PRODUCES",
+            "end_node": "Body Kit",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "TARGETS",
+            "end_node": "Tesla Model Y",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "TARGETS",
+            "end_node": "BMW M4",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Computational Fluid Dynamics",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "HAS_SALES_DATA",
+            "end_node": "SalesData_2022",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "United States",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "Hyundai",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "Kia",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "BMW",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Germany",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "EXPORTS_TO",
+            "end_node": "Japan",
+            "properties": {}
+        },
+        {
+            "start_node": "Yoon Seung-hyun",
+            "relationship": "LEADS",
+            "end_node": "ADRO",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "락앤락",
+            "properties": {
+                "industry": "글로벌 생활용품",
+                "name": "락앤락"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "풀히트 푸드워머",
+            "properties": {
+                "product_name": "풀히트 푸드워머",
+                "description": "바닥 전체에 열선이 내장되어 있어 10초 내 예열 돼 언제 어디서나 따뜻한 음식을 즐길 수 있는 것이 특징"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "S사이즈 푸드워머",
+            "properties": {
+                "product_name": "S사이즈 푸드워머",
+                "description": "600g으로 가벼워 휴대가 간편함"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "M사이즈 푸드워머",
+            "properties": {
+                "product_name": "M사이즈 푸드워머",
+                "description": "가로 길이 42㎝로 2인 이상 식사 시 활용도가 높음"
+            }
+        },
+        {
+            "label": "Promotion",
+            "name": "프로모션",
+            "properties": {
+                "description": "제품 출시 기념",
+                "start_date": "2023-09-14",
+                "end_date": "2023-09-21"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "락앤락",
+            "relationship": "LAUNCHES",
+            "end_node": "풀히트 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "풀히트 푸드워머",
+            "relationship": "HAS_VARIANT",
+            "end_node": "S사이즈 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "풀히트 푸드워머",
+            "relationship": "HAS_VARIANT",
+            "end_node": "M사이즈 푸드워머",
+            "properties": {}
+        },
+        {
+            "start_node": "락앤락",
+            "relationship": "OFFERS",
+            "end_node": "프로모션",
+            "properties": {}
+        }
+    ]
+}

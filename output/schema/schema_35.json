@@ -1,0 +1,113 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "String",
+            "properties": {
+                "type": "string"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "String",
+            "properties": {
+                "start_date": "string",
+                "end_date": "string"
+            }
+        },
+        {
+            "label": "ParticipantCompany",
+            "name": "String",
+            "properties": {
+                "category": "string",
+                "business_years": "int",
+                "business_type": "string"
+            }
+        },
+        {
+            "label": "ProductType",
+            "name": "String",
+            "properties": {
+                "description": "string"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "String",
+            "properties": {
+                "category": "string"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "String",
+            "properties": {
+                "position": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Organization",
+            "relationship": "CONDUCTS",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "Organization",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "Organization",
+            "properties": {
+                "date": "string"
+            }
+        },
+        {
+            "start_node": "Project",
+            "relationship": "TARGETS",
+            "end_node": "ParticipantCompany",
+            "properties": {}
+        },
+        {
+            "start_node": "ParticipantCompany",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "Project",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "DEVELOPS",
+            "end_node": "ProductType",
+            "properties": {}
+        },
+        {
+            "start_node": "Organization",
+            "relationship": "SUPPLIES",
+            "end_node": "ProductType",
+            "properties": {}
+        },
+        {
+            "start_node": "Brand",
+            "relationship": "BRANDS",
+            "end_node": "ProductType",
+            "properties": {}
+        },
+        {
+            "start_node": "Project",
+            "relationship": "LED_BY",
+            "end_node": "Person",
+            "properties": {}
+        },
+        {
+            "start_node": "Person",
+            "relationship": "AFFILIATED_WITH",
+            "end_node": "Organization",
+            "properties": {}
+        }
+    ]
+}

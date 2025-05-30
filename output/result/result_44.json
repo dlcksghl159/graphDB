@@ -1,0 +1,111 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "네이버",
+            "properties": {
+                "industry": "",
+                "name": "네이버"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "대상",
+            "properties": {
+                "industry": "",
+                "name": "대상"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "현대모비스",
+            "properties": {
+                "industry": "",
+                "name": "현대모비스"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "동반성장위원회",
+            "properties": {
+                "org_name": "동반성장위원회",
+                "region": "",
+                "type": ""
+            }
+        },
+        {
+            "label": "Government",
+            "name": "경기도",
+            "properties": {
+                "region": ""
+            }
+        },
+        {
+            "label": "Event",
+            "name": "2025 경기도 동반성장 페어",
+            "properties": {
+                "name": "2025 경기도 동반성장 페어",
+                "type": "동반성장 페어",
+                "date": "",
+                "location": "수원메쎄 1홀"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "경기도 동반성장 페어",
+            "properties": {
+                "name": "경기도 동반성장 페어",
+                "type": "동반성장 페어",
+                "date": "",
+                "location": "경기도"
+            }
+        },
+        {
+            "label": "Consultation",
+            "name": "상담",
+            "properties": {
+                "consultation_id": "2025_경기도_동반성장_페어_상담",
+                "count": 640,
+                "amount": 706000000000
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "경기도",
+            "relationship": "OFFERS",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "PLANS_TO_SECURE_SPACE_AT",
+            "end_node": "수원메쎄 1홀",
+            "properties": {}
+        },
+        {
+            "start_node": "네이버",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "대상",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "현대모비스",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도 동반성장 페어",
+            "relationship": "CONDUCTS",
+            "end_node": "상담",
+            "properties": {}
+        }
+    ]
+}

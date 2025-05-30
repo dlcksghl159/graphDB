@@ -1,0 +1,105 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "category": "string"
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "WelfareMall",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "Transaction",
+            "properties": {
+                "year": "int",
+                "amount": "int",
+                "growthRate": "float"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "SupportProgram",
+            "properties": {
+                "name": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "GovernmentAgency",
+            "name": "GovernmentAgency",
+            "properties": {
+                "name": "string"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "Region",
+            "properties": {
+                "name": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OPERATES",
+            "end_node": "WelfareMall",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "Company",
+            "properties": {
+                "startYear": "int"
+            }
+        },
+        {
+            "start_node": "WelfareMall",
+            "relationship": "RECORDED_TRANSACTION",
+            "end_node": "Transaction",
+            "properties": {}
+        },
+        {
+            "start_node": "Transaction",
+            "relationship": "FOR_COMPANY",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "LOCATED_IN",
+            "end_node": "Region",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "SupportProgram",
+            "properties": {}
+        },
+        {
+            "start_node": "SupportProgram",
+            "relationship": "SUPPORTED_BY",
+            "end_node": "GovernmentAgency",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "Company",
+            "properties": {
+                "name": "string",
+                "date": "string"
+            }
+        }
+    ]
+}

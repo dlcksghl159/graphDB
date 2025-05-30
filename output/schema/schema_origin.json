@@ -1,0 +1,60 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "기업",
+            "properties": {
+                "company_name": "string",
+                "stock_code": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Industry",
+            "name": "산업",
+            "properties": {
+                "industry_name": "string",
+                "description": "string"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "제품",
+            "properties": {
+                "product_name": "string",
+                "description": "string",
+                "price": "float"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "BELONGS_TO_INDUSTRY",
+            "end_node": "Industry",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SUPPLIES_TO",
+            "end_node": "Company",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "PRODUCES",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ACQUIRED",
+            "end_node": "Company",
+            "properties": {
+                "acquired_shares_percent": "int",
+                "acquisition_amount": "int",
+                "acquisition_date": "string"
+            }
+        }
+    ]
+}

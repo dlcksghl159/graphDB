@@ -1,0 +1,106 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Company",
+            "properties": {
+                "name": "string",
+                "business": "string",
+                "overseasRevenueRatio": "int"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Product",
+            "properties": {
+                "name": "string",
+                "launchYear": "int",
+                "type": "string"
+            }
+        },
+        {
+            "label": "FinancialResult",
+            "name": "FinancialResult",
+            "properties": {
+                "year": "int",
+                "quarter": "string",
+                "revenue": "int",
+                "operatingProfit": "int",
+                "netProfit": "int"
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "SalesTarget",
+            "properties": {
+                "year": "int",
+                "targetRevenue": "int"
+            }
+        },
+        {
+            "label": "Policy",
+            "name": "Policy",
+            "properties": {
+                "name": "string",
+                "issuer": "string",
+                "date": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "Strategy",
+            "name": "Strategy",
+            "properties": {
+                "description": "string",
+                "type": "string"
+            }
+        },
+        {
+            "label": "MarketForecast",
+            "name": "MarketForecast",
+            "properties": {
+                "source": "string",
+                "forecastRevenue": "int",
+                "period": "string"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Company",
+            "relationship": "OWNS_PRODUCT",
+            "end_node": "Product",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "REPORTED_RESULT",
+            "end_node": "FinancialResult",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "SET_SALES_TARGET",
+            "end_node": "SalesTarget",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "HAS_FORECAST",
+            "end_node": "MarketForecast",
+            "properties": {}
+        },
+        {
+            "start_node": "Company",
+            "relationship": "ADOPTED_STRATEGY",
+            "end_node": "Strategy",
+            "properties": {}
+        },
+        {
+            "start_node": "Policy",
+            "relationship": "IMPACTS",
+            "end_node": "Company",
+            "properties": {}
+        }
+    ]
+}

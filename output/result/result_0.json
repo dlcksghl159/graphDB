@@ -1,0 +1,143 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "에이텀",
+            "properties": {
+                "industry": "변압기 제조",
+                "name": "에이텀"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "DST",
+            "properties": {
+                "industry": "조선 및 방산업체 부품",
+                "name": "DST"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "동성중공업",
+            "properties": {
+                "industry": "조선 및 방산업체 부품",
+                "name": "동성중공업"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TA트랜스",
+            "properties": {
+                "category": "휴대용 충전기",
+                "name": "TA트랜스"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TV트랜스",
+            "properties": {
+                "category": "TV",
+                "name": "TV트랜스"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "전기차용 트랜스",
+            "properties": {
+                "category": "전기차",
+                "name": "전기차용 트랜스"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "삼성전자",
+            "properties": {
+                "industry": "전자",
+                "name": "삼성전자"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대중공업",
+            "properties": {
+                "industry": "조선",
+                "name": "HD현대중공업"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "STX엔진",
+            "properties": {
+                "industry": "엔진 제조",
+                "name": "STX엔진"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대마린솔루션",
+            "properties": {
+                "industry": "조선",
+                "name": "HD현대마린솔루션"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "에이텀",
+            "relationship": "ACQUIRED",
+            "end_node": "DST",
+            "properties": {
+                "acquisition_amount": 14500000000,
+                "stakePercent": "50%",
+                "date": "2023-07-02"
+            }
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "MANUFACTURES",
+            "end_node": "TA트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "MANUFACTURES",
+            "end_node": "TV트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "DEVELOPS",
+            "end_node": "전기차용 트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "SUPPLIES",
+            "end_node": "삼성전자",
+            "properties": {
+                "product": "45W 트랜스",
+                "exclusivity": "독점"
+            }
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대중공업",
+            "properties": {
+                "product": "실린더"
+            }
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "STX엔진",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대마린솔루션",
+            "properties": {}
+        }
+    ]
+}

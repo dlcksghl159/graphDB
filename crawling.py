@@ -54,20 +54,18 @@ MOBILE_HEADERS = {
 SECTION_URL = "https://news.naver.com/main/list.naver"
 PARAMS_BASE_DEFAULT = {
     "mode": "LS2D",
-    "mid": "sec",
-    "sid1": "101",  # 경제
-    "sid2": "771",  # 기업·경영
-}
-HEADERS = {
-    "User-Agent": "Mozilla/5.0",
-    "Referer": "https://www.naver.com",
+    "mid": "shm",  # 연예 섹션은 mid=shm (Showbiz & entertainment)
+    "sid1": "106",  # 연예(entertain)
+    "sid2": "231",  # 드라마
 }
 
-def reset_paths(output_root: str):
-    if not output_root:
-        output_root = "output"
+# --------------------------------------------------------------
+# 경로 재설정 (외부에서 OUTPUT_ROOT 변경 시)
+# --------------------------------------------------------------
+
+def _reset_paths(output_root: str):
     global OUTPUT_ROOT, OUTPUT_DIR, JSON_PATH, IDX_PATH, VEC_PATH, RESULT_PATH
-    OUTPUT_ROOT = output_root
+    OUTPUT_ROOT = output_root or "output"
     OUTPUT_DIR  = os.path.join(OUTPUT_ROOT, "news")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -76,39 +74,30 @@ def reset_paths(output_root: str):
     VEC_PATH    = f"{OUTPUT_DIR}/news_vectors_{TOP_N}.npy"
     RESULT_PATH = f"{OUTPUT_DIR}/keyword_results.json"
 
-def crawl_top_n(n: int = TOP_N) -> List[dict]:
-    """오늘 날짜 기준 기업·경영 섹션에서 기사 n개 수집"""
-    print(f"📰  네이버 기사 {n}개 크롤링 중…")
-    links, page = [], 1
-    today = datetime.now().strftime("%Y%m%d")
+# --------------------------------------------------------------
+# 내부 유틸 함수
+# --------------------------------------------------------------
 
-    # ① 링크 수집
-    while len(links) < n:
-        params = PARAMS_BASE | {"page": str(page), "date": today}
-        res = requests.get(SECTION_URL, headers=HEADERS, params=params, timeout=10)
-        res.raise_for_status()
-        soup = BeautifulSoup(res.text, "html.parser")
+def _fetch_list(params_base: dict, page: int = 1) -> str:
+    """드라마 섹션 기사 리스트 HTML Raw 반환 (모바일 ver.)"""
+    retry = 0
+    while retry < 3:
+        params = params_base | {"page": str(page)}  # 오늘 날짜 목록
+        try:
+            resp = requests.get(SECTION_URL, params=params, headers=MOBILE_HEADERS, timeout=10)
+            resp.raise_for_status()
+            return resp.text
+        except Exception:
+            retry += 1
+            time.sleep(1.5)
+    raise RuntimeError("리스트 페이지 요청 실패")
 
-        new_links = [
-            ("https://news.naver.com" + a["href"] if a["href"].startswith("/") else a["href"])
-            for a in soup.select("div.list_body.newsflash_body ul li dl dt a")
-            if (txt := a.get_text(strip=True)) and txt != "동영상기사"
-        ]
-        if not new_links:
-            break  # 더 이상 기사 없음
-        for l in new_links:
-            if l not in links:
-                links.append(l)
-                if len(links) >= n:
-                    break
-        page += 1
-        time.sleep(0.1)
 
-    # ② 본문 파싱
-    def parse(url: str) -> dict:
-        r = requests.get(url, headers=HEADERS, timeout=10)
-        r.raise_for_status()
-        s = BeautifulSoup(r.text, "html.parser")
+def _parse_article(url: str) -> dict:
+    """단일 기사 본문 파싱"""
+    r = requests.get(url, headers=MOBILE_HEADERS, timeout=10)
+    r.raise_for_status()
+    s = BeautifulSoup(r.text, "html.parser")
 
     title_tag = (
         s.select_one("h2.media_end_head_headline")

@@ -5,41 +5,17 @@ from tqdm import tqdm
 from util import merge_json, parse_json
 from dotenv import load_dotenv
 from deduplication import deduplicate
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-def main(purpose = "기업판매"):
-    # 공통 출력 루트 (main.py에서 미리: os.environ["OUTPUT_ROOT"] = "output_..." 로 설정)
-    OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")   # 기본값: "output"
-
-    result_dir  = os.path.join(OUTPUT_ROOT, "result")
-    chunks_dir  = os.path.join(OUTPUT_ROOT, "chunked_document")
-    schema_dir  = os.path.join(OUTPUT_ROOT, "schema")
-
-    os.makedirs(result_dir, exist_ok=True)
-
-    # 1. JSON 파일 로딩
-    with open(f"{schema_dir}/schema.json", "r", encoding="utf-8") as f:
-        schema_json = json.load(f)
-
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-
+def process_file(idx, filename, chunks_dir, result_dir, schema_json, api_key, system_msg, purpose):
     client = openai.OpenAI(api_key=api_key)
+    filename_path = os.path.join(chunks_dir, filename)
+    if not os.path.exists(filename_path):
+        print(f"파일 없음: {filename_path} → 건너뜀")
+        return None
 
-    system_msg = (
-        "당신은 RAG 시스템에 사용될 지식 그래프 구축을 위해 텍스트에서 엔티티와 관계를 추출합니다. "
-        "반드시 유효한 JSON 형식으로만 응답하세요."
-    )
-
-    i = 0
-    while True:
-        filename = f"{chunks_dir}/chunked_output_{i}.txt"
-        
-        if not os.path.exists(filename):
-            print(f"파일 없음: {filename} → 종료합니다.")
-            break
-
-        with open(filename, "r", encoding="utf-8") as f:
-            content = f.read()
+    with open(filename_path, "r", encoding="utf-8") as f:
+        content = f.read()
 
     prompt = f"""
     ### 작업 목표
@@ -153,9 +129,14 @@ def main(purpose="기업판매"):
         with open(result_path, "w", encoding="utf-8") as f:
             json.dump(merged_result, f, ensure_ascii=False, indent=4)
         deduplicate(result_path)
+        print(f"최종 결과를 {result_path}에 저장했습니다.")
+        # 병합된 결과를 result.json에 저장
+    else:
+        print("병합된 결과가 없습니다. result.json 파일을 생성하지 않습니다.")
+        # 병합된 결과가 없으면 result.json 파일을 생성하지 않음
+        return
 
-        print(f"[{i}] node 추출 완료")
-            
-        i += 1
-if __name__ == "__main__": 
-    main(purpose = "기업판매")
+    print("모든 작업 완료 및 deduplication 수행!")
+
+if __name__ == "__main__":
+    main(purpose="기업판매")

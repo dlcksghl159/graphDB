@@ -41,9 +41,9 @@ def pipeline(purpose: str, output_root: str, skip_steps: set[str]):
 
     # 단계 정의 (이름, 모듈 import 명)
     steps: list[tuple[str, str, dict]] = [
-        ("schema", "schema_multi", {"purpose": purpose}),
-        ("nodes", "extract_node_multi", {"purpose": purpose}),
-        ("relations", "extract_relation_multi", {"purpose": purpose}),
+        ("schema", "schema_lang", {"purpose": purpose}),
+        ("nodes", "extract_node_lang", {"purpose": purpose}),
+        ("relations", "extract_relation_lang", {"purpose": purpose}),
         ("cypher", "cypher", {}),  # 경로는 OUTPUT_ROOT 하드코딩 내부 모듈 사용
     ]
 

@@ -1,90 +1,80 @@
 {
     "nodes": [
         {
-            "label": "SMEExport",
-            "name": "중소기업 화장품 수출",
+            "label": "ProductCategory",
+            "name": "Product Category",
             "properties": {
-                "export_id": "export_001",
-                "amount_usd": 1840000000,
-                "change_percent": 19.6,
-                "company_count": 63135
+                "name": "화장품",
+                "exportAmount": 1840000000.0,
+                "changeRate": 19.6,
+                "exportCompanyCount": null
             }
         },
         {
-            "label": "Country",
-            "name": "미국",
+            "label": "ProductCategory",
+            "name": "Product Category",
             "properties": {
-                "country_code": "US",
-                "name": "미국",
-                "export_amount_usd": "unknown",
-                "growth_rate_percent": "unknown",
-                "country_id": "001",
-                "region": "North America",
-                "countryName": "미국",
-                "export_usd": 1840000000,
-                "change_rate": 19.6
+                "name": "자동차",
+                "exportAmount": 1740000000.0,
+                "changeRate": 67.4,
+                "exportCompanyCount": null
             }
         },
         {
-            "label": "Country",
-            "name": "중국",
+            "label": "ExportSummary",
+            "name": "Export Summary",
             "properties": {
-                "country_code": "CN",
-                "name": "중국",
-                "export_amount_usd": "unknown",
-                "growth_rate_percent": "unknown",
-                "country_id": "002",
-                "region": "Asia",
-                "countryName": "중국",
-                "export_usd": "unknown",
-                "change_rate": "unknown"
+                "totalExportAmount": 27000000000.0,
+                "changeRate": 0.7,
+                "exportingCompanyCount": 63135
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "중소벤처기업부",
             "properties": {
-                "region": "대한민국",
-                "agency_id": "gov_001",
-                "name": "중소벤처기업부"
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "중소벤처기업부",
+                "industry": null,
+                "sector": null
             }
         },
         {
-            "label": "TariffAction",
-            "name": "미국 관세 조치",
+            "label": "Country",
+            "name": "Country",
             "properties": {
-                "action_id": "tariff_001",
-                "start_date": "2023-03-12",
-                "description": "미국 철강·알루미늄 및 파생상품 관세부과"
+                "name": "미국",
+                "exportAmount": null,
+                "changeRate": null,
+                "rank": null,
+                "region": null,
+                "country_code": null,
+                "countryName": "United States"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "중소기업 화장품 수출",
-            "relationship": "EXPORTS_TO",
-            "end_node": "미국",
+            "start_node": "Product Category",
+            "relationship": "EXPORTED_TO",
+            "end_node": "Country",
             "properties": {
-                "amount_usd": 1840000000,
-                "change_percent": 19.6
+                "exportAmount": 1840000000.0,
+                "changeRate": 19.6
             }
         },
         {
-            "start_node": "중소벤처기업부",
-            "relationship": "PUBLISHES",
-            "end_node": "중소기업 화장품 수출",
+            "start_node": "Export Summary",
+            "relationship": "FOR_PERIOD",
+            "end_node": "Quarter",
             "properties": {}
         },
         {
-            "start_node": "미국 관세 조치",
-            "relationship": "IMPOSED_BY",
-            "end_node": "미국",
-            "properties": {}
-        },
-        {
-            "start_node": "중소기업 화장품 수출",
-            "relationship": "EXPORTS_TO",
-            "end_node": "중국",
+            "start_node": "Organization",
+            "relationship": "PUBLISHED",
+            "end_node": "Export Summary",
             "properties": {}
         }
     ]

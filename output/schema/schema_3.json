@@ -1,100 +1,139 @@
 {
-    "nodes": [
-        {
-            "label": "GovernmentAgency",
-            "name": "string",
-            "properties": {
-                "region": "string"
-            }
-        },
-        {
-            "label": "EducationProgram",
-            "name": "string",
-            "properties": {
-                "start_year": "int",
-                "target_company_count": "int"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "string",
-            "properties": {
-                "size_category": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "EducationType",
-            "name": "string",
-            "properties": {}
-        },
-        {
-            "label": "Contact",
-            "name": "string",
-            "properties": {
-                "phone": "string",
-                "email": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "string",
-            "properties": {
-                "position": "string"
-            }
-        },
-        {
-            "label": "AccidentStatistic",
-            "name": "string",
-            "properties": {
-                "year": "int",
-                "death_count": "int",
-                "small_business_percentage": "int"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "GovernmentAgency",
-            "relationship": "RUNS",
-            "end_node": "EducationProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "EducationProgram",
-            "relationship": "TARGETS",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "EducationProgram",
-            "relationship": "INCLUDES",
-            "end_node": "EducationType",
-            "properties": {}
-        },
-        {
-            "start_node": "EducationProgram",
-            "relationship": "HAS_CONTACT",
-            "end_node": "Contact",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "WORKS_FOR",
-            "end_node": "GovernmentAgency",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "LEADS",
-            "end_node": "EducationProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "AccidentStatistic",
-            "relationship": "APPLIES_TO_REGION",
-            "end_node": "GovernmentAgency",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "기업",
+      "properties": {
+        "name": "string",
+        "employee_count": "int",
+        "size_category": "string",
+        "location": "string"
+      }
+    },
+    {
+      "label": "TrainingProgram",
+      "name": "교육프로그램",
+      "properties": {
+        "name": "string",
+        "start_year": "int",
+        "description": "string",
+        "target_size": "string"
+      }
+    },
+    {
+      "label": "TrainingType",
+      "name": "교육유형",
+      "properties": {
+        "name": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "정부기관",
+      "properties": {
+        "name": "string",
+        "level": "string"
+      }
+    },
+    {
+      "label": "Association",
+      "name": "협회",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "담당자",
+      "properties": {
+        "name": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "ContactInfo",
+      "name": "연락처",
+      "properties": {
+        "phone": "string",
+        "email": "string"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "지역",
+      "properties": {
+        "name": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "RECEIVES",
+      "end_node": "TrainingProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "INCLUDES",
+      "end_node": "TrainingType",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "PROVIDED_BY",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "PROVIDED_BY",
+      "end_node": "Association",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "Association",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "MANAGES",
+      "end_node": "TrainingProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "CONTACT",
+      "end_node": "ContactInfo",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "TARGETS_REGION",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "TARGETS_SIZE",
+      "end_node": "Company",
+      "properties": {}
+    }
+  ]
 }

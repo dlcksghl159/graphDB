@@ -1,112 +1,92 @@
 {
-    "nodes": [
-        {
-            "label": "GovernmentAgency",
-            "name": "정부기관",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Official",
-            "name": "관계자",
-            "properties": {
-                "name": "string",
-                "position": "string"
-            }
-        },
-        {
-            "label": "Report",
-            "name": "수출보고서",
-            "properties": {
-                "report_id": "string",
-                "year": "int",
-                "quarter": "string",
-                "total_export_amount": "int",
-                "total_growth_rate": "float",
-                "export_companies_count": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "제품",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "수출국",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "TariffPolicy",
-            "name": "관세정책",
-            "properties": {
-                "name": "string",
-                "rate": "float",
-                "effective_date": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "GovernmentAgency",
-            "relationship": "ISSUED",
-            "end_node": "Report",
-            "properties": {}
-        },
-        {
-            "start_node": "Official",
-            "relationship": "WORKS_FOR",
-            "end_node": "GovernmentAgency",
-            "properties": {
-                "position": "string"
-            }
-        },
-        {
-            "start_node": "Official",
-            "relationship": "COMMENTED_ON",
-            "end_node": "Report",
-            "properties": {}
-        },
-        {
-            "start_node": "Report",
-            "relationship": "HAS_PRODUCT_EXPORT",
-            "end_node": "Product",
-            "properties": {
-                "export_amount": "int",
-                "growth_rate": "float",
-                "rank": "int"
-            }
-        },
-        {
-            "start_node": "Report",
-            "relationship": "HAS_COUNTRY_EXPORT",
-            "end_node": "Country",
-            "properties": {
-                "export_amount": "int",
-                "growth_rate": "float",
-                "rank": "int"
-            }
-        },
-        {
-            "start_node": "TariffPolicy",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "Product",
-            "properties": {
-                "impact": "string"
-            }
-        },
-        {
-            "start_node": "TariffPolicy",
-            "relationship": "AFFECTS_COUNTRY_EXPORT",
-            "end_node": "Country",
-            "properties": {
-                "impact": "string"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Quarter",
+      "name": "Quarter",
+      "properties": {
+        "year": "int",
+        "period": "string"
+      }
+    },
+    {
+      "label": "ExportSummary",
+      "name": "Export Summary",
+      "properties": {
+        "totalExportAmount": "float",
+        "changeRate": "float",
+        "exportingCompanyCount": "int"
+      }
+    },
+    {
+      "label": "ProductCategory",
+      "name": "Product Category",
+      "properties": {
+        "name": "string",
+        "exportAmount": "float",
+        "changeRate": "float",
+        "exportCompanyCount": "int"
+      }
+    },
+    {
+      "label": "Country",
+      "name": "Country",
+      "properties": {
+        "name": "string",
+        "exportAmount": "float",
+        "changeRate": "float",
+        "rank": "int"
+      }
+    },
+    {
+      "label": "TariffPolicy",
+      "name": "Tariff Policy",
+      "properties": {
+        "name": "string",
+        "imposingCountry": "string",
+        "rate": "float",
+        "effectiveDate": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ExportSummary",
+      "relationship": "FOR_PERIOD",
+      "end_node": "Quarter",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportSummary",
+      "relationship": "INCLUDES_PRODUCT",
+      "end_node": "ProductCategory",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportSummary",
+      "relationship": "EXPORTS_TO",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "ProductCategory",
+      "relationship": "EXPORTED_TO",
+      "end_node": "Country",
+      "properties": {
+        "exportAmount": "float",
+        "changeRate": "float"
+      }
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "APPLIES_TO",
+      "end_node": "ProductCategory",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "APPLIES_IN",
+      "end_node": "Quarter",
+      "properties": {}
+    }
+  ]
 }

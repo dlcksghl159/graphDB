@@ -1,136 +1,96 @@
 {
     "nodes": [
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "중소벤처기업진흥공단",
             "properties": {
-                "region": "",
-                "agency_id": "",
-                "name": "중소벤처기업진흥공단"
+                "category": "",
+                "type": "공공기관",
+                "location": "서울",
+                "name": "중소벤처기업진흥공단",
+                "industry": "정부",
+                "sector": "공공"
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "부산항만공사",
             "properties": {
-                "region": "",
-                "agency_id": "",
-                "name": "부산항만공사"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "글로벌 물류 지원",
-            "properties": {
-                "name": "글로벌 물류 지원",
-                "year": 2023,
-                "application_deadline": "",
-                "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 프로그램",
-                "program_id": "",
-                "program_name": "글로벌 물류 지원",
-                "participants_count": 0,
-                "introduced_year": 2023,
-                "purpose": "수출 중소벤처기업의 안정적인 수출 기반 마련",
-                "mode": "",
-                "type": ""
-            }
-        },
-        {
-            "label": "Platform",
-            "name": "스마트트레이드허브",
-            "properties": {
-                "platform_id": "",
-                "platform_name": "스마트트레이드허브",
-                "platform_type": "통합물류 플랫폼",
-                "name": "스마트트레이드허브",
-                "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼",
-                "region": "",
-                "domain": ""
+                "category": "",
+                "type": "공공기관",
+                "location": "부산",
+                "name": "부산항만공사",
+                "industry": "물류",
+                "sector": "공공"
             }
         },
         {
             "label": "LogisticsCenter",
             "name": "LA·LB 해외물류센터",
             "properties": {
-                "center_id": "",
-                "center_name": "LA·LB 해외물류센터",
-                "location": "로스앤젤레스·롱비치",
-                "operator": "부산항만공사",
+                "region": "미국 로스앤젤레스·롱비치",
+                "centerType": "해외물류센터",
+                "location": "미국 로스앤젤레스·롱비치",
+                "center_type": "해외",
                 "name": "LA·LB 해외물류센터",
-                "center_type": "해외물류센터",
-                "type": ""
+                "operator": "부산항만공사"
+            }
+        },
+        {
+            "label": "LogisticsPlatform",
+            "name": "스마트트레이드허브",
+            "properties": {
+                "description": "수출 중소벤처기업을 위한 통합물류 지원 플랫폼",
+                "platform_type": "통합물류 플랫폼"
             }
         },
         {
             "label": "Agreement",
-            "name": "업무협약",
+            "name": "글로벌 물류 지원 협약",
             "properties": {
-                "agreement_id": "",
-                "date": "2023-10-14",
-                "location": "",
-                "purpose": "수출 중소벤처기업의 글로벌 물류 지원 협력",
-                "name": "업무협약",
-                "title": "",
-                "subject": "",
                 "agreement_date": "2023-10-14",
-                "description": "중소벤처기업진흥공단과 부산항만공사 간의 협업으로 수출 중소벤처기업의 글로벌 물류 지원 협약 체결"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "United States",
-            "properties": {
-                "country_code": "US",
-                "name": "United States",
-                "country_name": "United States",
-                "export_amount_usd": "0",
-                "growth_rate_percent": "0",
-                "country_id": "",
-                "region": "North America",
-                "countryName": "United States",
-                "export_usd": 0,
-                "change_rate": 0
+                "agreement_type": "업무협약",
+                "date": "2023-10-14",
+                "purpose": "수출 중소벤처기업의 글로벌 물류 지원",
+                "location": "부산",
+                "title": "글로벌 물류 지원 협약",
+                "id": "12345",
+                "type": "MOU"
             }
         }
     ],
     "relations": [
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "SIGNED_MOU_WITH",
+            "relationship": "COLLABORATES_WITH",
             "end_node": "부산항만공사",
-            "properties": {
-                "date": "2023-10-14",
-                "title": "업무협약"
-            }
+            "properties": {}
         },
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "RUNS_PROGRAM",
-            "end_node": "글로벌 물류 지원",
-            "properties": {}
-        },
-        {
-            "start_node": "글로벌 물류 지원",
-            "relationship": "UTILIZES",
-            "end_node": "LA·LB 해외물류센터",
-            "properties": {}
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "agreement_name": "글로벌 물류 지원 협약",
+                "date": "2023-10-14"
+            }
         },
         {
             "start_node": "스마트트레이드허브",
-            "relationship": "INTEGRATES",
+            "relationship": "LINKS",
             "end_node": "LA·LB 해외물류센터",
             "properties": {}
         },
         {
-            "start_node": "LA·LB 해외물류센터",
-            "relationship": "LOCATED_IN",
-            "end_node": "United States",
+            "start_node": "글로벌 물류 지원 협약",
+            "relationship": "INVOLVES",
+            "end_node": "중소벤처기업진흥공단",
             "properties": {}
         },
         {
-            "start_node": "Agreement",
-            "relationship": "COVERS",
-            "end_node": "글로벌 물류 지원",
+            "start_node": "글로벌 물류 지원 협약",
+            "relationship": "INVOLVES",
+            "end_node": "부산항만공사",
             "properties": {}
         }
     ]

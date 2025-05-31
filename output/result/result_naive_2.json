@@ -1,0 +1,80 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "LG이노텍",
+            "properties": {
+                "name": "LG이노텍"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "동반성장위원회",
+            "properties": {
+                "name": "동반성장위원회",
+                "type": "Government Organization"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원",
+                "location": "인천 송도",
+                "title": "협력사 ESG 지원사업 업무협약"
+            }
+        },
+        {
+            "label": "SME",
+            "name": "에이피텍",
+            "properties": {
+                "industry": "전자",
+                "name": "에이피텍",
+                "location": "인천 송도",
+                "partner_since_year": 2025
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "agreement_date": "2025",
+                "location": "인천 송도"
+            }
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "agreement_date": "2025",
+                "location": "인천 송도"
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "에이피텍",
+            "properties": {
+                "esg_compliance_rate": "83%"
+            }
+        },
+        {
+            "start_node": "에이피텍",
+            "relationship": "LOCATED_IN",
+            "end_node": "인천",
+            "properties": {}
+        }
+    ]
+}

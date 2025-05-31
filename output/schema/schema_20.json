@@ -1,127 +1,113 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "title": "string",
-                "date": "string"
-            }
-        },
-        {
-            "label": "LogisticsCenter",
-            "name": "LogisticsCenter",
-            "properties": {
-                "name": "string",
-                "location": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Platform",
-            "name": "Platform",
-            "properties": {
-                "name": "string",
-                "description": "string"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "Program",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Service",
-            "name": "Service",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Region",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "SME",
-            "name": "SME",
-            "properties": {
-                "name": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "Organization",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "HAS_AGREEMENT",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Agreement",
-            "relationship": "INCLUDES",
-            "end_node": "Program",
-            "properties": {}
-        },
-        {
-            "start_node": "Agreement",
-            "relationship": "CREATES",
-            "end_node": "Platform",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "OPERATES",
-            "end_node": "LogisticsCenter",
-            "properties": {}
-        },
-        {
-            "start_node": "Platform",
-            "relationship": "LINKS",
-            "end_node": "LogisticsCenter",
-            "properties": {}
-        },
-        {
-            "start_node": "LogisticsCenter",
-            "relationship": "LOCATED_IN",
-            "end_node": "Region",
-            "properties": {}
-        },
-        {
-            "start_node": "Platform",
-            "relationship": "OFFERS",
-            "end_node": "Service",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PROVIDES",
-            "end_node": "Service",
-            "properties": {}
-        },
-        {
-            "start_node": "Platform",
-            "relationship": "SUPPORTS",
-            "end_node": "SME",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "String",
+      "properties": {
+        "type": "String"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "String",
+      "properties": {
+        "date": "String",
+        "purpose": "String"
+      }
+    },
+    {
+      "label": "LogisticsCenter",
+      "name": "String",
+      "properties": {
+        "location": "String",
+        "center_type": "String"
+      }
+    },
+    {
+      "label": "LogisticsPlatform",
+      "name": "String",
+      "properties": {
+        "platform_type": "String"
+      }
+    },
+    {
+      "label": "ExportProgram",
+      "name": "String",
+      "properties": {
+        "target": "String"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "String",
+      "properties": {
+        "region": "String",
+        "country": "String"
+      }
+    },
+    {
+      "label": "Service",
+      "name": "String",
+      "properties": {
+        "service_type": "String",
+        "rate": "String"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "OPERATES",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "LogisticsCenter",
+      "relationship": "LOCATED_IN",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "INCLUDES_PROGRAM",
+      "end_node": "ExportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "DEVELOPS_PLATFORM",
+      "end_node": "LogisticsPlatform",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportProgram",
+      "relationship": "USES_CENTER",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "LogisticsPlatform",
+      "relationship": "INTEGRATES_WITH",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "LogisticsPlatform",
+      "relationship": "OFFERS_SERVICE",
+      "end_node": "Service",
+      "properties": {}
+    },
+    {
+      "start_node": "Service",
+      "relationship": "APPLIES_TO",
+      "end_node": "Organization",
+      "properties": {}
+    }
+  ]
 }

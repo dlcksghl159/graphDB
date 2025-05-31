@@ -1,141 +1,111 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Survey",
-            "name": "Survey",
-            "properties": {
-                "id": "string",
-                "title": "string",
-                "date": "string",
-                "sample_size": "int",
-                "desired_monthly_income_avg": "int"
-            }
-        },
-        {
-            "label": "AgeGroup",
-            "name": "AgeGroup",
-            "properties": {
-                "group": "string"
-            }
-        },
-        {
-            "label": "Reason",
-            "name": "Reason",
-            "properties": {
-                "description": "string"
-            }
-        },
-        {
-            "label": "JobField",
-            "name": "JobField",
-            "properties": {
-                "field": "string"
-            }
-        },
-        {
-            "label": "JobCategory",
-            "name": "JobCategory",
-            "properties": {
-                "category": "string"
-            }
-        },
-        {
-            "label": "PreparationActivity",
-            "name": "PreparationActivity",
-            "properties": {
-                "activity": "string"
-            }
-        },
-        {
-            "label": "Criteria",
-            "name": "Criteria",
-            "properties": {
-                "description": "string"
-            }
-        },
-        {
-            "label": "Reporter",
-            "name": "Reporter",
-            "properties": {
-                "name": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "CONDUCTS",
-            "end_node": "Survey",
-            "properties": {}
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "PUBLISHED_BY",
-            "end_node": "Reporter",
-            "properties": {}
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "PARTICIPATION_RATE",
-            "end_node": "AgeGroup",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "EXPECTED_START_RATE",
-            "end_node": "AgeGroup",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "CITES_REASON",
-            "end_node": "Reason",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "PREFERS_FIELD",
-            "end_node": "JobField",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "JobField",
-            "relationship": "INCLUDES_CATEGORY",
-            "end_node": "JobCategory",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "PREPARES_WITH",
-            "end_node": "PreparationActivity",
-            "properties": {
-                "percentage": "float"
-            }
-        },
-        {
-            "start_node": "Survey",
-            "relationship": "CHOOSES_CRITERIA",
-            "end_node": "Criteria",
-            "properties": {
-                "percentage": "float"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Survey",
+      "name": "Survey",
+      "properties": {
+        "title": "string",
+        "date": "string",
+        "sampleSize": "int"
+      }
+    },
+    {
+      "label": "DemographicGroup",
+      "name": "AgeGroup",
+      "properties": {
+        "ageRange": "string",
+        "percentage": "float"
+      }
+    },
+    {
+      "label": "Motivation",
+      "name": "Motivation",
+      "properties": {
+        "description": "string",
+        "percentage": "float"
+      }
+    },
+    {
+      "label": "CareerField",
+      "name": "CareerField",
+      "properties": {
+        "name": "string",
+        "percentage": "float"
+      }
+    },
+    {
+      "label": "JobType",
+      "name": "SpecificJob",
+      "properties": {
+        "name": "string",
+        "percentage": "float"
+      }
+    },
+    {
+      "label": "PreparationActivity",
+      "name": "PreparationAction",
+      "properties": {
+        "name": "string",
+        "percentage": "float"
+      }
+    },
+    {
+      "label": "FinancialExpectation",
+      "name": "FinancialGoal",
+      "properties": {
+        "averageMonthlyIncome": "int"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "CONDUCTS",
+      "end_node": "Survey",
+      "properties": {}
+    },
+    {
+      "start_node": "Survey",
+      "relationship": "TARGETS",
+      "end_node": "DemographicGroup",
+      "properties": {}
+    },
+    {
+      "start_node": "DemographicGroup",
+      "relationship": "EXPRESSES_MOTIVATION",
+      "end_node": "Motivation",
+      "properties": {}
+    },
+    {
+      "start_node": "DemographicGroup",
+      "relationship": "INTERESTED_IN",
+      "end_node": "CareerField",
+      "properties": {}
+    },
+    {
+      "start_node": "CareerField",
+      "relationship": "INCLUDES_JOB",
+      "end_node": "JobType",
+      "properties": {}
+    },
+    {
+      "start_node": "DemographicGroup",
+      "relationship": "UNDERTAKES",
+      "end_node": "PreparationActivity",
+      "properties": {}
+    },
+    {
+      "start_node": "DemographicGroup",
+      "relationship": "EXPECTS_INCOME",
+      "end_node": "FinancialExpectation",
+      "properties": {}
+    }
+  ]
 }

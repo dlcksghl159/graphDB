@@ -1,72 +1,63 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "country": "string",
-                "founding_year": "int"
-            }
-        },
-        {
-            "label": "Platform",
-            "name": "Platform",
-            "properties": {
-                "name": "string",
-                "description": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Service",
-            "name": "Service",
-            "properties": {
-                "name": "string",
-                "description": "string",
-                "user_count": "int",
-                "client_count": "int",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Person",
-            "properties": {
-                "name": "string",
-                "role": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Person",
-            "relationship": "WORKS_FOR",
-            "end_node": "Company",
-            "properties": {
-                "role": "string"
-            }
-        },
-        {
-            "start_node": "Company",
-            "relationship": "OFFERS",
-            "end_node": "Platform",
-            "properties": {}
-        },
-        {
-            "start_node": "Platform",
-            "relationship": "OFFERS_SERVICE",
-            "end_node": "Service",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "Company",
-            "properties": {
-                "date": "string",
-                "scope": "string"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "name": "string",
+        "country": "string"
+      }
+    },
+    {
+      "label": "Platform",
+      "name": "Platform",
+      "properties": {
+        "name": "string",
+        "foundedYear": "int",
+        "country": "string"
+      }
+    },
+    {
+      "label": "Service",
+      "name": "Service",
+      "properties": {
+        "name": "string",
+        "userCount": "int",
+        "companyCount": "int",
+        "availableIn": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "Person",
+      "properties": {
+        "name": "string",
+        "role": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED_AGREEMENT_WITH",
+      "end_node": "Platform",
+      "properties": {
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Person",
+      "relationship": "HOLDS_POSITION_AT",
+      "end_node": "Company",
+      "properties": {
+        "role": "string"
+      }
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "OFFERS",
+      "end_node": "Service",
+      "properties": {}
+    }
+  ]
 }

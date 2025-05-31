@@ -1,75 +1,105 @@
 {
     "nodes": [
         {
-            "label": "COMPANY",
+            "label": "Organization",
             "name": "엘리스그룹",
             "properties": {
+                "category": "",
+                "type": "",
+                "location": "한국",
                 "name": "엘리스그룹",
-                "industry": "AI 플랫폼"
+                "industry": "",
+                "sector": ""
             }
         },
         {
-            "label": "COMPANY",
+            "label": "Organization",
             "name": "파인디",
             "properties": {
+                "category": "",
+                "type": "스타트업",
+                "location": "일본",
                 "name": "파인디",
-                "industry": "IT 채용 플랫폼"
+                "industry": "IT",
+                "sector": ""
             }
         },
         {
-            "label": "PERSON",
+            "label": "Agreement",
+            "name": "Agreement",
+            "properties": {
+                "agreement_date": "14일",
+                "agreement_type": "업무 협약",
+                "purpose": "양국 간 협력 강화",
+                "location": "한국",
+                "name": "일본 엔지니어 채용 플랫폼 파인디와 업무 협약"
+            }
+        },
+        {
+            "label": "Person",
             "name": "김재원",
             "properties": {
                 "name": "김재원",
-                "role": "대표"
+                "title": "대표",
+                "role": "대표",
+                "position": "엘리스그룹"
             }
         },
         {
-            "label": "PERSON",
+            "label": "Person",
             "name": "야마다 유이치로",
             "properties": {
                 "name": "야마다 유이치로",
-                "role": "대표"
+                "title": "대표",
+                "role": "대표",
+                "position": "파인디"
             }
         },
         {
-            "label": "COLLABORATION",
-            "name": "한일 B2B 비즈니스 협약",
+            "label": "Service",
+            "name": "파인디 팀플러스",
             "properties": {
-                "date": null,
-                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
+                "description": "IT 개발자를 위한 채용 플랫폼과 엔지니어 조직의 생산성 측정 서비스",
+                "name": "파인디 팀플러스",
+                "service_type": "",
+                "userCount": 200000,
+                "companyCount": 3000
             }
         }
     ],
     "relations": [
         {
             "start_node": "엘리스그룹",
-            "relationship": "PARTNERS_WITH",
+            "relationship": "SIGNED_AGREEMENT_WITH",
             "end_node": "파인디",
             "properties": {
-                "startYear": 2023
+                "agreement_name": "일본 엔지니어 채용 플랫폼 파인디와 업무 협약",
+                "date": "14일"
             }
         },
         {
             "start_node": "김재원",
-            "relationship": "LEADS",
+            "relationship": "EMPLOYED_BY",
             "end_node": "엘리스그룹",
             "properties": {}
         },
         {
             "start_node": "야마다 유이치로",
-            "relationship": "LEADS",
+            "relationship": "EMPLOYED_BY",
             "end_node": "파인디",
             "properties": {}
         },
         {
-            "start_node": "엘리스그룹",
-            "relationship": "ENTERED_COLLABORATION_WITH",
-            "end_node": "파인디",
-            "properties": {
-                "date": "2023-09-14",
-                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발"
-            }
+            "start_node": "파인디",
+            "relationship": "PROVIDES",
+            "end_node": "파인디 팀플러스",
+            "properties": {}
+        },
+        {
+            "start_node": "파인디 팀플러스",
+            "relationship": "AVAILABLE_IN",
+            "end_node": "한국",
+            "properties": {}
         }
     ]
 }

@@ -1,127 +1,93 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "org_id": "string",
-                "org_name": "string",
-                "org_type": "string"
-            }
-        },
-        {
-            "label": "LogisticsCenter",
-            "name": "LogisticsCenter",
-            "properties": {
-                "center_id": "string",
-                "center_name": "string",
-                "location": "string",
-                "operator": "string"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "Program",
-            "properties": {
-                "program_id": "string",
-                "program_name": "string",
-                "description": "string"
-            }
-        },
-        {
-            "label": "Platform",
-            "name": "Platform",
-            "properties": {
-                "platform_id": "string",
-                "platform_name": "string",
-                "platform_type": "string"
-            }
-        },
-        {
-            "label": "Service",
-            "name": "Service",
-            "properties": {
-                "service_id": "string",
-                "service_name": "string",
-                "service_type": "string",
-                "rate": "string"
-            }
-        },
-        {
-            "label": "Location",
-            "name": "Location",
-            "properties": {
-                "location_name": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "agreement_id": "string",
-                "date": "string",
-                "purpose": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "Organization",
-            "properties": {
-                "agreement_id": "string",
-                "date": "string"
-            }
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "OPERATES",
-            "end_node": "LogisticsCenter",
-            "properties": {}
-        },
-        {
-            "start_node": "LogisticsCenter",
-            "relationship": "LOCATED_IN",
-            "end_node": "Location",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "RUNS_PROGRAM",
-            "end_node": "Program",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "CREATED_PLATFORM",
-            "end_node": "Platform",
-            "properties": {}
-        },
-        {
-            "start_node": "Platform",
-            "relationship": "CONNECTS",
-            "end_node": "LogisticsCenter",
-            "properties": {}
-        },
-        {
-            "start_node": "LogisticsCenter",
-            "relationship": "PROVIDES_SERVICE",
-            "end_node": "Service",
-            "properties": {}
-        },
-        {
-            "start_node": "Service",
-            "relationship": "AVAILABLE_TO",
-            "end_node": "Organization",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PLANS_TO_SECURE_SPACE_AT",
-            "end_node": "Location",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "String",
+      "properties": {
+        "category": "string"
+      }
+    },
+    {
+      "label": "LogisticsCenter",
+      "name": "String",
+      "properties": {
+        "region": "string",
+        "centerType": "string"
+      }
+    },
+    {
+      "label": "Platform",
+      "name": "String",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "String",
+      "properties": {}
+    },
+    {
+      "label": "Enterprise",
+      "name": "String",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "String",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "OPERATES",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "LogisticsCenter",
+      "relationship": "LOCATED_IN",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "ESTABLISHES_PLATFORM",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "CONNECTS",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "DEVELOPS",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "SUPPORTS",
+      "end_node": "Enterprise",
+      "properties": {}
+    },
+    {
+      "start_node": "Enterprise",
+      "relationship": "USES",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    }
+  ]
 }

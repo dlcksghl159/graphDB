@@ -4,88 +4,86 @@
             "label": "Company",
             "name": "엠투아이",
             "properties": {
-                "industry": "AI 자율 제조",
-                "name": "엠투아이"
+                "name": "엠투아이",
+                "industry": "",
+                "type": "",
+                "location": ""
             }
         },
         {
             "label": "Company",
             "name": "벰로보틱스",
             "properties": {
-                "industry": "로봇",
-                "name": "벰로보틱스"
-            }
-        },
-        {
-            "label": "Investment",
-            "name": "Investment",
-            "properties": {
-                "amount": 1200000000,
-                "currency": "KRW",
-                "date": "2023-09-14"
+                "name": "벰로보틱스",
+                "industry": "",
+                "type": "",
+                "location": ""
             }
         },
         {
             "label": "Technology",
-            "name": "로봇제어기",
+            "name": "로봇 제어기 기술",
             "properties": {
-                "category": "로봇 제어",
-                "name": "로봇제어기",
-                "provider": ""
+                "tech_name": "로봇 제어기 기술",
+                "category": "로봇",
+                "name": "로봇 제어기",
+                "description": "AMR/AGV 로봇 제어 기술",
+                "techId": ""
             }
         },
         {
-            "label": "Product",
-            "name": "물류로봇",
+            "label": "Investment",
+            "name": "벰로보틱스 투자",
             "properties": {
-                "category": "산업용 로봇",
-                "product_name": "물류로봇",
-                "type": "AMR/AGV"
+                "amount": 1200000000,
+                "date": ""
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "엠투아이-벰로보틱스 로봇제어기 공동개발 협약",
+            "properties": {
+                "agreement_date": "2023-10-14",
+                "agreement_type": "공동개발",
+                "name": "로봇제어기 공동개발 협약"
             }
         }
     ],
     "relations": [
         {
             "start_node": "엠투아이",
-            "relationship": "ENTERED_COLLABORATION_WITH",
+            "relationship": "COLLABORATES_WITH",
             "end_node": "벰로보틱스",
-            "properties": {
-                "date": "2023-09-14",
-                "purpose": "로봇 제어기 공동 개발"
-            }
-        },
-        {
-            "start_node": "엠투아이",
-            "relationship": "MADE_INVESTMENT_IN",
-            "end_node": "벰로보틱스",
-            "properties": {
-                "amount": 1200000000,
-                "currency": "KRW",
-                "date": "2023-09-14"
-            }
-        },
-        {
-            "start_node": "엠투아이",
-            "relationship": "DEVELOPS",
-            "end_node": "로봇제어기",
             "properties": {}
         },
         {
             "start_node": "엠투아이",
             "relationship": "DEVELOPS",
-            "end_node": "물류로봇",
+            "end_node": "로봇 제어기 기술",
             "properties": {}
         },
         {
             "start_node": "벰로보틱스",
             "relationship": "DEVELOPS",
-            "end_node": "로봇제어기",
+            "end_node": "로봇 제어기 기술",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "MAKES_INVESTMENT",
+            "end_node": "벰로보틱스 투자",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "엠투아이-벰로보틱스 로봇제어기 공동개발 협약",
             "properties": {}
         },
         {
             "start_node": "벰로보틱스",
-            "relationship": "DEVELOPS",
-            "end_node": "물류로봇",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "엠투아이-벰로보틱스 로봇제어기 공동개발 협약",
             "properties": {}
         }
     ]

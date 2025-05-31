@@ -1,142 +1,97 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "정일산업",
-            "properties": {
-                "name": "string",
-                "founded_year": "int",
-                "num_employees": "int",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Employee",
-            "name": "신송남",
-            "properties": {
-                "name": "string",
-                "birth_year": "int",
-                "age": "int",
-                "employment_status": "string"
-            }
-        },
-        {
-            "label": "Role",
-            "name": "작업자",
-            "properties": {
-                "title": "string"
-            }
-        },
-        {
-            "label": "Location",
-            "name": "시화공단",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "GovernmentProgram",
-            "name": "고령자 고용안정 지원금",
-            "properties": {
-                "name": "string",
-                "program_type": "string",
-                "support_amount_range": "string"
-            }
-        },
-        {
-            "label": "ResearchInstitute",
-            "name": "중소벤처기업연구원",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "엘리베이터 부품",
-            "properties": {
-                "name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "Industry",
-            "name": "승강기 제조업",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Statistic",
-            "name": "중소기업 인력 부족 비율",
-            "properties": {
-                "description": "string",
-                "value": "float",
-                "unit": "string",
-                "year": "int"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "EMPLOYS",
-            "end_node": "Employee",
-            "properties": {}
-        },
-        {
-            "start_node": "Employee",
-            "relationship": "HAS_ROLE",
-            "end_node": "Role",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "LOCATED_IN",
-            "end_node": "Location",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "IN_INDUSTRY",
-            "end_node": "Industry",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "MANUFACTURES",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Employee",
-            "relationship": "OPERATES",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "GovernmentProgram",
-            "relationship": "SUPPORTS_COMPANY",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "GovernmentProgram",
-            "relationship": "SUPPORTS_EMPLOYEE",
-            "end_node": "Employee",
-            "properties": {}
-        },
-        {
-            "start_node": "ResearchInstitute",
-            "relationship": "PUBLISHES",
-            "end_node": "Statistic",
-            "properties": {}
-        },
-        {
-            "start_node": "Statistic",
-            "relationship": "DESCRIBES",
-            "end_node": "Industry",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "기업",
+      "properties": {
+        "companyName": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Factory",
+      "name": "공장",
+      "properties": {
+        "factoryName": "string",
+        "location": "string"
+      }
+    },
+    {
+      "label": "Employee",
+      "name": "직원",
+      "properties": {
+        "employeeName": "string",
+        "age": "int",
+        "role": "string"
+      }
+    },
+    {
+      "label": "GovernmentScheme",
+      "name": "지원제도",
+      "properties": {
+        "schemeName": "string"
+      }
+    },
+    {
+      "label": "Statistic",
+      "name": "통계",
+      "properties": {
+        "metric": "string",
+        "value": "float",
+        "unit": "string",
+        "year": "int"
+      }
+    },
+    {
+      "label": "Sector",
+      "name": "산업부문",
+      "properties": {
+        "sectorName": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "EMPLOYS",
+      "end_node": "Employee",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_FACTORY",
+      "end_node": "Factory",
+      "properties": {}
+    },
+    {
+      "start_node": "Employee",
+      "relationship": "WORKS_AT",
+      "end_node": "Factory",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentScheme",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentScheme",
+      "relationship": "APPLIES_TO",
+      "end_node": "Employee",
+      "properties": {}
+    },
+    {
+      "start_node": "Statistic",
+      "relationship": "DESCRIBES",
+      "end_node": "Sector",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Sector",
+      "properties": {}
+    }
+  ]
 }

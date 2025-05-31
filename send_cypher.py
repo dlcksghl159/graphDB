@@ -1,102 +1,128 @@
+#!/usr/bin/env python3
 """
 send_cypher.py
 --------------
 usage:
   python send_cypher.py
 """
-import os, re
+import os
+import re
 from pathlib import Path
+
 from neo4j import GraphDatabase, basic_auth
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
+
 load_dotenv()   
-key = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+# ── 0. Settings ───────────────────────────────────────────────────
 OUTPUT_ROOT  = Path(os.getenv("OUTPUT_ROOT", "output"))
-cypher_query = OUTPUT_ROOT / "graph.cypher"
+CY_FILE       = OUTPUT_ROOT / "graph.cypher"
 
+NEO4J_URI   = os.getenv("NEO4J_URI",  "bolt://localhost:7687")
+NEO4J_USER  = os.getenv("NEO4J_USER", "neo4j")
+NEO4J_PASS  = os.getenv("NEO4J_PASSWORD", "testtest")
 
-# ── 0. 설정 ───────────────────────────────────────────────────────
-NEO4J_URI  = os.getenv("NEO4J_URI",  "bolt://localhost:7687")
-NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
-NEO4J_PASS = os.getenv("NEO4J_PASSWORD", "testtest")  # 반드시 설정!
+BATCH_SIZE  = 50   # how many data statements per transaction
+EMBED_BATCH = 128  # how many nodes to embed per loop
 
-BATCH_SIZE = 50          # 한 트랜잭션에 묶을 스테이트먼트 수
-CY_FILE    = Path(cypher_query).expanduser()
+# ── 1. Load & split Cypher file ───────────────────────────────────
+text  = CY_FILE.read_text(encoding="utf-8")
+blocks = [blk.strip() for blk in re.split(r"\n\s*\n", text) if blk.strip()]
 
-# ── 1. Cypher 파일 로드 & 파싱 ────────────────────────────────────
-text   = CY_FILE.read_text(encoding="utf-8")
-# 두 개 이상의 연속 개행(공백 포함) → split
-stmts  = [s.strip() for s in re.split(r"\n\s*\n", text) if s.strip()]
+print(f"📄  loaded {len(blocks)} Cypher statements from {CY_FILE}")
 
-print(f"📄  loaded {len(stmts)} Cypher statements from {CY_FILE}")
+# Identify schema vs data statements
+schema_prefixes = (
+    "CREATE CONSTRAINT",
+    "CREATE INDEX",
+    "DROP CONSTRAINT",
+    "DROP INDEX",
+    "CREATE VECTOR INDEX",
+)
+schema_blocks = [b if b.endswith(";") else b + ";" 
+                 for b in blocks 
+                 if b.lstrip().upper().startswith(schema_prefixes)]
+data_blocks   = [b if b.endswith(";") else b + ";" 
+                 for b in blocks 
+                 if b not in schema_blocks]
 
-# ── 2. Neo4j 연결 ────────────────────────────────────────────────
-driver = GraphDatabase.driver(NEO4J_URI,
-                              auth=basic_auth(NEO4J_USER, NEO4J_PASS))
-
-# ── 3. 전송 (배치 커밋) ───────────────────────────────────────────
-total = 0
-with driver.session() as sess:
-    tx  = sess.begin_transaction()
-    for i, cy in enumerate(stmts, 1):
-        tx.run(cy)            # 파라미터 없는 순수 text 쿼리
-        if i % BATCH_SIZE == 0:
-            tx.commit(); total += BATCH_SIZE
-            print(f"✅ committed {total} statements")
-            tx = sess.begin_transaction()
-    # 잔여분
-    tx.commit(); total += len(stmts) % BATCH_SIZE
-
-print(f"🎉 done!  {total} statements executed.")
-driver.close()
-
-
-emb = OpenAIEmbeddings(openai_api_key=key)
-
+# ── 2. Connect to Neo4j ───────────────────────────────────────────
 driver = GraphDatabase.driver(
-    "bolt://localhost:7687",
-    auth=("neo4j", "testtest")
+    NEO4J_URI,
+    auth=basic_auth(NEO4J_USER, NEO4J_PASS)
 )
 
-BATCH = 128
+# ── 3. Apply schema statements (autocommit each) ─────────────────
+with driver.session() as sess:
+    for stmt in schema_blocks:
+        sess.run(stmt)
+    print(f"✅ Applied {len(schema_blocks)} schema statements.")
+
+# ── 4. Apply data statements in batches ──────────────────────────
+total = 0
+with driver.session() as sess:
+    tx = sess.begin_transaction()
+    for i, stmt in enumerate(data_blocks, start=1):
+        tx.run(stmt)
+        # commit in batches
+        if i % BATCH_SIZE == 0:
+            tx.commit()
+            total += BATCH_SIZE
+            print(f"✅ Committed {total} data statements.")
+            tx = sess.begin_transaction()
+    # commit any leftover
+    remaining = len(data_blocks) % BATCH_SIZE
+    if remaining:
+        tx.commit()
+        total += remaining
+        print(f"✅ Committed final {remaining} data statements.")
+print(f"🎉 Done inserting data: {total} statements executed.")
+
+# ── 5. Build embedding index & tag nodes ─────────────────────────
+emb = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 with driver.session() as sess:
+    # label all nodes Embeddable
     sess.run("""
-             MATCH (n)
-             SET   n:Embeddable;
-              """)
+        MATCH (n)
+        SET n:Embeddable;
+    """)
+    # create vector index if missing
     sess.run("""
-            CREATE VECTOR INDEX all_embedding IF NOT EXISTS
-            FOR (n:Embeddable) ON (n.embedding)
-            OPTIONS {
-              indexConfig: {
-                `vector.dimensions`: 1536,
-                `vector.similarity_function`: 'cosine'
-              }
-            };
-            """)
+        CREATE VECTOR INDEX all_embedding IF NOT EXISTS
+        FOR (n:Embeddable) ON (n.embedding)
+        OPTIONS {
+          indexConfig: {
+            `vector.dimensions`: 1536,
+            `vector.similarity_function`: 'cosine'
+          }
+        };
+    """)
+
+    # loop until all have embeddings
     while True:
-        # ▶ 아직 embedding이 없는 노드 뽑기
         rows = sess.run("""
             MATCH (n:Embeddable)
             WHERE n.name IS NOT NULL AND n.embedding IS NULL
             RETURN elementId(n) AS id, n.name AS txt
             LIMIT $lim
-        """, lim=BATCH).data()
+        """, lim=EMBED_BATCH).data()
 
         if not rows:
-            print("🍀 done – all nodes embedded!")
+            print("🍀 All nodes are now embedded!")
             break
 
         texts = [r["txt"] for r in rows]
         vecs  = emb.embed_documents(texts)
 
-        # ▶ 벡터 저장
+        # update each node
         for r, v in zip(rows, vecs):
             sess.run("""
-                MATCH (n) WHERE elementId(n)=$id
+                MATCH (n) WHERE elementId(n) = $id
                 SET n.embedding = $vec
             """, id=r["id"], vec=v)
+        print(f"✅ Embedded {len(rows)} nodes.")
 
-        print(f"✅ embedded {len(rows)} nodes")
+driver.close()

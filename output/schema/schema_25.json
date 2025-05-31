@@ -1,115 +1,74 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "company_name": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "model": "string",
-                "release_date": "string"
-            }
-        },
-        {
-            "label": "Color",
-            "name": "Color",
-            "properties": {
-                "color_name": "string"
-            }
-        },
-        {
-            "label": "Specification",
-            "name": "Specification",
-            "properties": {
-                "spec_name": "string",
-                "spec_value": "string"
-            }
-        },
-        {
-            "label": "Channel",
-            "name": "Channel",
-            "properties": {
-                "channel_name": "string"
-            }
-        },
-        {
-            "label": "BroadcastEvent",
-            "name": "BroadcastEvent",
-            "properties": {
-                "event_time": "string"
-            }
-        },
-        {
-            "label": "Edition",
-            "name": "Edition",
-            "properties": {
-                "edition_name": "string"
-            }
-        },
-        {
-            "label": "Promotion",
-            "name": "Promotion",
-            "properties": {
-                "discount_rate": "float",
-                "target": "string",
-                "price_single": "int",
-                "price_bundle": "int"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "PRODUCES",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "HAS_COLOR",
-            "end_node": "Color",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "HAS_SPEC",
-            "end_node": "Specification",
-            "properties": {}
-        },
-        {
-            "start_node": "BroadcastEvent",
-            "relationship": "PRESENTS",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "BroadcastEvent",
-            "relationship": "ON_CHANNEL",
-            "end_node": "Channel",
-            "properties": {}
-        },
-        {
-            "start_node": "BroadcastEvent",
-            "relationship": "FEATURES_EDITION",
-            "end_node": "Edition",
-            "properties": {}
-        },
-        {
-            "start_node": "Promotion",
-            "relationship": "APPLIES_TO",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Promotion",
-            "relationship": "OFFERED_DURING",
-            "end_node": "BroadcastEvent",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "회사",
+      "properties": {
+        "id": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "제품",
+      "properties": {
+        "id": "string",
+        "name": "string",
+        "category": "string",
+        "cumulative_sales": "int",
+        "price": "int",
+        "motor_type": "string",
+        "power_consumption_w": "float",
+        "noise_level_db": "float",
+        "launch_datetime": "string",
+        "colors": "string"
+      }
+    },
+    {
+      "label": "BroadcastEvent",
+      "name": "방송이벤트",
+      "properties": {
+        "id": "string",
+        "date_time": "string",
+        "channel": "string",
+        "edition": "string"
+      }
+    },
+    {
+      "label": "Promotion",
+      "name": "프로모션",
+      "properties": {
+        "id": "string",
+        "discount_rate": "float",
+        "discounted_price": "int",
+        "bundle_price": "int"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "LAUNCHED_AT",
+      "end_node": "BroadcastEvent",
+      "properties": {}
+    },
+    {
+      "start_node": "BroadcastEvent",
+      "relationship": "SELLS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_PROMOTION",
+      "end_node": "Promotion",
+      "properties": {}
+    }
+  ]
 }

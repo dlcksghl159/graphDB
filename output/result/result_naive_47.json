@@ -1,0 +1,38 @@
+{
+    "nodes": [
+        {
+            "label": "Product",
+            "name": "풀히트 푸드워머",
+            "properties": {
+                "name": "풀히트 푸드워머",
+                "preheatTime": "10초",
+                "design": "롤러블 디자인",
+                "portability": "휴대 간편",
+                "durability": "내구성 뛰어남",
+                "temperatureLevels": "60도와 100도",
+                "safetyFeatures": "잠금 모드와 자동 오프 기능"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "롯데웰푸드",
+            "properties": {
+                "type": "Corporation",
+                "location": "대한민국",
+                "name": "롯데웰푸드",
+                "industry": "Food Manufacturing"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "LAUNCHED",
+            "end_node": "풀히트 푸드워머",
+            "properties": {
+                "date": "2023-10-14",
+                "promotion_end_date": "2023-10-21"
+            }
+        }
+    ]
+}

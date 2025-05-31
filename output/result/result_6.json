@@ -2,48 +2,103 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "한샘",
+            "name": "Hanssem",
             "properties": {
-                "name": "한샘",
-                "stock_code": "009240"
+                "name": "Hanssem",
+                "stock_code": "009240",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4434000000
             }
         },
         {
             "label": "Company",
-            "name": "현대리바트",
+            "name": "Hyundai Livart",
             "properties": {
-                "name": "현대리바트",
-                "stock_code": "079430"
+                "name": "Hyundai Livart",
+                "stock_code": "079430",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4378000000
             }
         },
         {
-            "label": "MarketCondition",
-            "name": "건설경기 침체",
+            "label": "Revenue",
+            "name": "Revenue 2025 Q1",
             "properties": {
-                "segment": "B2B",
-                "status": "불황",
-                "impact": "매출 감소"
+                "year": 2025,
+                "amount": 4434000000,
+                "growth_rate": -8.7
+            }
+        },
+        {
+            "label": "Revenue",
+            "name": "Livart Revenue 2025 Q1",
+            "properties": {
+                "year": 2025,
+                "amount": 4378000000,
+                "growth_rate": -13.3
+            }
+        },
+        {
+            "label": "Sector",
+            "name": "B2B Sector",
+            "properties": {
+                "sectorName": "B2B"
+            }
+        },
+        {
+            "label": "Sector",
+            "name": "B2C Sector",
+            "properties": {
+                "sectorName": "B2C"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "한샘",
+            "start_node": "Hanssem",
+            "relationship": "RECORDED",
+            "end_node": "Revenue 2025 Q1",
+            "properties": {}
+        },
+        {
+            "start_node": "Hyundai Livart",
+            "relationship": "RECORDED",
+            "end_node": "Livart Revenue 2025 Q1",
+            "properties": {}
+        },
+        {
+            "start_node": "Hanssem",
+            "relationship": "OPERATES_IN",
+            "end_node": "B2B Sector",
+            "properties": {}
+        },
+        {
+            "start_node": "Hyundai Livart",
+            "relationship": "OPERATES_IN",
+            "end_node": "B2B Sector",
+            "properties": {}
+        },
+        {
+            "start_node": "Hanssem",
+            "relationship": "OPERATES_IN",
+            "end_node": "B2C Sector",
+            "properties": {}
+        },
+        {
+            "start_node": "Hyundai Livart",
+            "relationship": "OPERATES_IN",
+            "end_node": "B2C Sector",
+            "properties": {}
+        },
+        {
+            "start_node": "Hanssem",
             "relationship": "COMPETES_WITH",
-            "end_node": "현대리바트",
-            "properties": {}
-        },
-        {
-            "start_node": "한샘",
-            "relationship": "OPERATES_IN",
-            "end_node": "건설경기 침체",
-            "properties": {}
-        },
-        {
-            "start_node": "현대리바트",
-            "relationship": "OPERATES_IN",
-            "end_node": "건설경기 침체",
-            "properties": {}
+            "end_node": "Hyundai Livart",
+            "properties": {
+                "difference": 56000000
+            }
         }
     ]
 }

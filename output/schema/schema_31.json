@@ -1,95 +1,63 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "role": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Person",
-            "properties": {
-                "name": "string",
-                "position": "string"
-            }
-        },
-        {
-            "label": "Solution",
-            "name": "Solution",
-            "properties": {
-                "name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "Feature",
-            "name": "Feature",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "DeploymentModel",
-            "name": "DeploymentModel",
-            "properties": {
-                "type": "string"
-            }
-        },
-        {
-            "label": "Metric",
-            "name": "Metric",
-            "properties": {
-                "name": "string",
-                "value": "int",
-                "unit": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "DEVELOPS",
-            "end_node": "Solution",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "OFFERS",
-            "end_node": "Solution",
-            "properties": {}
-        },
-        {
-            "start_node": "Solution",
-            "relationship": "HAS_FEATURE",
-            "end_node": "Feature",
-            "properties": {}
-        },
-        {
-            "start_node": "Solution",
-            "relationship": "HAS_DEPLOYMENT_MODEL",
-            "end_node": "DeploymentModel",
-            "properties": {}
-        },
-        {
-            "start_node": "Solution",
-            "relationship": "USED_BY",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "Solution",
-            "relationship": "HAS_METRIC",
-            "end_node": "Metric",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "WORKS_FOR",
-            "end_node": "Company",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "role": "String",
+        "cloud_expertise": "Boolean"
+      }
+    },
+    {
+      "label": "Solution",
+      "name": "String",
+      "properties": {
+        "category": "String",
+        "model": "String",
+        "automation_rate": "Int"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "String",
+      "properties": {
+        "title": "String"
+      }
+    },
+    {
+      "label": "Feature",
+      "name": "String",
+      "properties": {
+        "description": "String"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPS",
+      "end_node": "Solution",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Solution",
+      "relationship": "HAS_FEATURE",
+      "end_node": "Feature",
+      "properties": {}
+    },
+    {
+      "start_node": "Solution",
+      "relationship": "DEPLOYED_TO",
+      "end_node": "Company",
+      "properties": {
+        "date": "Date"
+      }
+    }
+  ]
 }

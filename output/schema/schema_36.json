@@ -1,119 +1,119 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "회사",
-            "properties": {
-                "company_id": "string",
-                "name": "string"
-            }
-        },
-        {
-            "label": "Subsidiary",
-            "name": "법인",
-            "properties": {
-                "subsidiary_id": "string",
-                "name": "string",
-                "country": "string",
-                "established_date": "date"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "국가",
-            "properties": {
-                "country_id": "string",
-                "name": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "제품",
-            "properties": {
-                "product_id": "string",
-                "name": "string",
-                "generic_name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "Partner",
-            "name": "파트너",
-            "properties": {
-                "partner_id": "string",
-                "name": "string"
-            }
-        },
-        {
-            "label": "Tender",
-            "name": "입찰",
-            "properties": {
-                "tender_id": "string",
-                "name": "string",
-                "start_date": "date",
-                "end_date": "date"
-            }
-        },
-        {
-            "label": "Stakeholder",
-            "name": "이해관계자",
-            "properties": {
-                "stakeholder_id": "string",
-                "name": "string",
-                "type": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "HAS_SUBSIDIARY",
-            "end_node": "Subsidiary",
-            "properties": {}
-        },
-        {
-            "start_node": "Subsidiary",
-            "relationship": "LOCATED_IN",
-            "end_node": "Country",
-            "properties": {}
-        },
-        {
-            "start_node": "Subsidiary",
-            "relationship": "SELLS",
-            "end_node": "Product",
-            "properties": {
-                "share_percentage": "float",
-                "period": "string"
-            }
-        },
-        {
-            "start_node": "Subsidiary",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "Partner",
-            "properties": {
-                "start_date": "date"
-            }
-        },
-        {
-            "start_node": "Subsidiary",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "Tender",
-            "properties": {}
-        },
-        {
-            "start_node": "Tender",
-            "relationship": "AWARDS_PRODUCT",
-            "end_node": "Product",
-            "properties": {
-                "supply_start": "date",
-                "supply_end": "date"
-            }
-        },
-        {
-            "start_node": "Subsidiary",
-            "relationship": "NETWORKS_WITH",
-            "end_node": "Stakeholder",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "셀트리온",
+      "properties": {
+        "name": "string",
+        "headquarters": "string"
+      }
+    },
+    {
+      "label": "Subsidiary",
+      "name": "LocalSubsidiary",
+      "properties": {
+        "name": "string",
+        "country": "string",
+        "established_year": "int"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "name": "string",
+        "active_ingredient": "string",
+        "therapy_area": "string"
+      }
+    },
+    {
+      "label": "Partner",
+      "name": "PartnerCompany",
+      "properties": {
+        "name": "string",
+        "partnership_start": "string"
+      }
+    },
+    {
+      "label": "Tender",
+      "name": "Tender",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "Region",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "Person",
+      "properties": {
+        "name": "string",
+        "role": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SUBSIDIARY",
+      "end_node": "Subsidiary",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "OPERATES_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "SELLS_PRODUCT",
+      "end_node": "Product",
+      "properties": {
+        "sales_method": "string"
+      }
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "PARTNER_WITH",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "SUPPLIES",
+      "end_node": "Tender",
+      "properties": {
+        "start_date": "string",
+        "end_date": "string"
+      }
+    },
+    {
+      "start_node": "Product",
+      "relationship": "WINS_TENDER",
+      "end_node": "Tender",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "MARKET_SHARE_IN",
+      "end_node": "Region",
+      "properties": {
+        "share_percentage": "float",
+        "period": "string"
+      }
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "HAS_PERSON",
+      "end_node": "Person",
+      "properties": {}
+    }
+  ]
 }

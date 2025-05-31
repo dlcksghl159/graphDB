@@ -1,61 +1,112 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "사람인",
-            "properties": {
-                "industry": "",
-                "name": "사람인"
-            }
-        },
-        {
             "label": "Survey",
-            "name": "인생 이모작 의향 조사",
+            "name": "직장인 설문조사",
             "properties": {
-                "id": "20231014",
-                "title": "인생 이모작 의향 조사",
+                "title": "직장인 설문조사",
                 "date": "2023-10-14",
-                "sample_size": 965,
-                "desired_monthly_income_avg": 402
+                "sampleSize": 965
             }
         },
         {
-            "label": "JobCategory",
-            "name": "창업 및 자영업",
+            "label": "DemographicGroup",
+            "name": "50대 이상",
             "properties": {
-                "category": "창업 및 자영업"
+                "ageRange": "50대 이상",
+                "percentage": 93.1
             }
         },
         {
-            "label": "JobCategory",
-            "name": "블루칼라",
+            "label": "DemographicGroup",
+            "name": "20대",
             "properties": {
-                "category": "블루칼라"
+                "ageRange": "20대",
+                "percentage": 84.8
+            }
+        },
+        {
+            "label": "Motivation",
+            "name": "계속 안정적인 수입이 필요해서",
+            "properties": {
+                "description": "계속 안정적인 수입이 필요해서",
+                "percentage": 55.2
+            }
+        },
+        {
+            "label": "Motivation",
+            "name": "정년 없이 일하고 싶을 때까지 일하기 위해서",
+            "properties": {
+                "description": "정년 없이 일하고 싶을 때까지 일하기 위해서",
+                "percentage": 45.6
+            }
+        },
+        {
+            "label": "FinancialExpectation",
+            "name": "세후 월수입",
+            "properties": {
+                "averageMonthlyIncome": 4020000
+            }
+        },
+        {
+            "label": "PreparationActivity",
+            "name": "관련 자격증 취득 준비",
+            "properties": {
+                "name": "관련 자격증 취득 준비",
+                "percentage": 49.9
+            }
+        },
+        {
+            "label": "PreparationActivity",
+            "name": "관련 교육과정 수강",
+            "properties": {
+                "name": "관련 교육과정 수강",
+                "percentage": 28.5
             }
         }
     ],
     "relations": [
         {
-            "start_node": "사람인",
-            "relationship": "CONDUCTS",
-            "end_node": "인생 이모작 의향 조사",
+            "start_node": "직장인 설문조사",
+            "relationship": "TARGETS",
+            "end_node": "50대 이상",
             "properties": {}
         },
         {
-            "start_node": "인생 이모작 의향 조사",
-            "relationship": "PREFERS_FIELD",
-            "end_node": "창업 및 자영업",
-            "properties": {
-                "percentage": 21.7
-            }
+            "start_node": "직장인 설문조사",
+            "relationship": "TARGETS",
+            "end_node": "20대",
+            "properties": {}
         },
         {
-            "start_node": "인생 이모작 의향 조사",
-            "relationship": "PREFERS_FIELD",
-            "end_node": "블루칼라",
-            "properties": {
-                "percentage": 20.4
-            }
+            "start_node": "50대 이상",
+            "relationship": "EXPRESSES_MOTIVATION",
+            "end_node": "계속 안정적인 수입이 필요해서",
+            "properties": {}
+        },
+        {
+            "start_node": "50대 이상",
+            "relationship": "EXPECTS_INCOME",
+            "end_node": "세후 월수입",
+            "properties": {}
+        },
+        {
+            "start_node": "20대",
+            "relationship": "EXPRESSES_MOTIVATION",
+            "end_node": "정년 없이 일하고 싶을 때까지 일하기 위해서",
+            "properties": {}
+        },
+        {
+            "start_node": "50대 이상",
+            "relationship": "UNDERTAKES",
+            "end_node": "관련 자격증 취득 준비",
+            "properties": {}
+        },
+        {
+            "start_node": "50대 이상",
+            "relationship": "UNDERTAKES",
+            "end_node": "관련 교육과정 수강",
+            "properties": {}
         }
     ]
 }

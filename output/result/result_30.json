@@ -1,110 +1,169 @@
 {
     "nodes": [
         {
+            "label": "Subsidiary",
+            "name": "셀트리온 스페인 법인",
+            "properties": {
+                "name": "셀트리온 스페인 법인",
+                "country": "스페인",
+                "established_year": 2018,
+                "subsidiary_id": "CT_ES"
+            }
+        },
+        {
+            "label": "Subsidiary",
+            "name": "셀트리온 포르투갈 법인",
+            "properties": {
+                "name": "셀트리온 포르투갈 법인",
+                "country": "포르투갈",
+                "established_year": 2022,
+                "subsidiary_id": "CT_PT"
+            }
+        },
+        {
             "label": "Company",
             "name": "셀트리온",
             "properties": {
                 "name": "셀트리온",
-                "industry": "바이오",
-                "major_product": "바이오시밀러"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "스페인",
-            "properties": {
-                "name": "스페인"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "포르투갈",
-            "properties": {
-                "name": "포르투갈"
+                "category": "Biologics",
+                "size": "Large",
+                "type": "Public",
+                "annual_revenue": 0,
+                "revenue_growth_percentage": 0,
+                "country": "대한민국",
+                "headquarters": "대한민국",
+                "founded_year": 2002,
+                "company_id": "CT",
+                "employee_count": 0,
+                "size_category": "Medium",
+                "location": "대한민국",
+                "market_share": "23%",
+                "region": "Asia",
+                "company_type": "Corporation"
             }
         },
         {
             "label": "Product",
             "name": "트룩시마",
             "properties": {
-                "product_name": "트룩시마",
-                "category": "항암제"
+                "name": "트룩시마",
+                "category": "Biologics",
+                "active_ingredient": "리툭시맙",
+                "product_type": "Biosimilar",
+                "source_type": "Recombinant",
+                "generic_name": "Rituximab",
+                "therapy_area": "Oncology"
             }
         },
         {
             "label": "Product",
             "name": "허쥬마",
             "properties": {
-                "product_name": "허쥬마",
-                "category": "항암제"
+                "name": "허쥬마",
+                "category": "Biologics",
+                "active_ingredient": "트라스투주맙",
+                "product_type": "Biosimilar",
+                "source_type": "Recombinant",
+                "generic_name": "Trastuzumab",
+                "therapy_area": "Oncology"
             }
         },
         {
             "label": "Product",
             "name": "베그젤마",
             "properties": {
-                "product_name": "베그젤마",
-                "category": "항암제"
+                "name": "베그젤마",
+                "category": "Biologics",
+                "active_ingredient": "베바시주맙",
+                "product_type": "Biosimilar",
+                "source_type": "Recombinant",
+                "generic_name": "Bevacizumab",
+                "therapy_area": "Oncology"
             }
         },
         {
             "label": "Product",
             "name": "스테키마",
             "properties": {
-                "product_name": "스테키마",
-                "category": "자가면역질환 치료제"
+                "name": "스테키마",
+                "category": "Biologics",
+                "active_ingredient": "우스테키누맙",
+                "product_type": "Biosimilar",
+                "source_type": "Recombinant",
+                "generic_name": "Ustekinumab",
+                "therapy_area": "Immunology"
             }
         },
         {
-            "label": "Partner",
-            "name": "컨파마",
+            "label": "Market",
+            "name": "CSC",
             "properties": {
-                "name": "컨파마",
-                "industry": "제약"
+                "name": "CSC",
+                "type": "Consortium",
+                "market_name": "Spanish Hospital Bidding",
+                "region": "Catalonia",
+                "market_id": "CSC"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "강석훈",
+            "properties": {
+                "name": "강석훈",
+                "title": "법인장",
+                "role": "Country Manager",
+                "position": "Regional Head",
+                "personName": "Kang Seok-hoon"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "셀트리온",
-            "relationship": "OPERATES_IN",
-            "end_node": "스페인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "OPERATES_IN",
-            "end_node": "포르투갈",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "PRODUCES",
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
             "end_node": "트룩시마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "PRODUCES",
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
             "end_node": "허쥬마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "PRODUCES",
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SELLS",
             "end_node": "베그젤마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "PRODUCES",
+            "start_node": "셀트리온 포르투갈 법인",
+            "relationship": "SELLS",
             "end_node": "스테키마",
             "properties": {}
         },
         {
             "start_node": "셀트리온",
-            "relationship": "PARTNERED_WITH",
-            "end_node": "컨파마",
+            "relationship": "HAS_SUBSIDIARY",
+            "end_node": "셀트리온 스페인 법인",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "HAS_SUBSIDIARY",
+            "end_node": "셀트리온 포르투갈 법인",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "WINS_TENDER",
+            "end_node": "CSC",
+            "properties": {}
+        },
+        {
+            "start_node": "강석훈",
+            "relationship": "EMPLOYED_BY",
+            "end_node": "셀트리온",
             "properties": {}
         }
     ]

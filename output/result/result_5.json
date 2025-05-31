@@ -1,110 +1,98 @@
 {
     "nodes": [
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "중소벤처기업진흥공단",
             "properties": {
-                "region": "",
-                "agency_id": "",
-                "name": "중소벤처기업진흥공단"
+                "category": "",
+                "type": "",
+                "location": "",
+                "name": "중소벤처기업진흥공단",
+                "industry": "",
+                "sector": ""
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "부산항만공사",
             "properties": {
-                "region": "",
-                "agency_id": "",
-                "name": "부산항만공사"
+                "category": "",
+                "type": "",
+                "location": "",
+                "name": "부산항만공사",
+                "industry": "",
+                "sector": ""
             }
         },
         {
-            "label": "Platform",
+            "label": "Organization",
+            "name": "인천국제공항공사",
+            "properties": {
+                "category": "",
+                "type": "",
+                "location": "",
+                "name": "인천국제공항공사",
+                "industry": "",
+                "sector": ""
+            }
+        },
+        {
+            "label": "SupportProgram",
             "name": "스마트트레이드허브",
             "properties": {
-                "platform_id": "",
-                "platform_name": "스마트트레이드허브",
-                "platform_type": "",
                 "name": "스마트트레이드허브",
+                "start_year": null,
+                "participant_count": null,
+                "year": null,
                 "description": "",
-                "region": "",
-                "domain": ""
+                "program_id": ""
             }
         },
         {
             "label": "LogisticsCenter",
-            "name": "BPA 해외물류센터",
+            "name": "LA/LB 해외물류센터",
             "properties": {
-                "center_id": "",
-                "center_name": "BPA 해외물류센터",
-                "location": "미국 LA/LB 지역",
-                "operator": "부산항만공사",
-                "name": "BPA 해외물류센터",
+                "region": "미국",
+                "centerType": "",
+                "location": "로스앤젤레스·롱비치",
                 "center_type": "",
-                "type": ""
-            }
-        },
-        {
-            "label": "Person",
-            "name": "강석진",
-            "properties": {
-                "position": "이사장",
-                "person_id": "",
-                "name": "강석진",
-                "role": "",
-                "title": "이사장",
-                "personName": "강석진",
-                "person_name": "강석진"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "중소기업 물류 지원 협약",
-            "properties": {
-                "agreement_id": "",
-                "date": "2023-10-14",
-                "location": "부산항만공사 본사",
-                "purpose": "수출 중소기업의 글로벌 물류 지원",
-                "name": "중소기업 물류 지원 협약",
-                "title": "",
-                "subject": "",
-                "agreement_date": "2023-10-14",
-                "description": ""
+                "name": "LA/LB 해외물류센터",
+                "operator": "부산항만공사"
             }
         }
     ],
     "relations": [
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "COOPERATES_WITH",
+            "relationship": "SIGNED_AGREEMENT_WITH",
             "end_node": "부산항만공사",
-            "properties": {}
+            "properties": {
+                "date": "2023-10-14"
+            }
         },
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "중소기업 물류 지원 협약",
+            "relationship": "ESTABLISHES_PLATFORM",
+            "end_node": "스마트트레이드허브",
             "properties": {}
         },
         {
             "start_node": "부산항만공사",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "중소기업 물류 지원 협약",
+            "relationship": "OPERATES",
+            "end_node": "LA/LB 해외물류센터",
             "properties": {}
         },
         {
             "start_node": "스마트트레이드허브",
-            "relationship": "CONNECTS_WITH",
-            "end_node": "BPA 해외물류센터",
+            "relationship": "UTILIZES",
+            "end_node": "LA/LB 해외물류센터",
             "properties": {}
         },
         {
-            "start_node": "강석진",
-            "relationship": "WORKS_FOR",
+            "start_node": "인천국제공항공사",
+            "relationship": "COLLABORATES_WITH",
             "end_node": "중소벤처기업진흥공단",
-            "properties": {
-                "role": "이사장"
-            }
+            "properties": {}
         }
     ]
 }

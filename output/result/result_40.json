@@ -4,66 +4,160 @@
             "label": "Company",
             "name": "삼성바이오로직스",
             "properties": {
-                "name": "삼성바이오로직스",
                 "industry": "제약바이오",
-                "revenue": 12983000000,
-                "operating_in": "글로벌",
-                "employee_size": null,
-                "location": null,
-                "founded_year": null
+                "name": "삼성바이오로직스"
             }
         },
         {
             "label": "Company",
             "name": "셀트리온",
             "properties": {
-                "name": "셀트리온",
                 "industry": "제약바이오",
-                "revenue": 8419000000,
-                "operating_in": "글로벌",
-                "employee_size": null,
-                "location": null,
-                "founded_year": null
+                "name": "셀트리온"
             }
         },
         {
             "label": "Company",
             "name": "유한양행",
             "properties": {
-                "name": "유한양행",
-                "industry": "전통제약",
-                "revenue": 4916000000,
-                "operating_in": "글로벌",
-                "employee_size": null,
-                "location": null,
-                "founded_year": null
+                "industry": "전통 제약",
+                "name": "유한양행"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "GC녹십자",
+            "properties": {
+                "industry": "전통 제약",
+                "name": "GC녹십자"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "대웅제약",
+            "properties": {
+                "industry": "전통 제약",
+                "name": "대웅제약"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "한미약품",
+            "properties": {
+                "industry": "제약바이오",
+                "name": "한미약품"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "종근당",
+            "properties": {
+                "industry": "제약바이오",
+                "name": "종근당"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "보령",
+            "properties": {
+                "industry": "제약바이오",
+                "name": "보령"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "LG화학",
+            "properties": {
+                "industry": "생명과학",
+                "name": "LG화학"
             }
         },
         {
             "label": "Product",
             "name": "피즈치바",
             "properties": {
-                "product_name": "피즈치바",
-                "category": "바이오시밀러",
-                "marketShare": null
+                "name": "피즈치바",
+                "category": "바이오시밀러"
             }
         },
         {
             "label": "Product",
             "name": "램시마SC",
             "properties": {
-                "product_name": "램시마SC",
-                "category": "자가면역질환 치료제",
-                "marketShare": null
+                "name": "램시마SC",
+                "category": "자가면역질환 치료제"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "유플라이마",
+            "properties": {
+                "name": "유플라이마",
+                "category": "바이오시밀러"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "베그젤마",
+            "properties": {
+                "name": "베그젤마",
+                "category": "바이오시밀러"
             }
         },
         {
             "label": "Product",
             "name": "렉라자",
             "properties": {
-                "product_name": "렉라자",
-                "category": "폐암 신약",
-                "marketShare": null
+                "name": "렉라자",
+                "category": "신약"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "알리글로",
+            "properties": {
+                "name": "알리글로",
+                "category": "신약"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "펙수클루",
+            "properties": {
+                "name": "펙수클루",
+                "category": "신약"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "고덱스",
+            "properties": {
+                "name": "고덱스",
+                "category": "간장약"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "케이캡",
+            "properties": {
+                "name": "케이캡",
+                "category": "위식도역류질환 치료제"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "국내 시장",
+            "properties": {
+                "name": "국내 시장",
+                "type": "의약품"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "해외 시장",
+            "properties": {
+                "name": "해외 시장",
+                "type": "의약품"
             }
         }
     ],
@@ -81,9 +175,73 @@
             "properties": {}
         },
         {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "유플라이마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
             "start_node": "유한양행",
             "relationship": "PRODUCES",
             "end_node": "렉라자",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "OPERATES_IN",
+            "end_node": "국내 시장",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "OPERATES_IN",
+            "end_node": "해외 시장",
+            "properties": {}
+        },
+        {
+            "start_node": "GC녹십자",
+            "relationship": "PRODUCES",
+            "end_node": "알리글로",
+            "properties": {}
+        },
+        {
+            "start_node": "대웅제약",
+            "relationship": "PRODUCES",
+            "end_node": "펙수클루",
+            "properties": {}
+        },
+        {
+            "start_node": "종근당",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "셀트리온",
+            "properties": {
+                "product": "고덱스"
+            }
+        },
+        {
+            "start_node": "보령",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "대웅제약",
+            "properties": {
+                "product": "케이캡"
+            }
+        },
+        {
+            "start_node": "LG화학",
+            "relationship": "OPERATES_IN",
+            "end_node": "국내 시장",
+            "properties": {}
+        },
+        {
+            "start_node": "LG화학",
+            "relationship": "OPERATES_IN",
+            "end_node": "해외 시장",
             "properties": {}
         }
     ]

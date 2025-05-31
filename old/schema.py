@@ -1,6 +1,7 @@
 import os
 import json
 import openai
+from tqdm import tqdm
 from dotenv import load_dotenv
 
 from util import merge_json, parse_json
@@ -23,15 +24,13 @@ def main(purpose = "기업판매"):
 
     from collections import defaultdict
 
-
-
-    i = 0
-    while True:
-        filename = f"{chunks_dir}/chunked_output_{i}.txt"
-        
-        if not os.path.exists(filename):
-            print(f"파일 없음: {filename} → 종료합니다.")
-            break
+    file_list = os.listdir(chunks_dir)
+    file_list.sort()  # 파일 이름 정렬
+    pbar = tqdm(file_list, desc="Processing files", unit="file")
+    for filename in pbar:
+        pbar.set_description(f"Processing {filename}")
+        if not filename.endswith(".txt"):
+            continue
 
         with open(filename, "r", encoding="utf-8") as f:
             content = f.read()
@@ -63,7 +62,7 @@ def main(purpose = "기업판매"):
 
         # OpenAI GPT 호출
         response = client.chat.completions.create(
-            model="o1",
+            model="o4-mini",
             response_format={ "type": "json_object" },
             messages=[
                 {"role": "system", "content": system_msg},
@@ -94,7 +93,6 @@ def main(purpose = "기업판매"):
             merged_schema = merge_json(old_schema, parsed_json, node_key=("label",))
             with open(schema_path, "w", encoding="utf-8") as f:
                 json.dump(merged_schema, f, ensure_ascii=False, indent=4)
-        print(f"[{i}] scheam 추출 완료")
         
         i += 1
 

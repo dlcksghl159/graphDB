@@ -1,79 +1,97 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "PartnerCompany",
-            "name": "PartnerCompany",
-            "properties": {
-                "name": "string",
-                "sector": "string"
-            }
-        },
-        {
-            "label": "ESGSupportProgram",
-            "name": "ESGSupportProgram",
-            "properties": {
-                "program_name": "string",
-                "year": "int",
-                "participant_count": "int",
-                "avg_compliance_rate": "float"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "date": "string",
-                "location": "string"
-            }
-        },
-        {
-            "label": "Certification",
-            "name": "Certification",
-            "properties": {
-                "year": "int",
-                "compliance_rate": "float",
-                "certificate_name": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "RUNS_PROGRAM",
-            "end_node": "ESGSupportProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "ESGSupportProgram",
-            "relationship": "SUPPORTS",
-            "end_node": "PartnerCompany",
-            "properties": {}
-        },
-        {
-            "start_node": "PartnerCompany",
-            "relationship": "RECEIVED_CERTIFICATION",
-            "end_node": "Certification",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "JOINTLY_DEVELOPS_ESG_INDICATOR",
-            "end_node": "Organization",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "company_name": "string",
+        "industry": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "ESGProgram",
+      "name": "ESGProgram",
+      "properties": {
+        "program_name": "string",
+        "year": "int"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "Agreement",
+      "properties": {
+        "agreement_date": "date",
+        "agreement_type": "string"
+      }
+    },
+    {
+      "label": "Certification",
+      "name": "Certification",
+      "properties": {
+        "certification_name": "string",
+        "year": "int"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "Person",
+      "properties": {
+        "name": "string",
+        "title": "string"
+      }
+    },
+    {
+      "label": "Initiative",
+      "name": "Initiative",
+      "properties": {
+        "name": "string",
+        "target_year": "int"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED_AGREEMENT",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "INVOLVES",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "FOR_PROGRAM",
+      "end_node": "ESGProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "ESGProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RECEIVED_CERTIFICATION",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DECLARED_INITIATIVE",
+      "end_node": "Initiative",
+      "properties": {}
+    }
+  ]
 }

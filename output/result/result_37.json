@@ -1,102 +1,83 @@
 {
     "nodes": [
         {
+            "label": "CloudService",
+            "name": "파이브클라우드",
+            "properties": {
+                "revenue": 10000000000,
+                "revenueGrowthRate": "60%",
+                "customerCount": 2600
+            }
+        },
+        {
             "label": "Company",
             "name": "패스트파이브",
             "properties": {
                 "name": "패스트파이브",
-                "industry": "클라우드 서비스"
+                "industry": "클라우드 서비스",
+                "role": "provider",
+                "annual_revenue": 0,
+                "revenue_growth_percentage": 60
             }
         },
         {
-            "label": "Service",
-            "name": "파이브클라우드",
+            "label": "SME",
+            "name": "중소기업",
             "properties": {
-                "name": "파이브클라우드",
-                "type": "클라우드 서비스",
-                "annual_revenue": 100000000,
-                "revenue_growth_rate": 60.0,
-                "customer_count": 2600
+                "industry": "클라우드 서비스",
+                "name": "중소기업",
+                "category": "기업",
+                "location": "대한민국",
+                "partner_since_year": 0,
+                "company_id": ""
             }
         },
         {
-            "label": "Technology",
-            "name": "AWS",
-            "properties": {
-                "category": "클라우드 컴퓨팅",
-                "name": "AWS"
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "Google Cloud",
-            "properties": {
-                "category": "클라우드 컴퓨팅",
-                "name": "Google Cloud"
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "Microsoft 365",
-            "properties": {
-                "category": "클라우드 컴퓨팅",
-                "name": "Microsoft 365"
-            }
-        },
-        {
-            "label": "Award",
+            "label": "PartnerProgram",
             "name": "AWS 어드밴스드 티어 파트너",
             "properties": {
-                "name": "AWS 어드밴스드 티어 파트너",
-                "year": 2023,
-                "tier": "Advanced"
+                "awardsCount": 3
             }
         },
         {
-            "label": "Award",
-            "name": "AWS 한국파트너리그",
+            "label": "Person",
+            "name": "김대일",
             "properties": {
-                "name": "AWS 한국파트너리그",
-                "year": 2023,
-                "tier": "수상"
+                "name": "김대일",
+                "title": "CEO",
+                "role": "대표",
+                "position": "패스트파이브 대표"
             }
+        },
+        {
+            "label": "CustomerSegment",
+            "name": "중소·중견기업",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "패스트파이브",
-            "relationship": "OFFERS",
+            "relationship": "PROVIDES",
             "end_node": "파이브클라우드",
             "properties": {}
         },
         {
             "start_node": "파이브클라우드",
-            "relationship": "USES",
-            "end_node": "AWS",
+            "relationship": "TARGETS",
+            "end_node": "중소·중견기업",
             "properties": {}
         },
         {
             "start_node": "파이브클라우드",
-            "relationship": "USES",
-            "end_node": "Google Cloud",
-            "properties": {}
-        },
-        {
-            "start_node": "파이브클라우드",
-            "relationship": "USES",
-            "end_node": "Microsoft 365",
-            "properties": {}
-        },
-        {
-            "start_node": "파이브클라우드",
-            "relationship": "ACHIEVED",
+            "relationship": "HAS_PARTNER",
             "end_node": "AWS 어드밴스드 티어 파트너",
             "properties": {}
         },
         {
-            "start_node": "파이브클라우드",
-            "relationship": "ACHIEVED",
-            "end_node": "AWS 한국파트너리그",
+            "start_node": "김대일",
+            "relationship": "LEADS",
+            "end_node": "패스트파이브",
             "properties": {}
         }
     ]

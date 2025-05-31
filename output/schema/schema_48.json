@@ -1,116 +1,116 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "Project",
-            "properties": {
-                "projectName": "string",
-                "startDate": "string",
-                "endDate": "string"
-            }
-        },
-        {
-            "label": "SmallBusiness",
-            "name": "Small Business",
-            "properties": {
-                "name": "string",
-                "businessType": "string",
-                "yearsInBusiness": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "Application",
-            "name": "Application",
-            "properties": {
-                "startDate": "string",
-                "endDate": "string"
-            }
-        },
-        {
-            "label": "Brand",
-            "name": "Brand",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "date": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "HOSTS",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Agreement",
-            "relationship": "COVERS",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "INCLUDES",
-            "end_node": "SmallBusiness",
-            "properties": {}
-        },
-        {
-            "start_node": "SmallBusiness",
-            "relationship": "APPLIED_FOR",
-            "end_node": "Application",
-            "properties": {}
-        },
-        {
-            "start_node": "Application",
-            "relationship": "FOR",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "DEVELOPS",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "BRANDED_AS",
-            "end_node": "Brand",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "OFFERS",
-            "end_node": "Product",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "string",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "string",
+      "properties": {
+        "start_date": "date",
+        "end_date": "date"
+      }
+    },
+    {
+      "label": "Business",
+      "name": "string",
+      "properties": {
+        "category": "string",
+        "years_active": "int"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "string",
+      "properties": {
+        "product_type": "string"
+      }
+    },
+    {
+      "label": "RecruitmentEvent",
+      "name": "string",
+      "properties": {
+        "start_date": "date",
+        "end_date": "date"
+      }
+    },
+    {
+      "label": "Brand",
+      "name": "string",
+      "properties": {}
+    },
+    {
+      "label": "Person",
+      "name": "string",
+      "properties": {
+        "role": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "partners_with",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "organizes",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "announces",
+      "end_node": "RecruitmentEvent",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "invites",
+      "end_node": "Business",
+      "properties": {}
+    },
+    {
+      "start_node": "RecruitmentEvent",
+      "relationship": "targets",
+      "end_node": "Business",
+      "properties": {}
+    },
+    {
+      "start_node": "Business",
+      "relationship": "participates_in",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "develops",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "branded_as",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "Business",
+      "relationship": "offers",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "heads",
+      "end_node": "Organization",
+      "properties": {}
+    }
+  ]
 }

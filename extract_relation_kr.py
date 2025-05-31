@@ -4,37 +4,20 @@ import openai
 from util import merge_json, parse_json
 from dotenv import load_dotenv
 from deduplication import deduplicate
+from tqdm import tqdm
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
-def main(purpose = "기업판매"):
-    OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")  # 기본값: "output"
+def process_file(filename, chunks_dir, result_dir, system_msg, nodes, client):
+        i = int(filename.split('_')[-1].split('.')[0])  # chunked_output_0.txt → 0
 
-    result_dir  = os.path.join(OUTPUT_ROOT, "result")
-    chunks_dir  = os.path.join(OUTPUT_ROOT, "chunked_document")
+        # 파일 경로 설정
+        filename = os.path.join(chunks_dir, filename)
 
-    os.makedirs(result_dir, exist_ok=True)
-
-    # 1. JSON 파일 로딩
-    with open(f"{result_dir}/result.json", "r", encoding="utf-8") as f:
-        result_json = json.load(f)
-        nodes = result_json["nodes"]
-
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-
-    client = openai.OpenAI(api_key=api_key)
-
-    system_msg = (
-        "당신은 RAG 시스템에 사용되는 지식 그래프 작성을 위해 텍스트에서 엔티티를 활용하여 관계를 추출하는 역할을 합니다. "
-        "반드시 올바른 JSON 형식으로만 응답하세요."
-    )
-
-    i = 0
-    while True:
-        filename = f"{chunks_dir}/chunked_output_{i}.txt"
+        # 파일이 존재하지 않으면 종료
         
         if not os.path.exists(filename):
             print(f"파일 없음: {filename} → 종료합니다.")
-            break
+            return
 
         with open(filename, "r", encoding="utf-8") as f:
             content = f.read()
@@ -116,8 +99,44 @@ def main(purpose = "기업판매"):
         
         deduplicate(result_path)
         print(f"[{i}] relation 추출 완료")
-            
-        i += 1
+
+def main(purpose = "기업판매"):
+    OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")  # 기본값: "output"
+
+    result_dir  = os.path.join(OUTPUT_ROOT, "result")
+    chunks_dir  = os.path.join(OUTPUT_ROOT, "chunked_document")
+
+    os.makedirs(result_dir, exist_ok=True)
+
+    # 1. JSON 파일 로딩
+    with open("output/result/result.json", "r", encoding="utf-8") as f:
+        result_json = json.load(f)
+        nodes = result_json["nodes"]
+
+    load_dotenv()
+    api_key = os.getenv("OPENAI_API_KEY")
+
+    client = openai.OpenAI(api_key=api_key)
+
+    system_msg = (
+        "당신은 RAG 시스템에 사용되는 지식 그래프 작성을 위해 텍스트에서 엔티티를 활용하여 관계를 추출하는 역할을 합니다. "
+        "반드시 올바른 JSON 형식으로만 응답하세요."
+    )
+
+    i = 0
+    file_names = os.listdir(chunks_dir)
+    with ThreadPoolExecutor(max_workers=16) as executor:
+        futures = {
+            executor.submit(process_file, filename, chunks_dir, result_dir, system_msg, nodes, client): filename
+            for filename in file_names if filename.endswith('.txt')
+        }
+        
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Processing files"):
+            try:
+                future.result()  # 결과를 기다림
+            except Exception as e:
+                print(f"Error processing {futures[future]}: {e}")
+
 
 if __name__ == "__main__": 
     main(purpose = "기업판매")

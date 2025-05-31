@@ -1,55 +1,44 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "FinancialReport",
-            "name": "FinancialReport",
-            "properties": {
-                "period": "string",
-                "reportDate": "string"
-            }
-        },
-        {
-            "label": "FinancialMetric",
-            "name": "FinancialMetric",
-            "properties": {
-                "metricType": "string",
-                "value": "int",
-                "changePercentage": "float"
-            }
-        },
-        {
-            "label": "EconomicCondition",
-            "name": "EconomicCondition",
-            "properties": {
-                "description": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "REPORTS",
-            "end_node": "FinancialReport",
-            "properties": {}
-        },
-        {
-            "start_node": "FinancialReport",
-            "relationship": "INCLUDES_METRIC",
-            "end_node": "FinancialMetric",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "FACES",
-            "end_node": "EconomicCondition",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "company_name": "string"
+      }
+    },
+    {
+      "label": "FinancialReport",
+      "name": "Financial Report",
+      "properties": {
+        "period": "string",
+        "revenue": "int",
+        "operating_profit": "int",
+        "net_profit": "int",
+        "revenue_change_rate": "float",
+        "profit_change_rate": "float"
+      }
+    },
+    {
+      "label": "EconomicCondition",
+      "name": "Economic Condition",
+      "properties": {
+        "description": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "HAS_REPORT",
+      "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "FinancialReport",
+      "relationship": "MENTIONS_CONDITION",
+      "end_node": "EconomicCondition",
+      "properties": {}
+    }
+  ]
 }

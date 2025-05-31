@@ -1,84 +1,117 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "string",
-            "properties": {
-                "category": "string"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "string",
-            "properties": {
-                "application_deadline": "string",
-                "description": "string"
-            }
-        },
-        {
-            "label": "Funding",
-            "name": "string",
-            "properties": {
-                "min_amount": "int",
-                "max_amount": "int",
-                "currency": "string"
-            }
-        },
-        {
-            "label": "Expert",
-            "name": "string",
-            "properties": {
-                "expertise": "string"
-            }
-        },
-        {
-            "label": "Opportunity",
-            "name": "string",
-            "properties": {
-                "description": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "APPLIES_TO",
-            "end_node": "Program",
-            "properties": {
-                "application_date": "string"
-            }
-        },
-        {
-            "start_node": "Program",
-            "relationship": "PROVIDES",
-            "end_node": "Funding",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "RECEIVES",
-            "end_node": "Funding",
-            "properties": {
-                "grade": "string"
-            }
-        },
-        {
-            "start_node": "Company",
-            "relationship": "CONNECTED_WITH",
-            "end_node": "Expert",
-            "properties": {}
-        },
-        {
-            "start_node": "Program",
-            "relationship": "OFFERS",
-            "end_node": "Opportunity",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "RECEIVES",
-            "end_node": "Opportunity",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "string",
+      "properties": {
+        "company_name": "string",
+        "company_type": "string"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "string",
+      "properties": {
+        "program_name": "string",
+        "description": "string",
+        "application_deadline": "date"
+      }
+    },
+    {
+      "label": "StartupCompany",
+      "name": "string",
+      "properties": {
+        "company_name": "string",
+        "founding_year": "int"
+      }
+    },
+    {
+      "label": "Selection",
+      "name": "string",
+      "properties": {
+        "selected_count": "int",
+        "support_min": "int",
+        "support_max": "int"
+      }
+    },
+    {
+      "label": "Support",
+      "name": "string",
+      "properties": {
+        "support_type": "string",
+        "amount": "int"
+      }
+    },
+    {
+      "label": "Expert",
+      "name": "string",
+      "properties": {
+        "expert_name": "string",
+        "expertise": "string"
+      }
+    },
+    {
+      "label": "Opportunity",
+      "name": "string",
+      "properties": {
+        "opportunity_type": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "ORGANIZES",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "ELIGIBLE_FOR",
+      "end_node": "StartupCompany",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "SELECTS",
+      "end_node": "Selection",
+      "properties": {}
+    },
+    {
+      "start_node": "Selection",
+      "relationship": "APPLIES_TO",
+      "end_node": "StartupCompany",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "PROVIDES",
+      "end_node": "Support",
+      "properties": {}
+    },
+    {
+      "start_node": "Support",
+      "relationship": "FULFILLS",
+      "end_node": "StartupCompany",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "CONNECTS_WITH",
+      "end_node": "Expert",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OFFERS",
+      "end_node": "Opportunity",
+      "properties": {}
+    },
+    {
+      "start_node": "Opportunity",
+      "relationship": "TARGETS",
+      "end_node": "StartupCompany",
+      "properties": {}
+    }
+  ]
 }

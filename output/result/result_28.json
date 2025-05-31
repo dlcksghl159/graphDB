@@ -1,119 +1,119 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "CrowdfundingPlatform",
             "name": "와디즈",
             "properties": {
-                "industry": "Funding Platform"
+                "name": "와디즈"
             }
         },
         {
-            "label": "Brand",
-            "name": "허먼밀러",
+            "label": "Platform",
+            "name": "와디즈",
             "properties": {
-                "category": "Office Chair"
+                "type": "크라우드펀딩",
+                "name": "와디즈"
             }
         },
         {
             "label": "Product",
             "name": "뉴에어론 풀 체어",
             "properties": {
-                "brand_name": "허먼밀러",
-                "funding_amount": 540000000,
-                "category": "Office Chair",
-                "rank": 1
+                "name": "뉴에어론 풀 체어",
+                "category": "홈리빙",
+                "price": 540000000
             }
         },
         {
             "label": "Product",
             "name": "쿠자 멀티핸들 스텐팬",
             "properties": {
-                "funding_amount": 210000000,
-                "category": "Cookware",
-                "rank": 2
+                "name": "쿠자 멀티핸들 스텐팬",
+                "category": "홈리빙",
+                "price": 210000000
             }
         },
         {
             "label": "Product",
             "name": "올리젯 청바지",
             "properties": {
-                "funding_amount": 93000000,
-                "category": "Denim",
-                "rank": 3
+                "name": "올리젯 청바지",
+                "category": "패션",
+                "price": 93000000
             }
         },
         {
-            "label": "ProductCategory",
-            "name": "홈리빙",
+            "label": "Brand",
+            "name": "허먼밀러",
             "properties": {
-                "product_id": "1",
-                "name": "Home Living"
+                "name": "허먼밀러"
             }
         },
         {
-            "label": "ProductCategory",
-            "name": "패션",
+            "label": "Trend",
+            "name": "신중 소비",
             "properties": {
-                "product_id": "2",
-                "name": "Fashion"
+                "description": "경기 불황 속 소비자가 가격보다 품질과 가치를 중시하는 경향"
             }
         },
         {
-            "label": "FundingStatistic",
-            "name": "프리미엄 제품 평균 펀딩",
+            "label": "Metric",
+            "name": "1인당 1회 평균 펀딩 금액",
             "properties": {
-                "avg_per_person_funding": 180000
-            }
-        },
-        {
-            "label": "ConsumerTrend",
-            "name": "다각형 소비",
-            "properties": {
-                "trend_name": "Polygon Consumption"
+                "metric_id": "average_funding_amount_per_person",
+                "name": "1인당 1회 평균 펀딩 금액",
+                "value": 180000,
+                "unit": "KRW"
             }
         }
     ],
     "relations": [
         {
             "start_node": "와디즈",
-            "relationship": "HOSTS",
+            "relationship": "HAS_CATEGORY",
+            "end_node": "홈리빙",
+            "properties": {}
+        },
+        {
+            "start_node": "와디즈",
+            "relationship": "HAS_CATEGORY",
+            "end_node": "패션",
+            "properties": {}
+        },
+        {
+            "start_node": "와디즈",
+            "relationship": "OFFERS",
             "end_node": "뉴에어론 풀 체어",
             "properties": {}
         },
         {
             "start_node": "와디즈",
-            "relationship": "HOSTS",
-            "end_node": "올리젯 청바지",
-            "properties": {}
-        },
-        {
-            "start_node": "와디즈",
-            "relationship": "HOSTS",
+            "relationship": "OFFERS",
             "end_node": "쿠자 멀티핸들 스텐팬",
             "properties": {}
         },
         {
+            "start_node": "와디즈",
+            "relationship": "OFFERS",
+            "end_node": "올리젯 청바지",
+            "properties": {}
+        },
+        {
             "start_node": "뉴에어론 풀 체어",
-            "relationship": "BELONGS_TO",
-            "end_node": "홈리빙",
+            "relationship": "BRANDED_AS",
+            "end_node": "허먼밀러",
             "properties": {}
         },
         {
-            "start_node": "올리젯 청바지",
-            "relationship": "BELONGS_TO",
-            "end_node": "패션",
+            "start_node": "와디즈",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "트렌드",
             "properties": {}
         },
         {
-            "start_node": "쿠자 멀티핸들 스텐팬",
-            "relationship": "BELONGS_TO",
-            "end_node": "홈리빙",
-            "properties": {}
-        },
-        {
-            "start_node": "프리미엄 제품 평균 펀딩",
-            "relationship": "INFLUENCES",
-            "end_node": "다각형 소비",
+            "start_node": "와디즈",
+            "relationship": "TARGETS_METRIC",
+            "end_node": "1인당 1회 평균 펀딩 금액",
             "properties": {}
         }
     ]

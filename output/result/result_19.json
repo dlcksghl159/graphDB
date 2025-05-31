@@ -1,11 +1,16 @@
 {
     "nodes": [
         {
-            "label": "COMPANY",
+            "label": "Company",
             "name": "ADRO",
             "properties": {
+                "name": "ADRO",
                 "industry": "Automotive",
-                "name": "ADRO"
+                "type": "Startup",
+                "founded_year": 0,
+                "location": "South Korea",
+                "annual_revenue": 110000000,
+                "revenue_growth_percentage": 93
             }
         },
         {
@@ -13,167 +18,118 @@
             "name": "Body Kit",
             "properties": {
                 "name": "Body Kit",
-                "product_name": "Body Kit",
-                "category": "Automotive Accessory"
-            }
-        },
-        {
-            "label": "VehicleModel",
-            "name": "Tesla Model Y",
-            "properties": {
-                "name": "Model Y",
-                "brand": "Tesla",
-                "type": "Electric"
-            }
-        },
-        {
-            "label": "VehicleModel",
-            "name": "BMW M4",
-            "properties": {
-                "name": "M4",
-                "brand": "BMW",
-                "type": "Internal Combustion"
+                "category": "Automotive",
+                "type": "Aerodynamic",
+                "launch_year": 0
             }
         },
         {
             "label": "Technology",
             "name": "Computational Fluid Dynamics",
             "properties": {
+                "tech_name": "Computational Fluid Dynamics",
+                "category": "Aerodynamics",
                 "name": "Computational Fluid Dynamics",
-                "category": "Engineering",
-                "provider": "ADRO"
-            }
-        },
-        {
-            "label": "SalesData",
-            "name": "SalesData_2022",
-            "properties": {
-                "year": 2022,
-                "revenue": 110000000,
-                "growth_rate": 93.0,
-                "overseas_ratio": 86.0
-            }
-        },
-        {
-            "label": "MarketRegion",
-            "name": "United States",
-            "properties": {
-                "name": "United States",
-                "region_type": "Country"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "Germany",
-            "properties": {
-                "name": "Germany",
-                "country_name": "Germany"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "Japan",
-            "properties": {
-                "name": "Japan",
-                "country_name": "Japan"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "Hyundai",
-            "properties": {
-                "industry": "Automotive",
-                "name": "Hyundai"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "Kia",
-            "properties": {
-                "industry": "Automotive",
-                "name": "Kia"
+                "description": "Technology used for aerodynamic optimization",
+                "techId": "1"
             }
         },
         {
             "label": "Person",
-            "name": "Yoon Seung-hyun",
+            "name": "Yoon Seung Hyun",
             "properties": {
-                "name": "Yoon Seung-hyun",
-                "role": "CEO"
+                "name": "Yoon Seung Hyun",
+                "role": "CEO",
+                "position": "CEO",
+                "personName": "Yoon Seung Hyun"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Tesla",
+            "properties": {
+                "name": "Tesla",
+                "industry": "Automotive",
+                "type": "Company",
+                "location": "USA"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "North America",
+            "properties": {
+                "name": "North America",
+                "type": "Region",
+                "market_name": "North America",
+                "region": "North America",
+                "market_id": "NA001",
+                "market_type": "Automotive"
+            }
+        },
+        {
+            "label": "Market",
+            "name": "Europe",
+            "properties": {
+                "name": "Europe",
+                "type": "Region",
+                "market_name": "Europe",
+                "region": "Europe",
+                "market_id": "EU001",
+                "market_type": "Automotive"
+            }
+        },
+        {
+            "label": "VehicleModel",
+            "name": "BMW M4",
+            "properties": {
+                "name": "BMW M4",
+                "manufacturer": "BMW"
             }
         }
     ],
     "relations": [
         {
             "start_node": "ADRO",
-            "relationship": "PRODUCES",
+            "relationship": "DEVELOPED",
             "end_node": "Body Kit",
-            "properties": {}
+            "properties": {
+                "method": "Aerodynamic optimization"
+            }
         },
         {
             "start_node": "Body Kit",
-            "relationship": "TARGETS",
-            "end_node": "Tesla Model Y",
-            "properties": {}
-        },
-        {
-            "start_node": "Body Kit",
-            "relationship": "TARGETS",
-            "end_node": "BMW M4",
-            "properties": {}
-        },
-        {
-            "start_node": "Body Kit",
-            "relationship": "USES_TECHNOLOGY",
+            "relationship": "UTILIZES",
             "end_node": "Computational Fluid Dynamics",
             "properties": {}
         },
         {
-            "start_node": "ADRO",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "SalesData_2022",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "EXPORTS_TO",
-            "end_node": "United States",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "PARTNERED_WITH",
-            "end_node": "Hyundai",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "PARTNERED_WITH",
-            "end_node": "Kia",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "PARTNERED_WITH",
-            "end_node": "BMW",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "EXPORTS_TO",
-            "end_node": "Germany",
-            "properties": {}
-        },
-        {
-            "start_node": "ADRO",
-            "relationship": "EXPORTS_TO",
-            "end_node": "Japan",
-            "properties": {}
-        },
-        {
-            "start_node": "Yoon Seung-hyun",
-            "relationship": "LEADS",
+            "start_node": "Yoon Seung Hyun",
+            "relationship": "FOUNDED",
             "end_node": "ADRO",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "Tesla",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "North America",
+            "properties": {}
+        },
+        {
+            "start_node": "ADRO",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "Europe",
+            "properties": {}
+        },
+        {
+            "start_node": "Body Kit",
+            "relationship": "DESIGNED_FOR",
+            "end_node": "BMW M4",
             "properties": {}
         }
     ]

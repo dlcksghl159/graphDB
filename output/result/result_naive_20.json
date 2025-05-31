@@ -1,0 +1,51 @@
+{
+    "nodes": [
+        {
+            "label": "Agreement",
+            "name": "글로벌 물류 지원 협약",
+            "properties": {
+                "agreement_date": "2023-10-14",
+                "agreement_type": "업무협약",
+                "purpose": "수출 중소벤처기업의 글로벌 물류 지원",
+                "location": "부산",
+                "title": "글로벌 물류 지원 협약",
+                "id": "12345"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "중소벤처기업부",
+            "properties": {
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "중소벤처기업부"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "글로벌 물류 지원 협약",
+            "relationship": "INVOLVES",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "description": "협약 체결 기관"
+            }
+        },
+        {
+            "start_node": "글로벌 물류 지원 협약",
+            "relationship": "INCLUDES",
+            "end_node": "인천",
+            "properties": {
+                "description": "해상 물류 공간 확보 예정 항만"
+            }
+        }
+    ]
+}

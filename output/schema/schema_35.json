@@ -1,113 +1,102 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "String",
-            "properties": {
-                "type": "string"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "String",
-            "properties": {
-                "start_date": "string",
-                "end_date": "string"
-            }
-        },
-        {
-            "label": "ParticipantCompany",
-            "name": "String",
-            "properties": {
-                "category": "string",
-                "business_years": "int",
-                "business_type": "string"
-            }
-        },
-        {
-            "label": "ProductType",
-            "name": "String",
-            "properties": {
-                "description": "string"
-            }
-        },
-        {
-            "label": "Brand",
-            "name": "String",
-            "properties": {
-                "category": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "String",
-            "properties": {
-                "position": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "CONDUCTS",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "Organization",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "Organization",
-            "properties": {
-                "date": "string"
-            }
-        },
-        {
-            "start_node": "Project",
-            "relationship": "TARGETS",
-            "end_node": "ParticipantCompany",
-            "properties": {}
-        },
-        {
-            "start_node": "ParticipantCompany",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "DEVELOPS",
-            "end_node": "ProductType",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "SUPPLIES",
-            "end_node": "ProductType",
-            "properties": {}
-        },
-        {
-            "start_node": "Brand",
-            "relationship": "BRANDS",
-            "end_node": "ProductType",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "LED_BY",
-            "end_node": "Person",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "AFFILIATED_WITH",
-            "end_node": "Organization",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "조직/기관",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "프로젝트",
+      "properties": {
+        "name": "string",
+        "start_date": "string",
+        "end_date": "string"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "참여업체",
+      "properties": {
+        "name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "제품",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Brand",
+      "name": "브랜드",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "인물",
+      "properties": {
+        "name": "string",
+        "position": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNED_AGREEMENT_WITH",
+      "end_node": "Organization",
+      "properties": {
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "INITIATED",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "RECRUITED",
+      "end_node": "Company",
+      "properties": {
+        "deadline": "string"
+      }
+    },
+    {
+      "start_node": "Project",
+      "relationship": "SELECTED",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPED",
+      "end_node": "Product",
+      "properties": {
+        "method": "string"
+      }
+    },
+    {
+      "start_node": "Product",
+      "relationship": "BRANDED_AS",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "LEADS",
+      "end_node": "Organization",
+      "properties": {}
+    }
+  ]
 }

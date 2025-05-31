@@ -1,134 +1,108 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "LegalEntity",
-            "name": "Legal Entity",
-            "properties": {
-                "name": "string",
-                "country": "string",
-                "established_year": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "brand_name": "string",
-                "generic_name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "Market",
-            "name": "Market",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "DistributionPartner",
-            "name": "Distribution Partner",
-            "properties": {
-                "name": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Tender",
-            "name": "Tender",
-            "properties": {
-                "name": "string",
-                "scope": "string"
-            }
-        },
-        {
-            "label": "Stakeholder",
-            "name": "Stakeholder",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "SalesModel",
-            "name": "Sales Model",
-            "properties": {
-                "model_type": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "LegalEntity",
-            "relationship": "SUBSIDIARY_OF",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "OPERATES_IN",
-            "end_node": "Market",
-            "properties": {}
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "HAS_PARTNER",
-            "end_node": "DistributionPartner",
-            "properties": {}
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "CONVERTED_TO",
-            "end_node": "SalesModel",
-            "properties": {
-                "date": "string"
-            }
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "SELLS",
-            "end_node": "Product",
-            "properties": {
-                "start_date": "string"
-            }
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "Tender",
-            "properties": {
-                "participation_year": "int"
-            }
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "WINS",
-            "end_node": "Tender",
-            "properties": {
-                "start_date": "string",
-                "end_date": "string"
-            }
-        },
-        {
-            "start_node": "Tender",
-            "relationship": "COVERS_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "LegalEntity",
-            "relationship": "NETWORKS_WITH",
-            "end_node": "Stakeholder",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "company_id": "string",
+        "name": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Subsidiary",
+      "name": "Subsidiary",
+      "properties": {
+        "subsidiary_id": "string",
+        "name": "string",
+        "country": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "product_id": "string",
+        "name": "string",
+        "generic_name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Partner",
+      "name": "Partner",
+      "properties": {
+        "partner_id": "string",
+        "name": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "Market",
+      "properties": {
+        "market_id": "string",
+        "region": "string",
+        "market_type": "string"
+      }
+    },
+    {
+      "label": "Tender",
+      "name": "Tender",
+      "properties": {
+        "tender_id": "string",
+        "name": "string",
+        "start_date": "string",
+        "end_date": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SUBSIDIARY",
+      "end_node": "Subsidiary",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "OPERATES_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "SELLS",
+      "end_node": "Product",
+      "properties": {
+        "since": "string"
+      }
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Tender",
+      "properties": {}
+    },
+    {
+      "start_node": "Tender",
+      "relationship": "AWARDED_PRODUCT",
+      "end_node": "Product",
+      "properties": {
+        "duration": "string"
+      }
+    },
+    {
+      "start_node": "Market",
+      "relationship": "HOSTS",
+      "end_node": "Tender",
+      "properties": {}
+    }
+  ]
 }

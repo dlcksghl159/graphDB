@@ -1,0 +1,251 @@
+{
+    "nodes": [
+        {
+            "label": "Person",
+            "name": "김두연",
+            "properties": {
+                "name": "김두연",
+                "role": "프레스 업무",
+                "age": 71
+            }
+        },
+        {
+            "label": "Product",
+            "name": "풀히트 푸드워머",
+            "properties": {
+                "name": "풀히트 푸드워머",
+                "preheatTime": "10초",
+                "design": "롤러블 디자인",
+                "portability": "휴대 간편",
+                "durability": "내구성 뛰어남",
+                "temperatureLevels": "60도와 100도",
+                "safetyFeatures": "잠금 모드와 자동 오프 기능"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Hyundai Livart",
+            "properties": {
+                "name": "Hyundai Livart",
+                "stock_code": "079430",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4378000000
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "글로벌 물류 지원 협약",
+            "properties": {
+                "agreement_date": "2023-10-14",
+                "agreement_type": "업무협약",
+                "purpose": "수출 중소벤처기업의 글로벌 물류 지원",
+                "location": "부산",
+                "title": "글로벌 물류 지원 협약",
+                "id": "12345"
+            }
+        },
+        {
+            "label": "Factory",
+            "name": "안산 공장",
+            "properties": {
+                "factoryName": "안산 공장",
+                "location": "경기 안산시 단원구",
+                "workerCount": 60,
+                "maxDailyProduction": 1200
+            }
+        },
+        {
+            "label": "Region",
+            "name": "Spain",
+            "properties": {
+                "name": "Spain"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "케이캡",
+            "properties": {
+                "name": "케이캡",
+                "category": "위식도역류질환 치료제"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Hanssem",
+            "properties": {
+                "name": "Hanssem",
+                "stock_code": "009240",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4434000000
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "ESG 지원 업무협약",
+            "properties": {
+                "agreement_date": "2023-09-14",
+                "agreement_type": "업무협약",
+                "purpose": "ESG 지원",
+                "location": "에이피텍 본사",
+                "title": "ESG 지원 업무협약",
+                "id": "AG_20230914"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "중소벤처기업부",
+            "properties": {
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "중소벤처기업부"
+            }
+        },
+        {
+            "label": "Technology",
+            "name": "Computational Fluid Dynamics",
+            "properties": {
+                "tech_name": "Computational Fluid Dynamics",
+                "category": "Aerodynamics",
+                "description": "Technology used for aerodynamic optimization"
+            }
+        },
+        {
+            "label": "CrowdfundingPlatform",
+            "name": "와디즈",
+            "properties": {
+                "name": "와디즈"
+            }
+        },
+        {
+            "label": "Location",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도",
+                "type": "Province",
+                "region": "South Korea",
+                "country": "South Korea"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "industry": "제약바이오",
+                "name": "삼성바이오로직스"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "롯데웰푸드",
+            "properties": {
+                "type": "Corporation",
+                "location": "대한민국",
+                "name": "롯데웰푸드",
+                "industry": "Food Manufacturing"
+            }
+        },
+        {
+            "label": "Country",
+            "name": "China",
+            "properties": {
+                "name": "China"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원",
+                "location": "인천 송도",
+                "title": "협력사 ESG 지원사업 업무협약"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Celltrion",
+            "properties": {
+                "name": "Celltrion",
+                "country": "South Korea",
+                "industry": "Biotechnology",
+                "annual_revenue": 5000000000
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "한화오션디지털",
+            "properties": {
+                "name": "한화오션디지털",
+                "industry": "디지털",
+                "type": "회사",
+                "location": "한국"
+            }
+        },
+        {
+            "label": "SME",
+            "name": "에이피텍",
+            "properties": {
+                "industry": "전자",
+                "name": "에이피텍",
+                "location": "인천 송도",
+                "partner_since_year": 2025
+            }
+        },
+        {
+            "label": "MotorVehicle",
+            "name": "Body Kit",
+            "properties": {
+                "name": "Body Kit",
+                "category": "Automotive",
+                "type": "Aerodynamic"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "SIGNED_AGREEMENT_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "agreement_date": "2023-10-14",
+                "purpose": "AI 플랫폼 시장 확장 및 서비스 개발 협력"
+            }
+        },
+        {
+            "start_node": "파인디",
+            "relationship": "OPERATES",
+            "end_node": "파인디 팀플러스",
+            "properties": {
+                "users": "200,000",
+                "companies": "3,000",
+                "service_area": "한국"
+            }
+        },
+        {
+            "start_node": "김재원",
+            "relationship": "REPRESENTS",
+            "end_node": "엘리스그룹",
+            "properties": {
+                "title": "대표"
+            }
+        },
+        {
+            "start_node": "야마다 유이치로",
+            "relationship": "REPRESENTS",
+            "end_node": "파인디",
+            "properties": {
+                "title": "대표"
+            }
+        }
+    ]
+}

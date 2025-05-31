@@ -1,81 +1,74 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "company_type": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {}
-        },
-        {
-            "label": "ProductType",
-            "name": "ProductType",
-            "properties": {}
-        },
-        {
-            "label": "FinancialPerformance",
-            "name": "FinancialPerformance",
-            "properties": {
-                "year": "int",
-                "quarter": "string",
-                "revenue": "int",
-                "operating_income": "int",
-                "revenue_growth_percent": "float",
-                "operating_income_growth_percent": "float"
-            }
-        },
-        {
-            "label": "MarketRegion",
-            "name": "MarketRegion",
-            "properties": {}
-        },
-        {
-            "label": "Technology",
-            "name": "Technology",
-            "properties": {}
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "PRODUCES",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "IS_A",
-            "end_node": "ProductType",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "HAS_PERFORMANCE",
-            "end_node": "FinancialPerformance",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "APPROVED_IN",
-            "end_node": "MarketRegion",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "USES_TECHNOLOGY",
-            "end_node": "Technology",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "EXPORTS_TO",
-            "end_node": "MarketRegion",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "companyName": "string",
+        "industryType": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "productName": "string",
+        "productType": "string"
+      }
+    },
+    {
+      "label": "PerformanceRecord",
+      "name": "PerformanceRecord",
+      "properties": {
+        "quarter": "string",
+        "revenueKRW": "int",
+        "operatingProfitKRW": "int"
+      }
+    },
+    {
+      "label": "MarketRegion",
+      "name": "MarketRegion",
+      "properties": {
+        "regionName": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_PERFORMANCE",
+      "end_node": "PerformanceRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SOLD_IN",
+      "end_node": "MarketRegion",
+      "properties": {
+        "launchDate": "string"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "LICENSED_TO",
+      "end_node": "Company",
+      "properties": {
+        "productName": "string",
+        "licenseRevenueKRW": "int",
+        "agreementType": "string"
+      }
+    }
+  ]
 }

@@ -1,44 +1,94 @@
 {
     "nodes": [
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "중소벤처기업진흥공단",
             "properties": {
+                "category": "",
+                "type": "",
+                "location": "",
                 "name": "중소벤처기업진흥공단",
-                "region": "서울"
+                "industry": "",
+                "sector": ""
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "Organization",
             "name": "부산항만공사",
             "properties": {
+                "category": "",
+                "type": "",
+                "location": "",
                 "name": "부산항만공사",
-                "region": "부산"
+                "industry": "",
+                "sector": ""
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "글로벌 물류 지원 협약",
+            "properties": {
+                "agreement_date": "13",
+                "agreement_type": "",
+                "date": "2023-10-14",
+                "purpose": "수출 중소벤처기업의 글로벌 물류 지원",
+                "location": "",
+                "title": "",
+                "id": "",
+                "name": "글로벌 물류 지원 협약",
+                "agreement_name": "글로벌 물류 지원 협약",
+                "type": ""
             }
         },
         {
             "label": "LogisticsCenter",
             "name": "BPA 해외물류센터",
             "properties": {
-                "center_name": "BPA 해외물류센터",
+                "region": "미국 로스앤젤레스·롱비치 지역",
+                "centerType": "",
                 "location": "미국 로스앤젤레스·롱비치 지역",
+                "center_type": "",
+                "name": "BPA 해외물류센터",
                 "operator": "부산항만공사"
             }
         },
         {
-            "label": "Company",
-            "name": "미국 수출 중소벤처기업",
+            "label": "LogisticsPlatform",
+            "name": "스마트트레이드허브",
             "properties": {
-                "name": "미국 수출 중소벤처기업",
-                "region": "로스앤젤레스"
+                "description": "중소기업 전용 항공물류센터",
+                "platform_type": ""
             }
         },
         {
-            "label": "Platform",
-            "name": "스마트트레이드허브",
+            "label": "Region",
+            "name": "부산",
             "properties": {
-                "platform_name": "스마트트레이드허브",
-                "description": "국내 최초의 중소기업 전용 항공물류센터"
+                "name": "부산"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "여수·광양",
+            "properties": {
+                "name": "여수·광양"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "강석진",
+            "properties": {
+                "name": "강석진",
+                "title": "이사장",
+                "role": "",
+                "position": ""
             }
         }
     ],
@@ -48,8 +98,20 @@
             "relationship": "SIGNED_AGREEMENT_WITH",
             "end_node": "부산항만공사",
             "properties": {
-                "date": "2023-10-14"
+                "agreement_date": "2023-10-14"
             }
+        },
+        {
+            "start_node": "글로벌 물류 지원 협약",
+            "relationship": "UTILIZES_CENTER",
+            "end_node": "BPA 해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "ESTABLISHES_PLATFORM",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
         },
         {
             "start_node": "BPA 해외물류센터",
@@ -58,15 +120,39 @@
             "properties": {}
         },
         {
-            "start_node": "미국 수출 중소벤처기업",
-            "relationship": "USES",
-            "end_node": "BPA 해외물류센터",
+            "start_node": "스마트트레이드허브",
+            "relationship": "OFFERS_SERVICE",
+            "end_node": "중소기업 전용 항공·해운 통합물류 지원 플랫폼",
             "properties": {}
         },
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "CREATED_PLATFORM",
-            "end_node": "스마트트레이드허브",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "글로벌 물류 지원 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "부산",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "인천",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "여수·광양",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "LEADS",
+            "end_node": "중소벤처기업진흥공단",
             "properties": {}
         }
     ]

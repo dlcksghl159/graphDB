@@ -1,101 +1,95 @@
 {
-    "nodes": [
-        {
-            "label": "ExportReport",
-            "name": "수출 동향 보고서",
-            "properties": {
-                "report_id": "string",
-                "period": "string",
-                "total_export_usd": "float",
-                "change_rate": "float"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "수출 품목",
-            "properties": {
-                "product_name": "string",
-                "export_usd": "float",
-                "rank": "int"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "수출국",
-            "properties": {
-                "country_name": "string",
-                "export_usd": "float",
-                "change_rate": "float"
-            }
-        },
-        {
-            "label": "Agency",
-            "name": "기관",
-            "properties": {
-                "agency_name": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "담당자",
-            "properties": {
-                "person_name": "string",
-                "position": "string"
-            }
-        },
-        {
-            "label": "TariffMeasure",
-            "name": "관세 조치",
-            "properties": {
-                "measure_name": "string",
-                "effective_date": "string",
-                "products_affected": "string",
-                "rate_effect": "float"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Agency",
-            "relationship": "ISSUED",
-            "end_node": "ExportReport",
-            "properties": {}
-        },
-        {
-            "start_node": "ExportReport",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "ExportReport",
-            "relationship": "INCLUDES_COUNTRY",
-            "end_node": "Country",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "WORKS_AT",
-            "end_node": "Agency",
-            "properties": {}
-        },
-        {
-            "start_node": "TariffMeasure",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "TariffMeasure",
-            "relationship": "IMPOSED_BY",
-            "end_node": "Country",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "MONITORS",
-            "end_node": "TariffMeasure",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "기업",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "제품",
+      "properties": {
+        "name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Country",
+      "name": "국가",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "ExportStatistic",
+      "name": "수출통계",
+      "properties": {
+        "period": "string",
+        "amount": "float",
+        "growth_rate": "float"
+      }
+    },
+    {
+      "label": "Agency",
+      "name": "기관",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "TariffMeasure",
+      "name": "관세조치",
+      "properties": {
+        "name": "string",
+        "enact_date": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "HAS_EXPORT_STATISTIC",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "TO_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Agency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "Agency",
+      "relationship": "IMPOSES",
+      "end_node": "TariffMeasure",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "AFFECTS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "APPLIES_TO",
+      "end_node": "Country",
+      "properties": {}
+    }
+  ]
 }

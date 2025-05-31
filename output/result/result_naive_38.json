@@ -1,0 +1,33 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Celltrion",
+            "properties": {
+                "name": "Celltrion",
+                "country": "South Korea",
+                "industry": "Biotechnology",
+                "annual_revenue": 5000000000
+            }
+        },
+        {
+            "label": "Region",
+            "name": "Spain",
+            "properties": {
+                "name": "Spain"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Celltrion",
+            "relationship": "IMPLEMENTED_DIRECT_SALES",
+            "end_node": "Spain",
+            "properties": {
+                "product": "항암제 3종",
+                "local_entity": "셀트리온 스페인 법인",
+                "start_date": "2023-10"
+            }
+        }
+    ]
+}

@@ -1,140 +1,145 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "founded_year": "int",
-                "cumulative_investment": "int",
-                "ipo_target_year": "int"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "Project",
-            "properties": {
-                "name": "string",
-                "type": "string",
-                "scale_amount": "int",
-                "financing_structure": "string",
-                "status": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "name": "string",
-                "description": "string",
-                "launch_year": "int"
-            }
-        },
-        {
-            "label": "Partner",
-            "name": "Partner",
-            "properties": {
-                "name": "string",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Crop",
-            "name": "Crop",
-            "properties": {
-                "name": "string",
-                "annual_production_packs": "int"
-            }
-        },
-        {
-            "label": "Award",
-            "name": "Award",
-            "properties": {
-                "name": "string",
-                "year": "int",
-                "organization": "string"
-            }
-        },
-        {
-            "label": "FundingRound",
-            "name": "FundingRound",
-            "properties": {
-                "round": "string",
-                "amount": "int"
-            }
-        },
-        {
-            "label": "Location",
-            "name": "Location",
-            "properties": {
-                "name": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Metric",
-            "name": "Metric",
-            "properties": {
-                "type": "string",
-                "value": "string",
-                "unit": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "CONDUCTS",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "LOCATED_IN",
-            "end_node": "Location",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "DEVELOPED",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "WON",
-            "end_node": "Award",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "RAISED",
-            "end_node": "FundingRound",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "PARTNERED_WITH",
-            "end_node": "Partner",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SUPPLIES",
-            "end_node": "Crop",
-            "properties": {}
-        },
-        {
-            "start_node": "Crop",
-            "relationship": "SUPPLIED_TO",
-            "end_node": "Partner",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "ACHIEVED",
-            "end_node": "Metric",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "founded_year": "int",
+        "total_investment": "int",
+        "funding_stage": "string",
+        "ipo_target_year": "int",
+        "vision": "string"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "String",
+      "properties": {
+        "scale": "string",
+        "financing_structure": "string",
+        "closing_target": "string"
+      }
+    },
+    {
+      "label": "Facility",
+      "name": "String",
+      "properties": {
+        "type": "string",
+        "water_saving_rate": "string",
+        "waste_rate": "string",
+        "ghg_reduction": "string",
+        "energy_source": "string",
+        "production_multiplier": "string"
+      }
+    },
+    {
+      "label": "InvestmentRound",
+      "name": "String",
+      "properties": {
+        "series": "string",
+        "amount": "int",
+        "date": "string"
+      }
+    },
+    {
+      "label": "Award",
+      "name": "String",
+      "properties": {
+        "year": "int",
+        "awarding_body": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "String",
+      "properties": {
+        "type": "string",
+        "launch_year": "int"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "String",
+      "properties": {
+        "region": "string"
+      }
+    },
+    {
+      "label": "Crop",
+      "name": "String",
+      "properties": {
+        "category": "string",
+        "annual_production": "int"
+      }
+    },
+    {
+      "label": "Partner",
+      "name": "String",
+      "properties": {
+        "industry": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPS",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "INCLUDES_FACILITY",
+      "end_node": "Facility",
+      "properties": {}
+    },
+    {
+      "start_node": "Facility",
+      "relationship": "LOCATED_AT",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RAISED",
+      "end_node": "InvestmentRound",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "WON",
+      "end_node": "Award",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "RECEIVED_AWARD",
+      "end_node": "Award",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPED",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUPPLIES",
+      "end_node": "Crop",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Crop",
+      "relationship": "SUPPLIED_TO",
+      "end_node": "Partner",
+      "properties": {}
+    }
+  ]
 }

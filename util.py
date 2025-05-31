@@ -73,12 +73,14 @@ def merge_json(
 import re
 import json
 
+
 def parse_json(gpt_output: str) -> dict:
     """
     GPT 출력 중에서 JSON 블록을 자동으로 탐지하여 파싱한 후 dict로 반환.
     - ```json ... ``` 코드블록 우선 탐지
     - 없으면 첫 '{' 위치부터 JSONDecoder.raw_decode 시도
     - 그래도 실패 시 마지막 '}'까지 슬라이싱 후 json.loads
+    - 단일 따옴표 → 이중 따옴표, 후행 쉼표 제거, 객체 사이 쉼표 누락 보정
     """
     # 1) ```json ... ``` 또는 ``` ... ``` 블록 탐지
     fence_pattern = r'```(?:json)?\s*(\{[\s\S]*?\})\s*```'
@@ -93,7 +95,7 @@ def parse_json(gpt_output: str) -> dict:
             return {}
         decoder = json.JSONDecoder()
         try:
-            obj, idx = decoder.raw_decode(gpt_output[start:])
+            obj, _ = decoder.raw_decode(gpt_output[start:])
             return obj
         except json.JSONDecodeError:
             # 3) 마지막 '}'까지 잘라서 재시도
@@ -102,6 +104,17 @@ def parse_json(gpt_output: str) -> dict:
                 print("❌ 유효한 '}'를 찾을 수 없음")
                 return {}
             json_str = gpt_output[start:end+1]
+
+    # --- 전처리: 일관된 따옴표, 후행 쉼표, 누락 쉼표 보정 ---
+    # 1) 단일 따옴표를 이중 따옴표로 (키·문자열 둘 다)
+    #    단, 이미 이중 따옴표 안의 단일 따옴표는 건드리지 않도록 간단 처리
+    json_str = re.sub(r"(?<!\")'([^']*?)'(?!\")", r'"\1"', json_str)
+
+    # 2) 후행 쉼표 제거 (}, ], }   → }  etc.)
+    json_str = re.sub(r",\s*([}\]])", r"\1", json_str)
+
+    # 3) 배열 내 객체 사이에 누락된 쉼표 삽입 (`}{` → `},{`)
+    json_str = re.sub(r"}\s*{", r"},{" , json_str)
 
     # 공백·줄바꿈 정리
     json_str = json_str.strip()

@@ -1,119 +1,94 @@
 {
     "nodes": [
         {
-            "label": "Association",
-            "name": "하이서울기업협회",
+            "label": "Company",
+            "name": "포시에스",
             "properties": {
-                "phone": "",
-                "email": ""
+                "name": "포시에스",
+                "stock_code": "189690",
+                "company_name": "포시에스",
+                "industry": "전자문서",
+                "category": "",
+                "location": "서울 강남구",
+                "company_id": "1"
             }
         },
         {
-            "label": "Official",
+            "label": "Association",
+            "name": "하이서울기업협회",
+            "properties": {
+                "name": "하이서울기업협회",
+                "type": "우수 중소기업 네트워크",
+                "established_year": 2003
+            }
+        },
+        {
+            "label": "Person",
             "name": "박미경",
             "properties": {
-                "official_name": "박미경",
-                "title": "하이서울기업협회장",
                 "name": "박미경",
+                "title": "제7대 회장",
+                "role": "회장",
                 "position": "대표"
             }
         },
         {
-            "label": "Company",
-            "name": "포시에스",
+            "label": "TradePolicy",
+            "name": "미국 고관세 정책",
             "properties": {
-                "industry": "전자문서",
-                "name": "포시에스"
+                "name": "미국 고관세 정책",
+                "imposingCountry": "미국",
+                "rate": 0.0,
+                "effective_date": "",
+                "description": "트럼프 정부의 고관세 정책"
             }
         },
         {
-            "label": "Country",
-            "name": "미국",
-            "properties": {
-                "country_code": "",
-                "name": "미국",
-                "country_name": "미국",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "북미",
-                "countryName": "미국",
-                "export_usd": 0,
-                "change_rate": 0
-            }
-        },
-        {
-            "label": "Country",
+            "label": "Region",
             "name": "일본",
             "properties": {
-                "country_code": "",
-                "name": "일본",
-                "country_name": "일본",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "아시아",
-                "countryName": "일본",
-                "export_usd": 0,
-                "change_rate": 0
+                "name": "일본"
             }
         },
         {
-            "label": "Country",
-            "name": "인도네시아",
-            "properties": {
-                "country_code": "",
-                "name": "인도네시아",
-                "country_name": "인도네시아",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "동남아시아",
-                "countryName": "인도네시아",
-                "export_usd": 0,
-                "change_rate": 0
-            }
-        },
-        {
-            "label": "Country",
+            "label": "Region",
             "name": "베트남",
             "properties": {
-                "country_code": "",
-                "name": "베트남",
-                "country_name": "베트남",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "동남아시아",
-                "countryName": "베트남",
-                "export_usd": 0,
-                "change_rate": 0
+                "name": "베트남"
             }
         },
         {
-            "label": "Country",
+            "label": "Region",
             "name": "대만",
             "properties": {
-                "country_code": "",
-                "name": "대만",
-                "country_name": "대만",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "동남아시아",
-                "countryName": "대만",
-                "export_usd": 0,
-                "change_rate": 0
+                "name": "대만"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인도네시아",
+            "properties": {
+                "name": "인도네시아"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "하이서울",
+            "properties": {
+                "name": "하이서울"
+            }
+        },
+        {
+            "label": "Initiative",
+            "name": "AI 분과",
+            "properties": {
+                "name": "AI 분과",
+                "target_year": 2023,
+                "category": "교육"
             }
         }
     ],
     "relations": [
-        {
-            "start_node": "박미경",
-            "relationship": "LEADS",
-            "end_node": "포시에스",
-            "properties": {}
-        },
         {
             "start_node": "박미경",
             "relationship": "LEADS",
@@ -122,26 +97,50 @@
         },
         {
             "start_node": "포시에스",
-            "relationship": "EXPORTS_TO",
+            "relationship": "OPERATES_IN",
             "end_node": "일본",
             "properties": {}
         },
         {
             "start_node": "포시에스",
-            "relationship": "EXPORTS_TO",
+            "relationship": "OPERATES_IN",
             "end_node": "베트남",
             "properties": {}
         },
         {
             "start_node": "포시에스",
-            "relationship": "EXPORTS_TO",
+            "relationship": "OPERATES_IN",
             "end_node": "대만",
             "properties": {}
         },
         {
             "start_node": "포시에스",
-            "relationship": "EXPORTS_TO",
+            "relationship": "OPERATES_IN",
             "end_node": "인도네시아",
+            "properties": {}
+        },
+        {
+            "start_node": "하이서울",
+            "relationship": "BRANDED_AS",
+            "end_node": "하이서울 프렌즈",
+            "properties": {}
+        },
+        {
+            "start_node": "하이서울기업협회",
+            "relationship": "HAS_DIVISION",
+            "end_node": "AI 분과",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 고관세 정책",
+            "relationship": "IMPOSES",
+            "end_node": "하이서울기업협회",
+            "properties": {}
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "BRANDED_AS",
+            "end_node": "하이서울",
             "properties": {}
         }
     ]

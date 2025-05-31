@@ -2,153 +2,112 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "셀트리온",
+            "name": "Celltrion",
             "properties": {
-                "industry": "Pharmaceuticals",
-                "name": "셀트리온"
+                "name": "Celltrion",
+                "country": "South Korea",
+                "industry": "Pharmaceuticals"
             }
         },
         {
-            "label": "Subsidiary",
-            "name": "셀트리온 스페인 법인",
+            "label": "Region",
+            "name": "Spain",
             "properties": {
-                "name": "셀트리온 스페인 법인",
-                "country": "Spain"
+                "name": "Spain"
             }
         },
         {
-            "label": "Product",
-            "name": "트룩시마",
+            "label": "Region",
+            "name": "Europe",
             "properties": {
-                "product_name": "트룩시마",
-                "generic_name": "리툭시맙"
+                "name": "Europe"
             }
         },
         {
-            "label": "Product",
-            "name": "허쥬마",
+            "label": "Region",
+            "name": "Portugal",
             "properties": {
-                "product_name": "허쥬마",
-                "generic_name": "트라스투주맙"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "베그젤마",
-            "properties": {
-                "product_name": "베그젤마",
-                "generic_name": "베바시주맙"
+                "name": "Portugal"
             }
         },
         {
             "label": "Product",
-            "name": "스테키마",
+            "name": "Truxima",
             "properties": {
-                "product_name": "스테키마",
-                "generic_name": "우스테키누맙"
+                "name": "Truxima",
+                "active_ingredient": "Rituximab",
+                "category": "Anticancer"
             }
         },
         {
-            "label": "Tender",
-            "name": "CSC 컨소시엄 입찰",
+            "label": "Product",
+            "name": "Herzuma",
             "properties": {
-                "name": "CSC 컨소시엄 입찰"
+                "name": "Herzuma",
+                "active_ingredient": "Trastuzumab",
+                "category": "Anticancer"
             }
         },
         {
-            "label": "Country",
-            "name": "스페인",
+            "label": "Product",
+            "name": "Vegzelma",
             "properties": {
-                "name": "스페인"
+                "name": "Vegzelma",
+                "active_ingredient": "Bevacizumab",
+                "category": "Anticancer"
             }
         },
         {
-            "label": "Country",
-            "name": "포르투갈",
+            "label": "Product",
+            "name": "Stelara",
             "properties": {
-                "name": "포르투갈"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "강석훈",
-            "properties": {
-                "name": "강석훈",
-                "role": "법인장"
+                "name": "Stelara",
+                "active_ingredient": "Ustekinumab",
+                "category": "Autoimmune"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "셀트리온",
-            "relationship": "HAS_SUBSIDIARY",
-            "end_node": "셀트리온 스페인 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
-            "end_node": "트룩시마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
-            "end_node": "허쥬마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
-            "end_node": "베그젤마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "CSC 컨소시엄 입찰",
-            "properties": {}
-        },
-        {
-            "start_node": "CSC 컨소시엄 입찰",
-            "relationship": "COVERS_PRODUCT",
-            "end_node": "트룩시마",
-            "properties": {}
-        },
-        {
-            "start_node": "CSC 컨소시엄 입찰",
-            "relationship": "COVERS_PRODUCT",
-            "end_node": "허쥬마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "LAUNCHES",
-            "end_node": "스테키마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "IN_INDUSTRY",
-            "end_node": "Pharmaceuticals",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
+            "start_node": "Celltrion",
             "relationship": "OPERATES_IN",
-            "end_node": "스페인",
+            "end_node": "Spain",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
+            "start_node": "Celltrion",
             "relationship": "OPERATES_IN",
-            "end_node": "포르투갈",
+            "end_node": "Europe",
             "properties": {}
         },
         {
-            "start_node": "강석훈",
-            "relationship": "LEADS",
-            "end_node": "셀트리온",
+            "start_node": "Celltrion",
+            "relationship": "OPERATES_IN",
+            "end_node": "Portugal",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "OFFERS",
+            "end_node": "Truxima",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "OFFERS",
+            "end_node": "Herzuma",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "OFFERS",
+            "end_node": "Vegzelma",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "OFFERS",
+            "end_node": "Stelara",
             "properties": {}
         }
     ]

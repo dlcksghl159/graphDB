@@ -2,77 +2,103 @@
     "nodes": [
         {
             "label": "Organization",
-            "name": "기술보증기금 지식재산공제센터",
+            "name": "기술보증기금",
             "properties": {
-                "org_type": "String",
-                "industry": "지식재산",
+                "category": "",
+                "type": "공공기관",
                 "location": "서울",
-                "organization_id": "기술보증기금",
-                "name": "기술보증기금 지식재산공제센터",
-                "org_id": "기술보증기금",
-                "org_name": "기술보증기금",
-                "type": "공제",
-                "website": "",
-                "orgName": "기술보증기금 지식재산공제센터",
-                "orgType": "기술보증",
-                "region": "서울",
-                "sector": "금융"
+                "name": "기술보증기금",
+                "industry": "",
+                "sector": ""
             }
         },
         {
             "label": "Organization",
             "name": "인천지식재산센터",
             "properties": {
-                "org_type": "String",
-                "industry": "지식재산",
-                "location": "인천",
-                "organization_id": "인천지식센터",
-                "name": "인천지식재산센터",
-                "org_id": "인천지식센터",
-                "org_name": "인천지식재산센터",
+                "category": "",
                 "type": "센터",
-                "website": "",
-                "orgName": "인천지식재산센터",
-                "orgType": "지식재산",
-                "region": "인천",
-                "sector": "금융"
+                "location": "인천",
+                "name": "인천지식재산센터",
+                "industry": "",
+                "sector": ""
             }
         },
         {
             "label": "Agreement",
-            "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "name": "공동발전 업무 협약",
             "properties": {
-                "agreement_id": "기보-인천지식센터-협약",
-                "date": "2023-09-14",
-                "location": "서울",
+                "agreement_date": "date",
+                "agreement_type": "MOU",
+                "date": "2023-11-14",
                 "purpose": "지식재산공제사업 활성화",
-                "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
-                "title": "MOU",
-                "subject": "공제사업 활성화 및 인천지역 중소기업 지원",
-                "agreement_date": "2023-09-14",
-                "description": ""
+                "location": "서울",
+                "title": "공동발전 업무 협약",
+                "id": "string",
+                "agreement_name": "공동발전 업무 협약",
+                "type": "MOU"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "지식재산공제사업",
+            "properties": {
+                "name": "지식재산공제사업",
+                "start_year": 2019,
+                "participant_count": 0,
+                "year": 2019,
+                "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크 감소를 위한 금융제도",
+                "program_id": "string"
+            }
+        },
+        {
+            "label": "SME",
+            "name": "인천지역 중소기업",
+            "properties": {
+                "industry": "지식재산",
+                "name": "인천지역 중소기업",
+                "category": "중소",
+                "location": "인천",
+                "partner_since_year": 0,
+                "company_id": "string"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "기술보증기금 지식재산공제센터",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "인천지식재산센터",
-            "properties": {
-                "date": "2023-09-14"
-            }
-        },
-        {
-            "start_node": "기술보증기금 지식재산공제센터",
-            "relationship": "SIGNED",
-            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "start_node": "기술보증기금",
+            "relationship": "SIGNS",
+            "end_node": "공동발전 업무 협약",
             "properties": {}
         },
         {
             "start_node": "인천지식재산센터",
-            "relationship": "SIGNED",
-            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "relationship": "SIGNS",
+            "end_node": "공동발전 업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "공동발전 업무 협약",
+            "relationship": "INCLUDES_PROGRAM",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금",
+            "relationship": "PROVIDES",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "기술보증기금",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지역 중소기업",
+            "relationship": "PARTICIPATES_IN",
+            "end_node": "지식재산공제사업",
             "properties": {}
         }
     ]

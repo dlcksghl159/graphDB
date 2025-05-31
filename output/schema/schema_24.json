@@ -1,75 +1,83 @@
 {
-    "nodes": [
-        {
-            "label": "COMPANY",
-            "name": "Company",
-            "properties": {
-                "industry": "string"
-            }
-        },
-        {
-            "label": "TECHNOLOGY",
-            "name": "Technology",
-            "properties": {
-                "category": "string"
-            }
-        },
-        {
-            "label": "PRODUCT",
-            "name": "Product",
-            "properties": {
-                "category": "string"
-            }
-        },
-        {
-            "label": "COLLABORATION",
-            "name": "Collaboration",
-            "properties": {
-                "date": "string",
-                "purpose": "string"
-            }
-        },
-        {
-            "label": "INVESTMENT",
-            "name": "Investment",
-            "properties": {
-                "amount": "int",
-                "currency": "string",
-                "date": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "COMPANY",
-            "relationship": "DEVELOPS",
-            "end_node": "TECHNOLOGY",
-            "properties": {}
-        },
-        {
-            "start_node": "COMPANY",
-            "relationship": "PRODUCES",
-            "end_node": "PRODUCT",
-            "properties": {}
-        },
-        {
-            "start_node": "COMPANY",
-            "relationship": "ENTERED_COLLABORATION_WITH",
-            "end_node": "COMPANY",
-            "properties": {
-                "date": "string",
-                "purpose": "string"
-            }
-        },
-        {
-            "start_node": "COMPANY",
-            "relationship": "MADE_INVESTMENT_IN",
-            "end_node": "COMPANY",
-            "properties": {
-                "amount": "int",
-                "currency": "string",
-                "date": "string"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "company_name": "String",
+        "industry": "String"
+      }
+    },
+    {
+      "label": "Technology",
+      "name": "Technology",
+      "properties": {
+        "tech_name": "String",
+        "category": "String"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "Agreement",
+      "properties": {
+        "agreement_name": "String",
+        "date": "String",
+        "purpose": "String"
+      }
+    },
+    {
+      "label": "Investment",
+      "name": "Investment",
+      "properties": {
+        "amount": "int",
+        "date": "String"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "Project",
+      "properties": {
+        "project_name": "String",
+        "type": "String"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPS",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "COVERS",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "MAKES_INVESTMENT",
+      "end_node": "Investment",
+      "properties": {}
+    },
+    {
+      "start_node": "Investment",
+      "relationship": "INVESTS_IN",
+      "end_node": "Company",
+      "properties": {}
+    }
+  ]
 }

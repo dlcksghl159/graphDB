@@ -1,173 +1,189 @@
 {
     "nodes": [
         {
-            "label": "Country",
-            "name": "미국",
+            "label": "ExportSummary",
+            "name": "Export Summary",
             "properties": {
-                "country_code": "",
-                "name": "미국",
-                "country_name": "미국",
-                "export_amount_usd": "4480000000",
-                "growth_rate_percent": "-2.5",
-                "country_id": "",
-                "region": "",
-                "countryName": "미국",
-                "export_usd": 0,
-                "change_rate": 0
+                "totalExportAmount": 270000000000,
+                "changeRate": 0.7,
+                "exportingCompanyCount": 63135
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "Product Category",
+            "properties": {
+                "name": "Cosmetics",
+                "exportAmount": 18400000000,
+                "changeRate": 19.6,
+                "exportCompanyCount": 5760
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "Product Category",
+            "properties": {
+                "name": "Automobile",
+                "exportAmount": 17400000000,
+                "changeRate": 67.4,
+                "exportCompanyCount": null
             }
         },
         {
             "label": "Country",
-            "name": "중국",
+            "name": "Country",
             "properties": {
-                "country_code": "",
-                "name": "중국",
-                "country_name": "중국",
-                "export_amount_usd": "4320000000",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "",
-                "countryName": "중국",
-                "export_usd": 0,
-                "change_rate": 0
+                "name": "United States",
+                "exportAmount": 44800000000,
+                "changeRate": -2.5,
+                "rank": 1,
+                "region": "North America",
+                "country_code": "US",
+                "countryName": "United States"
             }
         },
         {
             "label": "Country",
-            "name": "키르기스스탄",
+            "name": "Country",
             "properties": {
-                "country_code": "",
-                "name": "키르기스스탄",
-                "country_name": "키르기스스탄",
-                "export_amount_usd": "",
-                "growth_rate_percent": "",
-                "country_id": "",
-                "region": "",
-                "countryName": "키르기스스탄",
-                "export_usd": 0,
-                "change_rate": 0
+                "name": "China",
+                "exportAmount": 43200000000,
+                "changeRate": null,
+                "rank": 2,
+                "region": "Asia",
+                "country_code": "CN",
+                "countryName": "China"
             }
         },
         {
             "label": "Product",
-            "name": "화장품",
+            "name": "Steel",
             "properties": {
-                "product_name": "화장품",
-                "description": "",
-                "price": 0,
-                "type": "",
-                "name": "화장품",
-                "category": "",
-                "powerCapacity": "",
-                "marketShare": "",
-                "export_amount_usd": "1840000000",
-                "growth_rate_percent": "19.6",
-                "generation": "",
-                "releaseDate": "",
-                "product_id": "",
-                "development_status": "",
-                "model": "",
+                "name": "Steel",
+                "category": "Metal",
+                "output_power": null,
+                "product_type": null,
+                "id": null,
+                "cumulative_sales": null,
+                "price": null,
+                "motor_type": null,
+                "power_consumption_w": null,
+                "noise_level_db": null,
+                "launch_datetime": null,
+                "colors": null,
                 "release_date": null,
-                "release_quarter": "",
-                "product_type": "",
-                "launch_year": 0,
-                "launchYear": 0,
-                "funding_amount": 0,
-                "ranking": 0,
-                "generic_name": "",
-                "productName": "화장품",
-                "brand_name": "",
-                "export_usd": 0,
-                "rank": 0
+                "product_id": null,
+                "type": null,
+                "launch_year": null,
+                "launchYear": null,
+                "active_ingredient": null,
+                "therapy_area": null,
+                "generic_name": null,
+                "feature": null,
+                "productName": null,
+                "productType": null,
+                "releaseDate": null,
+                "preheatTime": null,
+                "design": null,
+                "portability": null,
+                "durability": null,
+                "temperatureLevels": null,
+                "safetyFeatures": null,
+                "productId": null,
+                "generation": null
             }
         },
         {
             "label": "Product",
-            "name": "자동차",
+            "name": "Aluminum",
             "properties": {
-                "product_name": "자동차",
-                "description": "",
-                "price": 0,
-                "type": "",
-                "name": "자동차",
-                "category": "",
-                "powerCapacity": "",
-                "marketShare": "",
-                "export_amount_usd": "1740000000",
-                "growth_rate_percent": "67.4",
-                "generation": "",
-                "releaseDate": "",
-                "product_id": "",
-                "development_status": "",
-                "model": "",
+                "name": "Aluminum",
+                "category": "Metal",
+                "output_power": null,
+                "product_type": null,
+                "id": null,
+                "cumulative_sales": null,
+                "price": null,
+                "motor_type": null,
+                "power_consumption_w": null,
+                "noise_level_db": null,
+                "launch_datetime": null,
+                "colors": null,
                 "release_date": null,
-                "release_quarter": "",
-                "product_type": "",
-                "launch_year": 0,
-                "launchYear": 0,
-                "funding_amount": 0,
-                "ranking": 0,
-                "generic_name": "",
-                "productName": "자동차",
-                "brand_name": "",
-                "export_usd": 0,
-                "rank": 0
+                "product_id": null,
+                "type": null,
+                "launch_year": null,
+                "launchYear": null,
+                "active_ingredient": null,
+                "therapy_area": null,
+                "generic_name": null,
+                "feature": null,
+                "productName": null,
+                "productType": null,
+                "releaseDate": null,
+                "preheatTime": null,
+                "design": null,
+                "portability": null,
+                "durability": null,
+                "temperatureLevels": null,
+                "safetyFeatures": null,
+                "productId": null,
+                "generation": null
             }
         },
         {
-            "label": "GovernmentAgency",
-            "name": "중소벤처기업부",
+            "label": "TariffMeasure",
+            "name": "Tariff Measure",
             "properties": {
-                "region": "",
-                "agency_id": "",
-                "name": "중소벤처기업부"
-            }
-        },
-        {
-            "label": "TariffAction",
-            "name": "미국 관세 정책",
-            "properties": {
-                "action_id": "",
-                "start_date": "2023-03-01",
-                "description": "25% 관세 부과"
-            }
-        },
-        {
-            "label": "SMEExportQuarter",
-            "name": "중소기업 분기수출",
-            "properties": {
-                "year": 2023,
-                "quarter": 1,
-                "total_amount": "270억 달러",
-                "growth_rate": "0.7%",
-                "company_count": 63135,
-                "company_count_growth": "1.6%"
+                "name": "US Tariff on Metals",
+                "effectiveDate": "2023-03-01",
+                "enact_date": "2023-03-01",
+                "measureType": "Imposed Tariff",
+                "impactRate": 25.0
             }
         }
     ],
     "relations": [
         {
-            "start_node": "화장품",
+            "start_node": "Export Summary",
+            "relationship": "FOR_PERIOD",
+            "end_node": "First Quarter",
+            "properties": {}
+        },
+        {
+            "start_node": "Product Category",
             "relationship": "EXPORTED_TO",
-            "end_node": "미국",
-            "properties": {}
+            "end_node": "United States",
+            "properties": {
+                "exportAmount": 18400000000,
+                "changeRate": 19.6
+            }
         },
         {
-            "start_node": "미국",
-            "relationship": "AFFECTED_BY",
-            "end_node": "미국 관세 정책",
-            "properties": {}
-        },
-        {
-            "start_node": "자동차",
+            "start_node": "Product Category",
             "relationship": "EXPORTED_TO",
-            "end_node": "키르기스스탄",
+            "end_node": "Country",
+            "properties": {
+                "exportAmount": 17400000000,
+                "changeRate": 67.4
+            }
+        },
+        {
+            "start_node": "Tariff Measure",
+            "relationship": "TARGETS_PRODUCT",
+            "end_node": "Steel",
             "properties": {}
         },
         {
-            "start_node": "중소벤처기업부",
-            "relationship": "ISSUED",
-            "end_node": "중소기업 분기수출",
+            "start_node": "Tariff Measure",
+            "relationship": "TARGETS_PRODUCT",
+            "end_node": "Aluminum",
+            "properties": {}
+        },
+        {
+            "start_node": "Export Summary",
+            "relationship": "INCLUDES_PRODUCT",
+            "end_node": "Product Category",
             "properties": {}
         }
     ]

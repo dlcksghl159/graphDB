@@ -1,0 +1,44 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "중소벤처기업부",
+            "properties": {
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "중소벤처기업부"
+            }
+        },
+        {
+            "label": "Location",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도",
+                "type": "Province",
+                "region": "South Korea",
+                "country": "South Korea"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "경기도",
+            "relationship": "HAS_COMPANY",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "support_type": "판로 확대 지원",
+                "impact": "27배 급증"
+            }
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "SUPPORTS",
+            "end_node": "경기도",
+            "properties": {
+                "initiative": "소상공인 온라인쇼핑몰 판매지원사업",
+                "impact": "온라인 판매 활성화"
+            }
+        }
+    ]
+}

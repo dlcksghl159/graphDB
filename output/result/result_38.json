@@ -1,82 +1,67 @@
 {
     "nodes": [
         {
-            "label": "COMPANY",
+            "label": "Organization",
             "name": "소상공인시장진흥공단",
             "properties": {
-                "industry": "string",
-                "name": "소상공인시장진흥공단"
+                "category": "지원기관",
+                "type": "공단",
+                "location": "서울",
+                "name": "소상공인시장진흥공단",
+                "industry": "소상공인 지원",
+                "sector": "공공부문"
             }
         },
         {
-            "label": "COMPANY",
+            "label": "Company",
             "name": "롯데웰푸드",
             "properties": {
-                "industry": "식품 제조업",
-                "name": "롯데웰푸드"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-            "properties": {
-                "year": 2023,
-                "description": "음식점업 및 식품 제조업 경험과 기술력을 개발에 활용",
-                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-                "topic": "밀키트",
-                "type": "상생협력"
-            }
-        },
-        {
-            "label": "BRAND",
-            "name": "식사이론",
-            "properties": {
-                "name": "식사이론",
-                "sector": "식품"
+                "name": "롯데웰푸드",
+                "industry": "식품 제조",
+                "country": "대한민국",
+                "headquarters": "서울"
             }
         },
         {
             "label": "Program",
-            "name": "백년가게·백년소공인 상생프로젝트",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
             "properties": {
-                "name": "백년가게·백년소공인 상생프로젝트",
+                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+                "introduced_year": 2023,
+                "purpose": "백년가게와 백년소공인의 판로 확대 및 생존력 강화",
                 "year": 2023,
-                "application_deadline": "2023-10-23",
-                "description": "백년소상공인의 판로 확대와 K브랜드 구축 목표",
-                "program_id": "string",
-                "program_name": "백년가게·백년소공인 상생프로젝트"
+                "participant_count": null
             }
         },
         {
-            "label": "SmallBusiness",
-            "name": "백년가게",
+            "label": "Agreement",
+            "name": "업무 협약",
             "properties": {
-                "category": "음식점업",
-                "years_in_business": 30,
-                "name": "백년가게",
-                "businessType": "음식점업",
-                "yearsInBusiness": 30
+                "agreement_date": "2023-03",
+                "name": "업무 협약",
+                "agreement_name": "백년소공인 상생프로젝트 업무 협약",
+                "type": "협력"
             }
         },
         {
-            "label": "SmallBusiness",
-            "name": "백년소공인",
-            "properties": {
-                "category": "식품 제조업",
-                "years_in_business": 15,
-                "name": "백년소공인",
-                "businessType": "식품 제조업",
-                "yearsInBusiness": 15
-            }
-        },
-        {
-            "label": "Product",
+            "label": "ProductCategory",
             "name": "가정간편식",
             "properties": {
-                "product_name": "가정간편식",
-                "type": "HMR",
-                "name": "가정간편식",
-                "description": "즉석섭취 및 조리식품"
+                "name": "가정간편식"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "즉석섭취식품",
+            "properties": {
+                "name": "즉석섭취식품"
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "즉석조리식품",
+            "properties": {
+                "name": "즉석조리식품"
             }
         },
         {
@@ -84,63 +69,65 @@
             "name": "박성효",
             "properties": {
                 "name": "박성효",
-                "role": "이사장"
+                "title": "이사장",
+                "role": "소상공인시장진흥공단 이사장",
+                "position": "이사장"
             }
         }
     ],
     "relations": [
         {
             "start_node": "소상공인시장진흥공단",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "롯데웰푸드",
+            "relationship": "SIGN_AGREEMENT",
+            "end_node": "업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "SIGN_AGREEMENT",
+            "end_node": "업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "프로그램",
+            "relationship": "INCLUDES_PROGRAM",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
             "properties": {}
         },
         {
             "start_node": "소상공인시장진흥공단",
-            "relationship": "HOSTS",
+            "relationship": "INITIATES_PROJECT",
             "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
             "properties": {}
         },
         {
             "start_node": "롯데웰푸드",
-            "relationship": "RUNS_PROGRAM",
-            "end_node": "백년가게·백년소공인 상생프로젝트",
-            "properties": {}
-        },
-        {
-            "start_node": "백년가게",
-            "relationship": "INCLUDES",
-            "end_node": "백년소공인",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-            "relationship": "DEVELOPS_PRODUCT",
-            "end_node": "가정간편식",
-            "properties": {}
-        },
-        {
-            "start_node": "백년가게",
-            "relationship": "APPLIED_FOR",
-            "end_node": "백년가게·백년소공인 상생프로젝트",
-            "properties": {}
-        },
-        {
-            "start_node": "백년소공인",
-            "relationship": "APPLIED_FOR",
-            "end_node": "백년가게·백년소공인 상생프로젝트",
-            "properties": {}
-        },
-        {
-            "start_node": "가정간편식",
-            "relationship": "BRANDED_AS",
-            "end_node": "식사이론",
+            "relationship": "COLLABORATES_WITH",
+            "end_node": "소상공인시장진흥공단",
             "properties": {}
         },
         {
             "start_node": "박성효",
             "relationship": "LEADS",
             "end_node": "소상공인시장진흥공단",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "가정간편식",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "즉석섭취식품",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "즉석조리식품",
             "properties": {}
         }
     ]

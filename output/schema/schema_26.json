@@ -1,115 +1,118 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "name": "string",
-                "category": "string",
-                "release_quarter": "string"
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "Technology",
-            "properties": {
-                "name": "string",
-                "description": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Person",
-            "properties": {
-                "name": "string",
-                "role": "string"
-            }
-        },
-        {
-            "label": "VehicleModel",
-            "name": "VehicleModel",
-            "properties": {
-                "name": "string",
-                "brand": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "MarketRegion",
-            "name": "MarketRegion",
-            "properties": {
-                "name": "string",
-                "region_type": "string"
-            }
-        },
-        {
-            "label": "SalesData",
-            "name": "SalesData",
-            "properties": {
-                "year": "int",
-                "revenue": "int",
-                "growth_rate": "float",
-                "overseas_ratio": "float"
-            }
-        },
-        {
-            "label": "Certification",
-            "name": "Certification",
-            "properties": {
-                "name": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "DEVELOPS",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "USES_TECHNOLOGY",
-            "end_node": "Technology",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "TARGETS",
-            "end_node": "VehicleModel",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "EMPLOYS",
-            "end_node": "Person",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "OPERATES_IN",
-            "end_node": "MarketRegion",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "SalesData",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "HAS_CERTIFICATION",
-            "end_node": "Certification",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "회사",
+      "properties": {
+        "name": "string",
+        "industry": "string",
+        "headquarters": "string",
+        "founded_year": "int"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "제품",
+      "properties": {
+        "name": "string",
+        "category": "string",
+        "release_date": "string"
+      }
+    },
+    {
+      "label": "Technology",
+      "name": "기술",
+      "properties": {
+        "name": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "VehicleModel",
+      "name": "차량모델",
+      "properties": {
+        "name": "string",
+        "manufacturer": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "인물",
+      "properties": {
+        "name": "string",
+        "position": "string"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "시장",
+      "properties": {
+        "region": "string"
+      }
+    },
+    {
+      "label": "Revenue",
+      "name": "매출통계",
+      "properties": {
+        "year": "int",
+        "amount": "float",
+        "growth_rate": "float",
+        "overseas_ratio": "float",
+        "us_ratio": "float"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPS",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OFFERS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "UTILIZES",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "DESIGNED_FOR",
+      "end_node": "VehicleModel",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "HOLDS_POSITION",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RECORDED",
+      "end_node": "Revenue",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED_DISTRIBUTION_CONTRACT_WITH",
+      "end_node": "Market",
+      "properties": {
+        "date": "string",
+        "contract_type": "string"
+      }
+    }
+  ]
 }

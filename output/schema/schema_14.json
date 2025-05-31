@@ -1,88 +1,84 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "기업",
-            "properties": {
-                "code": "string",
-                "name": "string"
-            }
-        },
-        {
-            "label": "FinancialReport",
-            "name": "분기실적",
-            "properties": {
-                "year": "int",
-                "quarter": "int",
-                "totalRevenue": "int",
-                "yoyChange": "float",
-                "operatingProfit": "int"
-            }
-        },
-        {
-            "label": "BusinessSegment",
-            "name": "사업부문",
-            "properties": {
-                "segmentType": "string",
-                "revenue": "int",
-                "yoyChange": "float",
-                "revenueProportion": "float"
-            }
-        },
-        {
-            "label": "MarketCondition",
-            "name": "시장상황",
-            "properties": {
-                "segment": "string",
-                "status": "string",
-                "impact": "string"
-            }
-        },
-        {
-            "label": "Strategy",
-            "name": "경영전략",
-            "properties": {
-                "strategy": "string",
-                "description": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "HAS_REPORT",
-            "end_node": "FinancialReport",
-            "properties": {}
-        },
-        {
-            "start_node": "FinancialReport",
-            "relationship": "INCLUDES_SEGMENT",
-            "end_node": "BusinessSegment",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "ADOPTED_STRATEGY",
-            "end_node": "Strategy",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "OPERATES_IN",
-            "end_node": "MarketCondition",
-            "properties": {}
-        },
-        {
-            "start_node": "BusinessSegment",
-            "relationship": "AFFECTED_BY",
-            "end_node": "MarketCondition",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "COMPETES_WITH",
-            "end_node": "Company",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "id": "String",
+        "name": "String"
+      }
+    },
+    {
+      "label": "FinancialMetric",
+      "name": "FinancialMetric",
+      "properties": {
+        "metric_type": "String",
+        "period": "String",
+        "value": "int",
+        "unit": "String",
+        "change_percent": "float"
+      }
+    },
+    {
+      "label": "BusinessSegment",
+      "name": "BusinessSegment",
+      "properties": {
+        "segment_type": "String"
+      }
+    },
+    {
+      "label": "Strategy",
+      "name": "Strategy",
+      "properties": {
+        "description": "String"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "Market",
+      "properties": {
+        "market_name": "String"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "COMPETES_WITH",
+      "end_node": "Company",
+      "properties": {
+        "difference": "int"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_METRIC",
+      "end_node": "FinancialMetric",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SEGMENT",
+      "end_node": "BusinessSegment",
+      "properties": {}
+    },
+    {
+      "start_node": "BusinessSegment",
+      "relationship": "HAS_METRIC",
+      "end_node": "FinancialMetric",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ADOPTS_STRATEGY",
+      "end_node": "Strategy",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "TARGETS_MARKET",
+      "end_node": "Market",
+      "properties": {}
+    }
+  ]
 }

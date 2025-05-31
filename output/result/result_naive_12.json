@@ -1,0 +1,94 @@
+{
+    "nodes": [
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원",
+                "location": "인천 송도",
+                "title": "협력사 ESG 지원사업 업무협약"
+            }
+        },
+        {
+            "label": "SME",
+            "name": "에이피텍",
+            "properties": {
+                "industry": "전자",
+                "name": "에이피텍",
+                "location": "인천 송도",
+                "partner_since_year": 2025
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "LG이노텍",
+            "properties": {}
+        },
+        {
+            "label": "Organization",
+            "name": "동반성장위원회",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원"
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원"
+            }
+        },
+        {
+            "start_node": "에이피텍",
+            "relationship": "SELECTED_AS",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "role": "핵심 협력사"
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "HAS_CORE_PARTNER",
+            "end_node": "에이피텍",
+            "properties": {
+                "industry": "전자",
+                "location": "인천 송도"
+            }
+        },
+        {
+            "start_node": "협력사 ESG 지원사업 업무협약",
+            "relationship": "HELD_AT",
+            "end_node": "인천",
+            "properties": {
+                "location": "인천 송도"
+            }
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "IS_COORDINATING",
+            "end_node": "LG이노텍",
+            "properties": {
+                "project": "대·중소 자율형 ESG 지원사업"
+            }
+        }
+    ]
+}

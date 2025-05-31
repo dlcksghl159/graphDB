@@ -1,84 +1,90 @@
 {
-    "nodes": [
-        {
-            "label": "ExportReport",
-            "name": "Export Report",
-            "properties": {
-                "year": "int",
-                "quarter": "string",
-                "total_export_usd": "string",
-                "growth_rate_percent": "string",
-                "num_exporters": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "product_name": "string",
-                "export_amount_usd": "string",
-                "growth_rate_percent": "string"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "Country",
-            "properties": {
-                "country_name": "string",
-                "export_amount_usd": "string",
-                "growth_rate_percent": "string"
-            }
-        },
-        {
-            "label": "Agency",
-            "name": "Government Agency",
-            "properties": {
-                "agency_name": "string"
-            }
-        },
-        {
-            "label": "Official",
-            "name": "Official",
-            "properties": {
-                "official_name": "string",
-                "title": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "ExportReport",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "Product",
-            "properties": {
-                "rank": "int"
-            }
-        },
-        {
-            "start_node": "ExportReport",
-            "relationship": "TARGETS_COUNTRY",
-            "end_node": "Country",
-            "properties": {
-                "rank": "int"
-            }
-        },
-        {
-            "start_node": "Agency",
-            "relationship": "PUBLISHES",
-            "end_node": "ExportReport",
-            "properties": {}
-        },
-        {
-            "start_node": "Official",
-            "relationship": "BELONGS_TO",
-            "end_node": "Agency",
-            "properties": {}
-        },
-        {
-            "start_node": "Official",
-            "relationship": "COMMENTS_ON",
-            "end_node": "ExportReport",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "ExportStat",
+      "name": "수출통계",
+      "properties": {
+        "type": "string",
+        "amount": "float",
+        "change_rate": "float",
+        "company_count": "int",
+        "consecutive_quarters": "int"
+      }
+    },
+    {
+      "label": "Period",
+      "name": "기간",
+      "properties": {
+        "year": "int",
+        "quarter": "int"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "제품",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Country",
+      "name": "국가",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Agency",
+      "name": "기관",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "인물",
+      "properties": {
+        "name": "string",
+        "title": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ExportStat",
+      "relationship": "FOR_PERIOD",
+      "end_node": "Period",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStat",
+      "relationship": "OF_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStat",
+      "relationship": "TO_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Agency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportStat",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "Agency",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "COMMENTED_ON",
+      "end_node": "ExportStat",
+      "properties": {}
+    }
+  ]
 }

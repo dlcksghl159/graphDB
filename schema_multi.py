@@ -55,8 +55,12 @@ def _process_chunk(args: tuple[int, str, str]) -> dict:
 
     ### 출력 형식 예시:
     {{
-      "nodes": [],
-      "relations": []
+        "nodes": [
+            {{"label": "NODE_LABEL", "name": "String", "properties": {{"key": "데이터타입"}}}}
+        ],
+        "relations": [
+            {{"start_node": "NodeLabel", "relationship": "RELATION_NAME", "end_node": "NodeLabel", "properties": {{"key": "데이터타입"}}}}
+        ]
     }}
 
     ### 텍스트:
@@ -86,9 +90,7 @@ def _process_chunk(args: tuple[int, str, str]) -> dict:
 # ────────────────────────────────────────────────────────────────
 # 3. 메인 – 파일 목록 수집 → 병렬 실행 → 머지
 # ────────────────────────────────────────────────────────────────
-def extract_mp(max_workers: int = 4):
-    purpose = input("지식 그래프 구축 목적을 입력하세요: ").strip()
-
+def extract_mp(max_workers: int = 4, purpose = "기업 판매"):
     # 처리할 chunk 파일 인덱스 계산
     files = sorted(glob.glob(os.path.join(CHUNKS_DIR, "chunked_output_*.txt")))
     if not files:
@@ -113,8 +115,11 @@ def extract_mp(max_workers: int = 4):
 
     print(f"🎉 모든 스키마 추출 및 병합 완료 → {merged_path}")
 
+def main(purpose="기업 판매"):
+    extract_mp(max_workers=min(4, os.cpu_count() or 2), purpose = "기업 판매")
 
 # ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    main()
     # CPU가 많아도 API rate-limit을 고려해 4~6개 정도가 안전
-    extract_mp(max_workers=min(4, os.cpu_count() or 2))
+    

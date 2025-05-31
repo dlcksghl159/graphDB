@@ -1,106 +1,80 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "business": "string",
-                "overseasRevenueRatio": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "name": "string",
-                "launchYear": "int",
-                "type": "string"
-            }
-        },
-        {
-            "label": "FinancialResult",
-            "name": "FinancialResult",
-            "properties": {
-                "year": "int",
-                "quarter": "string",
-                "revenue": "int",
-                "operatingProfit": "int",
-                "netProfit": "int"
-            }
-        },
-        {
-            "label": "SalesTarget",
-            "name": "SalesTarget",
-            "properties": {
-                "year": "int",
-                "targetRevenue": "int"
-            }
-        },
-        {
-            "label": "Policy",
-            "name": "Policy",
-            "properties": {
-                "name": "string",
-                "issuer": "string",
-                "date": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Strategy",
-            "name": "Strategy",
-            "properties": {
-                "description": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "MarketForecast",
-            "name": "MarketForecast",
-            "properties": {
-                "source": "string",
-                "forecastRevenue": "int",
-                "period": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "OWNS_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "REPORTED_RESULT",
-            "end_node": "FinancialResult",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SET_SALES_TARGET",
-            "end_node": "SalesTarget",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "HAS_FORECAST",
-            "end_node": "MarketForecast",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "ADOPTED_STRATEGY",
-            "end_node": "Strategy",
-            "properties": {}
-        },
-        {
-            "start_node": "Policy",
-            "relationship": "IMPACTS",
-            "end_node": "Company",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "name": "string",
+        "targetRevenue": "int"
+      }
+    },
+    {
+      "label": "FinancialReport",
+      "name": "FinancialReport",
+      "properties": {
+        "period": "string",
+        "revenue": "int",
+        "operatingProfit": "int",
+        "netProfit": "int",
+        "revenueGrowth": "float"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "name": "string",
+        "category": "string",
+        "launchYear": "int"
+      }
+    },
+    {
+      "label": "Policy",
+      "name": "Policy",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "status": "string"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "Region",
+      "properties": {
+        "name": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "REPORTS",
+      "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Policy",
+      "relationship": "AFFECTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Policy",
+      "relationship": "APPLIES_IN",
+      "end_node": "Region",
+      "properties": {}
+    }
+  ]
 }

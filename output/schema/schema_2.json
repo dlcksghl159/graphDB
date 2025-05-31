@@ -1,88 +1,112 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "organization_id": "string",
-                "name": "string",
-                "org_type": "string"
-            }
-        },
-        {
-            "label": "ESGSupportProgram",
-            "name": "ESG Support Program",
-            "properties": {
-                "program_id": "string",
-                "name": "string",
-                "year": "int",
-                "participant_count": "int",
-                "support_scale": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "agreement_id": "string",
-                "date": "string",
-                "location": "string"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "company_id": "string",
-                "name": "string"
-            }
-        },
-        {
-            "label": "Certification",
-            "name": "Certification",
-            "properties": {
-                "certification_id": "string",
-                "name": "string",
-                "issue_date": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "ENTERED_AGREEMENT",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Agreement",
-            "relationship": "COVERS_PROGRAM",
-            "end_node": "ESGSupportProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "ESGSupportProgram",
-            "properties": {
-                "participation_year": "int"
-            }
-        },
-        {
-            "start_node": "ESGSupportProgram",
-            "relationship": "EVALUATED_COMPANY",
-            "end_node": "Company",
-            "properties": {
-                "compliance_rate": "float"
-            }
-        },
-        {
-            "start_node": "Company",
-            "relationship": "RECEIVED_CERTIFICATION",
-            "end_node": "Certification",
-            "properties": {
-                "issue_date": "string"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "Organization",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "ESG Agreement",
+      "properties": {
+        "name": "string",
+        "date": "string",
+        "location": "string"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "ESG Support Program",
+      "properties": {
+        "name": "string",
+        "year": "int",
+        "participant_count": "int",
+        "support_scale": "string"
+      }
+    },
+    {
+      "label": "ESG_Metric",
+      "name": "ESG Metric",
+      "properties": {
+        "name": "string",
+        "industry_focus": "string"
+      }
+    },
+    {
+      "label": "ESG_Evaluation",
+      "name": "ESG Evaluation",
+      "properties": {
+        "name": "string",
+        "compliance_rate": "int"
+      }
+    },
+    {
+      "label": "Certificate",
+      "name": "ESG Certificate",
+      "properties": {
+        "name": "string",
+        "issued_date": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNS",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "FOR",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "DEVELOPS",
+      "end_node": "ESG_Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "SUPPORTS",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "ESG_Evaluation",
+      "relationship": "ASSESSES",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "ESG_Evaluation",
+      "relationship": "USES",
+      "end_node": "ESG_Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "ISSUED_BY",
+      "end_node": "Certificate",
+      "properties": {}
+    },
+    {
+      "start_node": "Certificate",
+      "relationship": "ISSUED_TO",
+      "end_node": "Organization",
+      "properties": {}
+    }
+  ]
 }

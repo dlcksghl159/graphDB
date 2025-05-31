@@ -1,71 +1,97 @@
 {
     "nodes": [
         {
-            "label": "Government",
+            "label": "Location",
             "name": "경기도",
             "properties": {
-                "region": "경기도"
+                "name": "경기도",
+                "type": "Province",
+                "region": "South Korea",
+                "country": "South Korea"
             }
         },
         {
-            "label": "EducationProgram",
-            "name": "찾아가는 산업재해 예방교육",
+            "label": "Organization",
+            "name": "고용노동부",
             "properties": {
-                "program_desc": "소규모 사업장을 대상으로 한 현장 중심의 산업재해 예방 교육",
-                "start_year": 2020,
-                "target_company_count": 800
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "고용노동부",
+                "industry": "Public Administration",
+                "sector": "Government"
             }
         },
         {
-            "label": "Association",
-            "name": "직업건강간호협회",
+            "label": "SupportProgram",
+            "name": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "name": "찾아가는 산업재해 예방 교육",
+                "start_year": 2020,
+                "participant_count": 800,
+                "year": 2023,
+                "description": "소규모 사업장 및 이주노동자를 위한 맞춤형 교육 프로그램",
+                "program_id": "0001"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "임용규",
+            "properties": {
+                "name": "임용규",
+                "title": "과장",
+                "role": "경기도 노동안전과장",
+                "position": "Manager",
+                "personName": "임용규"
+            }
+        },
+        {
+            "label": "ContactInfo",
+            "name": "연락처",
             "properties": {
                 "phone": "032-668-9030",
                 "email": "hsl@kaohn.or.kr"
             }
         },
         {
-            "label": "Statistics",
-            "name": "2023_고용노동부_산업재해_통계",
+            "label": "Association",
+            "name": "직업건강간호협회",
             "properties": {
-                "year": 2023,
-                "annual_fatalities": 200
-            }
-        },
-        {
-            "label": "Official",
-            "name": "임용규",
-            "properties": {
-                "official_name": "임용규",
-                "title": "노동안전과장",
-                "name": "임용규",
-                "position": "노동안전과장"
+                "name": "직업건강간호협회",
+                "type": "Professional Association",
+                "established_year": 1981
             }
         }
     ],
     "relations": [
         {
             "start_node": "경기도",
-            "relationship": "OFFERS",
-            "end_node": "찾아가는 산업재해 예방교육",
+            "relationship": "SIGN_AGREEMENT",
+            "end_node": "고용노동부",
             "properties": {}
         },
         {
-            "start_node": "직업건강간호협회",
-            "relationship": "OPERATES",
-            "end_node": "찾아가는 산업재해 예방교육",
+            "start_node": "경기도",
+            "relationship": "INITIATES",
+            "end_node": "찾아가는 산업재해 예방 교육",
             "properties": {}
         },
         {
             "start_node": "임용규",
-            "relationship": "AFFILIATED_WITH",
+            "relationship": "LEADS",
             "end_node": "경기도",
             "properties": {}
         },
         {
-            "start_node": "2023_고용노동부_산업재해_통계",
-            "relationship": "APPLIES_TO_REGION",
-            "end_node": "경기도",
+            "start_node": "찾아가는 산업재해 예방 교육",
+            "relationship": "CONTACT",
+            "end_node": "연락처",
+            "properties": {}
+        },
+        {
+            "start_node": "직업건강간호협회",
+            "relationship": "SUPPORTS",
+            "end_node": "찾아가는 산업재해 예방 교육",
             "properties": {}
         }
     ]

@@ -1,26 +1,24 @@
 {
     "nodes": [
         {
-            "label": "COMPANY",
+            "label": "Company",
             "name": "센드버드",
             "properties": {
-                "industry": "AI 에이전트 플랫폼",
-                "name": "센드버드"
+                "name": "센드버드",
+                "company_name": "센드버드"
             }
         },
         {
-            "label": "TECHNOLOGY",
+            "label": "AIAgent",
             "name": "옴니프레젠트 AI 에이전트",
             "properties": {
-                "name": "옴니프레젠트 AI 에이전트",
-                "provider": "센드버드"
+                "name": "옴니프레젠트 AI 에이전트"
             }
         },
         {
             "label": "Industry",
             "name": "커머스",
             "properties": {
-                "industry_name": "커머스",
                 "name": "커머스"
             }
         },
@@ -28,7 +26,6 @@
             "label": "Industry",
             "name": "핀테크",
             "properties": {
-                "industry_name": "핀테크",
                 "name": "핀테크"
             }
         },
@@ -36,34 +33,78 @@
             "label": "Industry",
             "name": "리테일",
             "properties": {
-                "industry_name": "리테일",
                 "name": "리테일"
+            }
+        },
+        {
+            "label": "Metric",
+            "name": "구매 전환율 증가",
+            "properties": {
+                "name": "구매 전환율 증가",
+                "value": 2.8,
+                "unit": "배"
+            }
+        },
+        {
+            "label": "Metric",
+            "name": "CS 문의량 감소",
+            "properties": {
+                "name": "CS 문의량 감소",
+                "value": 40,
+                "unit": "%"
+            }
+        },
+        {
+            "label": "Metric",
+            "name": "상담 운영 비용 절감",
+            "properties": {
+                "name": "상담 운영 비용 절감",
+                "value": 35,
+                "unit": "%"
             }
         }
     ],
     "relations": [
         {
             "start_node": "센드버드",
-            "relationship": "DEVELOPS",
+            "relationship": "OFFERS",
             "end_node": "옴니프레젠트 AI 에이전트",
             "properties": {}
         },
         {
-            "start_node": "센드버드",
-            "relationship": "EXPANDS_TO_INDUSTRY",
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
             "end_node": "커머스",
             "properties": {}
         },
         {
-            "start_node": "센드버드",
-            "relationship": "EXPANDS_TO_INDUSTRY",
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
             "end_node": "핀테크",
             "properties": {}
         },
         {
-            "start_node": "센드버드",
-            "relationship": "EXPANDS_TO_INDUSTRY",
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
             "end_node": "리테일",
+            "properties": {}
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "IMPACTS",
+            "end_node": "구매 전환율 증가",
+            "properties": {}
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "IMPACTS",
+            "end_node": "CS 문의량 감소",
+            "properties": {}
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "IMPACTS",
+            "end_node": "상담 운영 비용 절감",
             "properties": {}
         }
     ]

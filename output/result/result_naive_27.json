@@ -1,0 +1,36 @@
+{
+    "nodes": [
+        {
+            "label": "Organization",
+            "name": "롯데웰푸드",
+            "properties": {
+                "type": "Corporation",
+                "location": "대한민국",
+                "name": "롯데웰푸드",
+                "industry": "Food Manufacturing"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "date": "2025",
+                "purpose": "협력사 ESG 지원",
+                "location": "인천 송도",
+                "title": "협력사 ESG 지원사업 업무협약"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "EXECUTES_PROJECT",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {
+                "project_name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+                "start_date": "2023-03",
+                "target_participants": "백년가게 및 백년소공인"
+            }
+        }
+    ]
+}

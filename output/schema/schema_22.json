@@ -1,97 +1,79 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "Project",
-            "properties": {
-                "name": "string",
-                "start_date": "string",
-                "end_date": "string",
-                "topic": "string"
-            }
-        },
-        {
-            "label": "Merchant",
-            "name": "Merchant",
-            "properties": {
-                "name": "string",
-                "category": "string",
-                "years_in_business": "int",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "name": "string",
-                "category": "string",
-                "development_status": "string"
-            }
-        },
-        {
-            "label": "Brand",
-            "name": "Brand",
-            "properties": {
-                "name": "string",
-                "owner": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "date": "string",
-                "subject": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "HAS_AGREEMENT_WITH",
-            "end_node": "Organization",
-            "properties": {
-                "date": "string"
-            }
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "RUNS_PROJECT",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Merchant",
-            "relationship": "APPLIES_TO",
-            "end_node": "Project",
-            "properties": {}
-        },
-        {
-            "start_node": "Project",
-            "relationship": "DEVELOPS_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "OWNS_BRAND",
-            "end_node": "Brand",
-            "properties": {}
-        },
-        {
-            "start_node": "Product",
-            "relationship": "UNDER_BRAND",
-            "end_node": "Brand",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "String",
+      "properties": {
+        "type": "String"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "String",
+      "properties": {
+        "start_date": "Date",
+        "end_date": "Date",
+        "description": "String"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "category": "String"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "String",
+      "properties": {
+        "product_type": "String"
+      }
+    },
+    {
+      "label": "Brand",
+      "name": "String",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "INITIATES_PROJECT",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "OPEN_TO_PARTICIPATION_BY",
+      "end_node": "Company",
+      "properties": {
+        "deadline": "Date"
+      }
+    },
+    {
+      "start_node": "Project",
+      "relationship": "DEVELOPS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "BRANDED_AS",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SELECTED_FOR",
+      "end_node": "Project",
+      "properties": {}
+    }
+  ]
 }

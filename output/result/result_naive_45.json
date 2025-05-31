@@ -1,0 +1,48 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "industry": "제약바이오",
+                "name": "삼성바이오로직스"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Celltrion",
+            "properties": {
+                "name": "Celltrion",
+                "country": "South Korea",
+                "industry": "Biotechnology",
+                "annual_revenue": 5000000000
+            }
+        },
+        {
+            "label": "Product",
+            "name": "케이캡",
+            "properties": {
+                "name": "케이캡",
+                "category": "위식도역류질환 치료제"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "USES_TECHNOLOGY",
+            "end_node": "Celltrion",
+            "properties": {
+                "description": "Both companies are involved in biosimilars production, which contributed to their revenue."
+            }
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PRODUCES",
+            "end_node": "케이캡",
+            "properties": {
+                "description": "Samsung Biologics' increase in earnings attributed to biosimilars."
+            }
+        }
+    ]
+}

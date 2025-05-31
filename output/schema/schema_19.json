@@ -1,105 +1,131 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "name": "string",
-                "category": "string"
-            }
-        },
-        {
-            "label": "WelfareMall",
-            "name": "WelfareMall",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Transaction",
-            "name": "Transaction",
-            "properties": {
-                "year": "int",
-                "amount": "int",
-                "growthRate": "float"
-            }
-        },
-        {
-            "label": "SupportProgram",
-            "name": "SupportProgram",
-            "properties": {
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "GovernmentAgency",
-            "name": "GovernmentAgency",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Region",
-            "properties": {
-                "name": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "OPERATES",
-            "end_node": "WelfareMall",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "Company",
-            "properties": {
-                "startYear": "int"
-            }
-        },
-        {
-            "start_node": "WelfareMall",
-            "relationship": "RECORDED_TRANSACTION",
-            "end_node": "Transaction",
-            "properties": {}
-        },
-        {
-            "start_node": "Transaction",
-            "relationship": "FOR_COMPANY",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "LOCATED_IN",
-            "end_node": "Region",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "SupportProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "SupportProgram",
-            "relationship": "SUPPORTED_BY",
-            "end_node": "GovernmentAgency",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "Company",
-            "properties": {
-                "name": "string",
-                "date": "string"
-            }
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "annual_revenue": "int",
+        "revenue_growth_percentage": "int"
+      }
+    },
+    {
+      "label": "WelfareMall",
+      "name": "WelfareMall",
+      "properties": {
+        "name": "string",
+        "launch_year": "int",
+        "total_transactions": "int"
+      }
+    },
+    {
+      "label": "SME",
+      "name": "SME",
+      "properties": {
+        "name": "string",
+        "category": "string",
+        "location": "string",
+        "partner_since_year": "int"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "name": "string",
+        "agency_type": "string"
+      }
+    },
+    {
+      "label": "SupportProgram",
+      "name": "SupportProgram",
+      "properties": {
+        "name": "string",
+        "year": "int",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "Region",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "CustomerCompany",
+      "name": "CustomerCompany",
+      "properties": {
+        "name": "string",
+        "employee_count": "int"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES",
+      "end_node": "WelfareMall",
+      "properties": {}
+    },
+    {
+      "start_node": "CustomerCompany",
+      "relationship": "USES",
+      "end_node": "WelfareMall",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "SOLD_VIA",
+      "end_node": "WelfareMall",
+      "properties": {
+        "transaction_amount": "int",
+        "transaction_share": "int",
+        "transaction_growth_percentage": "int",
+        "year": "int"
+      }
+    },
+    {
+      "start_node": "SME",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED_AGREEMENT_WITH",
+      "end_node": "SME",
+      "properties": {
+        "agreement_name": "string",
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "OFFERS",
+      "end_node": "SupportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "AWARDED",
+      "end_node": "SupportProgram",
+      "properties": {
+        "year": "int"
+      }
+    },
+    {
+      "start_node": "SME",
+      "relationship": "BENEFITS_FROM",
+      "end_node": "SupportProgram",
+      "properties": {}
+    }
+  ]
 }

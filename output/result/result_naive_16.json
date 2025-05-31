@@ -1,0 +1,32 @@
+{
+    "nodes": [
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "중소벤처기업부",
+            "properties": {
+                "category": "Government",
+                "type": "Ministry",
+                "location": "South Korea",
+                "name": "중소벤처기업부"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "SUPPORTED_BY",
+            "end_node": "인천",
+            "properties": {
+                "initiative": "지식재산공제사업 활성화",
+                "support_type": "공제 상담 지원 제공"
+            }
+        }
+    ]
+}

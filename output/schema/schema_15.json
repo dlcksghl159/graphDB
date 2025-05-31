@@ -1,132 +1,102 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "name": "string",
-                "type": "string",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Person",
-            "properties": {
-                "name": "string",
-                "title": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "ESGAgreement",
-            "properties": {
-                "date": "string",
-                "purpose": "string"
-            }
-        },
-        {
-            "label": "ESGIndicator",
-            "name": "ESGIndicator",
-            "properties": {
-                "name": "string",
-                "industry": "string"
-            }
-        },
-        {
-            "label": "Certificate",
-            "name": "ESGCertificate",
-            "properties": {
-                "name": "string",
-                "date": "string"
-            }
-        },
-        {
-            "label": "Event",
-            "name": "Event",
-            "properties": {
-                "date": "string",
-                "location": "string"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "ESGSupportProgram",
-            "properties": {
-                "name": "string",
-                "year": "int",
-                "participants_count": "int"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Agreement",
-            "relationship": "DEVELOPED",
-            "end_node": "ESGIndicator",
-            "properties": {}
-        },
-        {
-            "start_node": "ESGIndicator",
-            "relationship": "APPLIES_TO",
-            "end_node": "Organization",
-            "properties": {
-                "score": "float"
-            }
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "ISSUED",
-            "end_node": "Certificate",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "RECEIVED",
-            "end_node": "Certificate",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "WORKS_FOR",
-            "end_node": "Organization",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "ATTENDED",
-            "end_node": "Event",
-            "properties": {}
-        },
-        {
-            "start_node": "Event",
-            "relationship": "RELATED_TO",
-            "end_node": "Agreement",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "SUPPLIES",
-            "end_node": "Organization",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "Program",
-            "properties": {}
-        },
-        {
-            "start_node": "Program",
-            "relationship": "SUPPORTS",
-            "end_node": "Organization",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "기업",
+      "properties": {
+        "company_name": "string",
+        "category": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "인물",
+      "properties": {
+        "name": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "업무협약",
+      "properties": {
+        "date": "string",
+        "location": "string",
+        "purpose": "string"
+      }
+    },
+    {
+      "label": "ESGIndicator",
+      "name": "ESG지표",
+      "properties": {
+        "name": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "SupportProgram",
+      "name": "지원사업",
+      "properties": {
+        "name": "string",
+        "start_year": "int",
+        "participant_count": "int"
+      }
+    },
+    {
+      "label": "Certification",
+      "name": "인증서",
+      "properties": {
+        "name": "string",
+        "issuer": "string",
+        "year": "int"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED_AGREEMENT",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "ATTENDED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "DEVELOPS",
+      "end_node": "ESGIndicator",
+      "properties": {}
+    },
+    {
+      "start_node": "ESGIndicator",
+      "relationship": "APPLIED_TO",
+      "end_node": "Company",
+      "properties": {
+        "score": "float"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_CERTIFICATION",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "SupportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "SupportProgram",
+      "relationship": "SUPPORTED_BY",
+      "end_node": "Company",
+      "properties": {}
+    }
+  ]
 }

@@ -1,0 +1,62 @@
+{
+    "nodes": [
+        {
+            "label": "Company",
+            "name": "Hyundai Livart",
+            "properties": {
+                "name": "Hyundai Livart",
+                "stock_code": "079430",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4378000000
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Hanssem",
+            "properties": {
+                "name": "Hanssem",
+                "stock_code": "009240",
+                "type": "Public",
+                "industry": "Furniture",
+                "annual_revenue": 4434000000
+            }
+        },
+        {
+            "label": "Location",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도",
+                "type": "Province",
+                "region": "South Korea",
+                "country": "South Korea"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "Hanssem",
+            "relationship": "COMPETES_WITH",
+            "end_node": "Hyundai Livart",
+            "properties": {
+                "context": "2025년 1분기 매출 경쟁"
+            }
+        },
+        {
+            "start_node": "Hyundai Livart",
+            "relationship": "OPERATES_IN",
+            "end_node": "경기도",
+            "properties": {
+                "note": "B2B 오피스 인테리어 사업"
+            }
+        },
+        {
+            "start_node": "Hanssem",
+            "relationship": "OPERATES_IN",
+            "end_node": "경기도",
+            "properties": {
+                "note": "B2B 오피스 인테리어 시장 공략"
+            }
+        }
+    ]
+}

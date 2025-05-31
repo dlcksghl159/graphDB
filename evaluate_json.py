@@ -88,8 +88,8 @@ def evaluate(gold: Dict, pred: Dict, verbose: bool = False):
 
 def main():
     p = argparse.ArgumentParser(description="Evaluate extracted KG against gold JSON")
-    p.add_argument("--gold", required=True, help="Path to gold JSON (ground truth)")
-    p.add_argument("--pred", required=True, help="Path to predicted JSON")
+    p.add_argument("--gold", required=True, help="data/movie_answer.json")
+    p.add_argument("--pred", required=True, help="output/result/result.json")
     p.add_argument("-v", "--verbose", action="store_true", help="Show FP/FN details")
     args = p.parse_args()
 

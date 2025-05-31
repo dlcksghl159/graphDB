@@ -1,96 +1,100 @@
 {
-    "nodes": [
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "org_id": "string",
-                "name": "string",
-                "type": "string",
-                "region": "string"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "Agreement",
-            "properties": {
-                "agreement_id": "string",
-                "title": "string",
-                "date": "string"
-            }
-        },
-        {
-            "label": "Service",
-            "name": "Service",
-            "properties": {
-                "service_id": "string",
-                "name": "string",
-                "description": "string",
-                "launch_date": "string"
-            }
-        },
-        {
-            "label": "Event",
-            "name": "Event",
-            "properties": {
-                "event_id": "string",
-                "name": "string",
-                "date": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "company_id": "string",
-                "name": "string",
-                "size": "string",
-                "region": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "SIGNED_MOU_WITH",
-            "end_node": "Organization",
-            "properties": {
-                "date": "string",
-                "title": "string"
-            }
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "PROVIDES_SERVICE",
-            "end_node": "Service",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "HOLDS_EVENT",
-            "end_node": "Event",
-            "properties": {}
-        },
-        {
-            "start_node": "Organization",
-            "relationship": "SUPPORTS",
-            "end_node": "Company",
-            "properties": {
-                "support_type": "string"
-            }
-        },
-        {
-            "start_node": "Service",
-            "relationship": "TARGETS",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "Event",
-            "relationship": "RELATED_TO_SERVICE",
-            "end_node": "Service",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Organization",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "date": "string",
+        "purpose": "string"
+      }
+    },
+    {
+      "label": "Service",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "size": "string",
+        "region": "string"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "date": "string"
+      }
+    },
+    {
+      "label": "FinancialScheme",
+      "name": "String",
+      "properties": {
+        "name": "string",
+        "description": "string",
+        "launched": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Organization",
+      "relationship": "SIGN_AGREEMENT",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PROVIDES",
+      "end_node": "Service",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "HOSTS",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUBSCRIBES",
+      "end_node": "FinancialScheme",
+      "properties": {}
+    },
+    {
+      "start_node": "FinancialScheme",
+      "relationship": "MANAGED_BY",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "AIMS_AT",
+      "end_node": "Service",
+      "properties": {}
+    }
+  ]
 }

@@ -1,112 +1,83 @@
 {
-    "nodes": [
-        {
-            "label": "Report",
-            "name": "Report",
-            "properties": {
-                "title": "string",
-                "releaseDate": "string"
-            }
-        },
-        {
-            "label": "Period",
-            "name": "Period",
-            "properties": {
-                "year": "int",
-                "quarter": "int"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "Product",
-            "properties": {
-                "productName": "string"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "Country",
-            "properties": {
-                "countryName": "string"
-            }
-        },
-        {
-            "label": "ExportData",
-            "name": "ExportData",
-            "properties": {
-                "exportAmount": "float",
-                "currency": "string",
-                "growthRate": "float",
-                "companyCount": "int"
-            }
-        },
-        {
-            "label": "Organization",
-            "name": "Organization",
-            "properties": {
-                "orgName": "string",
-                "orgType": "string"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Person",
-            "properties": {
-                "personName": "string",
-                "role": "string"
-            }
-        },
-        {
-            "label": "Policy",
-            "name": "Policy",
-            "properties": {
-                "policyName": "string",
-                "effectiveDate": "string"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Organization",
-            "relationship": "PUBLISHES",
-            "end_node": "Report",
-            "properties": {}
-        },
-        {
-            "start_node": "Report",
-            "relationship": "REPORTS",
-            "end_node": "ExportData",
-            "properties": {}
-        },
-        {
-            "start_node": "Person",
-            "relationship": "DECLARED",
-            "end_node": "Report",
-            "properties": {}
-        },
-        {
-            "start_node": "ExportData",
-            "relationship": "FOR_PRODUCT",
-            "end_node": "Product",
-            "properties": {}
-        },
-        {
-            "start_node": "ExportData",
-            "relationship": "TO_COUNTRY",
-            "end_node": "Country",
-            "properties": {}
-        },
-        {
-            "start_node": "ExportData",
-            "relationship": "IN_PERIOD",
-            "end_node": "Period",
-            "properties": {}
-        },
-        {
-            "start_node": "Policy",
-            "relationship": "AFFECTS",
-            "end_node": "ExportData",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "name": "string",
+        "country": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Country",
+      "name": "Country",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "TimePeriod",
+      "name": "TimePeriod",
+      "properties": {
+        "year": "int",
+        "quarter": "string"
+      }
+    },
+    {
+      "label": "TariffAction",
+      "name": "TariffAction",
+      "properties": {
+        "name": "string",
+        "effectiveDate": "string"
+      }
+    },
+    {
+      "label": "ExportStatistic",
+      "name": "ExportStatistic",
+      "properties": {
+        "exportAmount": "float",
+        "changeRate": "float"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "OF_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "TO_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "IN_TIME",
+      "end_node": "TimePeriod",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffAction",
+      "relationship": "APPLIES_TO",
+      "end_node": "Product",
+      "properties": {}
+    }
+  ]
 }

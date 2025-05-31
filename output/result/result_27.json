@@ -2,102 +2,123 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "삼성바이오로직스",
+            "name": "Samsung Biologics",
             "properties": {
-                "industry": "제약",
-                "name": "삼성바이오로직스"
+                "name": "Samsung Biologics",
+                "annual_revenue": 5570500000,
+                "industry": "Biotechnology"
             }
         },
         {
             "label": "Company",
-            "name": "셀트리온",
+            "name": "Celltrion",
             "properties": {
-                "industry": "제약",
-                "name": "셀트리온"
+                "name": "Celltrion",
+                "annual_revenue": 5000000000,
+                "industry": "Biotechnology"
             }
         },
         {
-            "label": "SalesData",
-            "name": "삼성바이오로직스 1Q2023",
+            "label": "Market",
+            "name": "USA",
+            "properties": {
+                "name": "USA",
+                "region": "North America"
+            }
+        },
+        {
+            "label": "MarketRegion",
+            "name": "International",
+            "properties": {
+                "regionName": "International"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Ramcima",
+            "properties": {
+                "name": "Ramcima",
+                "productType": "Biosimilar"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "Truxima",
+            "properties": {
+                "name": "Truxima",
+                "productType": "Biosimilar"
+            }
+        },
+        {
+            "label": "Quarter",
+            "name": "Q1 2023",
             "properties": {
                 "year": 2023,
-                "revenue": 12983000,
-                "growth_rate": 37.1,
-                "overseas_ratio": 91.0
+                "period": "Q1"
             }
         },
         {
-            "label": "SalesData",
-            "name": "셀트리온 1Q2023",
+            "label": "TariffPolicy",
+            "name": "Trump Drug Tariff",
             "properties": {
-                "year": 2023,
-                "revenue": 8419000,
-                "growth_rate": 14.2,
-                "overseas_ratio": 98.8
-            }
-        },
-        {
-            "label": "SalesTarget",
-            "name": "삼성바이오로직스 2023 목표",
-            "properties": {
-                "year": 2023,
-                "targetRevenue": 55705000
-            }
-        },
-        {
-            "label": "SalesTarget",
-            "name": "셀트리온 2023 목표",
-            "properties": {
-                "year": 2023,
-                "targetRevenue": 50000000
-            }
-        },
-        {
-            "label": "TariffMeasure",
-            "name": "트럼프 의약품 관세",
-            "properties": {
-                "measure_name": "의약품 관세부과",
-                "effective_date": "2023-12",
-                "products_affected": "의약품",
-                "rate_effect": 0.0
+                "name": "Trump Drug Tariff",
+                "imposingCountry": "USA"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "삼성바이오로직스",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "삼성바이오로직스 1Q2023",
+            "start_node": "Samsung Biologics",
+            "relationship": "OPERATES_IN",
+            "end_node": "Biotechnology",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "셀트리온 1Q2023",
+            "start_node": "Celltrion",
+            "relationship": "OPERATES_IN",
+            "end_node": "Biotechnology",
             "properties": {}
         },
         {
-            "start_node": "삼성바이오로직스",
-            "relationship": "SET_SALES_TARGET",
-            "end_node": "삼성바이오로직스 2023 목표",
+            "start_node": "Samsung Biologics",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "International",
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "SET_SALES_TARGET",
-            "end_node": "셀트리온 2023 목표",
+            "start_node": "Celltrion",
+            "relationship": "TARGETS_MARKET",
+            "end_node": "International",
             "properties": {}
         },
         {
-            "start_node": "트럼프 의약품 관세",
-            "relationship": "IMPOSED_BY",
-            "end_node": "삼성바이오로직스",
+            "start_node": "Ramcima",
+            "relationship": "EXPORTED_TO",
+            "end_node": "USA",
             "properties": {}
         },
         {
-            "start_node": "트럼프 의약품 관세",
-            "relationship": "IMPOSED_BY",
-            "end_node": "셀트리온",
+            "start_node": "Truxima",
+            "relationship": "EXPORTED_TO",
+            "end_node": "USA",
+            "properties": {}
+        },
+        {
+            "start_node": "Trump Drug Tariff",
+            "relationship": "APPLIES_TO",
+            "end_node": "Biosimilar",
+            "properties": {}
+        },
+        {
+            "start_node": "Samsung Biologics",
+            "relationship": "HAS_REPORT",
+            "end_node": "Q1 2023",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "HAS_REPORT",
+            "end_node": "Q1 2023",
             "properties": {}
         }
     ]

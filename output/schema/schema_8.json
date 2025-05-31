@@ -1,89 +1,117 @@
 {
-    "nodes": [
-        {
-            "label": "Company",
-            "name": "Company",
-            "properties": {
-                "company_id": "string",
-                "name": "string",
-                "type": "string"
-            }
-        },
-        {
-            "label": "WelfareMall",
-            "name": "WelfareMall",
-            "properties": {
-                "name": "string",
-                "ranking": "string"
-            }
-        },
-        {
-            "label": "SalesRecord",
-            "name": "SalesRecord",
-            "properties": {
-                "year": "int",
-                "amount": "int",
-                "growth_rate": "float"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Region",
-            "properties": {
-                "name": "string"
-            }
-        },
-        {
-            "label": "Program",
-            "name": "Program",
-            "properties": {
-                "name": "string",
-                "year": "int"
-            }
-        }
-    ],
-    "relations": [
-        {
-            "start_node": "Company",
-            "relationship": "AFFILIATED_WITH",
-            "end_node": "Company",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "OPERATES",
-            "end_node": "WelfareMall",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SUPPLIES_TO",
-            "end_node": "WelfareMall",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "HAS_SALES_RECORD",
-            "end_node": "SalesRecord",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "LOCATED_IN",
-            "end_node": "Region",
-            "properties": {}
-        },
-        {
-            "start_node": "Company",
-            "relationship": "SELECTED_FOR",
-            "end_node": "Program",
-            "properties": {}
-        },
-        {
-            "start_node": "Program",
-            "relationship": "IMPLEMENTED_BY",
-            "end_node": "Company",
-            "properties": {}
-        }
-    ]
+  "nodes": [
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "company_id": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "Partner",
+      "name": "Partner",
+      "properties": {
+        "partner_id": "string",
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "WelfareMall",
+      "name": "WelfareMall",
+      "properties": {
+        "mall_id": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "SalesRecord",
+      "name": "SalesRecord",
+      "properties": {
+        "year": "int",
+        "transaction_amount": "int",
+        "growth_rate": "float"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "Region",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "agency_id": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "SupportProgram",
+      "name": "SupportProgram",
+      "properties": {
+        "program_id": "string",
+        "name": "string"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "Company",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES",
+      "end_node": "WelfareMall",
+      "properties": {}
+    },
+    {
+      "start_node": "Partner",
+      "relationship": "SELLS_ON",
+      "end_node": "WelfareMall",
+      "properties": {}
+    },
+    {
+      "start_node": "Partner",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Partner",
+      "relationship": "HAS_SALES",
+      "end_node": "SalesRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "LAUNCHES",
+      "end_node": "SupportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "SELECTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "IMPLEMENTS",
+      "end_node": "SupportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "SupportProgram",
+      "relationship": "SUPPORTS",
+      "end_node": "Partner",
+      "properties": {}
+    }
+  ]
 }

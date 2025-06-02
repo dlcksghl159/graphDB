@@ -2,77 +2,75 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "String",
+      "name": "Organization",
       "properties": {
-        "type": "String"
+        "name": "string",
+        "role": "string"
       }
     },
     {
       "label": "Project",
-      "name": "String",
+      "name": "Project",
       "properties": {
-        "start_date": "Date",
-        "end_date": "Date",
-        "description": "String"
+        "name": "string",
+        "application_deadline": "string"
       }
     },
     {
-      "label": "Company",
-      "name": "String",
+      "label": "Business",
+      "name": "SmallBusiness",
       "properties": {
-        "category": "String"
+        "name": "string",
+        "category": "string",
+        "industry": "string",
+        "years_in_business": "int"
       }
     },
     {
       "label": "Product",
-      "name": "String",
+      "name": "Product",
       "properties": {
-        "product_type": "String"
+        "name": "string",
+        "type": "string"
       }
     },
     {
       "label": "Brand",
-      "name": "String",
-      "properties": {}
+      "name": "Brand",
+      "properties": {
+        "name": "string"
+      }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
+      "relationship": "PARTNERS_WITH",
       "end_node": "Organization",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "INITIATES_PROJECT",
+      "relationship": "INITIATES",
       "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Project",
-      "relationship": "OPEN_TO_PARTICIPATION_BY",
-      "end_node": "Company",
-      "properties": {
-        "deadline": "Date"
-      }
+      "relationship": "RECRUITS",
+      "end_node": "Business",
+      "properties": {}
     },
     {
       "start_node": "Project",
-      "relationship": "DEVELOPS_PRODUCT",
+      "relationship": "DEVELOPS",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "BRANDED_AS",
+      "relationship": "UNDER_BRAND",
       "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
       "properties": {}
     }
   ]

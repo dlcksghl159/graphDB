@@ -2,72 +2,103 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "회사",
+      "name": "Company",
       "properties": {
-        "id": "string",
-        "name": "string"
+        "name": "string",
+        "stock_code": "string"
       }
     },
     {
       "label": "Product",
-      "name": "제품",
+      "name": "Product",
       "properties": {
-        "id": "string",
         "name": "string",
-        "category": "string",
-        "cumulative_sales": "int",
-        "price": "int",
-        "motor_type": "string",
-        "power_consumption_w": "float",
-        "noise_level_db": "float",
-        "launch_datetime": "string",
-        "colors": "string"
+        "model": "string",
+        "category": "string"
       }
     },
     {
-      "label": "BroadcastEvent",
-      "name": "방송이벤트",
+      "label": "Feature",
+      "name": "Feature",
       "properties": {
-        "id": "string",
-        "date_time": "string",
-        "channel": "string",
-        "edition": "string"
+        "type": "string",
+        "description": "string"
       }
     },
     {
-      "label": "Promotion",
-      "name": "프로모션",
+      "label": "Edition",
+      "name": "Edition",
       "properties": {
-        "id": "string",
-        "discount_rate": "float",
-        "discounted_price": "int",
-        "bundle_price": "int"
+        "name": "string",
+        "benefit": "string"
+      }
+    },
+    {
+      "label": "SalesChannel",
+      "name": "SalesChannel",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "Event",
+      "properties": {
+        "name": "string",
+        "date": "string",
+        "time": "string"
+      }
+    },
+    {
+      "label": "Pricing",
+      "name": "Pricing",
+      "properties": {
+        "price": "string",
+        "discount_rate": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PRODUCES",
+      "relationship": "LAUNCHES",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "LAUNCHED_AT",
-      "end_node": "BroadcastEvent",
-      "properties": {}
-    },
-    {
-      "start_node": "BroadcastEvent",
-      "relationship": "SELLS",
-      "end_node": "Product",
+      "relationship": "HAS_FEATURE",
+      "end_node": "Feature",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "HAS_PROMOTION",
-      "end_node": "Promotion",
+      "relationship": "AVAILABLE_IN",
+      "end_node": "Edition",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SOLD_ON",
+      "end_node": "SalesChannel",
+      "properties": {}
+    },
+    {
+      "start_node": "SalesChannel",
+      "relationship": "HOSTS",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "PRESENTS",
+      "end_node": "Edition",
+      "properties": {}
+    },
+    {
+      "start_node": "Edition",
+      "relationship": "HAS_PRICING",
+      "end_node": "Pricing",
       "properties": {}
     }
   ]

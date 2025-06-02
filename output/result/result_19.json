@@ -2,134 +2,239 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "ADRO",
+            "name": "에이드로",
             "properties": {
-                "name": "ADRO",
-                "industry": "Automotive",
-                "type": "Startup",
-                "founded_year": 0,
-                "location": "South Korea",
-                "annual_revenue": 110000000,
-                "revenue_growth_percentage": 93
+                "name": "에이드로",
+                "industry": "자동차",
+                "country": "한국"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "윤승현",
+            "properties": {
+                "name": "윤승현"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이용원",
+            "properties": {
+                "name": "이용원"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "스콧 비튼",
+            "properties": {
+                "name": "스콧 비튼"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "유동완",
+            "properties": {
+                "name": "유동완"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "윤반석",
+            "properties": {
+                "name": "윤반석"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "테슬라",
+            "properties": {
+                "industry": "자동차"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "현대",
+            "properties": {
+                "industry": "자동차"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "기아",
+            "properties": {
+                "industry": "자동차"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "BMW",
+            "properties": {
+                "industry": "자동차"
             }
         },
         {
             "label": "Product",
-            "name": "Body Kit",
+            "name": "바디킷",
             "properties": {
-                "name": "Body Kit",
-                "category": "Automotive",
-                "type": "Aerodynamic",
-                "launch_year": 0
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "Computational Fluid Dynamics",
-            "properties": {
-                "tech_name": "Computational Fluid Dynamics",
-                "category": "Aerodynamics",
-                "name": "Computational Fluid Dynamics",
-                "description": "Technology used for aerodynamic optimization",
-                "techId": "1"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "Yoon Seung Hyun",
-            "properties": {
-                "name": "Yoon Seung Hyun",
-                "role": "CEO",
-                "position": "CEO",
-                "personName": "Yoon Seung Hyun"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "Tesla",
-            "properties": {
-                "name": "Tesla",
-                "industry": "Automotive",
-                "type": "Company",
-                "location": "USA"
-            }
-        },
-        {
-            "label": "Market",
-            "name": "North America",
-            "properties": {
-                "name": "North America",
-                "type": "Region",
-                "market_name": "North America",
-                "region": "North America",
-                "market_id": "NA001",
-                "market_type": "Automotive"
-            }
-        },
-        {
-            "label": "Market",
-            "name": "Europe",
-            "properties": {
-                "name": "Europe",
-                "type": "Region",
-                "market_name": "Europe",
-                "region": "Europe",
-                "market_id": "EU001",
-                "market_type": "Automotive"
+                "name": "바디킷",
+                "type": "자동차 부품"
             }
         },
         {
             "label": "VehicleModel",
-            "name": "BMW M4",
+            "name": "M4",
             "properties": {
-                "name": "BMW M4",
+                "name": "M4",
                 "manufacturer": "BMW"
+            }
+        },
+        {
+            "label": "SalesRecord",
+            "name": "SalesRecord_2022",
+            "properties": {
+                "year": 2022,
+                "change_rate": 93.0,
+                "export_amount": 110.0,
+                "quarter": "Q4"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "북미",
+            "properties": {
+                "name": "북미",
+                "type": "시장"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "유럽",
+            "properties": {
+                "name": "유럽",
+                "type": "시장"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "한국",
+            "properties": {
+                "name": "한국",
+                "type": "국가"
+            }
+        },
+        {
+            "label": "Service",
+            "name": "에어로 옵티마이제이션 소프트웨어",
+            "properties": {
+                "name": "에어로 옵티마이제이션 소프트웨어",
+                "serviceType": "소프트웨어",
+                "category": "자동차 디자인 개선"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "ADRO",
-            "relationship": "DEVELOPED",
-            "end_node": "Body Kit",
+            "start_node": "에이드로",
+            "relationship": "FOUNDED",
+            "end_node": "윤승현",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "LED_BY",
+            "end_node": "윤승현",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EMPLOYS",
+            "end_node": "이용원",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EMPLOYS",
+            "end_node": "스콧 비튼",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EMPLOYS",
+            "end_node": "유동완",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EMPLOYS",
+            "end_node": "윤반석",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "HAS_PRODUCT",
+            "end_node": "바디킷",
+            "properties": {}
+        },
+        {
+            "start_node": "바디킷",
+            "relationship": "COMPATIBLE_WITH",
+            "end_node": "M4",
+            "properties": {}
+        },
+        {
+            "start_node": "윤승현",
+            "relationship": "WORKS_AT",
+            "end_node": "에이드로",
             "properties": {
-                "method": "Aerodynamic optimization"
+                "role": "대표"
             }
         },
         {
-            "start_node": "Body Kit",
-            "relationship": "UTILIZES",
-            "end_node": "Computational Fluid Dynamics",
+            "start_node": "에이드로",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "테슬라",
             "properties": {}
         },
         {
-            "start_node": "Yoon Seung Hyun",
-            "relationship": "FOUNDED",
-            "end_node": "ADRO",
+            "start_node": "에이드로",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "현대",
             "properties": {}
         },
         {
-            "start_node": "ADRO",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "Tesla",
+            "start_node": "에이드로",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "기아",
             "properties": {}
         },
         {
-            "start_node": "ADRO",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "North America",
+            "start_node": "에이드로",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "BMW",
             "properties": {}
         },
         {
-            "start_node": "ADRO",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "Europe",
+            "start_node": "에이드로",
+            "relationship": "HAS_SALES",
+            "end_node": "SalesRecord_2022",
             "properties": {}
         },
         {
-            "start_node": "Body Kit",
-            "relationship": "DESIGNED_FOR",
-            "end_node": "BMW M4",
+            "start_node": "에이드로",
+            "relationship": "OPERATES_IN",
+            "end_node": "북미",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "OPERATES_IN",
+            "end_node": "유럽",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "OFFERS",
+            "end_node": "에어로 옵티마이제이션 소프트웨어",
             "properties": {}
         }
     ]

@@ -2,109 +2,115 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "센드버드",
+            "name": "Sendbird",
             "properties": {
-                "name": "센드버드",
-                "company_name": "센드버드"
+                "industry": "AI Platform"
             }
         },
         {
-            "label": "AIAgent",
-            "name": "옴니프레젠트 AI 에이전트",
+            "label": "AI_Agent",
+            "name": "Omnipresent AI Agent",
             "properties": {
-                "name": "옴니프레젠트 AI 에이전트"
+                "name": "Omnipresent AI Agent"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "Web",
+            "properties": {
+                "name": "Web"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "Mobile",
+            "properties": {
+                "name": "Mobile"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "Email",
+            "properties": {
+                "name": "Email"
+            }
+        },
+        {
+            "label": "Channel",
+            "name": "Social Media",
+            "properties": {
+                "name": "Social Media"
             }
         },
         {
             "label": "Industry",
-            "name": "커머스",
+            "name": "Commerce",
             "properties": {
-                "name": "커머스"
+                "name": "Commerce"
             }
         },
         {
             "label": "Industry",
-            "name": "핀테크",
+            "name": "Fintech",
             "properties": {
-                "name": "핀테크"
+                "name": "Fintech"
             }
         },
         {
             "label": "Industry",
-            "name": "리테일",
+            "name": "Retail",
             "properties": {
-                "name": "리테일"
-            }
-        },
-        {
-            "label": "Metric",
-            "name": "구매 전환율 증가",
-            "properties": {
-                "name": "구매 전환율 증가",
-                "value": 2.8,
-                "unit": "배"
-            }
-        },
-        {
-            "label": "Metric",
-            "name": "CS 문의량 감소",
-            "properties": {
-                "name": "CS 문의량 감소",
-                "value": 40,
-                "unit": "%"
-            }
-        },
-        {
-            "label": "Metric",
-            "name": "상담 운영 비용 절감",
-            "properties": {
-                "name": "상담 운영 비용 절감",
-                "value": 35,
-                "unit": "%"
+                "name": "Retail"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "센드버드",
-            "relationship": "OFFERS",
-            "end_node": "옴니프레젠트 AI 에이전트",
+            "start_node": "Sendbird",
+            "relationship": "PROVIDES",
+            "end_node": "Omnipresent AI Agent",
             "properties": {}
         },
         {
-            "start_node": "옴니프레젠트 AI 에이전트",
+            "start_node": "Omnipresent AI Agent",
+            "relationship": "SUPPORTS",
+            "end_node": "Web",
+            "properties": {}
+        },
+        {
+            "start_node": "Omnipresent AI Agent",
+            "relationship": "SUPPORTS",
+            "end_node": "Mobile",
+            "properties": {}
+        },
+        {
+            "start_node": "Omnipresent AI Agent",
+            "relationship": "SUPPORTS",
+            "end_node": "Email",
+            "properties": {}
+        },
+        {
+            "start_node": "Omnipresent AI Agent",
+            "relationship": "SUPPORTS",
+            "end_node": "Social Media",
+            "properties": {}
+        },
+        {
+            "start_node": "Omnipresent AI Agent",
             "relationship": "TARGETS",
-            "end_node": "커머스",
+            "end_node": "Commerce",
             "properties": {}
         },
         {
-            "start_node": "옴니프레젠트 AI 에이전트",
+            "start_node": "Omnipresent AI Agent",
             "relationship": "TARGETS",
-            "end_node": "핀테크",
+            "end_node": "Fintech",
             "properties": {}
         },
         {
-            "start_node": "옴니프레젠트 AI 에이전트",
+            "start_node": "Omnipresent AI Agent",
             "relationship": "TARGETS",
-            "end_node": "리테일",
-            "properties": {}
-        },
-        {
-            "start_node": "옴니프레젠트 AI 에이전트",
-            "relationship": "IMPACTS",
-            "end_node": "구매 전환율 증가",
-            "properties": {}
-        },
-        {
-            "start_node": "옴니프레젠트 AI 에이전트",
-            "relationship": "IMPACTS",
-            "end_node": "CS 문의량 감소",
-            "properties": {}
-        },
-        {
-            "start_node": "옴니프레젠트 AI 에이전트",
-            "relationship": "IMPACTS",
-            "end_node": "상담 운영 비용 절감",
+            "end_node": "Retail",
             "properties": {}
         }
     ]

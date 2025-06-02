@@ -2,81 +2,114 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "String",
       "properties": {
-        "company_name": "String",
         "industry": "String"
       }
     },
     {
       "label": "Technology",
-      "name": "Technology",
+      "name": "String",
       "properties": {
-        "tech_name": "String",
+        "domain": "String"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "String",
+      "properties": {
         "category": "String"
       }
     },
     {
       "label": "Agreement",
-      "name": "Agreement",
+      "name": "String",
       "properties": {
-        "agreement_name": "String",
         "date": "String",
         "purpose": "String"
       }
     },
     {
       "label": "Investment",
-      "name": "Investment",
+      "name": "String",
       "properties": {
         "amount": "int",
         "date": "String"
       }
     },
     {
-      "label": "Project",
-      "name": "Project",
+      "label": "Market",
+      "name": "String",
       "properties": {
-        "project_name": "String",
-        "type": "String"
+        "region": "String"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "DEVELOPS",
+      "relationship": "DEVELOP_TECHNOLOGY",
+      "end_node": "Technology",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOP_PRODUCT",
+      "end_node": "Product",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "INVEST_IN",
+      "end_node": "Company",
+      "properties": {
+        "amount": "int",
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGN_AGREEMENT_WITH",
+      "end_node": "Company",
+      "properties": {
+        "date": "String",
+        "purpose": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "TARGET_MARKET",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ACQUIRE",
+      "end_node": "Company",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "RELATES_TO_TECHNOLOGY",
       "end_node": "Technology",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
       "start_node": "Agreement",
-      "relationship": "COVERS",
-      "end_node": "Project",
+      "relationship": "RELATES_TO_PRODUCT",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "MAKES_INVESTMENT",
-      "end_node": "Investment",
-      "properties": {}
-    },
-    {
-      "start_node": "Investment",
-      "relationship": "INVESTS_IN",
-      "end_node": "Company",
+      "start_node": "Technology",
+      "relationship": "APPLIED_IN",
+      "end_node": "Product",
       "properties": {}
     }
   ]

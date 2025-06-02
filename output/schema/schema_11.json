@@ -1,91 +1,103 @@
 {
   "nodes": [
     {
-      "label": "Quarter",
-      "name": "Quarter",
-      "properties": {
-        "year": "int",
-        "period": "string"
-      }
-    },
-    {
-      "label": "ExportSummary",
-      "name": "Export Summary",
-      "properties": {
-        "totalExportAmount": "float",
-        "changeRate": "float",
-        "exportingCompanyCount": "int"
-      }
-    },
-    {
-      "label": "ProductCategory",
-      "name": "Product Category",
+      "label": "Company",
+      "name": "Company",
       "properties": {
         "name": "string",
-        "exportAmount": "float",
-        "changeRate": "float",
-        "exportCompanyCount": "int"
+        "type": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "name": "string"
       }
     },
     {
       "label": "Country",
       "name": "Country",
       "properties": {
-        "name": "string",
-        "exportAmount": "float",
-        "changeRate": "float",
-        "rank": "int"
+        "name": "string"
+      }
+    },
+    {
+      "label": "SalesRecord",
+      "name": "SalesRecord",
+      "properties": {
+        "year": "int",
+        "quarter": "string",
+        "export_amount": "float",
+        "change_rate": "float"
       }
     },
     {
       "label": "TariffPolicy",
-      "name": "Tariff Policy",
+      "name": "TariffPolicy",
       "properties": {
         "name": "string",
-        "imposingCountry": "string",
         "rate": "float",
-        "effectiveDate": "string"
+        "effective_date": "string"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Official",
+      "name": "Official",
+      "properties": {
+        "name": "string",
+        "title": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ExportSummary",
-      "relationship": "FOR_PERIOD",
-      "end_node": "Quarter",
+      "start_node": "Company",
+      "relationship": "HAS_SALES",
+      "end_node": "SalesRecord",
       "properties": {}
     },
     {
-      "start_node": "ExportSummary",
+      "start_node": "SalesRecord",
       "relationship": "INCLUDES_PRODUCT",
-      "end_node": "ProductCategory",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportSummary",
-      "relationship": "EXPORTS_TO",
+      "start_node": "SalesRecord",
+      "relationship": "TARGETS_COUNTRY",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "ProductCategory",
-      "relationship": "EXPORTED_TO",
-      "end_node": "Country",
-      "properties": {
-        "exportAmount": "float",
-        "changeRate": "float"
-      }
+      "start_node": "SalesRecord",
+      "relationship": "ANNOUNCED_BY",
+      "end_node": "GovernmentAgency",
+      "properties": {}
     },
     {
-      "start_node": "TariffPolicy",
-      "relationship": "APPLIES_TO",
-      "end_node": "ProductCategory",
+      "start_node": "GovernmentAgency",
+      "relationship": "EMPLOYS",
+      "end_node": "Official",
       "properties": {}
     },
     {
       "start_node": "TariffPolicy",
-      "relationship": "APPLIES_IN",
-      "end_node": "Quarter",
+      "relationship": "AFFECTS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "IMPOSED_BY",
+      "end_node": "Country",
       "properties": {}
     }
   ]

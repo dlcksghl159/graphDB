@@ -1,152 +1,102 @@
 {
     "nodes": [
         {
-            "label": "Organization",
-            "name": "소상공인시장진흥공단",
+            "label": "SupportProgram",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트"
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년가게",
             "properties": {
-                "category": "",
-                "type": "GovernmentAgency",
-                "location": "대한민국",
-                "name": "소상공인시장진흥공단",
-                "industry": "",
-                "sector": ""
+                "category": "음식점업",
+                "years_in_business": 30,
+                "qualification_type": "우수 소상인"
             }
         },
         {
-            "label": "Organization",
+            "label": "SmallBusiness",
+            "name": "백년소공인",
+            "properties": {
+                "category": "식품 제조업",
+                "years_in_business": 15,
+                "qualification_type": "숙련된 소공인"
+            }
+        },
+        {
+            "label": "PartnerCompany",
             "name": "롯데웰푸드",
             "properties": {
-                "category": "",
-                "type": "Corporation",
-                "location": "대한민국",
-                "name": "롯데웰푸드",
-                "industry": "Food Manufacturing",
-                "sector": ""
+                "industry": "식품 제조"
             }
         },
         {
-            "label": "SupportProgram",
-            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "label": "Institution",
+            "name": "소상공인시장진흥공단",
             "properties": {
-                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-                "start_year": 2025,
-                "participant_count": 0,
-                "year": 2025,
-                "description": "상생 프로젝트",
-                "program_id": ""
+                "institutionType": "정부기관",
+                "role": "지원 및 협력"
             }
         },
         {
             "label": "Brand",
-            "name": "식사이론",
-            "properties": {
-                "name": "식사이론"
-            }
+            "name": "식사이론"
         },
         {
             "label": "Product",
             "name": "밀키트",
             "properties": {
-                "name": "밀키트",
-                "category": "즉석조리식품",
-                "output_power": "",
-                "product_type": "",
-                "id": "",
-                "cumulative_sales": 0,
-                "price": 0,
-                "motor_type": "",
-                "power_consumption_w": 0.0,
-                "noise_level_db": 0.0,
-                "launch_datetime": "",
-                "colors": "",
-                "release_date": "",
-                "product_id": "",
-                "type": "",
-                "launch_year": 0,
-                "launchYear": 0,
-                "active_ingredient": "",
-                "therapy_area": "",
-                "generic_name": "",
-                "feature": "",
-                "productName": "",
-                "productType": "",
-                "releaseDate": "",
-                "preheatTime": "",
-                "design": "",
-                "portability": "",
-                "durability": "",
-                "temperatureLevels": "",
-                "safetyFeatures": "",
-                "productId": "",
-                "generation": ""
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "소진공·롯데웰푸드 업무 협약",
-            "properties": {
-                "agreement_date": "2023-03-01",
-                "agreement_type": "Partnership",
-                "date": "2023-03-01",
-                "purpose": "상생 협력",
-                "location": "대한민국",
-                "title": "업무 협약",
-                "id": "001",
-                "name": "소진공·롯데웰푸드 업무 협약",
-                "agreement_name": "소진공·롯데웰푸드 업무 협약",
-                "type": "Partnership"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "박성효",
-            "properties": {
-                "name": "박성효",
-                "title": "이사장",
-                "role": "Leader",
-                "position": "소진공 이사장",
-                "personName": "박성효"
+                "category": "HMR",
+                "type": "즉석조리식품"
             }
         }
     ],
     "relations": [
         {
             "start_node": "소상공인시장진흥공단",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "롯데웰푸드",
-            "properties": {}
-        },
-        {
-            "start_node": "롯데웰푸드",
-            "relationship": "PRODUCES",
-            "end_node": "밀키트",
-            "properties": {}
-        },
-        {
-            "start_node": "롯데웰푸드",
-            "relationship": "BRANDED_AS",
-            "end_node": "식사이론",
-            "properties": {}
-        },
-        {
-            "start_node": "소상공인시장진흥공단",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "롯데웰푸드",
-            "properties": {
-                "agreement_name": "소진공·롯데웰푸드 업무 협약",
-                "date": "2023-03-01"
-            }
-        },
-        {
-            "start_node": "소상공인시장진흥공단",
-            "relationship": "LAUNCHES",
+            "relationship": "INITIATES",
             "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
             "properties": {}
         },
         {
-            "start_node": "박성효",
-            "relationship": "LEADS",
+            "start_node": "롯데웰푸드",
+            "relationship": "PARTNERS_WITH",
             "end_node": "소상공인시장진흥공단",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "SELECTED_FOR",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "SELECTED_FOR",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "COMMERCIALIZES",
+            "end_node": "밀키트",
+            "properties": {}
+        },
+        {
+            "start_node": "프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년가게",
+            "properties": {}
+        },
+        {
+            "start_node": "프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년소공인",
+            "properties": {}
+        },
+        {
+            "start_node": "밀키트",
+            "relationship": "BRANDED_AS",
+            "end_node": "식사이론",
             "properties": {}
         }
     ]

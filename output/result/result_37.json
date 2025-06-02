@@ -1,77 +1,167 @@
 {
     "nodes": [
         {
-            "label": "CloudService",
+            "label": "CloudProvider",
+            "name": "AmazonWebServices",
+            "properties": {}
+        },
+        {
+            "label": "CloudProvider",
+            "name": "Google",
+            "properties": {}
+        },
+        {
+            "label": "Product",
+            "name": "Microsoft365",
+            "properties": {
+                "category": "Software",
+                "specification": "Office Suite",
+                "name": "Microsoft365",
+                "type": "Cloud",
+                "price": 0
+            }
+        },
+        {
+            "label": "Service",
             "name": "파이브클라우드",
             "properties": {
-                "revenue": 10000000000,
-                "revenueGrowthRate": "60%",
-                "customerCount": 2600
+                "name": "파이브클라우드",
+                "serviceType": "클라우드 서비스",
+                "type": "IT 솔루션",
+                "users_count": 0,
+                "client_count": 2600,
+                "category": "클라우드/IT",
+                "launch_year": 0
             }
         },
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "패스트파이브",
             "properties": {
-                "name": "패스트파이브",
-                "industry": "클라우드 서비스",
-                "role": "provider",
-                "annual_revenue": 0,
-                "revenue_growth_percentage": 60
+                "industry": "IT",
+                "name": "패스트파이브"
             }
         },
         {
-            "label": "SME",
-            "name": "중소기업",
+            "label": "BusinessSegment",
+            "name": "IT 신사업 부문",
             "properties": {
-                "industry": "클라우드 서비스",
-                "name": "중소기업",
-                "category": "기업",
-                "location": "대한민국",
-                "partner_since_year": 0,
-                "company_id": ""
+                "segment_name": "IT 신사업 부문"
             }
         },
         {
-            "label": "PartnerProgram",
+            "label": "COMPANY",
+            "name": "하이픈디자인",
+            "properties": {
+                "industry": "인테리어",
+                "name": "하이픈디자인"
+            }
+        },
+        {
+            "label": "Award",
             "name": "AWS 어드밴스드 티어 파트너",
             "properties": {
-                "awardsCount": 3
+                "year": 2023,
+                "category": "클라우드"
+            }
+        },
+        {
+            "label": "Award",
+            "name": "AWS 한국파트너리그",
+            "properties": {
+                "year": 0,
+                "category": "클라우드"
+            }
+        },
+        {
+            "label": "Transaction",
+            "name": "거래기록",
+            "properties": {
+                "year": 2022,
+                "amount": 10000000000,
+                "growth_rate_percent": 60,
+                "share_percent": 0,
+                "growth_percent": 0
+            }
+        },
+        {
+            "label": "연차별 매출 기록",
+            "name": "연차별 매출 기록",
+            "properties": {
+                "year": 2022,
+                "quarter": "",
+                "export_amount": 100.0,
+                "change_rate": 60.0
             }
         },
         {
             "label": "Person",
             "name": "김대일",
             "properties": {
-                "name": "김대일",
-                "title": "CEO",
-                "role": "대표",
-                "position": "패스트파이브 대표"
+                "position": "대표",
+                "name": "김대일"
             }
-        },
-        {
-            "label": "CustomerSegment",
-            "name": "중소·중견기업",
-            "properties": {}
         }
     ],
     "relations": [
         {
+            "start_node": "파이브클라우드",
+            "relationship": "INTEGRATES",
+            "end_node": "AmazonWebServices",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "INTEGRATES",
+            "end_node": "Google",
+            "properties": {}
+        },
+        {
+            "start_node": "Service",
+            "relationship": "INTEGRATES",
+            "end_node": "Microsoft365",
+            "properties": {}
+        },
+        {
             "start_node": "패스트파이브",
-            "relationship": "PROVIDES",
+            "relationship": "OFFERS",
             "end_node": "파이브클라우드",
             "properties": {}
         },
         {
-            "start_node": "파이브클라우드",
-            "relationship": "TARGETS",
-            "end_node": "중소·중견기업",
+            "start_node": "패스트파이브",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "하이픈디자인",
+            "properties": {}
+        },
+        {
+            "start_node": "패스트파이브",
+            "relationship": "HAS_SALES",
+            "end_node": "연차별 매출 기록",
             "properties": {}
         },
         {
             "start_node": "파이브클라우드",
-            "relationship": "HAS_PARTNER",
+            "relationship": "RECEIVES",
             "end_node": "AWS 어드밴스드 티어 파트너",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "RECEIVES",
+            "end_node": "AWS 한국파트너리그",
+            "properties": {}
+        },
+        {
+            "start_node": "패스트파이브",
+            "relationship": "OPERATES_IN",
+            "end_node": "IT 신사업 부문",
+            "properties": {}
+        },
+        {
+            "start_node": "패스트파이브",
+            "relationship": "SIGNED",
+            "end_node": "거래기록",
             "properties": {}
         },
         {

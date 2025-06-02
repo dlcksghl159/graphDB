@@ -1,104 +1,124 @@
 {
     "nodes": [
         {
-            "label": "Organization",
+            "label": "PartnerCompany",
             "name": "엘리스그룹",
             "properties": {
-                "category": "",
-                "type": "",
-                "location": "한국",
-                "name": "엘리스그룹",
-                "industry": "",
-                "sector": ""
+                "industry": "AI 교육"
             }
         },
         {
-            "label": "Organization",
+            "label": "PartnerCompany",
             "name": "파인디",
             "properties": {
-                "category": "",
-                "type": "스타트업",
-                "location": "일본",
-                "name": "파인디",
-                "industry": "IT",
-                "sector": ""
+                "industry": "엔지니어 채용"
             }
         },
         {
             "label": "Agreement",
-            "name": "Agreement",
+            "name": "업무 협약",
             "properties": {
-                "agreement_date": "14일",
-                "agreement_type": "업무 협약",
-                "purpose": "양국 간 협력 강화",
-                "location": "한국",
-                "name": "일본 엔지니어 채용 플랫폼 파인디와 업무 협약"
+                "name": "업무 협약",
+                "date": "2023-02-14",
+                "title": "한-일 B2B 비즈니스 확장 협력",
+                "location": "일본",
+                "agreement_id": "12345",
+                "purpose": "AI 플랫폼 시장 확장 협력",
+                "scope": "서비스 개발 포함",
+                "agreement_date": "2023-02-14",
+                "description": "인공지능 플랫폼 시장 및 서비스 개발 협력을 위한 한-일 업무 협약"
             }
         },
         {
             "label": "Person",
             "name": "김재원",
             "properties": {
+                "position": "대표",
                 "name": "김재원",
-                "title": "대표",
-                "role": "대표",
-                "position": "엘리스그룹"
+                "person_id": "P001",
+                "role": "CEO",
+                "title": "엘리스그룹 대표"
             }
         },
         {
             "label": "Person",
             "name": "야마다 유이치로",
             "properties": {
+                "position": "대표",
                 "name": "야마다 유이치로",
-                "title": "대표",
-                "role": "대표",
-                "position": "파인디"
+                "person_id": "P002",
+                "role": "CEO",
+                "title": "파인디 대표"
             }
         },
         {
             "label": "Service",
             "name": "파인디 팀플러스",
             "properties": {
-                "description": "IT 개발자를 위한 채용 플랫폼과 엔지니어 조직의 생산성 측정 서비스",
                 "name": "파인디 팀플러스",
-                "service_type": "",
-                "userCount": 200000,
-                "companyCount": 3000
+                "serviceType": "생산성 측정",
+                "type": "채용",
+                "users_count": 200000,
+                "client_count": 3000,
+                "category": "IT 개발자",
+                "launch_year": 2016
+            }
+        },
+        {
+            "label": "Market",
+            "name": "B2B 시장",
+            "properties": {
+                "market_type": "B2B",
+                "region": "일본",
+                "market_id": "M001",
+                "sales_ratio": 0.0,
+                "country": "일본",
+                "segmentType": "테크놀로지 마켓",
+                "name": "B2B 엔지니어 시장",
+                "current_size_musd": 0.0,
+                "projected_size_musd": 0.0,
+                "projection_year": 2023
             }
         }
     ],
     "relations": [
         {
             "start_node": "엘리스그룹",
-            "relationship": "SIGNED_AGREEMENT_WITH",
+            "relationship": "PARTNERS_WITH",
+            "end_node": "파인디",
+            "properties": {}
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "SIGN_AGREEMENT_WITH",
             "end_node": "파인디",
             "properties": {
-                "agreement_name": "일본 엔지니어 채용 플랫폼 파인디와 업무 협약",
-                "date": "14일"
+                "date": "2023-02-14",
+                "purpose": "한-일 B2B 비즈니스 확장 협력"
             }
         },
         {
+            "start_node": "엘리스그룹",
+            "relationship": "TARGET_MARKET",
+            "end_node": "B2B 시장",
+            "properties": {}
+        },
+        {
             "start_node": "김재원",
-            "relationship": "EMPLOYED_BY",
+            "relationship": "LEADS",
             "end_node": "엘리스그룹",
             "properties": {}
         },
         {
             "start_node": "야마다 유이치로",
-            "relationship": "EMPLOYED_BY",
+            "relationship": "LEADS",
             "end_node": "파인디",
             "properties": {}
         },
         {
             "start_node": "파인디",
-            "relationship": "PROVIDES",
+            "relationship": "SUPPORTS",
             "end_node": "파인디 팀플러스",
-            "properties": {}
-        },
-        {
-            "start_node": "파인디 팀플러스",
-            "relationship": "AVAILABLE_IN",
-            "end_node": "한국",
             "properties": {}
         }
     ]

@@ -1,59 +1,61 @@
 {
   "nodes": [
     {
-      "label": "ExportReport",
-      "name": "Export Report",
+      "label": "ExportStatistic",
+      "name": "수출 통계",
       "properties": {
         "year": "int",
-        "quarter": "string",
-        "totalExportAmount": "string",
-        "SMECount": "int"
+        "quarter": "int",
+        "totalExport": "float",
+        "growthRate": "float",
+        "exporterCount": "int"
       }
     },
     {
       "label": "Product",
-      "name": "Product",
+      "name": "수출 품목",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "Country",
-      "name": "Country",
+      "name": "수출국",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "GovernmentAgency",
-      "name": "Government Agency",
+      "name": "정부 기관",
       "properties": {
         "name": "string"
       }
     },
     {
-      "label": "TariffMeasure",
-      "name": "Tariff Measure",
+      "label": "Tariff",
+      "name": "관세 조치",
       "properties": {
         "name": "string",
-        "effectiveDate": "string"
+        "startDate": "date"
       }
     }
   ],
   "relations": [
     {
       "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHED",
-      "end_node": "ExportReport",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportStatistic",
       "properties": {}
     },
     {
-      "start_node": "ExportReport",
+      "start_node": "ExportStatistic",
       "relationship": "INCLUDES_PRODUCT",
       "end_node": "Product",
       "properties": {
-        "exportAmount": "string",
-        "growthRate": "string"
+        "amount": "float",
+        "growthRate": "float",
+        "rank": "int"
       }
     },
     {
@@ -61,17 +63,21 @@
       "relationship": "EXPORTED_TO",
       "end_node": "Country",
       "properties": {
-        "exportAmount": "string",
-        "growthRate": "string"
+        "amount": "float",
+        "growthRate": "float"
       }
     },
     {
-      "start_node": "TariffMeasure",
+      "start_node": "Tariff",
       "relationship": "AFFECTS_PRODUCT",
       "end_node": "Product",
-      "properties": {
-        "impactRate": "string"
-      }
+      "properties": {}
+    },
+    {
+      "start_node": "Tariff",
+      "relationship": "IMPOSED_BY",
+      "end_node": "Country",
+      "properties": {}
     }
   ]
 }

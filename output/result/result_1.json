@@ -4,79 +4,60 @@
             "label": "Company",
             "name": "에이스침대",
             "properties": {
-                "name": "에이스침대",
-                "industry": "",
-                "region": "",
-                "location": "",
-                "company_name": "에이스침대"
+                "industry": "가구"
             }
         },
         {
-            "label": "Metrics",
-            "name": "1분기매출",
+            "label": "FinancialMetric",
+            "name": "영업이익",
             "properties": {
-                "metric_id": "1",
-                "name": "매출",
-                "value": 814,
-                "unit": "억원"
+                "metric_name": "영업이익",
+                "value": 121000000000,
+                "unit": "KRW",
+                "year": 2023,
+                "quarter": "Q1"
             }
         },
         {
-            "label": "Metrics",
-            "name": "1분기영업이익",
+            "label": "FinancialMetric",
+            "name": "매출",
             "properties": {
-                "metric_id": "2",
-                "name": "영업이익",
-                "value": 121,
-                "unit": "억원"
+                "metric_name": "매출",
+                "value": 814000000000,
+                "unit": "KRW",
+                "year": 2023,
+                "quarter": "Q1"
             }
         },
         {
-            "label": "Metrics",
-            "name": "1분기순이익",
+            "label": "FinancialMetric",
+            "name": "분기순이익",
             "properties": {
-                "metric_id": "3",
-                "name": "순이익",
-                "value": 95,
-                "unit": "억원"
-            }
-        },
-        {
-            "label": "FinancialReport",
-            "name": "2023년1분기재무보고서",
-            "properties": {
-                "period": "2023 1분기",
-                "revenue": 814,
-                "operating_profit": 121,
-                "net_profit": 95,
-                "revenue_change_rate": -2.8,
-                "profit_change_rate": -18.3
+                "metric_name": "분기순이익",
+                "value": 95000000000,
+                "unit": "KRW",
+                "year": 2023,
+                "quarter": "Q1"
             }
         }
     ],
     "relations": [
         {
             "start_node": "에이스침대",
-            "relationship": "HAS_REPORT",
-            "end_node": "2023년1분기재무보고서",
+            "relationship": "HAS_FINANCIAL_METRIC",
+            "end_node": "영업이익",
             "properties": {}
         },
         {
             "start_node": "에이스침대",
-            "relationship": "HAS_METRIC",
-            "end_node": "1분기매출",
+            "relationship": "HAS_FINANCIAL_METRIC",
+            "end_node": "매출",
             "properties": {}
         },
         {
             "start_node": "에이스침대",
-            "relationship": "HAS_METRIC",
-            "end_node": "1분기영업이익",
-            "properties": {}
-        },
-        {
-            "start_node": "에이스침대",
-            "relationship": "HAS_METRIC",
-            "end_node": "1분기순이익",
+            "relationship": "HAS_FINANCIAL_METRIC",
+            "end_node": "분기순이익",
             "properties": {}
         }
     ]

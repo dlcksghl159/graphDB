@@ -2,117 +2,110 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "회사",
+      "name": "Company",
       "properties": {
+        "company_id": "string",
         "name": "string",
-        "industry": "string",
-        "headquarters": "string",
-        "founded_year": "int"
+        "headquarters": "string"
       }
     },
     {
       "label": "Product",
-      "name": "제품",
+      "name": "Product",
       "properties": {
+        "product_id": "string",
         "name": "string",
-        "category": "string",
-        "release_date": "string"
+        "category": "string"
       }
     },
     {
       "label": "Technology",
-      "name": "기술",
+      "name": "Technology",
       "properties": {
+        "tech_id": "string",
         "name": "string",
-        "description": "string"
+        "domain": "string"
       }
     },
     {
       "label": "VehicleModel",
-      "name": "차량모델",
+      "name": "VehicleModel",
       "properties": {
+        "model_id": "string",
         "name": "string",
         "manufacturer": "string"
       }
     },
     {
       "label": "Person",
-      "name": "인물",
+      "name": "Person",
       "properties": {
+        "person_id": "string",
         "name": "string",
-        "position": "string"
+        "role": "string"
       }
     },
     {
       "label": "Market",
-      "name": "시장",
+      "name": "Market",
       "properties": {
-        "region": "string"
+        "market_id": "string",
+        "region": "string",
+        "sales_ratio": "float"
       }
     },
     {
-      "label": "Revenue",
-      "name": "매출통계",
+      "label": "FinancialRecord",
+      "name": "FinancialRecord",
       "properties": {
+        "record_id": "string",
         "year": "int",
-        "amount": "float",
+        "revenue": "float",
         "growth_rate": "float",
-        "overseas_ratio": "float",
-        "us_ratio": "float"
+        "overseas_ratio": "float"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
+      "relationship": "PRODUCES",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "UTILIZES",
+      "relationship": "USES_TECHNOLOGY",
       "end_node": "Technology",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "DESIGNED_FOR",
+      "relationship": "COMPATIBLE_WITH",
       "end_node": "VehicleModel",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "HOLDS_POSITION",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "Company",
+      "relationship": "EMPLOYS",
+      "end_node": "Person",
+      "properties": {
+        "since": "date"
+      }
     },
     {
       "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECORDED",
-      "end_node": "Revenue",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGNED_DISTRIBUTION_CONTRACT_WITH",
+      "relationship": "SELLS_IN",
       "end_node": "Market",
       "properties": {
-        "date": "string",
-        "contract_type": "string"
+        "percentage": "float"
       }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_FINANCIAL_RECORD",
+      "end_node": "FinancialRecord",
+      "properties": {}
     }
   ]
 }

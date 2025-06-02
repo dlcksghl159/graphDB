@@ -2,107 +2,123 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "String",
+      "name": "Company",
       "properties": {
-        "company_id": "string",
         "name": "string"
       }
     },
     {
-      "label": "AIAgent",
-      "name": "String",
+      "label": "AI_Agent",
+      "name": "AI Agent",
       "properties": {
-        "agent_id": "string",
-        "name": "string",
-        "description": "string"
+        "name": "string"
       }
     },
     {
       "label": "Industry",
-      "name": "String",
+      "name": "Industry",
       "properties": {
-        "industry_id": "string",
         "name": "string"
       }
     },
     {
       "label": "Channel",
-      "name": "String",
+      "name": "Channel",
       "properties": {
-        "channel_id": "string",
         "name": "string"
       }
     },
     {
-      "label": "UseCase",
-      "name": "String",
+      "label": "Feature",
+      "name": "Feature",
       "properties": {
-        "usecase_id": "string",
-        "name": "string",
-        "description": "string"
+        "name": "string"
       }
     },
     {
       "label": "Integration",
-      "name": "String",
+      "name": "Integration",
       "properties": {
-        "integration_id": "string",
-        "name": "string",
-        "type": "string"
+        "name": "string"
       }
     },
     {
       "label": "Metric",
-      "name": "String",
+      "name": "Metric",
       "properties": {
-        "metric_id": "string",
         "name": "string",
-        "value": "float",
         "unit": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "Person",
+      "properties": {
+        "name": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "CustomerAction",
+      "name": "Customer Action",
+      "properties": {
+        "name": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "AIAgent",
+      "relationship": "PROVIDES",
+      "end_node": "AI_Agent",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Industry",
-      "properties": {}
-    },
-    {
-      "start_node": "AIAgent",
+      "start_node": "AI_Agent",
       "relationship": "TARGETS",
       "end_node": "Industry",
       "properties": {}
     },
     {
-      "start_node": "AIAgent",
+      "start_node": "AI_Agent",
       "relationship": "SUPPORTS",
       "end_node": "Channel",
       "properties": {}
     },
     {
-      "start_node": "AIAgent",
-      "relationship": "PROVIDES",
-      "end_node": "UseCase",
+      "start_node": "AI_Agent",
+      "relationship": "HAS_FEATURE",
+      "end_node": "Feature",
       "properties": {}
     },
     {
-      "start_node": "AIAgent",
+      "start_node": "AI_Agent",
       "relationship": "INTEGRATES_WITH",
       "end_node": "Integration",
       "properties": {}
     },
     {
-      "start_node": "AIAgent",
-      "relationship": "IMPACTS",
+      "start_node": "AI_Agent",
+      "relationship": "ACHIEVES",
       "end_node": "Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "LED_BY",
+      "end_node": "Person",
+      "properties": {}
+    },
+    {
+      "start_node": "CustomerAction",
+      "relationship": "TRIGGERS",
+      "end_node": "Feature",
+      "properties": {}
+    },
+    {
+      "start_node": "Industry",
+      "relationship": "USES",
+      "end_node": "AI_Agent",
       "properties": {}
     }
   ]

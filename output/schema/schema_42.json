@@ -2,100 +2,72 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "companyName",
+      "name": "String",
       "properties": {
-        "industry": "string"
+        "industry": "String",
+        "company_type": "String"
       }
     },
     {
-      "label": "CloudService",
-      "name": "serviceName",
+      "label": "Service",
+      "name": "String",
       "properties": {
-        "revenue": "int",
-        "revenueGrowthRate": "string",
-        "customerCount": "int"
+        "category": "String",
+        "launch_year": "int"
       }
     },
     {
-      "label": "SolutionProvider",
-      "name": "providerName",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "Brand",
-      "name": "brandName",
+      "label": "CloudProvider",
+      "name": "String",
       "properties": {}
     },
     {
-      "label": "CollaborationService",
-      "name": "serviceName",
+      "label": "Metric",
+      "name": "String",
       "properties": {
-        "growthFactor": "int"
-      }
-    },
-    {
-      "label": "PartnerProgram",
-      "name": "programName",
-      "properties": {
-        "awardsCount": "int"
+        "value": "int",
+        "unit": "String"
       }
     },
     {
       "label": "Person",
-      "name": "personName",
+      "name": "String",
       "properties": {
-        "position": "string"
+        "position": "String"
       }
-    },
-    {
-      "label": "CustomerSegment",
-      "name": "segmentName",
-      "properties": {}
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PROVIDES",
-      "end_node": "CloudService",
-      "properties": {}
-    },
-    {
-      "start_node": "CloudService",
-      "relationship": "INTEGRATES_SOLUTION",
-      "end_node": "SolutionProvider",
-      "properties": {}
-    },
-    {
-      "start_node": "CloudService",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Brand",
       "relationship": "OFFERS",
-      "end_node": "CollaborationService",
+      "end_node": "Service",
       "properties": {}
     },
     {
-      "start_node": "CloudService",
-      "relationship": "HAS_PARTNER",
-      "end_node": "PartnerProgram",
+      "start_node": "Service",
+      "relationship": "INTEGRATES",
+      "end_node": "CloudProvider",
+      "properties": {}
+    },
+    {
+      "start_node": "Service",
+      "relationship": "ACHIEVED",
+      "end_node": "Metric",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "LED_BY",
-      "end_node": "Person",
-      "properties": {}
+      "relationship": "PARTNERED_WITH",
+      "end_node": "Company",
+      "properties": {
+        "project": "String"
+      }
     },
     {
-      "start_node": "CloudService",
-      "relationship": "TARGETS",
-      "end_node": "CustomerSegment",
+      "start_node": "Person",
+      "relationship": "LEADS",
+      "end_node": "Service",
       "properties": {}
     }
   ]

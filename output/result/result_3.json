@@ -1,189 +1,136 @@
 {
     "nodes": [
         {
-            "label": "ExportSummary",
-            "name": "Export Summary",
+            "label": "ExportRecord",
+            "name": "1분기 중소기업 수출",
             "properties": {
-                "totalExportAmount": 270000000000,
-                "changeRate": 0.7,
-                "exportingCompanyCount": 63135
+                "year": 2025,
+                "quarter": 1,
+                "export_amount_usd": 270000000000,
+                "growth_rate": 0.7
             }
         },
         {
             "label": "ProductCategory",
-            "name": "Product Category",
+            "name": "화장품",
             "properties": {
-                "name": "Cosmetics",
-                "exportAmount": 18400000000,
-                "changeRate": 19.6,
-                "exportCompanyCount": 5760
+                "category_name": "Beauty",
+                "name": "화장품"
             }
         },
         {
             "label": "ProductCategory",
-            "name": "Product Category",
+            "name": "자동차",
             "properties": {
-                "name": "Automobile",
-                "exportAmount": 17400000000,
-                "changeRate": 67.4,
-                "exportCompanyCount": null
+                "category_name": "Automotive",
+                "name": "자동차"
             }
         },
         {
             "label": "Country",
-            "name": "Country",
+            "name": "미국",
             "properties": {
                 "name": "United States",
-                "exportAmount": 44800000000,
-                "changeRate": -2.5,
-                "rank": 1,
                 "region": "North America",
-                "country_code": "US",
-                "countryName": "United States"
+                "country_name": "미국"
             }
         },
         {
             "label": "Country",
-            "name": "Country",
+            "name": "키르기스스탄",
             "properties": {
-                "name": "China",
-                "exportAmount": 43200000000,
-                "changeRate": null,
-                "rank": 2,
-                "region": "Asia",
-                "country_code": "CN",
-                "countryName": "China"
+                "name": "Kyrgyzstan",
+                "region": "Central Asia",
+                "country_name": "키르기스스탄"
             }
         },
         {
-            "label": "Product",
-            "name": "Steel",
+            "label": "ExportSME",
+            "name": "중소기업",
             "properties": {
-                "name": "Steel",
-                "category": "Metal",
-                "output_power": null,
-                "product_type": null,
-                "id": null,
-                "cumulative_sales": null,
-                "price": null,
-                "motor_type": null,
-                "power_consumption_w": null,
-                "noise_level_db": null,
-                "launch_datetime": null,
-                "colors": null,
-                "release_date": null,
-                "product_id": null,
-                "type": null,
-                "launch_year": null,
-                "launchYear": null,
-                "active_ingredient": null,
-                "therapy_area": null,
-                "generic_name": null,
-                "feature": null,
-                "productName": null,
-                "productType": null,
-                "releaseDate": null,
-                "preheatTime": null,
-                "design": null,
-                "portability": null,
-                "durability": null,
-                "temperatureLevels": null,
-                "safetyFeatures": null,
-                "productId": null,
-                "generation": null
+                "name": "중소기업",
+                "industry": "Various"
             }
         },
         {
-            "label": "Product",
-            "name": "Aluminum",
+            "label": "TariffPolicy",
+            "name": "철강 및 알루미늄 관세",
             "properties": {
-                "name": "Aluminum",
-                "category": "Metal",
-                "output_power": null,
-                "product_type": null,
-                "id": null,
-                "cumulative_sales": null,
-                "price": null,
-                "motor_type": null,
-                "power_consumption_w": null,
-                "noise_level_db": null,
-                "launch_datetime": null,
-                "colors": null,
-                "release_date": null,
-                "product_id": null,
-                "type": null,
-                "launch_year": null,
-                "launchYear": null,
-                "active_ingredient": null,
-                "therapy_area": null,
-                "generic_name": null,
-                "feature": null,
-                "productName": null,
-                "productType": null,
-                "releaseDate": null,
-                "preheatTime": null,
-                "design": null,
-                "portability": null,
-                "durability": null,
-                "temperatureLevels": null,
-                "safetyFeatures": null,
-                "productId": null,
-                "generation": null
+                "name": "미국 철강 및 알루미늄 관세",
+                "rate": 25.0,
+                "effective_date": "2025-03",
+                "scope": "Steel and Aluminum Products",
+                "measures": "25% Tariff Imposed"
             }
         },
         {
-            "label": "TariffMeasure",
-            "name": "Tariff Measure",
+            "label": "GovernmentAgency",
+            "name": "중소벤처기업부",
             "properties": {
-                "name": "US Tariff on Metals",
-                "effectiveDate": "2023-03-01",
-                "enact_date": "2023-03-01",
-                "measureType": "Imposed Tariff",
-                "impactRate": 25.0
+                "name": "중소벤처기업부",
+                "agency_name": "중소벤처기업부"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "Export Summary",
-            "relationship": "FOR_PERIOD",
-            "end_node": "First Quarter",
+            "start_node": "1분기 중소기업 수출",
+            "relationship": "TARGETS_COUNTRY",
+            "end_node": "미국",
             "properties": {}
         },
         {
-            "start_node": "Product Category",
+            "start_node": "1분기 중소기업 수출",
+            "relationship": "HAS_STATISTIC",
+            "end_node": "화장품",
+            "properties": {}
+        },
+        {
+            "start_node": "화장품",
             "relationship": "EXPORTED_TO",
-            "end_node": "United States",
+            "end_node": "미국",
             "properties": {
-                "exportAmount": 18400000000,
-                "changeRate": 19.6
+                "export_amount": 1840000000,
+                "growth_rate": 19.6
             }
         },
         {
-            "start_node": "Product Category",
+            "start_node": "1분기 중소기업 수출",
+            "relationship": "HAS_STATISTIC",
+            "end_node": "자동차",
+            "properties": {}
+        },
+        {
+            "start_node": "자동차",
             "relationship": "EXPORTED_TO",
-            "end_node": "Country",
+            "end_node": "키르기스스탄",
             "properties": {
-                "exportAmount": 17400000000,
-                "changeRate": 67.4
+                "export_amount": 1740000000,
+                "growth_rate": 67.4
             }
         },
         {
-            "start_node": "Tariff Measure",
-            "relationship": "TARGETS_PRODUCT",
-            "end_node": "Steel",
+            "start_node": "중소기업",
+            "relationship": "HAS_SALES",
+            "end_node": "1분기 중소기업 수출",
             "properties": {}
         },
         {
-            "start_node": "Tariff Measure",
-            "relationship": "TARGETS_PRODUCT",
-            "end_node": "Aluminum",
+            "start_node": "철강 및 알루미늄 관세",
+            "relationship": "IMPOSED_BY",
+            "end_node": "미국",
             "properties": {}
         },
         {
-            "start_node": "Export Summary",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "Product Category",
+            "start_node": "철강 및 알루미늄 관세",
+            "relationship": "AFFECTS_STATISTIC",
+            "end_node": "1분기 중소기업 수출",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "PUBLISHED",
+            "end_node": "1분기 중소기업 수출",
             "properties": {}
         }
     ]

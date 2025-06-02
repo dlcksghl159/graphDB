@@ -1,101 +1,66 @@
 {
   "nodes": [
     {
-      "label": "Enterprise",
-      "name": "Enterprise",
+      "label": "Company",
+      "name": "string",
       "properties": {
-        "type": "string",
-        "company_count": "int"
+        "size": "string"
       }
     },
     {
       "label": "Product",
-      "name": "Product",
+      "name": "string",
       "properties": {
-        "name": "string",
         "category": "string"
       }
     },
     {
       "label": "Country",
-      "name": "Country",
-      "properties": {
-        "name": "string",
-        "region": "string"
-      }
+      "name": "string",
+      "properties": {}
     },
     {
-      "label": "ExportReport",
-      "name": "ExportReport",
+      "label": "ExportStatistic",
+      "name": "string",
       "properties": {
         "period": "string",
-        "year": "int",
-        "total_amount": "float",
-        "percent_change": "float"
-      }
-    },
-    {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "PolicyMeasure",
-      "name": "PolicyMeasure",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "effective_date": "string"
+        "amountUSD": "float",
+        "amountKRW": "float",
+        "changePercent": "float",
+        "rank": "int"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Enterprise",
-      "relationship": "HAS_REPORT",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "COVERS_PRODUCT",
+      "start_node": "Company",
+      "relationship": "EXPORTS",
       "end_node": "Product",
-      "properties": {
-        "amount": "float",
-        "percent_change": "float",
-        "rank": "int"
-      }
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Country",
-      "properties": {
-        "amount": "float",
-        "percent_change": "float"
-      }
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportReport",
       "properties": {}
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "ISSUES",
-      "end_node": "PolicyMeasure",
+      "start_node": "Product",
+      "relationship": "EXPORTED_TO",
+      "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "PolicyMeasure",
-      "relationship": "AFFECTS_EXPORT_TO",
+      "start_node": "ExportStatistic",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "FOR_COUNTRY",
       "end_node": "Country",
-      "properties": {
-        "affected_product": "string"
-      }
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "BY_COMPANY",
+      "end_node": "Company",
+      "properties": {}
     }
   ]
 }

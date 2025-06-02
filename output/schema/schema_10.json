@@ -2,55 +2,82 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "String",
+      "name": "기관",
       "properties": {
-        "category": "string"
+        "org_id": "string",
+        "name": "string",
+        "type": "string"
       }
     },
     {
       "label": "LogisticsCenter",
-      "name": "String",
+      "name": "물류센터",
       "properties": {
-        "region": "string",
-        "centerType": "string"
+        "center_id": "string",
+        "name": "string",
+        "type": "string"
       }
     },
     {
       "label": "Platform",
-      "name": "String",
+      "name": "플랫폼",
       "properties": {
+        "platform_id": "string",
+        "name": "string",
         "type": "string"
       }
     },
     {
       "label": "Program",
-      "name": "String",
-      "properties": {}
-    },
-    {
-      "label": "Enterprise",
-      "name": "String",
+      "name": "프로그램",
       "properties": {
-        "type": "string"
+        "program_id": "string",
+        "name": "string"
       }
     },
     {
       "label": "Location",
-      "name": "String",
-      "properties": {}
+      "name": "지역",
+      "properties": {
+        "location_id": "string",
+        "name": "string",
+        "country": "string"
+      }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
+      "relationship": "PARTNERSHIP_WITH",
       "end_node": "Organization",
-      "properties": {}
+      "properties": {
+        "agreement_date": "string"
+      }
     },
     {
       "start_node": "Organization",
       "relationship": "OPERATES",
       "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "CONNECTS_TO",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "LINKS_TO",
+      "end_node": "LogisticsCenter",
+      "properties": {
+        "link_type": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "IMPLEMENTS",
+      "end_node": "Program",
       "properties": {}
     },
     {
@@ -61,33 +88,12 @@
     },
     {
       "start_node": "Organization",
-      "relationship": "ESTABLISHES_PLATFORM",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "CONNECTS",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "DEVELOPS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SUPPORTS",
-      "end_node": "Enterprise",
-      "properties": {}
-    },
-    {
-      "start_node": "Enterprise",
       "relationship": "USES",
       "end_node": "LogisticsCenter",
-      "properties": {}
+      "properties": {
+        "discount_rate": "string",
+        "service": "string"
+      }
     }
   ]
 }

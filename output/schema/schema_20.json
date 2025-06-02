@@ -2,69 +2,96 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "String",
+      "name": "Organization",
       "properties": {
-        "type": "String"
-      }
-    },
-    {
-      "label": "Agreement",
-      "name": "String",
-      "properties": {
-        "date": "String",
-        "purpose": "String"
+        "name": "string",
+        "sector": "string"
       }
     },
     {
       "label": "LogisticsCenter",
-      "name": "String",
+      "name": "LogisticsCenter",
       "properties": {
-        "location": "String",
-        "center_type": "String"
+        "name": "string",
+        "location": "string"
       }
     },
     {
-      "label": "LogisticsPlatform",
-      "name": "String",
+      "label": "Platform",
+      "name": "Platform",
       "properties": {
-        "platform_type": "String"
+        "name": "string"
       }
     },
     {
-      "label": "ExportProgram",
-      "name": "String",
+      "label": "Agreement",
+      "name": "Agreement",
       "properties": {
-        "target": "String"
+        "name": "string",
+        "date": "string"
       }
     },
     {
-      "label": "Location",
-      "name": "String",
+      "label": "Program",
+      "name": "Program",
       "properties": {
-        "region": "String",
-        "country": "String"
+        "name": "string"
       }
     },
     {
       "label": "Service",
-      "name": "String",
+      "name": "Service",
       "properties": {
-        "service_type": "String",
-        "rate": "String"
+        "name": "string",
+        "serviceType": "string"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "Location",
+      "properties": {
+        "name": "string",
+        "regionType": "string"
+      }
+    },
+    {
+      "label": "ExportSME",
+      "name": "ExportSME",
+      "properties": {
+        "name": "string",
+        "industry": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "SIGNED",
+      "relationship": "SIGNED_AGREEMENT",
       "end_node": "Agreement",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "OPERATES",
+      "relationship": "OPERATES_LOGISTICS_CENTER",
       "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "DEVELOPS_PLATFORM",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "CONNECTS_WITH_LOGISTICS_CENTER",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "DEFINES_PROGRAM",
+      "end_node": "Program",
       "properties": {}
     },
     {
@@ -74,39 +101,27 @@
       "properties": {}
     },
     {
-      "start_node": "Agreement",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "ExportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "DEVELOPS_PLATFORM",
-      "end_node": "LogisticsPlatform",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportProgram",
-      "relationship": "USES_CENTER",
+      "start_node": "Service",
+      "relationship": "PROVIDED_AT_LOGISTICS_CENTER",
       "end_node": "LogisticsCenter",
       "properties": {}
     },
     {
-      "start_node": "LogisticsPlatform",
-      "relationship": "INTEGRATES_WITH",
+      "start_node": "ExportSME",
+      "relationship": "USES_LOGISTICS_CENTER",
       "end_node": "LogisticsCenter",
       "properties": {}
     },
     {
-      "start_node": "LogisticsPlatform",
-      "relationship": "OFFERS_SERVICE",
+      "start_node": "ExportSME",
+      "relationship": "RECEIVES_SERVICE",
       "end_node": "Service",
       "properties": {}
     },
     {
-      "start_node": "Service",
+      "start_node": "Program",
       "relationship": "APPLIES_TO",
-      "end_node": "Organization",
+      "end_node": "ExportSME",
       "properties": {}
     }
   ]

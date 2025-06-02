@@ -1,50 +1,49 @@
 {
   "nodes": [
     {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
+      "label": "SME",
+      "name": "중소기업",
       "properties": {
-        "name": "string",
-        "country": "string"
+        "company_count": "int"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "ProductCategory",
+      "name": "수출 품목",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "category_name": "string"
       }
     },
     {
       "label": "Country",
-      "name": "Country",
+      "name": "수출 국가",
       "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "TimePeriod",
-      "name": "TimePeriod",
-      "properties": {
-        "year": "int",
-        "quarter": "string"
-      }
-    },
-    {
-      "label": "TariffAction",
-      "name": "TariffAction",
-      "properties": {
-        "name": "string",
-        "effectiveDate": "string"
+        "country_name": "string"
       }
     },
     {
       "label": "ExportStatistic",
-      "name": "ExportStatistic",
+      "name": "수출 통계",
       "properties": {
-        "exportAmount": "float",
-        "changeRate": "float"
+        "period": "string",
+        "total_export": "float",
+        "growth_rate": "float",
+        "num_companies": "int"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "정부 기관",
+      "properties": {
+        "agency_name": "string"
+      }
+    },
+    {
+      "label": "TariffMeasure",
+      "name": "관세 조치",
+      "properties": {
+        "item": "string",
+        "effective_date": "string"
       }
     }
   ],
@@ -56,27 +55,45 @@
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "OF_PRODUCT",
-      "end_node": "Product",
+      "start_node": "SME",
+      "relationship": "REPORTED_IN",
+      "end_node": "ExportStatistic",
       "properties": {}
     },
     {
       "start_node": "ExportStatistic",
-      "relationship": "TO_COUNTRY",
+      "relationship": "INCLUDES_PRODUCT",
+      "end_node": "ProductCategory",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "INCLUDES_COUNTRY",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "IN_TIME",
-      "end_node": "TimePeriod",
-      "properties": {}
+      "start_node": "ProductCategory",
+      "relationship": "EXPORTED_TO",
+      "end_node": "Country",
+      "properties": {
+        "export_amount": "float",
+        "growth_rate": "float"
+      }
     },
     {
-      "start_node": "TariffAction",
-      "relationship": "APPLIES_TO",
-      "end_node": "Product",
+      "start_node": "TariffMeasure",
+      "relationship": "AFFECTS_PRODUCT",
+      "end_node": "ProductCategory",
+      "properties": {
+        "impact_rate": "float",
+        "change_rate": "float"
+      }
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "IMPOSED_ON",
+      "end_node": "Country",
       "properties": {}
     }
   ]

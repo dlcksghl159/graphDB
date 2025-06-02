@@ -1,33 +1,35 @@
 {
     "nodes": [
         {
+            "label": "ExportSME",
+            "name": "중소기업 A",
+            "properties": {
+                "name": "중소기업 A",
+                "industry": ""
+            }
+        },
+        {
             "label": "ProductCategory",
             "name": "화장품",
             "properties": {
-                "name": "화장품",
-                "exportAmount": 18.4,
-                "changeRate": 19.6,
-                "exportCompanyCount": null
+                "category_name": "화장품",
+                "name": "화장품"
             }
         },
         {
             "label": "ProductCategory",
             "name": "자동차",
             "properties": {
-                "name": "자동차",
-                "exportAmount": 17.4,
-                "changeRate": 67.4,
-                "exportCompanyCount": null
+                "category_name": "자동차",
+                "name": "자동차"
             }
         },
         {
             "label": "ProductCategory",
             "name": "반도체 제조용 장비",
             "properties": {
-                "name": "반도체 제조용 장비",
-                "exportAmount": 7.2,
-                "changeRate": 11.2,
-                "exportCompanyCount": null
+                "category_name": "반도체 제조용 장비",
+                "name": "반도체 제조용 장비"
             }
         },
         {
@@ -35,29 +37,59 @@
             "name": "미국",
             "properties": {
                 "name": "미국",
-                "exportAmount": null,
-                "changeRate": null,
-                "rank": 1,
-                "region": null,
-                "country_code": null,
-                "countryName": "미국"
+                "region": "",
+                "country_name": "미국"
             }
         },
         {
-            "label": "ExportSummary",
-            "name": "중소기업 수출",
+            "label": "ExportRecord",
+            "name": "2023년 1분기 수출 기록",
             "properties": {
-                "totalExportAmount": 270.0,
-                "changeRate": 0.7,
-                "exportingCompanyCount": 63135
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 27000000000.0,
+                "growth_rate": 0.7
             }
         },
         {
-            "label": "Quarter",
-            "name": "1분기",
+            "label": "ExportRecord",
+            "name": "화장품 1분기 수출 기록",
             "properties": {
-                "year": 2025,
-                "period": "1분기"
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 1840000000.0,
+                "growth_rate": 19.6
+            }
+        },
+        {
+            "label": "ExportRecord",
+            "name": "자동차 1분기 수출 기록",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 1740000000.0,
+                "growth_rate": 67.4
+            }
+        },
+        {
+            "label": "ExportRecord",
+            "name": "반도체 장비 1분기 수출 기록",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 720000000.0,
+                "growth_rate": 11.2
+            }
+        },
+        {
+            "label": "TariffPolicy",
+            "name": "미국 관세 조치",
+            "properties": {
+                "name": "미국 관세 조치",
+                "rate": 0,
+                "effective_date": "2023-03-12",
+                "scope": "철강·알루미늄 및 파생 상품",
+                "measures": ""
             }
         }
     ],
@@ -67,8 +99,8 @@
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "exportAmount": 18.4,
-                "changeRate": 19.6
+                "amount": 1840000000.0,
+                "growthRate": 19.6
             }
         },
         {
@@ -76,23 +108,47 @@
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "exportAmount": 17.4,
-                "changeRate": 67.4
+                "amount": 1740000000.0,
+                "growthRate": 67.4
             }
         },
         {
-            "start_node": "반도체 제조용 장비",
+            "start_node": "발전장비",
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "exportAmount": 7.2,
-                "changeRate": 11.2
+                "amount": 720000000.0,
+                "growthRate": 11.2
             }
         },
         {
-            "start_node": "중소기업 수출",
-            "relationship": "FOR_PERIOD",
-            "end_node": "1분기",
+            "start_node": "중소기업 A",
+            "relationship": "HAS_EXPORT_RECORD",
+            "end_node": "2023년 1분기 수출 기록",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 A",
+            "relationship": "HAS_EXPORT_RECORD",
+            "end_node": "화장품 1분기 수출 기록",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 A",
+            "relationship": "HAS_EXPORT_RECORD",
+            "end_node": "자동차 1분기 수출 기록",
+            "properties": {}
+        },
+        {
+            "start_node": "중소기업 A",
+            "relationship": "HAS_EXPORT_RECORD",
+            "end_node": "반도체 장비 1분기 수출 기록",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "철강",
             "properties": {}
         }
     ]

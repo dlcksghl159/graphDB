@@ -1,97 +1,44 @@
 {
     "nodes": [
         {
-            "label": "Location",
+            "label": "SmallBusiness",
+            "name": "50인 미만 소규모 사업장",
+            "properties": {
+                "name": "50인 미만 소규모 사업장",
+                "category": "산업",
+                "years_in_business": 3,
+                "qualification_type": "교육 대상"
+            }
+        },
+        {
+            "label": "TrainingProgram",
+            "name": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "programName": "찾아가는 산업재해 예방 교육",
+                "programType": "안전교육",
+                "description": "VR 체험 및 이주노동자 교육 포함"
+            }
+        },
+        {
+            "label": "Region",
             "name": "경기도",
             "properties": {
                 "name": "경기도",
-                "type": "Province",
-                "region": "South Korea",
-                "country": "South Korea"
-            }
-        },
-        {
-            "label": "Organization",
-            "name": "고용노동부",
-            "properties": {
-                "category": "Government",
-                "type": "Ministry",
-                "location": "South Korea",
-                "name": "고용노동부",
-                "industry": "Public Administration",
-                "sector": "Government"
-            }
-        },
-        {
-            "label": "SupportProgram",
-            "name": "찾아가는 산업재해 예방 교육",
-            "properties": {
-                "name": "찾아가는 산업재해 예방 교육",
-                "start_year": 2020,
-                "participant_count": 800,
-                "year": 2023,
-                "description": "소규모 사업장 및 이주노동자를 위한 맞춤형 교육 프로그램",
-                "program_id": "0001"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "임용규",
-            "properties": {
-                "name": "임용규",
-                "title": "과장",
-                "role": "경기도 노동안전과장",
-                "position": "Manager",
-                "personName": "임용규"
-            }
-        },
-        {
-            "label": "ContactInfo",
-            "name": "연락처",
-            "properties": {
-                "phone": "032-668-9030",
-                "email": "hsl@kaohn.or.kr"
-            }
-        },
-        {
-            "label": "Association",
-            "name": "직업건강간호협회",
-            "properties": {
-                "name": "직업건강간호협회",
-                "type": "Professional Association",
-                "established_year": 1981
+                "type": "행정 구역"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "경기도",
-            "relationship": "SIGN_AGREEMENT",
-            "end_node": "고용노동부",
-            "properties": {}
-        },
-        {
-            "start_node": "경기도",
-            "relationship": "INITIATES",
+            "start_node": "SmallBusiness",
+            "relationship": "PARTICIPATES_IN",
             "end_node": "찾아가는 산업재해 예방 교육",
-            "properties": {}
-        },
-        {
-            "start_node": "임용규",
-            "relationship": "LEADS",
-            "end_node": "경기도",
             "properties": {}
         },
         {
             "start_node": "찾아가는 산업재해 예방 교육",
-            "relationship": "CONTACT",
-            "end_node": "연락처",
-            "properties": {}
-        },
-        {
-            "start_node": "직업건강간호협회",
-            "relationship": "SUPPORTS",
-            "end_node": "찾아가는 산업재해 예방 교육",
+            "relationship": "OPERATES_IN",
+            "end_node": "경기도",
             "properties": {}
         }
     ]

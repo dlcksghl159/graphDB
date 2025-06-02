@@ -4,26 +4,27 @@
       "label": "Company",
       "name": "Company",
       "properties": {
-        "company_name": "string"
+        "name": "string"
+      }
+    },
+    {
+      "label": "TimePeriod",
+      "name": "TimePeriod",
+      "properties": {
+        "year": "int",
+        "quarter": "string"
       }
     },
     {
       "label": "FinancialReport",
-      "name": "Financial Report",
+      "name": "FinancialReport",
       "properties": {
-        "period": "string",
         "revenue": "int",
-        "operating_profit": "int",
-        "net_profit": "int",
-        "revenue_change_rate": "float",
-        "profit_change_rate": "float"
-      }
-    },
-    {
-      "label": "EconomicCondition",
-      "name": "Economic Condition",
-      "properties": {
-        "description": "string"
+        "operatingProfit": "int",
+        "netProfit": "int",
+        "revenueChangeRate": "float",
+        "operatingProfitChangeRate": "float",
+        "netProfitChangeRate": "float"
       }
     }
   ],
@@ -36,8 +37,8 @@
     },
     {
       "start_node": "FinancialReport",
-      "relationship": "MENTIONS_CONDITION",
-      "end_node": "EconomicCondition",
+      "relationship": "FOR_PERIOD",
+      "end_node": "TimePeriod",
       "properties": {}
     }
   ]

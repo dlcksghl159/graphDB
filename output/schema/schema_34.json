@@ -1,44 +1,52 @@
 {
   "nodes": [
     {
-      "label": "CrowdfundingPlatform",
-      "name": "String",
+      "label": "Platform",
+      "name": "Platform",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "Category",
-      "name": "String",
+      "name": "Category",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "Brand",
-      "name": "String",
+      "name": "Brand",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "Product",
-      "name": "String",
+      "name": "Product",
       "properties": {
-        "name": "string"
+        "name": "string",
+        "price": "int"
       }
     },
     {
-      "label": "FundingEvent",
-      "name": "String",
+      "label": "Campaign",
+      "name": "Campaign",
       "properties": {
         "amount": "int",
         "rank": "int"
       }
     },
     {
+      "label": "Organization",
+      "name": "Organization",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
       "label": "Report",
-      "name": "String",
+      "name": "Report",
       "properties": {
         "title": "string",
         "year": "int"
@@ -46,40 +54,53 @@
     },
     {
       "label": "Trend",
-      "name": "String",
+      "name": "Trend",
       "properties": {
+        "name": "string",
         "description": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "CrowdfundingPlatform",
-      "relationship": "HAS_CATEGORY",
+      "start_node": "Platform",
+      "relationship": "OFFERS",
       "end_node": "Category",
       "properties": {}
     },
     {
       "start_node": "Category",
-      "relationship": "HAS_TOP_PRODUCT",
+      "relationship": "INCLUDES",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "PRODUCED_BY",
+      "relationship": "CREATED_BY",
       "end_node": "Brand",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_FUNDING",
-      "end_node": "FundingEvent",
+      "start_node": "Campaign",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Campaign",
+      "relationship": "ON_PLATFORM",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PUBLISHED",
+      "end_node": "Report",
       "properties": {}
     },
     {
       "start_node": "Report",
-      "relationship": "DESCRIBES",
+      "relationship": "DEFINES",
       "end_node": "Trend",
       "properties": {}
     }

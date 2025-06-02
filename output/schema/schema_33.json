@@ -4,8 +4,14 @@
       "label": "Company",
       "name": "Company",
       "properties": {
-        "name": "string",
-        "targetRevenue": "int"
+        "country": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "category": "string"
       }
     },
     {
@@ -16,40 +22,53 @@
         "revenue": "int",
         "operatingProfit": "int",
         "netProfit": "int",
-        "revenueGrowth": "float"
+        "revenueGrowthRate": "float",
+        "operatingProfitGrowthRate": "float",
+        "netProfitGrowthRate": "float"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "SalesTarget",
+      "name": "SalesTarget",
       "properties": {
-        "name": "string",
-        "category": "string",
-        "launchYear": "int"
+        "year": "int",
+        "targetRevenue": "int"
+      }
+    },
+    {
+      "label": "MarketForecast",
+      "name": "MarketForecast",
+      "properties": {
+        "year": "int",
+        "forecastRevenue": "int"
       }
     },
     {
       "label": "Policy",
       "name": "Policy",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "status": "string"
+        "policyType": "string"
       }
     },
     {
-      "label": "Region",
-      "name": "Region",
+      "label": "Strategy",
+      "name": "Strategy",
       "properties": {
-        "name": "string"
+        "description": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "REPORTS",
+      "relationship": "HAS_FINANCIAL_REPORT",
       "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SALES_TARGET",
+      "end_node": "SalesTarget",
       "properties": {}
     },
     {
@@ -60,20 +79,26 @@
     },
     {
       "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
+      "relationship": "HAS_MARKET_FORECAST",
+      "end_node": "MarketForecast",
       "properties": {}
     },
     {
-      "start_node": "Policy",
-      "relationship": "AFFECTS",
-      "end_node": "Company",
+      "start_node": "Company",
+      "relationship": "AFFECTED_BY",
+      "end_node": "Policy",
       "properties": {}
     },
     {
-      "start_node": "Policy",
-      "relationship": "APPLIES_IN",
-      "end_node": "Region",
+      "start_node": "Company",
+      "relationship": "APPLIES_STRATEGY",
+      "end_node": "Strategy",
+      "properties": {}
+    },
+    {
+      "start_node": "Strategy",
+      "relationship": "MITIGATES",
+      "end_node": "Policy",
       "properties": {}
     }
   ]

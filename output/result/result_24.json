@@ -1,104 +1,79 @@
 {
     "nodes": [
         {
-            "label": "StartupCompany",
+            "label": "Company",
             "name": "엔씽",
             "properties": {
-                "company_name": "엔씽",
-                "founding_year": 2014
+                "industry": "스마트 수직농장"
             }
         },
         {
-            "label": "DevelopmentProject",
-            "name": "스마트팜 개발 사업",
+            "label": "Project",
+            "name": "물류센터형 수직농장 개발",
             "properties": {
-                "name": "스마트팜 개발 사업",
-                "status": "진행 중",
-                "target_date": "2023-12-31"
+                "scale": "1000억원",
+                "structure": "PF 기반 개발 사업",
+                "pf_closing_goal": "하반기 내 1차",
+                "location": "경기도 이천 이마트 후레시센터 인근"
             }
         },
         {
-            "label": "Facility",
-            "name": "수직농장",
+            "label": "TechnologyModule",
+            "name": "큐브(CUBE)",
             "properties": {
-                "type": "스마트팜",
-                "water_saving_rate": "94%",
-                "waste_rate": "5% 미만",
-                "ghg_reduction": "34.7톤",
-                "energy_source": "전기",
-                "production_multiplier": "40배"
+                "type": "모듈형 스마트팜"
             }
         },
         {
-            "label": "Region",
-            "name": "경기도 이천",
-            "properties": {
-                "name": "경기도 이천"
-            }
-        },
-        {
-            "label": "Partner",
+            "label": "PartnerCompany",
             "name": "이마트",
             "properties": {
-                "industry": "유통",
-                "name": "이마트",
-                "partnership_start": "2020",
-                "partner_id": "P001",
-                "role": "유통 파트너",
-                "type": "대기업"
+                "industry": "대형 유통"
             }
         },
         {
-            "label": "Partner",
+            "label": "PartnerCompany",
             "name": "배달의민족",
             "properties": {
-                "industry": "플랫폼",
-                "name": "배달의민족",
-                "partnership_start": "2020",
-                "partner_id": "P002",
-                "role": "유통 파트너",
-                "type": "스타트업"
+                "industry": "식품 유통"
             }
         },
         {
             "label": "Person",
             "name": "김혜연",
             "properties": {
-                "name": "김혜연",
-                "title": "대표",
-                "role": "CEO",
-                "position": "엔씽 대표"
+                "name": "김혜연"
             }
         }
     ],
     "relations": [
         {
             "start_node": "엔씽",
-            "relationship": "RUNS_PROJECT",
-            "end_node": "스마트팜 개발 사업",
-            "properties": {}
-        },
-        {
-            "start_node": "수직농장",
-            "relationship": "LOCATED_AT",
-            "end_node": "경기도 이천",
+            "relationship": "DEVELOPS",
+            "end_node": "물류센터형 수직농장 개발",
             "properties": {}
         },
         {
             "start_node": "엔씽",
-            "relationship": "SUPPLIES",
+            "relationship": "DEVELOPED",
+            "end_node": "큐브(CUBE)",
+            "properties": {}
+        },
+        {
+            "start_node": "엔씽",
+            "relationship": "PARTNERS_WITH",
             "end_node": "이마트",
             "properties": {}
         },
         {
             "start_node": "엔씽",
-            "relationship": "SUPPLIES",
+            "relationship": "PARTNERS_WITH",
             "end_node": "배달의민족",
             "properties": {}
         },
         {
             "start_node": "김혜연",
-            "relationship": "LEADS",
+            "relationship": "REPRESENTS",
             "end_node": "엔씽",
             "properties": {}
         }

@@ -1,13 +1,42 @@
 {
     "nodes": [
         {
+            "label": "Company",
+            "name": "셀트리온",
+            "properties": {
+                "name": "셀트리온",
+                "industry": "",
+                "ticker": "",
+                "type": "",
+                "company_name": "셀트리온",
+                "stock_code": "",
+                "company_id": "",
+                "size": "",
+                "region": "",
+                "country": "",
+                "headquarters": "",
+                "companyName": "셀트리온",
+                "employeeCount": 0,
+                "sizeCategory": "",
+                "founded_year": 0,
+                "cumulative_investment": 0,
+                "target_ipo_year": 0,
+                "employee_count": 0,
+                "founding_year": 0,
+                "company_type": "",
+                "revenue": 0,
+                "rnd_investment": 0,
+                "domesticProduction": false,
+                "category": ""
+            }
+        },
+        {
             "label": "Subsidiary",
             "name": "셀트리온 스페인 법인",
             "properties": {
                 "name": "셀트리온 스페인 법인",
                 "country": "스페인",
-                "established_year": 2018,
-                "subsidiary_id": "CT_ES"
+                "established_year": 2018
             }
         },
         {
@@ -16,30 +45,7 @@
             "properties": {
                 "name": "셀트리온 포르투갈 법인",
                 "country": "포르투갈",
-                "established_year": 2022,
-                "subsidiary_id": "CT_PT"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "셀트리온",
-            "properties": {
-                "name": "셀트리온",
-                "category": "Biologics",
-                "size": "Large",
-                "type": "Public",
-                "annual_revenue": 0,
-                "revenue_growth_percentage": 0,
-                "country": "대한민국",
-                "headquarters": "대한민국",
-                "founded_year": 2002,
-                "company_id": "CT",
-                "employee_count": 0,
-                "size_category": "Medium",
-                "location": "대한민국",
-                "market_share": "23%",
-                "region": "Asia",
-                "company_type": "Corporation"
+                "established_year": 2022
             }
         },
         {
@@ -47,12 +53,25 @@
             "name": "트룩시마",
             "properties": {
                 "name": "트룩시마",
-                "category": "Biologics",
                 "active_ingredient": "리툭시맙",
-                "product_type": "Biosimilar",
-                "source_type": "Recombinant",
-                "generic_name": "Rituximab",
-                "therapy_area": "Oncology"
+                "category": "",
+                "specification": "",
+                "type": "",
+                "model": "",
+                "product_id": "",
+                "productId": "",
+                "productName": "트룩시마",
+                "price": 0,
+                "product_type": "",
+                "activeIngredient": "리툭시맙",
+                "therapyArea": "",
+                "product_name": "트룩시마",
+                "description": "",
+                "approval_year": 0,
+                "releaseDate": "",
+                "generation": "",
+                "productionMethod": "",
+                "features": ""
             }
         },
         {
@@ -60,12 +79,25 @@
             "name": "허쥬마",
             "properties": {
                 "name": "허쥬마",
-                "category": "Biologics",
                 "active_ingredient": "트라스투주맙",
-                "product_type": "Biosimilar",
-                "source_type": "Recombinant",
-                "generic_name": "Trastuzumab",
-                "therapy_area": "Oncology"
+                "category": "",
+                "specification": "",
+                "type": "",
+                "model": "",
+                "product_id": "",
+                "productId": "",
+                "productName": "허쥬마",
+                "price": 0,
+                "product_type": "",
+                "activeIngredient": "트라스투주맙",
+                "therapyArea": "",
+                "product_name": "허쥬마",
+                "description": "",
+                "approval_year": 0,
+                "releaseDate": "",
+                "generation": "",
+                "productionMethod": "",
+                "features": ""
             }
         },
         {
@@ -73,12 +105,25 @@
             "name": "베그젤마",
             "properties": {
                 "name": "베그젤마",
-                "category": "Biologics",
                 "active_ingredient": "베바시주맙",
-                "product_type": "Biosimilar",
-                "source_type": "Recombinant",
-                "generic_name": "Bevacizumab",
-                "therapy_area": "Oncology"
+                "category": "",
+                "specification": "",
+                "type": "",
+                "model": "",
+                "product_id": "",
+                "productId": "",
+                "productName": "베그젤마",
+                "price": 0,
+                "product_type": "",
+                "activeIngredient": "베바시주맙",
+                "therapyArea": "",
+                "product_name": "베그젤마",
+                "description": "",
+                "approval_year": 0,
+                "releaseDate": "",
+                "generation": "",
+                "productionMethod": "",
+                "features": ""
             }
         },
         {
@@ -86,38 +131,72 @@
             "name": "스테키마",
             "properties": {
                 "name": "스테키마",
-                "category": "Biologics",
                 "active_ingredient": "우스테키누맙",
-                "product_type": "Biosimilar",
-                "source_type": "Recombinant",
-                "generic_name": "Ustekinumab",
-                "therapy_area": "Immunology"
+                "category": "",
+                "specification": "",
+                "type": "",
+                "model": "",
+                "product_id": "",
+                "productId": "",
+                "productName": "스테키마",
+                "price": 0,
+                "product_type": "",
+                "activeIngredient": "우스테키누맙",
+                "therapyArea": "",
+                "product_name": "스테키마",
+                "description": "",
+                "approval_year": 0,
+                "releaseDate": "",
+                "generation": "",
+                "productionMethod": "",
+                "features": ""
             }
         },
         {
-            "label": "Market",
+            "label": "Tender",
+            "name": "CSC 컨소시엄 입찰",
+            "properties": {
+                "name": "CSC 컨소시엄 입찰",
+                "region": "카탈루냐주",
+                "start_date": "2025-02-01",
+                "end_date": "2029-02-01",
+                "type": "",
+                "startDate": "2025-02-01",
+                "endDate": "2029-02-01"
+            }
+        },
+        {
+            "label": "Institution",
             "name": "CSC",
             "properties": {
                 "name": "CSC",
-                "type": "Consortium",
-                "market_name": "Spanish Hospital Bidding",
-                "region": "Catalonia",
-                "market_id": "CSC"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "강석훈",
-            "properties": {
-                "name": "강석훈",
-                "title": "법인장",
-                "role": "Country Manager",
-                "position": "Regional Head",
-                "personName": "Kang Seok-hoon"
+                "institutionType": "입찰 기관",
+                "role": "의약품 공급"
             }
         }
     ],
     "relations": [
+        {
+            "start_node": "셀트리온",
+            "relationship": "OWNS",
+            "end_node": "셀트리온 스페인 법인",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "OWNS",
+            "end_node": "셀트리온 포르투갈 법인",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온 스페인 법인",
+            "relationship": "SUPPLIES",
+            "end_node": "CSC 컨소시엄 입찰",
+            "properties": {
+                "startDate": "2025-02-01",
+                "endDate": "2029-02-01"
+            }
+        },
         {
             "start_node": "셀트리온 스페인 법인",
             "relationship": "SELLS",
@@ -143,27 +222,9 @@
             "properties": {}
         },
         {
-            "start_node": "셀트리온",
-            "relationship": "HAS_SUBSIDIARY",
-            "end_node": "셀트리온 스페인 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "HAS_SUBSIDIARY",
-            "end_node": "셀트리온 포르투갈 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "WINS_TENDER",
-            "end_node": "CSC",
-            "properties": {}
-        },
-        {
-            "start_node": "강석훈",
-            "relationship": "EMPLOYED_BY",
-            "end_node": "셀트리온",
+            "start_node": "CSC",
+            "relationship": "ORGANIZES",
+            "end_node": "CSC 컨소시엄 입찰",
             "properties": {}
         }
     ]

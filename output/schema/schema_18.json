@@ -2,15 +2,15 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "Organization",
+      "name": "기관",
       "properties": {
         "name": "string",
-        "type": "string"
+        "category": "string"
       }
     },
     {
       "label": "SME",
-      "name": "SmallMediumEnterprise",
+      "name": "중소벤처기업",
       "properties": {
         "name": "string",
         "industry": "string"
@@ -18,58 +18,46 @@
     },
     {
       "label": "Agreement",
-      "name": "Agreement",
+      "name": "업무협약",
       "properties": {
-        "id": "string",
         "date": "string",
         "purpose": "string"
       }
     },
     {
-      "label": "LogisticsCenter",
-      "name": "LogisticsCenter",
-      "properties": {
-        "name": "string",
-        "location": "string",
-        "operator": "string"
-      }
-    },
-    {
       "label": "Platform",
-      "name": "Platform",
+      "name": "물류플랫폼",
       "properties": {
         "name": "string",
         "type": "string"
       }
     },
     {
+      "label": "LogisticsCenter",
+      "name": "물류센터",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
       "label": "Program",
-      "name": "Program",
+      "name": "수출프로그램",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "Location",
-      "name": "Location",
+      "name": "지역",
       "properties": {
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "Service",
-      "name": "Service",
-      "properties": {
-        "name": "string",
-        "description": "string"
+        "name": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "SIGNED",
+      "relationship": "SIGNS",
       "end_node": "Agreement",
       "properties": {}
     },
@@ -81,25 +69,13 @@
     },
     {
       "start_node": "Agreement",
-      "relationship": "TARGETS",
-      "end_node": "SME",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "UTILIZES_CENTER",
-      "end_node": "LogisticsCenter",
+      "relationship": "CREATES",
+      "end_node": "Platform",
       "properties": {}
     },
     {
       "start_node": "Organization",
       "relationship": "OPERATES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "INTEGRATES_CENTER",
       "end_node": "LogisticsCenter",
       "properties": {}
     },
@@ -111,13 +87,25 @@
     },
     {
       "start_node": "SME",
-      "relationship": "USES_SERVICE",
-      "end_node": "Service",
+      "relationship": "BENEFITS_FROM",
+      "end_node": "Program",
       "properties": {}
     },
     {
-      "start_node": "Service",
-      "relationship": "PROVIDED_BY",
+      "start_node": "SME",
+      "relationship": "USES",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "USES",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "CONNECTS",
       "end_node": "LogisticsCenter",
       "properties": {}
     }

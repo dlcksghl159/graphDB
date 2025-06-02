@@ -2,59 +2,66 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "회사",
       "properties": {
         "name": "string",
         "country": "string"
-      }
-    },
-    {
-      "label": "Platform",
-      "name": "Platform",
-      "properties": {
-        "name": "string",
-        "foundedYear": "int",
-        "country": "string"
-      }
-    },
-    {
-      "label": "Service",
-      "name": "Service",
-      "properties": {
-        "name": "string",
-        "userCount": "int",
-        "companyCount": "int",
-        "availableIn": "string"
       }
     },
     {
       "label": "Person",
-      "name": "Person",
+      "name": "인물",
       "properties": {
         "name": "string",
-        "role": "string"
+        "position": "string"
+      }
+    },
+    {
+      "label": "Service",
+      "name": "서비스",
+      "properties": {
+        "name": "string",
+        "type": "string",
+        "users_count": "int",
+        "client_count": "int"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "업무협약",
+      "properties": {
+        "date": "string",
+        "scope": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "Platform",
-      "properties": {
-        "date": "string"
-      }
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "PARTNER",
+      "end_node": "Company",
+      "properties": {}
     },
     {
       "start_node": "Person",
-      "relationship": "HOLDS_POSITION_AT",
+      "relationship": "REPRESENTATIVE_OF",
       "end_node": "Company",
-      "properties": {
-        "role": "string"
-      }
+      "properties": {}
     },
     {
-      "start_node": "Platform",
+      "start_node": "Person",
+      "relationship": "ATTENDED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
       "relationship": "OFFERS",
       "end_node": "Service",
       "properties": {}

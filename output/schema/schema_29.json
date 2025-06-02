@@ -1,95 +1,96 @@
 {
   "nodes": [
     {
-      "label": "SME",
-      "name": "중소기업",
+      "label": "Agency",
+      "name": "Agency",
       "properties": {
-        "company_id": "string",
         "name": "string"
       }
     },
     {
-      "label": "Product",
-      "name": "제품",
+      "label": "ExportReport",
+      "name": "ExportReport",
       "properties": {
-        "product_id": "string",
+        "year": "string",
+        "quarter": "string",
+        "total_value_usd": "float",
+        "exporters_count": "int"
+      }
+    },
+    {
+      "label": "ExportStatistic",
+      "name": "ExportStatistic",
+      "properties": {
+        "value_usd": "float",
+        "growth_rate_percent": "float"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
         "name": "string",
         "category": "string"
       }
     },
     {
       "label": "Country",
-      "name": "국가",
+      "name": "Country",
       "properties": {
-        "country_code": "string",
-        "name": "string",
-        "region": "string"
-      }
-    },
-    {
-      "label": "ExportRecord",
-      "name": "수출기록",
-      "properties": {
-        "record_id": "string",
-        "period": "string",
-        "export_value": "float",
-        "growth_rate": "float",
-        "company_count": "int"
+        "name": "string"
       }
     },
     {
       "label": "TariffPolicy",
-      "name": "관세정책",
+      "name": "TariffPolicy",
       "properties": {
-        "policy_id": "string",
+        "scope": "string",
         "effective_date": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "GovernmentAgency",
-      "name": "공공기관",
-      "properties": {
-        "agency_id": "string",
-        "name": "string"
+        "measures": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ExportRecord",
-      "relationship": "FOR_PRODUCT",
+      "start_node": "Agency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportReport",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportReport",
+      "relationship": "HAS_STATISTIC",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "OF_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportRecord",
+      "start_node": "ExportStatistic",
       "relationship": "TO_COUNTRY",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "ExportRecord",
-      "relationship": "ANNOUNCED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
       "start_node": "TariffPolicy",
-      "relationship": "APPLIES_TO",
+      "relationship": "AFFECTS_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "TariffPolicy",
-      "relationship": "TARGETS_COUNTRY",
+      "relationship": "APPLIED_BY",
       "end_node": "Country",
       "properties": {}
     },
     {
       "start_node": "TariffPolicy",
-      "relationship": "IMPACTS",
-      "end_node": "ExportRecord",
+      "relationship": "AFFECTS_STATISTIC",
+      "end_node": "ExportStatistic",
       "properties": {}
     }
   ]

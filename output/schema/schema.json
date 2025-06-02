@@ -1,177 +1,25 @@
 {
   "nodes": [
     {
-      "label": "Technology",
-      "name": "Technology",
+      "label": "Investor",
+      "name": "investor_name",
       "properties": {
-        "tech_name": "String",
-        "category": "String",
-        "name": "string",
-        "description": "string",
-        "techId": "string"
+        "type": "string"
       }
     },
     {
-      "label": "Certificate",
-      "name": "ESG Certificate",
+      "label": "PartnerCompany",
+      "name": "company_name",
       "properties": {
-        "name": "string",
-        "issued_date": "string"
+        "industry": "string"
       }
     },
     {
-      "label": "SME",
-      "name": "String",
+      "label": "Pricing",
+      "name": "Pricing",
       "properties": {
-        "industry": "string",
-        "name": "string",
-        "category": "string",
-        "location": "string",
-        "partner_since_year": "int",
-        "company_id": "string"
-      }
-    },
-    {
-      "label": "Facility",
-      "name": "String",
-      "properties": {
-        "type": "string",
-        "water_saving_rate": "string",
-        "waste_rate": "string",
-        "ghg_reduction": "string",
-        "energy_source": "string",
-        "production_multiplier": "string"
-      }
-    },
-    {
-      "label": "TariffPolicy",
-      "name": "Tariff Policy",
-      "properties": {
-        "name": "string",
-        "imposingCountry": "string",
-        "rate": "float",
-        "effectiveDate": "string",
-        "policy_id": "string",
-        "effective_date": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Acquisition",
-      "name": "Acquisition",
-      "properties": {
-        "share_percentage": "string",
-        "amount": "int",
-        "date": "string"
-      }
-    },
-    {
-      "label": "DevelopmentProject",
-      "name": "DevelopmentProject",
-      "properties": {
-        "name": "string",
-        "status": "string",
-        "target_date": "string"
-      }
-    },
-    {
-      "label": "InvestmentRound",
-      "name": "String",
-      "properties": {
-        "series": "string",
-        "amount": "int",
-        "date": "string"
-      }
-    },
-    {
-      "label": "Opportunity",
-      "name": "string",
-      "properties": {
-        "opportunity_type": "string"
-      }
-    },
-    {
-      "label": "ProductCategory",
-      "name": "Product Category",
-      "properties": {
-        "name": "string",
-        "exportAmount": "float",
-        "changeRate": "float",
-        "exportCompanyCount": "int"
-      }
-    },
-    {
-      "label": "Feature",
-      "name": "String",
-      "properties": {
-        "description": "string",
-        "featureId": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "CloudService",
-      "name": "serviceName",
-      "properties": {
-        "revenue": "int",
-        "revenueGrowthRate": "string",
-        "customerCount": "int"
-      }
-    },
-    {
-      "label": "Exhibition",
-      "name": "Exhibition",
-      "properties": {
-        "title": "string",
-        "startDate": "string",
-        "endDate": "string",
-        "venue": "string"
-      }
-    },
-    {
-      "label": "Person",
-      "name": "Person",
-      "properties": {
-        "name": "string",
-        "title": "string",
-        "role": "string",
-        "position": "string",
-        "personName": "string"
-      }
-    },
-    {
-      "label": "Researcher",
-      "name": "Researcher",
-      "properties": {
-        "name": "string",
-        "affiliation": "string"
-      }
-    },
-    {
-      "label": "Investment",
-      "name": "Investment",
-      "properties": {
-        "amount": "int",
-        "date": "String"
-      }
-    },
-    {
-      "label": "LogisticsCenter",
-      "name": "String",
-      "properties": {
-        "region": "string",
-        "centerType": "string",
-        "location": "String",
-        "center_type": "String",
-        "name": "string",
-        "operator": "string"
-      }
-    },
-    {
-      "label": "Brand",
-      "name": "String",
-      "properties": {
-        "name": "string"
+        "price": "string",
+        "discount_rate": "string"
       }
     },
     {
@@ -179,171 +27,1032 @@
       "name": "SalesRecord",
       "properties": {
         "year": "int",
-        "transaction_amount": "int",
-        "growth_rate": "float"
+        "quarter": "string",
+        "export_amount": "float",
+        "change_rate": "float"
       }
     },
     {
-      "label": "Location",
-      "name": "String",
+      "label": "Employee",
+      "name": "Employee",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "region": "string",
-        "country": "String"
+        "employee_name": "string",
+        "age": "int",
+        "is_retired": "bool"
       }
     },
     {
-      "label": "CustomerSegment",
-      "name": "segmentName",
-      "properties": {}
-    },
-    {
-      "label": "Support",
-      "name": "string",
+      "label": "PERSON",
+      "name": "Person",
       "properties": {
-        "support_type": "string",
-        "amount": "int"
-      }
-    },
-    {
-      "label": "Organization",
-      "name": "String",
-      "properties": {
-        "category": "string",
-        "type": "String",
-        "location": "String",
-        "name": "string",
-        "industry": "string",
-        "sector": "string"
-      }
-    },
-    {
-      "label": "Metric",
-      "name": "String",
-      "properties": {
-        "metric_id": "string",
-        "name": "string",
-        "value": "float",
-        "unit": "string"
-      }
-    },
-    {
-      "label": "Promotion",
-      "name": "프로모션",
-      "properties": {
-        "id": "string",
-        "discount_rate": "float",
-        "discounted_price": "int",
-        "bundle_price": "int",
-        "startDate": "string",
-        "endDate": "string",
-        "platform": "string"
-      }
-    },
-    {
-      "label": "Quarter",
-      "name": "Quarter",
-      "properties": {
-        "year": "int",
-        "period": "string"
-      }
-    },
-    {
-      "label": "Channel",
-      "name": "String",
-      "properties": {
-        "channel_id": "string",
         "name": "string"
       }
     },
     {
-      "label": "Initiative",
-      "name": "Initiative",
+      "label": "Channel",
+      "name": "Channel",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Reason",
+      "name": "Reason",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "LegalEntity",
+      "name": "subsidiary",
       "properties": {
         "name": "string",
-        "target_year": "int",
-        "category": "string"
+        "country": "string"
       }
     },
     {
-      "label": "CustomerCompany",
-      "name": "CustomerCompany",
-      "properties": {
-        "name": "string",
-        "employee_count": "int"
-      }
-    },
-    {
-      "label": "ESG_Evaluation",
-      "name": "ESG Evaluation",
-      "properties": {
-        "name": "string",
-        "compliance_rate": "int"
-      }
-    },
-    {
-      "label": "ExportSummary",
-      "name": "Export Summary",
-      "properties": {
-        "totalExportAmount": "float",
-        "changeRate": "float",
-        "exportingCompanyCount": "int"
-      }
-    },
-    {
-      "label": "Solution",
-      "name": "String",
-      "properties": {
-        "category": "String",
-        "model": "String",
-        "automation_rate": "Int"
-      }
-    },
-    {
-      "label": "ESGIndicator",
-      "name": "ESG지표",
+      "label": "ExportSME",
+      "name": "ExportSME",
       "properties": {
         "name": "string",
         "industry": "string"
       }
     },
     {
-      "label": "Event",
-      "name": "Event",
+      "label": "Tender",
+      "name": "Tender",
       "properties": {
         "name": "string",
-        "date": "String",
+        "region": "string",
+        "start_date": "string",
+        "end_date": "string",
         "type": "string",
-        "location": "String"
+        "startDate": "string",
+        "endDate": "string"
       }
     },
     {
-      "label": "UseCase",
+      "label": "ESGIndicator",
+      "name": "ESG Indicator",
+      "properties": {
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Edition",
+      "name": "Edition",
+      "properties": {
+        "name": "string",
+        "benefit": "string"
+      }
+    },
+    {
+      "label": "SmallBusiness",
+      "name": "SmallBusiness",
+      "properties": {
+        "name": "string",
+        "category": "string",
+        "years_in_business": "int",
+        "qualification_type": "string"
+      }
+    },
+    {
+      "label": "Institution",
+      "name": "institution",
+      "properties": {
+        "name": "string",
+        "institutionType": "string",
+        "role": "string"
+      }
+    },
+    {
+      "label": "TechnologyModule",
+      "name": "module_name",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "Field",
+      "name": "Desired Field",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "TariffPolicy",
+      "name": "TariffPolicy",
+      "properties": {
+        "name": "string",
+        "rate": "float",
+        "effective_date": "string",
+        "scope": "string",
+        "measures": "string"
+      }
+    },
+    {
+      "label": "Contact",
+      "name": "Contact",
+      "properties": {
+        "contactName": "string",
+        "phone": "string",
+        "email": "string"
+      }
+    },
+    {
+      "label": "SalesChannel",
+      "name": "SalesChannel",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "CloudProvider",
+      "name": "String",
+      "properties": {}
+    },
+    {
+      "label": "Subdivision",
+      "name": "분과",
+      "properties": {
+        "name": "string",
+        "focus_area": "string"
+      }
+    },
+    {
+      "label": "LegalCase",
+      "name": "LegalCase",
+      "properties": {
+        "case_type": "string",
+        "year": "int",
+        "status": "string"
+      }
+    },
+    {
+      "label": "Certificate",
+      "name": "Certificate",
+      "properties": {
+        "title": "string",
+        "issue_date": "string"
+      }
+    },
+    {
+      "label": "Project",
+      "name": "Project",
+      "properties": {
+        "name": "string",
+        "application_deadline": "string",
+        "projectId": "string",
+        "projectName": "string",
+        "startDate": "date",
+        "endDate": "date",
+        "scale": "string",
+        "structure": "string",
+        "pf_closing_goal": "string",
+        "location": "string",
+        "start_date": "string",
+        "end_date": "string",
+        "description": "string",
+        "registration_deadline": "string",
+        "recruitment_start": "date",
+        "recruitment_end": "date"
+      }
+    },
+    {
+      "label": "ESGProgram",
       "name": "String",
       "properties": {
-        "usecase_id": "string",
+        "year": "int",
+        "participationYears": "int"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "Agreement",
+      "properties": {
+        "name": "string",
+        "date": "string",
+        "title": "string",
+        "location": "string",
+        "agreement_id": "string",
+        "purpose": "String",
+        "scope": "string",
+        "agreement_date": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Policy",
+      "name": "Policy",
+      "properties": {
+        "policyType": "string"
+      }
+    },
+    {
+      "label": "Trend",
+      "name": "Trend",
+      "properties": {
         "name": "string",
         "description": "string"
       }
     },
     {
-      "label": "Enterprise",
-      "name": "String",
+      "label": "Material",
+      "name": "Material",
       "properties": {
         "type": "string",
+        "thickness": "string"
+      }
+    },
+    {
+      "label": "Commission",
+      "name": "String",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "SME",
+      "name": "SmallMediumEnterprise",
+      "properties": {
+        "name": "string",
+        "industry": "string",
+        "country": "string",
         "company_count": "int"
       }
     },
     {
-      "label": "TariffMeasure",
-      "name": "Tariff Measure",
+      "label": "IncomeExpectation",
+      "name": "Income Expectation",
+      "properties": {
+        "averageMonthlyIncome": "int"
+      }
+    },
+    {
+      "label": "Region",
+      "name": "Region",
       "properties": {
         "name": "string",
-        "effectiveDate": "string",
-        "enact_date": "string",
-        "measureType": "string",
-        "impactRate": "float"
+        "type": "string"
+      }
+    },
+    {
+      "label": "Transaction",
+      "name": "Transaction",
+      "properties": {
+        "year": "int",
+        "amount": "int",
+        "growth_rate_percent": "float",
+        "share_percent": "float",
+        "growth_percent": "float"
+      }
+    },
+    {
+      "label": "Promotion",
+      "name": "Promotion",
+      "properties": {
+        "startDate": "string",
+        "endDate": "string",
+        "details": "string"
+      }
+    },
+    {
+      "label": "Factory",
+      "name": "Factory",
+      "properties": {
+        "factory_name": "string",
+        "location": "string",
+        "factoryName": "string",
+        "workersCount": "int",
+        "maxDailyProduction": "int",
+        "operatingStatus": "string"
+      }
+    },
+    {
+      "label": "FEATURE",
+      "name": "Feature",
+      "properties": {
+        "name": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Campaign",
+      "name": "Campaign",
+      "properties": {
+        "amount": "int",
+        "rank": "int"
+      }
+    },
+    {
+      "label": "ExportRecord",
+      "name": "수출기록",
+      "properties": {
+        "year": "int",
+        "quarter": "int",
+        "export_amount_usd": "float",
+        "growth_rate": "float"
+      }
+    },
+    {
+      "label": "ESGIndex",
+      "name": "ESG Index",
+      "properties": {
+        "name": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Agency",
+      "name": "Agency",
+      "properties": {
+        "name": "string",
+        "agencyName": "string",
+        "department": "string"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "지역",
+      "properties": {
+        "location_id": "string",
+        "name": "string",
+        "country": "string",
+        "region": "string",
+        "regionType": "string",
+        "address": "string"
+      }
+    },
+    {
+      "label": "Survey",
+      "name": "Survey",
+      "properties": {
+        "id": "string",
+        "title": "string",
+        "date": "string",
+        "respondentCount": "int"
+      }
+    },
+    {
+      "label": "JobType",
+      "name": "Job Type",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "SupportProgram",
+      "name": "SupportProgram",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Metric",
+      "name": "Metric",
+      "properties": {
+        "name": "string",
+        "unit": "String",
+        "value": "int"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "프로그램",
+      "properties": {
+        "program_id": "string",
+        "name": "string",
+        "purpose": "string",
+        "year": "int",
+        "target_count": "int",
+        "description": "string",
+        "start_year": "int",
+        "participantCount": "int",
+        "programType": "string",
+        "deadline": "date",
+        "support_amount_min": "int",
+        "support_amount_max": "int",
+        "selected_count": "int"
+      }
+    },
+    {
+      "label": "Service",
+      "name": "Service",
+      "properties": {
+        "name": "string",
+        "serviceType": "string",
+        "type": "string",
+        "users_count": "int",
+        "client_count": "int",
+        "category": "String",
+        "launch_year": "int"
+      }
+    },
+    {
+      "label": "CompanyCategory",
+      "name": "CompanyCategory",
+      "properties": {
+        "name": "string",
+        "min_experience_years": "int",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "Company",
+      "properties": {
+        "name": "string",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "Product",
+      "properties": {
+        "category": "string",
+        "specification": "string",
+        "name": "string",
+        "type": "string",
+        "model": "string",
+        "product_id": "string",
+        "productId": "string",
+        "productName": "string",
+        "price": "int",
+        "product_type": "string",
+        "active_ingredient": "string",
+        "activeIngredient": "string",
+        "therapyArea": "string",
+        "product_name": "string",
+        "description": "string",
+        "approval_year": "int",
+        "releaseDate": "string",
+        "generation": "string",
+        "productionMethod": "string",
+        "features": "string"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "Product",
+      "properties": {
+        "name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "TariffMeasure",
+      "name": "관세 조치",
+      "properties": {
+        "item": "string",
+        "effective_date": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "GovernmentProgram",
+      "name": "GovernmentProgram",
+      "properties": {
+        "program_name": "string",
+        "support_type": "string",
+        "annual_benefit_min": "int",
+        "annual_benefit_max": "int"
+      }
+    },
+    {
+      "label": "Platform",
+      "name": "플랫폼",
+      "properties": {
+        "platform_id": "string",
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "FinancialMetric",
+      "name": "재무지표",
+      "properties": {
+        "metric_name": "string",
+        "value": "int",
+        "unit": "string",
+        "year": "int",
+        "quarter": "string"
+      }
+    },
+    {
+      "label": "Business",
+      "name": "SmallBusiness",
+      "properties": {
+        "name": "string",
+        "category": "string",
+        "industry": "string",
+        "years_in_business": "int",
+        "businessId": "string",
+        "businessName": "string",
+        "type": "string",
+        "yearsInOperation": "int",
+        "size": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "String",
+      "properties": {
+        "position": "string",
+        "name": "string",
+        "person_id": "string",
+        "role": "string",
+        "title": "string"
+      }
+    },
+    {
+      "label": "Subsidiary",
+      "name": "Subsidiary",
+      "properties": {
+        "name": "string",
+        "country": "string",
+        "established_year": "int"
+      }
+    },
+    {
+      "label": "Investment",
+      "name": "String",
+      "properties": {
+        "amount": "int",
+        "date": "String"
+      }
+    },
+    {
+      "label": "Award",
+      "name": "award_name",
+      "properties": {
+        "year": "int",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Official",
+      "name": "Official",
+      "properties": {
+        "name": "string",
+        "title": "String"
+      }
+    },
+    {
+      "label": "PreparationActivity",
+      "name": "Preparation Activity",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Participant",
+      "name": "Participant",
+      "properties": {
+        "name": "string",
+        "participant_type": "string",
+        "industry": "string",
+        "years_in_business": "int"
+      }
+    },
+    {
+      "label": "BusinessSegment",
+      "name": "사업부문",
+      "properties": {
+        "segment_name": "string"
+      }
+    },
+    {
+      "label": "SupportPlan",
+      "name": "String",
+      "properties": {
+        "startYear": "int",
+        "endYear": "int"
+      }
+    },
+    {
+      "label": "VehicleModel",
+      "name": "VehicleModel",
+      "properties": {
+        "model_id": "string",
+        "name": "string",
+        "manufacturer": "string"
+      }
+    },
+    {
+      "label": "CustomerAction",
+      "name": "Customer Action",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Brand",
+      "name": "Brand",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "name": "string",
+        "agency_name": "string"
+      }
+    },
+    {
+      "label": "WelfareMall",
+      "name": "복지몰",
+      "properties": {
+        "name": "string",
+        "rank": "string"
+      }
+    },
+    {
+      "label": "FundingRound",
+      "name": "round_name",
+      "properties": {
+        "amount": "int"
+      }
+    },
+    {
+      "label": "Technology",
+      "name": "String",
+      "properties": {
+        "domain": "string",
+        "tech_id": "string",
+        "name": "string",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "Company",
+      "properties": {
+        "ticker": "string",
+        "industry": "string",
+        "name": "string",
+        "type": "string",
+        "company_name": "string",
+        "stock_code": "string",
+        "company_id": "string",
+        "size": "string",
+        "region": "string",
+        "country": "string",
+        "headquarters": "string",
+        "companyName": "string",
+        "employeeCount": "int",
+        "sizeCategory": "string",
+        "founded_year": "int",
+        "cumulative_investment": "int",
+        "target_ipo_year": "int",
+        "employee_count": "int",
+        "founding_year": "int",
+        "company_type": "String",
+        "revenue": "int",
+        "rnd_investment": "int",
+        "domesticProduction": "bool",
+        "category": "string"
+      }
+    },
+    {
+      "label": "Role",
+      "name": "Role",
+      "properties": {
+        "role_title": "string",
+        "department": "string"
+      }
+    },
+    {
+      "label": "Organization",
+      "name": "기관",
+      "properties": {
+        "org_id": "string",
+        "name": "string",
+        "type": "string",
+        "location": "string",
+        "category": "string",
+        "sector": "string",
+        "role": "string",
+        "orgId": "string",
+        "orgName": "string",
+        "website": "string",
+        "established_year": "int",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Country",
+      "name": "Country",
+      "properties": {
+        "name": "string",
+        "region": "string",
+        "country_name": "string"
+      }
+    },
+    {
+      "label": "ProductCategory",
+      "name": "수출 품목",
+      "properties": {
+        "category_name": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "SalesData",
+      "name": "판매데이터",
+      "properties": {
+        "year": "int",
+        "month": "int",
+        "purchaseIndex": "int"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "시장",
+      "properties": {
+        "market_type": "string",
+        "region": "string",
+        "market_id": "string",
+        "sales_ratio": "float",
+        "country": "string",
+        "segmentType": "string",
+        "name": "string",
+        "current_size_musd": "float",
+        "projected_size_musd": "float",
+        "projection_year": "int"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "설명회",
+      "properties": {
+        "event_id": "string",
+        "name": "string",
+        "date": "string",
+        "type": "string",
+        "time": "string",
+        "purpose": "string",
+        "start_date": "string",
+        "end_date": "string",
+        "location": "string",
+        "edition": "int"
+      }
+    },
+    {
+      "label": "FinancialReport",
+      "name": "FinancialReport",
+      "properties": {
+        "revenue": "int",
+        "operatingProfit": "int",
+        "netProfit": "int",
+        "revenueChangeRate": "float",
+        "operatingProfitChangeRate": "float",
+        "netProfitChangeRate": "float",
+        "period": "string",
+        "revenueGrowthRate": "float",
+        "operatingProfitGrowthRate": "float",
+        "netProfitGrowthRate": "float",
+        "quarter": "string",
+        "year": "int",
+        "operating_profit": "int"
+      }
+    },
+    {
+      "label": "Consultation",
+      "name": "String",
+      "properties": {
+        "count": "int",
+        "amount": "int"
+      }
+    },
+    {
+      "label": "ExperimentLab",
+      "name": "실험실",
+      "properties": {
+        "labName": "string",
+        "floor": "string",
+        "environmentCondition": "string",
+        "uniqueInSME": "bool"
+      }
+    },
+    {
+      "label": "ExportReport",
+      "name": "ExportReport",
+      "properties": {
+        "year": "int",
+        "quarter": "String",
+        "total_value_usd": "float",
+        "exporters_count": "int",
+        "totalExportValue": "float",
+        "growthRate": "float",
+        "numCompanies": "int"
+      }
+    },
+    {
+      "label": "Report",
+      "name": "Report",
+      "properties": {
+        "title": "string",
+        "year": "int"
+      }
+    },
+    {
+      "label": "AI_Agent",
+      "name": "AI Agent",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "ExportData",
+      "name": "ExportData",
+      "properties": {
+        "period": "string",
+        "amount": "float",
+        "growth_rate": "float"
+      }
+    },
+    {
+      "label": "SalesTarget",
+      "name": "SalesTarget",
+      "properties": {
+        "year": "int",
+        "targetRevenue": "int"
+      }
+    },
+    {
+      "label": "TrainingProgram",
+      "name": "Training Program",
+      "properties": {
+        "programName": "string",
+        "programType": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Design",
+      "name": "Design",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "FinancialRecord",
+      "name": "FinancialRecord",
+      "properties": {
+        "record_id": "string",
+        "year": "int",
+        "revenue": "float",
+        "growth_rate": "float",
+        "overseas_ratio": "float"
+      }
+    },
+    {
+      "label": "MarketForecast",
+      "name": "MarketForecast",
+      "properties": {
+        "year": "int",
+        "forecastRevenue": "int"
+      }
+    },
+    {
+      "label": "Certification",
+      "name": "String",
+      "properties": {
+        "year": "int",
+        "name": "string",
+        "issuer": "string",
+        "date": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "Crop",
+      "name": "crop_type",
+      "properties": {
+        "annual_production": "string"
+      }
+    },
+    {
+      "label": "Executive",
+      "name": "Executive",
+      "properties": {
+        "name": "string",
+        "title": "string"
+      }
+    },
+    {
+      "label": "PublicInstitution",
+      "name": "PublicInstitution",
+      "properties": {
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "ESGMetrics",
+      "name": "String",
+      "properties": {
+        "complianceRate": "float",
+        "year": "int"
+      }
+    },
+    {
+      "label": "LogisticsCenter",
+      "name": "물류센터",
+      "properties": {
+        "center_id": "string",
+        "name": "string",
+        "type": "string",
+        "location": "string"
+      }
+    },
+    {
+      "label": "SizeOption",
+      "name": "Size Option",
+      "properties": {
+        "label": "string",
+        "weight": "string",
+        "dimension": "string"
+      }
+    },
+    {
+      "label": "ESGEvaluation",
+      "name": "ESG Evaluation",
+      "properties": {
+        "year": "int",
+        "score": "int",
+        "complianceRate": "int"
+      }
+    },
+    {
+      "label": "ProductType",
+      "name": "ProductType",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "SERVICE_MODEL",
+      "name": "ServiceModel",
+      "properties": {
+        "name": "string",
+        "payment_model": "string"
+      }
+    },
+    {
+      "label": "AgeGroup",
+      "name": "Age Group",
+      "properties": {
+        "name": "string",
+        "ageRange": "string"
+      }
+    },
+    {
+      "label": "ExportStatistic",
+      "name": "string",
+      "properties": {
+        "period": "string",
+        "amountUSD": "float",
+        "amountKRW": "float",
+        "changePercent": "float",
+        "rank": "int",
+        "value_usd": "float",
+        "growth_rate_percent": "float",
+        "year": "int",
+        "quarter": "int",
+        "totalExport": "float",
+        "growthRate": "float",
+        "exporterCount": "int",
+        "total_export": "float",
+        "growth_rate": "float",
+        "num_companies": "int"
+      }
+    },
+    {
+      "label": "Feature",
+      "name": "Feature",
+      "properties": {
+        "type": "string",
+        "description": "string",
+        "name": "string"
+      }
+    },
+    {
+      "label": "Industry",
+      "name": "Industry",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Strategy",
+      "name": "경영전략",
+      "properties": {
+        "strategy_name": "string",
+        "description": "string",
+        "year": "int"
       }
     },
     {
@@ -355,1114 +1064,402 @@
       }
     },
     {
-      "label": "Motivation",
-      "name": "Motivation",
-      "properties": {
-        "description": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "Integration",
-      "name": "String",
-      "properties": {
-        "integration_id": "string",
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "WelfareMall",
-      "name": "WelfareMall",
-      "properties": {
-        "name": "string",
-        "launch_year": "int",
-        "total_transactions": "int",
-        "mall_id": "string"
-      }
-    },
-    {
-      "label": "StartupCompany",
-      "name": "string",
-      "properties": {
-        "company_name": "string",
-        "founding_year": "int"
-      }
-    },
-    {
-      "label": "Statistic",
-      "name": "통계",
-      "properties": {
-        "metric": "string",
-        "value": "float",
-        "unit": "string",
-        "year": "int"
-      }
-    },
-    {
-      "label": "TrainingType",
-      "name": "교육유형",
-      "properties": {
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "ContactInfo",
-      "name": "연락처",
-      "properties": {
-        "phone": "string",
-        "email": "string"
-      }
-    },
-    {
-      "label": "Policy",
-      "name": "Policy",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "status": "string",
-        "policyName": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "PerformanceRecord",
-      "name": "PerformanceRecord",
-      "properties": {
-        "quarter": "string",
-        "revenueKRW": "int",
-        "operatingProfitKRW": "int"
-      }
-    },
-    {
-      "label": "Industry",
-      "name": "String",
-      "properties": {
-        "industry_id": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "DemographicGroup",
-      "name": "AgeGroup",
-      "properties": {
-        "ageRange": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "VehicleModel",
-      "name": "차량모델",
-      "properties": {
-        "name": "string",
-        "manufacturer": "string"
-      }
-    },
-    {
-      "label": "ESGProgram",
-      "name": "ESGProgram",
-      "properties": {
-        "program_name": "string",
-        "year": "int"
-      }
-    },
-    {
-      "label": "ExportReport",
-      "name": "ExportReport",
-      "properties": {
-        "period": "string",
-        "year": "int",
-        "total_amount": "float",
-        "percent_change": "float",
-        "quarter": "string",
-        "totalExportAmount": "string",
-        "SMECount": "int"
-      }
-    },
-    {
-      "label": "Period",
-      "name": "기간",
-      "properties": {
-        "year": "int",
-        "quarter": "int"
-      }
-    },
-    {
-      "label": "Employee",
-      "name": "직원",
-      "properties": {
-        "employeeName": "string",
-        "age": "int",
-        "role": "string"
-      }
-    },
-    {
-      "label": "PreparationActivity",
-      "name": "PreparationAction",
-      "properties": {
-        "name": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "LogisticsPlatform",
-      "name": "String",
-      "properties": {
-        "description": "String",
-        "platform_type": "String"
-      }
-    },
-    {
-      "label": "Participant",
-      "name": "Participant",
-      "properties": {
-        "name": "string",
-        "category": "string"
-      }
-    },
-    {
-      "label": "Association",
-      "name": "협회",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "established_year": "int"
-      }
-    },
-    {
-      "label": "Agreement",
-      "name": "Agreement",
-      "properties": {
-        "agreement_date": "date",
-        "agreement_type": "string",
-        "date": "string",
-        "purpose": "string",
-        "location": "string",
-        "title": "string",
-        "id": "string",
-        "name": "string",
-        "agreement_name": "String",
-        "type": "string"
-      }
-    },
-    {
-      "label": "TariffAction",
-      "name": "TariffAction",
-      "properties": {
-        "name": "string",
-        "effectiveDate": "string"
-      }
-    },
-    {
-      "label": "Revenue",
-      "name": "매출통계",
-      "properties": {
-        "year": "int",
-        "amount": "float",
-        "growth_rate": "float",
-        "overseas_ratio": "float",
-        "us_ratio": "float"
-      }
-    },
-    {
-      "label": "Strategy",
-      "name": "Strategy",
-      "properties": {
-        "description": "String"
-      }
-    },
-    {
-      "label": "FinancialScheme",
-      "name": "String",
-      "properties": {
-        "name": "string",
-        "description": "string",
-        "launched": "string"
-      }
-    },
-    {
-      "label": "ExportStat",
-      "name": "수출통계",
-      "properties": {
-        "type": "string",
-        "amount": "float",
-        "change_rate": "float",
-        "company_count": "int",
-        "consecutive_quarters": "int"
-      }
-    },
-    {
-      "label": "Institution",
-      "name": "Institution",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "location": "string"
-      }
-    },
-    {
-      "label": "EconomicCondition",
-      "name": "Economic Condition",
-      "properties": {
-        "description": "string"
-      }
-    },
-    {
-      "label": "Factory",
-      "name": "공장",
-      "properties": {
-        "factoryName": "string",
-        "location": "string",
-        "factoryId": "string",
-        "name": "string",
-        "workerCount": "int",
-        "maxDailyProduction": "int"
-      }
-    },
-    {
-      "label": "FinancialMetric",
-      "name": "FinancialMetric",
-      "properties": {
-        "metric_type": "String",
-        "period": "String",
-        "value": "int",
-        "unit": "String",
-        "change_percent": "float"
-      }
-    },
-    {
-      "label": "TrainingProgram",
-      "name": "교육프로그램",
-      "properties": {
-        "name": "string",
-        "start_year": "int",
-        "description": "string",
-        "target_size": "string"
-      }
-    },
-    {
-      "label": "Consultation",
-      "name": "String",
-      "properties": {
-        "count": "int",
-        "total_amount": "int"
-      }
-    },
-    {
-      "label": "MarketRegion",
-      "name": "MarketRegion",
-      "properties": {
-        "regionName": "string"
-      }
-    },
-    {
-      "label": "FinancialExpectation",
-      "name": "FinancialGoal",
-      "properties": {
-        "averageMonthlyIncome": "int"
-      }
-    },
-    {
-      "label": "Agency",
-      "name": "기관",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "CollaborationService",
-      "name": "serviceName",
-      "properties": {
-        "growthFactor": "int"
-      }
-    },
-    {
-      "label": "BusinessSegment",
-      "name": "BusinessSegment",
-      "properties": {
-        "segment_type": "String"
-      }
-    },
-    {
-      "label": "SupportProgram",
-      "name": "지원사업",
-      "properties": {
-        "name": "string",
-        "start_year": "int",
-        "participant_count": "int",
-        "year": "int",
-        "description": "string",
-        "program_id": "string"
-      }
-    },
-    {
-      "label": "Material",
-      "name": "string",
-      "properties": {}
-    },
-    {
-      "label": "ESG_Metric",
-      "name": "ESG Metric",
-      "properties": {
-        "name": "string",
-        "industry_focus": "string"
-      }
-    },
-    {
       "label": "Category",
-      "name": "String",
+      "name": "Category",
       "properties": {
         "name": "string"
-      }
-    },
-    {
-      "label": "FundingEvent",
-      "name": "String",
-      "properties": {
-        "amount": "int",
-        "rank": "int"
-      }
-    },
-    {
-      "label": "Subsidiary",
-      "name": "LocalSubsidiary",
-      "properties": {
-        "name": "string",
-        "country": "string",
-        "established_year": "int",
-        "subsidiary_id": "string"
-      }
-    },
-    {
-      "label": "Expert",
-      "name": "string",
-      "properties": {
-        "expert_name": "string",
-        "expertise": "string"
-      }
-    },
-    {
-      "label": "Crop",
-      "name": "String",
-      "properties": {
-        "category": "string",
-        "annual_production": "int"
-      }
-    },
-    {
-      "label": "ExperimentLab",
-      "name": "ExperimentLab",
-      "properties": {
-        "labId": "string",
-        "name": "string",
-        "location": "string",
-        "testTypes": "string"
-      }
-    },
-    {
-      "label": "Survey",
-      "name": "Survey",
-      "properties": {
-        "title": "string",
-        "date": "string",
-        "sampleSize": "int"
-      }
-    },
-    {
-      "label": "ExportProgram",
-      "name": "String",
-      "properties": {
-        "target": "String"
-      }
-    },
-    {
-      "label": "SolutionProvider",
-      "name": "providerName",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "ExportRecord",
-      "name": "수출기록",
-      "properties": {
-        "record_id": "string",
-        "period": "string",
-        "export_value": "float",
-        "growth_rate": "float",
-        "company_count": "int"
-      }
-    },
-    {
-      "label": "ResearchReport",
-      "name": "ResearchReport",
-      "properties": {
-        "title": "string",
-        "date": "string"
-      }
-    },
-    {
-      "label": "GovernmentScheme",
-      "name": "지원제도",
-      "properties": {
-        "schemeName": "string"
-      }
-    },
-    {
-      "label": "Report",
-      "name": "String",
-      "properties": {
-        "title": "string",
-        "year": "int"
-      }
-    },
-    {
-      "label": "Recruitment",
-      "name": "Recruitment",
-      "properties": {
-        "start_date": "string",
-        "deadline": "string"
-      }
-    },
-    {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
-      "properties": {
-        "name": "string",
-        "agency_type": "string",
-        "agency_id": "string",
-        "level": "string",
-        "country": "string",
-        "agencyName": "string"
-      }
-    },
-    {
-      "label": "Section",
-      "name": "Section",
-      "properties": {
-        "name": "string",
-        "category": "string"
-      }
-    },
-    {
-      "label": "AIAgent",
-      "name": "String",
-      "properties": {
-        "agent_id": "string",
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "JobType",
-      "name": "SpecificJob",
-      "properties": {
-        "name": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "Market",
-      "name": "Market",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "market_name": "String",
-        "region": "string",
-        "market_id": "string",
-        "market_type": "string"
-      }
-    },
-    {
-      "label": "Platform",
-      "name": "String",
-      "properties": {
-        "type": "string",
-        "name": "string",
-        "foundedYear": "int",
-        "country": "string"
-      }
-    },
-    {
-      "label": "RecruitmentEvent",
-      "name": "string",
-      "properties": {
-        "start_date": "date",
-        "end_date": "date"
-      }
-    },
-    {
-      "label": "Country",
-      "name": "Country",
-      "properties": {
-        "name": "string",
-        "exportAmount": "float",
-        "changeRate": "float",
-        "rank": "int",
-        "region": "string",
-        "country_code": "string",
-        "countryName": "string"
-      }
-    },
-    {
-      "label": "FinancialInstrument",
-      "name": "FinancialInstrument",
-      "properties": {
-        "type": "string",
-        "amount": "int",
-        "conversion_rate": "string"
-      }
-    },
-    {
-      "label": "BroadcastEvent",
-      "name": "방송이벤트",
-      "properties": {
-        "id": "string",
-        "date_time": "string",
-        "channel": "string",
-        "edition": "string"
-      }
-    },
-    {
-      "label": "Program",
-      "name": "String",
-      "properties": {
-        "description": "string",
-        "name": "string",
-        "introduced_year": "int",
-        "purpose": "string",
-        "year": "int",
-        "participant_count": "int",
-        "support_scale": "string",
-        "type": "string",
-        "mode": "string",
-        "program_name": "string",
-        "application_deadline": "date"
       }
     },
     {
       "label": "Partner",
-      "name": "String",
+      "name": "Partner",
       "properties": {
-        "industry": "string",
         "name": "string",
-        "partnership_start": "string",
-        "partner_id": "string",
-        "role": "string",
+        "size": "string"
+      }
+    },
+    {
+      "label": "Tariff",
+      "name": "관세 조치",
+      "properties": {
+        "name": "string",
+        "startDate": "date"
+      }
+    },
+    {
+      "label": "TablewareMaterial",
+      "name": "Tableware Material",
+      "properties": {
         "type": "string"
       }
     },
     {
-      "label": "Company",
-      "name": "Company",
-      "properties": {
-        "name": "string",
-        "stock_code": "string",
-        "company_name": "string",
-        "industry": "string",
-        "role": "String",
-        "id": "string",
-        "category": "String",
-        "size": "string",
-        "type": "string",
-        "annual_revenue": "int",
-        "revenue_growth_percentage": "int",
-        "country": "string",
-        "headquarters": "string",
-        "founded_year": "int",
-        "company_id": "string",
-        "employee_count": "int",
-        "size_category": "string",
-        "location": "string",
-        "total_investment": "int",
-        "funding_stage": "string",
-        "ipo_target_year": "int",
-        "vision": "string",
-        "cloud_expertise": "Boolean",
-        "targetRevenue": "int",
-        "region": "string",
-        "companyName": "string",
-        "industryType": "string",
-        "founding_year": "int",
-        "market_share": "string",
-        "companyId": "string",
-        "company_type": "string"
-      }
-    },
-    {
-      "label": "PartnerProgram",
-      "name": "programName",
-      "properties": {
-        "awardsCount": "int"
-      }
-    },
-    {
-      "label": "SizeOption",
-      "name": "string",
-      "properties": {
-        "weight": "string",
-        "width": "string"
-      }
-    },
-    {
-      "label": "Business",
-      "name": "string",
-      "properties": {
-        "category": "string",
-        "years_active": "int"
-      }
-    },
-    {
-      "label": "Certification",
-      "name": "Certification",
-      "properties": {
-        "certification_name": "string",
-        "year": "int",
-        "name": "string",
-        "issuer": "string"
-      }
-    },
-    {
-      "label": "Region",
-      "name": "String",
+      "label": "Integration",
+      "name": "Integration",
       "properties": {
         "name": "string"
-      }
-    },
-    {
-      "label": "PolicyMeasure",
-      "name": "PolicyMeasure",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "effective_date": "string"
-      }
-    },
-    {
-      "label": "PurchasePolicy",
-      "name": "String",
-      "properties": {
-        "details": "String"
-      }
-    },
-    {
-      "label": "Tender",
-      "name": "Tender",
-      "properties": {
-        "name": "string",
-        "type": "string",
-        "tender_id": "string",
-        "start_date": "string",
-        "end_date": "string"
-      }
-    },
-    {
-      "label": "Product",
-      "name": "Product",
-      "properties": {
-        "name": "string",
-        "category": "string",
-        "output_power": "string",
-        "product_type": "string",
-        "id": "string",
-        "cumulative_sales": "int",
-        "price": "int",
-        "motor_type": "string",
-        "power_consumption_w": "float",
-        "noise_level_db": "float",
-        "launch_datetime": "string",
-        "colors": "string",
-        "release_date": "string",
-        "product_id": "string",
-        "type": "string",
-        "launch_year": "int",
-        "launchYear": "int",
-        "active_ingredient": "string",
-        "therapy_area": "string",
-        "generic_name": "string",
-        "feature": "string",
-        "productName": "string",
-        "productType": "string",
-        "releaseDate": "string",
-        "preheatTime": "string",
-        "design": "string",
-        "portability": "string",
-        "durability": "string",
-        "temperatureLevels": "string",
-        "safetyFeatures": "string",
-        "productId": "string",
-        "generation": "string"
-      }
-    },
-    {
-      "label": "Project",
-      "name": "String",
-      "properties": {
-        "start_date": "date",
-        "end_date": "date",
-        "description": "String",
-        "project_name": "String",
-        "type": "String",
-        "name": "string",
-        "scale": "string",
-        "financing_structure": "string",
-        "closing_target": "string"
-      }
-    },
-    {
-      "label": "CareerField",
-      "name": "CareerField",
-      "properties": {
-        "name": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "Service",
-      "name": "String",
-      "properties": {
-        "description": "string",
-        "rate_info": "String",
-        "name": "string",
-        "service_type": "String",
-        "rate": "String",
-        "userCount": "int",
-        "companyCount": "int",
-        "availableIn": "string"
-      }
-    },
-    {
-      "label": "ExportStatistic",
-      "name": "ExportStatistic",
-      "properties": {
-        "exportAmount": "float",
-        "changeRate": "float",
-        "period": "string",
-        "amount": "float",
-        "growth_rate": "float",
-        "year": "int",
-        "quarter": "int",
-        "totalExportUSD": "int",
-        "exportingSMECount": "int"
-      }
-    },
-    {
-      "label": "SalesPerformance",
-      "name": "SalesPerformance",
-      "properties": {
-        "performanceId": "string",
-        "year": "int",
-        "month": "int",
-        "purchaseIndex": "float"
-      }
-    },
-    {
-      "label": "Trend",
-      "name": "String",
-      "properties": {
-        "description": "string"
-      }
-    },
-    {
-      "label": "FinancialReport",
-      "name": "Financial Report",
-      "properties": {
-        "period": "string",
-        "revenue": "int",
-        "operating_profit": "int",
-        "net_profit": "int",
-        "revenue_change_rate": "float",
-        "profit_change_rate": "float",
-        "operatingProfit": "int",
-        "netProfit": "int",
-        "revenueGrowth": "float"
-      }
-    },
-    {
-      "label": "Sector",
-      "name": "산업부문",
-      "properties": {
-        "sectorName": "string"
-      }
-    },
-    {
-      "label": "CrowdfundingPlatform",
-      "name": "String",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Award",
-      "name": "String",
-      "properties": {
-        "year": "int",
-        "awarding_body": "string"
-      }
-    },
-    {
-      "label": "Selection",
-      "name": "string",
-      "properties": {
-        "selected_count": "int",
-        "support_min": "int",
-        "support_max": "int"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Platform",
-      "relationship": "CONNECTS",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
       "start_node": "Company",
-      "relationship": "ISSUES",
-      "end_node": "FinancialInstrument",
+      "relationship": "PROVIDES",
+      "end_node": "AI_Agent",
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "IN_TIME",
-      "end_node": "TimePeriod",
+      "start_node": "Strategy",
+      "relationship": "TARGETS_SEGMENT",
+      "end_node": "BusinessSegment",
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "SELECTED",
-      "end_node": "Company",
+      "start_node": "ExportReport",
+      "relationship": "HAS_STATISTIC",
+      "end_node": "ExportStatistic",
       "properties": {}
     },
     {
-      "start_node": "Solution",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
+      "start_node": "Survey",
+      "relationship": "HAS_REASON",
+      "end_node": "Reason",
+      "properties": {
+        "rate": "float"
+      }
     },
     {
-      "start_node": "Section",
-      "relationship": "FEATURES",
+      "start_node": "SalesRecord",
+      "relationship": "INCLUDES_PRODUCT",
       "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Tender",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportSummary",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "TARGETS_MARKET",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsPlatform",
-      "relationship": "LINKS",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTS",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "Institution",
-      "properties": {
-        "agreement_date": "string"
-      }
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "INITIATED",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "TESTED_IN",
-      "end_node": "ExperimentLab",
-      "properties": {}
-    },
-    {
-      "start_node": "Participant",
-      "relationship": "APPLIES_TO",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportSummary",
-      "relationship": "FOR_PERIOD",
-      "end_node": "Quarter",
-      "properties": {}
-    },
-    {
-      "start_node": "BroadcastEvent",
-      "relationship": "SELLS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "MARKET_SHARE_IN",
-      "end_node": "Region",
-      "properties": {
-        "share_percentage": "float",
-        "period": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LICENSED_TO",
-      "end_node": "Company",
-      "properties": {
-        "productName": "string",
-        "licenseRevenueKRW": "int",
-        "agreementType": "string"
-      }
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SUPPORTS",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "PolicyMeasure",
-      "relationship": "AFFECTS_EXPORT_TO",
-      "end_node": "Country",
-      "properties": {
-        "affected_product": "string"
-      }
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "ESTABLISHES_PLATFORM",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "PARTNER_WITH",
-      "end_node": "Partner",
       "properties": {}
     },
     {
       "start_node": "Organization",
       "relationship": "COLLABORATES_WITH",
       "end_node": "Organization",
+      "properties": {
+        "context": "string"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "EXPORTS",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "Employee",
-      "relationship": "WORKS_AT",
+      "start_node": "Company",
+      "relationship": "APPLIES_STRATEGY",
+      "end_node": "Strategy",
+      "properties": {}
+    },
+    {
+      "start_node": "AI_Agent",
+      "relationship": "SUPPORTS",
+      "end_node": "Channel",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "ADOPTS",
+      "end_node": "PRODUCT",
+      "properties": {
+        "automation_rate": "int"
+      }
+    },
+    {
+      "start_node": "Program",
+      "relationship": "APPLIES_TO",
+      "end_node": "ExportSME",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RUNS",
+      "end_node": "ESGProgram",
+      "properties": {
+        "startYear": "int"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOP_PRODUCT",
+      "end_node": "Product",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Agency",
+      "relationship": "ORGANIZES",
+      "end_node": "TrainingProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OWNS_FACTORY",
       "end_node": "Factory",
       "properties": {}
     },
     {
-      "start_node": "ExportRecord",
-      "relationship": "TO_COUNTRY",
+      "start_node": "TariffPolicy",
+      "relationship": "IMPOSED_BY",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "UTILIZES",
+      "start_node": "Organization",
+      "relationship": "HOSTS",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Service",
+      "relationship": "PROVIDED_AT_LOGISTICS_CENTER",
       "end_node": "LogisticsCenter",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "RECEIVED_CERTIFICATION",
-      "end_node": "Certification",
+      "relationship": "OWNS",
+      "end_node": "Subsidiary",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "ENGAGED_IN",
-      "end_node": "Consultation",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "LEADS",
-      "end_node": "Association",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "APPLIES_IN",
-      "end_node": "Quarter",
+      "relationship": "LAUNCHED",
+      "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "SUPPLIES",
-      "end_node": "Crop",
+      "relationship": "HAS_SALES_TARGET",
+      "end_node": "SalesTarget",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "EMPLOYS",
+      "end_node": "Official",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "UNDER_PROMOTION",
-      "end_node": "Promotion",
+      "relationship": "CREATED_BY",
+      "end_node": "Brand",
       "properties": {}
     },
     {
-      "start_node": "ExportProgram",
-      "relationship": "USES_CENTER",
-      "end_node": "LogisticsCenter",
+      "start_node": "AI_Agent",
+      "relationship": "ACHIEVES",
+      "end_node": "Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "COMPATIBLE_WITH",
+      "end_node": "TablewareMaterial",
+      "properties": {}
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "SUPPLIES",
+      "end_node": "Tender",
+      "properties": {
+        "startDate": "string",
+        "endDate": "string"
+      }
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Report",
+      "relationship": "DEFINES",
+      "end_node": "Trend",
+      "properties": {}
+    },
+    {
+      "start_node": "Survey",
+      "relationship": "PREPARES_BY",
+      "end_node": "PreparationActivity",
+      "properties": {
+        "rate": "float"
+      }
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "BY_COMPANY",
+      "end_node": "Company",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "PROVIDES",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Solution",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPED",
+      "relationship": "COMMERCIALIZES",
       "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ADOPTS",
+      "end_node": "Strategy",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "CONNECTS_WITH_LOGISTICS_CENTER",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_FINANCIAL_METRIC",
+      "end_node": "FinancialMetric",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "RECEIVES",
+      "end_node": "ESGEvaluation",
+      "properties": {}
+    },
+    {
+      "start_node": "SupportPlan",
+      "relationship": "RELATES_TO",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Category",
+      "relationship": "INCLUDES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RECEIVES",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "HAS_DIVISION",
+      "end_node": "Subdivision",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
       "properties": {
-        "method": "string"
+        "year": "int",
+        "supportedCount": "int"
       }
     },
     {
-      "start_node": "ResearchReport",
-      "relationship": "ABOUT",
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "BusinessSegment",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "OPERATES",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "ISSUED_BY",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "DEVELOPS_PLATFORM",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "CustomerAction",
+      "relationship": "TRIGGERS",
+      "end_node": "Feature",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Edition",
+      "relationship": "HAS_PRICING",
+      "end_node": "Pricing",
+      "properties": {}
+    },
+    {
+      "start_node": "Partner",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "INVEST_IN",
       "end_node": "Company",
+      "properties": {
+        "amount": "int",
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "INITIATES",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SUBSIDIARY",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNED_AGREEMENT",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "EXPORTED_TO",
+      "end_node": "Country",
+      "properties": {
+        "amount": "float",
+        "growthRate": "float"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "HAS_SERVICE_MODEL",
+      "end_node": "SERVICE_MODEL",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "AFFECTS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "SHOWCASES",
+      "end_node": "Product",
       "properties": {}
     },
     {
@@ -1470,253 +1467,14 @@
       "relationship": "EXPORTED_TO",
       "end_node": "Country",
       "properties": {
-        "exportAmount": "float",
-        "changeRate": "float"
+        "export_amount": "float",
+        "growth_rate": "float"
       }
     },
     {
-      "start_node": "SME",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
       "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "SME",
-      "properties": {
-        "agreement_name": "string",
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "SELLS_ON",
-      "end_node": "WelfareMall",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "ELIGIBLE_FOR",
-      "end_node": "StartupCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "UTILIZES",
+      "relationship": "USES",
       "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "FOR",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PRODUCES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "INCLUDES",
-      "end_node": "TrainingType",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStat",
-      "relationship": "FOR_PERIOD",
-      "end_node": "Period",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Solution",
-      "relationship": "DEPLOYED_TO",
-      "end_node": "Company",
-      "properties": {
-        "date": "Date"
-      }
-    },
-    {
-      "start_node": "SME",
-      "relationship": "BENEFITS_FROM",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "Organization",
-      "properties": {
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "SME",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Industry",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "exportAmountUSD": "int",
-        "rank": "int"
-      }
-    },
-    {
-      "start_node": "AIAgent",
-      "relationship": "IMPACTS",
-      "end_node": "Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Agency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "COVERS",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "BusinessSegment",
-      "relationship": "HAS_METRIC",
-      "end_node": "FinancialMetric",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "HOLDS_POSITION_AT",
-      "end_node": "Company",
-      "properties": {
-        "role": "string"
-      }
-    },
-    {
-      "start_node": "Facility",
-      "relationship": "LOCATED_AT",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
-      "start_node": "Policy",
-      "relationship": "APPLIES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffAction",
-      "relationship": "APPLIES_TO",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "INCLUDES_FACILITY",
-      "end_node": "Facility",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "OFFERS",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RUNS_PROJECT",
-      "end_node": "DevelopmentProject",
-      "properties": {}
-    },
-    {
-      "start_node": "Agency",
-      "relationship": "IMPOSES",
-      "end_node": "TariffMeasure",
-      "properties": {}
-    },
-    {
-      "start_node": "DemographicGroup",
-      "relationship": "INTERESTED_IN",
-      "end_node": "CareerField",
-      "properties": {}
-    },
-    {
-      "start_node": "Acquisition",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "TARGETS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Business",
-      "relationship": "offers",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "ESGIndicator",
-      "relationship": "APPLIED_TO",
-      "end_node": "Company",
-      "properties": {
-        "score": "float"
-      }
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Country",
-      "properties": {
-        "amount": "float",
-        "percent_change": "float"
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "RECEIVED_AWARD",
-      "end_node": "Award",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Person",
       "properties": {}
     },
     {
@@ -1726,316 +1484,47 @@
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "MADE_OF",
-      "end_node": "Material",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "EXPORTED_TO",
-      "end_node": "Country",
+      "start_node": "AgeGroup",
+      "relationship": "HAS_INTENTION_IN",
+      "end_node": "Survey",
       "properties": {
-        "exportAmount": "string",
-        "growthRate": "string"
+        "intentionRate": "float"
       }
     },
     {
-      "start_node": "CareerField",
-      "relationship": "INCLUDES_JOB",
-      "end_node": "JobType",
+      "start_node": "Employee",
+      "relationship": "HAS_ROLE",
+      "end_node": "Role",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_EXPORT_STATISTIC",
+      "start_node": "TariffPolicy",
+      "relationship": "AFFECTS_STATISTIC",
       "end_node": "ExportStatistic",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Country",
-      "properties": {
-        "exportAmountUSD": "int",
-        "changeRate": "float",
-        "rank": "int"
-      }
-    },
-    {
-      "start_node": "DevelopmentProject",
-      "relationship": "TARGETS",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Opportunity",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "INITIATES",
-      "end_node": "Initiative",
-      "properties": {}
-    },
-    {
-      "start_node": "Support",
-      "relationship": "FULFILLS",
-      "end_node": "StartupCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "LAUNCHES",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "FOUNDED",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "FILED_LAWSUIT",
-      "end_node": "Company",
-      "properties": {
-        "type": "string",
-        "date": "string",
-        "outcome": "string"
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_FUNDING",
-      "end_node": "FundingEvent",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "CloudService",
-      "relationship": "HAS_PARTNER",
-      "end_node": "PartnerProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "APPLIES_TO",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Participant",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "EMPLOYED_BY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportRecord",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Statistic",
-      "relationship": "DESCRIBES",
-      "end_node": "Sector",
-      "properties": {}
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "TARGETS",
-      "end_node": "DemographicGroup",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "CONDUCTS",
-      "end_node": "Survey",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "RECRUITED",
-      "end_node": "Company",
-      "properties": {
-        "deadline": "string"
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "DESIGNED_FOR",
-      "end_node": "VehicleModel",
-      "properties": {}
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "PROVIDED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "HOSTS",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "COMPETES_WITH",
-      "end_node": "Company",
-      "properties": {
-        "difference": "int"
-      }
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "SELLS",
-      "end_node": "Product",
-      "properties": {
-        "since": "string"
-      }
-    },
-    {
-      "start_node": "Service",
-      "relationship": "FOR",
-      "end_node": "SME",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "WINS_TENDER",
-      "end_node": "Tender",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "MANAGES",
-      "end_node": "TrainingProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "impactRate": "string"
-      }
-    },
-    {
       "start_node": "Organization",
-      "relationship": "partners_with",
+      "relationship": "PARTNERS_WITH",
       "end_node": "Organization",
       "properties": {}
     },
     {
-      "start_node": "CloudService",
-      "relationship": "TARGETS",
-      "end_node": "CustomerSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
-      "relationship": "LOCATED_IN",
-      "end_node": "Location",
+      "start_node": "Agreement",
+      "relationship": "RELATES_TO_TECHNOLOGY",
+      "end_node": "Technology",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "ESG_Evaluation",
-      "relationship": "USES",
-      "end_node": "ESG_Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "REPORTS",
-      "end_node": "FinancialReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
+      "relationship": "TARGET_MARKET",
       "end_node": "Market",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Agency",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "HAS_PERSON",
-      "end_node": "Person",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "STARTED",
-      "end_node": "Project",
+      "start_node": "Program",
+      "relationship": "SELECTS",
+      "end_node": "Company",
       "properties": {}
     },
     {
@@ -2045,802 +1534,21 @@
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "LEADS",
+      "start_node": "Agreement",
+      "relationship": "SIGNED_BY",
       "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "PROVIDES",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_FACTORY",
-      "end_node": "Factory",
-      "properties": {}
-    },
-    {
-      "start_node": "Selection",
-      "relationship": "APPLIES_TO",
-      "end_node": "StartupCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "CloudService",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Association",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Sector",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "ISSUED_BY",
-      "end_node": "Certificate",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECEIVES",
-      "end_node": "TrainingProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStat",
-      "relationship": "OF_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "CustomerCompany",
-      "relationship": "USES",
-      "end_node": "WelfareMall",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "USES_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "APPLIES_TO",
-      "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Company",
       "relationship": "OFFERS",
-      "end_node": "AIAgent",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "USES_SERVICE",
       "end_node": "Service",
       "properties": {}
     },
     {
-      "start_node": "Report",
-      "relationship": "DESCRIBES",
-      "end_node": "Trend",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OWNS",
-      "end_node": "Factory",
-      "properties": {}
-    },
-    {
-      "start_node": "Category",
-      "relationship": "HAS_TOP_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DECLARED_INITIATIVE",
-      "end_node": "Initiative",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "TARGETS_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportRecord",
-      "relationship": "ANNOUNCED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentScheme",
-      "relationship": "APPLIES_TO",
-      "end_node": "Employee",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SELECTS",
-      "end_node": "Selection",
-      "properties": {}
-    },
-    {
-      "start_node": "Association",
-      "relationship": "HAS_DIVISION",
-      "end_node": "Initiative",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportProgram",
-      "relationship": "SUPPORTS",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "MAKES_INVESTMENT",
-      "end_node": "Investment",
-      "properties": {}
-    },
-    {
-      "start_node": "Exhibition",
-      "relationship": "HAS_SECTION",
-      "end_node": "Section",
-      "properties": {}
-    },
-    {
       "start_node": "Agreement",
-      "relationship": "INCLUDES",
+      "relationship": "ACTIVATES",
       "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Brand",
-      "relationship": "OFFERS",
-      "end_node": "CollaborationService",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "develops",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportProgram",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "TARGETS",
-      "end_node": "SME",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPLIES",
-      "end_node": "Company",
-      "properties": {
-        "product": "string",
-        "date": "string",
-        "value": "int"
-      }
-    },
-    {
-      "start_node": "Exhibition",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ACQUIRES",
-      "end_node": "Acquisition",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "IMPLEMENTS",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "BRANDED_AS",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "AIAgent",
-      "relationship": "INTEGRATES_WITH",
-      "end_node": "Integration",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "PROVIDED_BY",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "WON",
-      "end_node": "Award",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "AIAgent",
-      "relationship": "TARGETS",
-      "end_node": "Industry",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "ANNOUNCES_POLICY",
-      "end_node": "Policy",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNED",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "TARGETS_SIZE",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "announces",
-      "end_node": "RecruitmentEvent",
-      "properties": {}
-    },
-    {
-      "start_node": "Opportunity",
-      "relationship": "TARGETS",
-      "end_node": "StartupCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchReport",
-      "relationship": "AUTHORED_BY",
-      "end_node": "Researcher",
-      "properties": {}
-    },
-    {
-      "start_node": "Business",
-      "relationship": "participates_in",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SUPPORTS",
-      "end_node": "Enterprise",
-      "properties": {}
-    },
-    {
-      "start_node": "RecruitmentEvent",
-      "relationship": "targets",
-      "end_node": "Business",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportSummary",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "ProductCategory",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "ESGProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "PROVIDES",
-      "end_node": "Support",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Association",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "HAS_SALES",
-      "end_node": "SalesRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPLIES_TO",
-      "end_node": "Company",
-      "properties": {
-        "product": "string"
-      }
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "OF_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Enterprise",
-      "relationship": "HAS_REPORT",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "organizes",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "SOLD_VIA",
-      "end_node": "WelfareMall",
-      "properties": {
-        "transaction_amount": "int",
-        "transaction_share": "int",
-        "transaction_growth_percentage": "int",
-        "year": "int"
-      }
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "SELECTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Policy",
-      "relationship": "AFFECTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SUBSIDIARY",
-      "end_node": "Subsidiary",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "TO_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_CERTIFICATION",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECORDS_SALES",
-      "end_node": "SalesPerformance",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "INTEGRATES_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "TARGETS_REGION",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGNED_DISTRIBUTION_CONTRACT_WITH",
-      "end_node": "Market",
-      "properties": {
-        "date": "string",
-        "contract_type": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HOSTS",
-      "end_node": "Exhibition",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUBSIDIARY_OF",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "BELONGS_TO",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "APPLIES_TO",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNS_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "ExportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "FOR_PROGRAM",
-      "end_node": "ESGProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PROVIDES",
-      "end_node": "CloudService",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "PRODUCED_BY",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "UNDER_BRAND",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "DEVELOPS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTED",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "Tender",
-      "relationship": "AWARDED_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "duration": "string"
-      }
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "CONTACT",
-      "end_node": "ContactInfo",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RAISED",
-      "end_node": "InvestmentRound",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "AIMS_AT",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "HOLDS_POSITION",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsPlatform",
-      "relationship": "INTEGRATES_WITH",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUBSCRIBES",
-      "end_node": "FinancialScheme",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Investment",
-      "relationship": "INVESTS_IN",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Certificate",
-      "relationship": "ISSUED_TO",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_PROMOTION",
-      "end_node": "Promotion",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "PurchasePolicy",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "DEVELOPS_PLATFORM",
-      "end_node": "LogisticsPlatform",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "INCLUDES_CONSULTATION",
-      "end_node": "Consultation",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "IMPACTS",
-      "end_node": "ExportRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ORGANIZES",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGN_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES",
-      "end_node": "WelfareMall",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
-      "relationship": "PROVIDES",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "ESG_Evaluation",
-      "relationship": "ASSESSES",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "DemographicGroup",
-      "relationship": "EXPRESSES_MOTIVATION",
-      "end_node": "Motivation",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "exportAmount": "string",
-        "growthRate": "string"
-      }
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "ANNOUNCES_POLICY",
-      "end_node": "Policy",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OWNS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "UTILIZES_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "FinancialReport",
-      "relationship": "MENTIONS_CONDITION",
-      "end_node": "EconomicCondition",
-      "properties": {}
-    },
-    {
-      "start_node": "CrowdfundingPlatform",
-      "relationship": "HAS_CATEGORY",
-      "end_node": "Category",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "branded_as",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "DemographicGroup",
-      "relationship": "EXPECTS_INCOME",
-      "end_node": "FinancialExpectation",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "Institution",
-      "properties": {}
-    },
-    {
-      "start_node": "Enterprise",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
       "properties": {}
     },
     {
@@ -2850,27 +1558,182 @@
       "properties": {}
     },
     {
+      "start_node": "Program",
+      "relationship": "INITIATED_BY",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "HELD_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "AFFECTS_PRODUCT",
+      "end_node": "ProductCategory",
+      "properties": {
+        "impact_rate": "float",
+        "change_rate": "float"
+      }
+    },
+    {
+      "start_node": "Project",
+      "relationship": "TARGETS",
+      "end_node": "CompanyCategory",
+      "properties": {}
+    },
+    {
       "start_node": "Company",
-      "relationship": "DEVELOPS",
+      "relationship": "HAS_FINANCIAL_REPORT",
+      "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Official",
+      "relationship": "WORKS_FOR",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SOLD_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNED_AGREEMENT",
+      "end_node": "Organization",
+      "properties": {
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Event",
+      "relationship": "PRESENTS",
+      "end_node": "Edition",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RAISED",
+      "end_node": "FundingRound",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "HOSTS",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "INCLUDES_PRODUCT",
+      "end_node": "ProductCategory",
+      "properties": {}
+    },
+    {
+      "start_node": "AI_Agent",
+      "relationship": "INTEGRATES_WITH",
+      "end_node": "Integration",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "PART_OF",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "SupportProgram",
+      "relationship": "OPERATED_BY",
+      "end_node": "PublicInstitution",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "OPERATES_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Survey",
+      "relationship": "HAS_INCOME_EXPECTATION",
+      "end_node": "IncomeExpectation",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "INCLUDES_PROGRAM",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "AFFECTS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Commission",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "TARGETS",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "FOUNDED",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "SalesRecord",
+      "relationship": "TARGETS_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "LEADS",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Subdivision",
+      "relationship": "FOCUSES_ON",
       "end_node": "Technology",
       "properties": {}
     },
     {
-      "start_node": "CloudService",
-      "relationship": "INTEGRATES_SOLUTION",
-      "end_node": "SolutionProvider",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Employee",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ADOPTS_STRATEGY",
-      "end_node": "Strategy",
+      "start_node": "ExportSME",
+      "relationship": "USES_LOGISTICS_CENTER",
+      "end_node": "LogisticsCenter",
       "properties": {}
     },
     {
@@ -2881,58 +1744,484 @@
     },
     {
       "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "Platform",
+      "relationship": "SIGNS",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OFFERS",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ACQUIRED",
+      "end_node": "Company",
+      "properties": {
+        "stake_percentage": "string",
+        "amount": "string",
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PROVIDES_SUPPORT",
+      "end_node": "Company",
+      "properties": {
+        "support_type": "string"
+      }
+    },
+    {
+      "start_node": "Product",
+      "relationship": "COMPATIBLE_WITH",
+      "end_node": "VehicleModel",
+      "properties": {}
+    },
+    {
+      "start_node": "ESGIndex",
+      "relationship": "USED_IN",
+      "end_node": "ESGEvaluation",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "CONNECTS",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "TO_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "REPORTED_IN",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "OFFERS_SIZE",
+      "end_node": "SizeOption",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "APPLIES_FOR",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGN_AGREEMENT_WITH",
+      "end_node": "Company",
+      "properties": {
+        "date": "String",
+        "purpose": "String"
+      }
+    },
+    {
+      "start_node": "Tender",
+      "relationship": "ORGANIZED_BY",
+      "end_node": "Institution",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "OFFERS",
+      "end_node": "Category",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "USES",
+      "end_node": "LogisticsCenter",
+      "properties": {
+        "discount_rate": "string",
+        "service": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "MANUFACTURES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Business",
+      "relationship": "APPLIES_FOR",
+      "end_node": "Project",
+      "properties": {
+        "applyDate": "date"
+      }
+    },
+    {
+      "start_node": "Project",
+      "relationship": "PRODUCES",
+      "end_node": "Crop",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportStatistic",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportData",
+      "relationship": "RECORDED_BY",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_MARKET_SHARE",
+      "end_node": "Market",
+      "properties": {
+        "percentage": "float",
+        "period": "string"
+      }
+    },
+    {
+      "start_node": "ESGProgram",
+      "relationship": "HAS_METRIC",
+      "end_node": "ESGMetrics",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "INVOLVES",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_FINANCIAL_RECORD",
+      "end_node": "FinancialRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_TRANSACTION",
+      "end_node": "Transaction",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "AFFECTS_EXPORTDATA",
+      "end_node": "ExportData",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "SmallBusiness",
+      "relationship": "SELECTED_FOR",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "INCLUDES_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "LAUNCHED",
+      "end_node": "Product",
       "properties": {
         "date": "string"
       }
     },
     {
-      "start_node": "Program",
-      "relationship": "CONNECTS_WITH",
-      "end_node": "Expert",
+      "start_node": "Tariff",
+      "relationship": "IMPOSED_BY",
+      "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "LEADS",
+      "start_node": "Product",
+      "relationship": "HAS_PROMOTION",
+      "end_node": "Promotion",
+      "properties": {}
+    },
+    {
+      "start_node": "Technology",
+      "relationship": "APPLIED_IN",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_TYPE",
+      "end_node": "ProductType",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES",
+      "end_node": "WelfareMall",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "RECEIVES_CERTIFICATION",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "LINKS_TO",
+      "end_node": "LogisticsCenter",
+      "properties": {
+        "link_type": "string"
+      }
+    },
+    {
+      "start_node": "GovernmentProgram",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "TESTED_IN_LAB",
+      "end_node": "ExperimentLab",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUPPLIES",
+      "end_node": "Company",
+      "properties": {
+        "product": "string",
+        "exclusivity": "string"
+      }
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "COVERS",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "PartnerCompany",
+      "properties": {}
+    },
+    {
+      "start_node": "Partner",
+      "relationship": "GENERATED_TRANSACTION",
+      "end_node": "Transaction",
+      "properties": {}
+    },
+    {
+      "start_node": "Survey",
+      "relationship": "HAS_DESIRED_FIELD",
+      "end_node": "Field",
+      "properties": {
+        "rate": "float"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "SupportProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "OPERATES",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOP_TECHNOLOGY",
+      "end_node": "Technology",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SELECTED_FOR",
       "end_node": "Project",
       "properties": {}
     },
     {
-      "start_node": "Subsidiary",
-      "relationship": "SUPPLIES",
-      "end_node": "Tender",
-      "properties": {
-        "start_date": "string",
-        "end_date": "string"
-      }
+      "start_node": "SME",
+      "relationship": "USES",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "ESGIndex",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "INITIATES",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Business",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "DEVELOPS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportData",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_FACTORY",
+      "end_node": "Factory",
+      "properties": {}
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "HAS_PARTNER",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "OF_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "SOLD_IN",
-      "end_node": "MarketRegion",
+      "relationship": "USES_TECHNOLOGY",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUPPLIES_TO",
+      "end_node": "Company",
       "properties": {
-        "launchDate": "string"
+        "product": "string",
+        "contract_value": "int",
+        "date": "string"
       }
     },
     {
-      "start_node": "ExportReport",
-      "relationship": "COVERS_PRODUCT",
-      "end_node": "Product",
+      "start_node": "Company",
+      "relationship": "OPERATES",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Field",
+      "relationship": "INCLUDES_JOB",
+      "end_node": "JobType",
       "properties": {
-        "amount": "float",
-        "percent_change": "float",
-        "rank": "int"
+        "rate": "float"
       }
     },
     {
-      "start_node": "Subsidiary",
-      "relationship": "SELLS_PRODUCT",
-      "end_node": "Product",
+      "start_node": "Campaign",
+      "relationship": "ON_PLATFORM",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "HAS_FEATURE",
+      "end_node": "FEATURE",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "WORKS_AT",
+      "end_node": "Company",
       "properties": {
-        "sales_method": "string"
+        "role": "string",
+        "since": "string"
       }
+    },
+    {
+      "start_node": "Participant",
+      "relationship": "PROVIDES_RECIPE",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "INITIATES",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "OPERATES_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ORGANIZES",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OFFERS_PROGRAM",
+      "end_node": "GovernmentProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PROVIDES_TECHNOLOGY",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "LAUNCHES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Investor",
+      "relationship": "INVESTED_IN",
+      "end_node": "FundingRound",
+      "properties": {}
     },
     {
       "start_node": "Company",
@@ -2941,22 +2230,671 @@
       "properties": {}
     },
     {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "Tariff",
+      "relationship": "AFFECTS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SALES",
+      "end_node": "SalesRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "RECEIVES",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "TechnologyModule",
+      "relationship": "RECEIVED_AWARD",
+      "end_node": "Award",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "INCLUDES_PRODUCT",
+      "end_node": "Product",
+      "properties": {
+        "amount": "float",
+        "growthRate": "float",
+        "rank": "int"
+      }
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "Partner",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ATTENDED",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportData",
+      "relationship": "TO_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "ACHIEVES_METRIC",
+      "end_node": "Metric",
+      "properties": {}
+    },
+    {
       "start_node": "Person",
-      "relationship": "COMMENTED_ON",
-      "end_node": "ExportStat",
+      "relationship": "WORKS_FOR",
+      "end_node": "GovernmentAgency",
       "properties": {}
     },
     {
-      "start_node": "AIAgent",
+      "start_node": "Company",
+      "relationship": "RECEIVES",
+      "end_node": "TrainingProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_DESIGN",
+      "end_node": "Design",
+      "properties": {}
+    },
+    {
+      "start_node": "Tender",
+      "relationship": "SUPPLIES",
+      "end_node": "Product",
+      "properties": {
+        "duration": "string"
+      }
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTATIVE_OF",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Certificate",
+      "relationship": "AWARDED_TO",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "IMPLEMENTS",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "Company",
+      "properties": {
+        "project": "String"
+      }
+    },
+    {
+      "start_node": "FinancialReport",
+      "relationship": "FOR_PERIOD",
+      "end_node": "TimePeriod",
+      "properties": {}
+    },
+    {
+      "start_node": "Strategy",
+      "relationship": "MITIGATES",
+      "end_node": "Policy",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "CREATES",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Commission",
+      "relationship": "ISSUES",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SELLS_IN",
+      "end_node": "Market",
+      "properties": {
+        "percentage": "float"
+      }
+    },
+    {
+      "start_node": "Person",
+      "relationship": "HEADS",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Campaign",
+      "relationship": "FOR_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "EMPLOYS",
+      "end_node": "Employee",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "RECRUITS",
+      "end_node": "Participant",
+      "properties": {
+        "deadline": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "RUNS_PROJECT",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SOLD_ON",
+      "end_node": "SalesChannel",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SUPPLIES_TO",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffMeasure",
+      "relationship": "IMPOSED_ON",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Factory",
+      "relationship": "PRODUCES_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "AI_Agent",
+      "relationship": "TARGETS",
+      "end_node": "Industry",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SUPPLIES",
+      "end_node": "SmallBusiness",
+      "properties": {
+        "supply_type": "string"
+      }
+    },
+    {
+      "start_node": "Event",
+      "relationship": "HIGHLIGHTS",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Institution",
+      "relationship": "HOSTED",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNS",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "PROVIDES",
-      "end_node": "UseCase",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "LogisticsPlatform",
-      "relationship": "OFFERS_SERVICE",
+      "start_node": "Organization",
+      "relationship": "PUBLISHED",
+      "end_node": "Report",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PLANS_SUPPLY",
+      "end_node": "Company",
+      "properties": {
+        "product": "string",
+        "expected_start": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PROVIDES_SUPPORT_TO",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportSME",
+      "relationship": "RECEIVES_SERVICE",
       "end_node": "Service",
       "properties": {}
+    },
+    {
+      "start_node": "ExportReport",
+      "relationship": "REPORTS_COUNTRY_EXPORT",
+      "end_node": "Country",
+      "properties": {
+        "exportValue": "float",
+        "growthRate": "float",
+        "trend": "String"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "LOCATED_IN",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "BENEFITS_FROM",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Industry",
+      "relationship": "USES",
+      "end_node": "AI_Agent",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ENROLLED_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "SmallBusiness",
+      "relationship": "APPLIES_TO",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "AI_Agent",
+      "relationship": "HAS_FEATURE",
+      "end_node": "Feature",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "HAS_OFFICER",
+      "end_node": "Person",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "PUBLISHED",
+      "end_node": "ExportReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "COMPETES_WITH",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "INCLUDED_IN",
+      "end_node": "Tender",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTNERSHIP_WITH",
+      "end_node": "Organization",
+      "properties": {
+        "agreement_date": "string"
+      }
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "BRANDED_AS",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "ESGIndicator",
+      "relationship": "APPLIED_TO",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Brand",
+      "relationship": "COVERS",
+      "end_node": "ProductCategory",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "REPORTS",
+      "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "AgeGroup",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "Survey",
+      "properties": {
+        "responseRate": "float"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTNER_OF",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "MANUFACTURES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "INVOLVED_IN",
+      "end_node": "LegalCase",
+      "properties": {
+        "role": "string"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "AFFECTED_BY",
+      "end_node": "Policy",
+      "properties": {}
+    },
+    {
+      "start_node": "Executive",
+      "relationship": "LEADS",
+      "end_node": "Subsidiary",
+      "properties": {}
+    },
+    {
+      "start_node": "Service",
+      "relationship": "INTEGRATES",
+      "end_node": "CloudProvider",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "MADE_OF",
+      "end_node": "Material",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportRecord",
+      "relationship": "DESTINED_TO",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "ISSUES",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "LEADS",
+      "end_node": "Service",
+      "properties": {}
+    },
+    {
+      "start_node": "TrainingProgram",
+      "relationship": "HAS_CONTACT",
+      "end_node": "Contact",
+      "properties": {}
+    },
+    {
+      "start_node": "LogisticsCenter",
+      "relationship": "LOCATED_IN",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Service",
+      "relationship": "ACHIEVED",
+      "end_node": "Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Consultation",
+      "relationship": "OCCURRED_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_SALES_DATA",
+      "end_node": "SalesData",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "SPEAKS_AT",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "SalesRecord",
+      "relationship": "ANNOUNCED_BY",
+      "end_node": "GovernmentAgency",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_MARKET_FORECAST",
+      "end_node": "MarketForecast",
+      "properties": {}
+    },
+    {
+      "start_node": "Official",
+      "relationship": "COMMENTS_ON",
+      "end_node": "ExportReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Subsidiary",
+      "relationship": "SELLS",
+      "end_node": "Product",
+      "properties": {
+        "start_date": "string",
+        "market_share": "string"
+      }
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "SELLS",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Platform",
+      "relationship": "RECORDED_TRANSACTION",
+      "end_node": "Transaction",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "AVAILABLE_IN",
+      "end_node": "Edition",
+      "properties": {}
+    },
+    {
+      "start_node": "SME",
+      "relationship": "USES",
+      "end_node": "LogisticsCenter",
+      "properties": {
+        "service_type": "string"
+      }
+    },
+    {
+      "start_node": "Product",
+      "relationship": "UNDER_BRAND",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPS",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportRecord",
+      "relationship": "INCLUDES_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_EXPORT_RECORD",
+      "end_node": "ExportRecord",
+      "properties": {}
+    },
+    {
+      "start_node": "Agency",
+      "relationship": "PUBLISHES",
+      "end_node": "ExportReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTNERS_IN",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "RELATES_TO_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "WORKS_FOR",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "HELD_AT",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "CONNECTS_TO",
+      "end_node": "Platform",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "TARGETS_MARKET",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Commission",
+      "relationship": "PARTNERSHIP_AGREEMENT",
+      "end_node": "Company",
+      "properties": {
+        "date": "string",
+        "location": "string"
+      }
     },
     {
       "start_node": "Product",
@@ -2965,247 +2903,157 @@
       "properties": {}
     },
     {
+      "start_node": "Company",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
       "start_node": "Organization",
+      "relationship": "OPERATES_LOGISTICS_CENTER",
+      "end_node": "LogisticsCenter",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "DEVELOPED",
+      "end_node": "TechnologyModule",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "EMPLOYS",
+      "end_node": "Person",
+      "properties": {
+        "since": "date"
+      }
+    },
+    {
+      "start_node": "Company",
       "relationship": "DEVELOPS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "OFFERS",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SEGMENT",
-      "end_node": "BusinessSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECORDED",
-      "end_node": "Revenue",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "FOR_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "TrainingProgram",
-      "relationship": "PROVIDED_BY",
-      "end_node": "Association",
+      "start_node": "Tender",
+      "relationship": "HELD_IN",
+      "end_node": "Market",
       "properties": {}
     },
     {
-      "start_node": "GovernmentScheme",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "LAUNCHED_AT",
-      "end_node": "BroadcastEvent",
-      "properties": {}
-    },
-    {
-      "start_node": "FinancialScheme",
-      "relationship": "MANAGED_BY",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "OPEN_TO_PARTICIPATION_BY",
-      "end_node": "Company",
-      "properties": {
-        "deadline": "Date"
-      }
-    },
-    {
-      "start_node": "DemographicGroup",
-      "relationship": "UNDERTAKES",
-      "end_node": "PreparationActivity",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_METRIC",
-      "end_node": "FinancialMetric",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "invites",
-      "end_node": "Business",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "INITIATES_PROJECT",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "MEMBER_OF",
-      "end_node": "Association",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "SPEAKS_AT",
-      "end_node": "Exhibition",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "EMPLOYS",
-      "end_node": "Person",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "AIAgent",
-      "relationship": "SUPPORTS",
-      "end_node": "Channel",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "COMPATIBLE_WITH",
-      "end_node": "Material",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_PERFORMANCE",
-      "end_node": "PerformanceRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
+      "start_node": "Subsidiary",
       "relationship": "PARTICIPATES_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Market",
-      "relationship": "HOSTS",
       "end_node": "Tender",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_SIZE_OPTION",
-      "end_node": "SizeOption",
+      "start_node": "Business",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "REPORTED_BY",
-      "end_node": "GovernmentAgency",
+      "start_node": "Project",
+      "relationship": "RECRUITS",
+      "end_node": "Business",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "heads",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Agency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStat",
+      "start_node": "SalesChannel",
+      "relationship": "HOSTS",
+      "end_node": "Event",
       "properties": {}
     },
     {
       "start_node": "Crop",
       "relationship": "SUPPLIED_TO",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "DEVELOPS",
-      "end_node": "ESG_Metric",
+      "end_node": "PartnerCompany",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "AWARDED",
-      "end_node": "SupportProgram",
-      "properties": {
-        "year": "int"
-      }
-    },
-    {
-      "start_node": "Project",
-      "relationship": "HAS_RECRUITMENT",
-      "end_node": "Recruitment",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStat",
-      "relationship": "TO_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "ISSUES",
-      "end_node": "PolicyMeasure",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "APPLIES_TO",
-      "end_node": "ProductCategory",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "TARGETS",
+      "relationship": "PART_OF",
       "end_node": "Company",
       "properties": {}
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHED",
-      "end_node": "ExportReport",
+      "start_node": "Consultation",
+      "relationship": "INVOLVES_COMPANY",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "DEVELOPS",
+      "end_node": "Brand",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "TARGETS",
+      "end_node": "SmallBusiness",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "DEFINES_PROGRAM",
+      "end_node": "Program",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportStatistic",
+      "relationship": "FOR_COUNTRY",
+      "end_node": "Country",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "HOSTED",
+      "end_node": "Event",
+      "properties": {
+        "purpose": "string"
+      }
+    },
+    {
+      "start_node": "ExportReport",
+      "relationship": "REPORTS_PRODUCT_EXPORT",
+      "end_node": "Product",
+      "properties": {
+        "exportValue": "float",
+        "rank": "int",
+        "recordHigh": "boolean"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OWNS",
+      "end_node": "LegalEntity",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "ACQUIRE",
+      "end_node": "Company",
+      "properties": {
+        "date": "String"
+      }
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "PARTNER",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "Business",
+      "relationship": "HAS_EXPORT_DATA",
+      "end_node": "ExportData",
+      "properties": {}
+    },
+    {
+      "start_node": "TariffPolicy",
+      "relationship": "APPLIED_BY",
+      "end_node": "Country",
       "properties": {}
     }
   ]

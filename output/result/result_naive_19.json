@@ -1,43 +1,55 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "중소벤처기업부",
+            "label": "WelfareMall",
+            "name": "현대이지웰 복지몰",
             "properties": {
-                "category": "Government",
-                "type": "Ministry",
-                "location": "South Korea",
-                "name": "중소벤처기업부"
+                "rank": "1위"
             }
         },
         {
-            "label": "Location",
-            "name": "경기도",
+            "label": "Region",
+            "name": "경기",
             "properties": {
-                "name": "경기도",
-                "type": "Province",
-                "region": "South Korea",
-                "country": "South Korea"
+                "type": "Province"
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "year": 2023,
+                "purpose": "소상공인 제품의 온라인 판매 활성화"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "경기도",
-            "relationship": "HAS_COMPANY",
-            "end_node": "중소벤처기업부",
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "INCREASED_TRANSACTION_AMOUNT",
+            "end_node": "현대이지웰 복지몰",
             "properties": {
-                "support_type": "판로 확대 지원",
-                "impact": "27배 급증"
+                "increase_percentage": 98,
+                "start_year": 2020,
+                "end_year": 2022
             }
         },
         {
-            "start_node": "중소벤처기업부",
-            "relationship": "SUPPORTS",
-            "end_node": "경기도",
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "COOPERATES_WITH",
+            "end_node": "경기",
             "properties": {
-                "initiative": "소상공인 온라인쇼핑몰 판매지원사업",
-                "impact": "온라인 판매 활성화"
+                "cooperative_entities": 950,
+                "increase_from": 400,
+                "year": 2022
+            }
+        },
+        {
+            "start_node": "현대이지웰 복지몰",
+            "relationship": "SELECTED_FOR",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "year": 2023
             }
         }
     ]

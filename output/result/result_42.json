@@ -4,14 +4,8 @@
             "label": "Company",
             "name": "락앤락",
             "properties": {
-                "name": "락앤락"
-            }
-        },
-        {
-            "label": "Brand",
-            "name": "락앤락몰",
-            "properties": {
-                "name": "락앤락몰"
+                "name": "락앤락",
+                "industry": "글로벌 생활용품"
             }
         },
         {
@@ -19,48 +13,43 @@
             "name": "풀히트 푸드워머",
             "properties": {
                 "name": "풀히트 푸드워머",
-                "preheatTime": "10초",
-                "design": "롤러블 디자인",
-                "portability": "휴대 간편",
-                "durability": "내구성 뛰어남",
-                "temperatureLevels": "60도와 100도",
-                "safetyFeatures": "잠금 모드와 자동 오프 기능"
+                "category": "테이블웨어"
             }
         },
         {
             "label": "Promotion",
             "name": "프로모션",
             "properties": {
-                "startDate": "현재",
-                "endDate": "21일",
-                "platform": "락앤락몰"
+                "startDate": "2023-10-14",
+                "endDate": "2023-10-21",
+                "details": "제품 출시 기념"
             }
         },
         {
-            "label": "Industry",
-            "name": "생활용품",
+            "label": "SalesChannel",
+            "name": "락앤락몰",
             "properties": {
-                "name": "생활용품"
+                "name": "락앤락몰"
             }
         }
     ],
     "relations": [
         {
             "start_node": "락앤락",
-            "relationship": "OFFERS",
+            "relationship": "LAUNCHES",
             "end_node": "풀히트 푸드워머",
             "properties": {}
         },
         {
             "start_node": "풀히트 푸드워머",
-            "relationship": "UNDER_PROMOTION",
+            "relationship": "HAS_PROMOTION",
             "end_node": "프로모션",
             "properties": {}
         },
         {
-            "start_node": "락앤락",
-            "relationship": "OPERATES_IN",
-            "end_node": "생활용품",
+            "start_node": "풀히트 푸드워머",
+            "relationship": "SOLD_ON",
+            "end_node": "락앤락몰",
             "properties": {}
         }
     ]

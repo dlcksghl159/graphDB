@@ -6,8 +6,8 @@
       "properties": {
         "name": "string",
         "industry": "string",
-        "founding_year": "int",
-        "market_share": "string"
+        "revenue": "int",
+        "rnd_investment": "int"
       }
     },
     {
@@ -15,7 +15,7 @@
       "name": "Person",
       "properties": {
         "name": "string",
-        "title": "string"
+        "position": "string"
       }
     },
     {
@@ -25,18 +25,40 @@
         "name": "string",
         "category": "string"
       }
+    },
+    {
+      "label": "Market",
+      "name": "Market",
+      "properties": {
+        "name": "string",
+        "current_size_musd": "float",
+        "projected_size_musd": "float",
+        "projection_year": "int"
+      }
+    },
+    {
+      "label": "LegalCase",
+      "name": "LegalCase",
+      "properties": {
+        "case_type": "string",
+        "year": "int",
+        "status": "string"
+      }
     }
   ],
   "relations": [
     {
       "start_node": "Person",
-      "relationship": "EMPLOYED_BY",
+      "relationship": "WORKS_AT",
       "end_node": "Company",
-      "properties": {}
+      "properties": {
+        "role": "string",
+        "since": "string"
+      }
     },
     {
       "start_node": "Company",
-      "relationship": "OWNS",
+      "relationship": "PART_OF",
       "end_node": "Company",
       "properties": {}
     },
@@ -48,12 +70,12 @@
     },
     {
       "start_node": "Company",
-      "relationship": "SUPPLIES",
+      "relationship": "SUPPLIES_TO",
       "end_node": "Company",
       "properties": {
         "product": "string",
-        "date": "string",
-        "value": "int"
+        "contract_value": "int",
+        "date": "string"
       }
     },
     {
@@ -64,13 +86,23 @@
     },
     {
       "start_node": "Company",
-      "relationship": "FILED_LAWSUIT",
-      "end_node": "Company",
+      "relationship": "INVOLVED_IN",
+      "end_node": "LegalCase",
       "properties": {
-        "type": "string",
-        "date": "string",
-        "outcome": "string"
+        "role": "string"
       }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
+      "end_node": "Market",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "SOLD_IN",
+      "end_node": "Market",
+      "properties": {}
     }
   ]
 }

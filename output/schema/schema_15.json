@@ -1,69 +1,60 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "Organization",
+      "name": "Organization",
       "properties": {
-        "company_name": "string",
-        "category": "string",
-        "industry": "string"
+        "name": "string",
+        "type": "string"
       }
     },
     {
       "label": "Person",
-      "name": "인물",
+      "name": "Person",
       "properties": {
         "name": "string",
-        "role": "string"
+        "position": "string"
       }
     },
     {
       "label": "Agreement",
-      "name": "업무협약",
+      "name": "Agreement",
       "properties": {
+        "title": "string",
         "date": "string",
-        "location": "string",
-        "purpose": "string"
+        "location": "string"
       }
     },
     {
       "label": "ESGIndicator",
-      "name": "ESG지표",
+      "name": "ESG Indicator",
       "properties": {
-        "name": "string",
         "industry": "string"
       }
     },
     {
-      "label": "SupportProgram",
-      "name": "지원사업",
+      "label": "Program",
+      "name": "Support Program",
       "properties": {
         "name": "string",
-        "start_year": "int",
-        "participant_count": "int"
+        "year": "int",
+        "target_count": "int"
       }
     },
     {
-      "label": "Certification",
-      "name": "인증서",
+      "label": "Certificate",
+      "name": "Certificate",
       "properties": {
-        "name": "string",
-        "issuer": "string",
-        "year": "int"
+        "title": "string",
+        "issue_date": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "ATTENDED",
-      "end_node": "Agreement",
+      "start_node": "Agreement",
+      "relationship": "SIGNED_BY",
+      "end_node": "Organization",
       "properties": {}
     },
     {
@@ -75,27 +66,25 @@
     {
       "start_node": "ESGIndicator",
       "relationship": "APPLIED_TO",
-      "end_node": "Company",
-      "properties": {
-        "score": "float"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_CERTIFICATION",
-      "end_node": "Certification",
+      "end_node": "Organization",
       "properties": {}
     },
     {
-      "start_node": "Company",
+      "start_node": "Certificate",
+      "relationship": "AWARDED_TO",
+      "end_node": "Organization",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
       "relationship": "PARTICIPATES_IN",
-      "end_node": "SupportProgram",
+      "end_node": "Program",
       "properties": {}
     },
     {
-      "start_node": "SupportProgram",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "Company",
+      "start_node": "Person",
+      "relationship": "WORKS_FOR",
+      "end_node": "Organization",
       "properties": {}
     }
   ]

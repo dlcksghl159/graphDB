@@ -2,50 +2,81 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "string",
-      "properties": {}
+      "name": "Company",
+      "properties": {
+        "name": "string",
+        "industry": "string"
+      }
     },
     {
       "label": "Product",
-      "name": "string",
+      "name": "Product",
       "properties": {
+        "name": "string",
         "releaseDate": "string",
-        "preheatTime": "string",
-        "design": "string",
-        "portability": "string",
-        "durability": "string",
-        "temperatureLevels": "string",
-        "safetyFeatures": "string"
+        "description": "string"
+      }
+    },
+    {
+      "label": "Feature",
+      "name": "Feature",
+      "properties": {
+        "type": "string",
+        "description": "string"
       }
     },
     {
       "label": "Material",
-      "name": "string",
-      "properties": {}
+      "name": "Material",
+      "properties": {
+        "type": "string",
+        "thickness": "string"
+      }
+    },
+    {
+      "label": "Design",
+      "name": "Design",
+      "properties": {
+        "type": "string"
+      }
     },
     {
       "label": "SizeOption",
-      "name": "string",
+      "name": "Size Option",
       "properties": {
+        "label": "string",
         "weight": "string",
-        "width": "string"
+        "dimension": "string"
       }
     },
     {
       "label": "Promotion",
-      "name": "string",
+      "name": "Promotion",
       "properties": {
         "startDate": "string",
         "endDate": "string",
-        "platform": "string"
+        "details": "string"
+      }
+    },
+    {
+      "label": "TablewareMaterial",
+      "name": "Tableware Material",
+      "properties": {
+        "type": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PRODUCES",
+      "relationship": "LAUNCHED",
       "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_FEATURE",
+      "end_node": "Feature",
       "properties": {}
     },
     {
@@ -56,20 +87,26 @@
     },
     {
       "start_node": "Product",
-      "relationship": "COMPATIBLE_WITH",
-      "end_node": "Material",
+      "relationship": "HAS_DESIGN",
+      "end_node": "Design",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "HAS_SIZE_OPTION",
+      "relationship": "OFFERS_SIZE",
       "end_node": "SizeOption",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "UNDER_PROMOTION",
+      "relationship": "HAS_PROMOTION",
       "end_node": "Promotion",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "COMPATIBLE_WITH",
+      "end_node": "TablewareMaterial",
       "properties": {}
     }
   ]

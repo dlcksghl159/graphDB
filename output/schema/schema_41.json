@@ -2,41 +2,59 @@
   "nodes": [
     {
       "label": "Person",
-      "name": "Person",
+      "name": "인물",
       "properties": {
         "name": "string",
-        "role": "string"
+        "title": "string"
       }
     },
     {
-      "label": "Association",
-      "name": "Association",
+      "label": "Company",
+      "name": "기업",
+      "properties": {
+        "name": "string",
+        "founding_year": "int",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "Organization",
+      "name": "조직",
       "properties": {
         "name": "string",
         "established_year": "int"
       }
     },
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "Subdivision",
+      "name": "분과",
       "properties": {
         "name": "string",
-        "founded_year": "int"
+        "focus_area": "string"
       }
     },
     {
-      "label": "Initiative",
-      "name": "Initiative",
+      "label": "Certification",
+      "name": "인증",
       "properties": {
         "name": "string",
-        "category": "string"
+        "description": "string"
       }
     },
     {
       "label": "Region",
-      "name": "Region",
+      "name": "지역",
       "properties": {
-        "name": "string"
+        "name": "string",
+        "type": "string"
+      }
+    },
+    {
+      "label": "Technology",
+      "name": "기술",
+      "properties": {
+        "name": "string",
+        "category": "string"
       }
     }
   ],
@@ -44,7 +62,7 @@
     {
       "start_node": "Person",
       "relationship": "LEADS",
-      "end_node": "Association",
+      "end_node": "Organization",
       "properties": {}
     },
     {
@@ -54,33 +72,45 @@
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "MEMBER_OF",
-      "end_node": "Association",
+      "start_node": "Organization",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
       "properties": {}
     },
     {
-      "start_node": "Association",
+      "start_node": "Organization",
       "relationship": "HAS_DIVISION",
-      "end_node": "Initiative",
+      "end_node": "Subdivision",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "INITIATES",
-      "end_node": "Initiative",
+      "start_node": "Subdivision",
+      "relationship": "FOCUSES_ON",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "ISSUES",
+      "end_node": "Certification",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "EXPORTS_TO",
+      "relationship": "RECEIVES",
+      "end_node": "Certification",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "OPERATES_IN",
       "end_node": "Region",
       "properties": {}
     },
     {
-      "start_node": "Association",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
+      "start_node": "Company",
+      "relationship": "USES",
+      "end_node": "Technology",
       "properties": {}
     }
   ]

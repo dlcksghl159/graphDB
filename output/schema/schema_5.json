@@ -1,116 +1,76 @@
 {
   "nodes": [
     {
-      "label": "ExportStatistic",
+      "label": "ExportReport",
       "name": "String",
       "properties": {
+        "quarter": "String",
         "year": "int",
-        "quarter": "int",
-        "totalExportUSD": "int",
-        "changeRate": "float",
-        "exportingSMECount": "int"
+        "totalExportValue": "float",
+        "growthRate": "float",
+        "numCompanies": "int"
       }
     },
     {
       "label": "Product",
       "name": "String",
-      "properties": {
-        "productName": "string"
-      }
+      "properties": {}
     },
     {
       "label": "Country",
       "name": "String",
-      "properties": {
-        "countryName": "string"
-      }
+      "properties": {}
     },
     {
       "label": "GovernmentAgency",
       "name": "String",
-      "properties": {
-        "agencyName": "string"
-      }
+      "properties": {}
     },
     {
-      "label": "Person",
+      "label": "Official",
       "name": "String",
       "properties": {
-        "personName": "string",
-        "position": "string"
-      }
-    },
-    {
-      "label": "TariffMeasure",
-      "name": "String",
-      "properties": {
-        "measureType": "string",
-        "impactRate": "float"
-      }
-    },
-    {
-      "label": "Policy",
-      "name": "String",
-      "properties": {
-        "policyName": "string",
-        "description": "string"
+        "title": "String"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ExportStatistic",
-      "relationship": "REPORTED_BY",
+      "start_node": "GovernmentAgency",
+      "relationship": "PUBLISHED",
+      "end_node": "ExportReport",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportReport",
+      "relationship": "REPORTS_PRODUCT_EXPORT",
+      "end_node": "Product",
+      "properties": {
+        "exportValue": "float",
+        "rank": "int",
+        "recordHigh": "boolean"
+      }
+    },
+    {
+      "start_node": "ExportReport",
+      "relationship": "REPORTS_COUNTRY_EXPORT",
+      "end_node": "Country",
+      "properties": {
+        "exportValue": "float",
+        "growthRate": "float",
+        "trend": "String"
+      }
+    },
+    {
+      "start_node": "Official",
+      "relationship": "WORKS_FOR",
       "end_node": "GovernmentAgency",
       "properties": {}
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "EMPLOYS",
-      "end_node": "Person",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "exportAmountUSD": "int",
-        "rank": "int"
-      }
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "EXPORTS_TO",
-      "end_node": "Country",
-      "properties": {
-        "exportAmountUSD": "int",
-        "changeRate": "float",
-        "rank": "int"
-      }
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "TARGETS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "ANNOUNCES_POLICY",
-      "end_node": "Policy",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "ANNOUNCES_POLICY",
-      "end_node": "Policy",
+      "start_node": "Official",
+      "relationship": "COMMENTS_ON",
+      "end_node": "ExportReport",
       "properties": {}
     }
   ]

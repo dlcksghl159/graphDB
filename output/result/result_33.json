@@ -2,103 +2,87 @@
     "nodes": [
         {
             "label": "Organization",
-            "name": "기술보증기금",
-            "properties": {
-                "category": "",
-                "type": "공공기관",
-                "location": "서울",
-                "name": "기술보증기금",
-                "industry": "",
-                "sector": ""
-            }
+            "name": "기술보증기금 지식재산공제센터",
+            "properties": {}
         },
         {
             "label": "Organization",
             "name": "인천지식재산센터",
-            "properties": {
-                "category": "",
-                "type": "센터",
-                "location": "인천",
-                "name": "인천지식재산센터",
-                "industry": "",
-                "sector": ""
-            }
+            "properties": {}
         },
         {
             "label": "Agreement",
-            "name": "공동발전 업무 협약",
-            "properties": {
-                "agreement_date": "date",
-                "agreement_type": "MOU",
-                "date": "2023-11-14",
-                "purpose": "지식재산공제사업 활성화",
-                "location": "서울",
-                "title": "공동발전 업무 협약",
-                "id": "string",
-                "agreement_name": "공동발전 업무 협약",
-                "type": "MOU"
-            }
+            "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "properties": {}
         },
         {
-            "label": "SupportProgram",
+            "label": "Program",
             "name": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "label": "Event",
+            "name": "지식재산공제사업 설명회",
+            "properties": {}
+        },
+        {
+            "label": "Region",
+            "name": "인천지역",
             "properties": {
-                "name": "지식재산공제사업",
-                "start_year": 2019,
-                "participant_count": 0,
-                "year": 2019,
-                "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크 감소를 위한 금융제도",
-                "program_id": "string"
+                "type": "지역"
             }
         },
         {
             "label": "SME",
-            "name": "인천지역 중소기업",
+            "name": "중소기업",
             "properties": {
-                "industry": "지식재산",
-                "name": "인천지역 중소기업",
-                "category": "중소",
-                "location": "인천",
-                "partner_since_year": 0,
-                "company_id": "string"
+                "industry": "지식재산공제가입",
+                "country": "한국",
+                "company_count": 1
             }
         }
     ],
     "relations": [
         {
-            "start_node": "기술보증기금",
-            "relationship": "SIGNS",
-            "end_node": "공동발전 업무 협약",
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
             "properties": {}
         },
         {
             "start_node": "인천지식재산센터",
-            "relationship": "SIGNS",
-            "end_node": "공동발전 업무 협약",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
             "properties": {}
         },
         {
-            "start_node": "공동발전 업무 협약",
-            "relationship": "INCLUDES_PROGRAM",
+            "start_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+            "relationship": "ACTIVATES",
             "end_node": "지식재산공제사업",
             "properties": {}
         },
         {
-            "start_node": "기술보증기금",
-            "relationship": "PROVIDES",
-            "end_node": "지식재산공제사업",
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "HOSTS",
+            "end_node": "지식재산공제사업 설명회",
             "properties": {}
         },
         {
             "start_node": "인천지식재산센터",
             "relationship": "COLLABORATES_WITH",
-            "end_node": "기술보증기금",
+            "end_node": "기술보증기금 지식재산공제센터",
             "properties": {}
         },
         {
-            "start_node": "인천지역 중소기업",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "지식재산공제사업",
+            "start_node": "지식재산공제사업",
+            "relationship": "APPLIES_TO",
+            "end_node": "중소기업",
+            "properties": {}
+        },
+        {
+            "start_node": "지식재산공제사업 설명회",
+            "relationship": "HELD_IN",
+            "end_node": "인천지역",
             "properties": {}
         }
     ]

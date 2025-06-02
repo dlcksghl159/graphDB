@@ -2,7 +2,7 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "String",
+      "name": "Organization",
       "properties": {
         "name": "string",
         "type": "string"
@@ -10,7 +10,23 @@
     },
     {
       "label": "Agreement",
-      "name": "String",
+      "name": "Agreement",
+      "properties": {
+        "title": "string",
+        "date": "string"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "Program",
+      "properties": {
+        "name": "string",
+        "start_year": "int"
+      }
+    },
+    {
+      "label": "Event",
+      "name": "Event",
       "properties": {
         "name": "string",
         "date": "string",
@@ -18,58 +34,34 @@
       }
     },
     {
-      "label": "Service",
-      "name": "String",
-      "properties": {
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
       "label": "Company",
-      "name": "String",
+      "name": "Company",
       "properties": {
         "name": "string",
-        "size": "string",
-        "region": "string"
+        "size": "string"
       }
     },
     {
-      "label": "Event",
-      "name": "String",
+      "label": "Region",
+      "name": "Region",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "date": "string"
-      }
-    },
-    {
-      "label": "FinancialScheme",
-      "name": "String",
-      "properties": {
-        "name": "string",
-        "description": "string",
-        "launched": "string"
+        "name": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "SIGN_AGREEMENT",
+      "relationship": "SIGNED",
       "end_node": "Agreement",
-      "properties": {}
+      "properties": {
+        "date": "string"
+      }
     },
     {
-      "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PROVIDES",
-      "end_node": "Service",
+      "start_node": "Agreement",
+      "relationship": "ACTIVATES",
+      "end_node": "Program",
       "properties": {}
     },
     {
@@ -79,21 +71,21 @@
       "properties": {}
     },
     {
+      "start_node": "Organization",
+      "relationship": "PROVIDES_SUPPORT_TO",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
       "start_node": "Company",
-      "relationship": "SUBSCRIBES",
-      "end_node": "FinancialScheme",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
       "properties": {}
     },
     {
-      "start_node": "FinancialScheme",
-      "relationship": "MANAGED_BY",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "AIMS_AT",
-      "end_node": "Service",
+      "start_node": "Organization",
+      "relationship": "OPERATES_IN",
+      "end_node": "Region",
       "properties": {}
     }
   ]

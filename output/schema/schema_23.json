@@ -1,64 +1,54 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "Survey",
+      "name": "Survey",
+      "properties": {
+        "id": "string",
+        "title": "string",
+        "date": "string",
+        "respondentCount": "int"
+      }
+    },
+    {
+      "label": "AgeGroup",
+      "name": "Age Group",
+      "properties": {
+        "name": "string",
+        "ageRange": "string"
+      }
+    },
+    {
+      "label": "Reason",
+      "name": "Reason",
       "properties": {
         "name": "string"
       }
     },
     {
-      "label": "Survey",
-      "name": "Survey",
+      "label": "Field",
+      "name": "Desired Field",
       "properties": {
-        "title": "string",
-        "date": "string",
-        "sampleSize": "int"
-      }
-    },
-    {
-      "label": "DemographicGroup",
-      "name": "AgeGroup",
-      "properties": {
-        "ageRange": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "Motivation",
-      "name": "Motivation",
-      "properties": {
-        "description": "string",
-        "percentage": "float"
-      }
-    },
-    {
-      "label": "CareerField",
-      "name": "CareerField",
-      "properties": {
-        "name": "string",
-        "percentage": "float"
+        "name": "string"
       }
     },
     {
       "label": "JobType",
-      "name": "SpecificJob",
+      "name": "Job Type",
       "properties": {
-        "name": "string",
-        "percentage": "float"
+        "name": "string"
       }
     },
     {
       "label": "PreparationActivity",
-      "name": "PreparationAction",
+      "name": "Preparation Activity",
       "properties": {
-        "name": "string",
-        "percentage": "float"
+        "name": "string"
       }
     },
     {
-      "label": "FinancialExpectation",
-      "name": "FinancialGoal",
+      "label": "IncomeExpectation",
+      "name": "Income Expectation",
       "properties": {
         "averageMonthlyIncome": "int"
       }
@@ -66,45 +56,57 @@
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "CONDUCTS",
+      "start_node": "AgeGroup",
+      "relationship": "PARTICIPATED_IN",
       "end_node": "Survey",
-      "properties": {}
+      "properties": {
+        "responseRate": "float"
+      }
+    },
+    {
+      "start_node": "AgeGroup",
+      "relationship": "HAS_INTENTION_IN",
+      "end_node": "Survey",
+      "properties": {
+        "intentionRate": "float"
+      }
     },
     {
       "start_node": "Survey",
-      "relationship": "TARGETS",
-      "end_node": "DemographicGroup",
-      "properties": {}
+      "relationship": "HAS_REASON",
+      "end_node": "Reason",
+      "properties": {
+        "rate": "float"
+      }
     },
     {
-      "start_node": "DemographicGroup",
-      "relationship": "EXPRESSES_MOTIVATION",
-      "end_node": "Motivation",
-      "properties": {}
+      "start_node": "Survey",
+      "relationship": "HAS_DESIRED_FIELD",
+      "end_node": "Field",
+      "properties": {
+        "rate": "float"
+      }
     },
     {
-      "start_node": "DemographicGroup",
-      "relationship": "INTERESTED_IN",
-      "end_node": "CareerField",
-      "properties": {}
-    },
-    {
-      "start_node": "CareerField",
+      "start_node": "Field",
       "relationship": "INCLUDES_JOB",
       "end_node": "JobType",
-      "properties": {}
+      "properties": {
+        "rate": "float"
+      }
     },
     {
-      "start_node": "DemographicGroup",
-      "relationship": "UNDERTAKES",
+      "start_node": "Survey",
+      "relationship": "PREPARES_BY",
       "end_node": "PreparationActivity",
-      "properties": {}
+      "properties": {
+        "rate": "float"
+      }
     },
     {
-      "start_node": "DemographicGroup",
-      "relationship": "EXPECTS_INCOME",
-      "end_node": "FinancialExpectation",
+      "start_node": "Survey",
+      "relationship": "HAS_INCOME_EXPECTATION",
+      "end_node": "IncomeExpectation",
       "properties": {}
     }
   ]

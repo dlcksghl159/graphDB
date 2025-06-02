@@ -2,204 +2,143 @@
     "nodes": [
         {
             "label": "Company",
-            "name": "에이텀",
+            "name": "Atum",
             "properties": {
-                "name": "에이텀",
-                "stock_code": "355690",
-                "industry": "변압기 제조",
-                "category": "",
-                "company_id": "",
-                "country": "대한민국",
-                "headquarters": "",
-                "founded_year": 0,
-                "employee_count": 0
+                "industry": "Manufacturing"
             }
         },
         {
-            "label": "Company",
+            "label": "PartnerCompany",
             "name": "DST",
             "properties": {
-                "name": "DST",
-                "stock_code": "",
-                "industry": "선박 엔진 실린더 제조",
-                "category": "",
-                "company_id": "",
-                "country": "대한민국",
-                "headquarters": "",
-                "founded_year": 0,
-                "employee_count": 0
-            }
-        },
-        {
-            "label": "Acquisition",
-            "name": "DST Acquisition",
-            "properties": {
-                "share_percentage": "50%",
-                "amount": 145000000,
-                "date": "2023-02-02"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "HD현대중공업",
-            "properties": {
-                "name": "HD현대중공업",
-                "stock_code": "329180",
-                "industry": "조선",
-                "category": "",
-                "company_id": "",
-                "country": "대한민국",
-                "headquarters": "",
-                "founded_year": 0,
-                "employee_count": 0
-            }
-        },
-        {
-            "label": "Company",
-            "name": "STX엔진",
-            "properties": {
-                "name": "STX엔진",
-                "stock_code": "077970",
-                "industry": "엔진 제조",
-                "category": "",
-                "company_id": "",
-                "country": "대한민국",
-                "headquarters": "",
-                "founded_year": 0,
-                "employee_count": 0
-            }
-        },
-        {
-            "label": "Company",
-            "name": "삼성전자",
-            "properties": {
-                "name": "삼성전자",
-                "stock_code": "005930",
-                "industry": "전자",
-                "category": "",
-                "company_id": "",
-                "country": "대한민국",
-                "headquarters": "",
-                "founded_year": 0,
-                "employee_count": 0
+                "industry": "Shipbuilding and Defense"
             }
         },
         {
             "label": "Product",
-            "name": "TA트랜스",
+            "name": "TA Trans",
             "properties": {
-                "name": "TA트랜스",
-                "category": "휴대용 충전기 변압기"
+                "category": "Charger"
             }
         },
         {
             "label": "Product",
-            "name": "TV트랜스",
+            "name": "TV Trans",
             "properties": {
-                "name": "TV트랜스",
-                "category": "TV 변압기"
+                "category": "Television"
             }
         },
         {
             "label": "Product",
-            "name": "전기차용 트랜스",
+            "name": "25W Trans",
             "properties": {
-                "name": "전기차용 트랜스",
-                "category": "전기차 변압기"
+                "category": "Transformer"
             }
         },
         {
-            "label": "Researcher",
-            "name": "이충헌",
+            "label": "Product",
+            "name": "45W Trans",
             "properties": {
-                "name": "이충헌",
-                "affiliation": "밸류파인더"
+                "category": "Transformer"
             }
         },
         {
-            "label": "CustomerCompany",
-            "name": "A사",
+            "label": "Company",
+            "name": "Samsung Electronics",
             "properties": {
-                "name": "A사",
-                "employee_count": 0
+                "industry": "Electronics"
             }
         },
         {
-            "label": "CustomerCompany",
-            "name": "B사",
+            "label": "Company",
+            "name": "HD Hyundai Heavy Industries",
             "properties": {
-                "name": "B사",
-                "employee_count": 0
+                "industry": "Shipbuilding"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "HD Hyundai Marine Solutions",
+            "properties": {
+                "industry": "Marine"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "STX Engine",
+            "properties": {
+                "industry": "Machinery and Equipment Manufacturing"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "에이텀",
-            "relationship": "ACQUIRES",
-            "end_node": "DST Acquisition",
+            "start_node": "Atum",
+            "relationship": "ACQUIRED",
+            "end_node": "DST",
+            "properties": {
+                "stake_percentage": "50%",
+                "amount": "145억 원",
+                "date": "2023-02-02"
+            }
+        },
+        {
+            "start_node": "Atum",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "TA Trans",
             "properties": {}
         },
         {
-            "start_node": "DST",
-            "relationship": "SUPPLIES",
-            "end_node": "HD현대중공업",
+            "start_node": "Atum",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "TV Trans",
+            "properties": {}
+        },
+        {
+            "start_node": "Atum",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "25W Trans",
+            "properties": {}
+        },
+        {
+            "start_node": "Atum",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "45W Trans",
+            "properties": {}
+        },
+        {
+            "start_node": "45W Trans",
+            "relationship": "SUPPLIES_TO",
+            "end_node": "Samsung Electronics",
             "properties": {
-                "product": "실린더",
-                "date": "",
-                "value": 0
+                "product": "Smartphone Fast Charger",
+                "exclusivity": "Exclusive"
             }
         },
         {
             "start_node": "DST",
-            "relationship": "SUPPLIES",
-            "end_node": "STX엔진",
+            "relationship": "SUPPLIES_TO",
+            "end_node": "HD Hyundai Heavy Industries",
             "properties": {
-                "product": "실린더",
-                "date": "",
-                "value": 0
+                "product": "HiMSEN Engine Cylinders"
             }
         },
         {
-            "start_node": "에이텀",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "삼성전자",
+            "start_node": "HD Hyundai Heavy Industries",
+            "relationship": "OPERATES_IN",
+            "end_node": "HiMSEN Engine",
             "properties": {}
         },
         {
-            "start_node": "에이텀",
-            "relationship": "SUPPLIES",
-            "end_node": "A사",
+            "start_node": "DST",
+            "relationship": "HAS_SUBSIDIARY",
+            "end_node": "HD Hyundai Marine Solutions",
             "properties": {}
         },
         {
-            "start_node": "에이텀",
-            "relationship": "SUPPLIES",
-            "end_node": "B사",
-            "properties": {}
-        },
-        {
-            "start_node": "에이텀",
-            "relationship": "PRODUCES",
-            "end_node": "TA트랜스",
-            "properties": {}
-        },
-        {
-            "start_node": "에이텀",
-            "relationship": "PRODUCES",
-            "end_node": "TV트랜스",
-            "properties": {}
-        },
-        {
-            "start_node": "에이텀",
-            "relationship": "DEVELOPS",
-            "end_node": "전기차용 트랜스",
-            "properties": {}
-        },
-        {
-            "start_node": "이충헌",
-            "relationship": "COMMENTED_ON",
-            "end_node": "에이텀",
+            "start_node": "DST",
+            "relationship": "SUPPLIES_TO",
+            "end_node": "STX Engine",
             "properties": {}
         }
     ]

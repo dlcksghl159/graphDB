@@ -4,169 +4,123 @@
             "label": "Organization",
             "name": "동반성장위원회",
             "properties": {
-                "category": "위원회",
-                "type": "Public Organization",
-                "location": "서울",
-                "name": "동반성장위원회",
-                "industry": "지원서비스",
-                "sector": "공공"
+                "type": "Committee"
             }
         },
         {
-            "label": "Organization",
+            "label": "Company",
             "name": "LG이노텍",
             "properties": {
-                "category": "기업",
-                "type": "Private Company",
-                "location": "서울",
-                "name": "LG이노텍",
-                "industry": "전자부품 제조",
-                "sector": "전자"
+                "industry": "Electronic Manufacturing"
             }
         },
         {
-            "label": "SME",
+            "label": "PartnerCompany",
             "name": "에이피텍",
             "properties": {
-                "industry": "전자부품 제조",
-                "name": "에이피텍",
-                "category": "중소기업",
-                "location": "인천",
-                "partner_since_year": 0,
-                "company_id": "APTEC2023"
+                "industry": "Camera Module Manufacturing"
             }
         },
         {
             "label": "Agreement",
-            "name": "ESG 지원사업",
+            "name": "협력사 ESG 지원사업 업무협약",
             "properties": {
-                "agreement_date": "2023-11-14",
-                "agreement_type": "Partnership",
-                "date": "2023-11-14",
-                "purpose": "협력사 ESG 지원사업",
+                "name": "협력사 ESG 지원사업 업무협약",
+                "date": "2023-10-14",
                 "location": "인천 송도",
-                "title": "협력사 ESG 지원사업 업무 협약",
-                "id": "AGR2023-11-14",
-                "name": "ESG 지원사업",
-                "agreement_name": "ESG 지원사업",
-                "type": "Partnership"
+                "purpose": "협력사 ESG 지원"
             }
         },
         {
             "label": "ESGProgram",
-            "name": "대·중소 자율형 ESG 지원사업",
+            "name": "String",
             "properties": {
-                "program_name": "대·중소 자율형 ESG 지원사업",
-                "year": 2023
-            }
-        },
-        {
-            "label": "ESG_Metric",
-            "name": "ESG 지표",
-            "properties": {
-                "name": "ESG 지표",
-                "industry_focus": "전기전자 산업"
+                "year": 2023,
+                "participationYears": 4
             }
         },
         {
             "label": "Certificate",
-            "name": "ESG 우수 중소기업",
+            "name": "ESG 우수 중소기업 확인서",
             "properties": {
-                "name": "ESG 우수 중소기업 확인서",
-                "issued_date": "2024"
+                "title": "ESG 우수 중소기업 확인서",
+                "issue_date": "2024"
             }
         },
         {
-            "label": "Person",
-            "name": "박치형",
+            "label": "ESGIndicator",
+            "name": "전기전자 산업 ESG 평가지표",
             "properties": {
-                "name": "박치형",
-                "title": "운영처장",
-                "role": "Manager",
-                "position": "운영처장",
-                "personName": "박치형"
+                "industry": "Electrical and Electronics"
             }
         },
         {
-            "label": "Person",
-            "name": "김준성",
+            "label": "Trend",
+            "name": "ESG 대응 역량",
             "properties": {
-                "name": "김준성",
-                "title": "상무",
-                "role": "Executive",
-                "position": "상무",
-                "personName": "김준성"
-            }
-        },
-        {
-            "label": "Event",
-            "name": "ESG 우수 중소기업 현판식",
-            "properties": {
-                "name": "ESG 우수 중소기업 현판식",
-                "date": "2023-11-14",
-                "type": "Ceremony",
-                "location": "인천 송도"
+                "name": "ESG 대응 역량",
+                "description": "산업 경쟁력의 구성 요소"
             }
         }
     ],
     "relations": [
         {
             "start_node": "동반성장위원회",
-            "relationship": "SIGNED_AGREEMENT_WITH",
+            "relationship": "COLLABORATES_WITH",
             "end_node": "LG이노텍",
             "properties": {
-                "agreement_name": "ESG 지원사업",
-                "date": "2023-11-14"
+                "context": "협력사 ESG 지원"
             }
         },
         {
             "start_node": "LG이노텍",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "대·중소 자율형 ESG 지원사업",
-            "properties": {}
-        },
-        {
-            "start_node": "LD이노텍",
-            "relationship": "SUPPLIES",
+            "relationship": "SUPPORTS",
             "end_node": "에이피텍",
             "properties": {
-                "product": "제조설비",
-                "date": "2023-11-14",
-                "value": 0
+                "year": 2023,
+                "supportedCount": 50
             }
         },
         {
-            "start_node": "에이피텍",
-            "relationship": "RECEIVED_CERTIFICATION",
-            "end_node": "ESG 우수 중소기업",
+            "start_node": "LG이노텍",
+            "relationship": "SIGNS",
+            "end_node": "협력사 ESG 지원사업 업무협약",
             "properties": {}
         },
         {
-            "start_node": "ESG 지표",
-            "relationship": "APPLIED_TO",
-            "end_node": "에이피텍",
-            "properties": {
-                "score": 83.0
-            }
-        },
-        {
-            "start_node": "박치형",
-            "relationship": "LEADS",
-            "end_node": "동반성장위원회",
+            "start_node": "협력사 ESG 지원사업 업무협약",
+            "relationship": "DEVELOPS",
+            "end_node": "전기전자 산업 ESG 평가지표",
             "properties": {}
         },
         {
-            "start_node": "김준성",
-            "relationship": "HOLDS_POSITION_AT",
-            "end_node": "LG이노텍",
-            "properties": {
-                "role": "Executive"
-            }
+            "start_node": "협력사 ESG 지원사업 업무협약",
+            "relationship": "INCLUDES_PROGRAM",
+            "end_node": "ESGProgram",
+            "properties": {}
         },
         {
             "start_node": "동반성장위원회",
-            "relationship": "HOSTS",
-            "end_node": "ESG 우수 중소기업 현판식",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "에이피텍",
+            "relationship": "RECEIVES",
+            "end_node": "ESG 우수 중소기업 확인서",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "DEVELOPS_PLATFORM",
+            "end_node": "전기전자 산업 ESG 평가지표",
+            "properties": {}
+        },
+        {
+            "start_node": "전기전자 산업 ESG 평가지표",
+            "relationship": "USED_IN",
+            "end_node": "Trend",
             "properties": {}
         }
     ]

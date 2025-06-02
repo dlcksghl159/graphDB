@@ -2,67 +2,57 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "기업",
       "properties": {
         "company_id": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "Partner",
-      "name": "Partner",
-      "properties": {
-        "partner_id": "string",
         "name": "string",
-        "type": "string"
+        "category": "string"
       }
     },
     {
       "label": "WelfareMall",
-      "name": "WelfareMall",
+      "name": "복지몰",
       "properties": {
-        "mall_id": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "SalesRecord",
-      "name": "SalesRecord",
-      "properties": {
-        "year": "int",
-        "transaction_amount": "int",
-        "growth_rate": "float"
+        "name": "string",
+        "rank": "string"
       }
     },
     {
       "label": "Region",
-      "name": "Region",
+      "name": "지역",
       "properties": {
         "name": "string"
       }
     },
     {
       "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
+      "name": "공공기관",
       "properties": {
-        "agency_id": "string",
         "name": "string"
       }
     },
     {
-      "label": "SupportProgram",
-      "name": "SupportProgram",
+      "label": "Project",
+      "name": "지원사업",
       "properties": {
-        "program_id": "string",
         "name": "string"
+      }
+    },
+    {
+      "label": "Transaction",
+      "name": "거래통계",
+      "properties": {
+        "year": "int",
+        "amount": "int",
+        "growth_percent": "float"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Partner",
+      "relationship": "AFFILIATED_WITH",
+      "end_node": "Company",
       "properties": {}
     },
     {
@@ -72,45 +62,33 @@
       "properties": {}
     },
     {
-      "start_node": "Partner",
-      "relationship": "SELLS_ON",
-      "end_node": "WelfareMall",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "HAS_SALES",
-      "end_node": "SalesRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "LAUNCHES",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "SELECTS",
+      "start_node": "Company",
+      "relationship": "PARTNERS_WITH",
       "end_node": "Company",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "IMPLEMENTS",
-      "end_node": "SupportProgram",
+      "relationship": "LOCATED_IN",
+      "end_node": "Region",
       "properties": {}
     },
     {
-      "start_node": "SupportProgram",
-      "relationship": "SUPPORTS",
-      "end_node": "Partner",
+      "start_node": "Company",
+      "relationship": "HAS_TRANSACTION",
+      "end_node": "Transaction",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentAgency",
+      "relationship": "INITIATES",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SELECTED_FOR",
+      "end_node": "Project",
       "properties": {}
     }
   ]

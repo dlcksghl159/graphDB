@@ -7,7 +7,8 @@ from deduplication import deduplicate
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-def process_file(filename, chunks_dir, result_dir, system_msg, nodes, client):
+def process_file(filename, chunks_dir, result_dir, system_msg, nodes, api_key):
+        client = openai.OpenAI(api_key=api_key)
         i = int(filename.split('_')[-1].split('.')[0])  # chunked_output_0.txt → 0
 
         # 파일 경로 설정
@@ -83,21 +84,21 @@ def process_file(filename, chunks_dir, result_dir, system_msg, nodes, client):
 
         result_path += '.json'
 
-        if not os.path.exists(result_path):
-            # 파일이 없으면 새로 생성 + parsed_json 저장
-            with open(result_path, "w", encoding="utf-8") as f:
-                json.dump(parsed_json, f, ensure_ascii=False, indent=4)
-            old_result = None
-        else:
-            # 파일이 있으면 기존 스키마 로드
-            with open(result_path, "r", encoding="utf-8") as f:
-                old_result = json.load(f)
-            merged_result = merge_json(old_result, parsed_json, node_key=("label", "name"))
-            with open(result_path, "w", encoding="utf-8") as f:
-                json.dump(merged_result, f, ensure_ascii=False, indent=4)
+        # if not os.path.exists(result_path):
+        #     # 파일이 없으면 새로 생성 + parsed_json 저장
+        #     with open(result_path, "w", encoding="utf-8") as f:
+        #         json.dump(parsed_json, f, ensure_ascii=False, indent=4)
+        #     old_result = None
+        # else:
+        #     # 파일이 있으면 기존 스키마 로드
+        #     with open(result_path, "r", encoding="utf-8") as f:
+        #         old_result = json.load(f)
+        #     merged_result = merge_json(old_result, parsed_json, node_key=("label", "name"))
+        #     with open(result_path, "w", encoding="utf-8") as f:
+        #         json.dump(merged_result, f, ensure_ascii=False, indent=4)
             
         
-        deduplicate(result_path)
+        # deduplicate(result_path)
         print(f"[{i}] relation 추출 완료")
 
 def main(purpose = "기업판매"):
@@ -116,8 +117,6 @@ def main(purpose = "기업판매"):
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
 
-    client = openai.OpenAI(api_key=api_key)
-
     system_msg = (
         "당신은 RAG 시스템에 사용되는 지식 그래프 작성을 위해 텍스트에서 엔티티를 활용하여 관계를 추출하는 역할을 합니다. "
         "반드시 올바른 JSON 형식으로만 응답하세요."
@@ -127,7 +126,7 @@ def main(purpose = "기업판매"):
     file_names = os.listdir(chunks_dir)
     with ThreadPoolExecutor(max_workers=16) as executor:
         futures = {
-            executor.submit(process_file, filename, chunks_dir, result_dir, system_msg, nodes, client): filename
+            executor.submit(process_file, filename, chunks_dir, result_dir, system_msg, nodes, api_key): filename
             for filename in file_names if filename.endswith('.txt')
         }
         
@@ -136,6 +135,27 @@ def main(purpose = "기업판매"):
                 future.result()  # 결과를 기다림
             except Exception as e:
                 print(f"Error processing {futures[future]}: {e}")
+
+    # 최종 결과 병합
+    result_path = os.path.join(result_dir, "result_naive.json")
+    for i in range(len(file_names)):
+        chunked_result_path = os.path.join(result_dir, f"result_naive_{i}.json")
+        if os.path.exists(chunked_result_path):
+            with open(chunked_result_path, "r", encoding="utf-8") as f:
+                chunked_data = json.load(f)
+            if i == 0:
+                final_result = chunked_data
+            else:
+                final_result = merge_json(final_result, chunked_data, node_key=("label", "name"))
+                
+    with open(result_path, "w", encoding="utf-8") as f:
+        json.dump(final_result, f, ensure_ascii=False, indent=4)
+
+    # 중복 제거
+    deduplicate(result_path)
+    print(f"✅ 관계 추출 완료: {result_path}") 
+
+
 
 
 if __name__ == "__main__": 

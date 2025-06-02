@@ -5,45 +5,33 @@
       "name": "Company",
       "properties": {
         "name": "string",
-        "type": "string",
-        "annual_revenue": "int",
-        "revenue_growth_percentage": "int"
+        "industry": "string"
       }
     },
     {
-      "label": "WelfareMall",
-      "name": "WelfareMall",
+      "label": "Platform",
+      "name": "Platform",
       "properties": {
         "name": "string",
-        "launch_year": "int",
-        "total_transactions": "int"
+        "type": "string"
       }
     },
     {
-      "label": "SME",
-      "name": "SME",
+      "label": "Partner",
+      "name": "Partner",
       "properties": {
         "name": "string",
-        "category": "string",
-        "location": "string",
-        "partner_since_year": "int"
+        "size": "string"
       }
     },
     {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
+      "label": "Transaction",
+      "name": "Transaction",
       "properties": {
-        "name": "string",
-        "agency_type": "string"
-      }
-    },
-    {
-      "label": "SupportProgram",
-      "name": "SupportProgram",
-      "properties": {
-        "name": "string",
         "year": "int",
-        "description": "string"
+        "amount": "float",
+        "growth_rate_percent": "float",
+        "share_percent": "float"
       }
     },
     {
@@ -54,77 +42,82 @@
       }
     },
     {
-      "label": "CustomerCompany",
-      "name": "CustomerCompany",
+      "label": "PublicInstitution",
+      "name": "PublicInstitution",
       "properties": {
         "name": "string",
-        "employee_count": "int"
+        "type": "string"
+      }
+    },
+    {
+      "label": "SupportProgram",
+      "name": "SupportProgram",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Agreement",
+      "name": "Agreement",
+      "properties": {
+        "name": "string",
+        "date": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
       "relationship": "OPERATES",
-      "end_node": "WelfareMall",
+      "end_node": "Platform",
       "properties": {}
     },
     {
-      "start_node": "CustomerCompany",
-      "relationship": "USES",
-      "end_node": "WelfareMall",
+      "start_node": "Platform",
+      "relationship": "HAS_PARTNER",
+      "end_node": "Partner",
       "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "SOLD_VIA",
-      "end_node": "WelfareMall",
-      "properties": {
-        "transaction_amount": "int",
-        "transaction_share": "int",
-        "transaction_growth_percentage": "int",
-        "year": "int"
-      }
-    },
-    {
-      "start_node": "SME",
+      "start_node": "Partner",
       "relationship": "LOCATED_IN",
       "end_node": "Region",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "SME",
-      "properties": {
-        "agreement_name": "string",
-        "date": "string"
-      }
+      "start_node": "Platform",
+      "relationship": "RECORDED_TRANSACTION",
+      "end_node": "Transaction",
+      "properties": {}
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "OFFERS",
-      "end_node": "SupportProgram",
+      "start_node": "Partner",
+      "relationship": "GENERATED_TRANSACTION",
+      "end_node": "Transaction",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "AWARDED",
+      "relationship": "PARTICIPATES_IN",
       "end_node": "SupportProgram",
-      "properties": {
-        "year": "int"
-      }
+      "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "BENEFITS_FROM",
-      "end_node": "SupportProgram",
+      "start_node": "SupportProgram",
+      "relationship": "OPERATED_BY",
+      "end_node": "PublicInstitution",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SIGNS",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Agreement",
+      "relationship": "INVOLVES",
+      "end_node": "Partner",
       "properties": {}
     }
   ]

@@ -4,104 +4,77 @@
       "label": "Organization",
       "name": "Organization",
       "properties": {
-        "name": "string",
-        "sector": "string"
+        "orgId": "string",
+        "orgName": "string",
+        "website": "string"
       }
     },
     {
       "label": "Project",
       "name": "Project",
       "properties": {
-        "name": "string",
-        "start_date": "string",
-        "end_date": "string"
+        "projectId": "string",
+        "projectName": "string",
+        "startDate": "date",
+        "endDate": "date"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
+      "label": "Business",
+      "name": "Business",
       "properties": {
-        "date": "string"
-      }
-    },
-    {
-      "label": "Recruitment",
-      "name": "Recruitment",
-      "properties": {
-        "start_date": "string",
-        "deadline": "string"
+        "businessId": "string",
+        "businessName": "string",
+        "type": "string",
+        "yearsInOperation": "int"
       }
     },
     {
       "label": "Product",
       "name": "Product",
       "properties": {
-        "name": "string",
+        "productId": "string",
+        "productName": "string",
         "category": "string"
-      }
-    },
-    {
-      "label": "Brand",
-      "name": "Brand",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Person",
-      "name": "Person",
-      "properties": {
-        "name": "string",
-        "position": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
+      "relationship": "HOSTS",
       "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "SIGNS_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
+      "relationship": "PARTNERS_WITH",
       "end_node": "Organization",
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "HAS_RECRUITMENT",
-      "end_node": "Recruitment",
+      "start_node": "Business",
+      "relationship": "APPLIES_FOR",
+      "end_node": "Project",
+      "properties": {
+        "applyDate": "date"
+      }
+    },
+    {
+      "start_node": "Business",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Project",
-      "relationship": "DEVELOPS_PRODUCT",
+      "relationship": "DEVELOPS",
       "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "UNDER_BRAND",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "LEADS",
+      "start_node": "Organization",
+      "relationship": "PROVIDES_TECHNOLOGY",
       "end_node": "Project",
       "properties": {}
     }

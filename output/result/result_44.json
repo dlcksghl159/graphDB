@@ -1,131 +1,124 @@
 {
     "nodes": [
         {
-            "label": "Organization",
-            "name": "동반성장위원회",
-            "properties": {
-                "category": "",
-                "type": "Committee",
-                "location": "경기도",
-                "name": "동반성장위원회",
-                "industry": "",
-                "sector": ""
-            }
-        },
-        {
-            "label": "Organization",
-            "name": "경기도",
-            "properties": {
-                "category": "",
-                "type": "Province",
-                "location": "경기도",
-                "name": "경기도",
-                "industry": "",
-                "sector": ""
-            }
-        },
-        {
             "label": "Company",
             "name": "네이버",
             "properties": {
-                "name": "네이버",
-                "stock_code": "",
-                "company_name": "네이버",
+                "ticker": "",
                 "industry": "",
-                "role": "",
-                "id": "",
-                "category": "",
+                "name": "네이버",
+                "type": "String",
+                "company_name": "네이버",
+                "stock_code": "",
+                "company_id": "",
                 "size": "",
-                "type": "",
-                "annual_revenue": 0,
-                "revenue_growth_percentage": 0,
+                "region": "",
                 "country": "",
                 "headquarters": "",
-                "founded_year": 0,
-                "company_id": "",
-                "employee_count": 0,
-                "size_category": "",
-                "location": "",
-                "total_investment": 0,
-                "funding_stage": "",
-                "ipo_target_year": 0,
-                "vision": "",
-                "cloud_expertise": false,
-                "targetRevenue": 0,
-                "region": "",
                 "companyName": "네이버",
-                "industryType": "",
+                "employeeCount": 0,
+                "sizeCategory": "",
+                "founded_year": 0,
+                "cumulative_investment": 0,
+                "target_ipo_year": 0,
+                "employee_count": 0,
                 "founding_year": 0,
-                "market_share": "",
-                "companyId": "",
-                "company_type": ""
+                "company_type": "String",
+                "revenue": 0,
+                "rnd_investment": 0,
+                "domesticProduction": false,
+                "category": ""
             }
         },
         {
             "label": "Company",
             "name": "현대모비스",
             "properties": {
-                "name": "현대모비스",
-                "stock_code": "",
-                "company_name": "현대모비스",
+                "ticker": "",
                 "industry": "",
-                "role": "",
-                "id": "",
-                "category": "",
+                "name": "현대모비스",
+                "type": "String",
+                "company_name": "현대모비스",
+                "stock_code": "",
+                "company_id": "",
                 "size": "",
-                "type": "",
-                "annual_revenue": 0,
-                "revenue_growth_percentage": 0,
+                "region": "",
                 "country": "",
                 "headquarters": "",
-                "founded_year": 0,
-                "company_id": "",
-                "employee_count": 0,
-                "size_category": "",
-                "location": "",
-                "total_investment": 0,
-                "funding_stage": "",
-                "ipo_target_year": 0,
-                "vision": "",
-                "cloud_expertise": false,
-                "targetRevenue": 0,
-                "region": "",
                 "companyName": "현대모비스",
-                "industryType": "",
+                "employeeCount": 0,
+                "sizeCategory": "",
+                "founded_year": 0,
+                "cumulative_investment": 0,
+                "target_ipo_year": 0,
+                "employee_count": 0,
                 "founding_year": 0,
-                "market_share": "",
-                "companyId": "",
-                "company_type": ""
+                "company_type": "String",
+                "revenue": 0,
+                "rnd_investment": 0,
+                "domesticProduction": false,
+                "category": ""
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "동반성장위원회",
+            "properties": {
+                "org_id": "",
+                "name": "동반성장위원회",
+                "type": "",
+                "location": "",
+                "category": "",
+                "sector": "",
+                "role": "",
+                "orgId": "",
+                "orgName": "동반성장위원회",
+                "website": "",
+                "established_year": 0,
+                "industry": ""
+            }
+        },
+        {
+            "label": "Region",
+            "name": "경기도",
+            "properties": {
+                "name": "경기도",
+                "type": ""
+            }
+        },
+        {
+            "label": "Region",
+            "name": "수원",
+            "properties": {
+                "name": "수원",
+                "type": ""
             }
         },
         {
             "label": "Event",
-            "name": "2025 경기도 동반성장 페어",
+            "name": "동반성장 페어",
             "properties": {
-                "name": "2025 경기도 동반성장 페어",
-                "date": "2023-09-13",
-                "type": "Fair",
-                "location": "수원메쎄 1홀"
+                "event_id": "",
+                "name": "동반성장 페어",
+                "date": "",
+                "type": "",
+                "time": "",
+                "purpose": "",
+                "start_date": "",
+                "end_date": "",
+                "location": "",
+                "edition": 0
             }
         },
         {
-            "label": "Consultation",
-            "name": "구매상담회",
+            "label": "Transaction",
+            "name": "Transaction",
             "properties": {
-                "count": 640,
-                "total_amount": 70600000000
-            }
-        },
-        {
-            "label": "SupportProgram",
-            "name": "중소기업 지원사업 컨설팅",
-            "properties": {
-                "name": "중소기업 지원사업 컨설팅",
-                "start_year": 0,
-                "participant_count": 0,
-                "year": 2023,
-                "description": "",
-                "program_id": ""
+                "year": 2025,
+                "amount": 706000000,
+                "growth_rate_percent": 0.0,
+                "share_percent": 0.0,
+                "growth_percent": 0.0
             }
         }
     ],
@@ -133,37 +126,43 @@
         {
             "start_node": "동반성장위원회",
             "relationship": "HOSTS",
-            "end_node": "2025 경기도 동반성장 페어",
+            "end_node": "동반성장 페어",
             "properties": {}
         },
         {
             "start_node": "경기도",
-            "relationship": "HOSTS",
-            "end_node": "2025 경기도 동반성장 페어",
+            "relationship": "HOSTED",
+            "end_node": "동반성장 페어",
             "properties": {}
         },
         {
-            "start_node": "2025 경기도 동반성장 페어",
-            "relationship": "INCLUDES_CONSULTATION",
-            "end_node": "구매상담회",
+            "start_node": "동반성장 페어",
+            "relationship": "HELD_IN",
+            "end_node": "수원",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장 페어",
+            "relationship": "HELD_IN",
+            "end_node": "경기도",
             "properties": {}
         },
         {
             "start_node": "네이버",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "2025 경기도 동반성장 페어",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "동반성장 페어",
             "properties": {}
         },
         {
             "start_node": "현대모비스",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "2025 경기도 동반성장 페어",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "동반성장 페어",
             "properties": {}
         },
         {
-            "start_node": "중소기업 지원사업 컨설팅",
-            "relationship": "SUPPORTED_BY",
-            "end_node": "동반성장위원회",
+            "start_node": "Transaction",
+            "relationship": "OCCURRED_IN",
+            "end_node": "동반성장 페어",
             "properties": {}
         }
     ]

@@ -4,44 +4,27 @@
             "label": "Company",
             "name": "한화세미텍",
             "properties": {
-                "name": "한화세미텍",
                 "industry": "반도체 장비",
-                "type": "계열사"
+                "type": "기업",
+                "company_name": "한화세미텍"
             }
         },
         {
             "label": "Company",
             "name": "한미반도체",
             "properties": {
-                "name": "한미반도체",
                 "industry": "반도체 장비",
-                "type": "중견기업"
+                "type": "기업",
+                "company_name": "한미반도체"
             }
         },
         {
             "label": "Company",
             "name": "SK하이닉스",
             "properties": {
-                "name": "SK하이닉스",
-                "industry": "반도체 제조",
-                "category": "HBM 시장"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "김동선",
-            "properties": {
-                "name": "김동선",
-                "title": "부사장",
-                "role": "Future Vision 총괄"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "곽동신",
-            "properties": {
-                "name": "곽동신",
-                "title": "회장"
+                "industry": "반도체",
+                "type": "기업",
+                "company_name": "SK하이닉스"
             }
         },
         {
@@ -49,56 +32,91 @@
             "name": "TC 본더",
             "properties": {
                 "name": "TC 본더",
-                "category": "HBM 제조 장비"
+                "category": "반도체 장비"
             }
         },
         {
-            "label": "Investment",
-            "name": "R&D 투자",
+            "label": "Market",
+            "name": "글로벌 HBM 시장",
             "properties": {
-                "amount": 677000000,
-                "date": "2022"
+                "market_type": "반도체",
+                "region": "글로벌"
             }
         },
         {
-            "label": "Lawsuit",
-            "name": "특허 침해 소송",
+            "label": "Person",
+            "name": "김동선",
             "properties": {
-                "name": "특허 침해 소송",
-                "type": "법적 공방"
+                "name": "김동선",
+                "role": "부사장"
+            }
+        },
+        {
+            "label": "Person",
+            "name": "곽동신",
+            "properties": {
+                "name": "곽동신",
+                "role": "회장"
+            }
+        },
+        {
+            "label": "LegalCase",
+            "name": "TC 본더 특허 침해 소송",
+            "properties": {
+                "case_type": "법정공방",
+                "year": 2023,
+                "status": "진행 중"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "김동선",
-            "relationship": "LEADS",
-            "end_node": "한화세미텍",
+            "start_node": "한화세미텍",
+            "relationship": "PRODUCES",
+            "end_node": "TC 본더",
+            "properties": {}
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "PRODUCES",
+            "end_node": "TC 본더",
             "properties": {}
         },
         {
             "start_node": "SK하이닉스",
-            "relationship": "SUPPLIED_BY",
+            "relationship": "COMPETES_FOR",
             "end_node": "한미반도체",
-            "properties": {
-                "product": "TC 본더"
-            }
+            "properties": {}
         },
         {
             "start_node": "SK하이닉스",
-            "relationship": "SUPPLIED_BY",
+            "relationship": "COMPETES_FOR",
             "end_node": "한화세미텍",
-            "properties": {
-                "product": "TC 본더"
-            }
+            "properties": {}
         },
         {
             "start_node": "한화세미텍",
             "relationship": "COMPETES_WITH",
             "end_node": "한미반도체",
-            "properties": {
-                "difference": 0
-            }
+            "properties": {}
+        },
+        {
+            "start_node": "한미반도체",
+            "relationship": "COMPETES_WITH",
+            "end_node": "한화세미텍",
+            "properties": {}
+        },
+        {
+            "start_node": "SK하이닉스",
+            "relationship": "TARGET_MARKET",
+            "end_node": "글로벌 HBM 시장",
+            "properties": {}
+        },
+        {
+            "start_node": "김동선",
+            "relationship": "LEADS",
+            "end_node": "한화세미텍",
+            "properties": {}
         },
         {
             "start_node": "곽동신",
@@ -107,18 +125,19 @@
             "properties": {}
         },
         {
-            "start_node": "한화세미텍",
-            "relationship": "MAKES_INVESTMENT",
-            "end_node": "R&D 투자",
-            "properties": {}
+            "start_node": "한미반도체",
+            "relationship": "INVOLVED_IN",
+            "end_node": "TC 본더 특허 침해 소송",
+            "properties": {
+                "role": "소송 제기"
+            }
         },
         {
-            "start_node": "한미반도체",
-            "relationship": "FILED_LAWSUIT",
-            "end_node": "한화세미텍",
+            "start_node": "한화세미텍",
+            "relationship": "INVOLVED_IN",
+            "end_node": "TC 본더 특허 침해 소송",
             "properties": {
-                "type": "특허 침해 소송",
-                "date": "2021"
+                "role": "소송 피고"
             }
         }
     ]

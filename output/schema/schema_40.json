@@ -2,52 +2,44 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "string",
       "properties": {
-        "name": "string",
-        "headquarters": "string"
+        "industry": "string"
       }
     },
     {
-      "label": "Exhibition",
-      "name": "Exhibition",
+      "label": "Event",
+      "name": "string",
       "properties": {
-        "title": "string",
-        "startDate": "string",
-        "endDate": "string",
-        "venue": "string"
-      }
-    },
-    {
-      "label": "Section",
-      "name": "Section",
-      "properties": {
-        "name": "string",
-        "category": "string"
+        "start_date": "string",
+        "end_date": "string"
       }
     },
     {
       "label": "Product",
-      "name": "Product",
+      "name": "string",
       "properties": {
-        "name": "string",
-        "feature": "string"
+        "description": "string"
       }
     },
     {
-      "label": "Program",
-      "name": "Program",
+      "label": "Technology",
+      "name": "string",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "mode": "string"
+        "category": "string"
+      }
+    },
+    {
+      "label": "Location",
+      "name": "string",
+      "properties": {
+        "address": "string"
       }
     },
     {
       "label": "Person",
-      "name": "Person",
+      "name": "string",
       "properties": {
-        "name": "string",
         "position": "string"
       }
     }
@@ -55,38 +47,56 @@
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "HOSTS",
-      "end_node": "Exhibition",
-      "properties": {}
-    },
-    {
-      "start_node": "Exhibition",
-      "relationship": "HAS_SECTION",
-      "end_node": "Section",
-      "properties": {}
-    },
-    {
-      "start_node": "Section",
-      "relationship": "FEATURES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Exhibition",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "Program",
+      "relationship": "ORGANIZES",
+      "end_node": "Event",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Person",
+      "relationship": "HAS_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "USES_TECHNOLOGY",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "SHOWCASES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "HIGHLIGHTS",
+      "end_node": "Technology",
+      "properties": {}
+    },
+    {
+      "start_node": "Event",
+      "relationship": "HELD_AT",
+      "end_node": "Location",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Company",
       "properties": {}
     },
     {
       "start_node": "Person",
       "relationship": "SPEAKS_AT",
-      "end_node": "Exhibition",
+      "end_node": "Event",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "HAS_SUBSIDIARY",
+      "end_node": "Company",
       "properties": {}
     }
   ]

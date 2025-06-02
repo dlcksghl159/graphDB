@@ -1,93 +1,116 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "SmallMediumEnterprise",
             "name": "정일산업",
             "properties": {
                 "name": "정일산업",
                 "industry": "승강기 제조업",
-                "founded_year": 1987,
-                "employee_count": 110,
-                "type": "중소기업",
-                "location": "시화공단",
-                "company_id": "12345"
+                "country": "대한민국",
+                "company_count": 110
             }
         },
         {
-            "label": "Region",
-            "name": "시화공단",
+            "label": "Employee",
+            "name": "신송남",
             "properties": {
-                "name": "시화공단"
+                "employee_name": "신송남",
+                "age": 61,
+                "is_retired": false
+            }
+        },
+        {
+            "label": "Employee",
+            "name": "김대환",
+            "properties": {
+                "employee_name": "김대환",
+                "age": 66,
+                "is_retired": false
+            }
+        },
+        {
+            "label": "Employee",
+            "name": "김두연",
+            "properties": {
+                "employee_name": "김두연",
+                "age": 71,
+                "is_retired": false
+            }
+        },
+        {
+            "label": "Employee",
+            "name": "방광호",
+            "properties": {
+                "employee_name": "방광호",
+                "age": 60,
+                "is_retired": false
             }
         },
         {
             "label": "Person",
             "name": "정광용",
             "properties": {
-                "name": "정광용",
-                "title": "대표",
-                "role": "경영"
+                "name": "정광용"
             }
         },
         {
-            "label": "Person",
-            "name": "신송남",
+            "label": "Region",
+            "name": "시화공단",
             "properties": {
-                "name": "신송남",
-                "role": "작업자",
-                "age": 61
+                "name": "시화공단",
+                "type": "산업단지"
             }
         },
         {
-            "label": "Person",
-            "name": "김대환",
+            "label": "Region",
+            "name": "충주",
             "properties": {
-                "name": "김대환",
-                "role": "공장장",
-                "age": 66
-            }
-        },
-        {
-            "label": "Person",
-            "name": "김두연",
-            "properties": {
-                "name": "김두연",
-                "role": "프레스 업무",
-                "age": 71
+                "name": "충주",
+                "type": "도시"
             }
         }
     ],
     "relations": [
         {
             "start_node": "정일산업",
-            "relationship": "LOCATED_IN",
+            "relationship": "EMPLOYS",
+            "end_node": "신송남",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "EMPLOYS",
+            "end_node": "김대환",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "EMPLOYS",
+            "end_node": "김두연",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "EMPLOYS",
+            "end_node": "방광호",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "LED_BY",
+            "end_node": "정광용",
+            "properties": {}
+        },
+        {
+            "start_node": "정일산업",
+            "relationship": "OPERATES_IN",
             "end_node": "시화공단",
             "properties": {}
         },
         {
-            "start_node": "정광용",
-            "relationship": "LEADS",
-            "end_node": "정일산업",
-            "properties": {}
-        },
-        {
-            "start_node": "신송남",
-            "relationship": "WORKS_AT",
-            "end_node": "정일산업",
-            "properties": {}
-        },
-        {
-            "start_node": "김대환",
-            "relationship": "HOLDS_POSITION_AT",
-            "end_node": "정일산업",
-            "properties": {
-                "role": "공장장"
-            }
-        },
-        {
-            "start_node": "김두연",
-            "relationship": "WORKS_AT",
-            "end_node": "정일산업",
+            "start_node": "정일산업",
+            "relationship": "OPERATES_IN",
+            "end_node": "충주",
             "properties": {}
         }
     ]

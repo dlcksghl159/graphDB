@@ -1,93 +1,280 @@
 {
     "nodes": [
         {
-            "label": "Agreement",
-            "name": "협력사 ESG 지원사업 업무협약",
+            "label": "SalesTarget",
+            "name": "Samsung Biologics 2023",
             "properties": {
-                "date": "2025",
-                "purpose": "협력사 ESG 지원",
-                "location": "인천 송도",
-                "title": "협력사 ESG 지원사업 업무협약"
+                "year": 2023,
+                "targetRevenue": 5570500000
             }
         },
         {
-            "label": "SME",
-            "name": "에이피텍",
+            "label": "ProductCategory",
+            "name": "반도체 제조용 장비",
             "properties": {
-                "industry": "전자",
-                "name": "에이피텍",
-                "location": "인천 송도",
-                "partner_since_year": 2025
+                "category_name": "반도체 제조용 장비"
+            }
+        },
+        {
+            "label": "ExperimentLab",
+            "name": "소음 성능 측정 실험실",
+            "properties": {
+                "labName": "소음 성능 측정 실험실",
+                "floor": "지하 1층",
+                "uniqueInSME": true
+            }
+        },
+        {
+            "label": "ProductCategory",
+            "name": "수출 품목",
+            "properties": {
+                "category_name": "자동차"
+            }
+        },
+        {
+            "label": "Investment",
+            "name": "전략적 지분투자",
+            "properties": {
+                "amount": 1200000000,
+                "date": "2023"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "서큘레이터",
+            "properties": {
+                "category": "계절가전제품"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "60대",
+            "properties": {
+                "ageRange": "60-69"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "롯데웰푸드",
+            "properties": {
+                "industry": "식품 제조업"
             }
         },
         {
             "label": "Region",
-            "name": "인천",
+            "name": "경기",
             "properties": {
-                "name": "인천"
+                "type": "Province"
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "로봇 제어기 공동개발 업무 협약",
+            "properties": {
+                "date": "2023-10-14",
+                "title": "엠투아이와 벰로보틱스의 협력",
+                "purpose": "로봇 제어기 공동 개발"
             }
         },
         {
             "label": "Company",
-            "name": "LG이노텍",
-            "properties": {}
+            "name": "유한양행",
+            "properties": {
+                "industry": "Pharmaceutical"
+            }
+        },
+        {
+            "label": "ExportRecord",
+            "name": "자동차 1분기 수출 기록",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 1740000000.0,
+                "growth_rate": 67.4
+            }
+        },
+        {
+            "label": "Institution",
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "name": "중소벤처기업진흥공단",
+                "institutionType": "Public",
+                "role": "Support"
+            }
+        },
+        {
+            "label": "Employee",
+            "name": "방광호",
+            "properties": {
+                "employee_name": "방광호",
+                "age": 60,
+                "is_retired": false
+            }
+        },
+        {
+            "label": "Country",
+            "name": "포르투갈",
+            "properties": {
+                "region": "유럽"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "Celltrion",
+            "properties": {
+                "industry": "Pharmaceutical"
+            }
+        },
+        {
+            "label": "WelfareMall",
+            "name": "현대이지웰 복지몰",
+            "properties": {
+                "rank": "1위"
+            }
+        },
+        {
+            "label": "FinancialReport",
+            "name": "Samsung Biologics Q1 2023",
+            "properties": {
+                "revenue": 1298300000,
+                "operatingProfit": 488600000,
+                "netProfit": 375500000,
+                "revenueGrowthRate": 37.1,
+                "operatingProfitGrowthRate": 119.9,
+                "netProfitGrowthRate": 109.3,
+                "quarter": "Q1",
+                "year": 2023
+            }
+        },
+        {
+            "label": "Country",
+            "name": "인도네시아",
+            "properties": {
+                "country_name": "인도네시아"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "로봇 제어기 공동개발 업무 협약",
+            "properties": {
+                "industry": "산업용 로봇"
+            }
+        },
+        {
+            "label": "ExportRecord",
+            "name": "1분기 중소기업 수출 기록",
+            "properties": {
+                "year": 2023,
+                "quarter": 1,
+                "export_amount_usd": 27000000000.0,
+                "growth_rate": 0.7
+            }
+        },
+        {
+            "label": "Person",
+            "name": "김재원",
+            "properties": {
+                "position": "대표",
+                "role": "CEO",
+                "title": "엘리스그룹 대표"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "밀키트",
+            "properties": {
+                "category": "HMR",
+                "type": "즉석조리식품"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "SK하이닉스",
+            "properties": {
+                "industry": "반도체"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "한국",
+            "properties": {
+                "type": "국가"
+            }
+        },
+        {
+            "label": "SalesTarget",
+            "name": "Celltrion 2023",
+            "properties": {
+                "year": 2023,
+                "targetRevenue": 5000000000
+            }
+        },
+        {
+            "label": "SupportProgram",
+            "name": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {
+                "year": 2023,
+                "purpose": "소상공인 제품의 온라인 판매 활성화"
+            }
         },
         {
             "label": "Organization",
-            "name": "동반성장위원회",
-            "properties": {}
+            "name": "중소벤처기업진흥공단",
+            "properties": {
+                "name": "중소벤처기업진흥공단",
+                "type": "Public Institution"
+            }
+        },
+        {
+            "label": "Organization",
+            "name": "소상공인시장진흥공단",
+            "properties": {
+                "name": "소상공인시장진흥공단",
+                "type": "정부기관",
+                "role": "지원 및 협력"
+            }
+        },
+        {
+            "label": "Company",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "industry": "Biotechnology"
+            }
+        },
+        {
+            "label": "PartnerCompany",
+            "name": "기아",
+            "properties": {
+                "industry": "자동차"
+            }
         }
     ],
     "relations": [
         {
-            "start_node": "동반성장위원회",
-            "relationship": "SIGNED",
-            "end_node": "협력사 ESG 지원사업 업무협약",
+            "start_node": "LG이노텍",
+            "relationship": "HAS_PARTNER",
+            "end_node": "동반위",
             "properties": {
-                "date": "2025",
-                "purpose": "협력사 ESG 지원"
+                "year": 2023,
+                "project": "협력사 ESG지원 사업"
             }
         },
         {
             "start_node": "LG이노텍",
-            "relationship": "SIGNED",
-            "end_node": "협력사 ESG 지원사업 업무협약",
+            "relationship": "SUPPORTS",
+            "end_node": "동반위",
             "properties": {
-                "date": "2025",
-                "purpose": "협력사 ESG 지원"
-            }
-        },
-        {
-            "start_node": "에이피텍",
-            "relationship": "SELECTED_AS",
-            "end_node": "협력사 ESG 지원사업 업무협약",
-            "properties": {
-                "role": "핵심 협력사"
+                "project": "협력사 ESG지원 사업",
+                "years_consecutive": 4
             }
         },
         {
             "start_node": "LG이노텍",
-            "relationship": "HAS_CORE_PARTNER",
+            "relationship": "SUPPLIED_TO",
             "end_node": "에이피텍",
             "properties": {
-                "industry": "전자",
-                "location": "인천 송도"
-            }
-        },
-        {
-            "start_node": "협력사 ESG 지원사업 업무협약",
-            "relationship": "HELD_AT",
-            "end_node": "인천",
-            "properties": {
-                "location": "인천 송도"
-            }
-        },
-        {
-            "start_node": "동반성장위원회",
-            "relationship": "IS_COORDINATING",
-            "end_node": "LG이노텍",
-            "properties": {
-                "project": "대·중소 자율형 ESG 지원사업"
+                "product": "휴대전화 카메라 모듈 제조설비",
+                "category": "핵심 협력사"
             }
         }
     ]

@@ -5,19 +5,7 @@
             "name": "노루그룹",
             "properties": {
                 "name": "노루그룹",
-                "location": "안양",
-                "industry": "화학",
-                "type": "기업"
-            }
-        },
-        {
-            "label": "Exhibition",
-            "name": "2025 신기술·신제품 전시회",
-            "properties": {
-                "title": "2025 신기술·신제품 전시회",
-                "startDate": "2023-09-14",
-                "endDate": "2023-09-18",
-                "venue": "노루페인트 본사"
+                "industry": "paint"
             }
         },
         {
@@ -25,7 +13,7 @@
             "name": "스텔스 도료",
             "properties": {
                 "name": "스텔스 도료",
-                "category": "혁신 기술 제품"
+                "category": "도료"
             }
         },
         {
@@ -33,7 +21,7 @@
             "name": "우레탄 난연 몰딩제",
             "properties": {
                 "name": "우레탄 난연 몰딩제",
-                "category": "혁신 기술 제품"
+                "category": "몰딩제"
             }
         },
         {
@@ -41,7 +29,7 @@
             "name": "탄소 저감 건재용 도료",
             "properties": {
                 "name": "탄소 저감 건재용 도료",
-                "category": "혁신 기술 제품"
+                "category": "건재용 도료"
             }
         },
         {
@@ -49,98 +37,104 @@
             "name": "VOC 저감형 아크릴 수지",
             "properties": {
                 "name": "VOC 저감형 아크릴 수지",
-                "category": "혁신 기술 제품"
+                "category": "수지"
+            }
+        },
+        {
+            "label": "Event",
+            "name": "신기술·신제품 전시회",
+            "properties": {
+                "name": "신기술·신제품 전시회",
+                "date": "2025",
+                "purpose": "기술 중심 전략 공유"
             }
         },
         {
             "label": "Technology",
             "name": "혁신 소재 기술",
             "properties": {
-                "tech_name": "혁신 소재 기술",
-                "category": "기술",
-                "description": "첨단 기술력과 중장기 전략"
+                "name": "혁신 소재 기술",
+                "category": "소재"
             }
         },
         {
             "label": "Technology",
             "name": "미래 성장 동력 기술",
             "properties": {
-                "tech_name": "미래 성장 동력 기술",
-                "category": "기술",
-                "description": "첨단 기술력과 중장기 전략"
+                "name": "미래 성장 동력 기술",
+                "category": "동력"
             }
         },
         {
             "label": "Technology",
             "name": "시장 주도 기술",
             "properties": {
-                "tech_name": "시장 주도 기술",
-                "category": "기술",
-                "description": "첨단 기술력과 중장기 전략"
+                "name": "시장 주도 기술",
+                "category": "시장"
             }
         },
         {
-            "label": "Person",
-            "name": "방양국",
+            "label": "Region",
+            "name": "안양",
             "properties": {
-                "name": "방양국",
-                "role": "연구소장"
+                "name": "안양",
+                "type": "시"
             }
         }
     ],
     "relations": [
         {
             "start_node": "노루그룹",
-            "relationship": "HOSTS",
-            "end_node": "2025 신기술·신제품 전시회",
+            "relationship": "LAUNCHED",
+            "end_node": "신기술·신제품 전시회",
             "properties": {}
         },
         {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "스텔스 도료",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "우레탄 난연 몰딩제",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "탄소 저감 건재용 도료",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "VOC 저감형 아크릴 수지",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "HAS_SECTION",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPED",
             "end_node": "혁신 소재 기술",
             "properties": {}
         },
         {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "HAS_SECTION",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPED",
             "end_node": "미래 성장 동력 기술",
             "properties": {}
         },
         {
-            "start_node": "2025 신기술·신제품 전시회",
-            "relationship": "HAS_SECTION",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPED",
             "end_node": "시장 주도 기술",
             "properties": {}
         },
         {
-            "start_node": "방양국",
-            "relationship": "SPEAKS_AT",
-            "end_node": "2025 신기술·신제품 전시회",
+            "start_node": "신기술·신제품 전시회",
+            "relationship": "SHOWCASES",
+            "end_node": "스텔스 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "신기술·신제품 전시회",
+            "relationship": "SHOWCASES",
+            "end_node": "우레탄 난연 몰딩제",
+            "properties": {}
+        },
+        {
+            "start_node": "신기술·신제품 전시회",
+            "relationship": "SHOWCASES",
+            "end_node": "탄소 저감 건재용 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "신기술·신제품 전시회",
+            "relationship": "SHOWCASES",
+            "end_node": "VOC 저감형 아크릴 수지",
+            "properties": {}
+        },
+        {
+            "start_node": "신기술·신제품 전시회",
+            "relationship": "HELD_IN",
+            "end_node": "안양",
             "properties": {}
         }
     ]

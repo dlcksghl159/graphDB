@@ -2,81 +2,72 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "String",
+      "name": "company_name",
       "properties": {
         "founded_year": "int",
-        "total_investment": "int",
-        "funding_stage": "string",
-        "ipo_target_year": "int",
-        "vision": "string"
+        "cumulative_investment": "int",
+        "target_ipo_year": "int"
       }
     },
     {
       "label": "Project",
-      "name": "String",
+      "name": "project_name",
       "properties": {
         "scale": "string",
-        "financing_structure": "string",
-        "closing_target": "string"
+        "structure": "string",
+        "pf_closing_goal": "string",
+        "location": "string"
       }
     },
     {
-      "label": "Facility",
-      "name": "String",
+      "label": "Investor",
+      "name": "investor_name",
       "properties": {
-        "type": "string",
-        "water_saving_rate": "string",
-        "waste_rate": "string",
-        "ghg_reduction": "string",
-        "energy_source": "string",
-        "production_multiplier": "string"
+        "type": "string"
       }
     },
     {
-      "label": "InvestmentRound",
-      "name": "String",
+      "label": "FundingRound",
+      "name": "round_name",
       "properties": {
-        "series": "string",
-        "amount": "int",
-        "date": "string"
+        "amount": "int"
+      }
+    },
+    {
+      "label": "PartnerCompany",
+      "name": "company_name",
+      "properties": {
+        "industry": "string"
+      }
+    },
+    {
+      "label": "TechnologyModule",
+      "name": "module_name",
+      "properties": {
+        "type": "string"
       }
     },
     {
       "label": "Award",
-      "name": "String",
+      "name": "award_name",
       "properties": {
         "year": "int",
-        "awarding_body": "string"
+        "category": "string"
       }
     },
     {
-      "label": "Product",
-      "name": "String",
+      "label": "Metric",
+      "name": "metric_type",
       "properties": {
-        "type": "string",
-        "launch_year": "int"
-      }
-    },
-    {
-      "label": "Location",
-      "name": "String",
-      "properties": {
-        "region": "string"
+        "value": "string",
+        "unit": "string"
       }
     },
     {
       "label": "Crop",
-      "name": "String",
+      "name": "crop_type",
       "properties": {
-        "category": "string",
-        "annual_production": "int"
-      }
-    },
-    {
-      "label": "Partner",
-      "name": "String",
-      "properties": {
-        "industry": "string"
+        "annual_production": "string"
       }
     }
   ],
@@ -88,57 +79,51 @@
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "INCLUDES_FACILITY",
-      "end_node": "Facility",
-      "properties": {}
-    },
-    {
-      "start_node": "Facility",
-      "relationship": "LOCATED_AT",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
       "start_node": "Company",
       "relationship": "RAISED",
-      "end_node": "InvestmentRound",
+      "end_node": "FundingRound",
+      "properties": {}
+    },
+    {
+      "start_node": "Investor",
+      "relationship": "INVESTED_IN",
+      "end_node": "FundingRound",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "WON",
-      "end_node": "Award",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "RECEIVED_AWARD",
-      "end_node": "Award",
+      "relationship": "PARTNERS_WITH",
+      "end_node": "PartnerCompany",
       "properties": {}
     },
     {
       "start_node": "Company",
       "relationship": "DEVELOPED",
-      "end_node": "Product",
+      "end_node": "TechnologyModule",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "SUPPLIES",
+      "start_node": "TechnologyModule",
+      "relationship": "RECEIVED_AWARD",
+      "end_node": "Award",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "ACHIEVES_METRIC",
+      "end_node": "Metric",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "PRODUCES",
       "end_node": "Crop",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Partner",
       "properties": {}
     },
     {
       "start_node": "Crop",
       "relationship": "SUPPLIED_TO",
-      "end_node": "Partner",
+      "end_node": "PartnerCompany",
       "properties": {}
     }
   ]

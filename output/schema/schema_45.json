@@ -4,71 +4,73 @@
       "label": "Company",
       "name": "Company",
       "properties": {
-        "companyName": "string",
-        "industryType": "string"
+        "name": "string",
+        "headquarters": "string"
       }
     },
     {
       "label": "Product",
       "name": "Product",
       "properties": {
-        "productName": "string",
-        "productType": "string"
+        "name": "string",
+        "approval_year": "int"
       }
     },
     {
-      "label": "PerformanceRecord",
-      "name": "PerformanceRecord",
+      "label": "FinancialReport",
+      "name": "FinancialReport",
       "properties": {
         "quarter": "string",
-        "revenueKRW": "int",
-        "operatingProfitKRW": "int"
+        "year": "int",
+        "revenue": "int",
+        "operating_profit": "int"
       }
     },
     {
-      "label": "MarketRegion",
-      "name": "MarketRegion",
+      "label": "ProductType",
+      "name": "ProductType",
       "properties": {
-        "regionName": "string"
+        "type": "string"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "Market",
+      "properties": {
+        "region": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PRODUCES",
+      "relationship": "DEVELOPS",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "HAS_PERFORMANCE",
-      "end_node": "PerformanceRecord",
+      "relationship": "REPORTS",
+      "end_node": "FinancialReport",
+      "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_TYPE",
+      "end_node": "ProductType",
       "properties": {}
     },
     {
       "start_node": "Product",
       "relationship": "SOLD_IN",
-      "end_node": "MarketRegion",
-      "properties": {
-        "launchDate": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUBSIDIARY_OF",
-      "end_node": "Company",
+      "end_node": "Market",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "LICENSED_TO",
+      "relationship": "HAS_SUBSIDIARY",
       "end_node": "Company",
-      "properties": {
-        "productName": "string",
-        "licenseRevenueKRW": "int",
-        "agreementType": "string"
-      }
+      "properties": {}
     }
   ]
 }

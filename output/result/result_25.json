@@ -1,130 +1,75 @@
 {
     "nodes": [
         {
-            "label": "Solution",
-            "name": "세이프아이서트",
+            "label": "Company",
+            "name": "Gaon i",
             "properties": {
-                "category": "소프트웨어 솔루션",
-                "model": "SaaS",
-                "automation_rate": 90
+                "name": "Gaon i",
+                "industry": "Software",
+                "company_name": "Gaon i"
             }
         },
         {
             "label": "Company",
-            "name": "가온아이",
+            "name": "Icert",
             "properties": {
-                "name": "가온아이",
-                "company_name": "가온아이",
-                "industry": "소프트웨어",
-                "type": "기업",
-                "cloud_expertise": true
+                "name": "Icert",
+                "industry": "Software",
+                "company_name": "Icert"
             }
         },
         {
-            "label": "Company",
-            "name": "아이서트",
+            "label": "SERVICE_MODEL",
+            "name": "SaaS",
             "properties": {
-                "name": "아이서트",
-                "company_name": "아이서트",
-                "industry": "인증서 관리",
-                "type": "기업"
+                "name": "SaaS",
+                "payment_model": "Subscription"
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "BizOffice",
+            "properties": {
+                "platform_id": "1",
+                "name": "BizOffice",
+                "type": "Groupware"
             }
         },
         {
             "label": "Product",
-            "name": "SaaS 그룹웨어 비즈오피스",
+            "name": "SafeICert",
             "properties": {
-                "name": "SaaS 그룹웨어 비즈오피스",
-                "category": "소프트웨어 솔루션"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "조창제",
-            "properties": {
-                "name": "조창제",
-                "title": "대표",
-                "role": "CEO",
-                "position": "CEO"
-            }
-        },
-        {
-            "label": "Person",
-            "name": "현수환",
-            "properties": {
-                "name": "현수환",
-                "title": "대표",
-                "role": "CEO",
-                "position": "CEO"
-            }
-        },
-        {
-            "label": "Organization",
-            "name": "한화오션디지털",
-            "properties": {
-                "name": "한화오션디지털",
-                "industry": "디지털",
-                "type": "회사",
-                "location": "한국"
-            }
-        },
-        {
-            "label": "Organization",
-            "name": "LG전자",
-            "properties": {
-                "name": "LG전자",
-                "industry": "전자",
-                "type": "회사",
-                "location": "한국"
+                "product_name": "SafeICert",
+                "product_id": "SafeICert",
+                "product_type": "Certificate management",
+                "features": "Real-time monitoring, Unauthorized use prevention, User password setting, External certificate leakage prevention"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "가온아이",
+            "start_node": "Gaon i",
             "relationship": "DEVELOPS",
-            "end_node": "세이프아이서트",
+            "end_node": "SafeICert",
             "properties": {}
         },
         {
-            "start_node": "아이서트",
-            "relationship": "DEVELOPS",
-            "end_node": "세이프아이서트",
-            "properties": {}
-        },
-        {
-            "start_node": "세이프아이서트",
-            "relationship": "DEPLOYED_TO",
-            "end_node": "한화오션디지털",
-            "properties": {}
-        },
-        {
-            "start_node": "세이프아이서트",
-            "relationship": "DEPLOYED_TO",
-            "end_node": "LG전자",
-            "properties": {}
-        },
-        {
-            "start_node": "가온아이",
+            "start_node": "Icert",
             "relationship": "PROVIDES",
-            "end_node": "SaaS 그룹웨어 비즈오피스",
+            "end_node": "SafeICert",
             "properties": {}
         },
         {
-            "start_node": "조창제",
-            "relationship": "HOLDS_POSITION_AT",
-            "end_node": "가온아이",
-            "properties": {
-                "role": "CEO"
-            }
+            "start_node": "SafeICert",
+            "relationship": "HAS_SERVICE_MODEL",
+            "end_node": "SaaS",
+            "properties": {}
         },
         {
-            "start_node": "현수환",
-            "relationship": "HOLDS_POSITION_AT",
-            "end_node": "아이서트",
-            "properties": {
-                "role": "CEO"
-            }
+            "start_node": "Gaon i",
+            "relationship": "OPERATES",
+            "end_node": "BizOffice",
+            "properties": {}
         }
     ]
 }

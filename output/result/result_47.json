@@ -1,15 +1,23 @@
 {
     "nodes": [
         {
-            "label": "SME",
+            "label": "Company",
             "name": "파세코",
             "properties": {
-                "industry": "가전",
                 "name": "파세코",
-                "category": "중견",
+                "industry": "가전",
+                "domesticProduction": true
+            }
+        },
+        {
+            "label": "Factory",
+            "name": "파세코 안산 공장",
+            "properties": {
+                "factory_name": "파세코 안산 공장",
                 "location": "경기 안산시 단원구",
-                "partner_since_year": null,
-                "company_id": null
+                "workersCount": 60,
+                "maxDailyProduction": 1200,
+                "operatingStatus": "풀가동 중"
             }
         },
         {
@@ -17,127 +25,86 @@
             "name": "창문형 에어컨",
             "properties": {
                 "name": "창문형 에어컨",
-                "category": "에어컨",
-                "output_power": null,
-                "product_type": null,
-                "id": null,
-                "cumulative_sales": 1000,
-                "price": null,
-                "motor_type": null,
-                "power_consumption_w": null,
-                "noise_level_db": 33.9,
-                "launch_datetime": null,
-                "colors": null,
-                "release_date": null,
-                "product_id": null,
-                "type": null,
-                "launch_year": null,
-                "launchYear": null,
-                "active_ingredient": null,
-                "therapy_area": null,
-                "generic_name": null,
-                "feature": null,
-                "productName": "신형 6세대 창문형 에어컨",
-                "productType": null,
-                "releaseDate": null,
-                "preheatTime": null,
-                "design": null,
-                "portability": null,
-                "durability": null,
-                "temperatureLevels": null,
-                "safetyFeatures": null,
-                "productId": null,
+                "category": "가전제품",
+                "description": "AI 에너지 세이빙 기술 적용",
                 "generation": "6세대"
             }
         },
         {
-            "label": "SalesPerformance",
-            "name": "SalesPerformance",
-            "properties": {
-                "performanceId": null,
-                "year": 2023,
-                "month": 4,
-                "purchaseIndex": 38
-            }
-        },
-        {
-            "label": "Factory",
-            "name": "안산 공장",
-            "properties": {
-                "factoryName": "안산 공장",
-                "location": "경기 안산시 단원구",
-                "factoryId": null,
-                "name": "안산 공장",
-                "workerCount": 60,
-                "maxDailyProduction": 1200
-            }
-        },
-        {
-            "label": "Person",
+            "label": "Executive",
             "name": "김상우",
             "properties": {
                 "name": "김상우",
-                "title": "상무",
-                "role": "리테일사업부 상무",
-                "position": null,
-                "personName": "김상우"
+                "title": "리테일사업부 상무"
             }
         },
         {
-            "label": "Technology",
-            "name": "AI 에너지 세이빙",
+            "label": "ExperimentLab",
+            "name": "소음 성능 측정 실험실",
             "properties": {
-                "tech_name": "AI 에너지 세이빙",
-                "category": "냉방 효율 기술",
-                "name": "AI 에너지 세이빙",
-                "description": null,
-                "techId": null
+                "labName": "소음 성능 측정 실험실",
+                "floor": "지하 1층",
+                "uniqueInSME": true
+            }
+        },
+        {
+            "label": "Product",
+            "name": "서큘레이터",
+            "properties": {
+                "name": "서큘레이터",
+                "category": "계절가전제품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "보디드라이어",
+            "properties": {
+                "name": "보디드라이어",
+                "category": "계절가전제품"
             }
         }
     ],
     "relations": [
         {
             "start_node": "파세코",
-            "relationship": "PRODUCES",
+            "relationship": "OWNS_FACTORY",
+            "end_node": "파세코 안산 공장",
+            "properties": {}
+        },
+        {
+            "start_node": "파세코 안산 공장",
+            "relationship": "PRODUCES_PRODUCT",
             "end_node": "창문형 에어컨",
             "properties": {}
         },
         {
-            "start_node": "안산 공장",
-            "relationship": "PRODUCES",
+            "start_node": "파세코",
+            "relationship": "LAUNCHED",
             "end_node": "창문형 에어컨",
             "properties": {}
         },
         {
             "start_node": "김상우",
-            "relationship": "HOLDS_POSITION_AT",
+            "relationship": "WORKS_FOR",
             "end_node": "파세코",
-            "properties": {
-                "role": "리테일사업부 상무"
-            }
-        },
-        {
-            "start_node": "파세코",
-            "relationship": "DEVELOPS",
-            "end_node": "AI 에너지 세이빙",
             "properties": {}
         },
         {
             "start_node": "창문형 에어컨",
-            "relationship": "UTILIZES",
-            "end_node": "AI 에너지 세이빙",
+            "relationship": "TESTED_IN_LAB",
+            "end_node": "소음 성능 측정 실험실",
             "properties": {}
         },
         {
             "start_node": "파세코",
-            "relationship": "RECORDS_SALES",
-            "end_node": "SalesPerformance",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "서큘레이터",
             "properties": {}
         },
         {
             "start_node": "파세코",
-            "relationship": "HAS_FACTORY",
-            "end_node": "안산 공장",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "보디드라이어",
             "properties": {}
         }
     ]

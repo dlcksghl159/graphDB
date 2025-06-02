@@ -4,139 +4,53 @@
       "label": "Company",
       "name": "Company",
       "properties": {
-        "name": "string",
-        "stock_code": "string"
+        "ticker": "string",
+        "industry": "string"
       }
     },
     {
       "label": "Product",
       "name": "Product",
       "properties": {
-        "name": "string",
         "category": "string",
-        "output_power": "string"
-      }
-    },
-    {
-      "label": "Market",
-      "name": "Market",
-      "properties": {
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "Acquisition",
-      "name": "Acquisition",
-      "properties": {
-        "share_percentage": "string",
-        "amount": "int",
-        "date": "string"
-      }
-    },
-    {
-      "label": "ResearchReport",
-      "name": "ResearchReport",
-      "properties": {
-        "title": "string",
-        "date": "string"
-      }
-    },
-    {
-      "label": "Researcher",
-      "name": "Researcher",
-      "properties": {
-        "name": "string",
-        "affiliation": "string"
-      }
-    },
-    {
-      "label": "FinancialInstrument",
-      "name": "FinancialInstrument",
-      "properties": {
-        "type": "string",
-        "amount": "int",
-        "conversion_rate": "string"
-      }
-    },
-    {
-      "label": "DevelopmentProject",
-      "name": "DevelopmentProject",
-      "properties": {
-        "name": "string",
-        "status": "string",
-        "target_date": "string"
+        "specification": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "PRODUCES",
+      "relationship": "MANUFACTURES",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "BELONGS_TO",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ACQUIRES",
-      "end_node": "Acquisition",
-      "properties": {}
-    },
-    {
-      "start_node": "Acquisition",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchReport",
-      "relationship": "AUTHORED_BY",
-      "end_node": "Researcher",
-      "properties": {}
-    },
-    {
-      "start_node": "ResearchReport",
-      "relationship": "ABOUT",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPLIES_TO",
+      "relationship": "SUPPLIES",
       "end_node": "Company",
       "properties": {
-        "product": "string"
+        "product": "string",
+        "exclusivity": "string"
       }
     },
     {
       "start_node": "Company",
-      "relationship": "ISSUES",
-      "end_node": "FinancialInstrument",
-      "properties": {}
+      "relationship": "PLANS_SUPPLY",
+      "end_node": "Company",
+      "properties": {
+        "product": "string",
+        "expected_start": "string"
+      }
     },
     {
       "start_node": "Company",
-      "relationship": "RUNS_PROJECT",
-      "end_node": "DevelopmentProject",
-      "properties": {}
-    },
-    {
-      "start_node": "DevelopmentProject",
-      "relationship": "TARGETS",
-      "end_node": "Market",
-      "properties": {}
+      "relationship": "ACQUIRED",
+      "end_node": "Company",
+      "properties": {
+        "stake_percentage": "string",
+        "amount": "string",
+        "date": "string"
+      }
     }
   ]
 }

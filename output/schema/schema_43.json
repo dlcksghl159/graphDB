@@ -5,7 +5,7 @@
       "name": "Organization",
       "properties": {
         "name": "string",
-        "type": "string"
+        "sector": "string"
       }
     },
     {
@@ -13,8 +13,7 @@
       "name": "Project",
       "properties": {
         "name": "string",
-        "start_date": "string",
-        "end_date": "string"
+        "registration_deadline": "string"
       }
     },
     {
@@ -22,7 +21,9 @@
       "name": "Participant",
       "properties": {
         "name": "string",
-        "category": "string"
+        "participant_type": "string",
+        "industry": "string",
+        "years_in_business": "int"
       }
     },
     {
@@ -30,72 +31,49 @@
       "name": "Product",
       "properties": {
         "name": "string",
-        "product_type": "string"
-      }
-    },
-    {
-      "label": "Brand",
-      "name": "Brand",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Agreement",
-      "name": "Agreement",
-      "properties": {
-        "date": "string",
-        "type": "string"
+        "category": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "STARTED",
+      "relationship": "SIGNED_AGREEMENT",
+      "end_node": "Organization",
+      "properties": {
+        "date": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "RUNS_PROJECT",
       "end_node": "Project",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "SIGNED",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
-      "end_node": "Organization",
-      "properties": {}
+      "start_node": "Project",
+      "relationship": "RECRUITS",
+      "end_node": "Participant",
+      "properties": {
+        "deadline": "string"
+      }
     },
     {
       "start_node": "Project",
-      "relationship": "INCLUDES_PRODUCT",
+      "relationship": "DEVELOPS",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Participant",
-      "relationship": "APPLIES_TO",
-      "end_node": "Project",
+      "relationship": "PROVIDES_RECIPE",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "Participant",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "BRANDED_AS",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
+      "start_node": "Organization",
+      "relationship": "COMMERCIALIZES",
+      "end_node": "Product",
       "properties": {}
     }
   ]

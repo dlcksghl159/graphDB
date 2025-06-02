@@ -2,109 +2,85 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "기업",
       "properties": {
-        "companyId": "string",
-        "name": "string",
+        "companyName": "string",
         "industry": "string",
-        "headquarters": "string"
+        "headquarters": "string",
+        "domesticProduction": "bool"
       }
     },
     {
       "label": "Factory",
-      "name": "Factory",
+      "name": "공장",
       "properties": {
-        "factoryId": "string",
-        "name": "string",
+        "factoryName": "string",
         "location": "string",
-        "workerCount": "int",
-        "maxDailyProduction": "int"
+        "workersCount": "int",
+        "maxDailyProduction": "int",
+        "operatingStatus": "string"
       }
     },
     {
       "label": "Product",
-      "name": "Product",
+      "name": "제품",
       "properties": {
-        "productId": "string",
-        "name": "string",
-        "category": "string",
+        "productName": "string",
         "generation": "string",
-        "releaseDate": "string"
+        "type": "string",
+        "releaseDate": "string",
+        "productionMethod": "string",
+        "features": "string"
       }
     },
     {
-      "label": "Feature",
-      "name": "Feature",
+      "label": "SalesData",
+      "name": "판매데이터",
       "properties": {
-        "featureId": "string",
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Technology",
-      "name": "Technology",
-      "properties": {
-        "techId": "string",
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "SalesPerformance",
-      "name": "SalesPerformance",
-      "properties": {
-        "performanceId": "string",
         "year": "int",
         "month": "int",
-        "purchaseIndex": "float"
+        "purchaseIndex": "int"
       }
     },
     {
       "label": "ExperimentLab",
-      "name": "ExperimentLab",
+      "name": "실험실",
       "properties": {
-        "labId": "string",
-        "name": "string",
-        "location": "string",
-        "testTypes": "string"
+        "labName": "string",
+        "floor": "string",
+        "environmentCondition": "string",
+        "uniqueInSME": "bool"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "OWNS",
+      "relationship": "OWNS_FACTORY",
       "end_node": "Factory",
       "properties": {}
     },
     {
       "start_node": "Factory",
-      "relationship": "PRODUCES",
+      "relationship": "PRODUCES_PRODUCT",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Company",
+      "relationship": "PRODUCES_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
+      "relationship": "HAS_SALES_DATA",
+      "end_node": "SalesData",
       "properties": {}
     },
     {
       "start_node": "Product",
-      "relationship": "USES_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECORDS_SALES",
-      "end_node": "SalesPerformance",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "TESTED_IN",
+      "relationship": "TESTED_IN_LAB",
       "end_node": "ExperimentLab",
       "properties": {}
     }

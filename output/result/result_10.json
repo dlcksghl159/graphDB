@@ -1,112 +1,93 @@
 {
     "nodes": [
         {
-            "label": "GovernmentAgency",
+            "label": "Institution",
             "name": "중소벤처기업진흥공단",
             "properties": {
                 "name": "중소벤처기업진흥공단",
-                "agency_type": "Government Organization",
-                "agency_id": "N/A",
-                "level": "National",
-                "country": "South Korea",
-                "agencyName": "중소벤처기업진흥공단"
+                "institutionType": "Public",
+                "role": "Support"
             }
         },
         {
-            "label": "Organization",
+            "label": "Institution",
             "name": "부산항만공사",
             "properties": {
-                "category": "Public Corporation",
-                "type": "Port Authority",
-                "location": "Busan",
                 "name": "부산항만공사",
-                "industry": "Maritime",
-                "sector": "Transport"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Busan",
-            "properties": {
-                "name": "Busan"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Los Angeles",
-            "properties": {
-                "name": "Los Angeles"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "Long Beach",
-            "properties": {
-                "name": "Long Beach"
-            }
-        },
-        {
-            "label": "LogisticsCenter",
-            "name": "BPA 해외물류센터",
-            "properties": {
-                "region": "International",
-                "centerType": "Logistics Center",
-                "location": "Global",
-                "center_type": "Sea and Air Logistics",
-                "name": "BPA 해외물류센터",
-                "operator": "부산항만공사"
+                "institutionType": "Public",
+                "role": "Support"
             }
         },
         {
             "label": "Agreement",
             "name": "글로벌 물류 지원 업무협약",
             "properties": {
-                "agreement_date": "현재년도는 제공되지 않음",
-                "agreement_type": "Logistics Support Agreement",
-                "date": "2023-09-14",
-                "purpose": "Global logistics support for SMEs",
-                "location": "부산항만공사 본사",
-                "title": "글로벌 물류 지원 업무협약",
-                "id": "N/A",
                 "name": "글로벌 물류 지원 업무협약",
-                "agreement_name": "Global Logistics Support Agreement",
-                "type": "협약"
+                "date": "2023-09-14",
+                "location": "부산항만공사 본사",
+                "purpose": "수출 중소벤처기업의 물류애로 해소"
             }
         },
         {
-            "label": "Platform",
-            "name": "스마트트레이드허브",
+            "label": "LogisticsCenter",
+            "name": "미국 로스앤젤레스·롱비치 물류센터",
             "properties": {
-                "type": "Logistics Platform",
-                "name": "스마트트레이드허브"
+                "name": "미국 로스앤젤레스·롱비치 물류센터",
+                "type": "Overseas",
+                "location": "미국 로스앤젤레스·롱비치"
             }
         },
         {
-            "label": "SME",
-            "name": "South Korean SMEs",
+            "label": "Service",
+            "name": "항공·해운 통합물류 지원 플랫폼",
             "properties": {
-                "industry": "Various",
-                "name": "South Korean SMEs",
-                "category": "전문",
-                "location": "South Korea",
-                "partner_since_year": 2023,
-                "company_id": "N/A"
+                "name": "항공·해운 통합물류 지원 플랫폼",
+                "serviceType": "Integrated Logistics",
+                "type": "Platform"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "부산",
+            "properties": {
+                "name": "부산",
+                "type": "Local"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "인천",
+            "properties": {
+                "name": "인천",
+                "type": "Local"
+            }
+        },
+        {
+            "label": "Region",
+            "name": "여수 광양",
+            "properties": {
+                "name": "여수 광양",
+                "type": "Local"
+            }
+        },
+        {
+            "label": "ExportSME",
+            "name": "한국 중소벤처기업",
+            "properties": {
+                "name": "한국 중소벤처기업",
+                "industry": "Various"
+            }
+        },
+        {
+            "label": "Executive",
+            "name": "강석진",
+            "properties": {
+                "name": "강석진",
+                "title": "이사장"
             }
         }
     ],
     "relations": [
-        {
-            "start_node": "중소벤처기업진흥공단",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "부산항만공사",
-            "properties": {}
-        },
-        {
-            "start_node": "부산항만공사",
-            "relationship": "OPERATES",
-            "end_node": "BPA 해외물류센터",
-            "properties": {}
-        },
         {
             "start_node": "중소벤처기업진흥공단",
             "relationship": "SIGNED_AGREEMENT",
@@ -114,39 +95,49 @@
             "properties": {}
         },
         {
-            "start_node": "글로벌 물류 지원 업무협약",
-            "relationship": "UTILIZES_CENTER",
-            "end_node": "BPA 해외물류센터",
+            "start_node": "부산항만공사",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "글로벌 물류 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "미국 로스앤젤레스·롱비치 물류센터",
+            "relationship": "PROVIDES_SUPPORT_TO",
+            "end_node": "한국 중소벤처기업",
+            "properties": {
+                "support_type": "Logistics Services"
+            }
+        },
+        {
+            "start_node": "항공·해운 통합물류 지원 플랫폼",
+            "relationship": "PROVIDES_SUPPORT_TO",
+            "end_node": "한국 중소벤처기업",
+            "properties": {
+                "support_type": "Logistics Integration"
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES",
+            "end_node": "항공·해운 통합물류 지원 플랫폼",
+            "properties": {}
+        },
+        {
+            "start_node": "부산",
+            "relationship": "LOCATED_IN",
+            "end_node": "초기 해상물류 거점",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "LEADS",
+            "end_node": "중소벤처기업진흥공단",
             "properties": {}
         },
         {
             "start_node": "글로벌 물류 지원 업무협약",
             "relationship": "INVOLVES",
-            "end_node": "South Korean SMEs",
-            "properties": {}
-        },
-        {
-            "start_node": "스마트트레이드허브",
-            "relationship": "INTEGRATES_WITH",
-            "end_node": "BPA 해외물류센터",
-            "properties": {}
-        },
-        {
-            "start_node": "BPA 해외물류센터",
-            "relationship": "LOCATED_IN",
-            "end_node": "Los Angeles",
-            "properties": {}
-        },
-        {
-            "start_node": "BPA 해외물류센터",
-            "relationship": "LOCATED_IN",
-            "end_node": "Long Beach",
-            "properties": {}
-        },
-        {
-            "start_node": "South Korean SMEs",
-            "relationship": "LOCATED_IN",
-            "end_node": "Busan",
+            "end_node": "한국 중소벤처기업",
             "properties": {}
         }
     ]

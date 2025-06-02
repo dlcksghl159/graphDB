@@ -1,62 +1,76 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "Company",
       "properties": {
-        "role": "String",
-        "cloud_expertise": "Boolean"
+        "name": "string",
+        "industry": "string"
       }
     },
     {
-      "label": "Solution",
-      "name": "String",
+      "label": "PRODUCT",
+      "name": "Product",
       "properties": {
-        "category": "String",
-        "model": "String",
-        "automation_rate": "Int"
+        "name": "string",
+        "category": "string"
       }
     },
     {
-      "label": "Person",
-      "name": "String",
+      "label": "PERSON",
+      "name": "Person",
       "properties": {
-        "title": "String"
+        "name": "string"
       }
     },
     {
-      "label": "Feature",
-      "name": "String",
+      "label": "FEATURE",
+      "name": "Feature",
       "properties": {
-        "description": "String"
+        "name": "string",
+        "description": "string"
+      }
+    },
+    {
+      "label": "SERVICE_MODEL",
+      "name": "ServiceModel",
+      "properties": {
+        "name": "string",
+        "payment_model": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Solution",
+      "start_node": "COMPANY",
+      "relationship": "PROVIDES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Solution",
+      "start_node": "PRODUCT",
       "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
+      "end_node": "FEATURE",
       "properties": {}
     },
     {
-      "start_node": "Solution",
-      "relationship": "DEPLOYED_TO",
-      "end_node": "Company",
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "HAS_SERVICE_MODEL",
+      "end_node": "SERVICE_MODEL",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "ADOPTS",
+      "end_node": "PRODUCT",
       "properties": {
-        "date": "Date"
+        "automation_rate": "int"
       }
     }
   ]

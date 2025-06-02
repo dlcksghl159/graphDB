@@ -1,35 +1,51 @@
 {
     "nodes": [
         {
-            "label": "Organization",
+            "label": "PartnerCompany",
             "name": "롯데웰푸드",
             "properties": {
-                "type": "Corporation",
-                "location": "대한민국",
-                "name": "롯데웰푸드",
-                "industry": "Food Manufacturing"
+                "industry": "식품 제조업"
             }
         },
         {
-            "label": "Agreement",
-            "name": "협력사 ESG 지원사업 업무협약",
+            "label": "Organization",
+            "name": "소상공인시장진흥공단",
             "properties": {
-                "date": "2025",
-                "purpose": "협력사 ESG 지원",
-                "location": "인천 송도",
-                "title": "협력사 ESG 지원사업 업무협약"
+                "name": "소상공인시장진흥공단",
+                "type": "정부기관",
+                "role": "지원 및 협력"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "밀키트",
+            "properties": {
+                "category": "HMR",
+                "type": "즉석조리식품"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "롯데웰푸드",
-            "relationship": "EXECUTES_PROJECT",
-            "end_node": "협력사 ESG 지원사업 업무협약",
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "HAS_PARTNERSHIP_WITH",
+            "end_node": "롯데웰푸드",
             "properties": {
-                "project_name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-                "start_date": "2023-03",
-                "target_participants": "백년가게 및 백년소공인"
+                "project_name": "백년소상공인 상생프로젝트",
+                "agreement_date": "2023-03"
+            }
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "DEVELOPS_PRODUCT_WITH",
+            "end_node": "밀키트",
+            "properties": {
+                "project": "공동 제품 개발",
+                "includes": [
+                    "가정간편식",
+                    "즉석섭취식품",
+                    "즉석조리식품"
+                ]
             }
         }
     ]

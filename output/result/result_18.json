@@ -4,37 +4,8 @@
             "label": "Company",
             "name": "신일전자",
             "properties": {
-                "name": "신일전자",
-                "stock_code": "002700",
-                "company_name": "신일전자",
-                "industry": "",
-                "role": "",
-                "id": "",
-                "category": "",
-                "size": "",
-                "type": "",
-                "annual_revenue": null,
-                "revenue_growth_percentage": null,
-                "country": "",
-                "headquarters": "",
-                "founded_year": null,
-                "company_id": "",
-                "employee_count": null,
-                "size_category": "",
-                "location": "",
-                "total_investment": null,
-                "funding_stage": "",
-                "ipo_target_year": null,
-                "vision": "",
-                "cloud_expertise": null,
-                "targetRevenue": null,
-                "region": "",
-                "companyName": "신일전자",
-                "industryType": "",
-                "founding_year": null,
-                "market_share": "",
-                "companyId": "",
-                "company_type": ""
+                "ticker": "002700",
+                "name": "신일전자"
             }
         },
         {
@@ -42,99 +13,56 @@
             "name": "BLDC 에어 서큘레이터 S10 SE",
             "properties": {
                 "name": "BLDC 에어 서큘레이터 S10 SE",
-                "category": "가전제품",
-                "output_power": "",
-                "product_type": "",
-                "id": "",
-                "cumulative_sales": 3900000,
-                "price": 159000,
-                "motor_type": "BLDC",
-                "power_consumption_w": 1.7,
-                "noise_level_db": 18.5,
-                "launch_datetime": "2023-04-14T21:45",
-                "colors": "화이트, 뉴트럴그레이",
-                "release_date": "2023-04-14",
-                "product_id": "",
-                "type": "",
-                "launch_year": null,
-                "launchYear": null,
-                "active_ingredient": "",
-                "therapy_area": "",
-                "generic_name": "",
-                "feature": "고성능 감성 디자인, 마그네틱 리모컨",
-                "productName": "BLDC 에어 서큘레이터 S10 SE",
-                "productType": "",
-                "releaseDate": "2023-04-14",
-                "preheatTime": "",
-                "design": "",
-                "portability": "",
-                "durability": "",
-                "temperatureLevels": "",
-                "safetyFeatures": "",
-                "productId": "",
-                "generation": ""
+                "product_name": "BLDC 에어 서큘레이터 S10 SE"
             }
         },
         {
-            "label": "BroadcastEvent",
-            "name": "성유리 에디션 방송",
+            "label": "Edition",
+            "name": "성유리 에디션",
             "properties": {
-                "id": "",
-                "date_time": "2023-04-14T21:45",
-                "channel": "GS 홈쇼핑",
-                "edition": "성유리 에디션"
+                "name": "성유리 에디션",
+                "benefit": "특별 혜택"
             }
         },
         {
-            "label": "Promotion",
-            "name": "모바일 일시불 카드 결제 할인",
+            "label": "SalesChannel",
+            "name": "GS 홈쇼핑",
             "properties": {
-                "id": "",
-                "discount_rate": 0.07,
-                "discounted_price": null,
-                "bundle_price": null,
-                "startDate": "",
-                "endDate": "",
-                "platform": "모바일"
+                "name": "GS 홈쇼핑"
             }
         },
         {
-            "label": "Promotion",
-            "name": "더블 구성 할인",
+            "label": "Pricing",
+            "name": "단품가",
             "properties": {
-                "id": "",
-                "discount_rate": null,
-                "discounted_price": null,
-                "bundle_price": 240000,
-                "startDate": "",
-                "endDate": "",
-                "platform": ""
+                "price": "159000",
+                "discount_rate": "7%"
             }
         }
     ],
     "relations": [
         {
             "start_node": "신일전자",
-            "relationship": "DEVELOPS",
+            "relationship": "LAUNCHED",
             "end_node": "BLDC 에어 서큘레이터 S10 SE",
             "properties": {}
         },
         {
             "start_node": "BLDC 에어 서큘레이터 S10 SE",
-            "relationship": "LAUNCHED_AT",
-            "end_node": "성유리 에디션 방송",
+            "relationship": "AVAILABLE_IN",
+            "end_node": "성유리 에디션",
             "properties": {}
         },
         {
-            "start_node": "BLDC 에어 서큘레이터 S10 SE",
-            "relationship": "UNDER_PROMOTION",
-            "end_node": "모바일 일시불 카드 결제 할인",
+            "start_node": "성유리 에디션",
+            "relationship": "HAS_PRICING",
+            "end_node": "단품가",
             "properties": {}
         },
         {
-            "start_node": "BLDC 에어 서큘레이터 S10 SE",
-            "relationship": "UNDER_PROMOTION",
-            "end_node": "더블 구성 할인",
+            "start_node": "GS 홈쇼핑",
+            "relationship": "HOSTS",
+            "end_node": "성유리 에디션",
             "properties": {}
         }
     ]

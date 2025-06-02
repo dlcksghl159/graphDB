@@ -4,93 +4,187 @@
             "label": "Organization",
             "name": "중소벤처기업진흥공단",
             "properties": {
-                "category": "",
-                "type": "공공기관",
-                "location": "서울",
+                "org_id": "",
                 "name": "중소벤처기업진흥공단",
-                "industry": "정부",
-                "sector": "공공"
+                "type": "",
+                "location": "",
+                "category": "",
+                "sector": "",
+                "role": "",
+                "orgId": "",
+                "orgName": "",
+                "website": "",
+                "established_year": null,
+                "industry": ""
             }
         },
         {
             "label": "Organization",
             "name": "부산항만공사",
             "properties": {
-                "category": "",
-                "type": "공공기관",
-                "location": "부산",
+                "org_id": "",
                 "name": "부산항만공사",
-                "industry": "물류",
-                "sector": "공공"
+                "type": "",
+                "location": "",
+                "category": "",
+                "sector": "",
+                "role": "",
+                "orgId": "",
+                "orgName": "",
+                "website": "",
+                "established_year": null,
+                "industry": ""
+            }
+        },
+        {
+            "label": "Agreement",
+            "name": "수출 중소벤처기업 물류 지원 업무협약",
+            "properties": {
+                "name": "수출 중소벤처기업 물류 지원 업무협약",
+                "date": "",
+                "title": "",
+                "location": "",
+                "agreement_id": "",
+                "purpose": "글로벌 통상 물류 환경 변화 대비 및 안정적인 수출 기반 마련",
+                "scope": "",
+                "agreement_date": "",
+                "description": ""
+            }
+        },
+        {
+            "label": "ExportSME",
+            "name": "중소벤처기업",
+            "properties": {
+                "name": "중소벤처기업",
+                "industry": ""
+            }
+        },
+        {
+            "label": "Platform",
+            "name": "스마트트레이드허브",
+            "properties": {
+                "platform_id": "",
+                "name": "스마트트레이드허브",
+                "type": ""
+            }
+        },
+        {
+            "label": "LogisticsCenter",
+            "name": "해외물류센터",
+            "properties": {
+                "center_id": "",
+                "name": "해외물류센터",
+                "type": "",
+                "location": ""
             }
         },
         {
             "label": "LogisticsCenter",
             "name": "LA·LB 해외물류센터",
             "properties": {
-                "region": "미국 로스앤젤레스·롱비치",
-                "centerType": "해외물류센터",
-                "location": "미국 로스앤젤레스·롱비치",
-                "center_type": "해외",
+                "center_id": "",
                 "name": "LA·LB 해외물류센터",
-                "operator": "부산항만공사"
+                "type": "",
+                "location": ""
             }
         },
         {
-            "label": "LogisticsPlatform",
-            "name": "스마트트레이드허브",
+            "label": "Region",
+            "name": "부산",
             "properties": {
-                "description": "수출 중소벤처기업을 위한 통합물류 지원 플랫폼",
-                "platform_type": "통합물류 플랫폼"
+                "name": "부산",
+                "type": ""
             }
         },
         {
-            "label": "Agreement",
-            "name": "글로벌 물류 지원 협약",
+            "label": "Region",
+            "name": "인천",
             "properties": {
-                "agreement_date": "2023-10-14",
-                "agreement_type": "업무협약",
-                "date": "2023-10-14",
-                "purpose": "수출 중소벤처기업의 글로벌 물류 지원",
-                "location": "부산",
-                "title": "글로벌 물류 지원 협약",
-                "id": "12345",
-                "type": "MOU"
+                "name": "인천",
+                "type": ""
+            }
+        },
+        {
+            "label": "Region",
+            "name": "여수 광양",
+            "properties": {
+                "name": "여수 광양",
+                "type": ""
+            }
+        },
+        {
+            "label": "Person",
+            "name": "강석진",
+            "properties": {
+                "name": "강석진"
             }
         }
     ],
     "relations": [
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "부산항만공사",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "수출 중소벤처기업 물류 지원 업무협약",
             "properties": {}
         },
         {
-            "start_node": "중소벤처기업진흥공단",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "부산항만공사",
-            "properties": {
-                "agreement_name": "글로벌 물류 지원 협약",
-                "date": "2023-10-14"
-            }
+            "start_node": "부산항만공사",
+            "relationship": "SIGNED_AGREEMENT",
+            "end_node": "수출 중소벤처기업 물류 지원 업무협약",
+            "properties": {}
         },
         {
-            "start_node": "스마트트레이드허브",
-            "relationship": "LINKS",
+            "start_node": "수출 중소벤처기업 물류 지원 업무협약",
+            "relationship": "INCLUDES_PROGRAM",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "수출 중소벤처기업 물류 지원 업무협약",
+            "relationship": "INCLUDES_PROGRAM",
+            "end_node": "해외물류센터",
+            "properties": {}
+        },
+        {
+            "start_node": "수출 중소벤처기업 물류 지원 업무협약",
+            "relationship": "INVOLVES",
+            "end_node": "중소벤처기업",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업",
+            "relationship": "USES_LOGISTICS_CENTER",
             "end_node": "LA·LB 해외물류센터",
             "properties": {}
         },
         {
-            "start_node": "글로벌 물류 지원 협약",
-            "relationship": "INVOLVES",
-            "end_node": "중소벤처기업진흥공단",
+            "start_node": "스마트트레이드허브",
+            "relationship": "CONNECTS_WITH_LOGISTICS_CENTER",
+            "end_node": "해외물류센터",
             "properties": {}
         },
         {
-            "start_node": "글로벌 물류 지원 협약",
-            "relationship": "INVOLVES",
-            "end_node": "부산항만공사",
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "부산",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "인천",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "OPERATES_IN",
+            "end_node": "여수 광양",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "LEADS",
+            "end_node": "중소벤처기업진흥공단",
             "properties": {}
         }
     ]

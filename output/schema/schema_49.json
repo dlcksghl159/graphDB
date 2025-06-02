@@ -1,18 +1,33 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "String",
-      "properties": {
-        "category": "String"
-      }
-    },
-    {
       "label": "Event",
       "name": "String",
       "properties": {
-        "date": "String",
-        "location": "String"
+        "date": "string",
+        "location": "string",
+        "edition": "int"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "type": "string"
+      }
+    },
+    {
+      "label": "Program",
+      "name": "String",
+      "properties": {
+        "programType": "string"
+      }
+    },
+    {
+      "label": "Institution",
+      "name": "String",
+      "properties": {
+        "role": "string"
       }
     },
     {
@@ -20,52 +35,63 @@
       "name": "String",
       "properties": {
         "count": "int",
-        "total_amount": "int"
+        "amount": "int"
       }
     },
     {
-      "label": "PurchasePolicy",
+      "label": "SupportPlan",
       "name": "String",
       "properties": {
-        "details": "String"
+        "startYear": "int",
+        "endYear": "int"
       }
     },
     {
-      "label": "Organization",
+      "label": "Region",
       "name": "String",
-      "properties": {
-        "type": "String"
-      }
+      "properties": {}
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "PARTICIPATED_IN",
+      "start_node": "Institution",
+      "relationship": "HOSTED",
       "end_node": "Event",
       "properties": {}
     },
     {
       "start_node": "Event",
-      "relationship": "INCLUDES_CONSULTATION",
-      "end_node": "Consultation",
+      "relationship": "HELD_IN",
+      "end_node": "Region",
+      "properties": {}
+    },
+    {
+      "start_node": "Program",
+      "relationship": "PART_OF",
+      "end_node": "Event",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "ENGAGED_IN",
-      "end_node": "Consultation",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "Program",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "PurchasePolicy",
+      "start_node": "Consultation",
+      "relationship": "OCCURRED_IN",
+      "end_node": "Program",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "HOSTED",
+      "start_node": "Consultation",
+      "relationship": "INVOLVES_COMPANY",
+      "end_node": "Company",
+      "properties": {}
+    },
+    {
+      "start_node": "SupportPlan",
+      "relationship": "RELATES_TO",
       "end_node": "Event",
       "properties": {}
     }

@@ -1,9 +1,10 @@
 {
   "nodes": [
     {
-      "label": "Institution",
-      "name": "Institution",
+      "label": "Organization",
+      "name": "기관",
       "properties": {
+        "org_id": "string",
         "name": "string",
         "type": "string",
         "location": "string"
@@ -11,110 +12,92 @@
     },
     {
       "label": "Agreement",
-      "name": "Agreement",
+      "name": "업무협약",
       "properties": {
+        "agreement_id": "string",
         "title": "string",
         "date": "string"
       }
     },
     {
       "label": "Program",
-      "name": "Program",
+      "name": "지식재산공제사업",
       "properties": {
+        "program_id": "string",
         "name": "string",
-        "introduced_year": "int",
-        "purpose": "string"
-      }
-    },
-    {
-      "label": "Service",
-      "name": "Service",
-      "properties": {
-        "name": "string",
-        "description": "string"
+        "description": "string",
+        "start_year": "int"
       }
     },
     {
       "label": "Event",
-      "name": "Event",
+      "name": "설명회",
       "properties": {
+        "event_id": "string",
         "name": "string",
-        "date": "string"
+        "date": "string",
+        "type": "string"
       }
     },
     {
       "label": "Company",
-      "name": "Company",
+      "name": "기업",
       "properties": {
+        "company_id": "string",
         "name": "string",
         "size": "string",
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Region",
-      "name": "Region",
-      "properties": {
-        "name": "string"
+        "region": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Institution",
-      "relationship": "SIGNED_AGREEMENT_WITH",
-      "end_node": "Institution",
+      "start_node": "Organization",
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "HOSTED",
+      "end_node": "Event",
       "properties": {
-        "agreement_date": "string"
+        "purpose": "string"
       }
     },
     {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "PROVIDES",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "HOSTS",
+      "start_node": "Company",
+      "relationship": "ATTENDED",
       "end_node": "Event",
       "properties": {}
     },
     {
-      "start_node": "Service",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "TARGETS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
       "start_node": "Company",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
+      "relationship": "ENROLLED_IN",
+      "end_node": "Program",
       "properties": {}
     },
     {
       "start_node": "Program",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "Institution",
+      "relationship": "INITIATED_BY",
+      "end_node": "Organization",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "TARGETS",
+      "start_node": "Organization",
+      "relationship": "PROVIDES_SUPPORT",
       "end_node": "Company",
-      "properties": {}
+      "properties": {
+        "support_type": "string"
+      }
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "COLLABORATES_WITH",
+      "end_node": "Organization",
+      "properties": {
+        "context": "string"
+      }
     }
   ]
 }

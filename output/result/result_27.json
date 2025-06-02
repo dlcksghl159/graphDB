@@ -4,121 +4,139 @@
             "label": "Company",
             "name": "Samsung Biologics",
             "properties": {
-                "name": "Samsung Biologics",
-                "annual_revenue": 5570500000,
-                "industry": "Biotechnology"
+                "industry": "Pharmaceutical"
             }
         },
         {
             "label": "Company",
             "name": "Celltrion",
             "properties": {
-                "name": "Celltrion",
-                "annual_revenue": 5000000000,
-                "industry": "Biotechnology"
+                "industry": "Pharmaceutical"
             }
         },
         {
-            "label": "Market",
-            "name": "USA",
+            "label": "SalesTarget",
+            "name": "Samsung Biologics 2023",
             "properties": {
-                "name": "USA",
-                "region": "North America"
+                "year": 2023,
+                "targetRevenue": 5570500000
             }
         },
         {
-            "label": "MarketRegion",
-            "name": "International",
+            "label": "SalesTarget",
+            "name": "Celltrion 2023",
             "properties": {
-                "regionName": "International"
+                "year": 2023,
+                "targetRevenue": 5000000000
+            }
+        },
+        {
+            "label": "FinancialReport",
+            "name": "Samsung Biologics Q1 2023",
+            "properties": {
+                "revenue": 1298300000,
+                "operatingProfit": 488600000,
+                "netProfit": 375500000,
+                "revenueGrowthRate": 37.1,
+                "operatingProfitGrowthRate": 119.9,
+                "netProfitGrowthRate": 109.3,
+                "quarter": "Q1",
+                "year": 2023
+            }
+        },
+        {
+            "label": "FinancialReport",
+            "name": "Celltrion Q1 2023",
+            "properties": {
+                "revenue": 841900000,
+                "operatingProfit": 149400000,
+                "netProfit": 108300000,
+                "revenueGrowthRate": 14.2,
+                "operatingProfitGrowthRate": 867.9,
+                "netProfitGrowthRate": 421.6,
+                "quarter": "Q1",
+                "year": 2023
             }
         },
         {
             "label": "Product",
-            "name": "Ramcima",
+            "name": "Remsima",
             "properties": {
-                "name": "Ramcima",
-                "productType": "Biosimilar"
+                "category": "Biosimilar"
             }
         },
         {
             "label": "Product",
             "name": "Truxima",
             "properties": {
-                "name": "Truxima",
-                "productType": "Biosimilar"
-            }
-        },
-        {
-            "label": "Quarter",
-            "name": "Q1 2023",
-            "properties": {
-                "year": 2023,
-                "period": "Q1"
+                "category": "Biosimilar"
             }
         },
         {
             "label": "TariffPolicy",
-            "name": "Trump Drug Tariff",
+            "name": "US Drug Tariff Policy",
             "properties": {
-                "name": "Trump Drug Tariff",
-                "imposingCountry": "USA"
+                "name": "US Drug Tariff",
+                "rate": 0.0,
+                "effective_date": "2023-10",
+                "scope": "Pharmaceuticals",
+                "measures": "Hinting at potential inclusion"
             }
         }
     ],
     "relations": [
         {
             "start_node": "Samsung Biologics",
-            "relationship": "OPERATES_IN",
-            "end_node": "Biotechnology",
+            "relationship": "HAS_SALES_TARGET",
+            "end_node": "Samsung Biologics 2023",
             "properties": {}
         },
         {
             "start_node": "Celltrion",
-            "relationship": "OPERATES_IN",
-            "end_node": "Biotechnology",
-            "properties": {}
-        },
-        {
-            "start_node": "Samsung Biologics",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "International",
-            "properties": {}
-        },
-        {
-            "start_node": "Celltrion",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "International",
-            "properties": {}
-        },
-        {
-            "start_node": "Ramcima",
-            "relationship": "EXPORTED_TO",
-            "end_node": "USA",
-            "properties": {}
-        },
-        {
-            "start_node": "Truxima",
-            "relationship": "EXPORTED_TO",
-            "end_node": "USA",
-            "properties": {}
-        },
-        {
-            "start_node": "Trump Drug Tariff",
-            "relationship": "APPLIES_TO",
-            "end_node": "Biosimilar",
+            "relationship": "HAS_SALES_TARGET",
+            "end_node": "Celltrion 2023",
             "properties": {}
         },
         {
             "start_node": "Samsung Biologics",
             "relationship": "HAS_REPORT",
-            "end_node": "Q1 2023",
+            "end_node": "Samsung Biologics Q1 2023",
             "properties": {}
         },
         {
             "start_node": "Celltrion",
             "relationship": "HAS_REPORT",
-            "end_node": "Q1 2023",
+            "end_node": "Celltrion Q1 2023",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "DEVELOPED",
+            "end_node": "Remsima",
+            "properties": {}
+        },
+        {
+            "start_node": "Celltrion",
+            "relationship": "DEVELOPED",
+            "end_node": "Truxima",
+            "properties": {}
+        },
+        {
+            "start_node": "US Drug Tariff Policy",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "Remsima",
+            "properties": {}
+        },
+        {
+            "start_node": "US Drug Tariff Policy",
+            "relationship": "AFFECTS_PRODUCT",
+            "end_node": "Truxima",
+            "properties": {}
+        },
+        {
+            "start_node": "Samsung Biologics",
+            "relationship": "COMPETES_WITH",
+            "end_node": "Celltrion",
             "properties": {}
         }
     ]

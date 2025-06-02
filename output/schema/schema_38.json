@@ -2,107 +2,130 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "company",
       "properties": {
-        "company_id": "string",
-        "name": "string",
-        "industry": "string"
+        "name": "string"
       }
     },
     {
-      "label": "Subsidiary",
-      "name": "Subsidiary",
+      "label": "LegalEntity",
+      "name": "subsidiary",
       "properties": {
-        "subsidiary_id": "string",
         "name": "string",
         "country": "string"
       }
     },
     {
       "label": "Product",
-      "name": "Product",
+      "name": "product",
       "properties": {
-        "product_id": "string",
         "name": "string",
-        "generic_name": "string",
-        "category": "string"
+        "activeIngredient": "string",
+        "therapyArea": "string"
       }
     },
     {
       "label": "Partner",
-      "name": "Partner",
+      "name": "partner",
       "properties": {
-        "partner_id": "string",
-        "name": "string",
-        "role": "string"
-      }
-    },
-    {
-      "label": "Market",
-      "name": "Market",
-      "properties": {
-        "market_id": "string",
-        "region": "string",
-        "market_type": "string"
+        "name": "string"
       }
     },
     {
       "label": "Tender",
-      "name": "Tender",
+      "name": "tender",
       "properties": {
-        "tender_id": "string",
         "name": "string",
-        "start_date": "string",
-        "end_date": "string"
+        "type": "string",
+        "startDate": "string",
+        "endDate": "string"
+      }
+    },
+    {
+      "label": "Market",
+      "name": "market",
+      "properties": {
+        "country": "string",
+        "segmentType": "string"
+      }
+    },
+    {
+      "label": "Institution",
+      "name": "institution",
+      "properties": {
+        "name": "string",
+        "institutionType": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "HAS_SUBSIDIARY",
-      "end_node": "Subsidiary",
+      "relationship": "OWNS",
+      "end_node": "LegalEntity",
       "properties": {}
     },
     {
-      "start_node": "Subsidiary",
+      "start_node": "LegalEntity",
       "relationship": "OPERATES_IN",
       "end_node": "Market",
       "properties": {}
     },
     {
-      "start_node": "Subsidiary",
-      "relationship": "COLLABORATES_WITH",
+      "start_node": "LegalEntity",
+      "relationship": "PARTNERED_WITH",
       "end_node": "Partner",
       "properties": {}
     },
     {
-      "start_node": "Subsidiary",
+      "start_node": "LegalEntity",
       "relationship": "SELLS",
       "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "LAUNCHED",
+      "end_node": "Product",
       "properties": {
-        "since": "string"
+        "date": "string"
       }
     },
     {
-      "start_node": "Subsidiary",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Tender",
+      "start_node": "Tender",
+      "relationship": "HELD_IN",
+      "end_node": "Market",
       "properties": {}
     },
     {
       "start_node": "Tender",
-      "relationship": "AWARDED_PRODUCT",
-      "end_node": "Product",
+      "relationship": "ORGANIZED_BY",
+      "end_node": "Institution",
+      "properties": {}
+    },
+    {
+      "start_node": "LegalEntity",
+      "relationship": "SUPPLIES",
+      "end_node": "Tender",
       "properties": {
-        "duration": "string"
+        "startDate": "string",
+        "endDate": "string"
       }
     },
     {
-      "start_node": "Market",
-      "relationship": "HOSTS",
+      "start_node": "Product",
+      "relationship": "INCLUDED_IN",
       "end_node": "Tender",
       "properties": {}
+    },
+    {
+      "start_node": "Product",
+      "relationship": "HAS_MARKET_SHARE",
+      "end_node": "Market",
+      "properties": {
+        "percentage": "float",
+        "period": "string"
+      }
     }
   ]
 }

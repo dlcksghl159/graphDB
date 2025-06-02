@@ -1,96 +1,106 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "Commission",
+      "name": "String",
       "properties": {
-        "company_name": "string",
-        "industry": "string",
-        "role": "string"
+        "name": "string"
+      }
+    },
+    {
+      "label": "Company",
+      "name": "String",
+      "properties": {
+        "type": "string",
+        "industry": "string"
       }
     },
     {
       "label": "ESGProgram",
-      "name": "ESGProgram",
+      "name": "String",
       "properties": {
-        "program_name": "string",
+        "year": "int",
+        "participationYears": "int"
+      }
+    },
+    {
+      "label": "ESGMetrics",
+      "name": "String",
+      "properties": {
+        "complianceRate": "float",
         "year": "int"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
-      "properties": {
-        "agreement_date": "date",
-        "agreement_type": "string"
-      }
-    },
-    {
       "label": "Certification",
-      "name": "Certification",
+      "name": "String",
       "properties": {
-        "certification_name": "string",
         "year": "int"
       }
     },
     {
       "label": "Person",
-      "name": "Person",
+      "name": "String",
       "properties": {
-        "name": "string",
-        "title": "string"
-      }
-    },
-    {
-      "label": "Initiative",
-      "name": "Initiative",
-      "properties": {
-        "name": "string",
-        "target_year": "int"
+        "position": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
+      "start_node": "Commission",
+      "relationship": "PARTNERSHIP_AGREEMENT",
       "end_node": "Company",
-      "properties": {}
+      "properties": {
+        "date": "string",
+        "location": "string"
+      }
     },
     {
-      "start_node": "Agreement",
-      "relationship": "FOR_PROGRAM",
+      "start_node": "Company",
+      "relationship": "RUNS",
       "end_node": "ESGProgram",
+      "properties": {
+        "startYear": "int"
+      }
+    },
+    {
+      "start_node": "Company",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
+      "properties": {
+        "year": "int",
+        "supportedCount": "int"
+      }
+    },
+    {
+      "start_node": "ESGProgram",
+      "relationship": "HAS_METRIC",
+      "end_node": "ESGMetrics",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "ESGProgram",
+      "relationship": "RECEIVES_CERTIFICATION",
+      "end_node": "Certification",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "RECEIVED_CERTIFICATION",
+      "start_node": "Commission",
+      "relationship": "ISSUES",
       "end_node": "Certification",
       "properties": {}
     },
     {
       "start_node": "Person",
       "relationship": "REPRESENTS",
-      "end_node": "Company",
+      "end_node": "Commission",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "DECLARED_INITIATIVE",
-      "end_node": "Initiative",
+      "start_node": "Person",
+      "relationship": "REPRESENTS",
+      "end_node": "Company",
       "properties": {}
     }
   ]

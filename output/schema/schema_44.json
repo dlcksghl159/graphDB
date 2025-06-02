@@ -1,31 +1,24 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "Business",
+      "name": "Business",
       "properties": {
         "name": "string",
-        "type": "string"
+        "size": "string"
       }
     },
     {
       "label": "Product",
-      "name": "제품",
+      "name": "Product",
       "properties": {
         "name": "string",
         "category": "string"
       }
     },
     {
-      "label": "Country",
-      "name": "국가",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "ExportStatistic",
-      "name": "수출통계",
+      "label": "ExportData",
+      "name": "ExportData",
       "properties": {
         "period": "string",
         "amount": "float",
@@ -33,62 +26,89 @@
       }
     },
     {
-      "label": "Agency",
-      "name": "기관",
+      "label": "Country",
+      "name": "Country",
       "properties": {
         "name": "string"
       }
     },
     {
-      "label": "TariffMeasure",
-      "name": "관세조치",
+      "label": "GovernmentAgency",
+      "name": "GovernmentAgency",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "Person",
+      "name": "Person",
       "properties": {
         "name": "string",
-        "enact_date": "string"
+        "role": "string"
+      }
+    },
+    {
+      "label": "TariffMeasure",
+      "name": "TariffMeasure",
+      "properties": {
+        "name": "string",
+        "effective_date": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_EXPORT_STATISTIC",
-      "end_node": "ExportStatistic",
+      "start_node": "Business",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
+      "start_node": "Business",
+      "relationship": "HAS_EXPORT_DATA",
+      "end_node": "ExportData",
+      "properties": {}
+    },
+    {
+      "start_node": "ExportData",
       "relationship": "FOR_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportStatistic",
+      "start_node": "ExportData",
       "relationship": "TO_COUNTRY",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "Agency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStatistic",
+      "start_node": "ExportData",
+      "relationship": "RECORDED_BY",
+      "end_node": "GovernmentAgency",
       "properties": {}
     },
     {
-      "start_node": "Agency",
-      "relationship": "IMPOSES",
-      "end_node": "TariffMeasure",
+      "start_node": "GovernmentAgency",
+      "relationship": "HAS_OFFICER",
+      "end_node": "Person",
+      "properties": {}
+    },
+    {
+      "start_node": "Person",
+      "relationship": "WORKS_FOR",
+      "end_node": "GovernmentAgency",
       "properties": {}
     },
     {
       "start_node": "TariffMeasure",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "Product",
+      "relationship": "AFFECTS_EXPORTDATA",
+      "end_node": "ExportData",
       "properties": {}
     },
     {
       "start_node": "TariffMeasure",
-      "relationship": "APPLIES_TO",
-      "end_node": "Country",
+      "relationship": "ISSUED_BY",
+      "end_node": "GovernmentAgency",
       "properties": {}
     }
   ]

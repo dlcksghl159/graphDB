@@ -2,113 +2,95 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "string",
+      "name": "Organization",
       "properties": {
-        "type": "string"
+        "name": "string",
+        "type": "string",
+        "industry": "string"
       }
     },
     {
       "label": "Project",
-      "name": "string",
+      "name": "Project",
       "properties": {
-        "start_date": "date",
-        "end_date": "date"
-      }
-    },
-    {
-      "label": "Business",
-      "name": "string",
-      "properties": {
-        "category": "string",
-        "years_active": "int"
-      }
-    },
-    {
-      "label": "Product",
-      "name": "string",
-      "properties": {
-        "product_type": "string"
-      }
-    },
-    {
-      "label": "RecruitmentEvent",
-      "name": "string",
-      "properties": {
-        "start_date": "date",
-        "end_date": "date"
+        "name": "string",
+        "description": "string",
+        "recruitment_start": "date",
+        "recruitment_end": "date"
       }
     },
     {
       "label": "Brand",
-      "name": "string",
-      "properties": {}
+      "name": "Brand",
+      "properties": {
+        "name": "string"
+      }
+    },
+    {
+      "label": "CompanyCategory",
+      "name": "CompanyCategory",
+      "properties": {
+        "name": "string",
+        "min_experience_years": "int",
+        "industry": "string"
+      }
+    },
+    {
+      "label": "ProductCategory",
+      "name": "ProductCategory",
+      "properties": {
+        "name": "string"
+      }
     },
     {
       "label": "Person",
-      "name": "string",
+      "name": "Person",
       "properties": {
-        "role": "string"
+        "name": "string",
+        "title": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "partners_with",
+      "relationship": "COLLABORATES_WITH",
       "end_node": "Organization",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "organizes",
+      "relationship": "INITIATES",
       "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "announces",
-      "end_node": "RecruitmentEvent",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "invites",
-      "end_node": "Business",
-      "properties": {}
-    },
-    {
-      "start_node": "RecruitmentEvent",
-      "relationship": "targets",
-      "end_node": "Business",
-      "properties": {}
-    },
-    {
-      "start_node": "Business",
-      "relationship": "participates_in",
+      "relationship": "PARTNERS_IN",
       "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Project",
-      "relationship": "develops",
-      "end_node": "Product",
+      "relationship": "TARGETS",
+      "end_node": "CompanyCategory",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "branded_as",
+      "start_node": "Project",
+      "relationship": "DEVELOPS",
       "end_node": "Brand",
       "properties": {}
     },
     {
-      "start_node": "Business",
-      "relationship": "offers",
-      "end_node": "Product",
+      "start_node": "Brand",
+      "relationship": "COVERS",
+      "end_node": "ProductCategory",
       "properties": {}
     },
     {
       "start_node": "Person",
-      "relationship": "heads",
+      "relationship": "HEADS",
       "end_node": "Organization",
       "properties": {}
     }

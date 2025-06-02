@@ -4,12 +4,8 @@
             "label": "Organization",
             "name": "소상공인시장진흥공단",
             "properties": {
-                "category": "",
-                "type": "Government Agency",
-                "location": "서울",
                 "name": "소상공인시장진흥공단",
-                "industry": "",
-                "sector": ""
+                "type": "공공기관"
             }
         },
         {
@@ -17,98 +13,88 @@
             "name": "롯데웰푸드",
             "properties": {
                 "name": "롯데웰푸드",
-                "stock_code": "",
-                "company_name": "롯데웰푸드",
-                "industry": "Food Manufacturing",
-                "role": "",
-                "id": "",
-                "category": "Large Enterprise",
-                "size": "",
-                "type": "Private",
-                "annual_revenue": 0,
-                "revenue_growth_percentage": 0,
-                "country": "한국",
-                "headquarters": "서울",
-                "founded_year": 0,
-                "company_id": "",
-                "employee_count": 0,
-                "size_category": "",
-                "location": "서울",
-                "total_investment": 0,
-                "funding_stage": "",
-                "ipo_target_year": 0,
-                "vision": "Grow and Share",
-                "cloud_expertise": false,
-                "targetRevenue": 0,
-                "region": "",
-                "companyName": "롯데웰푸드",
-                "industryType": "Food Manufacturing",
-                "founding_year": 0,
-                "market_share": "",
-                "companyId": "",
-                "company_type": "Private"
+                "industry": "식품 제조업"
+            }
+        },
+        {
+            "label": "Project",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년가게",
+            "properties": {
+                "name": "백년가게",
+                "category": "음식점업",
+                "years_in_business": 30,
+                "qualification_type": "우수 소상인"
+            }
+        },
+        {
+            "label": "SmallBusiness",
+            "name": "백년소공인",
+            "properties": {
+                "name": "백년소공인",
+                "category": "식품 제조업",
+                "years_in_business": 15,
+                "qualification_type": "숙련된 소공인"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "가정간편식",
+            "properties": {
+                "name": "가정간편식",
+                "category": "식품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "즉석섭취식품",
+            "properties": {
+                "name": "즉석섭취식품",
+                "category": "식품"
+            }
+        },
+        {
+            "label": "Product",
+            "name": "즉석조리식품",
+            "properties": {
+                "name": "즉석조리식품",
+                "category": "식품"
+            }
+        },
+        {
+            "label": "Brand",
+            "name": "식사이론",
+            "properties": {
+                "name": "식사이론"
             }
         },
         {
             "label": "Agreement",
             "name": "업무 협약",
             "properties": {
-                "agreement_date": "2023-03",
-                "agreement_type": "Collaboration",
-                "date": "2023-03",
-                "purpose": "상생프로젝트",
-                "location": "서울",
-                "title": "업무 협약",
-                "id": "",
                 "name": "업무 협약",
-                "agreement_name": "백년소상공인 상생 프로젝트",
-                "type": "Business Agreement"
+                "date": "2023-03",
+                "title": "소진공과 롯데웰푸드의 업무 협약"
             }
         },
         {
-            "label": "SupportProgram",
-            "name": "백년소상공인 상생프로젝트",
+            "label": "Person",
+            "name": "이재상",
             "properties": {
-                "name": "백년소상공인 상생프로그램",
-                "start_year": 2025,
-                "participant_count": 0,
-                "year": 2025,
-                "description": "",
-                "program_id": ""
+                "name": "이재상"
             }
         },
         {
-            "label": "SME",
-            "name": "백년가게",
+            "label": "Person",
+            "name": "박성효",
             "properties": {
-                "industry": "음식점업",
-                "name": "백년가게",
-                "category": "소기업",
-                "location": "한국",
-                "partner_since_year": 1993,
-                "company_id": ""
-            }
-        },
-        {
-            "label": "SME",
-            "name": "백년소공인",
-            "properties": {
-                "industry": "식품 제조업",
-                "name": "백년소공인",
-                "category": "소기업",
-                "location": "한국",
-                "partner_since_year": 2008,
-                "company_id": ""
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "공동 제품 개발",
-            "properties": {
-                "name": "공동 제품 개발",
-                "exportAmount": 0.0,
-                "changeRate": 0.0,
-                "exportCompanyCount": 0
+                "name": "박성효"
             }
         }
     ],
@@ -116,6 +102,14 @@
         {
             "start_node": "소상공인시장진흥공단",
             "relationship": "COLLABORATES_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {
+                "context": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트"
+            }
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "SIGNED_AGREEMENT",
             "end_node": "롯데웰푸드",
             "properties": {}
         },
@@ -132,39 +126,69 @@
             "properties": {}
         },
         {
-            "start_node": "백년가게",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "백년소상공인 상생프로그램",
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년가게",
             "properties": {}
         },
         {
-            "start_node": "백년소공인",
-            "relationship": "PARTICIPATES_IN",
-            "end_node": "백년소상공인 상생프로그램",
-            "properties": {}
-        },
-        {
-            "start_node": "백년가게",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "롯데웰푸드",
-            "properties": {}
-        },
-        {
-            "start_node": "백년소공인",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "롯데웰푸드",
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "TARGETS",
+            "end_node": "백년소공인",
             "properties": {}
         },
         {
             "start_node": "백년가게",
-            "relationship": "DEVELOPS",
-            "end_node": "공동 제품 개발",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "가정간편식",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "즉석섭취식품",
+            "properties": {}
+        },
+        {
+            "start_node": "백년가게",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "즉석조리식품",
             "properties": {}
         },
         {
             "start_node": "백년소공인",
-            "relationship": "DEVELOPS",
-            "end_node": "공동 제품 개발",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "가정간편식",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "즉석섭취식품",
+            "properties": {}
+        },
+        {
+            "start_node": "백년소공인",
+            "relationship": "PROVIDES_RECIPE",
+            "end_node": "즉석조리식품",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "BRANDED_AS",
+            "end_node": "식사이론",
+            "properties": {}
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "EMPLOYS",
+            "end_node": "박성효",
+            "properties": {}
+        },
+        {
+            "start_node": "이재상",
+            "relationship": "REPRESENTS",
+            "end_node": "소상공인시장진흥공단",
             "properties": {}
         }
     ]

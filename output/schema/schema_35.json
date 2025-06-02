@@ -2,88 +2,100 @@
   "nodes": [
     {
       "label": "Organization",
-      "name": "조직/기관",
+      "name": "Organization",
       "properties": {
         "name": "string",
-        "type": "string"
+        "type": "string",
+        "website": "string"
       }
     },
     {
       "label": "Project",
-      "name": "프로젝트",
+      "name": "Project",
       "properties": {
         "name": "string",
         "start_date": "string",
-        "end_date": "string"
+        "end_date": "string",
+        "description": "string"
       }
     },
     {
-      "label": "Company",
-      "name": "참여업체",
+      "label": "SmallBusiness",
+      "name": "SmallBusiness",
       "properties": {
         "name": "string",
-        "category": "string"
+        "category": "string",
+        "years_in_business": "int",
+        "qualification_type": "string"
       }
     },
     {
       "label": "Product",
-      "name": "제품",
+      "name": "Product",
       "properties": {
         "name": "string",
-        "type": "string"
+        "product_type": "string"
       }
     },
     {
       "label": "Brand",
-      "name": "브랜드",
+      "name": "Brand",
       "properties": {
         "name": "string"
       }
     },
     {
-      "label": "Person",
-      "name": "인물",
+      "label": "Agreement",
+      "name": "Agreement",
       "properties": {
-        "name": "string",
-        "position": "string"
+        "agreement_date": "string",
+        "description": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Organization",
-      "relationship": "SIGNED_AGREEMENT_WITH",
+      "relationship": "PARTNER_OF",
       "end_node": "Organization",
-      "properties": {
-        "date": "string"
-      }
+      "properties": {}
     },
     {
       "start_node": "Organization",
-      "relationship": "INITIATED",
+      "relationship": "HOSTS",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "PARTNERS_WITH",
       "end_node": "Project",
       "properties": {}
     },
     {
       "start_node": "Project",
-      "relationship": "RECRUITED",
-      "end_node": "Company",
-      "properties": {
-        "deadline": "string"
-      }
-    },
-    {
-      "start_node": "Project",
-      "relationship": "SELECTED",
-      "end_node": "Company",
+      "relationship": "TARGETS",
+      "end_node": "SmallBusiness",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "DEVELOPED",
+      "start_node": "SmallBusiness",
+      "relationship": "APPLIES_TO",
+      "end_node": "Project",
+      "properties": {}
+    },
+    {
+      "start_node": "Project",
+      "relationship": "DEVELOPS",
       "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Organization",
+      "relationship": "SUPPLIES",
+      "end_node": "SmallBusiness",
       "properties": {
-        "method": "string"
+        "supply_type": "string"
       }
     },
     {
@@ -93,9 +105,15 @@
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "LEADS",
-      "end_node": "Organization",
+      "start_node": "Organization",
+      "relationship": "SIGNED",
+      "end_node": "Agreement",
+      "properties": {}
+    },
+    {
+      "start_node": "SmallBusiness",
+      "relationship": "SELECTED_FOR",
+      "end_node": "Project",
       "properties": {}
     }
   ]

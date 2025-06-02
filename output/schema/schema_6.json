@@ -1,89 +1,69 @@
 {
   "nodes": [
     {
-      "label": "ExportStat",
-      "name": "수출통계",
+      "label": "Company",
+      "name": "중소기업",
       "properties": {
-        "type": "string",
-        "amount": "float",
-        "change_rate": "float",
-        "company_count": "int",
-        "consecutive_quarters": "int"
-      }
-    },
-    {
-      "label": "Period",
-      "name": "기간",
-      "properties": {
-        "year": "int",
-        "quarter": "int"
+        "name": "string",
+        "type": "string"
       }
     },
     {
       "label": "Product",
-      "name": "제품",
+      "name": "수출품목",
       "properties": {
-        "name": "string"
+        "name": "string",
+        "category": "string"
       }
     },
     {
       "label": "Country",
-      "name": "국가",
+      "name": "수출국가",
       "properties": {
         "name": "string"
       }
     },
     {
-      "label": "Agency",
-      "name": "기관",
+      "label": "ExportRecord",
+      "name": "수출기록",
       "properties": {
-        "name": "string"
+        "year": "int",
+        "quarter": "int",
+        "export_amount_usd": "float",
+        "growth_rate": "float"
       }
     },
     {
-      "label": "Person",
-      "name": "인물",
+      "label": "GovernmentAgency",
+      "name": "정부기관",
       "properties": {
-        "name": "string",
-        "title": "string"
+        "name": "string"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ExportStat",
-      "relationship": "FOR_PERIOD",
-      "end_node": "Period",
+      "start_node": "Company",
+      "relationship": "HAS_EXPORT_RECORD",
+      "end_node": "ExportRecord",
       "properties": {}
     },
     {
-      "start_node": "ExportStat",
-      "relationship": "OF_PRODUCT",
+      "start_node": "ExportRecord",
+      "relationship": "INCLUDES_PRODUCT",
       "end_node": "Product",
       "properties": {}
     },
     {
-      "start_node": "ExportStat",
-      "relationship": "TO_COUNTRY",
+      "start_node": "ExportRecord",
+      "relationship": "DESTINED_TO",
       "end_node": "Country",
       "properties": {}
     },
     {
-      "start_node": "Agency",
+      "start_node": "GovernmentAgency",
       "relationship": "PUBLISHES",
-      "end_node": "ExportStat",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Agency",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "COMMENTED_ON",
-      "end_node": "ExportStat",
+      "end_node": "ExportRecord",
       "properties": {}
     }
   ]

@@ -2,61 +2,59 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "기업",
+      "name": "Company",
       "properties": {
-        "companyName": "string",
-        "industry": "string"
+        "company_name": "string",
+        "industry": "string",
+        "founded_year": "int",
+        "employee_count": "int"
       }
     },
     {
       "label": "Factory",
-      "name": "공장",
+      "name": "Factory",
       "properties": {
-        "factoryName": "string",
+        "factory_name": "string",
         "location": "string"
       }
     },
     {
       "label": "Employee",
-      "name": "직원",
+      "name": "Employee",
       "properties": {
-        "employeeName": "string",
+        "employee_name": "string",
         "age": "int",
-        "role": "string"
+        "is_retired": "bool"
       }
     },
     {
-      "label": "GovernmentScheme",
-      "name": "지원제도",
+      "label": "Role",
+      "name": "Role",
       "properties": {
-        "schemeName": "string"
+        "role_title": "string",
+        "department": "string"
       }
     },
     {
-      "label": "Statistic",
-      "name": "통계",
+      "label": "Product",
+      "name": "Product",
       "properties": {
-        "metric": "string",
-        "value": "float",
-        "unit": "string",
-        "year": "int"
+        "product_name": "string",
+        "category": "string"
       }
     },
     {
-      "label": "Sector",
-      "name": "산업부문",
+      "label": "GovernmentProgram",
+      "name": "GovernmentProgram",
       "properties": {
-        "sectorName": "string"
+        "program_name": "string",
+        "support_type": "string",
+        "annual_benefit_min": "int",
+        "annual_benefit_max": "int"
       }
     }
   ],
   "relations": [
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Employee",
-      "properties": {}
-    },
     {
       "start_node": "Company",
       "relationship": "HAS_FACTORY",
@@ -64,33 +62,33 @@
       "properties": {}
     },
     {
-      "start_node": "Employee",
-      "relationship": "WORKS_AT",
-      "end_node": "Factory",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentScheme",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentScheme",
-      "relationship": "APPLIES_TO",
+      "start_node": "Company",
+      "relationship": "EMPLOYS",
       "end_node": "Employee",
       "properties": {}
     },
     {
-      "start_node": "Statistic",
-      "relationship": "DESCRIBES",
-      "end_node": "Sector",
+      "start_node": "Factory",
+      "relationship": "PRODUCES",
+      "end_node": "Product",
+      "properties": {}
+    },
+    {
+      "start_node": "Employee",
+      "relationship": "HAS_ROLE",
+      "end_node": "Role",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Sector",
+      "relationship": "OFFERS_PROGRAM",
+      "end_node": "GovernmentProgram",
+      "properties": {}
+    },
+    {
+      "start_node": "GovernmentProgram",
+      "relationship": "SUPPORTS",
+      "end_node": "Company",
       "properties": {}
     }
   ]

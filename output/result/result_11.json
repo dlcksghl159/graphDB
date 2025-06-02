@@ -5,118 +5,136 @@
             "name": "현대이지웰",
             "properties": {
                 "name": "현대이지웰",
-                "companyName": "현대이지웰",
-                "industry": "토탈복지솔루션",
-                "founded_year": 2021,
-                "annual_revenue": 9104000000
+                "industry": "토탈복지솔루션"
             }
         },
         {
-            "label": "Organization",
+            "label": "Company",
             "name": "현대백화점그룹",
             "properties": {
                 "name": "현대백화점그룹",
-                "type": "기업 그룹",
                 "industry": "유통"
             }
         },
         {
             "label": "WelfareMall",
-            "name": "복지몰",
+            "name": "현대이지웰 복지몰",
             "properties": {
-                "name": "복지몰",
-                "launch_year": 2020,
-                "total_transactions": 9104000000
+                "name": "현대이지웰 복지몰",
+                "rank": "1위"
             }
         },
         {
-            "label": "Region",
-            "name": "경기도",
-            "properties": {
-                "name": "경기도"
-            }
-        },
-        {
-            "label": "SME",
-            "name": "중소 협력사",
-            "properties": {
-                "name": "중소 협력사",
-                "location": "경기도",
-                "partner_since_year": 2021
-            }
-        },
-        {
-            "label": "SupportProgram",
+            "label": "Program",
             "name": "소상공인 온라인쇼핑몰 판매지원사업",
             "properties": {
                 "name": "소상공인 온라인쇼핑몰 판매지원사업",
-                "start_year": 2023
+                "year": 2023,
+                "purpose": "소상공인 제품의 온라인 판매 활성화"
             }
         },
         {
             "label": "Agreement",
-            "name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
+            "name": "다농마트 청년몰 이용 활성화 업무협약",
             "properties": {
-                "name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
-                "date": "2023-01-01"
+                "name": "다농마트 청년몰 이용 활성화 업무협약",
+                "date": "2023",
+                "purpose": "중소 협력업체 지원"
             }
         },
         {
-            "label": "Market",
-            "name": "다농마트 청년몰",
+            "label": "Region",
+            "name": "경기",
             "properties": {
-                "name": "다농마트 청년몰",
-                "market_name": "청년몰"
+                "name": "경기",
+                "type": "Province"
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "SalesRecord",
+            "name": "SalesRecord",
+            "properties": {
+                "year": 2022,
+                "export_amount": 9104.0,
+                "change_rate": 65.6
+            }
+        },
+        {
+            "label": "SalesRecord",
+            "name": "SalesRecord_중소기업",
+            "properties": {
+                "year": 2022,
+                "export_amount": 272.0,
+                "change_rate": 2600.0
+            }
+        },
+        {
+            "label": "Institution",
             "name": "한국중소벤처기업유통원",
             "properties": {
                 "name": "한국중소벤처기업유통원",
-                "agency_type": "정부 기관"
+                "institutionType": "GovernmentAgency",
+                "role": "지원기관"
             }
         }
     ],
     "relations": [
         {
             "start_node": "현대이지웰",
-            "relationship": "OPERATES_IN",
-            "end_node": "WelfareMall",
+            "relationship": "OPERATES",
+            "end_node": "현대이지웰 복지몰",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "APPLIES_FOR",
+            "end_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "SIGNED",
+            "end_node": "다농마트 청년몰 이용 활성화 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "소상공인 온라인쇼핑몰 판매지원사업",
+            "relationship": "OPERATED_BY",
+            "end_node": "한국중소벤처기업유통원",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "HAS_SALES",
+            "end_node": "SalesRecord",
+            "properties": {}
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "HAS_SALES",
+            "end_node": "SalesRecord_중소기업",
             "properties": {}
         },
         {
             "start_node": "현대백화점그룹",
-            "relationship": "HAS_SUBSIDIARY",
+            "relationship": "OWNS",
             "end_node": "현대이지웰",
             "properties": {}
         },
         {
-            "start_node": "중소 협력사",
-            "relationship": "LOCATED_IN",
-            "end_node": "경기도",
-            "properties": {}
-        },
-        {
             "start_node": "현대이지웰",
-            "relationship": "INITIATES",
-            "end_node": "SupportProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "한국중소벤처기업유통원",
-            "relationship": "LAUNCHES",
-            "end_node": "SupportProgram",
-            "properties": {}
-        },
-        {
-            "start_node": "현대이지웰",
-            "relationship": "SIGNED_AGREEMENT_WITH",
-            "end_node": "다농마트 청년몰",
+            "relationship": "SUPPORTS",
+            "end_node": "Department of 중소업체",
             "properties": {
-                "agreement_name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
-                "date": "2023-01-01"
+                "year": 2023,
+                "supportedCount": 950
             }
+        },
+        {
+            "start_node": "현대이지웰",
+            "relationship": "OPERATES_IN",
+            "end_node": "경기",
+            "properties": {}
         }
     ]
 }

@@ -2,110 +2,227 @@
     "nodes": [
         {
             "label": "Survey",
-            "name": "직장인 설문조사",
+            "name": "사람인 직장인 이모작 의향 조사",
             "properties": {
-                "title": "직장인 설문조사",
+                "id": "S20231014",
+                "title": "인생 이모작 의향",
                 "date": "2023-10-14",
-                "sampleSize": 965
+                "respondentCount": 965
             }
         },
         {
-            "label": "DemographicGroup",
-            "name": "50대 이상",
+            "label": "Reason",
+            "name": "안정적인 수입 필요",
             "properties": {
-                "ageRange": "50대 이상",
-                "percentage": 93.1
+                "name": "안정적인 수입 필요"
             }
         },
         {
-            "label": "DemographicGroup",
+            "label": "Reason",
+            "name": "정년 없이 일하기 위해",
+            "properties": {
+                "name": "정년 없이 일하기 위해"
+            }
+        },
+        {
+            "label": "Reason",
+            "name": "노후 대비",
+            "properties": {
+                "name": "노후 대비"
+            }
+        },
+        {
+            "label": "Reason",
+            "name": "원하는 일 하기 위해",
+            "properties": {
+                "name": "원하는 일 하기 위해"
+            }
+        },
+        {
+            "label": "Field",
+            "name": "창업 및 자영업",
+            "properties": {
+                "name": "창업 및 자영업"
+            }
+        },
+        {
+            "label": "Field",
+            "name": "블루칼라 직무",
+            "properties": {
+                "name": "블루칼라 직무"
+            }
+        },
+        {
+            "label": "Field",
+            "name": "화이트칼라 직무",
+            "properties": {
+                "name": "화이트칼라 직무"
+            }
+        },
+        {
+            "label": "Field",
+            "name": "전문직",
+            "properties": {
+                "name": "전문직"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "60대",
+            "properties": {
+                "name": "60대",
+                "ageRange": "60-69"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "50대",
+            "properties": {
+                "name": "50대",
+                "ageRange": "50-59"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "40대",
+            "properties": {
+                "name": "40대",
+                "ageRange": "40-49"
+            }
+        },
+        {
+            "label": "AgeGroup",
+            "name": "30대",
+            "properties": {
+                "name": "30대",
+                "ageRange": "30-39"
+            }
+        },
+        {
+            "label": "AgeGroup",
             "name": "20대",
             "properties": {
-                "ageRange": "20대",
-                "percentage": 84.8
+                "name": "20대",
+                "ageRange": "20-29"
             }
         },
         {
-            "label": "Motivation",
-            "name": "계속 안정적인 수입이 필요해서",
+            "label": "IncomeExpectation",
+            "name": "Desired Income",
             "properties": {
-                "description": "계속 안정적인 수입이 필요해서",
-                "percentage": 55.2
-            }
-        },
-        {
-            "label": "Motivation",
-            "name": "정년 없이 일하고 싶을 때까지 일하기 위해서",
-            "properties": {
-                "description": "정년 없이 일하고 싶을 때까지 일하기 위해서",
-                "percentage": 45.6
-            }
-        },
-        {
-            "label": "FinancialExpectation",
-            "name": "세후 월수입",
-            "properties": {
-                "averageMonthlyIncome": 4020000
-            }
-        },
-        {
-            "label": "PreparationActivity",
-            "name": "관련 자격증 취득 준비",
-            "properties": {
-                "name": "관련 자격증 취득 준비",
-                "percentage": 49.9
-            }
-        },
-        {
-            "label": "PreparationActivity",
-            "name": "관련 교육과정 수강",
-            "properties": {
-                "name": "관련 교육과정 수강",
-                "percentage": 28.5
+                "averageMonthlyIncome": 402
             }
         }
     ],
     "relations": [
         {
-            "start_node": "직장인 설문조사",
-            "relationship": "TARGETS",
-            "end_node": "50대 이상",
-            "properties": {}
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_REASON",
+            "end_node": "안정적인 수입 필요",
+            "properties": {
+                "rate": 55.2
+            }
         },
         {
-            "start_node": "직장인 설문조사",
-            "relationship": "TARGETS",
-            "end_node": "20대",
-            "properties": {}
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_REASON",
+            "end_node": "정년 없이 일하기 위해",
+            "properties": {
+                "rate": 45.6
+            }
         },
         {
-            "start_node": "50대 이상",
-            "relationship": "EXPRESSES_MOTIVATION",
-            "end_node": "계속 안정적인 수입이 필요해서",
-            "properties": {}
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_REASON",
+            "end_node": "노후 대비",
+            "properties": {
+                "rate": 37.3
+            }
         },
         {
-            "start_node": "50대 이상",
-            "relationship": "EXPECTS_INCOME",
-            "end_node": "세후 월수입",
-            "properties": {}
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_REASON",
+            "end_node": "원하는 일 하기 위해",
+            "properties": {
+                "rate": 24.3
+            }
+        },
+        {
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_DESIRED_FIELD",
+            "end_node": "창업 및 자영업",
+            "properties": {
+                "rate": 21.7
+            }
+        },
+        {
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_DESIRED_FIELD",
+            "end_node": "블루칼라 직무",
+            "properties": {
+                "rate": 20.4
+            }
+        },
+        {
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_DESIRED_FIELD",
+            "end_node": "화이트칼라 직무",
+            "properties": {
+                "rate": 17.8
+            }
+        },
+        {
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_DESIRED_FIELD",
+            "end_node": "전문직",
+            "properties": {
+                "rate": 8.8
+            }
+        },
+        {
+            "start_node": "60대",
+            "relationship": "HAS_INTENTION_IN",
+            "end_node": "사람인 직장인 이모작 의향 조사",
+            "properties": {
+                "intentionRate": 42.2
+            }
+        },
+        {
+            "start_node": "50대",
+            "relationship": "HAS_INTENTION_IN",
+            "end_node": "사람인 직장인 이모작 의향 조사",
+            "properties": {
+                "intentionRate": 28.5
+            }
+        },
+        {
+            "start_node": "40대",
+            "relationship": "HAS_INTENTION_IN",
+            "end_node": "사람인 직장인 이모작 의향 조사",
+            "properties": {
+                "intentionRate": 16.4
+            }
+        },
+        {
+            "start_node": "30대",
+            "relationship": "HAS_INTENTION_IN",
+            "end_node": "사람인 직장인 이모작 의향 조사",
+            "properties": {
+                "intentionRate": 6.5
+            }
         },
         {
             "start_node": "20대",
-            "relationship": "EXPRESSES_MOTIVATION",
-            "end_node": "정년 없이 일하고 싶을 때까지 일하기 위해서",
-            "properties": {}
+            "relationship": "HAS_INTENTION_IN",
+            "end_node": "사람인 직장인 이모작 의향 조사",
+            "properties": {
+                "intentionRate": 1.0
+            }
         },
         {
-            "start_node": "50대 이상",
-            "relationship": "UNDERTAKES",
-            "end_node": "관련 자격증 취득 준비",
-            "properties": {}
-        },
-        {
-            "start_node": "50대 이상",
-            "relationship": "UNDERTAKES",
-            "end_node": "관련 교육과정 수강",
+            "start_node": "사람인 직장인 이모작 의향 조사",
+            "relationship": "HAS_INCOME_EXPECTATION",
+            "end_node": "Desired Income",
             "properties": {}
         }
     ]

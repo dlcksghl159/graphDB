@@ -2,76 +2,76 @@
   "nodes": [
     {
       "label": "Company",
-      "name": "Company",
+      "name": "기업",
       "properties": {
-        "id": "String",
-        "name": "String"
+        "company_name": "string",
+        "stock_code": "string"
       }
     },
     {
       "label": "FinancialMetric",
-      "name": "FinancialMetric",
+      "name": "재무지표",
       "properties": {
-        "metric_type": "String",
-        "period": "String",
+        "metric_name": "string",
         "value": "int",
-        "unit": "String",
-        "change_percent": "float"
+        "unit": "string",
+        "year": "int",
+        "quarter": "string"
       }
     },
     {
       "label": "BusinessSegment",
-      "name": "BusinessSegment",
+      "name": "사업부문",
       "properties": {
-        "segment_type": "String"
+        "segment_name": "string"
       }
     },
     {
       "label": "Strategy",
-      "name": "Strategy",
+      "name": "경영전략",
       "properties": {
-        "description": "String"
+        "strategy_name": "string",
+        "description": "string",
+        "year": "int"
       }
     },
     {
       "label": "Market",
-      "name": "Market",
+      "name": "시장",
       "properties": {
-        "market_name": "String"
+        "market_type": "string"
       }
     }
   ],
   "relations": [
     {
       "start_node": "Company",
-      "relationship": "COMPETES_WITH",
-      "end_node": "Company",
-      "properties": {
-        "difference": "int"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_METRIC",
+      "relationship": "HAS_FINANCIAL_METRIC",
       "end_node": "FinancialMetric",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "HAS_SEGMENT",
+      "relationship": "OPERATES_IN",
       "end_node": "BusinessSegment",
       "properties": {}
     },
     {
-      "start_node": "BusinessSegment",
-      "relationship": "HAS_METRIC",
-      "end_node": "FinancialMetric",
+      "start_node": "Company",
+      "relationship": "COMPETES_WITH",
+      "end_node": "Company",
       "properties": {}
     },
     {
       "start_node": "Company",
-      "relationship": "ADOPTS_STRATEGY",
+      "relationship": "ADOPTS",
       "end_node": "Strategy",
+      "properties": {}
+    },
+    {
+      "start_node": "Strategy",
+      "relationship": "TARGETS_SEGMENT",
+      "end_node": "BusinessSegment",
       "properties": {}
     },
     {

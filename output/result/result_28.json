@@ -1,119 +1,91 @@
 {
     "nodes": [
         {
-            "label": "CrowdfundingPlatform",
+            "label": "Company",
             "name": "와디즈",
             "properties": {
-                "name": "와디즈"
-            }
-        },
-        {
-            "label": "Platform",
-            "name": "와디즈",
-            "properties": {
-                "type": "크라우드펀딩",
-                "name": "와디즈"
+                "industry": "펀딩 플랫폼"
             }
         },
         {
             "label": "Product",
-            "name": "뉴에어론 풀 체어",
+            "name": "허먼밀러 뉴에어론 풀 체어",
             "properties": {
-                "name": "뉴에어론 풀 체어",
                 "category": "홈리빙",
-                "price": 540000000
+                "price": 5400000
             }
         },
         {
             "label": "Product",
             "name": "쿠자 멀티핸들 스텐팬",
             "properties": {
-                "name": "쿠자 멀티핸들 스텐팬",
                 "category": "홈리빙",
-                "price": 210000000
+                "price": 2100000
             }
         },
         {
             "label": "Product",
             "name": "올리젯 청바지",
             "properties": {
-                "name": "올리젯 청바지",
                 "category": "패션",
-                "price": 93000000
+                "price": 930000
             }
         },
         {
-            "label": "Brand",
-            "name": "허먼밀러",
+            "label": "SalesRecord",
+            "name": "SalesRecord",
             "properties": {
-                "name": "허먼밀러"
+                "year": 2023,
+                "quarter": "Q4",
+                "export_amount": 0.0,
+                "change_rate": 0.0
             }
         },
         {
             "label": "Trend",
-            "name": "신중 소비",
+            "name": "다각형 소비",
             "properties": {
-                "description": "경기 불황 속 소비자가 가격보다 품질과 가치를 중시하는 경향"
+                "description": "내구성, 디자인, 사용자 경험 등을 종합적으로 고려하는 구매 패턴"
             }
         },
         {
-            "label": "Metric",
-            "name": "1인당 1회 평균 펀딩 금액",
+            "label": "Report",
+            "name": "2025 글로벌 소비자 트렌드 리포트",
             "properties": {
-                "metric_id": "average_funding_amount_per_person",
-                "name": "1인당 1회 평균 펀딩 금액",
-                "value": 180000,
-                "unit": "KRW"
+                "title": "2025 글로벌 소비자 트렌드 리포트",
+                "year": 2023
             }
         }
     ],
     "relations": [
         {
             "start_node": "와디즈",
-            "relationship": "HAS_CATEGORY",
-            "end_node": "홈리빙",
+            "relationship": "PRODUCES_PRODUCT",
+            "end_node": "허먼밀러 뉴에어론 풀 체어",
             "properties": {}
         },
         {
             "start_node": "와디즈",
-            "relationship": "HAS_CATEGORY",
-            "end_node": "패션",
-            "properties": {}
-        },
-        {
-            "start_node": "와디즈",
-            "relationship": "OFFERS",
-            "end_node": "뉴에어론 풀 체어",
-            "properties": {}
-        },
-        {
-            "start_node": "와디즈",
-            "relationship": "OFFERS",
+            "relationship": "PRODUCES_PRODUCT",
             "end_node": "쿠자 멀티핸들 스텐팬",
             "properties": {}
         },
         {
             "start_node": "와디즈",
-            "relationship": "OFFERS",
+            "relationship": "PRODUCES_PRODUCT",
             "end_node": "올리젯 청바지",
             "properties": {}
         },
         {
-            "start_node": "뉴에어론 풀 체어",
-            "relationship": "BRANDED_AS",
-            "end_node": "허먼밀러",
+            "start_node": "와디즈",
+            "relationship": "HAS_SALES",
+            "end_node": "SalesRecord",
             "properties": {}
         },
         {
-            "start_node": "와디즈",
-            "relationship": "TARGETS_MARKET",
-            "end_node": "트렌드",
-            "properties": {}
-        },
-        {
-            "start_node": "와디즈",
-            "relationship": "TARGETS_METRIC",
-            "end_node": "1인당 1회 평균 펀딩 금액",
+            "start_node": "2025 글로벌 소비자 트렌드 리포트",
+            "relationship": "DEFINES",
+            "end_node": "다각형 소비",
             "properties": {}
         }
     ]

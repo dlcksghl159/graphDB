@@ -1,106 +1,117 @@
 {
   "nodes": [
     {
-      "label": "Commission",
-      "name": "String",
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
       "properties": {
-        "name": "string"
+        "type": "위원회",
+        "description": "중소기업과 대기업의 동반 성장을 지원하는 위원회",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Company",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "LG이노텍",
       "properties": {
-        "type": "string",
-        "industry": "string"
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전자",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김준성"
       }
     },
     {
-      "label": "ESGProgram",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "에이피텍",
       "properties": {
-        "year": "int",
-        "participationYears": "int"
+        "full_name": "에이피텍 주식회사",
+        "industry": "제조",
+        "headquarters": "인천 송도",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "ESGMetrics",
-      "name": "String",
+      "label": "EVENT",
+      "name": "ESG 우수 중소기업 현판식",
       "properties": {
-        "complianceRate": "float",
-        "year": "int"
+        "date": "2023-10-14",
+        "type": "현판식",
+        "description": "ESG 우수 중소기업을 위한 현판식",
+        "location": "인천 송도 에이피텍"
       }
     },
     {
-      "label": "Certification",
-      "name": "String",
+      "label": "AGREEMENT",
+      "name": "협력사 ESG 지원사업 업무협약",
       "properties": {
-        "year": "int"
+        "type": "업무협약",
+        "date": "2023-10-14",
+        "description": "동반위와 LG이노텍 간의 협력사 ESG 지원사업을 위한 협약"
       }
     },
     {
-      "label": "Person",
-      "name": "String",
+      "label": "PROJECT",
+      "name": "대·중소 자율형 ESG 지원사업",
       "properties": {
-        "position": "string"
+        "description": "대기업과 중소기업 간의 자율적인 ESG 지원사업",
+        "start_date": "2023",
+        "status": "진행 중"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Commission",
-      "relationship": "PARTNERSHIP_AGREEMENT",
-      "end_node": "Company",
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "date": "string",
-        "location": "string"
+        "type": "협력사",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "RUNS",
-      "end_node": "ESGProgram",
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
       "properties": {
-        "startYear": "int"
+        "product": "제조설비"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {
-        "year": "int",
-        "supportedCount": "int"
-      }
-    },
-    {
-      "start_node": "ESGProgram",
-      "relationship": "HAS_METRIC",
-      "end_node": "ESGMetrics",
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "RECEIVES_CERTIFICATION",
-      "end_node": "Certification",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Commission",
-      "relationship": "ISSUES",
-      "end_node": "Certification",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Commission",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Company",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     }
   ]

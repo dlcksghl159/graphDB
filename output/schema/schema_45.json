@@ -1,75 +1,268 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "삼성바이오로직스",
       "properties": {
-        "name": "string",
-        "headquarters": "string"
+        "full_name": "Samsung Biologics",
+        "industry": "Biotechnology",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "COMPANY",
+      "name": "셀트리온",
       "properties": {
-        "name": "string",
-        "approval_year": "int"
+        "full_name": "Celltrion",
+        "industry": "Biotechnology",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "FinancialReport",
-      "name": "FinancialReport",
+      "label": "COMPANY",
+      "name": "유한양행",
       "properties": {
-        "quarter": "string",
-        "year": "int",
-        "revenue": "int",
-        "operating_profit": "int"
+        "full_name": "Yuhan Corporation",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "ProductType",
-      "name": "ProductType",
+      "label": "COMPANY",
+      "name": "GC녹십자",
       "properties": {
-        "type": "string"
+        "full_name": "GC Green Cross",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Market",
-      "name": "Market",
+      "label": "COMPANY",
+      "name": "대웅제약",
       "properties": {
-        "region": "string"
+        "full_name": "Daewoong Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "한미약품",
+      "properties": {
+        "full_name": "Hanmi Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "종근당",
+      "properties": {
+        "full_name": "Chong Kun Dang",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "보령",
+      "properties": {
+        "full_name": "Boryung Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "LG화학",
+      "properties": {
+        "full_name": "LG Chem",
+        "industry": "Chemicals",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "피즈치바",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "Stelara biosimilar",
+        "launch_date": "2023",
+        "company": "삼성바이오에피스"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "램시마SC",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "Subcutaneous formulation for autoimmune diseases",
+        "launch_date": "2022",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "렉라자",
+      "properties": {
+        "category": "New Drug",
+        "description": "Lung cancer treatment",
+        "launch_date": "",
+        "company": "유한양행"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "펙수클루",
+      "properties": {
+        "category": "New Drug",
+        "description": "Gastroesophageal reflux disease treatment",
+        "launch_date": "",
+        "company": "대웅제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "나보타",
+      "properties": {
+        "category": "New Drug",
+        "description": "Botulinum toxin",
+        "launch_date": "",
+        "company": "대웅제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알리글로",
+      "properties": {
+        "category": "New Drug",
+        "description": "Blood product",
+        "launch_date": "",
+        "company": "GC녹십자"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "고덱스",
+      "properties": {
+        "category": "Generic Drug",
+        "description": "Liver medication",
+        "launch_date": "",
+        "company": "셀트리온제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "케이캡",
+      "properties": {
+        "category": "Generic Drug",
+        "description": "Gastroesophageal reflux disease treatment",
+        "launch_date": "",
+        "company": "HK이노엔"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "렉라자 라이선스 수익",
+      "properties": {
+        "amount": "40억원",
+        "date": "2023",
+        "type": "License Revenue"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "케이캡 공동판매 계약",
+      "properties": {
+        "type": "Co-marketing",
+        "date": "2022",
+        "description": "Agreement for joint sales of K-Cab"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
+      "start_node": "삼성바이오로직스",
+      "relationship": "PRODUCES",
+      "end_node": "피즈치바",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "REPORTS",
-      "end_node": "FinancialReport",
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "램시마SC",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_TYPE",
-      "end_node": "ProductType",
+      "start_node": "유한양행",
+      "relationship": "PRODUCES",
+      "end_node": "렉라자",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "SOLD_IN",
-      "end_node": "Market",
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "펙수클루",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_SUBSIDIARY",
-      "end_node": "Company",
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "나보타",
+      "properties": {}
+    },
+    {
+      "start_node": "GC녹십자",
+      "relationship": "PRODUCES",
+      "end_node": "알리글로",
+      "properties": {}
+    },
+    {
+      "start_node": "종근당",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "셀트리온제약",
+      "properties": {
+        "type": "Product Distribution",
+        "date": "2022"
+      }
+    },
+    {
+      "start_node": "보령",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "HK이노엔",
+      "properties": {
+        "type": "Co-marketing",
+        "date": "2022"
+      }
+    },
+    {
+      "start_node": "유한양행",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "렉라자 라이선스 수익",
+      "properties": {}
+    },
+    {
+      "start_node": "보령",
+      "relationship": "SIGNED",
+      "end_node": "케이캡 공동판매 계약",
       "properties": {}
     }
   ]

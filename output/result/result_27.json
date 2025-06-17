@@ -1,143 +1,195 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "Samsung Biologics",
+            "label": "COMPANY",
+            "name": "삼성바이오로직스",
             "properties": {
-                "industry": "Pharmaceutical"
+                "industry": "바이오",
+                "headquarters": "대한민국"
             }
         },
         {
-            "label": "Company",
-            "name": "Celltrion",
+            "label": "COMPANY",
+            "name": "셀트리온",
             "properties": {
-                "industry": "Pharmaceutical"
+                "industry": "바이오",
+                "headquarters": "대한민국"
             }
         },
         {
-            "label": "SalesTarget",
-            "name": "Samsung Biologics 2023",
+            "label": "PERSON",
+            "name": "도널드트럼프",
             "properties": {
-                "year": 2023,
-                "targetRevenue": 5570500000
+                "role": "전 미국 대통령"
             }
         },
         {
-            "label": "SalesTarget",
-            "name": "Celltrion 2023",
+            "label": "PRODUCT",
+            "name": "램시마",
             "properties": {
-                "year": 2023,
-                "targetRevenue": 5000000000
+                "category": "바이오시밀러",
+                "description": "셀트리온의 바이오시밀러 제품"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "Samsung Biologics Q1 2023",
+            "label": "PRODUCT",
+            "name": "트룩시마",
             "properties": {
-                "revenue": 1298300000,
-                "operatingProfit": 488600000,
-                "netProfit": 375500000,
-                "revenueGrowthRate": 37.1,
-                "operatingProfitGrowthRate": 119.9,
-                "netProfitGrowthRate": 109.3,
-                "quarter": "Q1",
-                "year": 2023
+                "category": "바이오시밀러",
+                "description": "셀트리온의 바이오시밀러 제품"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "Celltrion Q1 2023",
+            "label": "PRODUCT",
+            "name": "옴리클로",
             "properties": {
-                "revenue": 841900000,
-                "operatingProfit": 149400000,
-                "netProfit": 108300000,
-                "revenueGrowthRate": 14.2,
-                "operatingProfitGrowthRate": 867.9,
-                "netProfitGrowthRate": 421.6,
-                "quarter": "Q1",
-                "year": 2023
+                "category": "바이오시밀러",
+                "description": "셀트리온의 신규 바이오시밀러 제품"
             }
         },
         {
-            "label": "Product",
-            "name": "Remsima",
+            "label": "PRODUCT",
+            "name": "아이덴젤트",
             "properties": {
-                "category": "Biosimilar"
+                "category": "바이오시밀러",
+                "description": "셀트리온의 신규 바이오시밀러 제품"
             }
         },
         {
-            "label": "Product",
-            "name": "Truxima",
+            "label": "EVENT",
+            "name": "의약품 관세 부과",
             "properties": {
-                "category": "Biosimilar"
+                "date": "2023-04",
+                "type": "정책 발표",
+                "description": "미국의 의약품 관세 부과 정책"
             }
         },
         {
-            "label": "TariffPolicy",
-            "name": "US Drug Tariff Policy",
+            "label": "EVENT",
+            "name": "약가인하 행정명령",
             "properties": {
-                "name": "US Drug Tariff",
-                "rate": 0.0,
-                "effective_date": "2023-10",
-                "scope": "Pharmaceuticals",
-                "measures": "Hinting at potential inclusion"
+                "date": "2023-04-12",
+                "type": "정책 발표",
+                "description": "트럼프 대통령의 약가인하 행정명령"
             }
+        },
+        {
+            "label": "MARKET",
+            "name": "바이오시밀러 시장",
+            "properties": {
+                "description": "바이오시밀러 제품의 시장"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "유럽",
+            "properties": {
+                "type": "지역",
+                "country": "유럽"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "CMO",
+            "properties": {}
         }
     ],
     "relations": [
         {
-            "start_node": "Samsung Biologics",
-            "relationship": "HAS_SALES_TARGET",
-            "end_node": "Samsung Biologics 2023",
+            "start_node": "삼성바이오로직스",
+            "relationship": "TARGETS",
+            "end_node": "5조원 매출",
+            "properties": {
+                "year": "2023"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "TARGETS",
+            "end_node": "5조원 매출",
+            "properties": {
+                "year": "2023"
+            }
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "AFFECTED_BY",
+            "end_node": "의약품 관세 부과",
             "properties": {}
         },
         {
-            "start_node": "Celltrion",
-            "relationship": "HAS_SALES_TARGET",
-            "end_node": "Celltrion 2023",
+            "start_node": "셀트리온",
+            "relationship": "AFFECTED_BY",
+            "end_node": "의약품 관세 부과",
             "properties": {}
         },
         {
-            "start_node": "Samsung Biologics",
-            "relationship": "HAS_REPORT",
-            "end_node": "Samsung Biologics Q1 2023",
+            "start_node": "삼성바이오로직스",
+            "relationship": "AFFECTED_BY",
+            "end_node": "약가인하 행정명령",
             "properties": {}
         },
         {
-            "start_node": "Celltrion",
-            "relationship": "HAS_REPORT",
-            "end_node": "Celltrion Q1 2023",
+            "start_node": "셀트리온",
+            "relationship": "AFFECTED_BY",
+            "end_node": "약가인하 행정명령",
             "properties": {}
         },
         {
-            "start_node": "Celltrion",
-            "relationship": "DEVELOPED",
-            "end_node": "Remsima",
+            "start_node": "도널드 트럼프",
+            "relationship": "ANNOUNCED",
+            "end_node": "약가인하 행정명령",
+            "properties": {
+                "date": "2023-04-12"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "램시마",
             "properties": {}
         },
         {
-            "start_node": "Celltrion",
-            "relationship": "DEVELOPED",
-            "end_node": "Truxima",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "트룩시마",
             "properties": {}
         },
         {
-            "start_node": "US Drug Tariff Policy",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "Remsima",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "옴리클로",
             "properties": {}
         },
         {
-            "start_node": "US Drug Tariff Policy",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "Truxima",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "아이덴젤트",
             "properties": {}
         },
         {
-            "start_node": "Samsung Biologics",
-            "relationship": "COMPETES_WITH",
-            "end_node": "Celltrion",
-            "properties": {}
+            "start_node": "삼성바이오로직스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {
+                "percentage": "91%"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "EXPORTS_TO",
+            "end_node": "미국",
+            "properties": {
+                "percentage": "98.8%"
+            }
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "EXPORTS_TO",
+            "end_node": "유럽",
+            "properties": {
+                "percentage": "91%"
+            }
         }
     ]
 }

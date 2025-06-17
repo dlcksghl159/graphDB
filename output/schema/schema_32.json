@@ -1,83 +1,135 @@
 {
   "nodes": [
     {
-      "label": "ExportStatistic",
-      "name": "수출 통계",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업부",
       "properties": {
-        "year": "int",
-        "quarter": "int",
-        "totalExport": "float",
-        "growthRate": "float",
-        "exporterCount": "int"
+        "type": "정부 기관",
+        "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "Product",
-      "name": "수출 품목",
+      "label": "PERSON",
+      "name": "이순배",
       "properties": {
-        "name": "string"
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Country",
-      "name": "수출국",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "name": "string"
+        "category": "화장품",
+        "description": "중소기업의 주요 수출 품목",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "GovernmentAgency",
-      "name": "정부 기관",
+      "label": "PRODUCT",
+      "name": "자동차",
       "properties": {
-        "name": "string"
+        "category": "자동차",
+        "description": "중소기업의 주요 수출 품목",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "Tariff",
-      "name": "관세 조치",
+      "label": "PRODUCT",
+      "name": "반도체제조용장비",
       "properties": {
-        "name": "string",
-        "startDate": "date"
+        "category": "장비",
+        "description": "중소기업의 주요 수출 품목",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "국가",
+        "country": "미국",
+        "region": "북미"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "국가",
+        "country": "중국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "미국 관세 조치",
+      "properties": {
+        "date": "2025-03-12",
+        "type": "경제 정책",
+        "description": "미국의 철강 및 알루미늄 제품에 대한 관세 부과",
+        "location": "미국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
+      "start_node": "ORGANIZATION",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
       "properties": {
-        "amount": "float",
-        "growthRate": "float",
-        "rank": "int"
+        "date": "2025-04-14"
       }
     },
     {
-      "start_node": "Product",
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
       "relationship": "EXPORTED_TO",
-      "end_node": "Country",
+      "end_node": "LOCATION",
       "properties": {
-        "amount": "float",
-        "growthRate": "float"
+        "amount": "18억400만 달러",
+        "date": "2025-01-01 to 2025-03-31"
       }
     },
     {
-      "start_node": "Tariff",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "17억4000만 달러",
+        "date": "2025-01-01 to 2025-03-31"
+      }
     },
     {
-      "start_node": "Tariff",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "EVENT",
+      "relationship": "AFFECTED",
+      "end_node": "PRODUCT",
+      "properties": {
+        "impact": "수출 감소",
+        "amount": "-17.8% for 철강, -7.6% for 알루미늄"
+      }
+    },
+    {
+      "start_node": "LOCATION",
+      "relationship": "IMPACTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "수출 감소"
+      }
     }
   ]
 }

@@ -1,124 +1,161 @@
 {
     "nodes": [
         {
-            "label": "PartnerCompany",
+            "label": "COMPANY",
             "name": "엘리스그룹",
             "properties": {
-                "industry": "AI 교육"
+                "industry": "AI 교육",
+                "full_name": "엘리스그룹",
+                "headquarters": "",
+                "founded": "",
+                "ceo": "김재원"
             }
         },
         {
-            "label": "PartnerCompany",
+            "label": "COMPANY",
             "name": "파인디",
             "properties": {
-                "industry": "엔지니어 채용"
+                "industry": "IT 채용 플랫폼",
+                "full_name": "파인디",
+                "headquarters": "일본",
+                "founded": "2016",
+                "ceo": "야마다 유이치로"
             }
         },
         {
-            "label": "Agreement",
-            "name": "업무 협약",
-            "properties": {
-                "name": "업무 협약",
-                "date": "2023-02-14",
-                "title": "한-일 B2B 비즈니스 확장 협력",
-                "location": "일본",
-                "agreement_id": "12345",
-                "purpose": "AI 플랫폼 시장 확장 협력",
-                "scope": "서비스 개발 포함",
-                "agreement_date": "2023-02-14",
-                "description": "인공지능 플랫폼 시장 및 서비스 개발 협력을 위한 한-일 업무 협약"
-            }
-        },
-        {
-            "label": "Person",
+            "label": "PERSON",
             "name": "김재원",
             "properties": {
-                "position": "대표",
-                "name": "김재원",
-                "person_id": "P001",
-                "role": "CEO",
-                "title": "엘리스그룹 대표"
+                "full_name": "김재원",
+                "role": "대표",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Person",
-            "name": "야마다 유이치로",
+            "label": "PERSON",
+            "name": "야마다유이치로",
             "properties": {
-                "position": "대표",
-                "name": "야마다 유이치로",
-                "person_id": "P002",
-                "role": "CEO",
-                "title": "파인디 대표"
+                "full_name": "야마다 유이치로",
+                "role": "대표",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Service",
-            "name": "파인디 팀플러스",
+            "label": "AGREEMENT",
+            "name": "엘리스그룹-파인디 업무 협약",
             "properties": {
-                "name": "파인디 팀플러스",
-                "serviceType": "생산성 측정",
-                "type": "채용",
-                "users_count": 200000,
-                "client_count": 3000,
-                "category": "IT 개발자",
-                "launch_year": 2016
+                "type": "상호 협력",
+                "date": "2023-04-14",
+                "description": "AI 플랫폼 시장 확장 및 서비스 개발 협력"
             }
         },
         {
-            "label": "Market",
-            "name": "B2B 시장",
+            "label": "TECHNOLOGY",
+            "name": "AI 플랫폼",
             "properties": {
-                "market_type": "B2B",
-                "region": "일본",
-                "market_id": "M001",
-                "sales_ratio": 0.0,
-                "country": "일본",
-                "segmentType": "테크놀로지 마켓",
-                "name": "B2B 엔지니어 시장",
-                "current_size_musd": 0.0,
-                "projected_size_musd": 0.0,
-                "projection_year": 2023
+                "category": "인공지능",
+                "description": "AI 플랫폼 시장 확장",
+                "field": "AI"
             }
+        },
+        {
+            "label": "PERSON",
+            "name": "",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "를비롯",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "스그룹",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "엘리스그룹",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "파인디",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Findy",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "Findy Team",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "엘리스그룹",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "파인디",
-            "properties": {}
-        },
-        {
-            "start_node": "엘리스그룹",
-            "relationship": "SIGN_AGREEMENT_WITH",
-            "end_node": "파인디",
-            "properties": {
-                "date": "2023-02-14",
-                "purpose": "한-일 B2B 비즈니스 확장 협력"
-            }
-        },
-        {
-            "start_node": "엘리스그룹",
-            "relationship": "TARGET_MARKET",
-            "end_node": "B2B 시장",
-            "properties": {}
-        },
-        {
-            "start_node": "김재원",
-            "relationship": "LEADS",
-            "end_node": "엘리스그룹",
-            "properties": {}
-        },
-        {
-            "start_node": "야마다 유이치로",
-            "relationship": "LEADS",
-            "end_node": "파인디",
+            "relationship": "SIGNED",
+            "end_node": "엘리스그룹-파인디 업무 협약",
             "properties": {}
         },
         {
             "start_node": "파인디",
-            "relationship": "SUPPORTS",
-            "end_node": "파인디 팀플러스",
+            "relationship": "SIGNED",
+            "end_node": "엘리스그룹-파인디 업무 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "김재원",
+            "relationship": "WORKS_FOR",
+            "end_node": "엘리스그룹",
+            "properties": {
+                "position": "대표"
+            }
+        },
+        {
+            "start_node": "야마다 유이치로",
+            "relationship": "WORKS_FOR",
+            "end_node": "파인디",
+            "properties": {
+                "position": "대표"
+            }
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "파인디",
+            "properties": {
+                "type": "상호 협력",
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "엘리스그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "TECHNOLOGY",
             "properties": {}
         }
     ]

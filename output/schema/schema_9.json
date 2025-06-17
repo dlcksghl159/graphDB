@@ -1,43 +1,77 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "서부발전",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "founding_year": "int"
+        "full_name": "한국서부발전",
+        "industry": "발전",
+        "headquarters": "태안",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Program",
-      "name": "Program",
+      "label": "PROJECT",
+      "name": "발전정보 활용 창업·벤처기업 협업사업",
       "properties": {
-        "name": "string",
-        "deadline": "date",
-        "support_amount_min": "int",
-        "support_amount_max": "int",
-        "selected_count": "int"
+        "description": "발전정보를 활용한 창의적인 기술 개발 및 실증 사업화 연계 프로그램",
+        "start_date": "",
+        "status": "공모 중"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "창업·벤처기업",
+      "properties": {
+        "type": "기업",
+        "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "지원금",
+      "properties": {
+        "amount": "1천만∼3천만원",
+        "date": "",
+        "type": "지원"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "해외 실증 지원사업",
+      "properties": {
+        "date": "",
+        "type": "지원사업",
+        "description": "협업 우수기업에 해외 실증 기회 제공",
+        "location": "해외"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Program",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "APPLIES_FOR",
-      "end_node": "Program",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "ORGANIZATION",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "SELECTS",
-      "end_node": "Company",
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     }
   ]

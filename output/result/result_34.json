@@ -1,117 +1,180 @@
 {
     "nodes": [
         {
-            "label": "SmallMediumEnterprise",
-            "name": "정일산업",
-            "properties": {
-                "name": "정일산업",
-                "industry": "승강기 제조업",
-                "country": "대한민국",
-                "company_count": 110
-            }
-        },
-        {
-            "label": "Employee",
+            "label": "PERSON",
             "name": "신송남",
             "properties": {
-                "employee_name": "신송남",
-                "age": 61,
-                "is_retired": false
+                "role": "작업자",
+                "age": "61"
             }
         },
         {
-            "label": "Employee",
+            "label": "PERSON",
             "name": "김대환",
             "properties": {
-                "employee_name": "김대환",
-                "age": 66,
-                "is_retired": false
+                "role": "공장장",
+                "age": "66"
             }
         },
         {
-            "label": "Employee",
+            "label": "PERSON",
             "name": "김두연",
             "properties": {
-                "employee_name": "김두연",
-                "age": 71,
-                "is_retired": false
+                "role": "고무 프레스 담당",
+                "age": "71"
             }
         },
         {
-            "label": "Employee",
+            "label": "PERSON",
             "name": "방광호",
             "properties": {
-                "employee_name": "방광호",
-                "age": 60,
-                "is_retired": false
+                "role": "지게차 기사",
+                "age": "60"
             }
         },
         {
-            "label": "Person",
+            "label": "PERSON",
             "name": "정광용",
             "properties": {
-                "name": "정광용"
+                "role": "대표"
             }
         },
         {
-            "label": "Region",
-            "name": "시화공단",
+            "label": "PERSON",
+            "name": "조주현",
             "properties": {
-                "name": "시화공단",
-                "type": "산업단지"
+                "role": "원장"
             }
         },
         {
-            "label": "Region",
-            "name": "충주",
+            "label": "COMPANY",
+            "name": "정일산업",
             "properties": {
-                "name": "충주",
-                "type": "도시"
+                "industry": "승강기 제조업",
+                "founded": "1987",
+                "headquarters": "경기도 시화공단"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "경기도 시화공단",
+            "properties": {
+                "type": "산업단지",
+                "country": "대한민국",
+                "region": "경기"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "충북 충주",
+            "properties": {
+                "type": "지역",
+                "country": "대한민국",
+                "region": "충북"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "중소벤처기업연구원",
+            "properties": {
+                "type": "연구기관"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "정일산업",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "의방침",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "다는게정",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "정",
+            "properties": {
+                "role": "대표"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "정일산업",
-            "relationship": "EMPLOYS",
-            "end_node": "신송남",
+            "start_node": "신송남",
+            "relationship": "WORKS_FOR",
+            "end_node": "정일산업",
+            "properties": {
+                "position": "작업자"
+            }
+        },
+        {
+            "start_node": "김대환",
+            "relationship": "WORKS_FOR",
+            "end_node": "정일산업",
+            "properties": {
+                "position": "공장장"
+            }
+        },
+        {
+            "start_node": "김두연",
+            "relationship": "WORKS_FOR",
+            "end_node": "정일산업",
+            "properties": {
+                "position": "고무 프레스 담당"
+            }
+        },
+        {
+            "start_node": "방광호",
+            "relationship": "WORKS_FOR",
+            "end_node": "정일산업",
+            "properties": {
+                "position": "지게차 기사"
+            }
+        },
+        {
+            "start_node": "정광용",
+            "relationship": "CEO_OF",
+            "end_node": "정일산업",
             "properties": {}
         },
         {
             "start_node": "정일산업",
-            "relationship": "EMPLOYS",
-            "end_node": "김대환",
+            "relationship": "LOCATED_IN",
+            "end_node": "경기도 시화공단",
             "properties": {}
         },
         {
             "start_node": "정일산업",
-            "relationship": "EMPLOYS",
-            "end_node": "김두연",
+            "relationship": "LOCATED_IN",
+            "end_node": "충북 충주",
             "properties": {}
         },
         {
             "start_node": "정일산업",
-            "relationship": "EMPLOYS",
-            "end_node": "방광호",
-            "properties": {}
+            "relationship": "AFFECTED_BY",
+            "end_node": "건설경기",
+            "properties": {
+                "impact": "매출 감소"
+            }
         },
         {
-            "start_node": "정일산업",
-            "relationship": "LED_BY",
-            "end_node": "정광용",
-            "properties": {}
-        },
-        {
-            "start_node": "정일산업",
-            "relationship": "OPERATES_IN",
-            "end_node": "시화공단",
-            "properties": {}
-        },
-        {
-            "start_node": "정일산업",
-            "relationship": "OPERATES_IN",
-            "end_node": "충주",
-            "properties": {}
+            "start_node": "조주현",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업연구원",
+            "properties": {
+                "position": "원장"
+            }
         }
     ]
 }

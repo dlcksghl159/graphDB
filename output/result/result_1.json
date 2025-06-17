@@ -1,63 +1,90 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "에이스침대",
             "properties": {
-                "industry": "가구"
+                "industry": "가구",
+                "headquarters": ""
             }
         },
         {
-            "label": "FinancialMetric",
-            "name": "영업이익",
-            "properties": {
-                "metric_name": "영업이익",
-                "value": 121000000000,
-                "unit": "KRW",
-                "year": 2023,
-                "quarter": "Q1"
-            }
-        },
-        {
-            "label": "FinancialMetric",
+            "label": "FINANCIAL_METRIC",
             "name": "매출",
             "properties": {
-                "metric_name": "매출",
-                "value": 814000000000,
-                "unit": "KRW",
-                "year": 2023,
-                "quarter": "Q1"
+                "amount": "814억원",
+                "change": "-2.8%",
+                "period": "1분기"
             }
         },
         {
-            "label": "FinancialMetric",
+            "label": "FINANCIAL_METRIC",
+            "name": "영업이익",
+            "properties": {
+                "amount": "121억원",
+                "change": "-18.3%",
+                "period": "1분기"
+            }
+        },
+        {
+            "label": "FINANCIAL_METRIC",
             "name": "분기순이익",
             "properties": {
-                "metric_name": "분기순이익",
-                "value": 95000000000,
-                "unit": "KRW",
-                "year": 2023,
-                "quarter": "Q1"
+                "amount": "95억원",
+                "change": "-31.7%",
+                "period": "1분기"
+            }
+        },
+        {
+            "label": "CONCEPT",
+            "name": "경영환경 악화",
+            "properties": {
+                "description": "세계 경제 악화와 내부경기 침체"
+            }
+        },
+        {
+            "label": "CONCEPT",
+            "name": "경영 내실화",
+            "properties": {
+                "description": "경영의 내실화를 위해 노력"
             }
         }
     ],
     "relations": [
         {
             "start_node": "에이스침대",
-            "relationship": "HAS_FINANCIAL_METRIC",
-            "end_node": "영업이익",
-            "properties": {}
-        },
-        {
-            "start_node": "에이스침대",
-            "relationship": "HAS_FINANCIAL_METRIC",
+            "relationship": "REPORTED",
             "end_node": "매출",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "에이스침대",
+            "relationship": "REPORTED",
+            "end_node": "영업이익",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "에이스침대",
+            "relationship": "REPORTED",
+            "end_node": "분기순이익",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "경영환경 악화",
+            "relationship": "AFFECTS",
+            "end_node": "에이스침대",
             "properties": {}
         },
         {
             "start_node": "에이스침대",
-            "relationship": "HAS_FINANCIAL_METRIC",
-            "end_node": "분기순이익",
+            "relationship": "FOCUSES_ON",
+            "end_node": "경영 내실화",
             "properties": {}
         }
     ]

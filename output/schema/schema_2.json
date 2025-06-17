@@ -1,126 +1,119 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "위원회",
+        "description": "중소기업과 대기업 간의 동반성장을 지원하는 조직",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Program",
-      "name": "Program",
+      "label": "COMPANY",
+      "name": "LG이노텍",
       "properties": {
-        "name": "string",
-        "year": "int",
-        "participantCount": "int"
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전자",
+        "headquarters": "서울",
+        "founded": "1970",
+        "ceo": "정철동"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
+      "label": "COMPANY",
+      "name": "에이피텍",
       "properties": {
-        "name": "string",
-        "date": "string",
-        "location": "string"
+        "full_name": "에이피텍 주식회사",
+        "industry": "전자",
+        "headquarters": "인천 송도",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "ESGIndex",
-      "name": "ESG Index",
+      "label": "LOCATION",
+      "name": "인천 송도",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "인천"
       }
     },
     {
-      "label": "ESGEvaluation",
-      "name": "ESG Evaluation",
+      "label": "AGREEMENT",
+      "name": "협력사 ESG 지원사업 업무협약",
       "properties": {
-        "year": "int",
-        "score": "int",
-        "complianceRate": "int"
+        "type": "업무협약",
+        "date": "2023-09-14",
+        "description": "ESG 우수 중소기업 지원을 위한 협약"
       }
     },
     {
-      "label": "Certification",
-      "name": "Certification",
+      "label": "PROJECT",
+      "name": "협력사 ESG 지원사업",
       "properties": {
-        "name": "string",
-        "issuer": "string",
-        "date": "string"
+        "description": "협력사의 ESG 평가 및 개선을 지원하는 사업",
+        "start_date": "2021",
+        "status": "진행 중"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "EVENT",
+      "name": "ESG 우수 중소기업 현판식",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "date": "2023-09-14",
+        "type": "현판식",
+        "description": "ESG 우수 중소기업으로 선정된 기업에 대한 현판식",
+        "location": "인천 송도 에이피텍 본사"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
-      "end_node": "Program",
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "TARGETS",
-      "end_node": "Organization",
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "COVERS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
+      "start_node": "COMPANY",
       "relationship": "COLLABORATES_ON",
-      "end_node": "ESGIndex",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "ESGIndex",
-      "relationship": "USED_IN",
-      "end_node": "ESGEvaluation",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "RECEIVES",
-      "end_node": "ESGEvaluation",
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "RECEIVES",
-      "end_node": "Certification",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "MANUFACTURES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "SUPPLIES_TO",
-      "end_node": "Organization",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "협력사",
+        "date": "2023-09-14"
+      }
     }
   ]
 }

@@ -1,88 +1,101 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "COMPANY",
+      "name": "파세코",
       "properties": {
-        "companyName": "string",
-        "industry": "string",
-        "headquarters": "string",
-        "domesticProduction": "bool"
+        "full_name": "파세코",
+        "industry": "가전",
+        "headquarters": "경기 안산시 단원구",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Factory",
-      "name": "공장",
+      "label": "PRODUCT",
+      "name": "창문형 에어컨",
       "properties": {
-        "factoryName": "string",
-        "location": "string",
-        "workersCount": "int",
-        "maxDailyProduction": "int",
-        "operatingStatus": "string"
+        "category": "가전제품",
+        "description": "창문형 에어컨, AI 모드, 환기 시스템",
+        "launch_date": "2023년 9월",
+        "company": "파세코"
       }
     },
     {
-      "label": "Product",
-      "name": "제품",
+      "label": "TECHNOLOGY",
+      "name": "AI 에너지 세이빙",
       "properties": {
-        "productName": "string",
-        "generation": "string",
-        "type": "string",
-        "releaseDate": "string",
-        "productionMethod": "string",
-        "features": "string"
+        "category": "에너지 절약 기술",
+        "description": "주위 온도 감지 및 자동 조절",
+        "field": "사물인터넷(IoT)"
       }
     },
     {
-      "label": "SalesData",
-      "name": "판매데이터",
+      "label": "PERSON",
+      "name": "김상우",
       "properties": {
-        "year": "int",
-        "month": "int",
-        "purchaseIndex": "int"
+        "full_name": "김상우",
+        "role": "리테일사업부 상무",
+        "nationality": "",
+        "age": ""
       }
     },
     {
-      "label": "ExperimentLab",
-      "name": "실험실",
+      "label": "PERSON",
+      "name": "박치호",
       "properties": {
-        "labName": "string",
-        "floor": "string",
-        "environmentCondition": "string",
-        "uniqueInSME": "bool"
+        "full_name": "박치호",
+        "role": "기술연구소 팀장",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기 안산시 단원구",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "경기도"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "OWNS_FACTORY",
-      "end_node": "Factory",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Factory",
-      "relationship": "PRODUCES_PRODUCT",
-      "end_node": "Product",
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "PRODUCES_PRODUCT",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_SALES_DATA",
-      "end_node": "SalesData",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "리테일사업부 상무",
+        "since": ""
+      }
     },
     {
-      "start_node": "Product",
-      "relationship": "TESTED_IN_LAB",
-      "end_node": "ExperimentLab",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "기술연구소 팀장",
+        "since": ""
+      }
     }
   ]
 }

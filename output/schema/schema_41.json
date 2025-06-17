@@ -1,116 +1,146 @@
 {
   "nodes": [
     {
-      "label": "Person",
-      "name": "인물",
+      "label": "PERSON",
+      "name": "박미경",
       "properties": {
-        "name": "string",
-        "title": "string"
+        "full_name": "박미경",
+        "role": "제7대 하이서울기업협회장",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "COMPANY",
+      "name": "포시에스",
       "properties": {
-        "name": "string",
-        "founding_year": "int",
-        "industry": "string"
+        "full_name": "포시에스",
+        "industry": "전자문서",
+        "headquarters": "서울 강남구",
+        "founded": "",
+        "ceo": "박미경"
       }
     },
     {
-      "label": "Organization",
-      "name": "조직",
+      "label": "ORGANIZATION",
+      "name": "하이서울기업협회",
       "properties": {
-        "name": "string",
-        "established_year": "int"
+        "type": "기업협회",
+        "description": "서울시와 서울산업진흥원이 지원하는 우수 중소기업 네트워크",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Subdivision",
-      "name": "분과",
+      "label": "ORGANIZATION",
+      "name": "서울산업진흥원",
       "properties": {
-        "name": "string",
-        "focus_area": "string"
+        "type": "산업진흥기관",
+        "description": "",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Certification",
-      "name": "인증",
+      "label": "LOCATION",
+      "name": "서울",
       "properties": {
-        "name": "string",
-        "description": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "서울특별시"
       }
     },
     {
-      "label": "Region",
-      "name": "지역",
+      "label": "LOCATION",
+      "name": "인도네시아",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "국가",
+        "country": "인도네시아",
+        "region": ""
       }
     },
     {
-      "label": "Technology",
-      "name": "기술",
+      "label": "TECHNOLOGY",
+      "name": "AI",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "category": "인공지능",
+        "description": "AI 기술을 활용해 문서 생성을 자동화하거나 계약서 내용 분석 및 작성",
+        "field": "기술"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "AI 교육",
+      "properties": {
+        "description": "하이서울 기업들을 위한 AI 교육 프로그램",
+        "start_date": "",
+        "status": "진행 중"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "포시에스 30주년",
+      "properties": {
+        "date": "2023",
+        "type": "기념일",
+        "description": "포시에스 창립 30주년",
+        "location": "서울"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Person",
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "회장",
+        "since": "2023-02"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SUPPORTED_BY",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "date": "",
+        "purpose": "시장 확장"
+      }
+    },
+    {
+      "start_node": "PERSON",
       "relationship": "LEADS",
-      "end_node": "Organization",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "FOUNDED",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HAS_DIVISION",
-      "end_node": "Subdivision",
-      "properties": {}
-    },
-    {
-      "start_node": "Subdivision",
-      "relationship": "FOCUSES_ON",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "ISSUES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECEIVES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "USES",
-      "end_node": "Technology",
+      "start_node": "COMPANY",
+      "relationship": "CELEBRATES",
+      "end_node": "EVENT",
       "properties": {}
     }
   ]

@@ -1,203 +1,93 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "셀트리온",
+            "label": "PRODUCT",
+            "name": "앱토즈마",
             "properties": {
-                "name": "셀트리온",
-                "industry": "Pharmaceuticals"
+                "category": "신규 제품",
+                "description": "성분명 토실리주맙"
             }
         },
         {
-            "label": "Subsidiary",
-            "name": "셀트리온 스페인 법인",
+            "label": "LOCATION",
+            "name": "카탈루냐주",
             "properties": {
-                "name": "셀트리온 스페인 법인",
+                "type": "지역",
                 "country": "스페인"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "스페인",
-            "properties": {
-                "name": "스페인",
-                "region": "유럽"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "포르투갈",
-            "properties": {
-                "name": "포르투갈",
-                "region": "유럽"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "트룩시마",
-            "properties": {
-                "name": "트룩시마",
-                "active_ingredient": "리툭시맙"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "허쥬마",
-            "properties": {
-                "name": "허쥬마",
-                "active_ingredient": "트라스투주맙"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "베그젤마",
-            "properties": {
-                "name": "베그젤마",
-                "active_ingredient": "베바시주맙"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "스테키마",
-            "properties": {
-                "name": "스테키마",
-                "active_ingredient": "우스테키누맙"
-            }
-        },
-        {
-            "label": "Tender",
-            "name": "CSC 입찰",
-            "properties": {
-                "name": "CSC 입찰",
-                "region": "카탈루냐",
-                "start_date": "2023-03",
-                "end_date": "2029-03",
-                "type": "공립병원 의약품 공급"
-            }
-        },
-        {
-            "label": "Institution",
-            "name": "CSC",
-            "properties": {
-                "name": "CSC",
-                "institutionType": "입찰 기관",
-                "role": "의약품 공급 관할"
-            }
-        },
-        {
-            "label": "LegalEntity",
-            "name": "컨파마",
-            "properties": {
-                "name": "컨파마",
-                "country": "스페인"
-            }
-        },
-        {
-            "label": "SalesData",
-            "name": "트룩시마 판매데이터",
-            "properties": {
-                "year": 2022,
-                "month": 9,
-                "purchaseIndex": 23
-            }
-        },
-        {
-            "label": "SalesData",
-            "name": "허쥬마 판매데이터",
-            "properties": {
-                "year": 2022,
-                "month": 9,
-                "purchaseIndex": 22
-            }
-        },
-        {
-            "label": "Person",
-            "name": "강석훈",
-            "properties": {
-                "name": "강석훈"
             }
         }
     ],
     "relations": [
         {
             "start_node": "셀트리온",
-            "relationship": "OWNS",
-            "end_node": "셀트리온 스페인 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "트룩시마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "허쥬마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "베그젤마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "스테키마",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SUPPLIES",
-            "end_node": "CSC 입찰",
+            "relationship": "OPERATES_IN",
+            "end_node": "스페인",
             "properties": {
-                "startDate": "2023-03",
-                "endDate": "2029-03"
+                "type": "직판 체제"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "OPERATES_IN",
+            "end_node": "포르투갈",
+            "properties": {
+                "type": "직판 체제"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "SUPPLIES",
+            "end_node": "CSC",
+            "properties": {
+                "products": [
+                    "트룩시마",
+                    "허쥬마"
+                ],
+                "duration": "2023-2029"
             }
         },
         {
             "start_node": "CSC",
-            "relationship": "ORGANIZES",
-            "end_node": "CSC 입찰",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "컨파마",
-            "properties": {}
-        },
-        {
-            "start_node": "트룩시마",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "트룩시마 판매데이터",
-            "properties": {}
-        },
-        {
-            "start_node": "허쥬마",
-            "relationship": "HAS_SALES_DATA",
-            "end_node": "허쥬마 판매데이터",
+            "relationship": "LOCATED_IN",
+            "end_node": "카탈루냐주",
             "properties": {}
         },
         {
             "start_node": "강석훈",
             "relationship": "WORKS_FOR",
             "end_node": "셀트리온",
+            "properties": {
+                "position": "법인장"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "트룩시마",
             "properties": {}
         },
         {
             "start_node": "셀트리온",
-            "relationship": "OPERATES_IN",
-            "end_node": "스페인",
+            "relationship": "PRODUCES",
+            "end_node": "허쥬마",
             "properties": {}
         },
         {
             "start_node": "셀트리온",
-            "relationship": "OPERATES_IN",
-            "end_node": "포르투갈",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "스테키마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PLANS_TO_PRODUCE",
+            "end_node": "앱토즈마",
             "properties": {}
         }
     ]

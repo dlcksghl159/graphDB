@@ -1,112 +1,48 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "락앤락",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "full_name": "락앤락",
+        "industry": "생활용품",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "PRODUCT",
+      "name": "풀히트 푸드워머",
       "properties": {
-        "name": "string",
-        "releaseDate": "string",
-        "description": "string"
+        "category": "테이블웨어",
+        "description": "바닥 전체에 열선이 내장되어 10초 내 예열되는 푸드워머",
+        "launch_date": "2023-10-14",
+        "company": "락앤락"
       }
     },
     {
-      "label": "Feature",
-      "name": "Feature",
+      "label": "EVENT",
+      "name": "제품 출시 기념 프로모션",
       "properties": {
-        "type": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Material",
-      "name": "Material",
-      "properties": {
-        "type": "string",
-        "thickness": "string"
-      }
-    },
-    {
-      "label": "Design",
-      "name": "Design",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "SizeOption",
-      "name": "Size Option",
-      "properties": {
-        "label": "string",
-        "weight": "string",
-        "dimension": "string"
-      }
-    },
-    {
-      "label": "Promotion",
-      "name": "Promotion",
-      "properties": {
-        "startDate": "string",
-        "endDate": "string",
-        "details": "string"
-      }
-    },
-    {
-      "label": "TablewareMaterial",
-      "name": "Tableware Material",
-      "properties": {
-        "type": "string"
+        "date": "2023-10-14 to 2023-10-21",
+        "type": "프로모션",
+        "description": "락앤락몰에서 제품 출시를 기념하여 진행되는 프로모션",
+        "location": "온라인"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "LAUNCHED",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "MADE_OF",
-      "end_node": "Material",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_DESIGN",
-      "end_node": "Design",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "OFFERS_SIZE",
-      "end_node": "SizeOption",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_PROMOTION",
-      "end_node": "Promotion",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "COMPATIBLE_WITH",
-      "end_node": "TablewareMaterial",
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     }
   ]

@@ -75,7 +75,11 @@ def main():
         records = []
 
     if records:
+        i=0
         for rec in records:
+            i+=1
+            if i >10: 
+                break
             question = rec['Q']
             ans = rec['A']
             before = time.time()

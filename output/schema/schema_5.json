@@ -1,77 +1,291 @@
 {
   "nodes": [
     {
-      "label": "ExportReport",
-      "name": "String",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업부",
       "properties": {
-        "quarter": "String",
-        "year": "int",
-        "totalExportValue": "float",
-        "growthRate": "float",
-        "numCompanies": "int"
+        "type": "정부기관",
+        "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Product",
-      "name": "String",
-      "properties": {}
-    },
-    {
-      "label": "Country",
-      "name": "String",
-      "properties": {}
-    },
-    {
-      "label": "GovernmentAgency",
-      "name": "String",
-      "properties": {}
-    },
-    {
-      "label": "Official",
-      "name": "String",
+      "label": "PERSON",
+      "name": "이순배",
       "properties": {
-        "title": "String"
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "화장품",
+      "properties": {
+        "category": "소비재",
+        "description": "미용 및 피부 관리 제품",
+        "launch_date": "",
+        "company": "다수의 중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "운송수단",
+        "description": "자동차 및 관련 부품",
+        "launch_date": "",
+        "company": "다수의 중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "반도체제조용장비",
+      "properties": {
+        "category": "산업장비",
+        "description": "반도체 제조에 사용되는 장비",
+        "launch_date": "",
+        "company": "다수의 중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "국가",
+        "country": "미국",
+        "region": "북미"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "국가",
+        "country": "중국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "국가",
+        "country": "일본",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "특별행정구",
+        "country": "중국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "국가",
+        "country": "대만",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "국가",
+        "country": "태국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "국가",
+        "country": "인도네시아",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "국가",
+        "country": "베트남",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "국가",
+        "country": "인도",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "국가",
+        "country": "멕시코",
+        "region": "북미"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "철강 제품",
+      "properties": {
+        "category": "산업재",
+        "description": "철강으로 만든 제품",
+        "launch_date": "",
+        "company": "다수의 중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알루미늄 제품",
+      "properties": {
+        "category": "산업재",
+        "description": "알루미늄으로 만든 제품",
+        "launch_date": "",
+        "company": "다수의 중소기업"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHED",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "REPORTS_PRODUCT_EXPORT",
-      "end_node": "Product",
+      "start_node": "ORGANIZATION",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
       "properties": {
-        "exportValue": "float",
-        "rank": "int",
-        "recordHigh": "boolean"
+        "date": "2023-04-14",
+        "description": "중소기업 수출 증가 발표"
       }
     },
     {
-      "start_node": "ExportReport",
-      "relationship": "REPORTS_COUNTRY_EXPORT",
-      "end_node": "Country",
-      "properties": {
-        "exportValue": "float",
-        "growthRate": "float",
-        "trend": "String"
-      }
-    },
-    {
-      "start_node": "Official",
+      "start_node": "PERSON",
       "relationship": "WORKS_FOR",
-      "end_node": "GovernmentAgency",
-      "properties": {}
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
     },
     {
-      "start_node": "Official",
-      "relationship": "COMMENTS_ON",
-      "end_node": "ExportReport",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "18억4천만 달러",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "17억4천만 달러",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
     }
   ]
 }

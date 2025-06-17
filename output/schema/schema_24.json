@@ -1,115 +1,108 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "엠투아이",
       "properties": {
-        "industry": "String"
+        "full_name": "엠투아이",
+        "industry": "디지털전환 솔루션",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Technology",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "벰로보틱스",
       "properties": {
-        "domain": "String"
+        "full_name": "벰로보틱스",
+        "industry": "산업용 물류로봇",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "String",
+      "label": "PROJECT",
+      "name": "로봇 제어기 공동 개발",
       "properties": {
-        "category": "String"
+        "description": "엠투아이와 벰로보틱스의 로봇 제어기 공동 개발 프로젝트",
+        "start_date": "",
+        "status": "진행 중"
       }
     },
     {
-      "label": "Agreement",
-      "name": "String",
+      "label": "INVESTMENT",
+      "name": "엠투아이의 벰로보틱스 지분 투자",
       "properties": {
-        "date": "String",
-        "purpose": "String"
+        "amount": "12억원",
+        "date": "",
+        "type": "지분 투자"
       }
     },
     {
-      "label": "Investment",
-      "name": "String",
+      "label": "TECHNOLOGY",
+      "name": "디지털전환(DX) 솔루션",
       "properties": {
-        "amount": "int",
-        "date": "String"
+        "category": "디지털전환",
+        "description": "엠투아이의 자체 개발 디지털전환 솔루션",
+        "field": "AI 자율 제조"
       }
     },
     {
-      "label": "Market",
-      "name": "String",
+      "label": "TECHNOLOGY",
+      "name": "로봇 제어 기술",
       "properties": {
-        "region": "String"
+        "category": "로봇 제어",
+        "description": "벰로보틱스의 로봇 제어 기술",
+        "field": "산업용 물류로봇"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "DEVELOP_TECHNOLOGY",
-      "end_node": "Technology",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "date": "String"
+        "type": "공동 개발 및 프로젝트 수행",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "DEVELOP_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "INVEST_IN",
-      "end_node": "Company",
-      "properties": {
-        "amount": "int",
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGN_AGREEMENT_WITH",
-      "end_node": "Company",
-      "properties": {
-        "date": "String",
-        "purpose": "String"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "TARGET_MARKET",
-      "end_node": "Market",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ACQUIRE",
-      "end_node": "Company",
-      "properties": {
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "RELATES_TO_TECHNOLOGY",
-      "end_node": "Technology",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Agreement",
-      "relationship": "RELATES_TO_PRODUCT",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "MADE_INVESTMENT",
+      "end_node": "INVESTMENT",
       "properties": {}
     },
     {
-      "start_node": "Technology",
-      "relationship": "APPLIED_IN",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     }
   ]

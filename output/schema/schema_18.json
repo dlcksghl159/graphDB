@@ -1,112 +1,110 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "기관",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "type": "Government Agency",
+        "description": "Support agency for small and medium enterprises",
+        "headquarters": "South Korea"
       }
     },
     {
-      "label": "SME",
-      "name": "중소벤처기업",
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "type": "Port Authority",
+        "description": "Manages port operations in Busan",
+        "headquarters": "Busan, South Korea"
       }
     },
     {
-      "label": "Agreement",
-      "name": "업무협약",
+      "label": "LOCATION",
+      "name": "부산",
       "properties": {
-        "date": "string",
-        "purpose": "string"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Busan"
       }
     },
     {
-      "label": "Platform",
-      "name": "물류플랫폼",
+      "label": "LOCATION",
+      "name": "로스앤젤레스",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "City",
+        "country": "USA",
+        "region": "California"
       }
     },
     {
-      "label": "LogisticsCenter",
-      "name": "물류센터",
+      "label": "LOCATION",
+      "name": "롱비치",
       "properties": {
-        "name": "string"
+        "type": "City",
+        "country": "USA",
+        "region": "California"
       }
     },
     {
-      "label": "Program",
-      "name": "수출프로그램",
+      "label": "AGREEMENT",
+      "name": "글로벌 물류 지원 업무협약",
       "properties": {
-        "name": "string"
+        "type": "Business Agreement",
+        "date": "2023-10-14",
+        "description": "Agreement to support global logistics for SMEs"
       }
     },
     {
-      "label": "Location",
-      "name": "지역",
+      "label": "PROJECT",
+      "name": "항공·해운 통합물류 지원 플랫폼 구축",
       "properties": {
-        "name": "string"
+        "description": "Development of an integrated logistics support platform for SMEs",
+        "start_date": "2023-10-14",
+        "status": "Planned"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "글로벌 물류 지원 업무협약",
       "properties": {}
     },
     {
-      "start_node": "Agreement",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "Program",
+      "start_node": "부산항만공사",
+      "relationship": "SIGNED",
+      "end_node": "글로벌 물류 지원 업무협약",
       "properties": {}
     },
     {
-      "start_node": "Agreement",
-      "relationship": "CREATES",
-      "end_node": "Platform",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
       "properties": {}
     },
     {
-      "start_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "부산",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
       "relationship": "LOCATED_IN",
-      "end_node": "Location",
+      "end_node": "로스앤젤레스",
       "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "BENEFITS_FROM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "USES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "CONNECTS",
-      "end_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "롱비치",
       "properties": {}
     }
   ]

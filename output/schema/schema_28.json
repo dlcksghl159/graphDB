@@ -1,125 +1,111 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "센드버드",
       "properties": {
-        "name": "string"
+        "full_name": "Sendbird",
+        "industry": "AI 에이전트 플랫폼",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김동신"
       }
     },
     {
-      "label": "AI_Agent",
-      "name": "AI Agent",
+      "label": "PRODUCT",
+      "name": "옴니프레젠트 AI 에이전트",
       "properties": {
-        "name": "string"
+        "category": "AI 에이전트",
+        "description": "프롬프트 없이 고객 행동을 예측하여 응답하는 AI 에이전트",
+        "launch_date": "2023-10-14",
+        "company": "센드버드"
       }
     },
     {
-      "label": "Industry",
-      "name": "Industry",
+      "label": "PERSON",
+      "name": "김동신",
       "properties": {
-        "name": "string"
+        "full_name": "김동신",
+        "role": "대표",
+        "nationality": "",
+        "age": ""
       }
     },
     {
-      "label": "Channel",
-      "name": "Channel",
+      "label": "TECHNOLOGY",
+      "name": "API 기반",
       "properties": {
-        "name": "string"
+        "category": "기술",
+        "description": "기업의 기존 시스템과 유연하게 연동 가능",
+        "field": "소프트웨어"
       }
     },
     {
-      "label": "Feature",
-      "name": "Feature",
+      "label": "INDUSTRY",
+      "name": "커머스",
       "properties": {
-        "name": "string"
+        "description": "상품 및 서비스 판매 산업"
       }
     },
     {
-      "label": "Integration",
-      "name": "Integration",
+      "label": "INDUSTRY",
+      "name": "핀테크",
       "properties": {
-        "name": "string"
+        "description": "금융 기술 산업"
       }
     },
     {
-      "label": "Metric",
-      "name": "Metric",
+      "label": "INDUSTRY",
+      "name": "리테일",
       "properties": {
-        "name": "string",
-        "unit": "string"
-      }
-    },
-    {
-      "label": "Person",
-      "name": "Person",
-      "properties": {
-        "name": "string",
-        "role": "string"
-      }
-    },
-    {
-      "label": "CustomerAction",
-      "name": "Customer Action",
-      "properties": {
-        "name": "string"
+        "description": "소매업 산업"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "PROVIDES",
-      "end_node": "AI_Agent",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "AI_Agent",
-      "relationship": "TARGETS",
-      "end_node": "Industry",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
     },
     {
-      "start_node": "AI_Agent",
-      "relationship": "SUPPORTS",
-      "end_node": "Channel",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "INTEGRATES_WITH",
-      "end_node": "Integration",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "ACHIEVES",
-      "end_node": "Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LED_BY",
-      "end_node": "Person",
-      "properties": {}
-    },
-    {
-      "start_node": "CustomerAction",
-      "relationship": "TRIGGERS",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "Industry",
+      "start_node": "PRODUCT",
       "relationship": "USES",
-      "end_node": "AI_Agent",
+      "end_node": "TECHNOLOGY",
       "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
     }
   ]
 }

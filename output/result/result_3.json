@@ -1,137 +1,264 @@
 {
     "nodes": [
         {
-            "label": "ExportRecord",
-            "name": "1분기 중소기업 수출",
+            "label": "MARKET",
+            "name": "중소기업 수출 시장",
             "properties": {
-                "year": 2025,
-                "quarter": 1,
-                "export_amount_usd": 270000000000,
-                "growth_rate": 0.7
+                "description": "중소기업의 수출 동향"
             }
         },
         {
-            "label": "ProductCategory",
+            "label": "PRODUCT",
             "name": "화장품",
             "properties": {
-                "category_name": "Beauty",
-                "name": "화장품"
+                "category": "소비재",
+                "description": "K뷰티 인기 지속",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "ProductCategory",
+            "label": "PRODUCT",
             "name": "자동차",
             "properties": {
-                "category_name": "Automotive",
-                "name": "자동차"
+                "category": "운송수단",
+                "description": "한국산 중고차 인기",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "Country",
+            "label": "PRODUCT",
+            "name": "플라스틱 제품",
+            "properties": {
+                "category": "소재",
+                "description": "",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "자동차부품",
+            "properties": {
+                "category": "부품",
+                "description": "",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "합성수지",
+            "properties": {
+                "category": "소재",
+                "description": "",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "반도체제조용장비",
+            "properties": {
+                "category": "장비",
+                "description": "",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "LOCATION",
             "name": "미국",
             "properties": {
-                "name": "United States",
-                "region": "North America",
-                "country_name": "미국"
+                "type": "국가",
+                "country": "미국",
+                "region": ""
             }
         },
         {
-            "label": "Country",
+            "label": "LOCATION",
+            "name": "중국",
+            "properties": {
+                "type": "국가",
+                "country": "중국",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "일본",
+            "properties": {
+                "type": "국가",
+                "country": "일본",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "홍콩",
+            "properties": {
+                "type": "특별행정구",
+                "country": "중국",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "대만",
+            "properties": {
+                "type": "국가",
+                "country": "대만",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "태국",
+            "properties": {
+                "type": "국가",
+                "country": "태국",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "인도네시아",
+            "properties": {
+                "type": "국가",
+                "country": "인도네시아",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
             "name": "키르기스스탄",
             "properties": {
-                "name": "Kyrgyzstan",
-                "region": "Central Asia",
-                "country_name": "키르기스스탄"
+                "type": "국가",
+                "country": "키르기스스탄",
+                "region": ""
             }
         },
         {
-            "label": "ExportSME",
-            "name": "중소기업",
+            "label": "LOCATION",
+            "name": "CIS",
             "properties": {
-                "name": "중소기업",
-                "industry": "Various"
+                "type": "지역",
+                "country": "",
+                "region": "독립국가연합"
             }
         },
         {
-            "label": "TariffPolicy",
-            "name": "철강 및 알루미늄 관세",
+            "label": "PRODUCT",
+            "name": "철강",
             "properties": {
-                "name": "미국 철강 및 알루미늄 관세",
-                "rate": 25.0,
-                "effective_date": "2025-03",
-                "scope": "Steel and Aluminum Products",
-                "measures": "25% Tariff Imposed"
+                "category": "소재",
+                "description": "",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "GovernmentAgency",
+            "label": "PRODUCT",
+            "name": "알루미늄",
+            "properties": {
+                "category": "소재",
+                "description": "",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "미국 관세 정책",
+            "properties": {
+                "date": "2023-03",
+                "type": "정책",
+                "description": "미국의 25% 관세 부과"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
             "name": "중소벤처기업부",
             "properties": {
-                "name": "중소벤처기업부",
-                "agency_name": "중소벤처기업부"
+                "type": "정부기관",
+                "description": "중소기업 수출 동향 발표",
+                "headquarters": "대한민국"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이순배",
+            "properties": {
+                "full_name": "이순배",
+                "role": "글로벌성장정책관",
+                "nationality": "대한민국",
+                "age": ""
             }
         }
     ],
     "relations": [
         {
-            "start_node": "1분기 중소기업 수출",
-            "relationship": "TARGETS_COUNTRY",
-            "end_node": "미국",
-            "properties": {}
-        },
-        {
-            "start_node": "1분기 중소기업 수출",
-            "relationship": "HAS_STATISTIC",
-            "end_node": "화장품",
-            "properties": {}
+            "start_node": "중소기업 수출 시장",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {
+                "impact": "수출 감소"
+            }
         },
         {
             "start_node": "화장품",
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "export_amount": 1840000000,
-                "growth_rate": 19.6
+                "amount": "1840000000 달러",
+                "growth_rate": "+19.6%"
             }
-        },
-        {
-            "start_node": "1분기 중소기업 수출",
-            "relationship": "HAS_STATISTIC",
-            "end_node": "자동차",
-            "properties": {}
         },
         {
             "start_node": "자동차",
             "relationship": "EXPORTED_TO",
-            "end_node": "키르기스스탄",
+            "end_node": "미국",
             "properties": {
-                "export_amount": 1740000000,
-                "growth_rate": 67.4
+                "amount": "1740000000 달러",
+                "growth_rate": "+67.4%"
             }
         },
         {
-            "start_node": "중소기업",
-            "relationship": "HAS_SALES",
-            "end_node": "1분기 중소기업 수출",
-            "properties": {}
+            "start_node": "철강",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-17.8%"
+            }
         },
         {
-            "start_node": "철강 및 알루미늄 관세",
-            "relationship": "IMPOSED_BY",
-            "end_node": "미국",
-            "properties": {}
-        },
-        {
-            "start_node": "철강 및 알루미늄 관세",
-            "relationship": "AFFECTS_STATISTIC",
-            "end_node": "1분기 중소기업 수출",
-            "properties": {}
+            "start_node": "알루미늄",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-7.6%"
+            }
         },
         {
             "start_node": "중소벤처기업부",
-            "relationship": "PUBLISHED",
-            "end_node": "1분기 중소기업 수출",
-            "properties": {}
+            "relationship": "ANNOUNCED",
+            "end_node": "중소기업 수출 시장",
+            "properties": {
+                "date": "2023-04-14",
+                "description": "중소기업 수출 증가 발표"
+            }
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
         }
     ]
 }

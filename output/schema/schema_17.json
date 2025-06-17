@@ -1,66 +1,270 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "string",
+      "label": "COMPANY",
+      "name": "중소기업",
       "properties": {
-        "size": "string"
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "string",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "category": "string"
+        "category": "Beauty",
+        "description": "Cosmetics exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "Country",
-      "name": "string",
-      "properties": {}
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "Automobile",
+        "description": "Cars exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
+      }
     },
     {
-      "label": "ExportStatistic",
-      "name": "string",
+      "label": "PRODUCT",
+      "name": "반도체 제조용 장비",
       "properties": {
-        "period": "string",
-        "amountUSD": "float",
-        "amountKRW": "float",
-        "changePercent": "float",
-        "rank": "int"
+        "category": "Semiconductor Equipment",
+        "description": "Equipment for semiconductor manufacturing",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "Country",
+        "country": "Japan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "Country",
+        "country": "Hong Kong",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "Country",
+        "country": "Taiwan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "Country",
+        "country": "Thailand",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "Country",
+        "country": "Indonesia",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "Country",
+        "country": "Vietnam",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "Country",
+        "country": "India",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "Country",
+        "country": "Mexico",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "Global Growth Policy Officer",
+        "nationality": "South Korean",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "EXPORTS",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "EXPORTED_TO",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "미국",
+        "description": "Major export market for cosmetics"
+      }
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "중국",
+        "description": "Increased demand due to manufacturing boom"
+      }
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "FOR_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "미국",
+        "description": "Largest export market for SMEs"
+      }
     },
     {
-      "start_node": "ExportStatistic",
-      "relationship": "BY_COMPANY",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "중국",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "일본",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "홍콩",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "대만",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "태국",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "인도네시아",
+        "description": "Significant export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "베트남",
+        "description": "Decreased export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "인도",
+        "description": "Decreased export market for SMEs"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "멕시코",
+        "description": "Decreased export market for SMEs"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "Global Growth Policy Officer",
+        "since": ""
+      }
     }
   ]
 }

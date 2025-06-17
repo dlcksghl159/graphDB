@@ -1,98 +1,131 @@
 {
   "nodes": [
     {
-      "label": "Event",
-      "name": "String",
+      "label": "EVENT",
+      "name": "2025 경기도 동반성장 페어",
       "properties": {
-        "date": "string",
-        "location": "string",
-        "edition": "int"
+        "date": "2023-09-13",
+        "type": "페어",
+        "description": "경기도와 동반성장위원회가 공동으로 개최한 대·중소기업 및 공공기관의 상생협력 행사",
+        "location": "수원메쎄 1홀"
       }
     },
     {
-      "label": "Company",
-      "name": "String",
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
       "properties": {
-        "type": "string"
+        "type": "위원회",
+        "description": "대·중소기업 및 공공기관의 상생협력을 지원하는 조직",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "Program",
-      "name": "String",
+      "label": "ORGANIZATION",
+      "name": "경기도",
       "properties": {
-        "programType": "string"
+        "type": "지방자치단체",
+        "description": "대한민국의 한 지역으로, 중소기업이 많이 소재한 지역",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "Institution",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "네이버",
       "properties": {
-        "role": "string"
+        "full_name": "네이버 주식회사",
+        "industry": "인터넷 서비스",
+        "headquarters": "대한민국",
+        "founded": "1999",
+        "ceo": "최수연"
       }
     },
     {
-      "label": "Consultation",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "현대모비스",
       "properties": {
-        "count": "int",
-        "amount": "int"
+        "full_name": "현대모비스 주식회사",
+        "industry": "자동차 부품",
+        "headquarters": "대한민국",
+        "founded": "1977",
+        "ceo": "조성환"
       }
     },
     {
-      "label": "SupportPlan",
-      "name": "String",
+      "label": "COMPANY",
+      "name": "대상",
       "properties": {
-        "startYear": "int",
-        "endYear": "int"
+        "full_name": "대상 주식회사",
+        "industry": "식품",
+        "headquarters": "대한민국",
+        "founded": "1956",
+        "ceo": "임정배"
       }
     },
     {
-      "label": "Region",
-      "name": "String",
-      "properties": {}
+      "label": "PROJECT",
+      "name": "제2차 경기도 공정경제 5개년 기본계획",
+      "properties": {
+        "description": "경기도의 공정경제를 위한 5개년 계획",
+        "start_date": "2023-04",
+        "status": "진행 중"
+      }
     }
   ],
   "relations": [
     {
-      "start_node": "Institution",
-      "relationship": "HOSTED",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
+      "start_node": "EVENT",
       "relationship": "HELD_IN",
-      "end_node": "Region",
+      "end_node": "LOCATION",
+      "properties": {
+        "location": "수원메쎄 1홀"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "PART_OF",
-      "end_node": "Event",
+      "start_node": "ORGANIZATION",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "PARTICIPATED_IN",
-      "end_node": "Program",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "구매방침 설명회"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "구매방침 설명회"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "구매방침 설명회"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Consultation",
-      "relationship": "OCCURRED_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Consultation",
-      "relationship": "INVOLVES_COMPANY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportPlan",
-      "relationship": "RELATES_TO",
-      "end_node": "Event",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     }
   ]

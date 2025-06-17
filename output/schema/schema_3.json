@@ -1,58 +1,97 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "LOCATION",
+      "name": "경기도",
       "properties": {
-        "companyName": "string",
-        "employeeCount": "int",
-        "sizeCategory": "string"
+        "type": "Province",
+        "country": "대한민국",
+        "region": "경기"
       }
     },
     {
-      "label": "TrainingProgram",
-      "name": "Training Program",
+      "label": "ORGANIZATION",
+      "name": "고용노동부",
       "properties": {
-        "programName": "string",
-        "programType": "string",
-        "description": "string"
+        "type": "Government",
+        "description": "대한민국의 노동 정책을 담당하는 정부 부처",
+        "headquarters": "세종특별자치시"
       }
     },
     {
-      "label": "Agency",
-      "name": "Government Agency",
+      "label": "ORGANIZATION",
+      "name": "직업건강간호협회",
       "properties": {
-        "agencyName": "string",
-        "department": "string"
+        "type": "Association",
+        "description": "직업 건강과 안전을 연구하고 교육하는 협회",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "Contact",
-      "name": "Contact",
+      "label": "PERSON",
+      "name": "임용규",
       "properties": {
-        "contactName": "string",
-        "phone": "string",
-        "email": "string"
+        "full_name": "임용규",
+        "role": "경기도 노동안전과장",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "찾아가는 산업재해 예방 교육",
+      "properties": {
+        "description": "50인 미만 소규모 사업장을 대상으로 한 산업재해 예방 교육",
+        "start_date": "2020년",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "산업재해 예방 교육",
+      "properties": {
+        "date": "2023년",
+        "type": "교육",
+        "description": "위험성 평가 실습 교육, 기업별 맞춤형 교육, VR 체험 교육 등",
+        "location": "경기도"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "RECEIVES",
-      "end_node": "TrainingProgram",
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "ORGANIZATION",
       "properties": {}
     },
     {
-      "start_node": "Agency",
-      "relationship": "ORGANIZES",
-      "end_node": "TrainingProgram",
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "TrainingProgram",
-      "relationship": "HAS_CONTACT",
-      "end_node": "Contact",
+      "start_node": "PERSON",
+      "relationship": "MANAGES",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

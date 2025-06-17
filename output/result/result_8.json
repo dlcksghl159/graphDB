@@ -1,53 +1,87 @@
 {
     "nodes": [
         {
-            "label": "Institution",
+            "label": "ORGANIZATION",
             "name": "기술보증기금 지식재산공제센터",
             "properties": {
-                "institutionType": "Public",
-                "role": "지원기관"
+                "type": "기관",
+                "description": "지식재산공제사업 활성화를 위한 기관"
             }
         },
         {
-            "label": "Institution",
+            "label": "ORGANIZATION",
             "name": "인천지식재산센터",
             "properties": {
-                "institutionType": "Public",
-                "role": "지원기관"
+                "type": "기관",
+                "description": "인천지역의 지식재산 관련 지원 기관"
             }
         },
         {
-            "label": "Agreement",
-            "name": "지식재산공제사업 활성화 공동발전 업무 협약",
+            "label": "AGREEMENT",
+            "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
             "properties": {
-                "name": "지식재산공제사업 활성화 공동발전 업무 협약",
-                "date": "2023-10-14",
-                "title": "지식재산공제사업 활성화",
-                "location": "인천",
-                "description": "인천지역 중소기업 지식재산 인식 제고와 기술경쟁력 강화"
+                "type": "협약",
+                "date": "2023-04-14",
+                "description": "지식재산공제사업 활성화를 위한 협력"
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "지식재산공제사업",
+            "properties": {
+                "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외 진출을 뒷받침하기 위한 금융제도",
+                "start_date": "2019",
+                "status": "활성화 중"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "특허청",
+            "properties": {
+                "type": "정부 기관",
+                "description": "지식재산 관련 정책 및 지원"
             }
         }
     ],
     "relations": [
         {
             "start_node": "기술보증기금 지식재산공제센터",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "지식재산공제사업 활성화 공동발전 업무 협약",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
             "properties": {}
         },
         {
             "start_node": "인천지식재산센터",
-            "relationship": "SIGNED_AGREEMENT",
-            "end_node": "지식재산공제사업 활성화 공동발전 업무 협약",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
             "properties": {}
         },
         {
             "start_node": "기술보증기금 지식재산공제센터",
-            "relationship": "COLLABORATES_WITH",
+            "relationship": "PARTNERED_WITH",
             "end_node": "인천지식재산센터",
             "properties": {
-                "context": "지식재산공제사업 활성화"
+                "type": "지식재산공제사업 활성화",
+                "date": "2023-04-14"
             }
+        },
+        {
+            "start_node": "기술보증기금 지식재산공제센터",
+            "relationship": "LEADS",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "특허청",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "기술보증기금 지식재산공제센터",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "LOCATED_IN",
+            "end_node": "인천",
+            "properties": {}
         }
     ]
 }

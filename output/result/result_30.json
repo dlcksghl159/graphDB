@@ -1,231 +1,156 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "셀트리온",
+            "label": "LOCATION",
+            "name": "스페인",
             "properties": {
-                "name": "셀트리온",
-                "industry": "",
-                "ticker": "",
-                "type": "",
-                "company_name": "셀트리온",
-                "stock_code": "",
-                "company_id": "",
-                "size": "",
-                "region": "",
-                "country": "",
-                "headquarters": "",
-                "companyName": "셀트리온",
-                "employeeCount": 0,
-                "sizeCategory": "",
-                "founded_year": 0,
-                "cumulative_investment": 0,
-                "target_ipo_year": 0,
-                "employee_count": 0,
-                "founding_year": 0,
-                "company_type": "",
-                "revenue": 0,
-                "rnd_investment": 0,
-                "domesticProduction": false,
-                "category": ""
-            }
-        },
-        {
-            "label": "Subsidiary",
-            "name": "셀트리온 스페인 법인",
-            "properties": {
-                "name": "셀트리온 스페인 법인",
+                "type": "국가",
                 "country": "스페인",
-                "established_year": 2018
+                "region": ""
             }
         },
         {
-            "label": "Subsidiary",
-            "name": "셀트리온 포르투갈 법인",
+            "label": "LOCATION",
+            "name": "포르투갈",
             "properties": {
-                "name": "셀트리온 포르투갈 법인",
+                "type": "국가",
                 "country": "포르투갈",
-                "established_year": 2022
+                "region": ""
             }
         },
         {
-            "label": "Product",
-            "name": "트룩시마",
-            "properties": {
-                "name": "트룩시마",
-                "active_ingredient": "리툭시맙",
-                "category": "",
-                "specification": "",
-                "type": "",
-                "model": "",
-                "product_id": "",
-                "productId": "",
-                "productName": "트룩시마",
-                "price": 0,
-                "product_type": "",
-                "activeIngredient": "리툭시맙",
-                "therapyArea": "",
-                "product_name": "트룩시마",
-                "description": "",
-                "approval_year": 0,
-                "releaseDate": "",
-                "generation": "",
-                "productionMethod": "",
-                "features": ""
-            }
-        },
-        {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "허쥬마",
             "properties": {
-                "name": "허쥬마",
-                "active_ingredient": "트라스투주맙",
-                "category": "",
-                "specification": "",
-                "type": "",
-                "model": "",
-                "product_id": "",
-                "productId": "",
-                "productName": "허쥬마",
-                "price": 0,
-                "product_type": "",
-                "activeIngredient": "트라스투주맙",
-                "therapyArea": "",
-                "product_name": "허쥬마",
-                "description": "",
-                "approval_year": 0,
-                "releaseDate": "",
-                "generation": "",
-                "productionMethod": "",
-                "features": ""
+                "category": "항암제",
+                "description": "성분명 트라스투주맙",
+                "launch_date": "",
+                "company": "셀트리온"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "베그젤마",
             "properties": {
-                "name": "베그젤마",
-                "active_ingredient": "베바시주맙",
-                "category": "",
-                "specification": "",
-                "type": "",
-                "model": "",
-                "product_id": "",
-                "productId": "",
-                "productName": "베그젤마",
-                "price": 0,
-                "product_type": "",
-                "activeIngredient": "베바시주맙",
-                "therapyArea": "",
-                "product_name": "베그젤마",
-                "description": "",
-                "approval_year": 0,
-                "releaseDate": "",
-                "generation": "",
-                "productionMethod": "",
-                "features": ""
+                "category": "항암제",
+                "description": "성분명 베바시주맙",
+                "launch_date": "",
+                "company": "셀트리온"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "스테키마",
             "properties": {
-                "name": "스테키마",
-                "active_ingredient": "우스테키누맙",
-                "category": "",
-                "specification": "",
-                "type": "",
-                "model": "",
-                "product_id": "",
-                "productId": "",
-                "productName": "스테키마",
-                "price": 0,
-                "product_type": "",
-                "activeIngredient": "우스테키누맙",
-                "therapyArea": "",
-                "product_name": "스테키마",
-                "description": "",
-                "approval_year": 0,
-                "releaseDate": "",
-                "generation": "",
-                "productionMethod": "",
-                "features": ""
+                "category": "자가면역질환 치료제",
+                "description": "성분명 우스테키누맙",
+                "launch_date": "2022-12",
+                "company": "셀트리온"
             }
         },
         {
-            "label": "Tender",
-            "name": "CSC 컨소시엄 입찰",
-            "properties": {
-                "name": "CSC 컨소시엄 입찰",
-                "region": "카탈루냐주",
-                "start_date": "2025-02-01",
-                "end_date": "2029-02-01",
-                "type": "",
-                "startDate": "2025-02-01",
-                "endDate": "2029-02-01"
-            }
-        },
-        {
-            "label": "Institution",
+            "label": "ORGANIZATION",
             "name": "CSC",
             "properties": {
-                "name": "CSC",
-                "institutionType": "입찰 기관",
-                "role": "의약품 공급"
+                "type": "입찰 기관",
+                "description": "스페인 대형 입찰 기관, 카탈루냐주에 위치한 25개 공립병원의 의약품 공급 관할"
             }
+        },
+        {
+            "label": "PERSON",
+            "name": "강석훈",
+            "properties": {
+                "full_name": "강석훈",
+                "role": "법인장",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "유럽내",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "내",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Kern Pharma",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "IQVIA",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "셀트리온",
-            "relationship": "OWNS",
-            "end_node": "셀트리온 스페인 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "OWNS",
-            "end_node": "셀트리온 포르투갈 법인",
-            "properties": {}
-        },
-        {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SUPPLIES",
-            "end_node": "CSC 컨소시엄 입찰",
+            "relationship": "EXPANDS_TO",
+            "end_node": "스페인",
             "properties": {
-                "startDate": "2025-02-01",
-                "endDate": "2029-02-01"
+                "date": "2023-04",
+                "purpose": "직판 체제 전환"
             }
         },
         {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
+            "start_node": "셀트리온",
+            "relationship": "EXPANDS_TO",
+            "end_node": "포르투갈",
+            "properties": {
+                "date": "2023-04",
+                "purpose": "직판 체제 전환"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
             "end_node": "트룩시마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
             "end_node": "허쥬마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온 스페인 법인",
-            "relationship": "SELLS",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
             "end_node": "베그젤마",
             "properties": {}
         },
         {
-            "start_node": "셀트리온 포르투갈 법인",
-            "relationship": "SELLS",
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
             "end_node": "스테키마",
             "properties": {}
         },
         {
-            "start_node": "CSC",
-            "relationship": "ORGANIZES",
-            "end_node": "CSC 컨소시엄 입찰",
-            "properties": {}
+            "start_node": "셀트리온",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "CSC",
+            "properties": {
+                "type": "입찰",
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "강석훈",
+            "relationship": "WORKS_FOR",
+            "end_node": "셀트리온",
+            "properties": {
+                "position": "법인장",
+                "since": ""
+            }
         }
     ]
 }

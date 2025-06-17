@@ -1,144 +1,96 @@
 {
     "nodes": [
         {
-            "label": "Institution",
-            "name": "중소벤처기업진흥공단",
-            "properties": {
-                "name": "중소벤처기업진흥공단",
-                "institutionType": "Public",
-                "role": "Support"
-            }
-        },
-        {
-            "label": "Institution",
-            "name": "부산항만공사",
-            "properties": {
-                "name": "부산항만공사",
-                "institutionType": "Public",
-                "role": "Support"
-            }
-        },
-        {
-            "label": "Agreement",
-            "name": "글로벌 물류 지원 업무협약",
-            "properties": {
-                "name": "글로벌 물류 지원 업무협약",
-                "date": "2023-09-14",
-                "location": "부산항만공사 본사",
-                "purpose": "수출 중소벤처기업의 물류애로 해소"
-            }
-        },
-        {
-            "label": "LogisticsCenter",
-            "name": "미국 로스앤젤레스·롱비치 물류센터",
-            "properties": {
-                "name": "미국 로스앤젤레스·롱비치 물류센터",
-                "type": "Overseas",
-                "location": "미국 로스앤젤레스·롱비치"
-            }
-        },
-        {
-            "label": "Service",
+            "label": "PROJECT",
             "name": "항공·해운 통합물류 지원 플랫폼",
             "properties": {
-                "name": "항공·해운 통합물류 지원 플랫폼",
-                "serviceType": "Integrated Logistics",
-                "type": "Platform"
+                "description": "중소기업 전용 물류 지원 플랫폼 구축",
+                "start_date": "2023-04-14",
+                "status": "계획 중"
             }
         },
         {
-            "label": "Region",
-            "name": "부산",
+            "label": "EVENT",
+            "name": "글로벌 물류 지원 업무협약",
             "properties": {
-                "name": "부산",
-                "type": "Local"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "인천",
-            "properties": {
-                "name": "인천",
-                "type": "Local"
-            }
-        },
-        {
-            "label": "Region",
-            "name": "여수 광양",
-            "properties": {
-                "name": "여수 광양",
-                "type": "Local"
-            }
-        },
-        {
-            "label": "ExportSME",
-            "name": "한국 중소벤처기업",
-            "properties": {
-                "name": "한국 중소벤처기업",
-                "industry": "Various"
-            }
-        },
-        {
-            "label": "Executive",
-            "name": "강석진",
-            "properties": {
-                "name": "강석진",
-                "title": "이사장"
+                "date": "2023-04-14",
+                "type": "협약",
+                "description": "중소벤처기업의 글로벌 물류 지원을 위한 협약"
             }
         }
     ],
     "relations": [
         {
             "start_node": "중소벤처기업진흥공단",
-            "relationship": "SIGNED_AGREEMENT",
+            "relationship": "SIGNED",
             "end_node": "글로벌 물류 지원 업무협약",
             "properties": {}
         },
         {
             "start_node": "부산항만공사",
-            "relationship": "SIGNED_AGREEMENT",
+            "relationship": "SIGNED",
             "end_node": "글로벌 물류 지원 업무협약",
             "properties": {}
         },
         {
-            "start_node": "미국 로스앤젤레스·롱비치 물류센터",
-            "relationship": "PROVIDES_SUPPORT_TO",
-            "end_node": "한국 중소벤처기업",
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "부산항만공사",
             "properties": {
-                "support_type": "Logistics Services"
-            }
-        },
-        {
-            "start_node": "항공·해운 통합물류 지원 플랫폼",
-            "relationship": "PROVIDES_SUPPORT_TO",
-            "end_node": "한국 중소벤처기업",
-            "properties": {
-                "support_type": "Logistics Integration"
+                "type": "물류 협력",
+                "date": "2023-04-14"
             }
         },
         {
             "start_node": "중소벤처기업진흥공단",
+            "relationship": "PLANS_TO_EXPAND",
+            "end_node": "LOCATION",
+            "properties": {
+                "locations": [
+                    "부산",
+                    "인천",
+                    "여수 광양"
+                ]
+            }
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "부산",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
             "relationship": "OPERATES",
+            "end_node": "로스앤젤레스",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "OPERATES",
+            "end_node": "롱비치",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "LEADS",
             "end_node": "항공·해운 통합물류 지원 플랫폼",
             "properties": {}
         },
         {
-            "start_node": "부산",
-            "relationship": "LOCATED_IN",
-            "end_node": "초기 해상물류 거점",
-            "properties": {}
-        },
-        {
             "start_node": "강석진",
-            "relationship": "LEADS",
+            "relationship": "WORKS_FOR",
             "end_node": "중소벤처기업진흥공단",
-            "properties": {}
-        },
-        {
-            "start_node": "글로벌 물류 지원 업무협약",
-            "relationship": "INVOLVES",
-            "end_node": "한국 중소벤처기업",
-            "properties": {}
+            "properties": {
+                "position": "이사장",
+                "since": ""
+            }
         }
     ]
 }

@@ -1,110 +1,98 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "파세코",
             "properties": {
-                "name": "파세코",
-                "industry": "가전",
-                "domesticProduction": true
+                "full_name": "파세코",
+                "industry": "가전제품",
+                "headquarters": "안산",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Factory",
-            "name": "파세코 안산 공장",
+            "label": "LOCATION",
+            "name": "안산",
             "properties": {
-                "factory_name": "파세코 안산 공장",
-                "location": "경기 안산시 단원구",
-                "workersCount": 60,
-                "maxDailyProduction": 1200,
-                "operatingStatus": "풀가동 중"
+                "type": "지역",
+                "country": "대한민국",
+                "region": "경기"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "창문형 에어컨",
             "properties": {
-                "name": "창문형 에어컨",
                 "category": "가전제품",
-                "description": "AI 에너지 세이빙 기술 적용",
-                "generation": "6세대"
+                "description": "창문형 에어컨, AI 모드, 환기 시스템",
+                "launch_date": "2023-09",
+                "company": "파세코"
             }
         },
         {
-            "label": "Executive",
+            "label": "PERSON",
             "name": "김상우",
             "properties": {
-                "name": "김상우",
-                "title": "리테일사업부 상무"
+                "full_name": "김상우",
+                "role": "리테일사업부 상무",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "ExperimentLab",
-            "name": "소음 성능 측정 실험실",
+            "label": "PERSON",
+            "name": "박치호",
             "properties": {
-                "labName": "소음 성능 측정 실험실",
-                "floor": "지하 1층",
-                "uniqueInSME": true
+                "full_name": "박치호",
+                "role": "기술연구소 팀장",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Product",
-            "name": "서큘레이터",
+            "label": "TECHNOLOGY",
+            "name": "AI 에너지 세이빙",
             "properties": {
-                "name": "서큘레이터",
-                "category": "계절가전제품"
-            }
-        },
-        {
-            "label": "Product",
-            "name": "보디드라이어",
-            "properties": {
-                "name": "보디드라이어",
-                "category": "계절가전제품"
+                "category": "에너지 절약 기술",
+                "description": "주위 온도 감지 및 자동 조절",
+                "field": "사물인터넷(IoT)"
             }
         }
     ],
     "relations": [
         {
             "start_node": "파세코",
-            "relationship": "OWNS_FACTORY",
-            "end_node": "파세코 안산 공장",
-            "properties": {}
-        },
-        {
-            "start_node": "파세코 안산 공장",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "창문형 에어컨",
-            "properties": {}
-        },
-        {
-            "start_node": "파세코",
-            "relationship": "LAUNCHED",
-            "end_node": "창문형 에어컨",
+            "relationship": "LOCATED_IN",
+            "end_node": "안산",
             "properties": {}
         },
         {
             "start_node": "김상우",
             "relationship": "WORKS_FOR",
             "end_node": "파세코",
-            "properties": {}
+            "properties": {
+                "position": "리테일사업부 상무"
+            }
         },
         {
-            "start_node": "창문형 에어컨",
-            "relationship": "TESTED_IN_LAB",
-            "end_node": "소음 성능 측정 실험실",
+            "start_node": "박치호",
+            "relationship": "WORKS_FOR",
+            "end_node": "파세코",
+            "properties": {
+                "position": "기술연구소 팀장"
+            }
+        },
+        {
+            "start_node": "파세코",
+            "relationship": "PRODUCES",
+            "end_node": "창문형 에어컨",
             "properties": {}
         },
         {
             "start_node": "파세코",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "서큘레이터",
-            "properties": {}
-        },
-        {
-            "start_node": "파세코",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "보디드라이어",
+            "relationship": "DEVELOPS",
+            "end_node": "AI 에너지 세이빙",
             "properties": {}
         }
     ]

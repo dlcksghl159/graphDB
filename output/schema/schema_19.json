@@ -1,123 +1,111 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "현대이지웰",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "full_name": "현대이지웰",
+        "industry": "복지솔루션",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Platform",
-      "name": "Platform",
+      "label": "COMPANY",
+      "name": "현대백화점그룹",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "full_name": "현대백화점그룹",
+        "industry": "유통",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Partner",
-      "name": "Partner",
+      "label": "ORGANIZATION",
+      "name": "한국중소벤처기업유통원",
       "properties": {
-        "name": "string",
-        "size": "string"
+        "type": "정부기관",
+        "description": "중소벤처기업부 산하 기관",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "Transaction",
-      "name": "Transaction",
+      "label": "LOCATION",
+      "name": "경기도",
       "properties": {
-        "year": "int",
-        "amount": "float",
-        "growth_rate_percent": "float",
-        "share_percent": "float"
+        "type": "지역",
+        "country": "대한민국",
+        "region": "수도권"
       }
     },
     {
-      "label": "Region",
-      "name": "Region",
+      "label": "LOCATION",
+      "name": "안산",
       "properties": {
-        "name": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "경기도"
       }
     },
     {
-      "label": "PublicInstitution",
-      "name": "PublicInstitution",
+      "label": "PROJECT",
+      "name": "소상공인 온라인쇼핑몰 판매지원사업",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "start_date": "",
+        "status": "진행 중"
       }
     },
     {
-      "label": "SupportProgram",
-      "name": "SupportProgram",
+      "label": "AGREEMENT",
+      "name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
       "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Agreement",
-      "name": "Agreement",
-      "properties": {
-        "name": "string",
-        "date": "string"
+        "type": "업무협약",
+        "date": "",
+        "description": "다농마트 청년몰 이용 활성화를 위한 협력"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "OPERATES",
-      "end_node": "Platform",
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
       "properties": {}
     },
     {
-      "start_node": "Platform",
-      "relationship": "HAS_PARTNER",
-      "end_node": "Partner",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "지원사업",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Partner",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "RECORDED_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "GENERATED_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportProgram",
-      "relationship": "OPERATED_BY",
-      "end_node": "PublicInstitution",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
-      "end_node": "Partner",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

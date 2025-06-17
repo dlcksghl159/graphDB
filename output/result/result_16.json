@@ -1,228 +1,113 @@
 {
     "nodes": [
         {
-            "label": "Survey",
-            "name": "사람인 직장인 이모작 의향 조사",
+            "label": "ORGANIZATION",
+            "name": "사람인",
             "properties": {
-                "id": "S20231014",
-                "title": "인생 이모작 의향",
-                "date": "2023-10-14",
-                "respondentCount": 965
+                "type": "기업",
+                "description": "직장인 대상 설문조사 실시"
             }
         },
         {
-            "label": "Reason",
-            "name": "안정적인 수입 필요",
+            "label": "PERSON",
+            "name": "김혜미",
             "properties": {
-                "name": "안정적인 수입 필요"
+                "full_name": "김혜미",
+                "role": "기자"
             }
         },
         {
-            "label": "Reason",
-            "name": "정년 없이 일하기 위해",
+            "label": "CONCEPT",
+            "name": "인생 이모작",
             "properties": {
-                "name": "정년 없이 일하기 위해"
+                "type": "직업 전환",
+                "description": "은퇴 후 새로운 직업 찾기"
             }
         },
         {
-            "label": "Reason",
-            "name": "노후 대비",
-            "properties": {
-                "name": "노후 대비"
-            }
-        },
-        {
-            "label": "Reason",
-            "name": "원하는 일 하기 위해",
-            "properties": {
-                "name": "원하는 일 하기 위해"
-            }
-        },
-        {
-            "label": "Field",
+            "label": "CONCEPT",
             "name": "창업 및 자영업",
             "properties": {
-                "name": "창업 및 자영업"
+                "type": "직업 분야",
+                "description": "인생 이모작에서 가장 선호되는 분야"
             }
         },
         {
-            "label": "Field",
+            "label": "CONCEPT",
             "name": "블루칼라 직무",
             "properties": {
-                "name": "블루칼라 직무"
+                "type": "직업 분야",
+                "description": "생산직, 용접, 목공, 운전 등"
             }
         },
         {
-            "label": "Field",
+            "label": "CONCEPT",
             "name": "화이트칼라 직무",
             "properties": {
-                "name": "화이트칼라 직무"
+                "type": "직업 분야",
+                "description": "영업, 재무 등"
             }
         },
         {
-            "label": "Field",
+            "label": "CONCEPT",
             "name": "전문직",
             "properties": {
-                "name": "전문직"
+                "type": "직업 분야",
+                "description": "변호사, 노무사, 행정사 등"
             }
         },
         {
-            "label": "AgeGroup",
-            "name": "60대",
+            "label": "CONCEPT",
+            "name": "관련 자격증 취득",
             "properties": {
-                "name": "60대",
-                "ageRange": "60-69"
+                "type": "준비 활동",
+                "description": "인생 이모작 준비를 위한 활동"
             }
         },
         {
-            "label": "AgeGroup",
-            "name": "50대",
+            "label": "CONCEPT",
+            "name": "관련 교육과정 수강",
             "properties": {
-                "name": "50대",
-                "ageRange": "50-59"
+                "type": "준비 활동",
+                "description": "인생 이모작 준비를 위한 활동"
             }
         },
         {
-            "label": "AgeGroup",
-            "name": "40대",
+            "label": "CONCEPT",
+            "name": "관심 직무 실무 경험",
             "properties": {
-                "name": "40대",
-                "ageRange": "40-49"
+                "type": "준비 활동",
+                "description": "인생 이모작 준비를 위한 활동"
             }
         },
         {
-            "label": "AgeGroup",
-            "name": "30대",
+            "label": "CONCEPT",
+            "name": "전문 기술 습득",
             "properties": {
-                "name": "30대",
-                "ageRange": "30-39"
+                "type": "준비 활동",
+                "description": "인생 이모작 준비를 위한 활동"
             }
         },
         {
-            "label": "AgeGroup",
-            "name": "20대",
+            "label": "CONCEPT",
+            "name": "종자돈 모으기",
             "properties": {
-                "name": "20대",
-                "ageRange": "20-29"
-            }
-        },
-        {
-            "label": "IncomeExpectation",
-            "name": "Desired Income",
-            "properties": {
-                "averageMonthlyIncome": 402
+                "type": "준비 활동",
+                "description": "인생 이모작 준비를 위한 활동"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_REASON",
-            "end_node": "안정적인 수입 필요",
-            "properties": {
-                "rate": 55.2
-            }
+            "start_node": "사람인",
+            "relationship": "CONDUCTED",
+            "end_node": "인생 이모작",
+            "properties": {}
         },
         {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_REASON",
-            "end_node": "정년 없이 일하기 위해",
-            "properties": {
-                "rate": 45.6
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_REASON",
-            "end_node": "노후 대비",
-            "properties": {
-                "rate": 37.3
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_REASON",
-            "end_node": "원하는 일 하기 위해",
-            "properties": {
-                "rate": 24.3
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_DESIRED_FIELD",
-            "end_node": "창업 및 자영업",
-            "properties": {
-                "rate": 21.7
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_DESIRED_FIELD",
-            "end_node": "블루칼라 직무",
-            "properties": {
-                "rate": 20.4
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_DESIRED_FIELD",
-            "end_node": "화이트칼라 직무",
-            "properties": {
-                "rate": 17.8
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_DESIRED_FIELD",
-            "end_node": "전문직",
-            "properties": {
-                "rate": 8.8
-            }
-        },
-        {
-            "start_node": "60대",
-            "relationship": "HAS_INTENTION_IN",
-            "end_node": "사람인 직장인 이모작 의향 조사",
-            "properties": {
-                "intentionRate": 42.2
-            }
-        },
-        {
-            "start_node": "50대",
-            "relationship": "HAS_INTENTION_IN",
-            "end_node": "사람인 직장인 이모작 의향 조사",
-            "properties": {
-                "intentionRate": 28.5
-            }
-        },
-        {
-            "start_node": "40대",
-            "relationship": "HAS_INTENTION_IN",
-            "end_node": "사람인 직장인 이모작 의향 조사",
-            "properties": {
-                "intentionRate": 16.4
-            }
-        },
-        {
-            "start_node": "30대",
-            "relationship": "HAS_INTENTION_IN",
-            "end_node": "사람인 직장인 이모작 의향 조사",
-            "properties": {
-                "intentionRate": 6.5
-            }
-        },
-        {
-            "start_node": "20대",
-            "relationship": "HAS_INTENTION_IN",
-            "end_node": "사람인 직장인 이모작 의향 조사",
-            "properties": {
-                "intentionRate": 1.0
-            }
-        },
-        {
-            "start_node": "사람인 직장인 이모작 의향 조사",
-            "relationship": "HAS_INCOME_EXPECTATION",
-            "end_node": "Desired Income",
+            "start_node": "김혜미",
+            "relationship": "REPORTED",
+            "end_node": "인생 이모작",
             "properties": {}
         }
     ]

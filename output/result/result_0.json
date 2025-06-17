@@ -1,145 +1,204 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "Atum",
+            "label": "COMPANY",
+            "name": "에이텀",
             "properties": {
-                "industry": "Manufacturing"
+                "full_name": "에이텀",
+                "industry": "전자",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "PartnerCompany",
+            "label": "COMPANY",
             "name": "DST",
             "properties": {
-                "industry": "Shipbuilding and Defense"
+                "full_name": "DST",
+                "industry": "조선 및 방산",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Product",
-            "name": "TA Trans",
+            "label": "COMPANY",
+            "name": "밸류파인더",
             "properties": {
-                "category": "Charger"
+                "full_name": "밸류파인더",
+                "industry": "리서치",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Product",
-            "name": "TV Trans",
+            "label": "PERSON",
+            "name": "이충헌",
             "properties": {
-                "category": "Television"
+                "full_name": "이충헌",
+                "role": "연구원",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Product",
-            "name": "25W Trans",
+            "label": "COMPANY",
+            "name": "Samsung",
             "properties": {
-                "category": "Transformer"
+                "full_name": "삼성전자",
+                "industry": "전자",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Product",
-            "name": "45W Trans",
+            "label": "COMPANY",
+            "name": "HD현대중공업",
             "properties": {
-                "category": "Transformer"
+                "full_name": "HD현대중공업",
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Company",
-            "name": "Samsung Electronics",
+            "label": "COMPANY",
+            "name": "HD현대마린솔루션",
             "properties": {
-                "industry": "Electronics"
+                "full_name": "HD현대마린솔루션",
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Company",
-            "name": "HD Hyundai Heavy Industries",
+            "label": "COMPANY",
+            "name": "STX엔진",
             "properties": {
-                "industry": "Shipbuilding"
+                "full_name": "STX엔진",
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Company",
-            "name": "HD Hyundai Marine Solutions",
+            "label": "PRODUCT",
+            "name": "TA트랜스",
             "properties": {
-                "industry": "Marine"
+                "category": "전자제품",
+                "description": "휴대용 충전기에 탑재되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
             }
         },
         {
-            "label": "Company",
-            "name": "STX Engine",
+            "label": "PRODUCT",
+            "name": "TV트랜스",
             "properties": {
-                "industry": "Machinery and Equipment Manufacturing"
+                "category": "전자제품",
+                "description": "TV에 탑재되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
             }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "전기차용 트랜스",
+            "properties": {
+                "category": "전자제품",
+                "description": "전기차에 사용되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "힘센엔진 실린더",
+            "properties": {
+                "category": "조선 부품",
+                "description": "HD현대중공업의 힘센엔진에 사용되는 실린더",
+                "launch_date": "",
+                "company": "DST"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "DST 인수",
+            "properties": {
+                "date": "2023-02-02",
+                "type": "인수",
+                "description": "에이텀이 DST 지분 50%를 인수"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HiMSEN",
+            "properties": {}
         }
     ],
     "relations": [
         {
-            "start_node": "Atum",
+            "start_node": "에이텀",
             "relationship": "ACQUIRED",
             "end_node": "DST",
             "properties": {
-                "stake_percentage": "50%",
-                "amount": "145억 원",
-                "date": "2023-02-02"
+                "date": "2023-02-02",
+                "amount": "145억 원"
             }
         },
         {
-            "start_node": "Atum",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "TA Trans",
-            "properties": {}
-        },
-        {
-            "start_node": "Atum",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "TV Trans",
-            "properties": {}
-        },
-        {
-            "start_node": "Atum",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "25W Trans",
-            "properties": {}
-        },
-        {
-            "start_node": "Atum",
-            "relationship": "PRODUCES_PRODUCT",
-            "end_node": "45W Trans",
-            "properties": {}
-        },
-        {
-            "start_node": "45W Trans",
-            "relationship": "SUPPLIES_TO",
-            "end_node": "Samsung Electronics",
+            "start_node": "이충헌",
+            "relationship": "WORKS_FOR",
+            "end_node": "밸류파인더",
             "properties": {
-                "product": "Smartphone Fast Charger",
-                "exclusivity": "Exclusive"
+                "position": "연구원"
             }
         },
         {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "TA트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "TV트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "전기차용 트랜스",
+            "properties": {}
+        },
+        {
             "start_node": "DST",
-            "relationship": "SUPPLIES_TO",
-            "end_node": "HD Hyundai Heavy Industries",
+            "relationship": "PRODUCES",
+            "end_node": "힘센엔진 실린더",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대중공업",
             "properties": {
-                "product": "HiMSEN Engine Cylinders"
+                "product": "힘센엔진 실린더"
             }
         },
         {
-            "start_node": "HD Hyundai Heavy Industries",
-            "relationship": "OPERATES_IN",
-            "end_node": "HiMSEN Engine",
-            "properties": {}
-        },
-        {
-            "start_node": "DST",
-            "relationship": "HAS_SUBSIDIARY",
-            "end_node": "HD Hyundai Marine Solutions",
-            "properties": {}
-        },
-        {
-            "start_node": "DST",
-            "relationship": "SUPPLIES_TO",
-            "end_node": "STX Engine",
-            "properties": {}
+            "start_node": "에이텀",
+            "relationship": "SUPPLIES",
+            "end_node": "삼성전자",
+            "properties": {
+                "product": "45W 트랜스"
+            }
         }
     ]
 }

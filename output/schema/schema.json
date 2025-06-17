@@ -1,3059 +1,1116 @@
 {
   "nodes": [
     {
-      "label": "Investor",
-      "name": "investor_name",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "PartnerCompany",
-      "name": "company_name",
-      "properties": {
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Pricing",
-      "name": "Pricing",
-      "properties": {
-        "price": "string",
-        "discount_rate": "string"
-      }
-    },
-    {
-      "label": "SalesRecord",
-      "name": "SalesRecord",
-      "properties": {
-        "year": "int",
-        "quarter": "string",
-        "export_amount": "float",
-        "change_rate": "float"
-      }
-    },
-    {
-      "label": "Employee",
-      "name": "Employee",
-      "properties": {
-        "employee_name": "string",
-        "age": "int",
-        "is_retired": "bool"
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "Person",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Channel",
-      "name": "Channel",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Reason",
-      "name": "Reason",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "LegalEntity",
-      "name": "subsidiary",
-      "properties": {
-        "name": "string",
-        "country": "string"
-      }
-    },
-    {
-      "label": "ExportSME",
-      "name": "ExportSME",
-      "properties": {
-        "name": "string",
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Tender",
-      "name": "Tender",
-      "properties": {
-        "name": "string",
-        "region": "string",
-        "start_date": "string",
-        "end_date": "string",
-        "type": "string",
-        "startDate": "string",
-        "endDate": "string"
-      }
-    },
-    {
-      "label": "ESGIndicator",
-      "name": "ESG Indicator",
-      "properties": {
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Edition",
-      "name": "Edition",
-      "properties": {
-        "name": "string",
-        "benefit": "string"
-      }
-    },
-    {
-      "label": "SmallBusiness",
-      "name": "SmallBusiness",
-      "properties": {
-        "name": "string",
-        "category": "string",
-        "years_in_business": "int",
-        "qualification_type": "string"
-      }
-    },
-    {
-      "label": "Institution",
-      "name": "institution",
-      "properties": {
-        "name": "string",
-        "institutionType": "string",
-        "role": "string"
-      }
-    },
-    {
-      "label": "TechnologyModule",
-      "name": "module_name",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "Field",
-      "name": "Desired Field",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "TariffPolicy",
-      "name": "TariffPolicy",
-      "properties": {
-        "name": "string",
-        "rate": "float",
-        "effective_date": "string",
-        "scope": "string",
-        "measures": "string"
-      }
-    },
-    {
-      "label": "Contact",
-      "name": "Contact",
-      "properties": {
-        "contactName": "string",
-        "phone": "string",
-        "email": "string"
-      }
-    },
-    {
-      "label": "SalesChannel",
-      "name": "SalesChannel",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "CloudProvider",
-      "name": "String",
-      "properties": {}
-    },
-    {
-      "label": "Subdivision",
-      "name": "분과",
-      "properties": {
-        "name": "string",
-        "focus_area": "string"
-      }
-    },
-    {
-      "label": "LegalCase",
-      "name": "LegalCase",
-      "properties": {
-        "case_type": "string",
-        "year": "int",
-        "status": "string"
-      }
-    },
-    {
-      "label": "Certificate",
-      "name": "Certificate",
-      "properties": {
-        "title": "string",
-        "issue_date": "string"
-      }
-    },
-    {
-      "label": "Project",
-      "name": "Project",
-      "properties": {
-        "name": "string",
-        "application_deadline": "string",
-        "projectId": "string",
-        "projectName": "string",
-        "startDate": "date",
-        "endDate": "date",
-        "scale": "string",
-        "structure": "string",
-        "pf_closing_goal": "string",
-        "location": "string",
-        "start_date": "string",
-        "end_date": "string",
-        "description": "string",
-        "registration_deadline": "string",
-        "recruitment_start": "date",
-        "recruitment_end": "date"
-      }
-    },
-    {
-      "label": "ESGProgram",
+      "label": "AGREEMENT",
       "name": "String",
       "properties": {
-        "year": "int",
-        "participationYears": "int"
+        "type": "상생 협력",
+        "date": "2023-03",
+        "description": "백년가게·소공인과 롯데웰푸드의 협력"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
-      "properties": {
-        "name": "string",
-        "date": "string",
-        "title": "string",
-        "location": "string",
-        "agreement_id": "string",
-        "purpose": "String",
-        "scope": "string",
-        "agreement_date": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Policy",
-      "name": "Policy",
-      "properties": {
-        "policyType": "string"
-      }
-    },
-    {
-      "label": "Trend",
-      "name": "Trend",
-      "properties": {
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Material",
-      "name": "Material",
-      "properties": {
-        "type": "string",
-        "thickness": "string"
-      }
-    },
-    {
-      "label": "Commission",
+      "label": "ORGANIZATION",
       "name": "String",
       "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "SME",
-      "name": "SmallMediumEnterprise",
-      "properties": {
-        "name": "string",
-        "industry": "string",
-        "country": "string",
-        "company_count": "int"
-      }
-    },
-    {
-      "label": "IncomeExpectation",
-      "name": "Income Expectation",
-      "properties": {
-        "averageMonthlyIncome": "int"
-      }
-    },
-    {
-      "label": "Region",
-      "name": "Region",
-      "properties": {
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "Transaction",
-      "name": "Transaction",
-      "properties": {
-        "year": "int",
-        "amount": "int",
-        "growth_rate_percent": "float",
-        "share_percent": "float",
-        "growth_percent": "float"
-      }
-    },
-    {
-      "label": "Promotion",
-      "name": "Promotion",
-      "properties": {
-        "startDate": "string",
-        "endDate": "string",
-        "details": "string"
-      }
-    },
-    {
-      "label": "Factory",
-      "name": "Factory",
-      "properties": {
-        "factory_name": "string",
-        "location": "string",
-        "factoryName": "string",
-        "workersCount": "int",
-        "maxDailyProduction": "int",
-        "operatingStatus": "string"
-      }
-    },
-    {
-      "label": "FEATURE",
-      "name": "Feature",
-      "properties": {
-        "name": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Campaign",
-      "name": "Campaign",
-      "properties": {
-        "amount": "int",
-        "rank": "int"
-      }
-    },
-    {
-      "label": "ExportRecord",
-      "name": "수출기록",
-      "properties": {
-        "year": "int",
-        "quarter": "int",
-        "export_amount_usd": "float",
-        "growth_rate": "float"
-      }
-    },
-    {
-      "label": "ESGIndex",
-      "name": "ESG Index",
-      "properties": {
-        "name": "string",
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Agency",
-      "name": "Agency",
-      "properties": {
-        "name": "string",
-        "agencyName": "string",
-        "department": "string"
-      }
-    },
-    {
-      "label": "Location",
-      "name": "지역",
-      "properties": {
-        "location_id": "string",
-        "name": "string",
-        "country": "string",
-        "region": "string",
-        "regionType": "string",
-        "address": "string"
-      }
-    },
-    {
-      "label": "Survey",
-      "name": "Survey",
-      "properties": {
-        "id": "string",
-        "title": "string",
-        "date": "string",
-        "respondentCount": "int"
-      }
-    },
-    {
-      "label": "JobType",
-      "name": "Job Type",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "SupportProgram",
-      "name": "SupportProgram",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Metric",
-      "name": "Metric",
-      "properties": {
-        "name": "string",
-        "unit": "String",
-        "value": "int"
-      }
-    },
-    {
-      "label": "Program",
-      "name": "프로그램",
-      "properties": {
-        "program_id": "string",
-        "name": "string",
-        "purpose": "string",
-        "year": "int",
-        "target_count": "int",
-        "description": "string",
-        "start_year": "int",
-        "participantCount": "int",
-        "programType": "string",
-        "deadline": "date",
-        "support_amount_min": "int",
-        "support_amount_max": "int",
-        "selected_count": "int"
-      }
-    },
-    {
-      "label": "Service",
-      "name": "Service",
-      "properties": {
-        "name": "string",
-        "serviceType": "string",
-        "type": "string",
-        "users_count": "int",
-        "client_count": "int",
-        "category": "String",
-        "launch_year": "int"
-      }
-    },
-    {
-      "label": "CompanyCategory",
-      "name": "CompanyCategory",
-      "properties": {
-        "name": "string",
-        "min_experience_years": "int",
-        "industry": "string"
+        "type": "기업",
+        "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
+        "headquarters": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "Company",
+      "name": "String",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "full_name": "한국서부발전",
+        "industry": "발전",
+        "headquarters": "태안",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "EVENT",
+      "name": "String",
       "properties": {
-        "category": "string",
-        "specification": "string",
-        "name": "string",
-        "type": "string",
-        "model": "string",
-        "product_id": "string",
-        "productId": "string",
-        "productName": "string",
-        "price": "int",
-        "product_type": "string",
-        "active_ingredient": "string",
-        "activeIngredient": "string",
-        "therapyArea": "string",
-        "product_name": "string",
-        "description": "string",
-        "approval_year": "int",
-        "releaseDate": "string",
-        "generation": "string",
-        "productionMethod": "string",
-        "features": "string"
+        "date": "",
+        "type": "지원사업",
+        "description": "협업 우수기업에 해외 실증 기회 제공",
+        "location": "해외"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "String",
+      "properties": {
+        "type": "지역",
+        "country": "대한민국",
+        "region": "경기"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "String",
+      "properties": {
+        "full_name": "박치호",
+        "role": "기술연구소 팀장",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "String",
+      "properties": {
+        "description": "발전정보를 활용한 창의적인 기술 개발 및 실증 사업화 연계 프로그램",
+        "start_date": "",
+        "status": "공모 중"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "B2B",
+      "properties": {
+        "description": "소매업 산업"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "String",
+      "properties": {
+        "category": "에너지 절약 기술",
+        "description": "주위 온도 감지 및 자동 조절",
+        "field": "사물인터넷(IoT)"
+      }
+    },
+    {
+      "label": "MARKET",
+      "name": "건설경기",
+      "properties": {
+        "description": "건설 산업의 경기 상황"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "Product",
-      "properties": {
-        "name": "string",
-        "category": "string"
-      }
-    },
-    {
-      "label": "TariffMeasure",
-      "name": "관세 조치",
-      "properties": {
-        "item": "string",
-        "effective_date": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "GovernmentProgram",
-      "name": "GovernmentProgram",
-      "properties": {
-        "program_name": "string",
-        "support_type": "string",
-        "annual_benefit_min": "int",
-        "annual_benefit_max": "int"
-      }
-    },
-    {
-      "label": "Platform",
-      "name": "플랫폼",
-      "properties": {
-        "platform_id": "string",
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "FinancialMetric",
-      "name": "재무지표",
-      "properties": {
-        "metric_name": "string",
-        "value": "int",
-        "unit": "string",
-        "year": "int",
-        "quarter": "string"
-      }
-    },
-    {
-      "label": "Business",
-      "name": "SmallBusiness",
-      "properties": {
-        "name": "string",
-        "category": "string",
-        "industry": "string",
-        "years_in_business": "int",
-        "businessId": "string",
-        "businessName": "string",
-        "type": "string",
-        "yearsInOperation": "int",
-        "size": "string"
-      }
-    },
-    {
-      "label": "Person",
       "name": "String",
       "properties": {
-        "position": "string",
-        "name": "string",
-        "person_id": "string",
-        "role": "string",
-        "title": "string"
+        "category": "가전제품",
+        "description": "창문형 에어컨, AI 모드, 환기 시스템",
+        "launch_date": "2023-09",
+        "company": "파세코"
       }
     },
     {
-      "label": "Subsidiary",
-      "name": "Subsidiary",
-      "properties": {
-        "name": "string",
-        "country": "string",
-        "established_year": "int"
-      }
-    },
-    {
-      "label": "Investment",
+      "label": "INVESTMENT",
       "name": "String",
       "properties": {
-        "amount": "int",
-        "date": "String"
-      }
-    },
-    {
-      "label": "Award",
-      "name": "award_name",
-      "properties": {
-        "year": "int",
-        "category": "string"
-      }
-    },
-    {
-      "label": "Official",
-      "name": "Official",
-      "properties": {
-        "name": "string",
-        "title": "String"
-      }
-    },
-    {
-      "label": "PreparationActivity",
-      "name": "Preparation Activity",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Participant",
-      "name": "Participant",
-      "properties": {
-        "name": "string",
-        "participant_type": "string",
-        "industry": "string",
-        "years_in_business": "int"
-      }
-    },
-    {
-      "label": "BusinessSegment",
-      "name": "사업부문",
-      "properties": {
-        "segment_name": "string"
-      }
-    },
-    {
-      "label": "SupportPlan",
-      "name": "String",
-      "properties": {
-        "startYear": "int",
-        "endYear": "int"
-      }
-    },
-    {
-      "label": "VehicleModel",
-      "name": "VehicleModel",
-      "properties": {
-        "model_id": "string",
-        "name": "string",
-        "manufacturer": "string"
-      }
-    },
-    {
-      "label": "CustomerAction",
-      "name": "Customer Action",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Brand",
-      "name": "Brand",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
-      "properties": {
-        "name": "string",
-        "agency_name": "string"
-      }
-    },
-    {
-      "label": "WelfareMall",
-      "name": "복지몰",
-      "properties": {
-        "name": "string",
-        "rank": "string"
-      }
-    },
-    {
-      "label": "FundingRound",
-      "name": "round_name",
-      "properties": {
-        "amount": "int"
-      }
-    },
-    {
-      "label": "Technology",
-      "name": "String",
-      "properties": {
-        "domain": "string",
-        "tech_id": "string",
-        "name": "string",
-        "category": "string"
-      }
-    },
-    {
-      "label": "Company",
-      "name": "Company",
-      "properties": {
-        "ticker": "string",
-        "industry": "string",
-        "name": "string",
-        "type": "string",
-        "company_name": "string",
-        "stock_code": "string",
-        "company_id": "string",
-        "size": "string",
-        "region": "string",
-        "country": "string",
-        "headquarters": "string",
-        "companyName": "string",
-        "employeeCount": "int",
-        "sizeCategory": "string",
-        "founded_year": "int",
-        "cumulative_investment": "int",
-        "target_ipo_year": "int",
-        "employee_count": "int",
-        "founding_year": "int",
-        "company_type": "String",
-        "revenue": "int",
-        "rnd_investment": "int",
-        "domesticProduction": "bool",
-        "category": "string"
-      }
-    },
-    {
-      "label": "Role",
-      "name": "Role",
-      "properties": {
-        "role_title": "string",
-        "department": "string"
-      }
-    },
-    {
-      "label": "Organization",
-      "name": "기관",
-      "properties": {
-        "org_id": "string",
-        "name": "string",
-        "type": "string",
-        "location": "string",
-        "category": "string",
-        "sector": "string",
-        "role": "string",
-        "orgId": "string",
-        "orgName": "string",
-        "website": "string",
-        "established_year": "int",
-        "industry": "string"
-      }
-    },
-    {
-      "label": "Country",
-      "name": "Country",
-      "properties": {
-        "name": "string",
-        "region": "string",
-        "country_name": "string"
-      }
-    },
-    {
-      "label": "ProductCategory",
-      "name": "수출 품목",
-      "properties": {
-        "category_name": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "SalesData",
-      "name": "판매데이터",
-      "properties": {
-        "year": "int",
-        "month": "int",
-        "purchaseIndex": "int"
-      }
-    },
-    {
-      "label": "Market",
-      "name": "시장",
-      "properties": {
-        "market_type": "string",
-        "region": "string",
-        "market_id": "string",
-        "sales_ratio": "float",
-        "country": "string",
-        "segmentType": "string",
-        "name": "string",
-        "current_size_musd": "float",
-        "projected_size_musd": "float",
-        "projection_year": "int"
-      }
-    },
-    {
-      "label": "Event",
-      "name": "설명회",
-      "properties": {
-        "event_id": "string",
-        "name": "string",
-        "date": "string",
-        "type": "string",
-        "time": "string",
-        "purpose": "string",
-        "start_date": "string",
-        "end_date": "string",
-        "location": "string",
-        "edition": "int"
-      }
-    },
-    {
-      "label": "FinancialReport",
-      "name": "FinancialReport",
-      "properties": {
-        "revenue": "int",
-        "operatingProfit": "int",
-        "netProfit": "int",
-        "revenueChangeRate": "float",
-        "operatingProfitChangeRate": "float",
-        "netProfitChangeRate": "float",
-        "period": "string",
-        "revenueGrowthRate": "float",
-        "operatingProfitGrowthRate": "float",
-        "netProfitGrowthRate": "float",
-        "quarter": "string",
-        "year": "int",
-        "operating_profit": "int"
-      }
-    },
-    {
-      "label": "Consultation",
-      "name": "String",
-      "properties": {
-        "count": "int",
-        "amount": "int"
-      }
-    },
-    {
-      "label": "ExperimentLab",
-      "name": "실험실",
-      "properties": {
-        "labName": "string",
-        "floor": "string",
-        "environmentCondition": "string",
-        "uniqueInSME": "bool"
-      }
-    },
-    {
-      "label": "ExportReport",
-      "name": "ExportReport",
-      "properties": {
-        "year": "int",
-        "quarter": "String",
-        "total_value_usd": "float",
-        "exporters_count": "int",
-        "totalExportValue": "float",
-        "growthRate": "float",
-        "numCompanies": "int"
-      }
-    },
-    {
-      "label": "Report",
-      "name": "Report",
-      "properties": {
-        "title": "string",
-        "year": "int"
-      }
-    },
-    {
-      "label": "AI_Agent",
-      "name": "AI Agent",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "ExportData",
-      "name": "ExportData",
-      "properties": {
-        "period": "string",
-        "amount": "float",
-        "growth_rate": "float"
-      }
-    },
-    {
-      "label": "SalesTarget",
-      "name": "SalesTarget",
-      "properties": {
-        "year": "int",
-        "targetRevenue": "int"
-      }
-    },
-    {
-      "label": "TrainingProgram",
-      "name": "Training Program",
-      "properties": {
-        "programName": "string",
-        "programType": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Design",
-      "name": "Design",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "FinancialRecord",
-      "name": "FinancialRecord",
-      "properties": {
-        "record_id": "string",
-        "year": "int",
-        "revenue": "float",
-        "growth_rate": "float",
-        "overseas_ratio": "float"
-      }
-    },
-    {
-      "label": "MarketForecast",
-      "name": "MarketForecast",
-      "properties": {
-        "year": "int",
-        "forecastRevenue": "int"
-      }
-    },
-    {
-      "label": "Certification",
-      "name": "String",
-      "properties": {
-        "year": "int",
-        "name": "string",
-        "issuer": "string",
-        "date": "string",
-        "description": "string"
-      }
-    },
-    {
-      "label": "Crop",
-      "name": "crop_type",
-      "properties": {
-        "annual_production": "string"
-      }
-    },
-    {
-      "label": "Executive",
-      "name": "Executive",
-      "properties": {
-        "name": "string",
-        "title": "string"
-      }
-    },
-    {
-      "label": "PublicInstitution",
-      "name": "PublicInstitution",
-      "properties": {
-        "name": "string",
-        "type": "string"
-      }
-    },
-    {
-      "label": "ESGMetrics",
-      "name": "String",
-      "properties": {
-        "complianceRate": "float",
-        "year": "int"
-      }
-    },
-    {
-      "label": "LogisticsCenter",
-      "name": "물류센터",
-      "properties": {
-        "center_id": "string",
-        "name": "string",
-        "type": "string",
-        "location": "string"
-      }
-    },
-    {
-      "label": "SizeOption",
-      "name": "Size Option",
-      "properties": {
-        "label": "string",
-        "weight": "string",
-        "dimension": "string"
-      }
-    },
-    {
-      "label": "ESGEvaluation",
-      "name": "ESG Evaluation",
-      "properties": {
-        "year": "int",
-        "score": "int",
-        "complianceRate": "int"
-      }
-    },
-    {
-      "label": "ProductType",
-      "name": "ProductType",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "SERVICE_MODEL",
-      "name": "ServiceModel",
-      "properties": {
-        "name": "string",
-        "payment_model": "string"
-      }
-    },
-    {
-      "label": "AgeGroup",
-      "name": "Age Group",
-      "properties": {
-        "name": "string",
-        "ageRange": "string"
-      }
-    },
-    {
-      "label": "ExportStatistic",
-      "name": "string",
-      "properties": {
-        "period": "string",
-        "amountUSD": "float",
-        "amountKRW": "float",
-        "changePercent": "float",
-        "rank": "int",
-        "value_usd": "float",
-        "growth_rate_percent": "float",
-        "year": "int",
-        "quarter": "int",
-        "totalExport": "float",
-        "growthRate": "float",
-        "exporterCount": "int",
-        "total_export": "float",
-        "growth_rate": "float",
-        "num_companies": "int"
-      }
-    },
-    {
-      "label": "Feature",
-      "name": "Feature",
-      "properties": {
-        "type": "string",
-        "description": "string",
-        "name": "string"
-      }
-    },
-    {
-      "label": "Industry",
-      "name": "Industry",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Strategy",
-      "name": "경영전략",
-      "properties": {
-        "strategy_name": "string",
-        "description": "string",
-        "year": "int"
-      }
-    },
-    {
-      "label": "TimePeriod",
-      "name": "TimePeriod",
-      "properties": {
-        "year": "int",
-        "quarter": "string"
-      }
-    },
-    {
-      "label": "Category",
-      "name": "Category",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Partner",
-      "name": "Partner",
-      "properties": {
-        "name": "string",
-        "size": "string"
-      }
-    },
-    {
-      "label": "Tariff",
-      "name": "관세 조치",
-      "properties": {
-        "name": "string",
-        "startDate": "date"
-      }
-    },
-    {
-      "label": "TablewareMaterial",
-      "name": "Tableware Material",
-      "properties": {
-        "type": "string"
-      }
-    },
-    {
-      "label": "Integration",
-      "name": "Integration",
-      "properties": {
-        "name": "string"
+        "amount": "1000만~3000만원",
+        "date": "",
+        "type": "지원"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "PROVIDES",
-      "end_node": "AI_Agent",
+      "start_node": "정일산업",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "경기도 시화공단",
       "properties": {}
     },
     {
-      "start_node": "Strategy",
-      "relationship": "TARGETS_SEGMENT",
-      "end_node": "BusinessSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "HAS_STATISTIC",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_REASON",
-      "end_node": "Reason",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "SalesRecord",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
-      "properties": {
-        "context": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EXPORTS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "APPLIES_STRATEGY",
-      "end_node": "Strategy",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "SUPPORTS",
-      "end_node": "Channel",
+      "start_node": "기술보증기금 지식재산공제센터",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "지식재산공제사업",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "ADOPTS",
+      "relationship": "EXPANDS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "date": "",
+        "purpose": "시장 확장"
+      }
+    },
+    {
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "인도",
+      "properties": {
+        "growth_rate": "감소세"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "CELEBRATES",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "중국",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "MARKET",
+      "properties": {
+        "impact": "매출 감소"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "미국",
+      "properties": {
+        "amount": "1840000000 달러",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HELD",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "중소기업",
+      "relationship": "PRODUCES",
+      "end_node": "반도체 제조용 장비",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "REPORTED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "방송 호스트"
+      }
+    },
+    {
+      "start_node": "중소벤처기업부",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2023-04-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "멕시코",
+        "description": "Decreased export market for SMEs"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "신송남",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "작업자",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "공동 개발",
+        "date": "2017"
+      }
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "HELD_IN",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "베트남",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "나보타",
+      "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PLANS_TO_EXPAND",
+      "end_node": "LOCATION",
+      "properties": {
+        "locations": [
+          "부산",
+          "인천",
+          "여수 광양"
+        ]
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "CONDUCTED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "트룩시마",
+      "properties": {}
+    },
+    {
+      "start_node": "알루미늄 제품",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "수출 감소",
+        "percentage": "-7.6%"
+      }
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "베그젤마",
+      "properties": {}
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "인도네시아",
+      "properties": {
+        "growth_rate": "두 자릿수 증가율"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2023-04-14"
+      }
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "AFFECTED",
       "end_node": "PRODUCT",
       "properties": {
-        "automation_rate": "int"
-      }
-    },
-    {
-      "start_node": "Program",
-      "relationship": "APPLIES_TO",
-      "end_node": "ExportSME",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RUNS",
-      "end_node": "ESGProgram",
-      "properties": {
-        "startYear": "int"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOP_PRODUCT",
-      "end_node": "Product",
-      "properties": {
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "Agency",
-      "relationship": "ORGANIZES",
-      "end_node": "TrainingProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OWNS_FACTORY",
-      "end_node": "Factory",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTS",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "PROVIDED_AT_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OWNS",
-      "end_node": "Subsidiary",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LAUNCHED",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SALES_TARGET",
-      "end_node": "SalesTarget",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "EMPLOYS",
-      "end_node": "Official",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "CREATED_BY",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "ACHIEVES",
-      "end_node": "Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "COMPATIBLE_WITH",
-      "end_node": "TablewareMaterial",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "SUPPLIES",
-      "end_node": "Tender",
-      "properties": {
-        "startDate": "string",
-        "endDate": "string"
-      }
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Report",
-      "relationship": "DEFINES",
-      "end_node": "Trend",
-      "properties": {}
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "PREPARES_BY",
-      "end_node": "PreparationActivity",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "BY_COMPANY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "COMMERCIALIZES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ADOPTS",
-      "end_node": "Strategy",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "CONNECTS_WITH_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_FINANCIAL_METRIC",
-      "end_node": "FinancialMetric",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "RECEIVES",
-      "end_node": "ESGEvaluation",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportPlan",
-      "relationship": "RELATES_TO",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Category",
-      "relationship": "INCLUDES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECEIVES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HAS_DIVISION",
-      "end_node": "Subdivision",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {
-        "year": "int",
-        "supportedCount": "int"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "BusinessSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "ISSUED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "DEVELOPS_PLATFORM",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "CustomerAction",
-      "relationship": "TRIGGERS",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Edition",
-      "relationship": "HAS_PRICING",
-      "end_node": "Pricing",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "INVEST_IN",
-      "end_node": "Company",
-      "properties": {
-        "amount": "int",
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "INITIATES",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SUBSIDIARY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Agreement",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "EXPORTED_TO",
-      "end_node": "Country",
-      "properties": {
-        "amount": "float",
-        "growthRate": "float"
+        "impact": "수출 감소",
+        "percentage": "7.6%",
+        "amount": "-17.8% for 철강, -7.6% for 알루미늄"
       }
     },
     {
       "start_node": "PRODUCT",
-      "relationship": "HAS_SERVICE_MODEL",
-      "end_node": "SERVICE_MODEL",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "SHOWCASES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "ProductCategory",
       "relationship": "EXPORTED_TO",
-      "end_node": "Country",
+      "end_node": "홍콩",
       "properties": {
-        "export_amount": "float",
-        "growth_rate": "float"
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "USES",
-      "end_node": "Technology",
+      "start_node": "COMPANY",
+      "relationship": "MADE_INVESTMENT",
+      "end_node": "INVESTMENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_REPORT",
-      "end_node": "FinancialReport",
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
       "properties": {}
     },
     {
-      "start_node": "AgeGroup",
-      "relationship": "HAS_INTENTION_IN",
-      "end_node": "Survey",
+      "start_node": "PERSON",
+      "relationship": "MADE_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "VISITED",
+      "end_node": "COMPANY",
       "properties": {
-        "intentionRate": "float"
+        "date": "string",
+        "purpose": "string"
       }
     },
     {
-      "start_node": "Employee",
-      "relationship": "HAS_ROLE",
-      "end_node": "Role",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "AFFECTS_STATISTIC",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "RELATES_TO_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "TARGET_MARKET",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "SELECTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "DEVELOPS",
-      "end_node": "ESGIndicator",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "SIGNED_BY",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "ACTIVATES",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Factory",
-      "relationship": "PRODUCES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "INITIATED_BY",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "HELD_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "ProductCategory",
-      "properties": {
-        "impact_rate": "float",
-        "change_rate": "float"
-      }
-    },
-    {
-      "start_node": "Project",
-      "relationship": "TARGETS",
-      "end_node": "CompanyCategory",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_FINANCIAL_REPORT",
-      "end_node": "FinancialReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Official",
-      "relationship": "WORKS_FOR",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "SOLD_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Organization",
-      "properties": {
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "Event",
-      "relationship": "PRESENTS",
-      "end_node": "Edition",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RAISED",
-      "end_node": "FundingRound",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTS",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "ProductCategory",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "INTEGRATES_WITH",
-      "end_node": "Integration",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "PART_OF",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "SupportProgram",
-      "relationship": "OPERATED_BY",
-      "end_node": "PublicInstitution",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_INCOME_EXPECTATION",
-      "end_node": "IncomeExpectation",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INCLUDES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "AFFECTS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Commission",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "TARGETS",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "FOUNDED",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "SalesRecord",
-      "relationship": "TARGETS_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "LEADS",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "SIGNED",
-      "end_node": "Agreement",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Subdivision",
-      "relationship": "FOCUSES_ON",
-      "end_node": "Technology",
-      "properties": {}
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "미국",
+      "properties": {
+        "amount": "1840000000 달러",
+        "growth_rate": "+19.6%",
+        "increase_rate": "19.6%"
+      }
     },
     {
-      "start_node": "ExportSME",
-      "relationship": "USES_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "지원사업",
+        "date": "2023"
+      }
     },
     {
-      "start_node": "Person",
+      "start_node": "PERSON",
+      "relationship": "MET_WITH",
+      "end_node": "PERSON",
+      "properties": {
+        "date": "string",
+        "purpose": "string"
+      }
+    },
+    {
+      "start_node": "김대환",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "공장장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
       "relationship": "ATTENDED",
-      "end_node": "Agreement",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
+      "start_node": "인천지식재산센터",
+      "relationship": "LOCATED_IN",
+      "end_node": "인천",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "OFFERS",
-      "end_node": "Program",
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ACQUIRED",
-      "end_node": "Company",
+      "start_node": "셀트리온",
+      "relationship": "SUPPLIED",
+      "end_node": "CSC",
       "properties": {
-        "stake_percentage": "string",
-        "amount": "string",
-        "date": "string"
+        "products": [
+          "트룩시마",
+          "허쥬마"
+        ],
+        "duration": "2023-2029"
       }
     },
     {
-      "start_node": "Organization",
-      "relationship": "PROVIDES_SUPPORT",
-      "end_node": "Company",
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "멕시코",
       "properties": {
-        "support_type": "string"
+        "growth_rate": "감소세"
       }
     },
     {
-      "start_node": "Product",
-      "relationship": "COMPATIBLE_WITH",
-      "end_node": "VehicleModel",
-      "properties": {}
-    },
-    {
-      "start_node": "ESGIndex",
-      "relationship": "USED_IN",
-      "end_node": "ESGEvaluation",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "CONNECTS",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "TO_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "REPORTED_IN",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "OFFERS_SIZE",
-      "end_node": "SizeOption",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "APPLIES_FOR",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SIGN_AGREEMENT_WITH",
-      "end_node": "Company",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {
-        "date": "String",
-        "purpose": "String"
+        "location": "수원메쎄 1홀"
       }
     },
     {
-      "start_node": "Tender",
-      "relationship": "ORGANIZED_BY",
-      "end_node": "Institution",
+      "start_node": "기술보증기금 지식재산공제센터",
+      "relationship": "LEADS",
+      "end_node": "지식재산공제사업",
       "properties": {}
     },
     {
-      "start_node": "Platform",
-      "relationship": "OFFERS",
-      "end_node": "Category",
+      "start_node": "PERSON",
+      "relationship": "NEGOTIATED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
-      "properties": {
-        "discount_rate": "string",
-        "service": "string"
-      }
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "MANUFACTURES",
-      "end_node": "Product",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "글로벌 물류 지원 업무협약",
       "properties": {}
     },
     {
-      "start_node": "Business",
-      "relationship": "APPLIES_FOR",
-      "end_node": "Project",
-      "properties": {
-        "applyDate": "date"
-      }
-    },
-    {
-      "start_node": "Project",
-      "relationship": "PRODUCES",
-      "end_node": "Crop",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportStatistic",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportData",
-      "relationship": "RECORDED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_MARKET_SHARE",
-      "end_node": "Market",
-      "properties": {
-        "percentage": "float",
-        "period": "string"
-      }
-    },
-    {
-      "start_node": "ESGProgram",
-      "relationship": "HAS_METRIC",
-      "end_node": "ESGMetrics",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "INVOLVES",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_FINANCIAL_RECORD",
-      "end_node": "FinancialRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "AFFECTS_EXPORTDATA",
-      "end_node": "ExportData",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PRODUCES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "SmallBusiness",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "LAUNCHED",
-      "end_node": "Product",
-      "properties": {
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "Tariff",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_PROMOTION",
-      "end_node": "Promotion",
-      "properties": {}
-    },
-    {
-      "start_node": "Technology",
-      "relationship": "APPLIED_IN",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_TYPE",
-      "end_node": "ProductType",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES",
-      "end_node": "WelfareMall",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECEIVES_CERTIFICATION",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "LINKS_TO",
-      "end_node": "LogisticsCenter",
-      "properties": {
-        "link_type": "string"
-      }
-    },
-    {
-      "start_node": "GovernmentProgram",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "TESTED_IN_LAB",
-      "end_node": "ExperimentLab",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPLIES",
-      "end_node": "Company",
-      "properties": {
-        "product": "string",
-        "exclusivity": "string"
-      }
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "COVERS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "PartnerCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "Partner",
-      "relationship": "GENERATED_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_DESIRED_FIELD",
-      "end_node": "Field",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "SupportProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOP_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {
-        "date": "String"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "USES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "ESGIndex",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Business",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportData",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_FACTORY",
-      "end_node": "Factory",
-      "properties": {}
-    },
-    {
-      "start_node": "Platform",
-      "relationship": "HAS_PARTNER",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "OF_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "USES_TECHNOLOGY",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SUPPLIES_TO",
-      "end_node": "Company",
-      "properties": {
-        "product": "string",
-        "contract_value": "int",
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Field",
-      "relationship": "INCLUDES_JOB",
-      "end_node": "JobType",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Campaign",
-      "relationship": "ON_PLATFORM",
-      "end_node": "Platform",
+      "start_node": "PROJECT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
       "start_node": "PRODUCT",
-      "relationship": "HAS_FEATURE",
-      "end_node": "FEATURE",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "WORKS_AT",
-      "end_node": "Company",
+      "relationship": "EXPORTED_TO",
+      "end_node": "태국",
       "properties": {
-        "role": "string",
-        "since": "string"
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
       }
     },
     {
-      "start_node": "Participant",
-      "relationship": "PROVIDES_RECIPE",
-      "end_node": "Product",
+      "start_node": "PRODUCT",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "decrease",
+        "percentage": "-7.6%"
+      }
+    },
+    {
+      "start_node": "인천지식재산센터",
+      "relationship": "SIGNED",
+      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
-      "end_node": "Program",
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "로스앤젤레스",
       "properties": {}
     },
     {
-      "start_node": "LegalEntity",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
+      "start_node": "TECHNOLOGY",
+      "relationship": "AWARDED_AT",
+      "end_node": "EVENT",
+      "properties": {
+        "award": "최고혁신상"
+      }
+    },
+    {
+      "start_node": "기술보증기금",
+      "relationship": "SIGNED",
+      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ORGANIZES",
-      "end_node": "Event",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "일본",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
     },
     {
-      "start_node": "Company",
-      "relationship": "OFFERS_PROGRAM",
-      "end_node": "GovernmentProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PROVIDES_TECHNOLOGY",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LAUNCHES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Investor",
-      "relationship": "INVESTED_IN",
-      "end_node": "FundingRound",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "LED_BY",
-      "end_node": "Person",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
     },
     {
       "start_node": "PERSON",
       "relationship": "CEO_OF",
       "end_node": "COMPANY",
-      "properties": {}
-    },
-    {
-      "start_node": "Tariff",
-      "relationship": "AFFECTS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SALES",
-      "end_node": "SalesRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "RECEIVES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "TechnologyModule",
-      "relationship": "RECEIVED_AWARD",
-      "end_node": "Award",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
       "properties": {
-        "amount": "float",
-        "growthRate": "float",
-        "rank": "int"
+        "since": "2022"
       }
     },
     {
-      "start_node": "LegalEntity",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "Partner",
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "중국",
+      "properties": {
+        "growth_rate": "두 자릿수 증가율"
+      }
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "스페인",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ATTENDED",
-      "end_node": "Event",
+      "start_node": "정광용",
+      "relationship": "CEO_OF",
+      "end_node": "정일산업",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "기술보증기금 지식재산공제센터",
+      "relationship": "SIGNED",
+      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {}
     },
     {
-      "start_node": "ExportData",
-      "relationship": "TO_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "ORGANIZATION",
+      "relationship": "PUBLISHED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2025-04-14"
+      }
     },
     {
-      "start_node": "Project",
-      "relationship": "ACHIEVES_METRIC",
-      "end_node": "Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "WORKS_FOR",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "RECEIVES",
-      "end_node": "TrainingProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_DESIGN",
-      "end_node": "Design",
-      "properties": {}
-    },
-    {
-      "start_node": "Tender",
+      "start_node": "COMPANY",
       "relationship": "SUPPLIES",
-      "end_node": "Product",
+      "end_node": "COMPANY",
       "properties": {
-        "duration": "string"
+        "product": "제조설비"
       }
     },
     {
-      "start_node": "Person",
-      "relationship": "REPRESENTATIVE_OF",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "SPOKE_AT",
+      "end_node": "EVENT",
+      "properties": {
+        "topic": "기술 혁신과 지속 가능한 미래"
+      }
     },
     {
-      "start_node": "Company",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Certificate",
-      "relationship": "AWARDED_TO",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "IMPLEMENTS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
+      "start_node": "종근당",
       "relationship": "PARTNERED_WITH",
-      "end_node": "Company",
+      "end_node": "셀트리온제약",
       "properties": {
-        "project": "String"
+        "type": "Product Distribution",
+        "date": "2022"
       }
     },
     {
-      "start_node": "FinancialReport",
-      "relationship": "FOR_PERIOD",
-      "end_node": "TimePeriod",
-      "properties": {}
-    },
-    {
-      "start_node": "Strategy",
-      "relationship": "MITIGATES",
-      "end_node": "Policy",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "CREATES",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Commission",
-      "relationship": "ISSUES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SELLS_IN",
-      "end_node": "Market",
-      "properties": {
-        "percentage": "float"
-      }
-    },
-    {
-      "start_node": "Person",
-      "relationship": "HEADS",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Campaign",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Employee",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "RECRUITS",
-      "end_node": "Participant",
-      "properties": {
-        "deadline": "string"
-      }
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "RUNS_PROJECT",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "SOLD_ON",
-      "end_node": "SalesChannel",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "SUPPLIES_TO",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffMeasure",
-      "relationship": "IMPOSED_ON",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Factory",
-      "relationship": "PRODUCES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "TARGETS",
-      "end_node": "Industry",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SUPPLIES",
-      "end_node": "SmallBusiness",
-      "properties": {
-        "supply_type": "string"
-      }
-    },
-    {
-      "start_node": "Event",
-      "relationship": "HIGHLIGHTS",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Institution",
-      "relationship": "HOSTED",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SIGNS",
-      "end_node": "Agreement",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PROVIDES",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "베트남",
+      "properties": {
+        "growth_rate": "감소세"
+      }
+    },
+    {
+      "start_node": "보령",
+      "relationship": "SIGNED",
+      "end_node": "케이캡 공동판매 계약",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "INVESTED_IN",
       "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PUBLISHED",
-      "end_node": "Report",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PLANS_SUPPLY",
-      "end_node": "Company",
       "properties": {
-        "product": "string",
-        "expected_start": "string"
+        "amount": "",
+        "date": ""
       }
     },
     {
-      "start_node": "Organization",
-      "relationship": "PROVIDES_SUPPORT_TO",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportSME",
-      "relationship": "RECEIVES_SERVICE",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportReport",
-      "relationship": "REPORTS_COUNTRY_EXPORT",
-      "end_node": "Country",
+      "start_node": "셀트리온",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "컨파마",
       "properties": {
-        "exportValue": "float",
-        "growthRate": "float",
-        "trend": "String"
+        "type": "Distribution",
+        "date": ""
       }
     },
     {
-      "start_node": "Company",
+      "start_node": "유한양행",
       "relationship": "PRODUCES",
-      "end_node": "Product",
+      "end_node": "렉라자",
       "properties": {}
     },
     {
-      "start_node": "Subsidiary",
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "인도",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "방광호",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "지게차 기사",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
+      "properties": {}
+    },
+    {
+      "start_node": "자동차",
+      "relationship": "EXPORTED_TO",
+      "end_node": "미국",
+      "properties": {
+        "amount": "1740000000 달러",
+        "growth_rate": "+67.4%",
+        "increase_rate": "67.4%"
+      }
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "홍콩",
+      "properties": {
+        "growth_rate": "두 자릿수 증가율"
+      }
+    },
+    {
+      "start_node": "부산항만공사",
       "relationship": "LOCATED_IN",
-      "end_node": "Country",
+      "end_node": "롱비치",
       "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "BENEFITS_FROM",
-      "end_node": "Program",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "지원사업",
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "업무협약(MOU)",
       "properties": {}
     },
     {
-      "start_node": "Industry",
-      "relationship": "USES",
-      "end_node": "AI_Agent",
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ENROLLED_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "SmallBusiness",
-      "relationship": "APPLIES_TO",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "AI_Agent",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "HAS_OFFICER",
-      "end_node": "Person",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHED",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "COMPETES_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "INCLUDED_IN",
-      "end_node": "Tender",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTNERSHIP_WITH",
-      "end_node": "Organization",
+      "end_node": "COMPANY",
       "properties": {
-        "agreement_date": "string"
+        "market": "TC 본더"
       }
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportRecord",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "Business Cooperation",
+        "date": "2023-03"
+      }
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "AFFECTS",
+      "end_node": "COMPANY",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "BRANDED_AS",
-      "end_node": "Brand",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "ESGIndicator",
-      "relationship": "APPLIED_TO",
-      "end_node": "Organization",
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "허쥬마",
       "properties": {}
     },
     {
-      "start_node": "Brand",
-      "relationship": "COVERS",
-      "end_node": "ProductCategory",
+      "start_node": "인천지식재산센터",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "지식재산공제사업",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "REPORTS",
-      "end_node": "FinancialReport",
+      "start_node": "LOCATION",
+      "relationship": "IMPACTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "수출 감소"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "AgeGroup",
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "인도네시아",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "기술보증기금",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "지식재산공제사업",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2023-04-14",
+        "description": "중소기업 수출 증가 발표"
+      }
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "포르투갈",
+      "properties": {}
+    },
+    {
+      "start_node": "철강 제품",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "수출 감소",
+        "percentage": "-17.8%"
+      }
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "PARTICIPATED_IN",
-      "end_node": "Survey",
+      "end_node": "EVENT",
       "properties": {
-        "responseRate": "float"
+        "role": "구매방침 설명회"
       }
     },
     {
-      "start_node": "Organization",
-      "relationship": "PARTNER_OF",
-      "end_node": "Organization",
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "LOCATED_IN",
-      "end_node": "Region",
+      "start_node": "김두연",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "고무 프레스 담당",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "OPERATES",
+      "end_node": "LA·LB",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "MANUFACTURES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "INVOLVED_IN",
-      "end_node": "LegalCase",
+      "start_node": "PERSON",
+      "relationship": "BOARD_MEMBER_OF",
+      "end_node": "COMPANY",
       "properties": {
         "role": "string"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "AFFECTED_BY",
-      "end_node": "Policy",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Executive",
-      "relationship": "LEADS",
-      "end_node": "Subsidiary",
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Service",
-      "relationship": "INTEGRATES",
-      "end_node": "CloudProvider",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "MADE_OF",
-      "end_node": "Material",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportRecord",
-      "relationship": "DESTINED_TO",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "ISSUES",
-      "end_node": "Certification",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "LEADS",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "TrainingProgram",
-      "relationship": "HAS_CONTACT",
-      "end_node": "Contact",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
-      "relationship": "LOCATED_IN",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
-      "start_node": "Service",
-      "relationship": "ACHIEVED",
-      "end_node": "Metric",
-      "properties": {}
-    },
-    {
-      "start_node": "Consultation",
-      "relationship": "OCCURRED_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_SALES_DATA",
-      "end_node": "SalesData",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "SPEAKS_AT",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "SalesRecord",
-      "relationship": "ANNOUNCED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_MARKET_FORECAST",
-      "end_node": "MarketForecast",
-      "properties": {}
-    },
-    {
-      "start_node": "Official",
-      "relationship": "COMMENTS_ON",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "SELLS",
-      "end_node": "Product",
+      "start_node": "이순배",
+      "relationship": "WORKS_FOR",
+      "end_node": "중소벤처기업부",
       "properties": {
-        "start_date": "string",
-        "market_share": "string"
+        "position": "글로벌성장정책관",
+        "since": ""
       }
     },
     {
-      "start_node": "LegalEntity",
-      "relationship": "SELLS",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "ACQUIRED",
+      "end_node": "COMPANY",
+      "properties": {
+        "date": "2023-02-02",
+        "amount": "145억 원"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "SIGNED",
-      "end_node": "Agreement",
+      "start_node": "특허청",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "지식재산공제사업",
+      "properties": {}
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "램시마SC",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "유한양행",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "렉라자 라이선스 수익",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "대만",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "기술보증기금",
+      "relationship": "LEADS",
+      "end_node": "지식재산공제사업",
+      "properties": {}
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "태국",
+      "properties": {
+        "growth_rate": "두 자릿수 증가율"
+      }
+    },
+    {
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "펙수클루",
+      "properties": {}
+    },
+    {
+      "start_node": "기술보증기금",
+      "relationship": "LOCATED_IN",
+      "end_node": "인천",
+      "properties": {}
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "INVENTED",
+      "end_node": "TECHNOLOGY",
       "properties": {
         "date": "string"
       }
     },
     {
-      "start_node": "Platform",
-      "relationship": "RECORDED_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "AVAILABLE_IN",
-      "end_node": "Edition",
-      "properties": {}
-    },
-    {
-      "start_node": "SME",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
-      "properties": {
-        "service_type": "string"
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "UNDER_BRAND",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportRecord",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_EXPORT_RECORD",
-      "end_node": "ExportRecord",
-      "properties": {}
-    },
-    {
-      "start_node": "Agency",
-      "relationship": "PUBLISHES",
-      "end_node": "ExportReport",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTNERS_IN",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "RELATES_TO_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "WORKS_FOR",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "HELD_AT",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "CONNECTS_TO",
-      "end_node": "Platform",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "TARGETS_MARKET",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Commission",
-      "relationship": "PARTNERSHIP_AGREEMENT",
-      "end_node": "Company",
-      "properties": {
-        "date": "string",
-        "location": "string"
-      }
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "OPERATES_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPED",
-      "end_node": "TechnologyModule",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Person",
-      "properties": {
-        "since": "date"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Tender",
-      "relationship": "HELD_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "Subsidiary",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Tender",
-      "properties": {}
-    },
-    {
-      "start_node": "Business",
+      "start_node": "삼성바이오로직스",
       "relationship": "PRODUCES",
-      "end_node": "Product",
+      "end_node": "피즈치바",
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "RECRUITS",
-      "end_node": "Business",
+      "start_node": "PROJECT",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "SalesChannel",
-      "relationship": "HOSTS",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Crop",
-      "relationship": "SUPPLIED_TO",
-      "end_node": "PartnerCompany",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "PART_OF",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Consultation",
-      "relationship": "INVOLVES_COMPANY",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "DEVELOPS",
-      "end_node": "Brand",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "TARGETS",
-      "end_node": "SmallBusiness",
-      "properties": {}
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "DEFINES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportStatistic",
-      "relationship": "FOR_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTED",
-      "end_node": "Event",
+      "start_node": "강석훈",
+      "relationship": "WORKS_FOR",
+      "end_node": "셀트리온",
       "properties": {
-        "purpose": "string"
+        "position": "법인장",
+        "since": ""
       }
     },
     {
-      "start_node": "ExportReport",
-      "relationship": "REPORTS_PRODUCT_EXPORT",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "FOCUSES_ON",
+      "end_node": "INDUSTRY",
       "properties": {
-        "exportValue": "float",
-        "rank": "int",
-        "recordHigh": "boolean"
+        "strategy": "수익성 중심 경영"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "OWNS",
-      "end_node": "LegalEntity",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ACQUIRE",
-      "end_node": "Company",
+      "start_node": "PERSON",
+      "relationship": "FOUNDER_OF",
+      "end_node": "COMPANY",
       "properties": {
-        "date": "String"
+        "date": "string"
       }
     },
     {
-      "start_node": "Agreement",
-      "relationship": "PARTNER",
-      "end_node": "Company",
+      "start_node": "부산항만공사",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "부산",
       "properties": {}
     },
     {
-      "start_node": "Business",
-      "relationship": "HAS_EXPORT_DATA",
-      "end_node": "ExportData",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "TariffPolicy",
-      "relationship": "APPLIED_BY",
-      "end_node": "Country",
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "부산",
+      "properties": {}
+    },
+    {
+      "start_node": "GC녹십자",
+      "relationship": "PRODUCES",
+      "end_node": "알리글로",
+      "properties": {}
+    },
+    {
+      "start_node": "화장품",
+      "relationship": "EXPORTED_TO",
+      "end_node": "일본",
+      "properties": {
+        "growth_rate": "두 자릿수 증가율"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "기술연구소 팀장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
+      "properties": {}
+    },
+    {
+      "start_node": "정일산업",
+      "relationship": "LOCATED_IN",
+      "end_node": "충북 충주",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {
+        "country": "중국",
+        "description": "Increased demand due to manufacturing boom"
+      }
+    },
+    {
+      "start_node": "조주현",
+      "relationship": "WORKS_FOR",
+      "end_node": "중소벤처기업연구원",
+      "properties": {
+        "position": "원장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "멕시코",
+      "properties": {
+        "amount": "",
+        "date": "2023-01-01 to 2023-03-31"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SUPPORTED_BY",
+      "end_node": "ORGANIZATION",
       "properties": {}
     }
   ]

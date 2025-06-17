@@ -1,114 +1,140 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "공공기관",
+        "description": "중소벤처기업의 지원을 담당하는 공공기관",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "SME",
-      "name": "SmallMediumEnterprise",
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
       "properties": {
-        "name": "string",
-        "industry": "string",
-        "country": "string"
+        "type": "공공기관",
+        "description": "부산항의 운영 및 관리 담당",
+        "headquarters": "부산, 대한민국"
       }
     },
     {
-      "label": "LogisticsCenter",
-      "name": "LogisticsCenter",
+      "label": "PROJECT",
+      "name": "스마트트레이드허브",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "description": "중소기업 전용 항공물류센터",
+        "start_date": "N/A",
+        "status": "운영 중"
       }
     },
     {
-      "label": "Platform",
-      "name": "Platform",
+      "label": "LOCATION",
+      "name": "부산",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "영남"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
+      "label": "LOCATION",
+      "name": "인천",
       "properties": {
-        "name": "string",
-        "date": "date"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "수도권"
       }
     },
     {
-      "label": "Program",
-      "name": "Program",
+      "label": "LOCATION",
+      "name": "여수 광양",
       "properties": {
-        "name": "string",
-        "purpose": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "전라남도"
       }
     },
     {
-      "label": "Location",
-      "name": "Location",
+      "label": "LOCATION",
+      "name": "로스앤젤레스",
       "properties": {
-        "country": "string",
-        "region": "string"
+        "type": "도시",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "롱비치",
+      "properties": {
+        "type": "도시",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "중진공-BPA 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
+      "start_node": "ORGANIZATION",
       "relationship": "SIGNED",
-      "end_node": "Agreement",
-      "properties": {
-        "date": "date"
-      }
-    },
-    {
-      "start_node": "Agreement",
-      "relationship": "COVERS",
-      "end_node": "Program",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "LogisticsCenter",
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "Platform",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Platform",
-      "relationship": "CONNECTS",
-      "end_node": "LogisticsCenter",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "PARTICIPATES_IN",
-      "end_node": "Program",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "SME",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
-      "properties": {
-        "service_type": "string"
-      }
-    },
-    {
-      "start_node": "LogisticsCenter",
+      "start_node": "PROJECT",
       "relationship": "LOCATED_IN",
-      "end_node": "Location",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

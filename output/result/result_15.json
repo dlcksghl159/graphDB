@@ -1,99 +1,128 @@
 {
     "nodes": [
         {
-            "label": "PartnerCompany",
-            "name": "롯데웰푸드",
-            "properties": {
-                "industry": "식품 제조"
-            }
-        },
-        {
-            "label": "Project",
-            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-            "properties": {
-                "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-                "application_deadline": "2023-10-23",
-                "description": "백년가게 및 소공인의 오랜 경험과 비법에 롯데웰푸드의 식품 제조 기술력을 접목해 공동 상표 및 상품 개발"
-            }
-        },
-        {
-            "label": "SmallBusiness",
-            "name": "백년가게",
-            "properties": {
-                "name": "백년가게",
-                "category": "음식점업",
-                "years_in_business": 30,
-                "qualification_type": "우수 소상인"
-            }
-        },
-        {
-            "label": "SmallBusiness",
-            "name": "백년소공인",
-            "properties": {
-                "name": "백년소공인",
-                "category": "식품 제조업",
-                "years_in_business": 15,
-                "qualification_type": "숙련된 소공인"
-            }
-        },
-        {
-            "label": "Institution",
+            "label": "ORGANIZATION",
             "name": "소상공인시장진흥공단",
             "properties": {
-                "name": "소상공인시장진흥공단",
-                "institutionType": "Public",
-                "role": "지원 및 개발"
+                "type": "정부기관",
+                "description": "소상공인 및 소공인 지원을 위한 정부기관",
+                "headquarters": ""
             }
         },
         {
-            "label": "Brand",
+            "label": "COMPANY",
+            "name": "롯데웰푸드",
+            "properties": {
+                "full_name": "롯데웰푸드",
+                "industry": "식품 제조",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목한 공동 상표 및 상품 개발 프로젝트",
+                "start_date": "2023-03",
+                "status": "모집 중"
+            }
+        },
+        {
+            "label": "AGREEMENT",
+            "name": "백년가게·소공인과 롯데웰푸드의 협력",
+            "properties": {
+                "type": "상생 협력",
+                "date": "2023-03",
+                "description": "백년가게·소공인과 롯데웰푸드의 협력"
+            }
+        },
+        {
+            "label": "PRODUCT",
             "name": "식사이론",
             "properties": {
-                "name": "식사이론"
+                "category": "식품",
+                "description": "백년가게의 우수메뉴와 롯데웰푸드의 브랜드 접목 상품",
+                "launch_date": "",
+                "company": "롯데웰푸드"
             }
+        },
+        {
+            "label": "PERSON",
+            "name": "박성효",
+            "properties": {
+                "full_name": "박성효",
+                "role": "이사장",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "소진공",
+            "properties": {
+                "role": "이사"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HMR",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "Theory",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "SICSA",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "소상공인시장진흥공단",
-            "relationship": "INITIATES",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {
+                "type": "상생 협력",
+                "date": "2023-03"
+            }
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "ANNOUNCED",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "PARTICIPATED_IN",
             "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
             "properties": {}
         },
         {
-            "start_node": "롯데웰푸드",
-            "relationship": "PARTNERS_WITH",
+            "start_node": "박성효",
+            "relationship": "WORKS_FOR",
             "end_node": "소상공인시장진흥공단",
-            "properties": {}
+            "properties": {
+                "position": "이사장"
+            }
         },
         {
-            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-            "relationship": "TARGETS",
-            "end_node": "백년가게",
-            "properties": {}
-        },
-        {
-            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
-            "relationship": "TARGETS",
-            "end_node": "백년소공인",
-            "properties": {}
-        },
-        {
-            "start_node": "백년가게",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "롯데웰푸드",
-            "properties": {}
-        },
-        {
-            "start_node": "백년소공인",
-            "relationship": "COLLABORATES_WITH",
-            "end_node": "롯데웰푸드",
-            "properties": {}
-        },
-        {
-            "start_node": "백년가게",
-            "relationship": "PARTNERS_WITH",
+            "start_node": "롯데웰푸드",
+            "relationship": "DEVELOPS",
             "end_node": "식사이론",
+            "properties": {}
+        },
+        {
+            "start_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "relationship": "FOLLOW_UP_OF",
+            "end_node": "백년가게·소공인과 롯데웰푸드의 협력",
             "properties": {}
         }
     ]

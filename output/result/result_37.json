@@ -1,172 +1,156 @@
 {
     "nodes": [
         {
-            "label": "CloudProvider",
-            "name": "AmazonWebServices",
-            "properties": {}
-        },
-        {
-            "label": "CloudProvider",
-            "name": "Google",
-            "properties": {}
-        },
-        {
-            "label": "Product",
-            "name": "Microsoft365",
-            "properties": {
-                "category": "Software",
-                "specification": "Office Suite",
-                "name": "Microsoft365",
-                "type": "Cloud",
-                "price": 0
-            }
-        },
-        {
-            "label": "Service",
-            "name": "파이브클라우드",
-            "properties": {
-                "name": "파이브클라우드",
-                "serviceType": "클라우드 서비스",
-                "type": "IT 솔루션",
-                "users_count": 0,
-                "client_count": 2600,
-                "category": "클라우드/IT",
-                "launch_year": 0
-            }
-        },
-        {
             "label": "COMPANY",
             "name": "패스트파이브",
             "properties": {
-                "industry": "IT",
-                "name": "패스트파이브"
+                "industry": "클라우드 및 IT 솔루션",
+                "ceo": "김대일"
             }
         },
         {
-            "label": "BusinessSegment",
-            "name": "IT 신사업 부문",
+            "label": "PRODUCT",
+            "name": "파이브클라우드",
             "properties": {
-                "segment_name": "IT 신사업 부문"
+                "category": "클라우드 서비스",
+                "description": "중소·중견기업 맞춤형 클라우드 및 IT 솔루션 통합 서비스",
+                "launch_date": "",
+                "company": "패스트파이브"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "인테리어코드",
+            "properties": {
+                "category": "통합 서비스",
+                "description": "패스트파이브의 인테리어 전문 브랜드 하이픈디자인과 협력한 서비스",
+                "launch_date": "",
+                "company": "패스트파이브"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "아마존웹서비스",
+            "properties": {
+                "type": "클라우드 서비스 제공자",
+                "description": ""
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "Google",
+            "properties": {
+                "type": "클라우드 서비스 제공자",
+                "description": ""
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "마이크로소프트365",
+            "properties": {
+                "type": "클라우드 서비스 제공자",
+                "description": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "AWS 어드밴스드 티어 파트너 자격 취득",
+            "properties": {
+                "date": "2023",
+                "type": "인증",
+                "description": "파이브클라우드가 국내 최단기간으로 취득"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "AWS 한국파트너리그 수상",
+            "properties": {
+                "date": "",
+                "type": "수상",
+                "description": "파이브클라우드가 3회 연속 수상"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김대일",
+            "properties": {
+                "full_name": "김대일",
+                "role": "대표",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "트파이브",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "패스트파이브",
+            "properties": {
+                "role": "대표"
             }
         },
         {
             "label": "COMPANY",
-            "name": "하이픈디자인",
-            "properties": {
-                "industry": "인테리어",
-                "name": "하이픈디자인"
-            }
+            "name": "AWS",
+            "properties": {}
         },
         {
-            "label": "Award",
-            "name": "AWS 어드밴스드 티어 파트너",
-            "properties": {
-                "year": 2023,
-                "category": "클라우드"
-            }
-        },
-        {
-            "label": "Award",
-            "name": "AWS 한국파트너리그",
-            "properties": {
-                "year": 0,
-                "category": "클라우드"
-            }
-        },
-        {
-            "label": "Transaction",
-            "name": "거래기록",
-            "properties": {
-                "year": 2022,
-                "amount": 10000000000,
-                "growth_rate_percent": 60,
-                "share_percent": 0,
-                "growth_percent": 0
-            }
-        },
-        {
-            "label": "연차별 매출 기록",
-            "name": "연차별 매출 기록",
-            "properties": {
-                "year": 2022,
-                "quarter": "",
-                "export_amount": 100.0,
-                "change_rate": 60.0
-            }
-        },
-        {
-            "label": "Person",
-            "name": "김대일",
-            "properties": {
-                "position": "대표",
-                "name": "김대일"
-            }
+            "label": "COMPANY",
+            "name": "SaaS",
+            "properties": {}
         }
     ],
     "relations": [
         {
-            "start_node": "파이브클라우드",
-            "relationship": "INTEGRATES",
-            "end_node": "AmazonWebServices",
-            "properties": {}
-        },
-        {
-            "start_node": "파이브클라우드",
-            "relationship": "INTEGRATES",
-            "end_node": "Google",
-            "properties": {}
-        },
-        {
-            "start_node": "Service",
-            "relationship": "INTEGRATES",
-            "end_node": "Microsoft365",
-            "properties": {}
-        },
-        {
             "start_node": "패스트파이브",
-            "relationship": "OFFERS",
+            "relationship": "PRODUCES",
             "end_node": "파이브클라우드",
             "properties": {}
         },
         {
             "start_node": "패스트파이브",
-            "relationship": "PARTNERS_WITH",
-            "end_node": "하이픈디자인",
-            "properties": {}
-        },
-        {
-            "start_node": "패스트파이브",
-            "relationship": "HAS_SALES",
-            "end_node": "연차별 매출 기록",
+            "relationship": "PRODUCES",
+            "end_node": "인테리어코드",
             "properties": {}
         },
         {
             "start_node": "파이브클라우드",
-            "relationship": "RECEIVES",
-            "end_node": "AWS 어드밴스드 티어 파트너",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "아마존웹서비스",
             "properties": {}
         },
         {
             "start_node": "파이브클라우드",
-            "relationship": "RECEIVES",
-            "end_node": "AWS 한국파트너리그",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "구글",
             "properties": {}
         },
         {
-            "start_node": "패스트파이브",
-            "relationship": "OPERATES_IN",
-            "end_node": "IT 신사업 부문",
+            "start_node": "파이브클라우드",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "마이크로소프트365",
             "properties": {}
         },
         {
-            "start_node": "패스트파이브",
-            "relationship": "SIGNED",
-            "end_node": "거래기록",
+            "start_node": "파이브클라우드",
+            "relationship": "AWARDED_AT",
+            "end_node": "AWS 어드밴스드 티어 파트너 자격 취득",
+            "properties": {}
+        },
+        {
+            "start_node": "파이브클라우드",
+            "relationship": "AWARDED_AT",
+            "end_node": "AWS 한국파트너리그 수상",
             "properties": {}
         },
         {
             "start_node": "김대일",
-            "relationship": "LEADS",
+            "relationship": "CEO_OF",
             "end_node": "패스트파이브",
             "properties": {}
         }

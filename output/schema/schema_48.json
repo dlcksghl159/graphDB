@@ -1,97 +1,115 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "COMPANY",
+      "name": "소상공인시장진흥공단",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "industry": "string"
+        "full_name": "소상공인시장진흥공단",
+        "industry": "지원 서비스",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "박성효"
       }
     },
     {
-      "label": "Project",
-      "name": "Project",
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
       "properties": {
-        "name": "string",
-        "description": "string",
-        "recruitment_start": "date",
-        "recruitment_end": "date"
+        "full_name": "롯데웰푸드",
+        "industry": "식품 제조",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Brand",
-      "name": "Brand",
+      "label": "PROJECT",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "name": "string"
+        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
+        "start_date": "2023-03",
+        "status": "모집 중"
       }
     },
     {
-      "label": "CompanyCategory",
-      "name": "CompanyCategory",
+      "label": "AGREEMENT",
+      "name": "업무 협약",
       "properties": {
-        "name": "string",
-        "min_experience_years": "int",
-        "industry": "string"
+        "type": "상생 협력",
+        "date": "2023-03",
+        "description": "백년가게·소공인과 롯데웰푸드의 협력"
       }
     },
     {
-      "label": "ProductCategory",
-      "name": "ProductCategory",
+      "label": "ORGANIZATION",
+      "name": "백년가게",
       "properties": {
-        "name": "string"
+        "type": "음식점업",
+        "description": "30년 이상의 업력을 가진 우수 소상인",
+        "headquarters": ""
       }
     },
     {
-      "label": "Person",
-      "name": "Person",
+      "label": "ORGANIZATION",
+      "name": "백년소공인",
       "properties": {
-        "name": "string",
-        "title": "string"
+        "type": "식품 제조업",
+        "description": "15년 이상의 업력을 가진 숙련된 소공인",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론",
+      "properties": {
+        "category": "식품 브랜드",
+        "description": "롯데웰푸드의 상품화 브랜드",
+        "launch_date": "",
+        "company": "롯데웰푸드"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "INITIATES",
-      "end_node": "Project",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "PARTNERS_IN",
-      "end_node": "Project",
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "TARGETS",
-      "end_node": "CompanyCategory",
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "Project",
-      "relationship": "DEVELOPS",
-      "end_node": "Brand",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Brand",
-      "relationship": "COVERS",
-      "end_node": "ProductCategory",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Person",
-      "relationship": "HEADS",
-      "end_node": "Organization",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     }
   ]

@@ -1,68 +1,70 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "신일전자",
             "properties": {
-                "ticker": "002700",
-                "name": "신일전자"
+                "full_name": "신일전자",
+                "industry": "가전제품",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "BLDC 에어 서큘레이터 S10 SE",
             "properties": {
-                "name": "BLDC 에어 서큘레이터 S10 SE",
-                "product_name": "BLDC 에어 서큘레이터 S10 SE"
+                "category": "가전제품",
+                "description": "고성능·감성 디자인, 마그네틱 리모컨, 무빙 디스플레이, 고효율 BLDC 모터, 3D 입체 회전 구조, 에코 모드",
+                "launch_date": "2023-04-14",
+                "company": "신일전자"
             }
         },
         {
-            "label": "Edition",
-            "name": "성유리 에디션",
+            "label": "EVENT",
+            "name": "GS홈쇼핑 성유리 에디션 방송",
             "properties": {
-                "name": "성유리 에디션",
-                "benefit": "특별 혜택"
+                "date": "2023-04-14",
+                "type": "방송",
+                "description": "신일전자 BLDC 에어 서큘레이터 S10 SE 첫 선",
+                "location": ""
             }
         },
         {
-            "label": "SalesChannel",
-            "name": "GS 홈쇼핑",
+            "label": "COMPANY",
+            "name": "GS홈쇼핑",
             "properties": {
-                "name": "GS 홈쇼핑"
+                "full_name": "GS홈쇼핑",
+                "industry": "소매",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Pricing",
-            "name": "단품가",
-            "properties": {
-                "price": "159000",
-                "discount_rate": "7%"
-            }
+            "label": "COMPANY",
+            "name": "BLDC",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "신일전자",
-            "relationship": "LAUNCHED",
+            "relationship": "PRODUCES",
             "end_node": "BLDC 에어 서큘레이터 S10 SE",
             "properties": {}
         },
         {
-            "start_node": "BLDC 에어 서큘레이터 S10 SE",
-            "relationship": "AVAILABLE_IN",
-            "end_node": "성유리 에디션",
+            "start_node": "GS홈쇼핑",
+            "relationship": "HELD",
+            "end_node": "GS홈쇼핑 성유리 에디션 방송",
             "properties": {}
         },
         {
-            "start_node": "성유리 에디션",
-            "relationship": "HAS_PRICING",
-            "end_node": "단품가",
-            "properties": {}
-        },
-        {
-            "start_node": "GS 홈쇼핑",
-            "relationship": "HOSTS",
-            "end_node": "성유리 에디션",
+            "start_node": "김혜미",
+            "relationship": "REPORTED",
+            "end_node": "GS홈쇼핑 성유리 에디션 방송",
             "properties": {}
         }
     ]

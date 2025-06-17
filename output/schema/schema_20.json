@@ -1,128 +1,126 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "name": "string",
-        "sector": "string"
+        "type": "Government Agency",
+        "description": "중소벤처기업의 지원을 담당하는 정부 기관",
+        "headquarters": "South Korea"
       }
     },
     {
-      "label": "LogisticsCenter",
-      "name": "LogisticsCenter",
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
       "properties": {
-        "name": "string",
-        "location": "string"
+        "type": "Port Authority",
+        "description": "부산항을 관리하는 공공기관",
+        "headquarters": "Busan, South Korea"
       }
     },
     {
-      "label": "Platform",
-      "name": "Platform",
+      "label": "LOCATION",
+      "name": "LA·LB",
       "properties": {
-        "name": "string"
+        "type": "City",
+        "country": "USA",
+        "region": "California"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
+      "label": "LOCATION",
+      "name": "부산",
       "properties": {
-        "name": "string",
-        "date": "string"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Busan"
       }
     },
     {
-      "label": "Program",
-      "name": "Program",
+      "label": "LOCATION",
+      "name": "인천",
       "properties": {
-        "name": "string"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Incheon"
       }
     },
     {
-      "label": "Service",
-      "name": "Service",
+      "label": "LOCATION",
+      "name": "여수 광양",
       "properties": {
-        "name": "string",
-        "serviceType": "string"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Jeollanam-do"
       }
     },
     {
-      "label": "Location",
-      "name": "Location",
+      "label": "PROJECT",
+      "name": "스마트트레이드허브",
       "properties": {
-        "name": "string",
-        "regionType": "string"
+        "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼",
+        "start_date": "unknown",
+        "status": "Ongoing"
       }
     },
     {
-      "label": "ExportSME",
-      "name": "ExportSME",
+      "label": "AGREEMENT",
+      "name": "업무협약(MOU)",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "type": "Memorandum of Understanding",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "SIGNED_AGREEMENT",
-      "end_node": "Agreement",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "업무협약(MOU)",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "OPERATES_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "SIGNED",
+      "end_node": "업무협약(MOU)",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "DEVELOPS_PLATFORM",
-      "end_node": "Platform",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
-      "start_node": "Platform",
-      "relationship": "CONNECTS_WITH_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
-      "start_node": "Agreement",
-      "relationship": "DEFINES_PROGRAM",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
       "relationship": "LOCATED_IN",
-      "end_node": "Location",
+      "end_node": "부산",
       "properties": {}
     },
     {
-      "start_node": "Service",
-      "relationship": "PROVIDED_AT_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
+      "start_node": "부산항만공사",
+      "relationship": "OPERATES",
+      "end_node": "LA·LB",
       "properties": {}
     },
     {
-      "start_node": "ExportSME",
-      "relationship": "USES_LOGISTICS_CENTER",
-      "end_node": "LogisticsCenter",
-      "properties": {}
-    },
-    {
-      "start_node": "ExportSME",
-      "relationship": "RECEIVES_SERVICE",
-      "end_node": "Service",
-      "properties": {}
-    },
-    {
-      "start_node": "Program",
-      "relationship": "APPLIES_TO",
-      "end_node": "ExportSME",
-      "properties": {}
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PLANS_TO_EXPAND",
+      "end_node": "LOCATION",
+      "properties": {
+        "locations": [
+          "부산",
+          "인천",
+          "여수 광양"
+        ]
+      }
     }
   ]
 }

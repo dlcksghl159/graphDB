@@ -1,67 +1,158 @@
 {
     "nodes": [
         {
-            "label": "PartnerCompany",
+            "label": "COMPANY",
             "name": "엠투아이",
             "properties": {
-                "industry": "디지털전환"
+                "industry": "디지털전환 솔루션",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "PartnerCompany",
+            "label": "COMPANY",
             "name": "벰로보틱스",
             "properties": {
-                "industry": "산업용 로봇"
+                "industry": "산업용 물류로봇",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Agreement",
-            "name": "로봇 제어기 공동개발 업무 협약",
+            "label": "AGREEMENT",
+            "name": "로봇 제어기 공동 개발 및 물류로봇 프로젝트 협약",
             "properties": {
-                "name": "로봇 제어기 공동개발 업무 협약",
-                "date": "2023-10-14",
-                "title": "엠투아이와 벰로보틱스의 협력",
-                "location": "",
-                "agreement_id": "",
-                "purpose": "로봇 제어기 공동 개발"
+                "type": "업무 협약",
+                "date": "2023-04-14",
+                "description": "엠투아이와 벰로보틱스의 로봇 제어기 공동 개발 및 물류로봇 프로젝트 협약"
             }
         },
         {
-            "label": "Investment",
-            "name": "전략적 지분투자",
+            "label": "PROJECT",
+            "name": "물류로봇(AMR/AGV) 프로젝트",
             "properties": {
-                "amount": 1200000000,
-                "date": "2023"
+                "description": "엠투아이와 벰로보틱스의 물류로봇 프로젝트",
+                "start_date": "",
+                "status": "진행 중"
             }
+        },
+        {
+            "label": "INVESTMENT",
+            "name": "엠투아이의 벰로보틱스 지분 투자",
+            "properties": {
+                "amount": "12억원",
+                "date": "2023-04-14",
+                "type": "지분 투자"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "로봇 제어기",
+            "properties": {
+                "category": "로봇 기술",
+                "description": "AMR/AGV의 두뇌 역할을 하는 로봇 제어기",
+                "field": "로봇 제어"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "디지털전환(DX) 솔루션",
+            "properties": {
+                "category": "디지털 전환",
+                "description": "엠투아이의 자체 개발 솔루션",
+                "field": "디지털 전환"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
+            "name": "AI 자율 제조",
+            "properties": {
+                "category": "인공지능",
+                "description": "엠투아이의 AI 자율 제조 시장 선도 기술",
+                "field": "제조"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "AMR",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "AGV",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "ACS",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "엠투아이",
-            "relationship": "PARTNERS_WITH",
+            "relationship": "PARTNERED_WITH",
             "end_node": "벰로보틱스",
-            "properties": {}
+            "properties": {
+                "type": "공동 개발",
+                "date": "2023-04-14"
+            }
         },
         {
             "start_node": "엠투아이",
-            "relationship": "SIGNS",
-            "end_node": "로봇 제어기 공동개발 업무 협약",
+            "relationship": "SIGNED",
+            "end_node": "로봇 제어기 공동 개발 및 물류로봇 프로젝트 협약",
             "properties": {}
         },
         {
             "start_node": "벰로보틱스",
-            "relationship": "SIGNS",
-            "end_node": "로봇 제어기 공동개발 업무 협약",
+            "relationship": "SIGNED",
+            "end_node": "로봇 제어기 공동 개발 및 물류로봇 프로젝트 협약",
             "properties": {}
         },
         {
             "start_node": "엠투아이",
-            "relationship": "INVEST_IN",
-            "end_node": "벰로보틱스",
-            "properties": {
-                "amount": 1200000000,
-                "date": "2023"
-            }
+            "relationship": "MADE_INVESTMENT",
+            "end_node": "엠투아이의 벰로보틱스 지분 투자",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "디지털전환(DX) 솔루션",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "FOCUSES_ON",
+            "end_node": "AI 자율 제조",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "물류로봇(AMR/AGV) 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "물류로봇(AMR/AGV) 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "엠투아이",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇 제어기",
+            "properties": {}
+        },
+        {
+            "start_node": "벰로보틱스",
+            "relationship": "DEVELOPS",
+            "end_node": "로봇 제어기",
+            "properties": {}
         }
     ]
 }

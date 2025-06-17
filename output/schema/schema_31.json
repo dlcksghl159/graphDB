@@ -2,75 +2,139 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "Company",
+      "name": "가온아이",
       "properties": {
-        "name": "string",
-        "industry": "string"
+        "full_name": "가온아이",
+        "industry": "Software",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "조창제"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "아이서트",
+      "properties": {
+        "full_name": "아이서트",
+        "industry": "Software",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "현수환"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "Product",
+      "name": "세이프아이서트",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "category": "Software",
+        "description": "법인 공동인증서 관리 솔루션",
+        "launch_date": "",
+        "company": "아이서트"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "SaaS",
+      "properties": {
+        "category": "Cloud Computing",
+        "description": "서비스형 소프트웨어",
+        "field": "Software"
       }
     },
     {
       "label": "PERSON",
-      "name": "Person",
+      "name": "조창제",
       "properties": {
-        "name": "string"
+        "full_name": "조창제",
+        "role": "CEO",
+        "nationality": "South Korean",
+        "age": ""
       }
     },
     {
-      "label": "FEATURE",
-      "name": "Feature",
+      "label": "PERSON",
+      "name": "현수환",
       "properties": {
-        "name": "string",
-        "description": "string"
+        "full_name": "현수환",
+        "role": "CEO",
+        "nationality": "South Korean",
+        "age": ""
       }
     },
     {
-      "label": "SERVICE_MODEL",
-      "name": "ServiceModel",
+      "label": "COMPANY",
+      "name": "한화오션디지털",
       "properties": {
-        "name": "string",
-        "payment_model": "string"
+        "full_name": "한화오션디지털",
+        "industry": "Various",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "LG전자",
+      "properties": {
+        "full_name": "LG전자",
+        "industry": "Electronics",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "PROVIDES",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
       "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "PRODUCT",
-      "relationship": "HAS_FEATURE",
-      "end_node": "FEATURE",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "SaaS Development",
+        "date": ""
+      }
     },
     {
       "start_node": "PERSON",
       "relationship": "CEO_OF",
       "end_node": "COMPANY",
-      "properties": {}
+      "properties": {
+        "since": ""
+      }
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "HAS_SERVICE_MODEL",
-      "end_node": "SERVICE_MODEL",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "ADOPTS",
+      "relationship": "INVESTED_IN",
       "end_node": "PRODUCT",
       "properties": {
-        "automation_rate": "int"
+        "amount": "",
+        "date": ""
       }
     }
   ]

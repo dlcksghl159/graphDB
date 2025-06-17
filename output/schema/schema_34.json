@@ -1,107 +1,121 @@
 {
   "nodes": [
     {
-      "label": "Platform",
-      "name": "Platform",
+      "label": "COMPANY",
+      "name": "와디즈",
       "properties": {
-        "name": "string"
+        "full_name": "와디즈",
+        "industry": "펀딩 플랫폼",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Category",
-      "name": "Category",
+      "label": "PRODUCT",
+      "name": "뉴에어론 풀 체어",
       "properties": {
-        "name": "string"
+        "category": "홈리빙",
+        "description": "고급 오피스 체어",
+        "launch_date": "",
+        "company": "허먼밀러"
       }
     },
     {
-      "label": "Brand",
-      "name": "Brand",
+      "label": "PRODUCT",
+      "name": "쿠자 멀티핸들 스텐팬",
       "properties": {
-        "name": "string"
+        "category": "홈리빙",
+        "description": "명품 스테인리스 사용",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "PRODUCT",
+      "name": "올리젯 청바지",
       "properties": {
-        "name": "string",
-        "price": "int"
+        "category": "패션",
+        "description": "이탈리아산 프리미엄 데님 원단",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "Campaign",
-      "name": "Campaign",
+      "label": "PRODUCT",
+      "name": "고급 매트리스",
       "properties": {
-        "amount": "int",
-        "rank": "int"
+        "category": "홈리빙",
+        "description": "숙면 연구 기반",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "PRODUCT",
+      "name": "호텔급 낮잠이불",
       "properties": {
-        "name": "string"
+        "category": "홈리빙",
+        "description": "",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "Report",
-      "name": "Report",
+      "label": "ORGANIZATION",
+      "name": "유로모니터",
       "properties": {
-        "title": "string",
-        "year": "int"
+        "type": "시장조사기관",
+        "description": "글로벌 시장조사기관",
+        "headquarters": ""
       }
     },
     {
-      "label": "Trend",
-      "name": "Trend",
+      "label": "EVENT",
+      "name": "2025 글로벌 소비자 트렌드 리포트 발표",
       "properties": {
-        "name": "string",
-        "description": "string"
+        "date": "",
+        "type": "리포트 발표",
+        "description": "다각형 소비 정의",
+        "location": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Platform",
-      "relationship": "OFFERS",
-      "end_node": "Category",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Category",
-      "relationship": "INCLUDES",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "CREATED_BY",
-      "end_node": "Brand",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Campaign",
-      "relationship": "FOR_PRODUCT",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Campaign",
-      "relationship": "ON_PLATFORM",
-      "end_node": "Platform",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "PUBLISHED",
-      "end_node": "Report",
-      "properties": {}
-    },
-    {
-      "start_node": "Report",
-      "relationship": "DEFINES",
-      "end_node": "Trend",
+      "start_node": "ORGANIZATION",
+      "relationship": "HELD",
+      "end_node": "EVENT",
       "properties": {}
     }
   ]

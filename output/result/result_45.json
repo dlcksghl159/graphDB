@@ -1,95 +1,80 @@
 {
     "nodes": [
         {
-            "label": "ExportSME",
-            "name": "중소기업",
+            "label": "EVENT",
+            "name": "미국의 철강·알루미늄 관세 조치",
             "properties": {
-                "name": "중소기업",
-                "industry": "수출"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "화장품",
-            "properties": {
-                "category_name": "화장품",
-                "name": "화장품"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "자동차",
-            "properties": {
-                "category_name": "자동차",
-                "name": "자동차"
-            }
-        },
-        {
-            "label": "SalesRecord",
-            "name": "1분기 중소기업 수출",
-            "properties": {
-                "year": 2023,
-                "quarter": "1분기",
-                "export_amount": 270000000000.0,
-                "change_rate": 0.7
-            }
-        },
-        {
-            "label": "Country",
-            "name": "미국",
-            "properties": {
-                "name": "미국",
-                "region": ""
-            }
-        },
-        {
-            "label": "Reason",
-            "name": "글로벌 전기차 캐즘",
-            "properties": {
-                "name": "글로벌 전기차 캐즘"
-            }
-        },
-        {
-            "label": "GovernmentAgency",
-            "name": "중소벤처기업부",
-            "properties": {
-                "name": "중소벤처기업부",
-                "agency_name": "중소벤처기업부"
+                "date": "2023-01-01 to 2023-03-31",
+                "type": "정책",
+                "description": "미국의 철강 및 알루미늄 제품에 대한 관세 부과"
             }
         }
     ],
     "relations": [
         {
-            "start_node": "SalesRecord",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "화장품",
-            "properties": {}
-        },
-        {
-            "start_node": "SalesRecord",
-            "relationship": "INCLUDES_PRODUCT",
-            "end_node": "자동차",
-            "properties": {}
-        },
-        {
-            "start_node": "SalesRecord",
-            "relationship": "TARGETS_COUNTRY",
-            "end_node": "미국",
-            "properties": {}
-        },
-        {
-            "start_node": "미국",
-            "relationship": "HAS_REASON",
-            "end_node": "글로벌 전기차 캐즘",
+            "start_node": "중소벤처기업부",
+            "relationship": "ANNOUNCED",
+            "end_node": "중소기업 수출 5개 분기째 증가",
             "properties": {
-                "rate": -2.5
+                "date": "2023-04-14",
+                "description": "중소기업 수출 증가 발표"
             }
         },
         {
-            "start_node": "1분기 중소기업 수출",
-            "relationship": "ANNOUNCED_BY",
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
             "end_node": "중소벤처기업부",
-            "properties": {}
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "1840000000 달러",
+                "growth_rate": "+19.6%",
+                "increase_rate": "19.6%"
+            }
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "1740000000 달러",
+                "growth_rate": "+67.4%",
+                "increase_rate": "67.4%"
+            }
+        },
+        {
+            "start_node": "반도체 제조용 장비",
+            "relationship": "EXPORTED_TO",
+            "end_node": "중국",
+            "properties": {
+                "amount": "",
+                "date": "2023-01-01 to 2023-03-31"
+            }
+        },
+        {
+            "start_node": "철강 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국의 철강·알루미늄 관세 조치",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-17.8%"
+            }
+        },
+        {
+            "start_node": "알루미늄 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국의 철강·알루미늄 관세 조치",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-7.6%"
+            }
         }
     ]
 }

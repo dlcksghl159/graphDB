@@ -1,75 +1,185 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "Gaon i",
+            "label": "COMPANY",
+            "name": "가온아이",
             "properties": {
-                "name": "Gaon i",
-                "industry": "Software",
-                "company_name": "Gaon i"
+                "full_name": "가온아이",
+                "industry": "소프트웨어",
+                "headquarters": "",
+                "founded": "",
+                "ceo": "조창제"
             }
         },
         {
-            "label": "Company",
-            "name": "Icert",
+            "label": "COMPANY",
+            "name": "아이서트",
             "properties": {
-                "name": "Icert",
-                "industry": "Software",
-                "company_name": "Icert"
+                "full_name": "아이서트",
+                "industry": "소프트웨어",
+                "headquarters": "",
+                "founded": "",
+                "ceo": "현수환"
             }
         },
         {
-            "label": "SERVICE_MODEL",
+            "label": "PRODUCT",
+            "name": "세이프아이서트",
+            "properties": {
+                "category": "법인 인증서 관리 솔루션",
+                "description": "실시간 모니터링, 불법 사용 방지, 사용자별 비밀번호 설정, 인증서 외부 유출 차단",
+                "launch_date": "",
+                "company": "아이서트"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
             "name": "SaaS",
             "properties": {
-                "name": "SaaS",
-                "payment_model": "Subscription"
+                "category": "클라우드 서비스",
+                "description": "서비스형 소프트웨어",
+                "field": "소프트웨어"
             }
         },
         {
-            "label": "Platform",
-            "name": "BizOffice",
+            "label": "COMPANY",
+            "name": "한화오션디지털",
             "properties": {
-                "platform_id": "1",
-                "name": "BizOffice",
-                "type": "Groupware"
+                "full_name": "한화오션디지털",
+                "industry": "디지털 솔루션",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Product",
+            "label": "COMPANY",
+            "name": "Lg",
+            "properties": {
+                "full_name": "LG전자",
+                "industry": "전자",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "조창제",
+            "properties": {
+                "full_name": "조창제",
+                "role": "대표",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "현수환",
+            "properties": {
+                "full_name": "현수환",
+                "role": "대표",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "조창",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "현수",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "아이",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "서트",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "가온아이",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "아이서트",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
             "name": "SafeICert",
-            "properties": {
-                "product_name": "SafeICert",
-                "product_id": "SafeICert",
-                "product_type": "Certificate management",
-                "features": "Real-time monitoring, Unauthorized use prevention, User password setting, External certificate leakage prevention"
-            }
+            "properties": {}
         }
     ],
     "relations": [
         {
-            "start_node": "Gaon i",
+            "start_node": "가온아이",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "아이서트",
+            "properties": {
+                "type": "SaaS 개발",
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "아이서트",
             "relationship": "DEVELOPS",
-            "end_node": "SafeICert",
+            "end_node": "세이프아이서트",
             "properties": {}
         },
         {
-            "start_node": "Icert",
-            "relationship": "PROVIDES",
-            "end_node": "SafeICert",
-            "properties": {}
-        },
-        {
-            "start_node": "SafeICert",
-            "relationship": "HAS_SERVICE_MODEL",
+            "start_node": "세이프아이서트",
+            "relationship": "USES",
             "end_node": "SaaS",
             "properties": {}
         },
         {
-            "start_node": "Gaon i",
-            "relationship": "OPERATES",
-            "end_node": "BizOffice",
+            "start_node": "세이프아이서트",
+            "relationship": "IMPLEMENTED_BY",
+            "end_node": "한화오션디지털",
             "properties": {}
+        },
+        {
+            "start_node": "세이프아이서트",
+            "relationship": "IMPLEMENTED_BY",
+            "end_node": "LG전자",
+            "properties": {}
+        },
+        {
+            "start_node": "조창제",
+            "relationship": "WORKS_FOR",
+            "end_node": "가온아이",
+            "properties": {
+                "position": "대표"
+            }
+        },
+        {
+            "start_node": "현수환",
+            "relationship": "WORKS_FOR",
+            "end_node": "아이서트",
+            "properties": {
+                "position": "대표"
+            }
         }
     ]
 }

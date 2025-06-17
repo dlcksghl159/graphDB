@@ -1,98 +1,74 @@
 {
     "nodes": [
         {
-            "label": "Organization",
-            "name": "동반성장위원회",
+            "label": "AGREEMENT",
+            "name": "협력사 ESG 지원사업 업무협약",
             "properties": {
-                "org_id": null,
-                "name": "동반성장위원회",
-                "type": null,
-                "location": null,
-                "category": null,
-                "sector": null,
-                "role": null,
-                "orgId": null,
-                "orgName": "동반성장위원회",
-                "website": null,
-                "established_year": null,
-                "industry": null
+                "type": "ESG 지원",
+                "date": "2023-04-14",
+                "description": "동반성장위원회와 LG이노텍 간의 ESG 지원사업 협약"
             }
         },
         {
-            "label": "Organization",
-            "name": "LG이노텍",
+            "label": "LOCATION",
+            "name": "인천 송도",
             "properties": {
-                "org_id": null,
-                "name": "LG이노텍",
-                "type": null,
-                "location": null,
-                "category": null,
-                "sector": null,
-                "role": null,
-                "orgId": null,
-                "orgName": "LG이노텍",
-                "website": null,
-                "established_year": null,
-                "industry": "전기·전자 산업"
+                "type": "지역",
+                "country": "대한민국",
+                "region": "인천"
             }
         },
         {
-            "label": "Agreement",
-            "name": "2025년 협력사 ESG 지원사업 업무협약",
+            "label": "EVENT",
+            "name": "ESG 우수 중소기업 현판식",
             "properties": {
-                "name": "2025년 협력사 ESG 지원사업 업무협약",
-                "date": "2023-09-14",
-                "title": "협력사 ESG 지원사업",
-                "location": "인천 송도 에이피텍 본사",
-                "agreement_id": null,
-                "purpose": "협력사 ESG 지원",
-                "scope": null,
-                "agreement_date": "2023-09-14",
-                "description": null
-            }
-        },
-        {
-            "label": "SupportProgram",
-            "name": "협력사 ESG 지원사업",
-            "properties": {
-                "name": "협력사 ESG 지원사업"
-            }
-        },
-        {
-            "label": "SmallBusiness",
-            "name": "에이피텍",
-            "properties": {
-                "name": "에이피텍",
-                "category": null,
-                "years_in_business": null,
-                "qualification_type": "ESG 우수 중소기업"
+                "date": "2023-04-14",
+                "type": "현판식",
+                "description": "ESG 우수 중소기업으로 선정된 기업에 대한 현판식"
             }
         }
     ],
     "relations": [
         {
             "start_node": "동반성장위원회",
-            "relationship": "SIGNS",
-            "end_node": "2025년 협력사 ESG 지원사업 업무협약",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
             "properties": {}
         },
         {
             "start_node": "LG이노텍",
-            "relationship": "SIGNS",
-            "end_node": "2025년 협력사 ESG 지원사업 업무협약",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
             "properties": {}
         },
         {
-            "start_node": "동반성장위원회",
-            "relationship": "ACTIVATES",
-            "end_node": "협력사 ESG 지원사업",
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "type": "ESG 지원사업",
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "협력사 ESG 지원사업 업무협약",
+            "relationship": "HELD_IN",
+            "end_node": "인천 송도",
             "properties": {}
         },
         {
             "start_node": "에이피텍",
-            "relationship": "SELECTED_FOR",
-            "end_node": "협력사 ESG 지원사업",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "ESG 우수 중소기업 현판식",
             "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SUPPLIES",
+            "end_node": "에이피텍",
+            "properties": {
+                "product": "핸드폰 카메라 모듈 생산 설비"
+            }
         }
     ]
 }

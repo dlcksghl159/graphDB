@@ -1,94 +1,83 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "한국서부발전",
             "properties": {
-                "ticker": "",
+                "full_name": "한국서부발전",
                 "industry": "발전",
-                "name": "한국서부발전",
-                "type": "",
-                "company_name": "한국서부발전",
-                "stock_code": "",
-                "company_id": "",
-                "size": "",
-                "region": "",
-                "country": "",
-                "headquarters": "",
-                "companyName": "한국서부발전",
-                "employeeCount": 0,
-                "sizeCategory": "",
-                "founded_year": 0,
-                "cumulative_investment": 0,
-                "target_ipo_year": 0,
-                "employee_count": 0,
-                "founding_year": 0,
-                "company_type": "",
-                "revenue": 0,
-                "rnd_investment": 0,
-                "domesticProduction": false,
-                "category": ""
+                "headquarters": "태안",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Program",
+            "label": "PROJECT",
             "name": "발전정보 활용 창업·벤처기업 협업사업",
             "properties": {
-                "program_id": "",
-                "name": "발전정보 활용 창업·벤처기업 협업사업",
-                "purpose": "창의적인 기술 개발 및 사업화 실증",
-                "year": 0,
-                "target_count": 25,
-                "description": "발전정보를 활용한 창업·벤처기업의 협업사업 프로그램",
-                "start_year": 0,
-                "participantCount": 0,
-                "programType": "",
-                "deadline": "2023-11-16",
-                "support_amount_min": 1000,
-                "support_amount_max": 3000,
-                "selected_count": 25
+                "description": "발전정보를 활용한 창의적인 기술 개발 및 실증 사업화 연계 프로그램",
+                "start_date": "",
+                "status": "공모 중"
             }
         },
         {
-            "label": "Region",
-            "name": "태안",
-            "properties": {
-                "name": "태안",
-                "type": ""
-            }
-        },
-        {
-            "label": "SmallBusiness",
+            "label": "ORGANIZATION",
             "name": "창업·벤처기업",
             "properties": {
-                "name": "창업·벤처기업",
-                "category": "중소기업",
-                "years_in_business": 7,
-                "qualification_type": "창업 7년 이내"
+                "type": "기업",
+                "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
+                "headquarters": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "해외 실증 지원사업",
+            "properties": {
+                "date": "",
+                "type": "지원사업",
+                "description": "협업 우수기업에 해외 실증 기회 제공",
+                "location": "해외"
+            }
+        },
+        {
+            "label": "INVESTMENT",
+            "name": "지원금",
+            "properties": {
+                "amount": "1000만~3000만원",
+                "date": "",
+                "type": "지원"
             }
         }
     ],
     "relations": [
         {
             "start_node": "한국서부발전",
-            "relationship": "OFFERS",
+            "relationship": "ANNOUNCED",
             "end_node": "발전정보 활용 창업·벤처기업 협업사업",
-            "properties": {}
+            "properties": {
+                "date": "2023-04-14"
+            }
         },
         {
-            "start_node": "발전정보 활용 창업·벤처기업 협업사업",
-            "relationship": "APPLIES_TO",
+            "start_node": "한국서부발전",
+            "relationship": "PARTNERED_WITH",
             "end_node": "창업·벤처기업",
+            "properties": {
+                "type": "지원사업",
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "한국서부발전",
+            "relationship": "MADE_INVESTMENT",
+            "end_node": "지원금",
             "properties": {}
         },
         {
             "start_node": "한국서부발전",
-            "relationship": "SUPPORTS",
-            "end_node": "창업·벤처기업",
-            "properties": {
-                "year": 2023,
-                "supportedCount": 25
-            }
+            "relationship": "HELD",
+            "end_node": "해외 실증 지원사업",
+            "properties": {}
         }
     ]
 }

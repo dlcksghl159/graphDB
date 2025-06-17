@@ -1,55 +1,59 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "락앤락",
             "properties": {
-                "name": "락앤락",
-                "industry": "글로벌 생활용품"
+                "industry": "생활용품",
+                "headquarters": "서울"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "풀히트 푸드워머",
             "properties": {
-                "name": "풀히트 푸드워머",
-                "category": "테이블웨어"
+                "category": "테이블웨어",
+                "description": "바닥 전체에 열선이 내장되어 10초 내 예열, 실리콘 소재 롤러블 디자인, 온도 조절 가능",
+                "launch_date": "2023-04-14",
+                "company": "락앤락"
             }
         },
         {
-            "label": "Promotion",
-            "name": "프로모션",
+            "label": "PERSON",
+            "name": "류난영",
             "properties": {
-                "startDate": "2023-10-14",
-                "endDate": "2023-10-21",
-                "details": "제품 출시 기념"
+                "role": "기자",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "SalesChannel",
-            "name": "락앤락몰",
+            "label": "EVENT",
+            "name": "제품 출시 기념 프로모션",
             "properties": {
-                "name": "락앤락몰"
+                "date": "2023-04-14 to 2023-04-21",
+                "type": "프로모션",
+                "description": "락앤락몰에서 진행"
             }
         }
     ],
     "relations": [
         {
             "start_node": "락앤락",
-            "relationship": "LAUNCHES",
+            "relationship": "PRODUCES",
             "end_node": "풀히트 푸드워머",
             "properties": {}
         },
         {
-            "start_node": "풀히트 푸드워머",
-            "relationship": "HAS_PROMOTION",
-            "end_node": "프로모션",
+            "start_node": "류난영",
+            "relationship": "REPORTED",
+            "end_node": "풀히트 푸드워머",
             "properties": {}
         },
         {
-            "start_node": "풀히트 푸드워머",
-            "relationship": "SOLD_ON",
-            "end_node": "락앤락몰",
+            "start_node": "락앤락",
+            "relationship": "HELD",
+            "end_node": "제품 출시 기념 프로모션",
             "properties": {}
         }
     ]

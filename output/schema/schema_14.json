@@ -1,83 +1,109 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "COMPANY",
+      "name": "한샘",
       "properties": {
-        "company_name": "string",
-        "stock_code": "string"
+        "full_name": "한샘",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "FinancialMetric",
-      "name": "재무지표",
+      "label": "COMPANY",
+      "name": "현대리바트",
       "properties": {
-        "metric_name": "string",
-        "value": "int",
-        "unit": "string",
-        "year": "int",
-        "quarter": "string"
+        "full_name": "현대리바트",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "BusinessSegment",
-      "name": "사업부문",
+      "label": "INDUSTRY",
+      "name": "B2B",
       "properties": {
-        "segment_name": "string"
+        "description": "기업 간 거래"
       }
     },
     {
-      "label": "Strategy",
-      "name": "경영전략",
+      "label": "INDUSTRY",
+      "name": "B2C",
       "properties": {
-        "strategy_name": "string",
-        "description": "string",
-        "year": "int"
+        "description": "기업과 소비자 간 거래"
       }
     },
     {
-      "label": "Market",
-      "name": "시장",
+      "label": "MARKET",
+      "name": "건설경기",
       "properties": {
-        "market_type": "string"
+        "description": "건설 산업의 경기 상황"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "오피스 인테리어 사업",
+      "properties": {
+        "description": "오피스 기반의 인테리어 사업 확장",
+        "start_date": "2025",
+        "status": "확장 중"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_FINANCIAL_METRIC",
-      "end_node": "FinancialMetric",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "BusinessSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "COMPETES_WITH",
-      "end_node": "Company",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "가구"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "FOCUSES_ON",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "strategy": "수익성 중심 경영"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "FOCUSES_ON",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "strategy": "수익성 중심 경영"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "MARKET",
+      "properties": {
+        "impact": "매출 감소"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "MARKET",
+      "properties": {
+        "impact": "매출 감소"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ADOPTS",
-      "end_node": "Strategy",
-      "properties": {}
-    },
-    {
-      "start_node": "Strategy",
-      "relationship": "TARGETS_SEGMENT",
-      "end_node": "BusinessSegment",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "TARGETS_MARKET",
-      "end_node": "Market",
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "PROJECT",
       "properties": {}
     }
   ]

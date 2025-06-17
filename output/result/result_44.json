@@ -1,169 +1,138 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "네이버",
+            "label": "EVENT",
+            "name": "2025 경기도 동반성장 페어",
             "properties": {
-                "ticker": "",
-                "industry": "",
-                "name": "네이버",
-                "type": "String",
-                "company_name": "네이버",
-                "stock_code": "",
-                "company_id": "",
-                "size": "",
-                "region": "",
-                "country": "",
-                "headquarters": "",
-                "companyName": "네이버",
-                "employeeCount": 0,
-                "sizeCategory": "",
-                "founded_year": 0,
-                "cumulative_investment": 0,
-                "target_ipo_year": 0,
-                "employee_count": 0,
-                "founding_year": 0,
-                "company_type": "String",
-                "revenue": 0,
-                "rnd_investment": 0,
-                "domesticProduction": false,
-                "category": ""
+                "date": "2023-04-13",
+                "type": "상생협력 행사",
+                "description": "경기도와 동반성장위원회가 공동으로 개최한 행사"
             }
         },
         {
-            "label": "Company",
+            "label": "LOCATION",
+            "name": "수원메쎄 1홀",
+            "properties": {
+                "type": "행사 장소",
+                "country": "대한민국",
+                "region": "경기"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "Naver",
+            "properties": {
+                "type": "기업",
+                "description": "인터넷 서비스 기업",
+                "headquarters": ""
+            }
+        },
+        {
+            "label": "ORGANIZATION",
             "name": "현대모비스",
             "properties": {
-                "ticker": "",
-                "industry": "",
-                "name": "현대모비스",
-                "type": "String",
-                "company_name": "현대모비스",
-                "stock_code": "",
-                "company_id": "",
-                "size": "",
-                "region": "",
-                "country": "",
-                "headquarters": "",
-                "companyName": "현대모비스",
-                "employeeCount": 0,
-                "sizeCategory": "",
-                "founded_year": 0,
-                "cumulative_investment": 0,
-                "target_ipo_year": 0,
-                "employee_count": 0,
-                "founding_year": 0,
-                "company_type": "String",
-                "revenue": 0,
-                "rnd_investment": 0,
-                "domesticProduction": false,
-                "category": ""
+                "type": "기업",
+                "description": "자동차 부품 제조 기업",
+                "headquarters": ""
             }
         },
         {
-            "label": "Organization",
-            "name": "동반성장위원회",
+            "label": "ORGANIZATION",
+            "name": "대상",
             "properties": {
-                "org_id": "",
-                "name": "동반성장위원회",
-                "type": "",
-                "location": "",
-                "category": "",
-                "sector": "",
-                "role": "",
-                "orgId": "",
-                "orgName": "동반성장위원회",
-                "website": "",
-                "established_year": 0,
-                "industry": ""
+                "type": "기업",
+                "description": "식품 제조 기업",
+                "headquarters": ""
             }
         },
         {
-            "label": "Region",
-            "name": "경기도",
+            "label": "PERSON",
+            "name": "이달곤",
             "properties": {
-                "name": "경기도",
-                "type": ""
+                "full_name": "이달곤",
+                "role": "동반성장위원장",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Region",
-            "name": "수원",
+            "label": "PROJECT",
+            "name": "제2차 경기도 공정경제 5개년 기본계획",
             "properties": {
-                "name": "수원",
-                "type": ""
+                "description": "경기도의 공정경제 추진 계획",
+                "start_date": "2025",
+                "status": "수립 중"
             }
         },
         {
-            "label": "Event",
-            "name": "동반성장 페어",
+            "label": "PERSON",
+            "name": "프로",
             "properties": {
-                "event_id": "",
-                "name": "동반성장 페어",
-                "date": "",
-                "type": "",
-                "time": "",
-                "purpose": "",
-                "start_date": "",
-                "end_date": "",
-                "location": "",
-                "edition": 0
-            }
-        },
-        {
-            "label": "Transaction",
-            "name": "Transaction",
-            "properties": {
-                "year": 2025,
-                "amount": 706000000,
-                "growth_rate_percent": 0.0,
-                "share_percent": 0.0,
-                "growth_percent": 0.0
+                "role": "대표"
             }
         }
     ],
     "relations": [
         {
             "start_node": "동반성장위원회",
-            "relationship": "HOSTS",
-            "end_node": "동반성장 페어",
+            "relationship": "HELD",
+            "end_node": "2025 경기도 동반성장 페어",
             "properties": {}
         },
         {
             "start_node": "경기도",
-            "relationship": "HOSTED",
-            "end_node": "동반성장 페어",
-            "properties": {}
+            "relationship": "PARTNERED_WITH",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "type": "상생협력",
+                "date": "2023-04-13"
+            }
         },
         {
-            "start_node": "동반성장 페어",
+            "start_node": "2025 경기도 동반성장 페어",
             "relationship": "HELD_IN",
-            "end_node": "수원",
-            "properties": {}
-        },
-        {
-            "start_node": "동반성장 페어",
-            "relationship": "HELD_IN",
-            "end_node": "경기도",
+            "end_node": "수원메쎄 1홀",
             "properties": {}
         },
         {
             "start_node": "네이버",
             "relationship": "PARTICIPATED_IN",
-            "end_node": "동반성장 페어",
-            "properties": {}
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회"
+            }
         },
         {
             "start_node": "현대모비스",
             "relationship": "PARTICIPATED_IN",
-            "end_node": "동반성장 페어",
-            "properties": {}
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회"
+            }
         },
         {
-            "start_node": "Transaction",
-            "relationship": "OCCURRED_IN",
-            "end_node": "동반성장 페어",
-            "properties": {}
+            "start_node": "대상",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회"
+            }
+        },
+        {
+            "start_node": "이달곤",
+            "relationship": "SPOKE_AT",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "topic": "중소기업 지원과 지역 경제 성장"
+            }
+        },
+        {
+            "start_node": "경기도",
+            "relationship": "ANNOUNCED",
+            "end_node": "제2차 경기도 공정경제 5개년 기본계획",
+            "properties": {
+                "date": "2023-04"
+            }
         }
     ]
 }

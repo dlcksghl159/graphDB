@@ -1,104 +1,139 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "삼성바이오로직스",
       "properties": {
-        "country": "string"
+        "full_name": "삼성바이오로직스",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "COMPANY",
+      "name": "셀트리온",
       "properties": {
-        "category": "string"
+        "full_name": "셀트리온",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "FinancialReport",
-      "name": "FinancialReport",
+      "label": "PERSON",
+      "name": "도널드 트럼프",
       "properties": {
-        "period": "string",
-        "revenue": "int",
-        "operatingProfit": "int",
-        "netProfit": "int",
-        "revenueGrowthRate": "float",
-        "operatingProfitGrowthRate": "float",
-        "netProfitGrowthRate": "float"
+        "full_name": "Donald Trump",
+        "role": "Former President",
+        "nationality": "USA",
+        "age": ""
       }
     },
     {
-      "label": "SalesTarget",
-      "name": "SalesTarget",
+      "label": "EVENT",
+      "name": "의약품 관세부과 정책 발표",
       "properties": {
-        "year": "int",
-        "targetRevenue": "int"
+        "date": "2023-10",
+        "type": "Policy Announcement",
+        "description": "Announcement of pharmaceutical tariffs by the Trump administration.",
+        "location": "USA"
       }
     },
     {
-      "label": "MarketForecast",
-      "name": "MarketForecast",
+      "label": "PRODUCT",
+      "name": "램시마",
       "properties": {
-        "year": "int",
-        "forecastRevenue": "int"
+        "category": "Biosimilar",
+        "description": "A biosimilar product launched before 2019.",
+        "launch_date": "Before 2019",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Policy",
-      "name": "Policy",
+      "label": "PRODUCT",
+      "name": "트룩시마",
       "properties": {
-        "policyType": "string"
+        "category": "Biosimilar",
+        "description": "A biosimilar product launched before 2019.",
+        "launch_date": "Before 2019",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Strategy",
-      "name": "Strategy",
+      "label": "PRODUCT",
+      "name": "옴리클로",
       "properties": {
-        "description": "string"
+        "category": "Biosimilar",
+        "description": "A new biosimilar product to be launched in the second half of the year.",
+        "launch_date": "2023-H2",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "아이덴젤트",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "A new biosimilar product to be launched in the second half of the year.",
+        "launch_date": "2023-H2",
+        "company": "셀트리온"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_FINANCIAL_REPORT",
-      "end_node": "FinancialReport",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "COMPETES_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "Biotechnology"
+      }
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_SALES_TARGET",
-      "end_node": "SalesTarget",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "PRODUCES",
-      "end_node": "Product",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_MARKET_FORECAST",
-      "end_node": "MarketForecast",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "AFFECTED_BY",
-      "end_node": "Policy",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "APPLIES_STRATEGY",
-      "end_node": "Strategy",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Strategy",
-      "relationship": "MITIGATES",
-      "end_node": "Policy",
+      "start_node": "PERSON",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2023-10"
+      }
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "AFFECTS",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "AFFECTS",
+      "end_node": "COMPANY",
       "properties": {}
     }
   ]

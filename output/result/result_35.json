@@ -1,140 +1,141 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "노루그룹",
             "properties": {
-                "name": "노루그룹",
-                "industry": "paint"
+                "industry": "화학",
+                "headquarters": "안양"
             }
         },
         {
-            "label": "Product",
+            "label": "EVENT",
+            "name": "2025 신기술·신제품 전시회",
+            "properties": {
+                "date": "2023-03-14 to 2023-03-18",
+                "type": "전시회",
+                "description": "미래 산업을 선도할 13종의 혁신 기술과 차세대 제품을 선보이는 행사",
+                "location": "안양"
+            }
+        },
+        {
+            "label": "TECHNOLOGY",
             "name": "스텔스 도료",
             "properties": {
-                "name": "스텔스 도료",
-                "category": "도료"
+                "category": "경량화 기술",
+                "description": "경량화를 극대화한 도료",
+                "field": "화학"
             }
         },
         {
-            "label": "Product",
+            "label": "TECHNOLOGY",
             "name": "우레탄 난연 몰딩제",
             "properties": {
-                "name": "우레탄 난연 몰딩제",
-                "category": "몰딩제"
+                "category": "배터리 기술",
+                "description": "친환경·고성능 배터리 시장을 겨냥한 몰딩제",
+                "field": "화학"
             }
         },
         {
-            "label": "Product",
+            "label": "TECHNOLOGY",
             "name": "탄소 저감 건재용 도료",
             "properties": {
-                "name": "탄소 저감 건재용 도료",
-                "category": "건재용 도료"
+                "category": "환경 기술",
+                "description": "탄소 저감에 기여하는 건재용 도료",
+                "field": "화학"
             }
         },
         {
-            "label": "Product",
+            "label": "TECHNOLOGY",
             "name": "VOC 저감형 아크릴 수지",
             "properties": {
-                "name": "VOC 저감형 아크릴 수지",
-                "category": "수지"
+                "category": "환경 기술",
+                "description": "VOC 저감형 아크릴 수지",
+                "field": "화학"
             }
         },
         {
-            "label": "Event",
-            "name": "신기술·신제품 전시회",
+            "label": "PERSON",
+            "name": "방양국",
             "properties": {
-                "name": "신기술·신제품 전시회",
-                "date": "2025",
-                "purpose": "기술 중심 전략 공유"
+                "full_name": "방양국",
+                "role": "연구소장",
+                "nationality": "",
+                "age": ""
             }
         },
         {
-            "label": "Technology",
-            "name": "혁신 소재 기술",
-            "properties": {
-                "name": "혁신 소재 기술",
-                "category": "소재"
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "미래 성장 동력 기술",
-            "properties": {
-                "name": "미래 성장 동력 기술",
-                "category": "동력"
-            }
-        },
-        {
-            "label": "Technology",
-            "name": "시장 주도 기술",
-            "properties": {
-                "name": "시장 주도 기술",
-                "category": "시장"
-            }
-        },
-        {
-            "label": "Region",
+            "label": "LOCATION",
             "name": "안양",
             "properties": {
-                "name": "안양",
-                "type": "시"
+                "type": "도시",
+                "country": "대한민국",
+                "region": "경기"
             }
+        },
+        {
+            "label": "PERSON",
+            "name": "섹션은제품",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "섹션은",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "VOC",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "노루그룹",
-            "relationship": "LAUNCHED",
-            "end_node": "신기술·신제품 전시회",
+            "relationship": "HELD",
+            "end_node": "2025 신기술·신제품 전시회",
+            "properties": {}
+        },
+        {
+            "start_node": "방양국",
+            "relationship": "WORKS_FOR",
+            "end_node": "노루그룹",
+            "properties": {
+                "position": "연구소장"
+            }
+        },
+        {
+            "start_node": "2025 신기술·신제품 전시회",
+            "relationship": "HELD_IN",
+            "end_node": "안양",
             "properties": {}
         },
         {
             "start_node": "노루그룹",
-            "relationship": "DEVELOPED",
-            "end_node": "혁신 소재 기술",
-            "properties": {}
-        },
-        {
-            "start_node": "노루그룹",
-            "relationship": "DEVELOPED",
-            "end_node": "미래 성장 동력 기술",
-            "properties": {}
-        },
-        {
-            "start_node": "노루그룹",
-            "relationship": "DEVELOPED",
-            "end_node": "시장 주도 기술",
-            "properties": {}
-        },
-        {
-            "start_node": "신기술·신제품 전시회",
-            "relationship": "SHOWCASES",
+            "relationship": "DEVELOPS",
             "end_node": "스텔스 도료",
             "properties": {}
         },
         {
-            "start_node": "신기술·신제품 전시회",
-            "relationship": "SHOWCASES",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
             "end_node": "우레탄 난연 몰딩제",
             "properties": {}
         },
         {
-            "start_node": "신기술·신제품 전시회",
-            "relationship": "SHOWCASES",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
             "end_node": "탄소 저감 건재용 도료",
             "properties": {}
         },
         {
-            "start_node": "신기술·신제품 전시회",
-            "relationship": "SHOWCASES",
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
             "end_node": "VOC 저감형 아크릴 수지",
-            "properties": {}
-        },
-        {
-            "start_node": "신기술·신제품 전시회",
-            "relationship": "HELD_IN",
-            "end_node": "안양",
             "properties": {}
         }
     ]

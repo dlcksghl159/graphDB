@@ -1,119 +1,108 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "Organization",
+      "label": "ORGANIZATION",
+      "name": "소상공인시장진흥공단",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "website": "string"
+        "type": "Government Agency",
+        "description": "Support agency for small businesses in Korea",
+        "headquarters": "Seoul, South Korea"
       }
     },
     {
-      "label": "Project",
-      "name": "Project",
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
       "properties": {
-        "name": "string",
-        "start_date": "string",
-        "end_date": "string",
-        "description": "string"
+        "full_name": "Lotte Wellfood",
+        "industry": "Food Manufacturing",
+        "headquarters": "Seoul, South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "SmallBusiness",
-      "name": "SmallBusiness",
+      "label": "PROJECT",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "name": "string",
-        "category": "string",
-        "years_in_business": "int",
-        "qualification_type": "string"
+        "description": "A collaboration project to support long-standing small businesses by integrating Lotte Wellfood's manufacturing technology",
+        "start_date": "2023-03",
+        "status": "Ongoing"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "AGREEMENT",
+      "name": "업무 협약",
       "properties": {
-        "name": "string",
-        "product_type": "string"
+        "type": "Business Cooperation Agreement",
+        "date": "2023-03",
+        "description": "Agreement between 소진공 and 롯데웰푸드 to support small businesses"
       }
     },
     {
-      "label": "Brand",
-      "name": "Brand",
+      "label": "PRODUCT",
+      "name": "밀키트",
       "properties": {
-        "name": "string"
+        "category": "Instant Cooking Food",
+        "description": "Meal kits for easy home cooking",
+        "launch_date": "",
+        "company": "롯데웰푸드"
       }
     },
     {
-      "label": "Agreement",
-      "name": "Agreement",
+      "label": "PERSON",
+      "name": "박성효",
       "properties": {
-        "agreement_date": "string",
-        "description": "string"
+        "full_name": "박성효",
+        "role": "이사장",
+        "nationality": "Korean",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "PARTNER_OF",
-      "end_node": "Organization",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "HOSTS",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "TARGETS",
-      "end_node": "SmallBusiness",
-      "properties": {}
-    },
-    {
-      "start_node": "SmallBusiness",
-      "relationship": "APPLIES_TO",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Project",
-      "relationship": "DEVELOPS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "SUPPLIES",
-      "end_node": "SmallBusiness",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "supply_type": "string"
+        "type": "Business Cooperation",
+        "date": "2023-03"
       }
     },
     {
-      "start_node": "Product",
-      "relationship": "BRANDED_AS",
-      "end_node": "Brand",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Organization",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "MANAGES",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "SIGNED",
-      "end_node": "Agreement",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "SmallBusiness",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     }
   ]

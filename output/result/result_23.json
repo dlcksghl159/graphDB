@@ -1,45 +1,83 @@
 {
     "nodes": [
         {
-            "label": "SmallBusiness",
-            "name": "50인 미만 소규모 사업장",
-            "properties": {
-                "name": "50인 미만 소규모 사업장",
-                "category": "산업",
-                "years_in_business": 3,
-                "qualification_type": "교육 대상"
-            }
-        },
-        {
-            "label": "TrainingProgram",
-            "name": "찾아가는 산업재해 예방 교육",
-            "properties": {
-                "programName": "찾아가는 산업재해 예방 교육",
-                "programType": "안전교육",
-                "description": "VR 체험 및 이주노동자 교육 포함"
-            }
-        },
-        {
-            "label": "Region",
+            "label": "ORGANIZATION",
             "name": "경기도",
             "properties": {
-                "name": "경기도",
-                "type": "행정 구역"
+                "type": "지방자치단체",
+                "description": "산업재해 예방 교육을 주관하는 지방자치단체",
+                "headquarters": "경기도"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "date": "2023",
+                "type": "교육",
+                "description": "50인 미만 소규모 사업장을 대상으로 한 산업재해 예방 교육",
+                "location": "경기도"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "고용노동부",
+            "properties": {
+                "type": "정부기관",
+                "description": "노동 관련 정책을 담당하는 정부기관",
+                "headquarters": "세종특별자치시"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "직업건강간호협회 직업건강안전연구소",
+            "properties": {
+                "type": "협회",
+                "description": "산업재해 예방 교육 신청 및 문의를 담당하는 기관",
+                "headquarters": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "임용규",
+            "properties": {
+                "full_name": "임용규",
+                "role": "노동안전과장",
+                "nationality": "대한민국",
+                "age": ""
             }
         }
     ],
     "relations": [
         {
-            "start_node": "SmallBusiness",
-            "relationship": "PARTICIPATES_IN",
+            "start_node": "경기도",
+            "relationship": "ANNOUNCED",
+            "end_node": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "고용노동부",
+            "relationship": "PROVIDED_STATISTICS",
+            "end_node": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "직업건강간호협회 직업건강안전연구소",
+            "relationship": "MANAGES",
             "end_node": "찾아가는 산업재해 예방 교육",
             "properties": {}
         },
         {
-            "start_node": "찾아가는 산업재해 예방 교육",
-            "relationship": "OPERATES_IN",
+            "start_node": "임용규",
+            "relationship": "WORKS_FOR",
             "end_node": "경기도",
-            "properties": {}
+            "properties": {
+                "position": "노동안전과장"
+            }
         }
     ]
 }

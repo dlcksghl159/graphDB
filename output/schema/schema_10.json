@@ -1,98 +1,132 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "기관",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "org_id": "string",
-        "name": "string",
-        "type": "string"
+        "type": "Government Agency",
+        "description": "중소벤처기업의 지원을 위한 정부 기관",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "LogisticsCenter",
-      "name": "물류센터",
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
       "properties": {
-        "center_id": "string",
-        "name": "string",
-        "type": "string"
+        "type": "Port Authority",
+        "description": "부산항의 관리 및 운영을 담당하는 기관",
+        "headquarters": "부산"
       }
     },
     {
-      "label": "Platform",
-      "name": "플랫폼",
+      "label": "LOCATION",
+      "name": "부산",
       "properties": {
-        "platform_id": "string",
-        "name": "string",
-        "type": "string"
+        "type": "City",
+        "country": "대한민국",
+        "region": "부산광역시"
       }
     },
     {
-      "label": "Program",
-      "name": "프로그램",
+      "label": "LOCATION",
+      "name": "로스앤젤레스",
       "properties": {
-        "program_id": "string",
-        "name": "string"
+        "type": "City",
+        "country": "미국",
+        "region": "캘리포니아"
       }
     },
     {
-      "label": "Location",
-      "name": "지역",
+      "label": "LOCATION",
+      "name": "롱비치",
       "properties": {
-        "location_id": "string",
-        "name": "string",
-        "country": "string"
+        "type": "City",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "통합물류 지원 플랫폼 구축",
+      "properties": {
+        "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼 구축",
+        "start_date": "2023-10-14",
+        "status": "Planned"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무협약",
+      "properties": {
+        "type": "협력",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "강석진",
+      "properties": {
+        "full_name": "강석진",
+        "role": "이사장",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
-      "relationship": "PARTNERSHIP_WITH",
-      "end_node": "Organization",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "agreement_date": "string"
+        "type": "협력",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "Organization",
-      "relationship": "OPERATES",
-      "end_node": "LogisticsCenter",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "CONNECTS_TO",
-      "end_node": "Platform",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Platform",
-      "relationship": "LINKS_TO",
-      "end_node": "LogisticsCenter",
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "link_type": "string"
-      }
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "IMPLEMENTS",
-      "end_node": "Program",
-      "properties": {}
-    },
-    {
-      "start_node": "LogisticsCenter",
-      "relationship": "LOCATED_IN",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
-      "start_node": "Organization",
-      "relationship": "USES",
-      "end_node": "LogisticsCenter",
-      "properties": {
-        "discount_rate": "string",
-        "service": "string"
+        "position": "이사장",
+        "since": ""
       }
     }
   ]

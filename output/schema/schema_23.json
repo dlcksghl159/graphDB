@@ -1,112 +1,46 @@
 {
   "nodes": [
     {
-      "label": "Survey",
-      "name": "Survey",
+      "label": "ORGANIZATION",
+      "name": "사람인",
       "properties": {
-        "id": "string",
-        "title": "string",
-        "date": "string",
-        "respondentCount": "int"
+        "type": "기업",
+        "description": "취업 정보 제공 및 인재 채용 플랫폼",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "AgeGroup",
-      "name": "Age Group",
+      "label": "PERSON",
+      "name": "김혜미",
       "properties": {
-        "name": "string",
-        "ageRange": "string"
+        "full_name": "김혜미",
+        "role": "기자",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Reason",
-      "name": "Reason",
+      "label": "EVENT",
+      "name": "인생 이모작 설문조사",
       "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Field",
-      "name": "Desired Field",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "JobType",
-      "name": "Job Type",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "PreparationActivity",
-      "name": "Preparation Activity",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "IncomeExpectation",
-      "name": "Income Expectation",
-      "properties": {
-        "averageMonthlyIncome": "int"
+        "date": "2023년 10월 14일",
+        "type": "설문조사",
+        "description": "직장인 965명을 대상으로 한 인생 이모작 의향 조사",
+        "location": "대한민국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "AgeGroup",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "Survey",
-      "properties": {
-        "responseRate": "float"
-      }
+      "start_node": "ORGANIZATION",
+      "relationship": "CONDUCTED",
+      "end_node": "EVENT",
+      "properties": {}
     },
     {
-      "start_node": "AgeGroup",
-      "relationship": "HAS_INTENTION_IN",
-      "end_node": "Survey",
-      "properties": {
-        "intentionRate": "float"
-      }
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_REASON",
-      "end_node": "Reason",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_DESIRED_FIELD",
-      "end_node": "Field",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Field",
-      "relationship": "INCLUDES_JOB",
-      "end_node": "JobType",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "PREPARES_BY",
-      "end_node": "PreparationActivity",
-      "properties": {
-        "rate": "float"
-      }
-    },
-    {
-      "start_node": "Survey",
-      "relationship": "HAS_INCOME_EXPECTATION",
-      "end_node": "IncomeExpectation",
+      "start_node": "PERSON",
+      "relationship": "REPORTED",
+      "end_node": "EVENT",
       "properties": {}
     }
   ]

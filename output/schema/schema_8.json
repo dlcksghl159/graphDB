@@ -1,94 +1,81 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "COMPANY",
+      "name": "현대이지웰",
       "properties": {
-        "company_id": "string",
-        "name": "string",
-        "category": "string"
+        "full_name": "현대이지웰",
+        "industry": "토탈복지솔루션",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "WelfareMall",
-      "name": "복지몰",
+      "label": "COMPANY",
+      "name": "현대백화점그룹",
       "properties": {
-        "name": "string",
-        "rank": "string"
+        "full_name": "현대백화점그룹",
+        "industry": "유통",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Region",
-      "name": "지역",
+      "label": "ORGANIZATION",
+      "name": "한국중소벤처기업유통원",
       "properties": {
-        "name": "string"
+        "type": "정부기관",
+        "description": "중소벤처기업부 산하 기관",
+        "headquarters": "대한민국"
       }
     },
     {
-      "label": "GovernmentAgency",
-      "name": "공공기관",
+      "label": "PROJECT",
+      "name": "소상공인 온라인쇼핑몰 판매지원사업",
       "properties": {
-        "name": "string"
+        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "start_date": "2023",
+        "status": "진행 중"
       }
     },
     {
-      "label": "Project",
-      "name": "지원사업",
+      "label": "LOCATION",
+      "name": "경기도",
       "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Transaction",
-      "name": "거래통계",
-      "properties": {
-        "year": "int",
-        "amount": "int",
-        "growth_percent": "float"
+        "type": "지역",
+        "country": "대한민국",
+        "region": "경기"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "AFFILIATED_WITH",
-      "end_node": "Company",
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "OPERATES",
-      "end_node": "WelfareMall",
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "PARTNERS_WITH",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "지원사업",
+        "date": "2023"
+      }
     },
     {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "LOCATED_IN",
-      "end_node": "Region",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_TRANSACTION",
-      "end_node": "Transaction",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentAgency",
-      "relationship": "INITIATES",
-      "end_node": "Project",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "SELECTED_FOR",
-      "end_node": "Project",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

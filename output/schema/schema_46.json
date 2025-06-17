@@ -1,107 +1,176 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "PERSON",
+      "name": "김동선",
       "properties": {
-        "name": "string",
-        "industry": "string",
-        "revenue": "int",
-        "rnd_investment": "int"
+        "full_name": "김동선",
+        "role": "부사장",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Person",
-      "name": "Person",
+      "label": "PERSON",
+      "name": "곽동신",
       "properties": {
-        "name": "string",
-        "position": "string"
+        "full_name": "곽동신",
+        "role": "회장",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "COMPANY",
+      "name": "한화세미텍",
       "properties": {
-        "name": "string",
-        "category": "string"
+        "full_name": "한화세미텍",
+        "industry": "반도체 장비",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "김동선"
       }
     },
     {
-      "label": "Market",
-      "name": "Market",
+      "label": "COMPANY",
+      "name": "한미반도체",
       "properties": {
-        "name": "string",
-        "current_size_musd": "float",
-        "projected_size_musd": "float",
-        "projection_year": "int"
+        "full_name": "한미반도체",
+        "industry": "반도체 장비",
+        "headquarters": "",
+        "founded": "1980",
+        "ceo": "곽동신"
       }
     },
     {
-      "label": "LegalCase",
-      "name": "LegalCase",
+      "label": "COMPANY",
+      "name": "SK하이닉스",
       "properties": {
-        "case_type": "string",
-        "year": "int",
-        "status": "string"
+        "full_name": "SK하이닉스",
+        "industry": "반도체",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "TC 본더",
+      "properties": {
+        "category": "반도체 장비",
+        "description": "고대역폭 메모리(HBM) 제조 핵심 장비",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "고대역폭 메모리(HBM)",
+      "properties": {
+        "category": "반도체",
+        "description": "인공지능(AI) 반도체에 탑재되는 메모리",
+        "field": "반도체"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "R&D 투자",
+      "properties": {
+        "amount": "677억",
+        "date": "2022",
+        "type": "R&D"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "TC 본더 공급 계약",
+      "properties": {
+        "type": "공급 계약",
+        "date": "2023",
+        "description": "SK하이닉스와 한화세미텍 간의 TC 본더 공급 계약"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "특허 침해 소송",
+      "properties": {
+        "type": "소송",
+        "date": "2022",
+        "description": "한미반도체가 한화세미텍을 상대로 제기한 TC 본더 특허 침해 소송"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Person",
-      "relationship": "WORKS_AT",
-      "end_node": "Company",
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
       "properties": {
-        "role": "string",
-        "since": "string"
+        "position": "부사장",
+        "since": "2023"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "PART_OF",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": "2023"
+      }
     },
     {
-      "start_node": "Company",
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": "2022"
+      }
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "PRODUCES",
-      "end_node": "Product",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "SUPPLIES_TO",
-      "end_node": "Company",
-      "properties": {
-        "product": "string",
-        "contract_value": "int",
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "Company",
+      "start_node": "COMPANY",
       "relationship": "COMPETES_WITH",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "INVOLVED_IN",
-      "end_node": "LegalCase",
+      "end_node": "COMPANY",
       "properties": {
-        "role": "string"
+        "market": "TC 본더"
       }
     },
     {
-      "start_node": "Company",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "공동 개발",
+        "date": "2017"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "SOLD_IN",
-      "end_node": "Market",
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     }
   ]

@@ -1,103 +1,129 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "string",
+      "label": "COMPANY",
+      "name": "노루그룹",
       "properties": {
-        "industry": "string"
+        "full_name": "노루그룹",
+        "industry": "제조",
+        "headquarters": "안양",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Event",
-      "name": "string",
+      "label": "COMPANY",
+      "name": "노루페인트",
       "properties": {
-        "start_date": "string",
-        "end_date": "string"
+        "full_name": "노루페인트",
+        "industry": "페인트 제조",
+        "headquarters": "안양",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "string",
+      "label": "LOCATION",
+      "name": "안양",
       "properties": {
-        "description": "string"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "경기도"
       }
     },
     {
-      "label": "Technology",
-      "name": "string",
+      "label": "EVENT",
+      "name": "2025 신기술·신제품 전시회",
       "properties": {
-        "category": "string"
+        "date": "2023-09-14",
+        "type": "전시회",
+        "description": "미래 산업을 선도할 13종의 혁신 기술과 차세대 제품을 선보이는 전시회",
+        "location": "노루페인트 본사"
       }
     },
     {
-      "label": "Location",
-      "name": "string",
+      "label": "PRODUCT",
+      "name": "스텔스 도료",
       "properties": {
-        "address": "string"
+        "category": "도료",
+        "description": "경량화를 극대화한 도료",
+        "launch_date": "",
+        "company": "노루그룹"
       }
     },
     {
-      "label": "Person",
-      "name": "string",
+      "label": "PRODUCT",
+      "name": "우레탄 난연 몰딩제",
       "properties": {
-        "position": "string"
+        "category": "몰딩제",
+        "description": "친환경·고성능 배터리 시장을 겨냥한 몰딩제",
+        "launch_date": "",
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "탄소 저감 건재용 도료",
+      "properties": {
+        "category": "도료",
+        "description": "탄소 저감 건재용 도료",
+        "launch_date": "",
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "VOC 저감형 아크릴 수지",
+      "properties": {
+        "category": "수지",
+        "description": "VOC 저감형 아크릴 수지",
+        "launch_date": "",
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "방양국",
+      "properties": {
+        "full_name": "방양국",
+        "role": "연구소장",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "ORGANIZES",
-      "end_node": "Event",
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "HAS_PRODUCT",
-      "end_node": "Product",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "USES_TECHNOLOGY",
-      "end_node": "Technology",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Event",
-      "relationship": "SHOWCASES",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Event",
-      "relationship": "HIGHLIGHTS",
-      "end_node": "Technology",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "HELD_AT",
-      "end_node": "Location",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "REPRESENTS",
-      "end_node": "Company",
-      "properties": {}
-    },
-    {
-      "start_node": "Person",
-      "relationship": "SPEAKS_AT",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "HAS_SUBSIDIARY",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "SPOKE_AT",
+      "end_node": "EVENT",
+      "properties": {
+        "topic": "기술 혁신과 지속 가능한 미래"
+      }
     }
   ]
 }

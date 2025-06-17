@@ -1,95 +1,110 @@
 {
     "nodes": [
         {
-            "label": "ExportSME",
-            "name": "중소기업 A",
-            "properties": {
-                "name": "중소기업 A",
-                "industry": ""
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "화장품",
-            "properties": {
-                "category_name": "화장품",
-                "name": "화장품"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "자동차",
-            "properties": {
-                "category_name": "자동차",
-                "name": "자동차"
-            }
-        },
-        {
-            "label": "ProductCategory",
+            "label": "PRODUCT",
             "name": "반도체 제조용 장비",
             "properties": {
-                "category_name": "반도체 제조용 장비",
-                "name": "반도체 제조용 장비"
+                "category": "장비",
+                "description": "수출 호조",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "Country",
-            "name": "미국",
+            "label": "PRODUCT",
+            "name": "자동차 부품",
             "properties": {
-                "name": "미국",
-                "region": "",
-                "country_name": "미국"
+                "category": "부품",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "ExportRecord",
-            "name": "2023년 1분기 수출 기록",
+            "label": "PRODUCT",
+            "name": "반도체",
             "properties": {
-                "year": 2023,
-                "quarter": 1,
-                "export_amount_usd": 27000000000.0,
-                "growth_rate": 0.7
+                "category": "반도체",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "ExportRecord",
-            "name": "화장품 1분기 수출 기록",
+            "label": "PRODUCT",
+            "name": "전자응용기기",
             "properties": {
-                "year": 2023,
-                "quarter": 1,
-                "export_amount_usd": 1840000000.0,
-                "growth_rate": 19.6
+                "category": "전자기기",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "ExportRecord",
-            "name": "자동차 1분기 수출 기록",
+            "label": "PRODUCT",
+            "name": "기계요소",
             "properties": {
-                "year": 2023,
-                "quarter": 1,
-                "export_amount_usd": 1740000000.0,
-                "growth_rate": 67.4
+                "category": "기계",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "ExportRecord",
-            "name": "반도체 장비 1분기 수출 기록",
+            "label": "PRODUCT",
+            "name": "기타기계류",
             "properties": {
-                "year": 2023,
-                "quarter": 1,
-                "export_amount_usd": 720000000.0,
-                "growth_rate": 11.2
+                "category": "기계",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
             }
         },
         {
-            "label": "TariffPolicy",
-            "name": "미국 관세 조치",
+            "label": "PRODUCT",
+            "name": "철강 제품",
             "properties": {
-                "name": "미국 관세 조치",
-                "rate": 0,
-                "effective_date": "2023-03-12",
-                "scope": "철강·알루미늄 및 파생 상품",
-                "measures": ""
+                "category": "철강",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "알루미늄 제품",
+            "properties": {
+                "category": "알루미늄",
+                "description": "수출 감소",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "베트남",
+            "properties": {
+                "type": "국가",
+                "country": "베트남",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "인도",
+            "properties": {
+                "type": "국가",
+                "country": "인도",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "멕시코",
+            "properties": {
+                "type": "국가",
+                "country": "멕시코",
+                "region": ""
             }
         }
     ],
@@ -99,8 +114,9 @@
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "amount": 1840000000.0,
-                "growthRate": 19.6
+                "amount": "1840000000 달러",
+                "growth_rate": "+19.6%",
+                "increase_rate": "19.6%"
             }
         },
         {
@@ -108,48 +124,64 @@
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "amount": 1740000000.0,
-                "growthRate": 67.4
+                "amount": "1740000000 달러",
+                "growth_rate": "+67.4%",
+                "increase_rate": "67.4%"
             }
         },
         {
-            "start_node": "발전장비",
+            "start_node": "반도체 제조용 장비",
             "relationship": "EXPORTED_TO",
             "end_node": "미국",
             "properties": {
-                "amount": 720000000.0,
-                "growthRate": 11.2
+                "amount": "",
+                "growth_rate": "-47.4%"
             }
         },
         {
-            "start_node": "중소기업 A",
-            "relationship": "HAS_EXPORT_RECORD",
-            "end_node": "2023년 1분기 수출 기록",
-            "properties": {}
+            "start_node": "전자응용기기",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "130000000 달러",
+                "growth_rate": "-25.6%"
+            }
         },
         {
-            "start_node": "중소기업 A",
-            "relationship": "HAS_EXPORT_RECORD",
-            "end_node": "화장품 1분기 수출 기록",
-            "properties": {}
+            "start_node": "철강 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-17.8%"
+            }
         },
         {
-            "start_node": "중소기업 A",
-            "relationship": "HAS_EXPORT_RECORD",
-            "end_node": "자동차 1분기 수출 기록",
-            "properties": {}
+            "start_node": "알루미늄 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 정책",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-7.6%"
+            }
         },
         {
-            "start_node": "중소기업 A",
-            "relationship": "HAS_EXPORT_RECORD",
-            "end_node": "반도체 장비 1분기 수출 기록",
-            "properties": {}
+            "start_node": "중소벤처기업부",
+            "relationship": "ANNOUNCED",
+            "end_node": "EVENT",
+            "properties": {
+                "date": "2023-04-14",
+                "description": "중소기업 수출 증가 발표"
+            }
         },
         {
-            "start_node": "미국 관세 조치",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "철강",
-            "properties": {}
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
         }
     ]
 }

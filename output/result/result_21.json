@@ -1,116 +1,114 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "Sendbird",
+            "label": "COMPANY",
+            "name": "센드버드",
             "properties": {
-                "industry": "AI Platform"
+                "industry": "AI 플랫폼"
             }
         },
         {
-            "label": "AI_Agent",
-            "name": "Omnipresent AI Agent",
+            "label": "PRODUCT",
+            "name": "옴니프레젠트 AI 에이전트",
             "properties": {
-                "name": "Omnipresent AI Agent"
+                "category": "AI 에이전트",
+                "description": "프롬프트 없이 고객 행동 예측 및 응답"
             }
         },
         {
-            "label": "Channel",
-            "name": "Web",
+            "label": "PERSON",
+            "name": "김동신",
             "properties": {
-                "name": "Web"
+                "role": "대표"
             }
         },
         {
-            "label": "Channel",
-            "name": "Mobile",
+            "label": "INDUSTRY",
+            "name": "커머스",
             "properties": {
-                "name": "Mobile"
+                "description": "전자 상거래 산업"
             }
         },
         {
-            "label": "Channel",
-            "name": "Email",
+            "label": "INDUSTRY",
+            "name": "핀테크",
             "properties": {
-                "name": "Email"
+                "description": "금융 기술 산업"
             }
         },
         {
-            "label": "Channel",
-            "name": "Social Media",
+            "label": "INDUSTRY",
+            "name": "리테일",
             "properties": {
-                "name": "Social Media"
+                "description": "소매업 산업"
             }
         },
         {
-            "label": "Industry",
-            "name": "Commerce",
+            "label": "PERSON",
+            "name": "버드",
             "properties": {
-                "name": "Commerce"
+                "role": "대표"
             }
         },
         {
-            "label": "Industry",
-            "name": "Fintech",
+            "label": "PERSON",
+            "name": "센드버드",
             "properties": {
-                "name": "Fintech"
+                "role": "대표"
             }
         },
         {
-            "label": "Industry",
-            "name": "Retail",
-            "properties": {
-                "name": "Retail"
-            }
+            "label": "COMPANY",
+            "name": "FAQ",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "SNS",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "API",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CRM",
+            "properties": {}
         }
     ],
     "relations": [
         {
-            "start_node": "Sendbird",
-            "relationship": "PROVIDES",
-            "end_node": "Omnipresent AI Agent",
+            "start_node": "센드버드",
+            "relationship": "LAUNCHED",
+            "end_node": "옴니프레젠트 AI 에이전트",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "커머스",
             "properties": {}
         },
         {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "SUPPORTS",
-            "end_node": "Web",
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "핀테크",
             "properties": {}
         },
         {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "SUPPORTS",
-            "end_node": "Mobile",
+            "start_node": "센드버드",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "리테일",
             "properties": {}
         },
         {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "SUPPORTS",
-            "end_node": "Email",
-            "properties": {}
-        },
-        {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "SUPPORTS",
-            "end_node": "Social Media",
-            "properties": {}
-        },
-        {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "TARGETS",
-            "end_node": "Commerce",
-            "properties": {}
-        },
-        {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "TARGETS",
-            "end_node": "Fintech",
-            "properties": {}
-        },
-        {
-            "start_node": "Omnipresent AI Agent",
-            "relationship": "TARGETS",
-            "end_node": "Retail",
+            "start_node": "김동신",
+            "relationship": "CEO_OF",
+            "end_node": "센드버드",
             "properties": {}
         }
     ]

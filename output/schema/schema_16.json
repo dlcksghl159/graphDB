@@ -1,103 +1,93 @@
 {
   "nodes": [
     {
-      "label": "Organization",
-      "name": "기관",
+      "label": "ORGANIZATION",
+      "name": "기술보증기금",
       "properties": {
-        "org_id": "string",
-        "name": "string",
-        "type": "string",
-        "location": "string"
+        "type": "Public Institution",
+        "description": "기술보증기금은 기술보증 및 지식재산 금융제도를 운영하는 기관",
+        "headquarters": "부산, 대한민국"
       }
     },
     {
-      "label": "Agreement",
-      "name": "업무협약",
+      "label": "ORGANIZATION",
+      "name": "인천지식재산센터",
       "properties": {
-        "agreement_id": "string",
-        "title": "string",
-        "date": "string"
+        "type": "Public Institution",
+        "description": "인천지역의 지식재산 관련 지원을 담당하는 센터",
+        "headquarters": "인천, 대한민국"
       }
     },
     {
-      "label": "Program",
+      "label": "PROJECT",
       "name": "지식재산공제사업",
       "properties": {
-        "program_id": "string",
-        "name": "string",
-        "description": "string",
-        "start_year": "int"
+        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외 진출을 뒷받침하기 위한 금융제도",
+        "start_date": "2019",
+        "status": "Active"
       }
     },
     {
-      "label": "Event",
-      "name": "설명회",
+      "label": "AGREEMENT",
+      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {
-        "event_id": "string",
-        "name": "string",
-        "date": "string",
-        "type": "string"
+        "type": "Collaboration Agreement",
+        "date": "2023-10-14",
+        "description": "지식재산공제사업 활성화를 위한 기보와 인천지식재산센터 간의 협력"
       }
     },
     {
-      "label": "Company",
-      "name": "기업",
+      "label": "LOCATION",
+      "name": "인천",
       "properties": {
-        "company_id": "string",
-        "name": "string",
-        "size": "string",
-        "region": "string"
+        "type": "City",
+        "country": "대한민국",
+        "region": "인천광역시"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Organization",
+      "start_node": "기술보증기금",
       "relationship": "SIGNED",
-      "end_node": "Agreement",
+      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "HOSTED",
-      "end_node": "Event",
-      "properties": {
-        "purpose": "string"
-      }
-    },
-    {
-      "start_node": "Company",
-      "relationship": "ATTENDED",
-      "end_node": "Event",
+      "start_node": "인천지식재산센터",
+      "relationship": "SIGNED",
+      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "ENROLLED_IN",
-      "end_node": "Program",
+      "start_node": "기술보증기금",
+      "relationship": "LEADS",
+      "end_node": "지식재산공제사업",
       "properties": {}
     },
     {
-      "start_node": "Program",
-      "relationship": "INITIATED_BY",
-      "end_node": "Organization",
+      "start_node": "기술보증기금",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "지식재산공제사업",
       "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "PROVIDES_SUPPORT",
-      "end_node": "Company",
-      "properties": {
-        "support_type": "string"
-      }
+      "start_node": "인천지식재산센터",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "지식재산공제사업",
+      "properties": {}
     },
     {
-      "start_node": "Organization",
-      "relationship": "COLLABORATES_WITH",
-      "end_node": "Organization",
-      "properties": {
-        "context": "string"
-      }
+      "start_node": "기술보증기금",
+      "relationship": "LOCATED_IN",
+      "end_node": "인천",
+      "properties": {}
+    },
+    {
+      "start_node": "인천지식재산센터",
+      "relationship": "LOCATED_IN",
+      "end_node": "인천",
+      "properties": {}
     }
   ]
 }

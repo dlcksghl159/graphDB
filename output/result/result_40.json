@@ -1,202 +1,281 @@
 {
     "nodes": [
         {
-            "label": "Company",
-            "name": "삼성바이오로직스",
-            "properties": {
-                "industry": "Biotechnology"
-            }
-        },
-        {
-            "label": "Company",
-            "name": "셀트리온",
-            "properties": {
-                "industry": "Biotechnology"
-            }
-        },
-        {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "유한양행",
             "properties": {
-                "industry": "Pharmaceutical"
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "GC녹십자",
             "properties": {
-                "industry": "Pharmaceutical"
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "대웅제약",
             "properties": {
-                "industry": "Pharmaceutical"
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "피즈치바",
             "properties": {
-                "category": "Biosimilar",
-                "type": "Biopharmaceutical"
+                "category": "바이오시밀러",
+                "description": "스텔라라 시밀러",
+                "launch_date": "2023-01",
+                "company": "삼성바이오에피스"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "램시마SC",
             "properties": {
-                "category": "Biosimilar",
-                "type": "Inflammatory disease treatment"
+                "category": "바이오시밀러",
+                "description": "자가면역질환 치료제",
+                "launch_date": "2022-01",
+                "company": "셀트리온"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
+            "name": "유플라이마",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "",
+                "launch_date": "",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "PRODUCT",
             "name": "렉라자",
             "properties": {
-                "category": "New Drug",
-                "type": "Lung cancer treatment",
-                "therapyArea": "Oncology"
+                "category": "신약",
+                "description": "폐암 치료제",
+                "launch_date": "",
+                "company": "유한양행"
             }
         },
         {
-            "label": "Product",
+            "label": "PRODUCT",
             "name": "알리글로",
             "properties": {
-                "category": "New Drug",
-                "type": "Pharmaceutical"
+                "category": "신약",
+                "description": "",
+                "launch_date": "",
+                "company": "GC녹십자"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "삼성바이오로직스 Report",
+            "label": "PRODUCT",
+            "name": "펙수클루",
             "properties": {
-                "year": 2023,
-                "quarter": "Q1",
-                "revenue": 12983000000,
-                "operatingProfit": 4867000000
+                "category": "신약",
+                "description": "위식도역류질환 치료제",
+                "launch_date": "",
+                "company": "대웅제약"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "셀트리온 Report",
+            "label": "PRODUCT",
+            "name": "나보타",
             "properties": {
-                "year": 2023,
-                "quarter": "Q1",
-                "revenue": 8419000000,
-                "operatingProfit": 1494000000
+                "category": "보툴리눔톡신",
+                "description": "",
+                "launch_date": "",
+                "company": "대웅제약"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "유한양행 Report",
+            "label": "COMPANY",
+            "name": "한미약품",
             "properties": {
-                "year": 2023,
-                "quarter": "Q1",
-                "revenue": 4916000000,
-                "operatingProfit": 640000000
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "GC녹십자 Report",
+            "label": "COMPANY",
+            "name": "종근당",
             "properties": {
-                "year": 2023,
-                "quarter": "Q1",
-                "revenue": 3838000000,
-                "operatingProfit": 800000000
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "FinancialReport",
-            "name": "대웅제약 Report",
+            "label": "COMPANY",
+            "name": "보령",
             "properties": {
-                "year": 2023,
-                "quarter": "Q1",
-                "revenue": 3516000000,
-                "operatingProfit": 383000000
+                "industry": "제약바이오"
             }
         },
         {
-            "label": "Reason",
-            "name": "바이오시밀러 수출 비중 증가"
+            "label": "COMPANY",
+            "name": "LG화학",
+            "properties": {
+                "industry": "제약바이오"
+            }
         },
         {
-            "label": "Reason",
-            "name": "국산 신약 매출 증가"
+            "label": "COMPANY",
+            "name": "셀트리온제약",
+            "properties": {
+                "industry": "제약바이오"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "고덱스",
+            "properties": {
+                "category": "간장약",
+                "description": "",
+                "launch_date": "",
+                "company": "셀트리온제약"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "케이캡",
+            "properties": {
+                "category": "위식도역류질환 치료제",
+                "description": "",
+                "launch_date": "",
+                "company": "HK이노엔"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HK이노엔",
+            "properties": {
+                "industry": "제약바이오"
+            }
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "제약바이오",
+            "properties": {
+                "description": "바이오의약품과 신약 개발"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "바이",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "CDMO",
+            "properties": {}
         }
     ],
     "relations": [
         {
             "start_node": "삼성바이오로직스",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "피즈치바"
+            "relationship": "PRODUCES",
+            "end_node": "피즈치바",
+            "properties": {}
         },
         {
             "start_node": "셀트리온",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "램시마SC"
-        },
-        {
-            "start_node": "삼성바이오로직스",
-            "relationship": "HAS_FINANCIAL_REPORT",
-            "end_node": "삼성바이오로직스 Report"
+            "relationship": "PRODUCES",
+            "end_node": "램시마SC",
+            "properties": {}
         },
         {
             "start_node": "셀트리온",
-            "relationship": "HAS_FINANCIAL_REPORT",
-            "end_node": "셀트리온 Report"
+            "relationship": "PRODUCES",
+            "end_node": "유플라이마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
         },
         {
             "start_node": "유한양행",
-            "relationship": "HAS_FINANCIAL_REPORT",
-            "end_node": "유한양행 Report"
+            "relationship": "PRODUCES",
+            "end_node": "렉라자",
+            "properties": {}
         },
         {
             "start_node": "GC녹십자",
-            "relationship": "HAS_FINANCIAL_REPORT",
-            "end_node": "GC녹십자 Report"
+            "relationship": "PRODUCES",
+            "end_node": "알리글로",
+            "properties": {}
         },
         {
             "start_node": "대웅제약",
-            "relationship": "HAS_FINANCIAL_REPORT",
-            "end_node": "대웅제약 Report"
-        },
-        {
-            "start_node": "유한양행",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "렉라자"
-        },
-        {
-            "start_node": "GC녹십자",
-            "relationship": "HAS_PRODUCT",
-            "end_node": "알리글로"
-        },
-        {
-            "start_node": "삼성바이오로직스",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "바이오시밀러 수출 비중 증가"
-        },
-        {
-            "start_node": "셀트리온",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "바이오시밀러 수출 비중 증가"
-        },
-        {
-            "start_node": "유한양행",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "국산 신약 매출 증가"
-        },
-        {
-            "start_node": "GC녹십자",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "국산 신약 매출 증가"
+            "relationship": "PRODUCES",
+            "end_node": "펙수클루",
+            "properties": {}
         },
         {
             "start_node": "대웅제약",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "국산 신약 매출 증가"
+            "relationship": "PRODUCES",
+            "end_node": "나보타",
+            "properties": {}
+        },
+        {
+            "start_node": "종근당",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "셀트리온제약",
+            "properties": {
+                "type": "Product Distribution",
+                "date": "2022"
+            }
+        },
+        {
+            "start_node": "보령",
+            "relationship": "SIGNED",
+            "end_node": "케이캡 공동판매 계약",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "GC녹십자",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "대웅제약",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "INDUSTRY",
+            "properties": {
+                "date": "2023-10-14"
+            }
         }
     ]
 }

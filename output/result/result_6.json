@@ -1,129 +1,119 @@
 {
     "nodes": [
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "한샘",
             "properties": {
-                "ticker": "009240",
-                "industry": "가구"
+                "industry": "가구",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "Company",
+            "label": "COMPANY",
             "name": "현대리바트",
             "properties": {
-                "ticker": "079430",
-                "industry": "가구"
+                "industry": "가구",
+                "founded": "",
+                "ceo": ""
             }
         },
         {
-            "label": "SalesRecord",
-            "name": "HansemQ1_2025",
+            "label": "MARKET",
+            "name": "건설경기",
             "properties": {
-                "year": 2025,
-                "quarter": "1Q",
-                "export_amount": 443400000000,
-                "change_rate": -8.7
+                "description": "건설 산업의 경기 상황"
             }
         },
         {
-            "label": "SalesRecord",
-            "name": "HyundaiLivartQ1_2025",
+            "label": "INDUSTRY",
+            "name": "B2B",
             "properties": {
-                "year": 2025,
-                "quarter": "1Q",
-                "export_amount": 437800000000,
-                "change_rate": -13.3
+                "description": "소매업 산업"
             }
         },
         {
-            "label": "Reason",
-            "name": "건설 경기 침체",
-            "properties": {}
-        },
-        {
-            "label": "Reason",
-            "name": "소비 심리 위축",
-            "properties": {}
-        },
-        {
-            "label": "Strategy",
-            "name": "수익성 중심 경영",
+            "label": "INDUSTRY",
+            "name": "B2C",
             "properties": {
-                "strategy_name": "수익성 중심 경영",
-                "description": "고수익 제품 판매 증가 및 원가율 개선",
-                "year": 2025
+                "description": "소비자 직접 판매 산업"
             }
         },
         {
-            "label": "Market",
-            "name": "오피스 인테리어 시장",
+            "label": "EVENT",
+            "name": "1분기 매출 감소",
             "properties": {
-                "market_type": "B2B",
-                "region": "대한민국"
+                "date": "2025-01-01 to 2025-03-31",
+                "type": "재무 결과",
+                "description": "한샘과 현대리바트의 매출 감소"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "오피스 인테리어 사업 확장",
+            "properties": {
+                "date": "2025",
+                "type": "사업 확장",
+                "description": "한샘과 현대리바트의 오피스 인테리어 시장 진출"
             }
         }
     ],
     "relations": [
         {
             "start_node": "한샘",
-            "relationship": "HAS_SALES",
-            "end_node": "HansemQ1_2025",
+            "relationship": "AFFECTED_BY",
+            "end_node": "건설경기",
+            "properties": {
+                "impact": "매출 감소"
+            }
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "AFFECTED_BY",
+            "end_node": "건설경기",
+            "properties": {
+                "impact": "매출 감소"
+            }
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "1분기 매출 감소",
             "properties": {}
         },
         {
             "start_node": "현대리바트",
-            "relationship": "HAS_SALES",
-            "end_node": "HyundaiLivartQ1_2025",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "1분기 매출 감소",
             "properties": {}
         },
         {
             "start_node": "한샘",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "수익성 중심 경영",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "오피스 인테리어 사업 확장",
             "properties": {}
         },
         {
             "start_node": "현대리바트",
-            "relationship": "APPLIES_STRATEGY",
-            "end_node": "수익성 중심 경영",
-            "properties": {}
-        },
-        {
-            "start_node": "HansemQ1_2025",
-            "relationship": "HAS_REASON",
-            "end_node": "건설 경기 침체",
-            "properties": {}
-        },
-        {
-            "start_node": "HyundaiLivartQ1_2025",
-            "relationship": "HAS_REASON",
-            "end_node": "소비 심리 위축",
+            "relationship": "EXPANDS_INTO",
+            "end_node": "오피스 인테리어 사업 확장",
             "properties": {}
         },
         {
             "start_node": "한샘",
-            "relationship": "OPERATES_IN",
-            "end_node": "오피스 인테리어 시장",
-            "properties": {}
+            "relationship": "FOCUSES_ON",
+            "end_node": "B2C",
+            "properties": {
+                "strategy": "수익성 중심 경영"
+            }
         },
         {
             "start_node": "현대리바트",
-            "relationship": "OPERATES_IN",
-            "end_node": "오피스 인테리어 시장",
-            "properties": {}
-        },
-        {
-            "start_node": "한샘",
-            "relationship": "COMPETES_WITH",
-            "end_node": "현대리바트",
-            "properties": {}
-        },
-        {
-            "start_node": "현대리바트",
-            "relationship": "COMPETES_WITH",
-            "end_node": "한샘",
-            "properties": {}
+            "relationship": "FOCUSES_ON",
+            "end_node": "B2B",
+            "properties": {
+                "strategy": "수익성 중심 경영"
+            }
         }
     ]
 }

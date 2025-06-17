@@ -1,95 +1,169 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "PERSON",
+      "name": "신송남",
       "properties": {
-        "company_name": "string",
-        "industry": "string",
-        "founded_year": "int",
-        "employee_count": "int"
+        "full_name": "신송남",
+        "role": "작업자",
+        "nationality": "대한민국",
+        "age": "61"
       }
     },
     {
-      "label": "Factory",
-      "name": "Factory",
+      "label": "PERSON",
+      "name": "김대환",
       "properties": {
-        "factory_name": "string",
-        "location": "string"
+        "full_name": "김대환",
+        "role": "공장장",
+        "nationality": "대한민국",
+        "age": "66"
       }
     },
     {
-      "label": "Employee",
-      "name": "Employee",
+      "label": "PERSON",
+      "name": "김두연",
       "properties": {
-        "employee_name": "string",
-        "age": "int",
-        "is_retired": "bool"
+        "full_name": "김두연",
+        "role": "고무 프레스 담당",
+        "nationality": "대한민국",
+        "age": "71"
       }
     },
     {
-      "label": "Role",
-      "name": "Role",
+      "label": "PERSON",
+      "name": "방광호",
       "properties": {
-        "role_title": "string",
-        "department": "string"
+        "full_name": "방광호",
+        "role": "지게차 기사",
+        "nationality": "대한민국",
+        "age": "60"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "PERSON",
+      "name": "정광용",
       "properties": {
-        "product_name": "string",
-        "category": "string"
+        "full_name": "정광용",
+        "role": "대표",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "GovernmentProgram",
-      "name": "GovernmentProgram",
+      "label": "COMPANY",
+      "name": "정일산업",
       "properties": {
-        "program_name": "string",
-        "support_type": "string",
-        "annual_benefit_min": "int",
-        "annual_benefit_max": "int"
+        "full_name": "정일산업",
+        "industry": "승강기 제조업",
+        "headquarters": "경기도 시화공단",
+        "founded": "1987",
+        "ceo": "정광용"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기도 시화공단",
+      "properties": {
+        "type": "산업단지",
+        "country": "대한민국",
+        "region": "경기도"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "충북 충주",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "충청북도"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업연구원",
+      "properties": {
+        "type": "연구기관",
+        "description": "중소기업 연구 및 정책 개발",
+        "headquarters": "대한민국"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "조주현",
+      "properties": {
+        "full_name": "조주현",
+        "role": "원장",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_FACTORY",
-      "end_node": "Factory",
+      "start_node": "신송남",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "작업자",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "김대환",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "공장장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "김두연",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "고무 프레스 담당",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "방광호",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "지게차 기사",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "정광용",
+      "relationship": "CEO_OF",
+      "end_node": "정일산업",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "정일산업",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "경기도 시화공단",
       "properties": {}
     },
     {
-      "start_node": "Company",
-      "relationship": "EMPLOYS",
-      "end_node": "Employee",
+      "start_node": "정일산업",
+      "relationship": "LOCATED_IN",
+      "end_node": "충북 충주",
       "properties": {}
     },
     {
-      "start_node": "Factory",
-      "relationship": "PRODUCES",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "Employee",
-      "relationship": "HAS_ROLE",
-      "end_node": "Role",
-      "properties": {}
-    },
-    {
-      "start_node": "Company",
-      "relationship": "OFFERS_PROGRAM",
-      "end_node": "GovernmentProgram",
-      "properties": {}
-    },
-    {
-      "start_node": "GovernmentProgram",
-      "relationship": "SUPPORTS",
-      "end_node": "Company",
-      "properties": {}
+      "start_node": "조주현",
+      "relationship": "WORKS_FOR",
+      "end_node": "중소벤처기업연구원",
+      "properties": {
+        "position": "원장",
+        "since": ""
+      }
     }
   ]
 }

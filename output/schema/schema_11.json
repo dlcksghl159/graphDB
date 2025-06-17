@@ -1,104 +1,126 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업부",
       "properties": {
-        "name": "string",
-        "type": "string"
+        "type": "Government",
+        "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
+        "headquarters": "대한민국 서울"
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "PERSON",
+      "name": "이순배",
       "properties": {
-        "name": "string"
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
-      "label": "Country",
-      "name": "Country",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "name": "string"
+        "category": "Beauty",
+        "description": "K뷰티 제품",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "SalesRecord",
-      "name": "SalesRecord",
+      "label": "PRODUCT",
+      "name": "자동차",
       "properties": {
-        "year": "int",
-        "quarter": "string",
-        "export_amount": "float",
-        "change_rate": "float"
+        "category": "Automobile",
+        "description": "한국산 중고차",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
-      "label": "TariffPolicy",
-      "name": "TariffPolicy",
+      "label": "LOCATION",
+      "name": "미국",
       "properties": {
-        "name": "string",
-        "rate": "float",
-        "effective_date": "string"
+        "type": "Country",
+        "country": "미국",
+        "region": "북아메리카"
       }
     },
     {
-      "label": "GovernmentAgency",
-      "name": "GovernmentAgency",
+      "label": "LOCATION",
+      "name": "키르기스스탄",
       "properties": {
-        "name": "string"
+        "type": "Country",
+        "country": "키르기스스탄",
+        "region": "CIS"
       }
     },
     {
-      "label": "Official",
-      "name": "Official",
+      "label": "EVENT",
+      "name": "미국 관세 정책",
       "properties": {
-        "name": "string",
-        "title": "string"
+        "date": "2025-03",
+        "type": "Trade Policy",
+        "description": "미국의 철강 및 알루미늄에 대한 25% 관세 부과",
+        "location": "미국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_SALES",
-      "end_node": "SalesRecord",
-      "properties": {}
+      "start_node": "ORGANIZATION",
+      "relationship": "PUBLISHED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2025-04-14"
+      }
     },
     {
-      "start_node": "SalesRecord",
-      "relationship": "INCLUDES_PRODUCT",
-      "end_node": "Product",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
     },
     {
-      "start_node": "SalesRecord",
-      "relationship": "TARGETS_COUNTRY",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "18억4000만 달러",
+        "date": "2025-01"
+      }
     },
     {
-      "start_node": "SalesRecord",
-      "relationship": "ANNOUNCED_BY",
-      "end_node": "GovernmentAgency",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "17억4000만 달러",
+        "date": "2025-01"
+      }
     },
     {
-      "start_node": "GovernmentAgency",
-      "relationship": "EMPLOYS",
-      "end_node": "Official",
-      "properties": {}
+      "start_node": "EVENT",
+      "relationship": "AFFECTED",
+      "end_node": "PRODUCT",
+      "properties": {
+        "impact": "Negative",
+        "percentage": "18%"
+      }
     },
     {
-      "start_node": "TariffPolicy",
-      "relationship": "AFFECTS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "TariffPolicy",
-      "relationship": "IMPOSED_BY",
-      "end_node": "Country",
-      "properties": {}
+      "start_node": "EVENT",
+      "relationship": "AFFECTED",
+      "end_node": "PRODUCT",
+      "properties": {
+        "impact": "Negative",
+        "percentage": "7.6%"
+      }
     }
   ]
 }

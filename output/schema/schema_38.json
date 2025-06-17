@@ -1,131 +1,171 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "company",
+      "label": "COMPANY",
+      "name": "셀트리온",
       "properties": {
-        "name": "string"
+        "full_name": "셀트리온",
+        "industry": "제약",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": "강석훈"
       }
     },
     {
-      "label": "LegalEntity",
-      "name": "subsidiary",
+      "label": "COMPANY",
+      "name": "컨파마",
       "properties": {
-        "name": "string",
-        "country": "string"
+        "full_name": "컨파마",
+        "industry": "제약 유통",
+        "headquarters": "스페인",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "product",
+      "label": "PRODUCT",
+      "name": "트룩시마",
       "properties": {
-        "name": "string",
-        "activeIngredient": "string",
-        "therapyArea": "string"
+        "category": "항암제",
+        "description": "성분명 리툭시맙",
+        "launch_date": "",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Partner",
-      "name": "partner",
+      "label": "PRODUCT",
+      "name": "허쥬마",
       "properties": {
-        "name": "string"
+        "category": "항암제",
+        "description": "성분명 트라스투주맙",
+        "launch_date": "",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Tender",
-      "name": "tender",
+      "label": "PRODUCT",
+      "name": "베그젤마",
       "properties": {
-        "name": "string",
-        "type": "string",
-        "startDate": "string",
-        "endDate": "string"
+        "category": "항암제",
+        "description": "성분명 베바시주맙",
+        "launch_date": "",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Market",
-      "name": "market",
+      "label": "PRODUCT",
+      "name": "스테키마",
       "properties": {
-        "country": "string",
-        "segmentType": "string"
+        "category": "자가면역질환 치료제",
+        "description": "성분명 우스테키누맙",
+        "launch_date": "2022-12",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "Institution",
-      "name": "institution",
+      "label": "PRODUCT",
+      "name": "앱토즈마",
       "properties": {
-        "name": "string",
-        "institutionType": "string"
+        "category": "신규 제품",
+        "description": "성분명 토실리주맙",
+        "launch_date": "예정",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "스페인",
+      "properties": {
+        "type": "국가",
+        "country": "스페인",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "포르투갈",
+      "properties": {
+        "type": "국가",
+        "country": "포르투갈",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "카탈루냐주",
+      "properties": {
+        "type": "지역",
+        "country": "스페인",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "CSC 컨소시엄 입찰",
+      "properties": {
+        "date": "2023",
+        "type": "입찰",
+        "description": "카탈루냐주 25개 공립병원 의약품 공급",
+        "location": "카탈루냐주"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "CSC",
+      "properties": {
+        "type": "입찰 기관",
+        "description": "스페인 대형 입찰 기관",
+        "headquarters": "카탈루냐주"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "OWNS",
-      "end_node": "LegalEntity",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "OPERATES_IN",
-      "end_node": "Market",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
+      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
-      "end_node": "Partner",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "SELLS",
-      "end_node": "Product",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "LAUNCHED",
-      "end_node": "Product",
+      "end_node": "COMPANY",
       "properties": {
-        "date": "string"
+        "type": "유통 협의",
+        "date": "2023-04"
       }
     },
     {
-      "start_node": "Tender",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "EVENT",
       "relationship": "HELD_IN",
-      "end_node": "Market",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "Tender",
-      "relationship": "ORGANIZED_BY",
-      "end_node": "Institution",
-      "properties": {}
-    },
-    {
-      "start_node": "LegalEntity",
-      "relationship": "SUPPLIES",
-      "end_node": "Tender",
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
       "properties": {
-        "startDate": "string",
-        "endDate": "string"
+        "role": "공급자"
       }
     },
     {
-      "start_node": "Product",
-      "relationship": "INCLUDED_IN",
-      "end_node": "Tender",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "HAS_MARKET_SHARE",
-      "end_node": "Market",
-      "properties": {
-        "percentage": "float",
-        "period": "string"
-      }
     }
   ]
 }

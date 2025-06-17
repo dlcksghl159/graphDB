@@ -1,45 +1,35 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "에이스침대",
       "properties": {
-        "name": "string"
+        "full_name": "에이스침대",
+        "industry": "가구",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "TimePeriod",
-      "name": "TimePeriod",
+      "label": "EVENT",
+      "name": "1분기 실적 발표",
       "properties": {
-        "year": "int",
-        "quarter": "string"
-      }
-    },
-    {
-      "label": "FinancialReport",
-      "name": "FinancialReport",
-      "properties": {
-        "revenue": "int",
-        "operatingProfit": "int",
-        "netProfit": "int",
-        "revenueChangeRate": "float",
-        "operatingProfitChangeRate": "float",
-        "netProfitChangeRate": "float"
+        "date": "2023-04-14",
+        "type": "재무 보고",
+        "description": "에이스침대의 1분기 매출과 영업이익 발표",
+        "location": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "HAS_REPORT",
-      "end_node": "FinancialReport",
-      "properties": {}
-    },
-    {
-      "start_node": "FinancialReport",
-      "relationship": "FOR_PERIOD",
-      "end_node": "TimePeriod",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
+      "properties": {
+        "date": "2023-04-14"
+      }
     }
   ]
 }

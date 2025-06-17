@@ -1,105 +1,77 @@
 {
   "nodes": [
     {
-      "label": "Company",
-      "name": "Company",
+      "label": "COMPANY",
+      "name": "신일전자",
       "properties": {
-        "name": "string",
-        "stock_code": "string"
+        "full_name": "신일전자",
+        "industry": "가전",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "Product",
-      "name": "Product",
+      "label": "PRODUCT",
+      "name": "BLDC 에어 서큘레이터 S10 SE",
       "properties": {
-        "name": "string",
-        "model": "string",
-        "category": "string"
+        "category": "가전제품",
+        "description": "고성능·감성 디자인 제품, 브러시리스 직류(BLDC) 모터 적용",
+        "launch_date": "2023-05-14",
+        "company": "신일전자"
       }
     },
     {
-      "label": "Feature",
-      "name": "Feature",
+      "label": "EVENT",
+      "name": "GS홈쇼핑 성유리 에디션 방송",
       "properties": {
-        "type": "string",
-        "description": "string"
+        "date": "2023-05-14",
+        "type": "제품 출시 방송",
+        "description": "신일전자 신제품 BLDC 에어 서큘레이터 S10 SE 첫 선",
+        "location": "GS홈쇼핑"
       }
     },
     {
-      "label": "Edition",
-      "name": "Edition",
+      "label": "PERSON",
+      "name": "성유리",
       "properties": {
-        "name": "string",
-        "benefit": "string"
-      }
-    },
-    {
-      "label": "SalesChannel",
-      "name": "SalesChannel",
-      "properties": {
-        "name": "string"
-      }
-    },
-    {
-      "label": "Event",
-      "name": "Event",
-      "properties": {
-        "name": "string",
-        "date": "string",
-        "time": "string"
-      }
-    },
-    {
-      "label": "Pricing",
-      "name": "Pricing",
-      "properties": {
-        "price": "string",
-        "discount_rate": "string"
+        "full_name": "성유리",
+        "role": "방송인",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "Company",
-      "relationship": "LAUNCHES",
-      "end_node": "Product",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "HAS_FEATURE",
-      "end_node": "Feature",
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
+      "properties": {
+        "category": "BLDC 모터",
+        "description": "브러시리스 직류 모터",
+        "field": "모터 기술"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "Product",
-      "relationship": "AVAILABLE_IN",
-      "end_node": "Edition",
-      "properties": {}
-    },
-    {
-      "start_node": "Product",
-      "relationship": "SOLD_ON",
-      "end_node": "SalesChannel",
-      "properties": {}
-    },
-    {
-      "start_node": "SalesChannel",
-      "relationship": "HOSTS",
-      "end_node": "Event",
-      "properties": {}
-    },
-    {
-      "start_node": "Event",
-      "relationship": "PRESENTS",
-      "end_node": "Edition",
-      "properties": {}
-    },
-    {
-      "start_node": "Edition",
-      "relationship": "HAS_PRICING",
-      "end_node": "Pricing",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "방송 호스트"
+      }
     }
   ]
 }

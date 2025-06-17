@@ -1,137 +1,143 @@
 {
     "nodes": [
         {
-            "label": "ExportRecord",
-            "name": "1분기 중소기업 수출",
+            "label": "EVENT",
+            "name": "미국 관세 부과",
             "properties": {
-                "year": 2025,
-                "quarter": 1,
-                "export_amount_usd": 27000000000,
-                "growth_rate": 0.7
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "화장품",
-            "properties": {
-                "category_name": "화장품",
-                "name": "화장품"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "자동차",
-            "properties": {
-                "category_name": "자동차",
-                "name": "자동차"
-            }
-        },
-        {
-            "label": "ExportReport",
-            "name": "2025년도 1분기 중소기업 수출 동향",
-            "properties": {
-                "year": 2025,
-                "quarter": "1분기",
-                "total_value_usd": 27000000000,
-                "exporters_count": 63135,
-                "growthRate": 0.7,
-                "numCompanies": 63135
-            }
-        },
-        {
-            "label": "GovernmentAgency",
-            "name": "중소벤처기업부",
-            "properties": {
-                "name": "중소벤처기업부",
-                "agency_name": "중소벤처기업부"
-            }
-        },
-        {
-            "label": "TariffMeasure",
-            "name": "철강·알루미늄 관세 부과",
-            "properties": {
-                "item": "철강·알루미늄",
-                "effective_date": "2025-03-12",
-                "name": "철강·알루미늄 관세 부과"
-            }
-        },
-        {
-            "label": "Country",
-            "name": "미국",
-            "properties": {
-                "name": "미국",
-                "region": "북미"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "철강 제품",
-            "properties": {
-                "category_name": "철강 제품",
-                "name": "철강 제품"
-            }
-        },
-        {
-            "label": "ProductCategory",
-            "name": "알루미늄 제품",
-            "properties": {
-                "category_name": "알루미늄 제품",
-                "name": "알루미늄 제품"
-            }
-        },
-        {
-            "label": "Official",
-            "name": "이순배",
-            "properties": {
-                "name": "이순배",
-                "title": "글로벌성장정책관"
+                "date": "2023-03-12",
+                "type": "정책",
+                "description": "미국의 철강·알루미늄 및 파생상품에 대한 관세 부과"
             }
         }
     ],
     "relations": [
         {
             "start_node": "중소벤처기업부",
-            "relationship": "PUBLISHES",
-            "end_node": "2025년도 1분기 중소기업 수출 동향",
-            "properties": {}
-        },
-        {
-            "start_node": "2025년도 1분기 중소기업 수출 동향",
-            "relationship": "REPORTS_PRODUCT_EXPORT",
-            "end_node": "화장품",
+            "relationship": "ANNOUNCED",
+            "end_node": "중소기업 수출 시장",
             "properties": {
-                "exportValue": 1840000000,
-                "rank": 1,
-                "recordHigh": true
+                "date": "2023-04-14",
+                "description": "2025년도 1분기 중소기업 수출 동향 발표"
             }
         },
         {
-            "start_node": "2025년도 1분기 중소기업 수출 동향",
-            "relationship": "REPORTS_PRODUCT_EXPORT",
-            "end_node": "자동차",
-            "properties": {
-                "exportValue": 1740000000,
-                "rank": 2,
-                "recordHigh": true
-            }
-        },
-        {
-            "start_node": "철강·알루미늄 관세 부과",
-            "relationship": "IMPOSED_ON",
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
             "end_node": "미국",
-            "properties": {}
+            "properties": {
+                "amount": "1840000000 달러",
+                "growth_rate": "+19.6%",
+                "increase_rate": "19.6%"
+            }
         },
         {
-            "start_node": "철강·알루미늄 관세 부과",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "철강 제품",
-            "properties": {}
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "1740000000 달러",
+                "growth_rate": "+67.4%",
+                "increase_rate": "67.4%"
+            }
         },
         {
-            "start_node": "철강·알루미늄 관세 부과",
-            "relationship": "AFFECTS_PRODUCT",
-            "end_node": "알루미늄 제품",
-            "properties": {}
+            "start_node": "철강 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 부과",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-17.8%"
+            }
+        },
+        {
+            "start_node": "알루미늄 제품",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 관세 부과",
+            "properties": {
+                "impact": "수출 감소",
+                "percentage": "-7.6%"
+            }
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "중국",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "일본",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "홍콩",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "대만",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "태국",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "인도네시아",
+            "properties": {
+                "growth_rate": "두 자릿수 증가율"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "베트남",
+            "properties": {
+                "growth_rate": "감소세"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "인도",
+            "properties": {
+                "growth_rate": "감소세"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "멕시코",
+            "properties": {
+                "growth_rate": "감소세"
+            }
         }
     ]
 }

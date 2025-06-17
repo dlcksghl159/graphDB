@@ -384,7 +384,6 @@ if st.session_state.stage == "config":
     ### 📋 사용 안내
     1. **RAG 시스템 구축 목적**을 명확히 입력하세요
     2. **문서 폴더 경로**에 RAG 시스템에서 활용할 문서들이 있는지 확인하세요
-    3. 지원 파일 형식: `.txt`, `.md`, `.doc`, `.docx`, `.pdf`
     """)
 
     with st.form("config_form"):

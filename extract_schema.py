@@ -217,7 +217,7 @@ def validate_and_refine_enhanced_schema(merged_schema: Dict) -> Dict:
     
     return parse_json(resp.choices[0].message.content)
 
-def extract_enhanced_schema_mp(max_workers: int = 4, purpose: str = "종합 뉴스 분석"):
+def extract_enhanced_schema_mp(max_workers: int = 10, purpose: str = "종합 뉴스 분석"):
     """확장된 멀티프로세싱 스키마 추출"""
     files = sorted(glob.glob(os.path.join(CHUNKS_DIR, "chunked_output_*.txt")))
     if not files:
@@ -268,7 +268,7 @@ def extract_enhanced_schema_mp(max_workers: int = 4, purpose: str = "종합 뉴�
         print(f"   {rel_type}: {count}")
 
 def main(purpose="종합 뉴스 분석"):
-    extract_enhanced_schema_mp(max_workers=min(4, os.cpu_count() or 2), purpose=purpose)
+    extract_enhanced_schema_mp(max_workers=min(10, os.cpu_count() or 10), purpose=purpose)
 
 if __name__ == "__main__":
     main()

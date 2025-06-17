@@ -340,7 +340,7 @@ def main(purpose="뉴스 기사 분석"):
     n_files = len(file_list)
     
     # 배치 처리로 일관성 향상
-    chunk_size = 3  # 더 작은 배치로 일관성 확보
+    chunk_size = 10  # 더 작은 배치로 일관성 확보
     pbar = tqdm(range(0, n_files, chunk_size), desc="Processing batches", unit="batch")
     
     for start_idx in pbar:

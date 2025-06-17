@@ -331,7 +331,7 @@ def main(purpose="뉴스 기사 분석"):
     document_entities_cache = {}  # 문서별 엔티티 캐시
 
     # 1차: 청크별 관계 추출
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {
             executor.submit(enhanced_process_file, filename, chunks_dir, result_dir, 
                           system_msg, nodes, api_key, document_entities_cache): filename

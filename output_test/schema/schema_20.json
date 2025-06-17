@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "센드버드",
+      "properties": {
+        "full_name": "Sendbird",
+        "industry": "AI 에이전트 플랫폼",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김동신"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "옴니프레젠트 AI 에이전트",
+      "properties": {
+        "category": "AI 에이전트",
+        "description": "프롬프트 없이 고객 행동을 예측해 응답하는 AI 에이전트",
+        "launch_date": "2023-10-14",
+        "company": "센드버드"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김동신",
+      "properties": {
+        "full_name": "김동신",
+        "role": "대표",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "커머스",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "핀테크",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "리테일",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "여행 플랫폼",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "구독형 서비스",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
+      "properties": {
+        "category": "API 기반",
+        "description": "기업의 기존 FAQ나 CRM, 운영 워크플로우와 연동 가능"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_IN",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "type": "커머스"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_IN",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "type": "핀테크"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_IN",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "type": "리테일"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_IN",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "type": "여행 플랫폼"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_IN",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "type": "구독형 서비스"
+      }
+    }
+  ]
+}

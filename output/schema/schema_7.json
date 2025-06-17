@@ -1,101 +1,121 @@
 {
   "nodes": [
     {
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
+      "properties": {
+        "type": "위원회",
+        "description": "중소기업과 대기업의 상생을 지원하는 조직",
+        "headquarters": "서울"
+      }
+    },
+    {
       "label": "COMPANY",
-      "name": "파세코",
+      "name": "LG이노텍",
       "properties": {
-        "full_name": "파세코",
-        "industry": "가전",
-        "headquarters": "경기 안산시 단원구",
-        "founded": "",
-        "ceo": ""
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전자",
+        "headquarters": "서울",
+        "founded": "1970",
+        "ceo": "정철동"
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "창문형 에어컨",
+      "label": "COMPANY",
+      "name": "에이피텍",
       "properties": {
-        "category": "가전제품",
-        "description": "창문형 에어컨, AI 모드, 환기 시스템",
-        "launch_date": "2023년 9월",
-        "company": "파세코"
+        "full_name": "에이피텍 주식회사",
+        "industry": "제조",
+        "headquarters": "인천",
+        "founded": "2005",
+        "ceo": "김철수"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "AI 에너지 세이빙",
+      "label": "EVENT",
+      "name": "ESG 우수 중소기업 현판식",
       "properties": {
-        "category": "에너지 절약 기술",
-        "description": "주위 온도 감지 및 자동 조절",
-        "field": "사물인터넷(IoT)"
+        "date": "2023-11-14",
+        "type": "현판식",
+        "description": "ESG 우수 중소기업으로 선정된 기업에 대한 현판식",
+        "location": "인천 송도 에이피텍"
       }
     },
     {
-      "label": "PERSON",
-      "name": "김상우",
+      "label": "AGREEMENT",
+      "name": "협력사 ESG 지원사업 업무협약",
       "properties": {
-        "full_name": "김상우",
-        "role": "리테일사업부 상무",
-        "nationality": "",
-        "age": ""
+        "type": "업무협약",
+        "date": "2023-11-14",
+        "description": "동반위와 LG이노텍 간의 협력사 ESG 지원을 위한 협약"
       }
     },
     {
-      "label": "PERSON",
-      "name": "박치호",
+      "label": "PROJECT",
+      "name": "대·중소 자율형 ESG 지원사업",
       "properties": {
-        "full_name": "박치호",
-        "role": "기술연구소 팀장",
-        "nationality": "",
-        "age": ""
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "경기 안산시 단원구",
-      "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "경기도"
+        "description": "대기업과 중소기업 간의 자율적인 ESG 지원을 위한 프로젝트",
+        "start_date": "2023",
+        "status": "진행 중"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "USES",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "position": "리테일사업부 상무",
-        "since": ""
+        "type": "ESG 지원",
+        "date": "2023-11-14"
       }
     },
     {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "ESG 지원",
+        "date": "2023-11-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
       "end_node": "COMPANY",
       "properties": {
-        "position": "기술연구소 팀장",
-        "since": ""
+        "product": "휴대전화 카메라 모듈 제조설비"
       }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
     }
   ]
 }

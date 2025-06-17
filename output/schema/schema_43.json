@@ -1,30 +1,32 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
+      "label": "COMPANY",
       "name": "소상공인시장진흥공단",
       "properties": {
-        "type": "Government Agency",
-        "description": "Small Enterprise and Market Service",
-        "headquarters": "Seoul, South Korea"
+        "full_name": "소상공인시장진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "박성효"
       }
     },
     {
       "label": "COMPANY",
       "name": "롯데웰푸드",
       "properties": {
-        "full_name": "Lotte Wellfood",
+        "full_name": "롯데웰푸드",
         "industry": "Food Manufacturing",
-        "headquarters": "Seoul, South Korea",
+        "headquarters": "South Korea",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "PROJECT",
-      "name": "백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "description": "Collaboration project to develop joint brands and products by combining the expertise of long-standing small businesses with Lotte Wellfood's manufacturing technology.",
+        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
         "start_date": "2023-03",
         "status": "Ongoing"
       }
@@ -33,51 +35,53 @@
       "label": "AGREEMENT",
       "name": "업무 협약",
       "properties": {
-        "type": "Business Cooperation Agreement",
+        "type": "Business Collaboration",
         "date": "2023-03",
-        "description": "Agreement between 소진공 and 롯데웰푸드 for collaboration on the 백년가게·백년소공인X롯데웰푸드 상생 프로젝트."
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "박성효",
-      "properties": {
-        "full_name": "박성효",
-        "role": "이사장",
-        "nationality": "South Korean",
-        "age": ""
+        "description": "소진공과 롯데웰푸드 간의 협력 협약"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "식사이론(Theory of SICSA)",
+      "name": "식사이론",
       "properties": {
         "category": "Food Brand",
-        "description": "Brand under Lotte Wellfood for product commercialization.",
+        "description": "롯데웰푸드의 식품 브랜드",
         "launch_date": "",
         "company": "롯데웰푸드"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년가게",
+      "properties": {
+        "type": "Small Business",
+        "description": "음식점업을 하는 업력 30년 이상의 우수 소상인",
+        "headquarters": "South Korea"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년소공인",
+      "properties": {
+        "type": "Small Manufacturer",
+        "description": "식품 제조업에서 15년 이상 업력을 가진 숙련된 소공인",
+        "headquarters": "South Korea"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
+      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "type": "Business Cooperation",
+        "type": "Business Collaboration",
         "date": "2023-03"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
+      "relationship": "LEADS",
       "end_node": "PROJECT",
       "properties": {}
     },
@@ -86,26 +90,23 @@
       "relationship": "SIGNED",
       "end_node": "AGREEMENT",
       "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "ORGANIZATION",
-      "properties": {
-        "position": "이사장",
-        "since": ""
-      }
     },
     {
       "start_node": "COMPANY",
       "relationship": "PRODUCES",
       "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     }
   ]

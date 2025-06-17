@@ -1,92 +1,115 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "기술보증기금",
+      "label": "COMPANY",
+      "name": "엘리스그룹",
       "properties": {
-        "type": "Public Institution",
-        "description": "기술보증기금은 기술보증 및 지식재산 금융제도를 운영하는 기관",
-        "headquarters": "부산, 대한민국"
+        "full_name": "엘리스그룹",
+        "industry": "AI 교육",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "김재원"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "인천지식재산센터",
+      "label": "COMPANY",
+      "name": "파인디",
       "properties": {
-        "type": "Public Institution",
-        "description": "인천지역의 지식재산 관련 지원을 담당하는 센터",
-        "headquarters": "인천, 대한민국"
+        "full_name": "파인디",
+        "industry": "IT 채용 플랫폼",
+        "headquarters": "일본",
+        "founded": "2016",
+        "ceo": "야마다 유이치로"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "지식재산공제사업",
+      "label": "PERSON",
+      "name": "김재원",
       "properties": {
-        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외 진출을 뒷받침하기 위한 금융제도",
-        "start_date": "2019",
-        "status": "Active"
+        "full_name": "김재원",
+        "role": "대표",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "야마다 유이치로",
+      "properties": {
+        "full_name": "야마다 유이치로",
+        "role": "대표",
+        "nationality": "일본",
+        "age": ""
       }
     },
     {
       "label": "AGREEMENT",
-      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "name": "엘리스그룹-파인디 업무 협약",
       "properties": {
-        "type": "Collaboration Agreement",
+        "type": "업무 협약",
         "date": "2023-10-14",
-        "description": "지식재산공제사업 활성화를 위한 기보와 인천지식재산센터 간의 협력"
+        "description": "양국 간 인공지능 플랫폼 시장 확장 및 서비스 개발 협력"
       }
     },
     {
-      "label": "LOCATION",
-      "name": "인천",
+      "label": "PRODUCT",
+      "name": "파인디 팀플러스",
       "properties": {
-        "type": "City",
-        "country": "대한민국",
-        "region": "인천광역시"
+        "category": "생산성 측정 서비스",
+        "description": "IT 개발자를 위한 채용 플랫폼 및 엔지니어 조직의 생산성 측정 서비스",
+        "launch_date": "",
+        "company": "파인디"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "기술보증기금",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "업무 협약",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "인천지식재산센터",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "start_node": "PERSON",
+      "relationship": "NEGOTIATED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "기술보증기금",
-      "relationship": "LEADS",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "기술보증기금",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "인천지식재산센터",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "기술보증기금",
-      "relationship": "LOCATED_IN",
-      "end_node": "인천",
-      "properties": {}
-    },
-    {
-      "start_node": "인천지식재산센터",
-      "relationship": "LOCATED_IN",
-      "end_node": "인천",
+      "start_node": "PERSON",
+      "relationship": "NEGOTIATED",
+      "end_node": "AGREEMENT",
       "properties": {}
     }
   ]

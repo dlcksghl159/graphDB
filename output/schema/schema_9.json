@@ -2,54 +2,77 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "서부발전",
+      "name": "한샘",
       "properties": {
-        "full_name": "한국서부발전",
-        "industry": "발전",
-        "headquarters": "태안",
+        "full_name": "한샘",
+        "industry": "가구",
+        "headquarters": "서울",
         "founded": "",
         "ceo": ""
       }
     },
     {
+      "label": "COMPANY",
+      "name": "현대리바트",
+      "properties": {
+        "full_name": "현대리바트",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "B2B 가구",
+      "properties": {
+        "category": "가구",
+        "description": "기업 간 거래용 가구",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "B2C 가구",
+      "properties": {
+        "category": "가구",
+        "description": "소비자 대상 가구",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
       "label": "PROJECT",
-      "name": "발전정보 활용 창업·벤처기업 협업사업",
+      "name": "오피스 인테리어 사업",
       "properties": {
-        "description": "발전정보를 활용한 창의적인 기술 개발 및 실증 사업화 연계 프로그램",
+        "description": "오피스 기반의 B2B 인테리어 사업",
         "start_date": "",
-        "status": "공모 중"
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "창업·벤처기업",
-      "properties": {
-        "type": "기업",
-        "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
-        "headquarters": ""
-      }
-    },
-    {
-      "label": "INVESTMENT",
-      "name": "지원금",
-      "properties": {
-        "amount": "1천만∼3천만원",
-        "date": "",
-        "type": "지원"
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "해외 실증 지원사업",
-      "properties": {
-        "date": "",
-        "type": "지원사업",
-        "description": "협업 우수기업에 해외 실증 기회 제공",
-        "location": "해외"
+        "status": "확장 중"
       }
     }
   ],
   "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "COMPETES_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "가구"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
     {
       "start_node": "COMPANY",
       "relationship": "LEADS",
@@ -59,19 +82,7 @@
     {
       "start_node": "COMPANY",
       "relationship": "COLLABORATES_ON",
-      "end_node": "ORGANIZATION",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "RECEIVED_INVESTMENT",
-      "end_node": "INVESTMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
+      "end_node": "PROJECT",
       "properties": {}
     }
   ]

@@ -1,79 +1,123 @@
 {
   "nodes": [
     {
-      "label": "COMPANY",
-      "name": "현대이지웰",
-      "properties": {
-        "full_name": "현대이지웰",
-        "industry": "토탈복지솔루션",
-        "headquarters": "대한민국",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "현대백화점그룹",
-      "properties": {
-        "full_name": "현대백화점그룹",
-        "industry": "유통",
-        "headquarters": "대한민국",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
       "label": "ORGANIZATION",
-      "name": "한국중소벤처기업유통원",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "type": "정부기관",
-        "description": "중소벤처기업부 산하 기관",
+        "type": "공공기관",
+        "description": "중소벤처기업의 지원을 위한 공공기관",
         "headquarters": "대한민국"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "소상공인 온라인쇼핑몰 판매지원사업",
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
       "properties": {
-        "description": "소상공인 제품의 온라인 판매 활성화 지원",
-        "start_date": "2023",
-        "status": "진행 중"
+        "type": "공공기관",
+        "description": "부산항의 운영 및 관리",
+        "headquarters": "부산, 대한민국"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "스마트트레이드허브",
+      "properties": {
+        "description": "중소기업 전용 항공물류센터",
+        "start_date": "N/A",
+        "status": "운영 중"
       }
     },
     {
       "label": "LOCATION",
-      "name": "경기도",
+      "name": "부산",
       "properties": {
-        "type": "지역",
+        "type": "도시",
         "country": "대한민국",
-        "region": "경기"
+        "region": "영남"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "로스앤젤레스",
+      "properties": {
+        "type": "도시",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "롱비치",
+      "properties": {
+        "type": "도시",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "중진공-BPA 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "COMPANY",
-      "relationship": "SUBSIDIARY_OF",
-      "end_node": "COMPANY",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
       "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
+      "start_node": "AGREEMENT",
+      "relationship": "SIGNED",
       "end_node": "ORGANIZATION",
-      "properties": {
-        "type": "지원사업",
-        "date": "2023"
-      }
+      "properties": {}
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "AGREEMENT",
+      "relationship": "SIGNED",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
       "relationship": "LOCATED_IN",
       "end_node": "LOCATION",
       "properties": {}

@@ -2,94 +2,122 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "가온아이",
+      "name": "셀트리온",
       "properties": {
-        "full_name": "가온아이",
-        "industry": "Software",
+        "full_name": "Celltrion",
+        "industry": "Biopharmaceutical",
         "headquarters": "South Korea",
-        "founded": "",
-        "ceo": "조창제"
+        "founded": "2002",
+        "ceo": "기우성"
       }
     },
     {
       "label": "COMPANY",
-      "name": "아이서트",
+      "name": "컨파마",
       "properties": {
-        "full_name": "아이서트",
-        "industry": "Software",
-        "headquarters": "South Korea",
+        "full_name": "Kern Pharma",
+        "industry": "Pharmaceutical",
+        "headquarters": "Spain",
         "founded": "",
-        "ceo": "현수환"
+        "ceo": ""
       }
     },
     {
       "label": "PRODUCT",
-      "name": "세이프아이서트",
+      "name": "트룩시마",
       "properties": {
-        "category": "Software",
-        "description": "법인 공동인증서 관리 솔루션",
+        "category": "Biopharmaceutical",
+        "description": "Rituximab",
         "launch_date": "",
-        "company": "아이서트"
+        "company": "셀트리온"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "SaaS",
+      "label": "PRODUCT",
+      "name": "허쥬마",
       "properties": {
-        "category": "Cloud Computing",
-        "description": "서비스형 소프트웨어",
-        "field": "Software"
+        "category": "Biopharmaceutical",
+        "description": "Trastuzumab",
+        "launch_date": "",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "베그젤마",
+      "properties": {
+        "category": "Biopharmaceutical",
+        "description": "Bevacizumab",
+        "launch_date": "",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "스테키마",
+      "properties": {
+        "category": "Biopharmaceutical",
+        "description": "Ustekinumab",
+        "launch_date": "2022-12",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "스페인",
+      "properties": {
+        "type": "Country",
+        "country": "Spain",
+        "region": "Europe"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "포르투갈",
+      "properties": {
+        "type": "Country",
+        "country": "Portugal",
+        "region": "Europe"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "카탈루냐주",
+      "properties": {
+        "type": "Region",
+        "country": "Spain",
+        "region": "Catalonia"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "CSC",
+      "properties": {
+        "type": "Bidding Organization",
+        "description": "Major bidding organization in Spain",
+        "headquarters": "Catalonia, Spain"
       }
     },
     {
       "label": "PERSON",
-      "name": "조창제",
+      "name": "강석훈",
       "properties": {
-        "full_name": "조창제",
-        "role": "CEO",
+        "full_name": "강석훈",
+        "role": "General Manager",
         "nationality": "South Korean",
         "age": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "현수환",
-      "properties": {
-        "full_name": "현수환",
-        "role": "CEO",
-        "nationality": "South Korean",
-        "age": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "한화오션디지털",
-      "properties": {
-        "full_name": "한화오션디지털",
-        "industry": "Various",
-        "headquarters": "South Korea",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "LG전자",
-      "properties": {
-        "full_name": "LG전자",
-        "industry": "Electronics",
-        "headquarters": "South Korea",
-        "founded": "",
-        "ceo": ""
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "Distribution",
+        "date": "2023-10"
+      }
     },
     {
       "start_node": "COMPANY",
@@ -98,43 +126,33 @@
       "properties": {}
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "USES",
-      "end_node": "TECHNOLOGY",
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "SaaS Development",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
-      }
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "INVESTED_IN",
-      "end_node": "PRODUCT",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "amount": "",
-        "date": ""
+        "role": "Supplier",
+        "since": "2023"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "General Manager",
+        "since": ""
       }
     }
   ]

@@ -1,84 +1,114 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "소상공인시장진흥공단",
-      "properties": {
-        "type": "Government Agency",
-        "description": "Support agency for small businesses in Korea",
-        "headquarters": "Seoul, South Korea"
-      }
-    },
-    {
       "label": "COMPANY",
-      "name": "롯데웰푸드",
+      "name": "노루그룹",
       "properties": {
-        "full_name": "Lotte Wellfood",
-        "industry": "Food Manufacturing",
-        "headquarters": "Seoul, South Korea",
+        "full_name": "노루그룹",
+        "industry": "화학",
+        "headquarters": "안양",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "PROJECT",
-      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "label": "COMPANY",
+      "name": "노루페인트",
       "properties": {
-        "description": "A collaboration project to support long-standing small businesses by integrating Lotte Wellfood's manufacturing technology",
-        "start_date": "2023-03",
-        "status": "Ongoing"
+        "full_name": "노루페인트",
+        "industry": "화학",
+        "headquarters": "안양",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "업무 협약",
+      "label": "LOCATION",
+      "name": "안양",
       "properties": {
-        "type": "Business Cooperation Agreement",
-        "date": "2023-03",
-        "description": "Agreement between 소진공 and 롯데웰푸드 to support small businesses"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "경기도"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "2025 신기술·신제품 전시회",
+      "properties": {
+        "date": "2023-09-14",
+        "type": "전시회",
+        "description": "미래 산업을 선도할 13종의 혁신 기술과 차세대 제품을 선보이는 전시회",
+        "location": "노루페인트 본사"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "밀키트",
+      "name": "스텔스 도료",
       "properties": {
-        "category": "Instant Cooking Food",
-        "description": "Meal kits for easy home cooking",
+        "category": "도료",
+        "description": "경량화를 극대화한 도료",
         "launch_date": "",
-        "company": "롯데웰푸드"
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "우레탄 난연 몰딩제",
+      "properties": {
+        "category": "몰딩제",
+        "description": "친환경·고성능 배터리 시장을 겨냥한 몰딩제",
+        "launch_date": "",
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "탄소 저감 건재용 도료",
+      "properties": {
+        "category": "도료",
+        "description": "탄소 저감을 위한 건재용 도료",
+        "launch_date": "",
+        "company": "노루그룹"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "VOC 저감형 아크릴 수지",
+      "properties": {
+        "category": "수지",
+        "description": "VOC 저감형 아크릴 수지",
+        "launch_date": "",
+        "company": "노루그룹"
       }
     },
     {
       "label": "PERSON",
-      "name": "박성효",
+      "name": "방양국",
       "properties": {
-        "full_name": "박성효",
-        "role": "이사장",
-        "nationality": "Korean",
+        "full_name": "방양국",
+        "role": "연구소장",
+        "nationality": "대한민국",
         "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "Business Cooperation",
-        "date": "2023-03"
-      }
-    },
-    {
       "start_node": "COMPANY",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
@@ -89,21 +119,12 @@
     },
     {
       "start_node": "PERSON",
-      "relationship": "MANAGES",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "연구소장",
+        "since": ""
+      }
     }
   ]
 }

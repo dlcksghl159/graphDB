@@ -1,103 +1,97 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "동반성장위원회",
+      "label": "COMPANY",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "type": "위원회",
-        "description": "협력사 ESG 지원을 위한 업무협약 체결",
-        "headquarters": "한국"
+        "full_name": "중소벤처기업진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "강석진"
       }
     },
     {
       "label": "COMPANY",
-      "name": "LG이노텍",
+      "name": "부산항만공사",
       "properties": {
-        "full_name": "LG이노텍 주식회사",
-        "industry": "전기·전자",
-        "headquarters": "한국",
+        "full_name": "부산항만공사",
+        "industry": "Port Authority",
+        "headquarters": "Busan, South Korea",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "COMPANY",
-      "name": "에이피텍",
+      "label": "LOCATION",
+      "name": "LA·LB 해외물류센터",
       "properties": {
-        "full_name": "에이피텍 주식회사",
-        "industry": "제조",
-        "headquarters": "인천 송도",
-        "founded": "",
-        "ceo": "주재철"
+        "type": "Logistics Center",
+        "country": "USA",
+        "region": "Los Angeles, Long Beach"
       }
     },
     {
-      "label": "PERSON",
-      "name": "박치형",
+      "label": "LOCATION",
+      "name": "부산",
       "properties": {
-        "full_name": "박치형",
-        "role": "운영처장",
-        "nationality": "한국",
-        "age": ""
+        "type": "City",
+        "country": "South Korea",
+        "region": "Busan"
       }
     },
     {
-      "label": "PERSON",
-      "name": "김준성",
+      "label": "LOCATION",
+      "name": "인천",
       "properties": {
-        "full_name": "김준성",
-        "role": "상무",
-        "nationality": "한국",
-        "age": ""
+        "type": "City",
+        "country": "South Korea",
+        "region": "Incheon"
       }
     },
     {
-      "label": "EVENT",
-      "name": "ESG 지원 업무협약 체결식",
+      "label": "LOCATION",
+      "name": "여수 광양",
       "properties": {
+        "type": "City",
+        "country": "South Korea",
+        "region": "Yeosu, Gwangyang"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무협약",
+      "properties": {
+        "type": "MOU",
         "date": "2023-10-14",
-        "type": "협약식",
-        "description": "동반위와 LG이노텍의 협력사 ESG 지원을 위한 업무협약 체결",
-        "location": "인천 송도 에이피텍 본사"
+        "description": "글로벌 물류 지원을 위한 협약"
       }
     },
     {
       "label": "PROJECT",
-      "name": "ESG 평가지표 공동 개발",
+      "name": "스마트트레이드허브 연계 통합물류 지원 플랫폼 구축",
       "properties": {
-        "description": "전기·전자 산업에 특화된 ESG 평가지표 개발",
-        "start_date": "2023",
-        "status": "진행 중"
-      }
-    },
-    {
-      "label": "PROJECT",
-      "name": "대·중소 자율형 ESG 지원사업",
-      "properties": {
-        "description": "협력사 ESG 지원을 위한 자율형 사업",
-        "start_date": "2023",
-        "status": "진행 중"
+        "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼 구축",
+        "start_date": "",
+        "status": "Planned"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
+      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "type": "ESG 지원",
+        "type": "MOU",
         "date": "2023-10-14"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "핵심 협력사",
-        "date": ""
-      }
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
@@ -106,40 +100,22 @@
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
       "start_node": "COMPANY",
       "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "PERSON",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "참석자"
-      }
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
     },
     {
-      "start_node": "PERSON",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "참석자"
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "참석자"
-      }
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
     }
   ]
 }

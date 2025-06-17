@@ -2,103 +2,109 @@
   "nodes": [
     {
       "label": "ORGANIZATION",
-      "name": "중소벤처기업진흥공단",
+      "name": "동반성장위원회",
       "properties": {
-        "type": "Government Agency",
-        "description": "중소벤처기업의 지원을 위한 정부 기관",
-        "headquarters": "서울"
+        "type": "위원회",
+        "description": "중소기업과 대기업의 동반 성장을 지원하는 조직",
+        "headquarters": "한국"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "부산항만공사",
+      "label": "COMPANY",
+      "name": "LG이노텍",
       "properties": {
-        "type": "Port Authority",
-        "description": "부산항의 관리 및 운영을 담당하는 기관",
-        "headquarters": "부산"
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전기·전자",
+        "headquarters": "서울, 한국",
+        "founded": "1970",
+        "ceo": "정철동"
       }
     },
     {
-      "label": "LOCATION",
-      "name": "부산",
+      "label": "COMPANY",
+      "name": "에이피텍",
       "properties": {
-        "type": "City",
-        "country": "대한민국",
-        "region": "부산광역시"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "로스앤젤레스",
-      "properties": {
-        "type": "City",
-        "country": "미국",
-        "region": "캘리포니아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "롱비치",
-      "properties": {
-        "type": "City",
-        "country": "미국",
-        "region": "캘리포니아"
-      }
-    },
-    {
-      "label": "PROJECT",
-      "name": "통합물류 지원 플랫폼 구축",
-      "properties": {
-        "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼 구축",
-        "start_date": "2023-10-14",
-        "status": "Planned"
-      }
-    },
-    {
-      "label": "AGREEMENT",
-      "name": "업무협약",
-      "properties": {
-        "type": "협력",
-        "date": "2023-10-14",
-        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+        "full_name": "에이피텍 주식회사",
+        "industry": "제조",
+        "headquarters": "인천, 한국",
+        "founded": "2000",
+        "ceo": "주재철"
       }
     },
     {
       "label": "PERSON",
-      "name": "강석진",
+      "name": "박치형",
       "properties": {
-        "full_name": "강석진",
-        "role": "이사장",
-        "nationality": "대한민국",
+        "full_name": "박치형",
+        "role": "운영처장",
+        "nationality": "한국",
         "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김준성",
+      "properties": {
+        "full_name": "김준성",
+        "role": "상무",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "ESG 지원 업무협약식",
+      "properties": {
+        "date": "2023-10-14",
+        "type": "협약식",
+        "description": "동반위와 LG이노텍의 협력사 ESG 지원을 위한 업무협약 체결",
+        "location": "인천 송도 에이피텍 본사"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "ESG 지원 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14",
+        "description": "협력사 ESG 지원을 위한 동반위와 LG이노텍 간의 협약"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "ESG 평가지표 공동 개발",
+      "properties": {
+        "description": "전기·전자 산업에 특화된 ESG 평가지표를 공동 개발",
+        "start_date": "2023",
+        "status": "진행 중"
       }
     }
   ],
   "relations": [
     {
       "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
       "end_node": "ORGANIZATION",
       "properties": {
-        "type": "협력",
+        "type": "ESG 지원",
         "date": "2023-10-14"
       }
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
       "end_node": "PROJECT",
       "properties": {}
     },
@@ -109,24 +115,29 @@
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "ORGANIZATION",
+      "relationship": "ATTENDED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "ATTENDED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
       "properties": {
-        "position": "이사장",
-        "since": ""
+        "product": "핸드폰 카메라 모듈 제조설비"
       }
     }
   ]

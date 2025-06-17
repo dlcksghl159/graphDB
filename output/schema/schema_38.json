@@ -2,131 +2,99 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "셀트리온",
+      "name": "소상공인시장진흥공단",
       "properties": {
-        "full_name": "셀트리온",
-        "industry": "제약",
-        "headquarters": "대한민국",
+        "full_name": "소상공인시장진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "서울",
         "founded": "",
-        "ceo": "강석훈"
+        "ceo": "박성효"
       }
     },
     {
       "label": "COMPANY",
-      "name": "컨파마",
+      "name": "롯데웰푸드",
       "properties": {
-        "full_name": "컨파마",
-        "industry": "제약 유통",
-        "headquarters": "스페인",
+        "full_name": "롯데웰푸드",
+        "industry": "Food Manufacturing",
+        "headquarters": "",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "트룩시마",
+      "label": "PROJECT",
+      "name": "백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "category": "항암제",
-        "description": "성분명 리툭시맙",
+        "description": "백년가게·소공인의 오랜 경험과 비법에 롯데웰푸드의 식품 제조 기술력을 접목시켜 공동 상표 및 상품 개발을 진행",
+        "start_date": "2023-03",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무 협약",
+      "properties": {
+        "type": "Business Collaboration",
+        "date": "2023-03",
+        "description": "소진공과 롯데웰푸드 간의 업무 협약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론(Theory of SICSA)",
+      "properties": {
+        "category": "Food Product",
+        "description": "백년가게의 '우수 메뉴'와 접목해 상품화",
         "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "허쥬마",
-      "properties": {
-        "category": "항암제",
-        "description": "성분명 트라스투주맙",
-        "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "베그젤마",
-      "properties": {
-        "category": "항암제",
-        "description": "성분명 베바시주맙",
-        "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "스테키마",
-      "properties": {
-        "category": "자가면역질환 치료제",
-        "description": "성분명 우스테키누맙",
-        "launch_date": "2022-12",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "앱토즈마",
-      "properties": {
-        "category": "신규 제품",
-        "description": "성분명 토실리주맙",
-        "launch_date": "예정",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "스페인",
-      "properties": {
-        "type": "국가",
-        "country": "스페인",
-        "region": "유럽"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "포르투갈",
-      "properties": {
-        "type": "국가",
-        "country": "포르투갈",
-        "region": "유럽"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "카탈루냐주",
-      "properties": {
-        "type": "지역",
-        "country": "스페인",
-        "region": "유럽"
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "CSC 컨소시엄 입찰",
-      "properties": {
-        "date": "2023",
-        "type": "입찰",
-        "description": "카탈루냐주 25개 공립병원 의약품 공급",
-        "location": "카탈루냐주"
+        "company": "롯데웰푸드"
       }
     },
     {
       "label": "ORGANIZATION",
-      "name": "CSC",
+      "name": "백년가게",
       "properties": {
-        "type": "입찰 기관",
-        "description": "스페인 대형 입찰 기관",
-        "headquarters": "카탈루냐주"
+        "type": "Small Business",
+        "description": "음식점업을 하는 업력 30년 이상의 우수 소상인",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년소공인",
+      "properties": {
+        "type": "Small Manufacturer",
+        "description": "식품 제조업에서 15년 이상 업력을 가진 숙련된 소공인",
+        "headquarters": ""
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "type": "유통 협의",
-        "date": "2023-04"
+        "type": "Business Collaboration",
+        "date": "2023-03"
       }
     },
     {
@@ -136,34 +104,14 @@
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "공급자"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "LEADS",
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATES_IN",
       "end_node": "PROJECT",
       "properties": {}
     }

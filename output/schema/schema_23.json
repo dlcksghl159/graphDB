@@ -1,47 +1,111 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "사람인",
+      "label": "COMPANY",
+      "name": "센드버드",
       "properties": {
-        "type": "기업",
-        "description": "취업 정보 제공 및 인재 채용 플랫폼",
-        "headquarters": "대한민국"
+        "full_name": "Sendbird",
+        "industry": "AI 에이전트 플랫폼",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김동신"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "옴니프레젠트 AI 에이전트",
+      "properties": {
+        "category": "AI 에이전트",
+        "description": "프롬프트 없이 고객 행동을 예측해 응답하는 AI 에이전트",
+        "launch_date": "2023-10-14",
+        "company": "센드버드"
       }
     },
     {
       "label": "PERSON",
-      "name": "김혜미",
+      "name": "김동신",
       "properties": {
-        "full_name": "김혜미",
-        "role": "기자",
-        "nationality": "대한민국",
+        "full_name": "김동신",
+        "role": "CEO",
+        "nationality": "",
         "age": ""
       }
     },
     {
-      "label": "EVENT",
-      "name": "인생 이모작 설문조사",
+      "label": "TECHNOLOGY",
+      "name": "API 기반",
       "properties": {
-        "date": "2023년 10월 14일",
-        "type": "설문조사",
-        "description": "직장인 965명을 대상으로 한 인생 이모작 의향 조사",
-        "location": "대한민국"
+        "category": "기술",
+        "description": "기업의 기존 시스템과 유연하게 연동 가능",
+        "field": "소프트웨어"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "커머스",
+      "properties": {
+        "description": "전자 상거래 산업"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "핀테크",
+      "properties": {
+        "description": "금융 기술 산업"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "리테일",
+      "properties": {
+        "description": "소매 산업"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "CONDUCTED",
-      "end_node": "EVENT",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "REPORTED",
-      "end_node": "EVENT",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
     }
   ]
 }

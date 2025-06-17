@@ -1,126 +1,98 @@
 {
   "nodes": [
     {
+      "label": "COMPANY",
+      "name": "기술보증기금",
+      "properties": {
+        "full_name": "기술보증기금",
+        "industry": "금융",
+        "headquarters": "대한민국",
+        "founded": "1989",
+        "ceo": "이종배"
+      }
+    },
+    {
       "label": "ORGANIZATION",
-      "name": "중소벤처기업부",
+      "name": "인천지식재산센터",
       "properties": {
-        "type": "Government",
-        "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
-        "headquarters": "대한민국 서울"
+        "type": "지식재산",
+        "description": "지식재산 관련 지원 기관",
+        "headquarters": "인천"
       }
     },
     {
-      "label": "PERSON",
-      "name": "이순배",
+      "label": "PROJECT",
+      "name": "지식재산공제사업",
       "properties": {
-        "full_name": "이순배",
-        "role": "글로벌성장정책관",
-        "nationality": "대한민국",
-        "age": ""
+        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외 진출을 뒷받침하기 위한 금융제도",
+        "start_date": "2019",
+        "status": "활성화"
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "화장품",
+      "label": "AGREEMENT",
+      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {
-        "category": "Beauty",
-        "description": "K뷰티 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "자동차",
-      "properties": {
-        "category": "Automobile",
-        "description": "한국산 중고차",
-        "launch_date": "",
-        "company": ""
+        "type": "업무 협약",
+        "date": "2023-10-14",
+        "description": "지식재산공제사업 활성화를 위한 협력"
       }
     },
     {
       "label": "LOCATION",
-      "name": "미국",
+      "name": "인천",
       "properties": {
-        "type": "Country",
-        "country": "미국",
-        "region": "북아메리카"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "키르기스스탄",
-      "properties": {
-        "type": "Country",
-        "country": "키르기스스탄",
-        "region": "CIS"
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "미국 관세 정책",
-      "properties": {
-        "date": "2025-03",
-        "type": "Trade Policy",
-        "description": "미국의 철강 및 알루미늄에 대한 25% 관세 부과",
-        "location": "미국"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "인천광역시"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "PUBLISHED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2025-04-14"
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
       "end_node": "ORGANIZATION",
       "properties": {
-        "position": "글로벌성장정책관",
-        "since": ""
+        "type": "업무 협약",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
       "end_node": "LOCATION",
-      "properties": {
-        "amount": "18억4000만 달러",
-        "date": "2025-01"
-      }
+      "properties": {}
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
       "end_node": "LOCATION",
-      "properties": {
-        "amount": "17억4000만 달러",
-        "date": "2025-01"
-      }
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "AFFECTED",
-      "end_node": "PRODUCT",
-      "properties": {
-        "impact": "Negative",
-        "percentage": "18%"
-      }
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "AFFECTED",
-      "end_node": "PRODUCT",
-      "properties": {
-        "impact": "Negative",
-        "percentage": "7.6%"
-      }
+      "properties": {}
     }
   ]
 }

@@ -2,10 +2,10 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "한샘",
+      "name": "현대이지웰",
       "properties": {
-        "full_name": "한샘",
-        "industry": "가구",
+        "full_name": "현대이지웰",
+        "industry": "복지솔루션",
         "headquarters": "서울",
         "founded": "",
         "ceo": ""
@@ -13,97 +13,95 @@
     },
     {
       "label": "COMPANY",
-      "name": "현대리바트",
+      "name": "현대백화점그룹",
       "properties": {
-        "full_name": "현대리바트",
-        "industry": "가구",
+        "full_name": "현대백화점그룹",
+        "industry": "유통",
         "headquarters": "서울",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "INDUSTRY",
-      "name": "B2B",
+      "label": "ORGANIZATION",
+      "name": "한국중소벤처기업유통원",
       "properties": {
-        "description": "기업 간 거래"
+        "type": "정부기관",
+        "description": "중소벤처기업부 산하 기관",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "INDUSTRY",
-      "name": "B2C",
+      "label": "LOCATION",
+      "name": "경기도",
       "properties": {
-        "description": "기업과 소비자 간 거래"
+        "type": "지역",
+        "country": "대한민국",
+        "region": "경기"
       }
     },
     {
-      "label": "MARKET",
-      "name": "건설경기",
+      "label": "LOCATION",
+      "name": "안산",
       "properties": {
-        "description": "건설 산업의 경기 상황"
+        "type": "도시",
+        "country": "대한민국",
+        "region": "경기"
       }
     },
     {
       "label": "PROJECT",
-      "name": "오피스 인테리어 사업",
+      "name": "소상공인 온라인쇼핑몰 판매지원사업",
       "properties": {
-        "description": "오피스 기반의 인테리어 사업 확장",
-        "start_date": "2025",
-        "status": "확장 중"
+        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "start_date": "2023",
+        "status": "진행 중"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023",
+        "description": "다농마트 청년몰과의 협력"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "COMPETES_WITH",
+      "relationship": "SUBSIDIARY_OF",
       "end_node": "COMPANY",
       "properties": {
-        "market": "가구"
+        "parent_company": "현대백화점그룹"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "FOCUSES_ON",
-      "end_node": "INDUSTRY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "strategy": "수익성 중심 경영"
+        "type": "지원사업",
+        "date": "2023"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "FOCUSES_ON",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "strategy": "수익성 중심 경영"
-      }
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "AFFECTED_BY",
-      "end_node": "MARKET",
-      "properties": {
-        "impact": "매출 감소"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "AFFECTED_BY",
-      "end_node": "MARKET",
-      "properties": {
-        "impact": "매출 감소"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
+      "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "PROJECT",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

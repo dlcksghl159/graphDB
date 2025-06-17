@@ -2,63 +2,92 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "센드버드",
+      "name": "삼성바이오로직스",
       "properties": {
-        "full_name": "Sendbird",
-        "industry": "AI 에이전트 플랫폼",
-        "headquarters": "서울",
+        "full_name": "삼성바이오로직스",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
         "founded": "",
-        "ceo": "김동신"
+        "ceo": ""
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "옴니프레젠트 AI 에이전트",
+      "label": "COMPANY",
+      "name": "셀트리온",
       "properties": {
-        "category": "AI 에이전트",
-        "description": "프롬프트 없이 고객 행동을 예측하여 응답하는 AI 에이전트",
-        "launch_date": "2023-10-14",
-        "company": "센드버드"
+        "full_name": "셀트리온",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
       "label": "PERSON",
-      "name": "김동신",
+      "name": "도널드 트럼프",
       "properties": {
-        "full_name": "김동신",
-        "role": "대표",
-        "nationality": "",
+        "full_name": "도널드 트럼프",
+        "role": "Former President of the United States",
+        "nationality": "American",
         "age": ""
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "API 기반",
+      "label": "PRODUCT",
+      "name": "램시마",
       "properties": {
-        "category": "기술",
-        "description": "기업의 기존 시스템과 유연하게 연동 가능",
-        "field": "소프트웨어"
+        "category": "Biosimilar",
+        "description": "A biosimilar product",
+        "launch_date": "Before 2019",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "INDUSTRY",
-      "name": "커머스",
+      "label": "PRODUCT",
+      "name": "트룩시마",
       "properties": {
-        "description": "상품 및 서비스 판매 산업"
+        "category": "Biosimilar",
+        "description": "A biosimilar product",
+        "launch_date": "Before 2019",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "INDUSTRY",
-      "name": "핀테크",
+      "label": "PRODUCT",
+      "name": "옴리클로",
       "properties": {
-        "description": "금융 기술 산업"
+        "category": "Biosimilar",
+        "description": "A new biosimilar product",
+        "launch_date": "2023",
+        "company": "셀트리온"
       }
     },
     {
-      "label": "INDUSTRY",
-      "name": "리테일",
+      "label": "PRODUCT",
+      "name": "아이덴젤트",
       "properties": {
-        "description": "소매업 산업"
+        "category": "Biosimilar",
+        "description": "A new biosimilar product",
+        "launch_date": "2023",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "POLICY",
+      "name": "의약품 관세",
+      "properties": {
+        "type": "Tariff",
+        "description": "Tariff on pharmaceuticals",
+        "date": "2023"
+      }
+    },
+    {
+      "label": "POLICY",
+      "name": "약가인하 정책",
+      "properties": {
+        "type": "Price Reduction",
+        "description": "Policy to reduce drug prices",
+        "date": "2023"
       }
     }
   ],
@@ -70,42 +99,46 @@
       "properties": {}
     },
     {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "USES",
-      "end_node": "TECHNOLOGY",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "date": "2023-10-14"
-      }
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "date": "2023-10-14"
-      }
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "date": "2023-10-14"
-      }
+      "relationship": "AFFECTED_BY",
+      "end_node": "POLICY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "POLICY",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "IMPLEMENTED",
+      "end_node": "POLICY",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "IMPLEMENTED",
+      "end_node": "POLICY",
+      "properties": {}
     }
   ]
 }

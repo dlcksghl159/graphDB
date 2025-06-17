@@ -1,32 +1,10 @@
 {
   "nodes": [
     {
-      "label": "COMPANY",
-      "name": "엘리스그룹",
-      "properties": {
-        "full_name": "엘리스그룹",
-        "industry": "AI 교육",
-        "headquarters": "",
-        "founded": "",
-        "ceo": "김재원"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "파인디",
-      "properties": {
-        "full_name": "파인디",
-        "industry": "IT 채용 플랫폼",
-        "headquarters": "일본",
-        "founded": "2016",
-        "ceo": "야마다 유이치로"
-      }
-    },
-    {
       "label": "PERSON",
-      "name": "김재원",
+      "name": "윤승현",
       "properties": {
-        "full_name": "김재원",
+        "full_name": "윤승현",
         "role": "대표",
         "nationality": "한국",
         "age": ""
@@ -34,52 +12,223 @@
     },
     {
       "label": "PERSON",
-      "name": "야마다 유이치로",
+      "name": "이용원",
       "properties": {
-        "full_name": "야마다 유이치로",
-        "role": "대표",
-        "nationality": "일본",
+        "full_name": "이용원",
+        "role": "최고디자인책임자",
+        "nationality": "한국",
         "age": ""
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "엘리스그룹-파인디 업무 협약",
+      "label": "PERSON",
+      "name": "스콧 비튼",
       "properties": {
-        "type": "업무 협약",
-        "date": "2023-10-14",
-        "description": "한·일 B2B 비즈니스 확장을 위한 협력"
+        "full_name": "스콧 비튼",
+        "role": "최고기술책임자",
+        "nationality": "",
+        "age": ""
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "AI 플랫폼",
+      "label": "PERSON",
+      "name": "유동완",
       "properties": {
-        "category": "인공지능",
-        "description": "AI 플랫폼 시장 확장 및 서비스 개발",
-        "field": "AI"
+        "full_name": "유동완",
+        "role": "최고제품책임자",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "윤반석",
+      "properties": {
+        "full_name": "윤반석",
+        "role": "최고전략책임자",
+        "nationality": "한국",
+        "age": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "에이드로",
+      "properties": {
+        "full_name": "에이드로",
+        "industry": "자동차",
+        "headquarters": "한국",
+        "founded": "",
+        "ceo": "윤승현"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "테슬라",
+      "properties": {
+        "full_name": "Tesla, Inc.",
+        "industry": "자동차",
+        "headquarters": "미국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "현대",
+      "properties": {
+        "full_name": "현대자동차",
+        "industry": "자동차",
+        "headquarters": "한국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "기아",
+      "properties": {
+        "full_name": "기아자동차",
+        "industry": "자동차",
+        "headquarters": "한국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "BMW",
+      "properties": {
+        "full_name": "BMW AG",
+        "industry": "자동차",
+        "headquarters": "독일",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
       "label": "PRODUCT",
-      "name": "파인디 팀플러스",
+      "name": "바디킷",
       "properties": {
-        "category": "생산성 측정 서비스",
-        "description": "엔지니어 조직의 생산성 측정 서비스",
+        "category": "자동차 부품",
+        "description": "공기역학 기반의 바디킷",
         "launch_date": "",
-        "company": "파인디"
+        "company": "에이드로"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "전산유체역학",
+      "properties": {
+        "category": "시뮬레이션",
+        "description": "공기역학 최적화 기술",
+        "field": "공학"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AOS",
+      "properties": {
+        "category": "소프트웨어",
+        "description": "에어로 옵티마이제이션 소프트웨어",
+        "field": "자동차 설계"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "국가",
+        "country": "미국",
+        "region": "북미"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "독일",
+      "properties": {
+        "type": "국가",
+        "country": "독일",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "국가",
+        "country": "일본",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "말레이시아",
+      "properties": {
+        "type": "국가",
+        "country": "말레이시아",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "싱가포르",
+      "properties": {
+        "type": "국가",
+        "country": "싱가포르",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "영국",
+      "properties": {
+        "type": "국가",
+        "country": "영국",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "국가",
+        "country": "태국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "완성차 제작",
+      "properties": {
+        "description": "공기역학 기반의 완성차 제작",
+        "start_date": "",
+        "status": "계획 중"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "일본 총판계약",
+      "properties": {
+        "type": "총판계약",
+        "date": "2023-01",
+        "description": "일본과의 총판계약 체결"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
       "end_node": "COMPANY",
       "properties": {
-        "type": "업무 협약",
-        "date": "2023-10-14"
+        "since": ""
       }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
@@ -89,24 +238,11 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
+      "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "since": ""
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
+        "type": "협업",
+        "date": ""
       }
     },
     {
@@ -117,8 +253,20 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

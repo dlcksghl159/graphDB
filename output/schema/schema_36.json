@@ -1,179 +1,154 @@
 {
   "nodes": [
     {
-      "label": "COMPANY",
-      "name": "셀트리온",
+      "label": "PERSON",
+      "name": "박미경",
       "properties": {
-        "full_name": "셀트리온",
-        "industry": "Biotechnology",
-        "headquarters": "South Korea",
-        "founded": "",
-        "ceo": ""
+        "full_name": "박미경",
+        "role": "제7대 하이서울기업협회장",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "컨파마",
+      "name": "포시에스",
       "properties": {
-        "full_name": "Kern Pharma",
-        "industry": "Pharmaceutical",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "트룩시마",
-      "properties": {
-        "category": "Anticancer",
-        "description": "성분명 리툭시맙",
-        "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "허쥬마",
-      "properties": {
-        "category": "Anticancer",
-        "description": "성분명 트라스투주맙",
-        "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "베그젤마",
-      "properties": {
-        "category": "Anticancer",
-        "description": "성분명 베바시주맙",
-        "launch_date": "",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "스테키마",
-      "properties": {
-        "category": "Autoimmune",
-        "description": "성분명 우스테키누맙",
-        "launch_date": "2022-12",
-        "company": "셀트리온"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "스페인",
-      "properties": {
-        "type": "Country",
-        "country": "Spain",
-        "region": "Europe"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "포르투갈",
-      "properties": {
-        "type": "Country",
-        "country": "Portugal",
-        "region": "Europe"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "카탈루냐주",
-      "properties": {
-        "type": "Region",
-        "country": "Spain",
-        "region": "Catalonia"
+        "full_name": "포시에스",
+        "industry": "전자문서",
+        "headquarters": "서울 강남구",
+        "founded": "1993",
+        "ceo": "박미경"
       }
     },
     {
       "label": "ORGANIZATION",
-      "name": "CSC",
+      "name": "하이서울기업협회",
       "properties": {
-        "type": "Bidding Agency",
-        "description": "스페인 대형 입찰 기관",
-        "headquarters": "Catalonia, Spain"
+        "type": "기업협회",
+        "description": "서울시와 서울산업진흥원이 지원하는 우수 중소기업 네트워크",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "PERSON",
-      "name": "강석훈",
+      "label": "ORGANIZATION",
+      "name": "서울산업진흥원",
       "properties": {
-        "full_name": "강석훈",
-        "role": "법인장",
-        "nationality": "Korean",
-        "age": ""
+        "type": "산업진흥원",
+        "description": "",
+        "headquarters": "서울"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "서울",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "서울특별시"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "국가",
+        "country": "인도네시아",
+        "region": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AI",
+      "properties": {
+        "category": "인공지능",
+        "description": "AI 기술 활용",
+        "field": "기술"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "AI 분과",
+      "properties": {
+        "description": "AI 교육 및 활용 사례 공유",
+        "start_date": "2023",
+        "status": "진행 중"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전자동의서",
+      "properties": {
+        "category": "전자문서",
+        "description": "병원에서 사용하는 전자동의서",
+        "launch_date": "2023",
+        "company": "포시에스"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "셀트리온",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "컨파마",
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
       "properties": {
-        "type": "Distribution",
-        "date": ""
+        "since": "2023"
       }
     },
     {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "트룩시마",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "허쥬마",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "베그젤마",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "스테키마",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "스페인",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "포르투갈",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "SUPPLIED",
-      "end_node": "CSC",
-      "properties": {
-        "products": [
-          "트룩시마",
-          "허쥬마"
-        ],
-        "duration": "2023-2029"
-      }
-    },
-    {
-      "start_node": "강석훈",
+      "start_node": "PERSON",
       "relationship": "WORKS_FOR",
-      "end_node": "셀트리온",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "position": "법인장",
-        "since": ""
+        "position": "협회장",
+        "since": "2023"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "협력",
+        "date": "2023"
       }
     }
   ]

@@ -2,92 +2,87 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "현대이지웰",
+      "name": "엠투아이",
       "properties": {
-        "full_name": "현대이지웰",
-        "industry": "복지솔루션",
-        "headquarters": "서울",
+        "full_name": "엠투아이",
+        "industry": "디지털전환 솔루션",
+        "headquarters": "",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "현대백화점그룹",
+      "name": "벰로보틱스",
       "properties": {
-        "full_name": "현대백화점그룹",
-        "industry": "유통",
-        "headquarters": "서울",
+        "full_name": "벰로보틱스",
+        "industry": "산업용 물류로봇",
+        "headquarters": "",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "한국중소벤처기업유통원",
+      "label": "PRODUCT",
+      "name": "로봇 제어기",
       "properties": {
-        "type": "정부기관",
-        "description": "중소벤처기업부 산하 기관",
-        "headquarters": "서울"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "경기도",
-      "properties": {
-        "type": "지역",
-        "country": "대한민국",
-        "region": "수도권"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "안산",
-      "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "경기도"
+        "category": "로봇",
+        "description": "AMR/AGV의 두뇌 역할",
+        "launch_date": "",
+        "company": ""
       }
     },
     {
       "label": "PROJECT",
-      "name": "소상공인 온라인쇼핑몰 판매지원사업",
+      "name": "물류로봇 프로젝트",
       "properties": {
-        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "description": "AMR/AGV 프로젝트 공동 수행",
         "start_date": "",
         "status": "진행 중"
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "다농마트 청년몰 이용 활성화를 위한 업무협약",
+      "label": "INVESTMENT",
+      "name": "엠투아이의 벰로보틱스 투자",
       "properties": {
-        "type": "업무협약",
+        "amount": "12억원",
         "date": "",
-        "description": "다농마트 청년몰 이용 활성화를 위한 협력"
+        "type": "지분투자"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "디지털전환(DX) 솔루션",
+      "properties": {
+        "category": "디지털전환",
+        "description": "AI 자율 제조 시장 선도",
+        "field": "제조"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "위치측정 및 주행제어 기술",
+      "properties": {
+        "category": "로봇",
+        "description": "물류로봇의 원천기술",
+        "field": "물류"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "SUBSIDIARY_OF",
-      "end_node": "COMPANY",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
       "relationship": "PARTNERED_WITH",
-      "end_node": "ORGANIZATION",
+      "end_node": "COMPANY",
       "properties": {
-        "type": "지원사업",
-        "date": ""
+        "type": "공동개발 및 프로젝트 수행",
+        "date": "2023-10-14"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "relationship": "DEVELOPS",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
@@ -98,14 +93,23 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "relationship": "INVESTED_IN",
+      "end_node": "COMPANY",
+      "properties": {
+        "amount": "12억원",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     }
   ]

@@ -4,8 +4,8 @@
       "label": "ORGANIZATION",
       "name": "중소벤처기업진흥공단",
       "properties": {
-        "type": "공공기관",
-        "description": "중소벤처기업의 지원을 담당하는 공공기관",
+        "type": "Government Agency",
+        "description": "중소벤처기업 지원 기관",
         "headquarters": "대한민국"
       }
     },
@@ -13,52 +13,25 @@
       "label": "ORGANIZATION",
       "name": "부산항만공사",
       "properties": {
-        "type": "공공기관",
-        "description": "부산항의 운영 및 관리 담당",
+        "type": "Government Agency",
+        "description": "부산항 관리 및 운영 기관",
         "headquarters": "부산, 대한민국"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "스마트트레이드허브",
-      "properties": {
-        "description": "중소기업 전용 항공물류센터",
-        "start_date": "N/A",
-        "status": "운영 중"
-      }
-    },
-    {
       "label": "LOCATION",
-      "name": "부산",
+      "name": "부산항만공사 본사",
       "properties": {
-        "type": "도시",
+        "type": "Office",
         "country": "대한민국",
-        "region": "영남"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인천",
-      "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "수도권"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "여수 광양",
-      "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "전라남도"
+        "region": "부산"
       }
     },
     {
       "label": "LOCATION",
       "name": "로스앤젤레스",
       "properties": {
-        "type": "도시",
+        "type": "City",
         "country": "미국",
         "region": "캘리포니아"
       }
@@ -67,22 +40,53 @@
       "label": "LOCATION",
       "name": "롱비치",
       "properties": {
-        "type": "도시",
+        "type": "City",
         "country": "미국",
         "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "수출 중소벤처기업 글로벌 물류 지원",
+      "properties": {
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 프로젝트",
+        "start_date": "2023-10-14",
+        "status": "Ongoing"
       }
     },
     {
       "label": "AGREEMENT",
       "name": "중진공-BPA 업무협약",
       "properties": {
-        "type": "업무협약",
+        "type": "MOU",
         "date": "2023-10-14",
         "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "강석진",
+      "properties": {
+        "full_name": "강석진",
+        "role": "이사장",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
     {
       "start_node": "ORGANIZATION",
       "relationship": "SIGNED",
@@ -103,39 +107,29 @@
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
+      "start_node": "LOCATION",
       "relationship": "LOCATED_IN",
       "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
+      "start_node": "LOCATION",
       "relationship": "LOCATED_IN",
       "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "since": ""
+      }
     }
   ]
 }

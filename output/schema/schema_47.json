@@ -2,33 +2,70 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "락앤락",
+      "name": "파세코",
       "properties": {
-        "full_name": "락앤락",
-        "industry": "생활용품",
-        "headquarters": "서울",
+        "full_name": "파세코",
+        "industry": "가전",
+        "headquarters": "경기 안산시 단원구",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "PRODUCT",
-      "name": "풀히트 푸드워머",
+      "name": "6세대 창문형 에어컨",
       "properties": {
-        "category": "테이블웨어",
-        "description": "바닥 전체에 열선이 내장되어 10초 내 예열되는 푸드워머",
-        "launch_date": "2023-10-14",
-        "company": "락앤락"
+        "category": "에어컨",
+        "description": "호환성을 높인 신형 창문형 에어컨",
+        "launch_date": "2023-09-09",
+        "company": "파세코"
       }
     },
     {
-      "label": "EVENT",
-      "name": "제품 출시 기념 프로모션",
+      "label": "PERSON",
+      "name": "김상우",
       "properties": {
-        "date": "2023-10-14 to 2023-10-21",
-        "type": "프로모션",
-        "description": "락앤락몰에서 제품 출시를 기념하여 진행되는 프로모션",
-        "location": "온라인"
+        "full_name": "김상우",
+        "role": "리테일사업부 상무",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "박치호",
+      "properties": {
+        "full_name": "박치호",
+        "role": "기술연구소 팀장",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AI 에너지 세이빙",
+      "properties": {
+        "category": "에너지 절감 기술",
+        "description": "주위 온도를 감지하고 방의 크기와 자주 설정하는 희망 온도 등을 학습해 컴프레서와 풍속 단수를 자동 조절",
+        "field": "AI"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "환기 시스템",
+      "properties": {
+        "category": "환기 기술",
+        "description": "냉방모드를 일정 시간 가동하면 자동으로 환기가 시작되는 시스템",
+        "field": "HVAC"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기 안산시 단원구",
+      "properties": {
+        "type": "시",
+        "country": "대한민국",
+        "region": "경기도"
       }
     }
   ],
@@ -41,8 +78,38 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "리테일사업부 상무",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "기술연구소 팀장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     }
   ]

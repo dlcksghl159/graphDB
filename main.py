@@ -1,441 +1,303 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-enhanced_main_pipeline.py
-========================
-향상된 지식 그래프 구축 파이프라인 통합 실행 스크립트
+main.py - 통합 지식 그래프 RAG 파이프라인
+=====================================
+app.py에서 받은 purpose와 output_root를 사용하여 전체 파이프라인 실행
 
-PDF 분석을 바탕으로 개선된 전체 파이프라인을 순차적으로 실행합니다.
-각 단계별 품질 검증과 성능 모니터링을 포함합니다.
+실행 순서:
+1. 문서 전처리 (documents → chunked_document)
+2. 스키마 추출 (schema_multi.py)
+3. 노드 추출 (extract_node_kr.py)
+4. 관계 추출 (extract_relation_kr.py)
+5. 중복 제거 (deduplication.py)
+6. Cypher 생성 (cypher.py)
+7. Neo4j 적재 (send_cypher.py)
 """
 
 import os
 import sys
-import time
-import json
 import argparse
+import time
+import shutil
 from pathlib import Path
-from typing import Dict, List, Any
-from datetime import datetime
+from typing import List
+import subprocess
 
-# 개선된 모듈들 import
-try:
-    from enhanced_schema_multi import main as extract_enhanced_schema
-    from enhanced_extract_node_kr import main as extract_enhanced_nodes
-    from enhanced_extract_relation_kr import main as extract_enhanced_relations
-    from enhanced_deduplication_validation import main_enhanced_deduplication
-    from cypher import main as generate_cypher
-    from send_cypher import main as send_cypher
-    from enhanced_rag import enhanced_answer, analyze_entity_connections
-except ImportError as e:
-    print(f"⚠️ 모듈 import 오류: {e}")
-    print("개선된 모듈 파일들이 같은 디렉토리에 있는지 확인하세요.")
-    sys.exit(1)
+# Windows 환경에서 UTF-8 출력 설정
+if sys.platform.startswith('win'):
+    import locale
+    import codecs
+    # stdout을 UTF-8로 재설정
+    if sys.stdout.encoding != 'utf-8':
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+        sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
-class PipelineMonitor:
-    """파이프라인 실행 모니터링 클래스"""
+def setup_environment(output_root: str, purpose: str):
+    """환경 변수 설정 및 디렉토리 구조 생성"""
+    # 환경 변수 설정
+    os.environ["OUTPUT_ROOT"] = output_root
+    os.environ["PURPOSE"] = purpose
     
-    def __init__(self, output_root: str):
-        self.output_root = Path(output_root)
-        self.start_time = time.time()
-        self.steps = {}
-        self.log_file = self.output_root / "pipeline_log.json"
-        
-    def start_step(self, step_name: str, description: str = ""):
-        """단계 시작 기록"""
-        self.steps[step_name] = {
-            "description": description,
-            "start_time": time.time(),
-            "end_time": None,
-            "duration": 0,
-            "status": "running",
-            "metrics": {},
-            "errors": []
-        }
-        print(f"🚀 {step_name}: {description}")
-        
-    def end_step(self, step_name: str, status: str = "success", metrics: Dict = None, errors: List = None):
-        """단계 완료 기록"""
-        if step_name in self.steps:
-            self.steps[step_name]["end_time"] = time.time()
-            self.steps[step_name]["duration"] = self.steps[step_name]["end_time"] - self.steps[step_name]["start_time"]
-            self.steps[step_name]["status"] = status
-            self.steps[step_name]["metrics"] = metrics or {}
-            self.steps[step_name]["errors"] = errors or []
-            
-            duration = self.steps[step_name]["duration"]
-            status_emoji = "✅" if status == "success" else "❌" if status == "error" else "⚠️"
-            print(f"{status_emoji} {step_name} 완료 ({duration:.1f}초)")
-            
-            if metrics:
-                for key, value in metrics.items():
-                    print(f"   📊 {key}: {value}")
+    # 필요한 디렉토리들 생성
+    directories = [
+        f"{output_root}/documents",
+        f"{output_root}/chunked_document", 
+        f"{output_root}/schema",
+        f"{output_root}/result",
+    ]
     
-    def save_log(self):
-        """로그 저장"""
-        log_data = {
-            "pipeline_start": self.start_time,
-            "pipeline_end": time.time(),
-            "total_duration": time.time() - self.start_time,
-            "timestamp": datetime.now().isoformat(),
-            "steps": self.steps
-        }
-        
-        with open(self.log_file, "w", encoding="utf-8") as f:
-            json.dump(log_data, f, ensure_ascii=False, indent=2)
-        
-        print(f"📝 실행 로그 저장: {self.log_file}")
+    for dir_path in directories:
+        Path(dir_path).mkdir(parents=True, exist_ok=True)
+    
+    print(f"=== 환경 설정 완료 ===")
+    print(f"   - OUTPUT_ROOT: {output_root}")
+    print(f"   - PURPOSE: {purpose}")
 
-def validate_environment():
-    """환경 설정 검증"""
-    required_env_vars = ["OPENAI_API_KEY", "NEO4J_URI", "NEO4J_USERNAME", "NEO4J_PASSWORD"]
-    missing_vars = []
+def preprocess_documents(output_root: str) -> int:
+    """documents 폴더의 파일들을 chunked_document로 복사/전처리"""
+    documents_dir = Path(output_root) / "documents"
+    chunked_dir = Path(output_root) / "chunked_document"
     
-    for var in required_env_vars:
-        if not os.getenv(var):
-            missing_vars.append(var)
+    # 기존 chunked_document 내용 삭제
+    if chunked_dir.exists():
+        shutil.rmtree(chunked_dir)
+    chunked_dir.mkdir(parents=True, exist_ok=True)
     
-    if missing_vars:
-        print(f"❌ 필수 환경 변수가 설정되지 않았습니다: {missing_vars}")
-        return False
+    # documents 폴더에서 파일 찾기
+    document_files = []
+    for ext in ['*.txt', '*.md', '*.doc', '*.docx', '*.pdf']:
+        document_files.extend(documents_dir.glob(ext))
     
-    print("✅ 환경 설정 검증 완료")
-    return True
-
-def check_input_files(chunks_dir: Path) -> Dict[str, Any]:
-    """입력 파일 검증"""
-    if not chunks_dir.exists():
-        return {"status": "error", "message": f"청크 디렉토리가 없습니다: {chunks_dir}"}
+    if not document_files:
+        raise FileNotFoundError(f"DOCUMENTS 폴더 {documents_dir}에서 문서를 찾을 수 없습니다.")
     
-    chunk_files = list(chunks_dir.glob("chunked_output_*.txt"))
-    if not chunk_files:
-        return {"status": "error", "message": "청크 파일이 없습니다"}
-    
-    total_size = sum(f.stat().st_size for f in chunk_files)
-    
-    return {
-        "status": "success",
-        "file_count": len(chunk_files),
-        "total_size_mb": total_size / (1024 * 1024),
-        "files": [f.name for f in chunk_files[:5]]  # 처음 5개만
-    }
-
-def analyze_extraction_quality(result_file: Path) -> Dict[str, Any]:
-    """추출 품질 분석"""
-    if not result_file.exists():
-        return {"status": "error", "message": "결과 파일이 없습니다"}
-    
-    try:
-        with open(result_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        
-        nodes = data.get("nodes", [])
-        relations = data.get("relations", [])
-        
-        # 노드 분석
-        node_types = {}
-        nodes_with_aliases = 0
-        nodes_with_properties = 0
-        
-        for node in nodes:
-            label = node.get("label", "UNKNOWN")
-            node_types[label] = node_types.get(label, 0) + 1
-            
-            props = node.get("properties", {})
-            if "aliases" in props:
-                nodes_with_aliases += 1
-            if len(props) > 0:
-                nodes_with_properties += 1
-        
-        # 관계 분석
-        relation_types = {}
-        for rel in relations:
-            rel_type = rel.get("relationship", "UNKNOWN")
-            relation_types[rel_type] = relation_types.get(rel_type, 0) + 1
-        
-        # 연결성 분석
-        referenced_nodes = set()
-        for rel in relations:
-            referenced_nodes.add(rel.get("start_node"))
-            referenced_nodes.add(rel.get("end_node"))
-        
-        connectivity = len(referenced_nodes) / len(nodes) if nodes else 0
-        
-        return {
-            "status": "success",
-            "total_nodes": len(nodes),
-            "total_relations": len(relations),
-            "node_types": node_types,
-            "relation_types": relation_types,
-            "nodes_with_aliases": nodes_with_aliases,
-            "nodes_with_properties": nodes_with_properties,
-            "connectivity_score": connectivity,
-            "orphaned_nodes": len(nodes) - len(referenced_nodes)
-        }
-    
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
-
-def run_enhanced_pipeline(purpose: str = "뉴스 기사 분석", skip_steps: List[str] = None):
-    """향상된 파이프라인 실행"""
-    
-    skip_steps = skip_steps or []
-    OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")
-    monitor = PipelineMonitor(OUTPUT_ROOT)
-    
-    # 환경 검증
-    if not validate_environment():
-        return False
-    
-    # 입력 파일 검증
-    chunks_dir = Path(OUTPUT_ROOT) / "chunked_document"
-    input_check = check_input_files(chunks_dir)
-    if input_check["status"] == "error":
-        print(f"❌ 입력 파일 검증 실패: {input_check['message']}")
-        return False
-    
-    print(f"📁 입력 파일: {input_check['file_count']}개 ({input_check['total_size_mb']:.1f}MB)")
-    
-    try:
-        # 1단계: 향상된 스키마 추출
-        if "schema" not in skip_steps:
-            monitor.start_step("enhanced_schema", "확장된 스키마 추출")
-            try:
-                extract_enhanced_schema(purpose)
-                
-                # 스키마 품질 검증
-                schema_file = Path(OUTPUT_ROOT) / "schema" / "schema.json"
-                if schema_file.exists():
-                    with open(schema_file, "r", encoding="utf-8") as f:
-                        schema_data = json.load(f)
-                    
-                    schema_metrics = {
-                        "node_types": len(schema_data.get("nodes", [])),
-                        "relation_types": len(schema_data.get("relations", [])),
-                        "file_size_kb": schema_file.stat().st_size / 1024
-                    }
-                    monitor.end_step("enhanced_schema", "success", schema_metrics)
-                else:
-                    monitor.end_step("enhanced_schema", "error", errors=["스키마 파일 생성 실패"])
-                    
-            except Exception as e:
-                monitor.end_step("enhanced_schema", "error", errors=[str(e)])
-                raise
-        
-        # 2단계: 향상된 노드 추출
-        if "nodes" not in skip_steps:
-            monitor.start_step("enhanced_nodes", "향상된 엔티티 추출 (NER 폴백 포함)")
-            try:
-                extract_enhanced_nodes(purpose)
-                
-                # 노드 품질 분석
-                result_file = Path(OUTPUT_ROOT) / "result" / "result.json"
-                node_quality = analyze_extraction_quality(result_file)
-                if node_quality["status"] == "success":
-                    monitor.end_step("enhanced_nodes", "success", node_quality)
-                else:
-                    monitor.end_step("enhanced_nodes", "warning", errors=[node_quality["message"]])
-                    
-            except Exception as e:
-                monitor.end_step("enhanced_nodes", "error", errors=[str(e)])
-                raise
-        
-        # 3단계: 향상된 관계 추출
-        if "relations" not in skip_steps:
-            monitor.start_step("enhanced_relations", "확장된 관계 추출 (패턴 매칭 + 크로스청크)")
-            try:
-                extract_enhanced_relations(purpose)
-                
-                # 관계 품질 분석
-                enhanced_result_file = Path(OUTPUT_ROOT) / "result" / "result_enhanced.json"
-                if enhanced_result_file.exists():
-                    relation_quality = analyze_extraction_quality(enhanced_result_file)
-                    if relation_quality["status"] == "success":
-                        monitor.end_step("enhanced_relations", "success", relation_quality)
-                    else:
-                        monitor.end_step("enhanced_relations", "warning", errors=[relation_quality["message"]])
-                else:
-                    monitor.end_step("enhanced_relations", "error", errors=["관계 추출 파일 생성 실패"])
-                    
-            except Exception as e:
-                monitor.end_step("enhanced_relations", "error", errors=[str(e)])
-                raise
-        
-        # 4단계: 향상된 중복 제거 및 검증
-        if "deduplication" not in skip_steps:
-            monitor.start_step("enhanced_dedup", "지능형 중복 제거 및 품질 검증")
-            try:
-                result_file = Path(OUTPUT_ROOT) / "result" / "result.json"
-                
-                # 중복 제거 전 품질 측정
-                pre_quality = analyze_extraction_quality(result_file)
-                
-                main_enhanced_deduplication(str(result_file))
-                
-                # 중복 제거 후 품질 측정
-                post_quality = analyze_extraction_quality(result_file)
-                
-                if pre_quality["status"] == "success" and post_quality["status"] == "success":
-                    dedup_metrics = {
-                        "nodes_before": pre_quality["total_nodes"],
-                        "nodes_after": post_quality["total_nodes"],
-                        "relations_before": pre_quality["total_relations"],
-                        "relations_after": post_quality["total_relations"],
-                        "connectivity_improvement": post_quality["connectivity_score"] - pre_quality["connectivity_score"],
-                        "orphaned_reduction": pre_quality["orphaned_nodes"] - post_quality["orphaned_nodes"]
-                    }
-                    monitor.end_step("enhanced_dedup", "success", dedup_metrics)
-                else:
-                    monitor.end_step("enhanced_dedup", "error", errors=["품질 분석 실패"])
-                    
-            except Exception as e:
-                monitor.end_step("enhanced_dedup", "error", errors=[str(e)])
-                raise
-        
-        # 5단계: Cypher 스크립트 생성
-        if "cypher" not in skip_steps:
-            monitor.start_step("cypher_generation", "Neo4j Cypher 스크립트 생성")
-            try:
-                generate_cypher()
-                
-                cypher_file = Path(OUTPUT_ROOT) / "graph.cypher"
-                if cypher_file.exists():
-                    cypher_metrics = {
-                        "file_size_kb": cypher_file.stat().st_size / 1024,
-                        "line_count": len(cypher_file.read_text(encoding="utf-8").splitlines())
-                    }
-                    monitor.end_step("cypher_generation", "success", cypher_metrics)
-                else:
-                    monitor.end_step("cypher_generation", "error", errors=["Cypher 파일 생성 실패"])
-                    
-            except Exception as e:
-                monitor.end_step("cypher_generation", "error", errors=[str(e)])
-                raise
-        
-        # 6단계: Neo4j 데이터베이스 로딩
-        if "neo4j" not in skip_steps:
-            monitor.start_step("neo4j_loading", "Neo4j 데이터베이스 로딩 및 임베딩")
-            try:
-                # Neo4j 로딩은 별도 함수가 없으므로 send_cypher 모듈 실행
-                import subprocess
-                result = subprocess.run([sys.executable, "send_cypher.py"], 
-                                      capture_output=True, text=True)
-                
-                if result.returncode == 0:
-                    neo4j_metrics = {
-                        "loading_success": True,
-                        "stdout_lines": len(result.stdout.splitlines()),
-                        "stderr_lines": len(result.stderr.splitlines())
-                    }
-                    monitor.end_step("neo4j_loading", "success", neo4j_metrics)
-                else:
-                    monitor.end_step("neo4j_loading", "error", errors=[result.stderr])
-                    
-            except Exception as e:
-                monitor.end_step("neo4j_loading", "error", errors=[str(e)])
-                raise
-        
-        # 최종 품질 리포트
-        monitor.start_step("final_report", "최종 품질 리포트 생성")
+    # 파일들을 chunked_output_X.txt 형태로 복사
+    chunk_count = 0
+    for i, doc_file in enumerate(document_files):
         try:
-            final_result_file = Path(OUTPUT_ROOT) / "result" / "result.json"
-            final_quality = analyze_extraction_quality(final_result_file)
-            
-            if final_quality["status"] == "success":
-                print("\n" + "="*60)
-                print("📊 최종 지식 그래프 품질 리포트")
-                print("="*60)
-                print(f"총 노드: {final_quality['total_nodes']:,}개")
-                print(f"총 관계: {final_quality['total_relations']:,}개")
-                print(f"연결성 점수: {final_quality['connectivity_score']:.3f}")
-                print(f"고립된 노드: {final_quality['orphaned_nodes']}개")
-                print(f"별칭 보유 노드: {final_quality['nodes_with_aliases']}개")
-                print(f"속성 보유 노드: {final_quality['nodes_with_properties']}개")
-                
-                print("\n📈 노드 타입 분포:")
-                for node_type, count in sorted(final_quality['node_types'].items(), key=lambda x: x[1], reverse=True):
-                    print(f"   {node_type}: {count}개")
-                
-                print("\n📈 관계 타입 분포 (상위 10개):")
-                sorted_relations = sorted(final_quality['relation_types'].items(), key=lambda x: x[1], reverse=True)
-                for rel_type, count in sorted_relations[:10]:
-                    print(f"   {rel_type}: {count}개")
-                
-                monitor.end_step("final_report", "success", final_quality)
+            # 텍스트 파일 읽기
+            if doc_file.suffix.lower() in ['.txt', '.md']:
+                content = doc_file.read_text(encoding='utf-8')
             else:
-                monitor.end_step("final_report", "error", errors=[final_quality["message"]])
+                # 다른 형태의 문서는 간단히 파일명만 저장 (실제로는 문서 파싱 필요)
+                content = f"문서 파일: {doc_file.name}\n내용을 추출할 수 없습니다."
+            
+            # 긴 문서는 청크로 분할 (5000자 기준)
+            chunk_size = 5000
+            if len(content) > chunk_size:
+                # 청크로 분할
+                for j in range(0, len(content), chunk_size):
+                    chunk_content = content[j:j+chunk_size]
+                    chunk_file = chunked_dir / f"chunked_output_{chunk_count}.txt"
+                    chunk_file.write_text(chunk_content, encoding='utf-8')
+                    chunk_count += 1
+            else:
+                # 작은 문서는 그대로 저장
+                chunk_file = chunked_dir / f"chunked_output_{chunk_count}.txt"
+                chunk_file.write_text(content, encoding='utf-8')
+                chunk_count += 1
                 
         except Exception as e:
-            monitor.end_step("final_report", "error", errors=[str(e)])
+            print(f"WARNING: 파일 처리 오류 {doc_file.name}: {e}")
+            continue
+    
+    print(f"DOCS: 문서 전처리 완료: {len(document_files)}개 파일 -> {chunk_count}개 청크")
+    return chunk_count
+
+def run_step(step_name: str, module_name: str, purpose: str = None) -> bool:
+    """파이프라인 단계 실행"""
+    print(f"\n--- {step_name} 시작...")
+    start_time = time.time()
+    
+    try:
+        if module_name == "schema_multi":
+            from extract_schema import main as run_schema
+            run_schema(purpose or "문서 분석")
+            
+        elif module_name == "extract_node_kr":
+            from extract_node import main as run_extract_nodes
+            run_extract_nodes(purpose or "문서 분석")
+            
+        elif module_name == "extract_relation_kr":
+            from extract_relation import main as run_extract_relations
+            run_extract_relations(purpose or "문서 분석")
+            
+        elif module_name == "deduplication":
+            from deduplication import deduplicate
+            output_root = os.getenv("OUTPUT_ROOT", "output")
+            result_file = f"{output_root}/result/result.json"
+            deduplicate(result_file)
+            
+        elif module_name == "cypher":
+            from create_cypher import main as run_cypher
+            run_cypher()
+            
+        elif module_name == "send_cypher":
+            from send_cypher import main as run_send_cypher
+            run_send_cypher()
+            
+        else:
+            raise ValueError(f"알 수 없는 모듈: {module_name}")
         
-        # 로그 저장
-        monitor.save_log()
-        
-        total_duration = time.time() - monitor.start_time
-        print(f"\n🎉 향상된 파이프라인 실행 완료 (총 {total_duration:.1f}초)")
+        duration = time.time() - start_time
+        print(f"OK: {step_name} 완료 ({duration:.1f}초)")
         return True
         
     except Exception as e:
-        print(f"\n❌ 파이프라인 실행 실패: {e}")
-        monitor.save_log()
+        duration = time.time() - start_time
+        print(f"ERROR: {step_name} 실패 ({duration:.1f}초): {e}")
         return False
 
-def quick_test_rag(test_questions: List[str] = None):
-    """RAG 시스템 간단 테스트"""
-    if test_questions is None:
-        test_questions = [
-            "구글에서 일하는 사람은 누구인가요?",
-            "삼성전자의 본사는 어디에 있나요?",
-            "네이버와 협력하는 회사는 어떤 곳들이 있나요?",
-            "AI 기술을 개발하는 회사들을 알려주세요",
-            "최근에 투자받은 회사는 어디인가요?"
-        ]
+def validate_pipeline_results(output_root: str) -> dict:
+    """파이프라인 결과 검증"""
+    results = {}
     
-    print("\n" + "="*50)
-    print("🧪 RAG 시스템 성능 테스트")
-    print("="*50)
+    # 1. 스키마 파일 확인
+    schema_file = Path(output_root) / "schema" / "schema.json"
+    results["schema"] = schema_file.exists()
     
-    for i, question in enumerate(test_questions, 1):
-        print(f"\n[{i}/{len(test_questions)}] 질문: {question}")
-        
-        start_time = time.time()
+    # 2. 결과 파일 확인
+    result_file = Path(output_root) / "result" / "result.json"
+    results["extraction"] = result_file.exists()
+    
+    # 3. Cypher 파일 확인
+    cypher_file = Path(output_root) / "graph.cypher"
+    results["cypher"] = cypher_file.exists()
+    
+    # 4. 결과 통계
+    if results["extraction"]:
+        import json
         try:
-            answer = enhanced_answer(question)
-            duration = time.time() - start_time
-            
-            print(f"답변: {answer}")
-            print(f"응답시간: {duration:.2f}초")
-            
-        except Exception as e:
-            print(f"❌ 오류: {e}")
+            with open(result_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            results["node_count"] = len(data.get("nodes", []))
+            results["relation_count"] = len(data.get("relations", []))
+        except:
+            results["node_count"] = 0
+            results["relation_count"] = 0
+    
+    return results
+
+def run_pipeline(purpose: str, output_root: str) -> bool:
+    """전체 파이프라인 실행"""
+    print("=== 목적 지향 RAG 시스템 구축 파이프라인 시작 ===")
+    print(f"RAG 시스템 목적: {purpose}")
+    print(f"작업 디렉토리: {output_root}")
+    
+    pipeline_start = time.time()
+    
+    try:
+        # 0. 환경 설정
+        setup_environment(output_root, purpose)
+        
+        # 1. 문서 전처리
+        print("\n" + "="*60)
+        print("1단계: 문서 전처리")
+        print("="*60)
+        chunk_count = preprocess_documents(output_root)
+        if chunk_count == 0:
+            raise Exception("처리할 문서가 없습니다.")
+        
+        # 2. 스키마 추출
+        print("\n" + "="*60)
+        print("2단계: 스키마 추출")
+        print("="*60)
+        if not run_step("스키마 추출", "schema_multi", purpose):
+            raise Exception("스키마 추출 실패")
+        
+        # 3. 노드 추출
+        print("\n" + "="*60)
+        print("3단계: 엔티티(노드) 추출")
+        print("="*60)
+        if not run_step("노드 추출", "extract_node_kr", purpose):
+            raise Exception("노드 추출 실패")
+        
+        # 4. 관계 추출
+        print("\n" + "="*60)
+        print("4단계: 관계 추출")
+        print("="*60)
+        if not run_step("관계 추출", "extract_relation_kr", purpose):
+            raise Exception("관계 추출 실패")
+        
+        # 5. 중복 제거
+        print("\n" + "="*60)
+        print("5단계: 중복 제거 및 정제")
+        print("="*60)
+        if not run_step("중복 제거", "deduplication"):
+            print("WARNING: 중복 제거 실패, 계속 진행...")
+        
+        # 6. Cypher 스크립트 생성
+        print("\n" + "="*60)
+        print("6단계: Cypher 스크립트 생성")
+        print("="*60)
+        if not run_step("Cypher 생성", "cypher"):
+            raise Exception("Cypher 스크립트 생성 실패")
+        
+        # 7. Neo4j 데이터베이스 적재
+        print("\n" + "="*60)
+        print("7단계: Neo4j 데이터베이스 적재")
+        print("="*60)
+        if not run_step("Neo4j 적재", "send_cypher"):
+            print("WARNING: Neo4j 적재 실패, RAG는 파일 기반으로 동작...")
+        
+        # 8. 결과 검증
+        print("\n" + "="*60)
+        print("8단계: 결과 검증")
+        print("="*60)
+        validation_results = validate_pipeline_results(output_root)
+        
+        print("=== 파이프라인 결과 ===")
+        print(f"   - 스키마 생성: {'OK' if validation_results['schema'] else 'FAIL'}")
+        print(f"   - 데이터 추출: {'OK' if validation_results['extraction'] else 'FAIL'}")
+        print(f"   - Cypher 생성: {'OK' if validation_results['cypher'] else 'FAIL'}")
+        if 'node_count' in validation_results:
+            print(f"   - 추출된 노드: {validation_results['node_count']:,}개")
+            print(f"   - 추출된 관계: {validation_results['relation_count']:,}개")
+        
+        total_time = time.time() - pipeline_start
+        print(f"\n=== '{purpose}' 목적의 RAG 시스템 구축 완료! (총 {total_time:.1f}초) ===")
+        
+        return True
+        
+    except Exception as e:
+        total_time = time.time() - pipeline_start
+        print(f"\nERROR: '{purpose}' RAG 시스템 구축 실패 ({total_time:.1f}초): {e}")
+        return False
 
 def main():
     """메인 실행 함수"""
-    parser = argparse.ArgumentParser(description="향상된 지식 그래프 구축 파이프라인")
-    parser.add_argument("--purpose", default="뉴스 기사 분석", help="분석 목적")
-    parser.add_argument("--skip", nargs="*", default=[], 
-                       choices=["schema", "nodes", "relations", "deduplication", "cypher", "neo4j"],
-                       help="건너뛸 단계들")
-    parser.add_argument("--test-rag", action="store_true", help="RAG 시스템 테스트 실행")
-    parser.add_argument("--quick-test", action="store_true", help="빠른 테스트만 실행")
+    parser = argparse.ArgumentParser(description="목적 지향 RAG 시스템 구축 파이프라인")
+    parser.add_argument("--purpose", default="범용 RAG 시스템", help="RAG 시스템 구축 목적 (예: 기업 판매 지원, 고객 문의 응답)")
+    parser.add_argument("--output-root", default="output", help="출력 루트 디렉토리")
+    parser.add_argument("--skip-neo4j", action="store_true", help="Neo4j 적재 생략")
     
     args = parser.parse_args()
     
-    print("🚀 향상된 지식 그래프 구축 파이프라인 시작")
-    print(f"📋 분석 목적: {args.purpose}")
-    if args.skip:
-        print(f"⏭️ 건너뛸 단계: {args.skip}")
+    # 출력 디렉토리 절대 경로로 변환
+    output_root = str(Path(args.output_root).resolve())
     
-    if args.quick_test:
-        # 빠른 테스트만 실행
-        quick_test_rag()
-        return
+    # 파이프라인 실행
+    success = run_pipeline(args.purpose, output_root)
     
-    # 전체 파이프라인 실행
-    success = run_enhanced_pipeline(args.purpose, args.skip)
-    
-    if success and args.test_rag:
-        # RAG 테스트 실행
-        quick_test_rag()
+    if success:
+        print("\n" + "="*60)
+        print(f"SUCCESS: '{args.purpose}' 목적의 RAG 시스템 구축 완료!")
+        print("="*60)
+        print("이제 다음과 같이 질문할 수 있습니다:")
+        print()
+        print("Python에서:")
+        print("  from rag import answer")
+        print("  result = answer('당신의 질문')")
+        print()
+        print("Streamlit에서:")
+        print("  streamlit run app.py")
+        print()
+        print(f"INFO: 구축된 RAG 시스템은 '{args.purpose}' 목적에 최적화되었습니다.")
+        sys.exit(0)
+    else:
+        print(f"\nFAILED: '{args.purpose}' RAG 시스템 구축 실패")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

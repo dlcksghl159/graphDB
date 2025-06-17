@@ -1,0 +1,169 @@
+{
+  "nodes": [
+    {
+      "label": "PERSON",
+      "name": "신송남",
+      "properties": {
+        "full_name": "신송남",
+        "role": "작업자",
+        "nationality": "대한민국",
+        "age": "61"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김대환",
+      "properties": {
+        "full_name": "김대환",
+        "role": "공장장",
+        "nationality": "대한민국",
+        "age": "66"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김두연",
+      "properties": {
+        "full_name": "김두연",
+        "role": "고무 프레스 업무 담당",
+        "nationality": "대한민국",
+        "age": "71"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "방광호",
+      "properties": {
+        "full_name": "방광호",
+        "role": "지게차 기사",
+        "nationality": "대한민국",
+        "age": "60"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "정광용",
+      "properties": {
+        "full_name": "정광용",
+        "role": "대표",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "정일산업",
+      "properties": {
+        "full_name": "정일산업",
+        "industry": "승강기 제조업",
+        "headquarters": "경기도 시화공단",
+        "founded": "1987",
+        "ceo": "정광용"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기도 시화공단",
+      "properties": {
+        "type": "산업단지",
+        "country": "대한민국",
+        "region": "경기도"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "충북 충주",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "충청북도"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업연구원",
+      "properties": {
+        "type": "연구기관",
+        "description": "중소기업 관련 연구 및 정책 제안",
+        "headquarters": "대한민국"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "조주현",
+      "properties": {
+        "full_name": "조주현",
+        "role": "원장",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "신송남",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "작업자",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "김대환",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "공장장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "김두연",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "고무 프레스 업무 담당",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "방광호",
+      "relationship": "WORKS_FOR",
+      "end_node": "정일산업",
+      "properties": {
+        "position": "지게차 기사",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "정광용",
+      "relationship": "CEO_OF",
+      "end_node": "정일산업",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "정일산업",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "경기도 시화공단",
+      "properties": {}
+    },
+    {
+      "start_node": "정일산업",
+      "relationship": "LOCATED_IN",
+      "end_node": "충북 충주",
+      "properties": {}
+    },
+    {
+      "start_node": "조주현",
+      "relationship": "WORKS_FOR",
+      "end_node": "중소벤처기업연구원",
+      "properties": {
+        "position": "원장",
+        "since": ""
+      }
+    }
+  ]
+}

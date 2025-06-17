@@ -1,118 +1,138 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "동반성장위원회",
-      "properties": {
-        "type": "위원회",
-        "description": "중소기업과 대기업의 동반 성장을 지원하는 위원회",
-        "headquarters": "서울"
-      }
-    },
-    {
       "label": "COMPANY",
-      "name": "LG이노텍",
+      "name": "중소벤처기업부",
       "properties": {
-        "full_name": "LG이노텍 주식회사",
-        "industry": "전자",
+        "full_name": "중소벤처기업부",
+        "industry": "Government",
         "headquarters": "서울",
         "founded": "",
-        "ceo": "김준성"
+        "ceo": "이순배"
       }
     },
     {
-      "label": "COMPANY",
-      "name": "에이피텍",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "full_name": "에이피텍 주식회사",
-        "industry": "제조",
-        "headquarters": "인천 송도",
-        "founded": "",
-        "ceo": ""
+        "category": "Beauty",
+        "description": "중소기업 수출 품목 1위",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "Automotive",
+        "description": "중소기업 수출 품목 2위",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "반도체 제조용 장비",
+      "properties": {
+        "category": "Semiconductor Equipment",
+        "description": "중소기업 수출 품목 6위",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "Korean",
+        "age": ""
       }
     },
     {
       "label": "EVENT",
-      "name": "ESG 우수 중소기업 현판식",
+      "name": "2025년도 1분기 중소기업 수출 동향 발표",
       "properties": {
-        "date": "2023-10-14",
-        "type": "현판식",
-        "description": "ESG 우수 중소기업을 위한 현판식",
-        "location": "인천 송도 에이피텍"
-      }
-    },
-    {
-      "label": "AGREEMENT",
-      "name": "협력사 ESG 지원사업 업무협약",
-      "properties": {
-        "type": "업무협약",
-        "date": "2023-10-14",
-        "description": "동반위와 LG이노텍 간의 협력사 ESG 지원사업을 위한 협약"
-      }
-    },
-    {
-      "label": "PROJECT",
-      "name": "대·중소 자율형 ESG 지원사업",
-      "properties": {
-        "description": "대기업과 중소기업 간의 자율적인 ESG 지원사업",
-        "start_date": "2023",
-        "status": "진행 중"
+        "date": "2025-04-14",
+        "type": "Report Release",
+        "description": "중소기업 수출 동향 발표",
+        "location": "서울"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
       "end_node": "COMPANY",
       "properties": {
-        "type": "협력사",
-        "date": "2023-10-14"
+        "position": "글로벌성장정책관",
+        "since": ""
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SUPPLIES",
-      "end_node": "COMPANY",
-      "properties": {
-        "product": "제조설비"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
+      "relationship": "SPONSORED",
       "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "SPOKE_AT",
+      "end_node": "EVENT",
+      "properties": {
+        "topic": "중소기업 수출 강세 및 관세 대응"
+      }
     }
   ]
 }

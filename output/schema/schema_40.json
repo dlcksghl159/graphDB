@@ -2,128 +2,253 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "노루그룹",
+      "name": "삼성바이오로직스",
       "properties": {
-        "full_name": "노루그룹",
-        "industry": "제조",
-        "headquarters": "안양",
-        "founded": "",
-        "ceo": ""
+        "full_name": "Samsung Biologics",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
+        "founded": "2011",
+        "ceo": "John Rim"
       }
     },
     {
       "label": "COMPANY",
-      "name": "노루페인트",
+      "name": "셀트리온",
       "properties": {
-        "full_name": "노루페인트",
-        "industry": "페인트 제조",
-        "headquarters": "안양",
-        "founded": "",
-        "ceo": ""
+        "full_name": "Celltrion",
+        "industry": "Biotechnology",
+        "headquarters": "South Korea",
+        "founded": "2002",
+        "ceo": "Kee Woo-sung"
       }
     },
     {
-      "label": "LOCATION",
-      "name": "안양",
+      "label": "COMPANY",
+      "name": "유한양행",
       "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "경기도"
+        "full_name": "Yuhan Corporation",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1926",
+        "ceo": "Lee Jung-hee"
       }
     },
     {
-      "label": "EVENT",
-      "name": "2025 신기술·신제품 전시회",
+      "label": "COMPANY",
+      "name": "GC녹십자",
       "properties": {
-        "date": "2023-09-14",
-        "type": "전시회",
-        "description": "미래 산업을 선도할 13종의 혁신 기술과 차세대 제품을 선보이는 전시회",
-        "location": "노루페인트 본사"
+        "full_name": "Green Cross Corporation",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1967",
+        "ceo": "Huh Eun-chul"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "대웅제약",
+      "properties": {
+        "full_name": "Daewoong Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1945",
+        "ceo": "Jeon Seng-ho"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "한미약품",
+      "properties": {
+        "full_name": "Hanmi Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1973",
+        "ceo": "Lim Jong-yoon"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "종근당",
+      "properties": {
+        "full_name": "Chong Kun Dang Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1941",
+        "ceo": "Lee Jong-seop"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "보령",
+      "properties": {
+        "full_name": "Boryung Pharmaceutical",
+        "industry": "Pharmaceuticals",
+        "headquarters": "South Korea",
+        "founded": "1957",
+        "ceo": "Kim Eun-sang"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "LG화학",
+      "properties": {
+        "full_name": "LG Chem",
+        "industry": "Chemicals",
+        "headquarters": "South Korea",
+        "founded": "1947",
+        "ceo": "Hak Cheol Shin"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "스텔스 도료",
+      "name": "피즈치바",
       "properties": {
-        "category": "도료",
-        "description": "경량화를 극대화한 도료",
-        "launch_date": "",
-        "company": "노루그룹"
+        "category": "Biosimilar",
+        "description": "Stelara biosimilar",
+        "launch_date": "2023",
+        "company": "삼성바이오에피스"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "우레탄 난연 몰딩제",
+      "name": "램시마SC",
       "properties": {
-        "category": "몰딩제",
-        "description": "친환경·고성능 배터리 시장을 겨냥한 몰딩제",
-        "launch_date": "",
-        "company": "노루그룹"
+        "category": "Biosimilar",
+        "description": "Subcutaneous injection for autoimmune diseases",
+        "launch_date": "2022",
+        "company": "셀트리온"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "탄소 저감 건재용 도료",
+      "name": "렉라자",
       "properties": {
-        "category": "도료",
-        "description": "탄소 저감 건재용 도료",
-        "launch_date": "",
-        "company": "노루그룹"
+        "category": "New Drug",
+        "description": "Lung cancer treatment",
+        "launch_date": "2021",
+        "company": "유한양행"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "VOC 저감형 아크릴 수지",
+      "name": "알리글로",
       "properties": {
-        "category": "수지",
-        "description": "VOC 저감형 아크릴 수지",
-        "launch_date": "",
-        "company": "노루그룹"
+        "category": "New Drug",
+        "description": "Blood product",
+        "launch_date": "2023",
+        "company": "GC녹십자"
       }
     },
     {
-      "label": "PERSON",
-      "name": "방양국",
+      "label": "PRODUCT",
+      "name": "펙수클루",
       "properties": {
-        "full_name": "방양국",
-        "role": "연구소장",
-        "nationality": "대한민국",
-        "age": ""
+        "category": "New Drug",
+        "description": "Gastroesophageal reflux disease treatment",
+        "launch_date": "2022",
+        "company": "대웅제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "나보타",
+      "properties": {
+        "category": "Botulinum toxin",
+        "description": "Botulinum toxin product",
+        "launch_date": "2014",
+        "company": "대웅제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "고덱스",
+      "properties": {
+        "category": "Liver medication",
+        "description": "Liver function improvement",
+        "launch_date": "2019",
+        "company": "셀트리온제약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "케이캡",
+      "properties": {
+        "category": "Gastroesophageal reflux disease treatment",
+        "description": "Treatment for acid reflux",
+        "launch_date": "2018",
+        "company": "HK이노엔"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "렉라자 라이선스 수익",
+      "properties": {
+        "amount": "40억원",
+        "date": "2023",
+        "type": "License Revenue"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
+      "start_node": "삼성바이오로직스",
       "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "end_node": "피즈치바",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "램시마SC",
       "properties": {}
     },
     {
-      "start_node": "PERSON",
-      "relationship": "SPOKE_AT",
-      "end_node": "EVENT",
+      "start_node": "유한양행",
+      "relationship": "PRODUCES",
+      "end_node": "렉라자",
+      "properties": {}
+    },
+    {
+      "start_node": "GC녹십자",
+      "relationship": "PRODUCES",
+      "end_node": "알리글로",
+      "properties": {}
+    },
+    {
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "펙수클루",
+      "properties": {}
+    },
+    {
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "나보타",
+      "properties": {}
+    },
+    {
+      "start_node": "종근당",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "셀트리온제약",
       "properties": {
-        "topic": "기술 혁신과 지속 가능한 미래"
+        "type": "Co-marketing",
+        "date": "2022"
       }
+    },
+    {
+      "start_node": "보령",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "HK이노엔",
+      "properties": {
+        "type": "Co-marketing",
+        "date": "2022"
+      }
+    },
+    {
+      "start_node": "유한양행",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "렉라자 라이선스 수익",
+      "properties": {}
     }
   ]
 }

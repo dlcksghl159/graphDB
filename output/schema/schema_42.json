@@ -2,86 +2,33 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "패스트파이브",
+      "name": "락앤락",
       "properties": {
-        "full_name": "패스트파이브",
-        "industry": "클라우드 및 IT 솔루션",
+        "full_name": "락앤락",
+        "industry": "생활용품",
         "headquarters": "서울",
         "founded": "",
-        "ceo": "김대일"
+        "ceo": ""
       }
     },
     {
       "label": "PRODUCT",
-      "name": "파이브클라우드",
+      "name": "풀히트 푸드워머",
       "properties": {
-        "category": "클라우드 및 IT 솔루션",
-        "description": "중소·중견기업 맞춤형 클라우드 및 IT 솔루션 통합 서비스",
-        "launch_date": "",
-        "company": "패스트파이브"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "인테리어코드",
-      "properties": {
-        "category": "인테리어 솔루션",
-        "description": "패스트파이브의 인테리어 전문 브랜드 하이픈디자인과 협력한 통합 서비스",
-        "launch_date": "",
-        "company": "패스트파이브"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "아마존웹서비스",
-      "properties": {
-        "full_name": "아마존웹서비스",
-        "industry": "클라우드 컴퓨팅",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "구글",
-      "properties": {
-        "full_name": "구글",
-        "industry": "기술",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "마이크로소프트",
-      "properties": {
-        "full_name": "마이크로소프트",
-        "industry": "기술",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "김대일",
-      "properties": {
-        "full_name": "김대일",
-        "role": "대표",
-        "nationality": "",
-        "age": ""
+        "category": "테이블웨어",
+        "description": "바닥 전체에 열선이 내장되어 10초 내 예열 가능",
+        "launch_date": "2023-10-14",
+        "company": "락앤락"
       }
     },
     {
       "label": "EVENT",
-      "name": "AWS 한국파트너리그",
+      "name": "제품 출시 기념 프로모션",
       "properties": {
-        "date": "",
-        "type": "수상",
-        "description": "AWS 어드밴스드 티어 파트너 자격 취득 및 3회 연속 수상",
-        "location": "한국"
+        "date": "2023-10-14 to 2023-10-21",
+        "type": "프로모션",
+        "description": "락앤락몰에서 제품 출시 기념 프로모션 진행",
+        "location": "락앤락몰"
       }
     }
   ],
@@ -91,41 +38,6 @@
       "relationship": "PRODUCES",
       "end_node": "PRODUCT",
       "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "클라우드 솔루션 제공",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "클라우드 솔루션 제공",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "클라우드 솔루션 제공",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
-      }
     },
     {
       "start_node": "COMPANY",

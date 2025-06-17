@@ -1,171 +1,95 @@
 {
   "nodes": [
     {
-      "label": "PERSON",
-      "name": "윤승현",
+      "label": "COMPANY",
+      "name": "가온아이",
       "properties": {
-        "full_name": "윤승현",
-        "role": "대표",
-        "nationality": "대한민국",
-        "age": ""
+        "full_name": "가온아이",
+        "industry": "Software",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "조창제"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "아이서트",
+      "properties": {
+        "full_name": "아이서트",
+        "industry": "Software",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "현수환"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "세이프아이서트",
+      "properties": {
+        "category": "Software",
+        "description": "법인 공동인증서 관리 솔루션",
+        "launch_date": "",
+        "company": "아이서트"
       }
     },
     {
       "label": "PERSON",
-      "name": "이용원",
+      "name": "조창제",
       "properties": {
-        "full_name": "이용원",
-        "role": "최고디자인책임자(CDO)",
-        "nationality": "대한민국",
-        "age": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "스콧 비튼",
-      "properties": {
-        "full_name": "스콧 비튼",
-        "role": "최고기술책임자(CTO)",
+        "full_name": "조창제",
+        "role": "CEO",
         "nationality": "",
         "age": ""
       }
     },
     {
       "label": "PERSON",
-      "name": "유동완",
+      "name": "현수환",
       "properties": {
-        "full_name": "유동완",
-        "role": "최고제품책임자(CPO)",
-        "nationality": "대한민국",
-        "age": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "윤반석",
-      "properties": {
-        "full_name": "윤반석",
-        "role": "최고전략책임자(CSO)",
-        "nationality": "대한민국",
+        "full_name": "현수환",
+        "role": "CEO",
+        "nationality": "",
         "age": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "에이드로",
+      "name": "한화오션디지털",
       "properties": {
-        "full_name": "에이드로",
-        "industry": "자동차",
-        "headquarters": "대한민국",
-        "founded": "",
-        "ceo": "윤승현"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "테슬라",
-      "properties": {
-        "full_name": "테슬라",
-        "industry": "자동차",
-        "headquarters": "미국",
+        "full_name": "한화오션디지털",
+        "industry": "",
+        "headquarters": "",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "현대",
+      "name": "LG전자",
       "properties": {
-        "full_name": "현대자동차",
-        "industry": "자동차",
-        "headquarters": "대한민국",
+        "full_name": "LG전자",
+        "industry": "Electronics",
+        "headquarters": "",
         "founded": "",
         "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "기아",
-      "properties": {
-        "full_name": "기아자동차",
-        "industry": "자동차",
-        "headquarters": "대한민국",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "BMW",
-      "properties": {
-        "full_name": "BMW",
-        "industry": "자동차",
-        "headquarters": "독일",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "바디킷",
-      "properties": {
-        "category": "자동차 부품",
-        "description": "공기역학 기반의 바디킷",
-        "launch_date": "",
-        "company": "에이드로"
-      }
-    },
-    {
-      "label": "TECHNOLOGY",
-      "name": "전산유체역학(CFD)",
-      "properties": {
-        "category": "시뮬레이션",
-        "description": "공기역학 최적화 기술",
-        "field": "자동차"
-      }
-    },
-    {
-      "label": "PROJECT",
-      "name": "에어로 옵티마이제이션 소프트웨어(AOS)",
-      "properties": {
-        "description": "공기역학 기반 차량 디자인·설계 프로세스 혁신",
-        "start_date": "2023년 3분기",
-        "status": "진행 중"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "미국",
-      "properties": {
-        "type": "국가",
-        "country": "미국",
-        "region": ""
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "독일",
-      "properties": {
-        "type": "국가",
-        "country": "독일",
-        "region": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": ""
-      }
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "PRODUCT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "SaaS Development",
+        "date": "2023-10-14"
+      }
     },
     {
       "start_node": "COMPANY",
@@ -175,36 +99,25 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "바디킷 판매",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
+      "relationship": "USES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "MANAGES",
-      "end_node": "PROJECT",
-      "properties": {}
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
     }
   ]
 }

@@ -2,107 +2,186 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "엠투아이",
+      "name": "중소기업",
       "properties": {
-        "full_name": "엠투아이",
-        "industry": "디지털전환 솔루션",
-        "headquarters": "",
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "COMPANY",
-      "name": "벰로보틱스",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "full_name": "벰로보틱스",
-        "industry": "산업용 물류로봇",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
+        "category": "Beauty",
+        "description": "중소기업 수출 1위 품목",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "로봇 제어기 공동 개발",
+      "label": "PRODUCT",
+      "name": "자동차",
       "properties": {
-        "description": "엠투아이와 벰로보틱스의 로봇 제어기 공동 개발 프로젝트",
-        "start_date": "",
-        "status": "진행 중"
+        "category": "Automotive",
+        "description": "중소기업 수출 2위 품목",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "INVESTMENT",
-      "name": "엠투아이의 벰로보틱스 지분 투자",
+      "label": "PRODUCT",
+      "name": "반도체제조용장비",
       "properties": {
-        "amount": "12억원",
-        "date": "",
-        "type": "지분 투자"
+        "category": "Semiconductor Equipment",
+        "description": "주력 수출 제품",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "디지털전환(DX) 솔루션",
+      "label": "PRODUCT",
+      "name": "기타기계류",
       "properties": {
-        "category": "디지털전환",
-        "description": "엠투아이의 자체 개발 디지털전환 솔루션",
-        "field": "AI 자율 제조"
+        "category": "Machinery",
+        "description": "수출 감소 품목",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "로봇 제어 기술",
+      "label": "PRODUCT",
+      "name": "전자응용기기",
       "properties": {
-        "category": "로봇 제어",
-        "description": "벰로보틱스의 로봇 제어 기술",
-        "field": "산업용 물류로봇"
+        "category": "Electronic Devices",
+        "description": "수출 감소 품목",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "철강 제품",
+      "properties": {
+        "category": "Steel",
+        "description": "관세 부과로 수출 감소",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알루미늄 제품",
+      "properties": {
+        "category": "Aluminum",
+        "description": "관세 부과로 수출 감소",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "South Korean",
+        "age": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업부",
+      "properties": {
+        "type": "Government",
+        "description": "중소기업 관련 정책 수립",
+        "headquarters": "South Korea"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "미국 관세 부과",
+      "properties": {
+        "date": "2023-03-12",
+        "type": "Trade Policy",
+        "description": "철강·알루미늄 및 파생상품에 대한 관세 부과",
+        "location": "미국"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "type": "공동 개발 및 프로젝트 수행",
-        "date": "2023-10-14"
+        "position": "글로벌성장정책관",
+        "since": ""
       }
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "MADE_INVESTMENT",
-      "end_node": "INVESTMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "RECEIVED_INVESTMENT",
-      "end_node": "INVESTMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
-      "end_node": "TECHNOLOGY",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

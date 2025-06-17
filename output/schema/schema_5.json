@@ -1,290 +1,182 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "중소벤처기업부",
+      "label": "COMPANY",
+      "name": "중소벤처기업진흥공단",
       "properties": {
-        "type": "정부기관",
-        "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
-        "headquarters": "서울"
+        "full_name": "중소벤처기업진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "강석진"
       }
     },
     {
-      "label": "PERSON",
-      "name": "이순배",
+      "label": "COMPANY",
+      "name": "부산항만공사",
       "properties": {
-        "full_name": "이순배",
-        "role": "글로벌성장정책관",
-        "nationality": "한국",
-        "age": ""
+        "full_name": "부산항만공사",
+        "industry": "Port Authority",
+        "headquarters": "부산",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "화장품",
+      "label": "COMPANY",
+      "name": "스마트트레이드허브",
       "properties": {
-        "category": "소비재",
-        "description": "미용 및 피부 관리 제품",
-        "launch_date": "",
-        "company": "다수의 중소기업"
+        "full_name": "스마트트레이드허브",
+        "industry": "Logistics",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "자동차",
+      "label": "COMPANY",
+      "name": "인천국제공항공사",
       "properties": {
-        "category": "운송수단",
-        "description": "자동차 및 관련 부품",
-        "launch_date": "",
-        "company": "다수의 중소기업"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "반도체제조용장비",
-      "properties": {
-        "category": "산업장비",
-        "description": "반도체 제조에 사용되는 장비",
-        "launch_date": "",
-        "company": "다수의 중소기업"
+        "full_name": "인천국제공항공사",
+        "industry": "Airport Authority",
+        "headquarters": "인천",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
       "label": "LOCATION",
-      "name": "미국",
+      "name": "로스앤젤레스",
       "properties": {
-        "type": "국가",
-        "country": "미국",
-        "region": "북미"
+        "type": "City",
+        "country": "USA",
+        "region": "California"
       }
     },
     {
       "label": "LOCATION",
-      "name": "중국",
+      "name": "롱비치",
       "properties": {
-        "type": "국가",
-        "country": "중국",
-        "region": "아시아"
+        "type": "City",
+        "country": "USA",
+        "region": "California"
       }
     },
     {
       "label": "LOCATION",
-      "name": "일본",
+      "name": "부산",
       "properties": {
-        "type": "국가",
-        "country": "일본",
-        "region": "아시아"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Busan"
       }
     },
     {
       "label": "LOCATION",
-      "name": "홍콩",
+      "name": "인천",
       "properties": {
-        "type": "특별행정구",
-        "country": "중국",
-        "region": "아시아"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Incheon"
       }
     },
     {
       "label": "LOCATION",
-      "name": "대만",
+      "name": "여수",
       "properties": {
-        "type": "국가",
-        "country": "대만",
-        "region": "아시아"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Jeollanam-do"
       }
     },
     {
       "label": "LOCATION",
-      "name": "태국",
+      "name": "광양",
       "properties": {
-        "type": "국가",
-        "country": "태국",
-        "region": "아시아"
+        "type": "City",
+        "country": "South Korea",
+        "region": "Jeollanam-do"
       }
     },
     {
-      "label": "LOCATION",
-      "name": "인도네시아",
+      "label": "AGREEMENT",
+      "name": "물류 지원 업무협약",
       "properties": {
-        "type": "국가",
-        "country": "인도네시아",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "베트남",
-      "properties": {
-        "type": "국가",
-        "country": "베트남",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도",
-      "properties": {
-        "type": "국가",
-        "country": "인도",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "멕시코",
-      "properties": {
-        "type": "국가",
-        "country": "멕시코",
-        "region": "북미"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "철강 제품",
-      "properties": {
-        "category": "산업재",
-        "description": "철강으로 만든 제품",
-        "launch_date": "",
-        "company": "다수의 중소기업"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "알루미늄 제품",
-      "properties": {
-        "category": "산업재",
-        "description": "알루미늄으로 만든 제품",
-        "launch_date": "",
-        "company": "다수의 중소기업"
+        "type": "Business Agreement",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "부산항만공사",
       "properties": {
-        "date": "2023-04-14",
-        "description": "중소기업 수출 증가 발표"
+        "type": "Logistics Collaboration",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "ORGANIZATION",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "물류 지원 업무협약",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "SIGNED",
+      "end_node": "물류 지원 업무협약",
+      "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "스마트트레이드허브",
+      "properties": {}
+    },
+    {
+      "start_node": "스마트트레이드허브",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "인천국제공항공사",
       "properties": {
-        "position": "글로벌성장정책관",
-        "since": ""
+        "type": "Logistics Cost Reduction",
+        "date": ""
       }
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "부산",
+      "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "LOCATED_IN",
+      "end_node": "서울",
+      "properties": {}
+    },
+    {
+      "start_node": "인천국제공항공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "인천",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "OPERATES",
+      "end_node": "로스앤젤레스",
       "properties": {
-        "amount": "18억4천만 달러",
-        "date": "2023-01-01 to 2023-03-31"
+        "type": "Overseas Logistics Center"
       }
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
+      "start_node": "부산항만공사",
+      "relationship": "OPERATES",
+      "end_node": "롱비치",
       "properties": {
-        "amount": "17억4천만 달러",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
+        "type": "Overseas Logistics Center"
       }
     }
   ]

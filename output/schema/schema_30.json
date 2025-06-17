@@ -2,124 +2,124 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "엔씽",
+      "name": "소상공인시장진흥공단",
       "properties": {
-        "full_name": "엔씽",
-        "industry": "스마트 수직농장",
-        "headquarters": "경기도 이천",
-        "founded": "2014",
-        "ceo": "김혜연"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "이마트",
-      "properties": {
-        "full_name": "이마트",
-        "industry": "유통",
-        "headquarters": "",
+        "full_name": "소상공인시장진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "서울",
         "founded": "",
-        "ceo": ""
+        "ceo": "박성효"
       }
     },
     {
       "label": "COMPANY",
-      "name": "배달의민족",
+      "name": "롯데웰푸드",
       "properties": {
-        "full_name": "배달의민족",
-        "industry": "배달 서비스",
-        "headquarters": "",
+        "full_name": "롯데웰푸드",
+        "industry": "Food Manufacturing",
+        "headquarters": "서울",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "PROJECT",
-      "name": "물류센터형 수직농장 스마트팜 개발",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "description": "1000억원 규모 물류센터형 수직농장 스마트팜 개발 사업",
-        "start_date": "",
-        "status": "추진 중"
+        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
+        "start_date": "2023-03",
+        "status": "Ongoing"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "큐브(CUBE)",
+      "label": "AGREEMENT",
+      "name": "업무 협약",
       "properties": {
-        "category": "모듈형 스마트팜",
-        "description": "유기적 연결이 가능한 모듈형 스마트팜",
-        "field": "농업"
+        "type": "Business Partnership",
+        "date": "2023-03",
+        "description": "소진공과 롯데웰푸드 간의 업무 협약"
       }
     },
     {
-      "label": "EVENT",
-      "name": "CES 2020",
+      "label": "PRODUCT",
+      "name": "우수메뉴",
       "properties": {
-        "date": "2020",
-        "type": "기술 전시회",
-        "description": "세계 최초로 농업 분야에서 '최고혁신상' 수상",
-        "location": ""
+        "category": "Food",
+        "description": "백년가게의 우수 메뉴를 상품화",
+        "launch_date": "",
+        "company": "롯데웰푸드"
       }
     },
     {
-      "label": "INVESTMENT",
-      "name": "시리즈C 투자",
+      "label": "PRODUCT",
+      "name": "식사이론(Theory of SICSA)",
       "properties": {
-        "amount": "320억원 이상",
-        "date": "",
-        "type": "누적 투자"
+        "category": "Food Brand",
+        "description": "롯데웰푸드의 브랜드",
+        "launch_date": "",
+        "company": "롯데웰푸드"
       }
     },
     {
-      "label": "LOCATION",
-      "name": "경기도 이천",
+      "label": "ORGANIZATION",
+      "name": "백년가게",
       "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "경기도"
+        "type": "Small Business",
+        "description": "음식점업을 하는 업력 30년 이상의 우수 소상인",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년소공인",
+      "properties": {
+        "type": "Small Manufacturer",
+        "description": "식품 제조업에서 15년 이상 업력을 가진 숙련된 소공인",
+        "headquarters": ""
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "LEADS",
+      "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "협업",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
-    },
-    {
-      "start_node": "TECHNOLOGY",
-      "relationship": "AWARDED_AT",
-      "end_node": "EVENT",
-      "properties": {
-        "award": "최고혁신상"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "RECEIVED_INVESTMENT",
-      "end_node": "INVESTMENT",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "LEADS",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "LEADS",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "PRODUCT",
       "properties": {}
     }
   ]

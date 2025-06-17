@@ -2,94 +2,130 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "삼성바이오로직스",
+      "name": "셀트리온",
       "properties": {
-        "full_name": "삼성바이오로직스",
-        "industry": "Biotechnology",
-        "headquarters": "South Korea",
-        "founded": "",
-        "ceo": ""
+        "full_name": "셀트리온",
+        "industry": "제약",
+        "headquarters": "대한민국",
+        "founded": "1991",
+        "ceo": "서정진"
       }
     },
     {
       "label": "COMPANY",
-      "name": "셀트리온",
+      "name": "컨파마",
       "properties": {
-        "full_name": "셀트리온",
-        "industry": "Biotechnology",
-        "headquarters": "South Korea",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "도널드 트럼프",
-      "properties": {
-        "full_name": "Donald Trump",
-        "role": "Former President",
-        "nationality": "USA",
-        "age": ""
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "의약품 관세부과 정책 발표",
-      "properties": {
-        "date": "2023-10",
-        "type": "Policy Announcement",
-        "description": "Announcement of pharmaceutical tariffs by the Trump administration.",
-        "location": "USA"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "램시마",
-      "properties": {
-        "category": "Biosimilar",
-        "description": "A biosimilar product launched before 2019.",
-        "launch_date": "Before 2019",
-        "company": "셀트리온"
+        "full_name": "컨파마",
+        "industry": "제약 유통",
+        "headquarters": "스페인"
       }
     },
     {
       "label": "PRODUCT",
       "name": "트룩시마",
       "properties": {
-        "category": "Biosimilar",
-        "description": "A biosimilar product launched before 2019.",
-        "launch_date": "Before 2019",
+        "category": "항암제",
+        "description": "성분명 리툭시맙",
+        "launch_date": "",
         "company": "셀트리온"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "옴리클로",
+      "name": "허쥬마",
       "properties": {
-        "category": "Biosimilar",
-        "description": "A new biosimilar product to be launched in the second half of the year.",
-        "launch_date": "2023-H2",
+        "category": "항암제",
+        "description": "성분명 트라스투주맙",
+        "launch_date": "",
         "company": "셀트리온"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "아이덴젤트",
+      "name": "베그젤마",
       "properties": {
-        "category": "Biosimilar",
-        "description": "A new biosimilar product to be launched in the second half of the year.",
-        "launch_date": "2023-H2",
+        "category": "항암제",
+        "description": "성분명 베바시주맙",
+        "launch_date": "",
         "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "스테키마",
+      "properties": {
+        "category": "자가면역질환 치료제",
+        "description": "성분명 우스테키누맙",
+        "launch_date": "2022-12",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "앱토즈마",
+      "properties": {
+        "category": "항암제",
+        "description": "성분명 토실리주맙",
+        "launch_date": "2023",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "스페인",
+      "properties": {
+        "type": "국가",
+        "country": "스페인",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "포르투갈",
+      "properties": {
+        "type": "국가",
+        "country": "포르투갈",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "카탈루냐주",
+      "properties": {
+        "type": "지역",
+        "country": "스페인",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "CSC 컨소시엄 입찰",
+      "properties": {
+        "date": "2023",
+        "type": "입찰",
+        "description": "카탈루냐주 25개 공립병원의 의약품 공급 입찰",
+        "location": "카탈루냐주"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "강석훈",
+      "properties": {
+        "full_name": "강석훈",
+        "role": "법인장",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "COMPETES_WITH",
+      "relationship": "PARTNERED_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "market": "Biotechnology"
+        "type": "유통 파트너십",
+        "date": "2023"
       }
     },
     {
@@ -100,41 +136,30 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
       "properties": {
-        "date": "2023-10"
+        "position": "법인장",
+        "since": "2020"
       }
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "AFFECTS",
-      "end_node": "COMPANY",
-      "properties": {}
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "AFFECTS",
-      "end_node": "COMPANY",
-      "properties": {}
     }
   ]
 }

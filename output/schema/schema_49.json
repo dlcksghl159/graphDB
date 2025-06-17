@@ -1,130 +1,66 @@
 {
   "nodes": [
     {
-      "label": "EVENT",
-      "name": "2025 경기도 동반성장 페어",
-      "properties": {
-        "date": "2023-09-13",
-        "type": "페어",
-        "description": "경기도와 동반성장위원회가 공동으로 개최한 대·중소기업 및 공공기관의 상생협력 행사",
-        "location": "수원메쎄 1홀"
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "동반성장위원회",
-      "properties": {
-        "type": "위원회",
-        "description": "대·중소기업 및 공공기관의 상생협력을 지원하는 조직",
-        "headquarters": "대한민국"
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "경기도",
-      "properties": {
-        "type": "지방자치단체",
-        "description": "대한민국의 한 지역으로, 중소기업이 많이 소재한 지역",
-        "headquarters": "대한민국"
-      }
-    },
-    {
       "label": "COMPANY",
-      "name": "네이버",
+      "name": "서부발전",
       "properties": {
-        "full_name": "네이버 주식회사",
-        "industry": "인터넷 서비스",
-        "headquarters": "대한민국",
-        "founded": "1999",
-        "ceo": "최수연"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "현대모비스",
-      "properties": {
-        "full_name": "현대모비스 주식회사",
-        "industry": "자동차 부품",
-        "headquarters": "대한민국",
-        "founded": "1977",
-        "ceo": "조성환"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "대상",
-      "properties": {
-        "full_name": "대상 주식회사",
-        "industry": "식품",
-        "headquarters": "대한민국",
-        "founded": "1956",
-        "ceo": "임정배"
+        "full_name": "한국서부발전",
+        "industry": "발전",
+        "headquarters": "태안",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
       "label": "PROJECT",
-      "name": "제2차 경기도 공정경제 5개년 기본계획",
+      "name": "발전정보 활용 창업·벤처기업 협업사업",
       "properties": {
-        "description": "경기도의 공정경제를 위한 5개년 계획",
-        "start_date": "2023-04",
-        "status": "진행 중"
+        "description": "창업 7년 이내 중소기업이나 창업·벤처기업이 서부발전의 발전정보를 활용해 창의적인 기술을 개발하고 실증하는 사업화 연계 프로그램",
+        "start_date": "",
+        "status": "공모 중"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "지원금",
+      "properties": {
+        "amount": "1천만∼3천만원",
+        "date": "",
+        "type": "지원"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "창업·벤처기업",
+      "properties": {
+        "type": "기업",
+        "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
+        "headquarters": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "EVENT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
-      "properties": {
-        "location": "수원메쎄 1홀"
-      }
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "구매방침 설명회"
-      }
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "구매방침 설명회"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "구매방침 설명회"
-      }
-    },
-    {
-      "start_node": "ORGANIZATION",
       "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
+      "relationship": "PARTICIPATED_IN",
       "end_node": "PROJECT",
       "properties": {}
     }

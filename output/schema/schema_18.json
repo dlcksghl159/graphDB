@@ -1,111 +1,66 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "중소벤처기업진흥공단",
+      "label": "COMPANY",
+      "name": "사람인",
       "properties": {
-        "type": "Government Agency",
-        "description": "Support agency for small and medium enterprises",
-        "headquarters": "South Korea"
+        "full_name": "사람인",
+        "industry": "인력 관리",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "부산항만공사",
+      "label": "PERSON",
+      "name": "김혜미",
       "properties": {
-        "type": "Port Authority",
-        "description": "Manages port operations in Busan",
-        "headquarters": "Busan, South Korea"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "부산",
-      "properties": {
-        "type": "City",
-        "country": "South Korea",
-        "region": "Busan"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "로스앤젤레스",
-      "properties": {
-        "type": "City",
-        "country": "USA",
-        "region": "California"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "롱비치",
-      "properties": {
-        "type": "City",
-        "country": "USA",
-        "region": "California"
-      }
-    },
-    {
-      "label": "AGREEMENT",
-      "name": "글로벌 물류 지원 업무협약",
-      "properties": {
-        "type": "Business Agreement",
-        "date": "2023-10-14",
-        "description": "Agreement to support global logistics for SMEs"
+        "full_name": "김혜미",
+        "role": "기자",
+        "nationality": "대한민국",
+        "age": ""
       }
     },
     {
       "label": "PROJECT",
-      "name": "항공·해운 통합물류 지원 플랫폼 구축",
+      "name": "인생 이모작 조사",
       "properties": {
-        "description": "Development of an integrated logistics support platform for SMEs",
+        "description": "직장인들의 인생 이모작 의향 조사",
         "start_date": "2023-10-14",
-        "status": "Planned"
+        "status": "완료"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "인생 이모작 설문조사",
+      "properties": {
+        "date": "2023-10-14",
+        "type": "설문조사",
+        "description": "직장인 965명을 대상으로 한 인생 이모작 의향 조사",
+        "location": "대한민국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "중소벤처기업진흥공단",
-      "relationship": "SIGNED",
-      "end_node": "글로벌 물류 지원 업무협약",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "부산항만공사",
-      "relationship": "SIGNED",
-      "end_node": "글로벌 물류 지원 업무협약",
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
       "properties": {}
     },
     {
-      "start_node": "중소벤처기업진흥공단",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
-      "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
-      "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "부산",
-      "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
-      "end_node": "로스앤젤레스",
-      "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
-      "end_node": "롱비치",
-      "properties": {}
+      "start_node": "PERSON",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "기자"
+      }
     }
   ]
 }

@@ -2,114 +2,80 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "소상공인시장진흥공단",
+      "name": "현대이지웰",
       "properties": {
-        "full_name": "소상공인시장진흥공단",
-        "industry": "지원 서비스",
-        "headquarters": "",
-        "founded": "",
-        "ceo": "박성효"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "롯데웰푸드",
-      "properties": {
-        "full_name": "롯데웰푸드",
-        "industry": "식품 제조",
-        "headquarters": "",
+        "full_name": "현대이지웰",
+        "industry": "복지솔루션",
+        "headquarters": "대한민국",
         "founded": "",
         "ceo": ""
       }
     },
     {
+      "label": "COMPANY",
+      "name": "현대백화점그룹",
+      "properties": {
+        "full_name": "현대백화점그룹",
+        "industry": "유통",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "한국중소벤처기업유통원",
+      "properties": {
+        "type": "정부기관",
+        "description": "중소벤처기업부 산하 기관",
+        "headquarters": "대한민국"
+      }
+    },
+    {
       "label": "PROJECT",
-      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "name": "소상공인 온라인쇼핑몰 판매지원사업",
       "properties": {
-        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
-        "start_date": "2023-03",
-        "status": "모집 중"
+        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "start_date": "",
+        "status": "진행 중"
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "업무 협약",
+      "label": "LOCATION",
+      "name": "경기도",
       "properties": {
-        "type": "상생 협력",
-        "date": "2023-03",
-        "description": "백년가게·소공인과 롯데웰푸드의 협력"
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "백년가게",
-      "properties": {
-        "type": "음식점업",
-        "description": "30년 이상의 업력을 가진 우수 소상인",
-        "headquarters": ""
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "백년소공인",
-      "properties": {
-        "type": "식품 제조업",
-        "description": "15년 이상의 업력을 가진 숙련된 소공인",
-        "headquarters": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "식사이론",
-      "properties": {
-        "category": "식품 브랜드",
-        "description": "롯데웰푸드의 상품화 브랜드",
-        "launch_date": "",
-        "company": "롯데웰푸드"
+        "type": "지역",
+        "country": "대한민국",
+        "region": "경기"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "협력",
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
       "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

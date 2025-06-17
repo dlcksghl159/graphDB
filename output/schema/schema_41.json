@@ -2,146 +2,156 @@
   "nodes": [
     {
       "label": "PERSON",
-      "name": "박미경",
+      "name": "김동선",
       "properties": {
-        "full_name": "박미경",
-        "role": "제7대 하이서울기업협회장",
+        "full_name": "김동선",
+        "role": "부사장",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "곽동신",
+      "properties": {
+        "full_name": "곽동신",
+        "role": "회장",
         "nationality": "대한민국",
         "age": ""
       }
     },
     {
       "label": "COMPANY",
-      "name": "포시에스",
+      "name": "한화세미텍",
       "properties": {
-        "full_name": "포시에스",
-        "industry": "전자문서",
-        "headquarters": "서울 강남구",
+        "full_name": "한화세미텍",
+        "industry": "반도체 장비",
+        "headquarters": "",
         "founded": "",
-        "ceo": "박미경"
+        "ceo": "김동선"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "하이서울기업협회",
+      "label": "COMPANY",
+      "name": "한미반도체",
       "properties": {
-        "type": "기업협회",
-        "description": "서울시와 서울산업진흥원이 지원하는 우수 중소기업 네트워크",
-        "headquarters": "서울"
+        "full_name": "한미반도체",
+        "industry": "반도체 장비",
+        "headquarters": "",
+        "founded": "1980",
+        "ceo": "곽동신"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "서울산업진흥원",
+      "label": "COMPANY",
+      "name": "SK하이닉스",
       "properties": {
-        "type": "산업진흥기관",
-        "description": "",
-        "headquarters": "서울"
+        "full_name": "SK하이닉스",
+        "industry": "반도체",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "LOCATION",
-      "name": "서울",
+      "label": "PRODUCT",
+      "name": "TC 본더",
       "properties": {
-        "type": "도시",
-        "country": "대한민국",
-        "region": "서울특별시"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도네시아",
-      "properties": {
-        "type": "국가",
-        "country": "인도네시아",
-        "region": ""
+        "category": "반도체 제조 장비",
+        "description": "고대역폭 메모리(HBM) 제조 핵심 장비",
+        "launch_date": "",
+        "company": "한화세미텍"
       }
     },
     {
       "label": "TECHNOLOGY",
-      "name": "AI",
+      "name": "고대역폭 메모리(HBM)",
       "properties": {
-        "category": "인공지능",
-        "description": "AI 기술을 활용해 문서 생성을 자동화하거나 계약서 내용 분석 및 작성",
-        "field": "기술"
+        "category": "반도체",
+        "description": "인공지능 반도체에 탑재되는 메모리",
+        "field": "반도체"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "AI 교육",
+      "label": "INVESTMENT",
+      "name": "R&D 투자",
       "properties": {
-        "description": "하이서울 기업들을 위한 AI 교육 프로그램",
-        "start_date": "",
-        "status": "진행 중"
+        "amount": "677억",
+        "date": "2022",
+        "type": "R&D"
       }
     },
     {
-      "label": "EVENT",
-      "name": "포시에스 30주년",
+      "label": "AGREEMENT",
+      "name": "TC 본더 공급 계약",
       "properties": {
+        "type": "공급 계약",
         "date": "2023",
-        "type": "기념일",
-        "description": "포시에스 창립 30주년",
-        "location": "서울"
+        "description": "SK하이닉스와의 TC 본더 공급 계약"
       }
     }
   ],
   "relations": [
     {
       "start_node": "PERSON",
-      "relationship": "CEO_OF",
+      "relationship": "WORKS_FOR",
       "end_node": "COMPANY",
       "properties": {
-        "since": ""
+        "position": "부사장",
+        "since": "2022"
       }
     },
     {
       "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "ORGANIZATION",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
       "properties": {
-        "position": "회장",
-        "since": "2023-02"
+        "since": "2022"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
+      "start_node": "PRODUCT",
+      "relationship": "USES",
       "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "ORGANIZATION",
-      "properties": {}
-    },
-    {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_TO",
-      "end_node": "LOCATION",
+      "relationship": "INVESTED_IN",
+      "end_node": "INVESTMENT",
       "properties": {
-        "date": "",
-        "purpose": "시장 확장"
+        "amount": "677억",
+        "date": "2022"
       }
     },
     {
-      "start_node": "PERSON",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "CELEBRATES",
-      "end_node": "EVENT",
-      "properties": {}
+      "relationship": "COMPETES_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "TC 본더 시장"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "공동 개발",
+        "date": "2017"
+      }
     }
   ]
 }

@@ -2,120 +2,90 @@
   "nodes": [
     {
       "label": "COMPANY",
-      "name": "와디즈",
+      "name": "기술보증기금",
       "properties": {
-        "full_name": "와디즈",
-        "industry": "펀딩 플랫폼",
-        "headquarters": "",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "뉴에어론 풀 체어",
-      "properties": {
-        "category": "홈리빙",
-        "description": "고급 오피스 체어",
-        "launch_date": "",
-        "company": "허먼밀러"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "쿠자 멀티핸들 스텐팬",
-      "properties": {
-        "category": "홈리빙",
-        "description": "명품 스테인리스 사용",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "올리젯 청바지",
-      "properties": {
-        "category": "패션",
-        "description": "이탈리아산 프리미엄 데님 원단",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "고급 매트리스",
-      "properties": {
-        "category": "홈리빙",
-        "description": "숙면 연구 기반",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "호텔급 낮잠이불",
-      "properties": {
-        "category": "홈리빙",
-        "description": "",
-        "launch_date": "",
-        "company": ""
+        "full_name": "기술보증기금",
+        "industry": "금융",
+        "headquarters": "서울",
+        "founded": "1989",
+        "ceo": "미상"
       }
     },
     {
       "label": "ORGANIZATION",
-      "name": "유로모니터",
+      "name": "인천지식재산센터",
       "properties": {
-        "type": "시장조사기관",
-        "description": "글로벌 시장조사기관",
-        "headquarters": ""
+        "type": "지식재산",
+        "description": "인천 지역의 지식재산 관련 지원 기관",
+        "headquarters": "인천"
       }
     },
     {
-      "label": "EVENT",
-      "name": "2025 글로벌 소비자 트렌드 리포트 발표",
+      "label": "AGREEMENT",
+      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
       "properties": {
-        "date": "",
-        "type": "리포트 발표",
-        "description": "다각형 소비 정의",
-        "location": ""
+        "type": "MOU",
+        "date": "2023-10-14",
+        "description": "지식재산공제사업 활성화를 위한 협력 체계 구축"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "지식재산공제사업",
+      "properties": {
+        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외진출을 뒷받침하기 위한 금융제도",
+        "start_date": "2019",
+        "status": "활성"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인천",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "인천광역시"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "협력",
+        "date": "2023-10-14"
+      }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "HELD",
-      "end_node": "EVENT",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     }
   ]

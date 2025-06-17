@@ -1,329 +1,121 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "중소벤처기업부",
+      "label": "EVENT",
+      "name": "2025 경기도 동반성장 페어",
       "properties": {
-        "type": "government",
-        "description": "중소기업 및 벤처기업 지원을 담당하는 정부 부처",
-        "headquarters": "대한민국"
+        "date": "2023-04-13",
+        "type": "페어",
+        "description": "경기도와 동반성장위원회가 공동으로 개최한 대·중소기업 구매상담회 및 다양한 상생협력 프로그램",
+        "location": "수원메쎄 1홀"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "네이버",
+      "properties": {
+        "full_name": "네이버 주식회사",
+        "industry": "인터넷 서비스",
+        "headquarters": "대한민국 성남시",
+        "founded": "1999",
+        "ceo": "최수연"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "현대모비스",
+      "properties": {
+        "full_name": "현대모비스 주식회사",
+        "industry": "자동차 부품",
+        "headquarters": "대한민국 서울시",
+        "founded": "1977",
+        "ceo": "조성환"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "대상",
+      "properties": {
+        "full_name": "대상 주식회사",
+        "industry": "식품",
+        "headquarters": "대한민국 서울시",
+        "founded": "1956",
+        "ceo": "임정배"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
+      "properties": {
+        "type": "위원회",
+        "description": "대·중소기업 상생협력을 촉진하기 위한 기구",
+        "headquarters": "대한민국 서울시"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "경기도경제과학진흥원",
+      "properties": {
+        "type": "진흥원",
+        "description": "경기도의 경제 및 과학 발전을 지원하는 기관",
+        "headquarters": "대한민국 경기도"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기도",
+      "properties": {
+        "type": "도",
+        "country": "대한민국",
+        "region": "수도권"
       }
     },
     {
       "label": "PERSON",
-      "name": "이순배",
+      "name": "이달곤",
       "properties": {
-        "full_name": "이순배",
-        "role": "글로벌성장정책관",
+        "full_name": "이달곤",
+        "role": "위원장",
         "nationality": "대한민국",
         "age": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "화장품",
-      "properties": {
-        "category": "beauty",
-        "description": "미용 및 스킨케어 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "자동차",
-      "properties": {
-        "category": "automobile",
-        "description": "자동차 및 관련 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "플라스틱 제품",
-      "properties": {
-        "category": "plastic",
-        "description": "플라스틱으로 제조된 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "자동차 부품",
-      "properties": {
-        "category": "automobile parts",
-        "description": "자동차에 사용되는 부품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "미국",
-      "properties": {
-        "type": "country",
-        "country": "미국",
-        "region": "북아메리카"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "중국",
-      "properties": {
-        "type": "country",
-        "country": "중국",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "일본",
-      "properties": {
-        "type": "country",
-        "country": "일본",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "홍콩",
-      "properties": {
-        "type": "country",
-        "country": "홍콩",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "대만",
-      "properties": {
-        "type": "country",
-        "country": "대만",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "태국",
-      "properties": {
-        "type": "country",
-        "country": "태국",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도네시아",
-      "properties": {
-        "type": "country",
-        "country": "인도네시아",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "베트남",
-      "properties": {
-        "type": "country",
-        "country": "베트남",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도",
-      "properties": {
-        "type": "country",
-        "country": "인도",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "멕시코",
-      "properties": {
-        "type": "country",
-        "country": "멕시코",
-        "region": "북아메리카"
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "기타기계류",
-      "properties": {
-        "category": "machinery",
-        "description": "기타 기계 장비",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "전자응용기기",
-      "properties": {
-        "category": "electronics",
-        "description": "전자 응용 기기",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "철강 제품",
-      "properties": {
-        "category": "steel",
-        "description": "철강으로 제조된 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "PRODUCT",
-      "name": "알루미늄 제품",
-      "properties": {
-        "category": "aluminum",
-        "description": "알루미늄으로 제조된 제품",
-        "launch_date": "",
-        "company": ""
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "미국 관세 부과",
-      "properties": {
-        "date": "2023-03-12",
-        "type": "policy",
-        "description": "미국의 철강·알루미늄 및 파생상품 관세 부과",
-        "location": "미국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "중소벤처기업부",
-      "relationship": "ANNOUNCED",
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
       "end_node": "EVENT",
       "properties": {
-        "date": "2023-04-14"
+        "role": "구매방침 설명회 참여"
       }
     },
     {
-      "start_node": "이순배",
-      "relationship": "WORKS_FOR",
-      "end_node": "중소벤처기업부",
+      "start_node": "ORGANIZATION",
+      "relationship": "HOSTED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATED_WITH",
+      "end_node": "ORGANIZATION",
       "properties": {
-        "position": "글로벌성장정책관",
-        "since": ""
+        "event": "2025 경기도 동반성장 페어"
       }
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
-      "properties": {
-        "amount": "18억4천만 달러",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "중국",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "일본",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "홍콩",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "대만",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "태국",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도네시아",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "베트남",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "멕시코",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "AFFECTED_BY",
+      "start_node": "PERSON",
+      "relationship": "SPOKE_AT",
       "end_node": "EVENT",
       "properties": {
-        "impact": "decrease",
-        "percentage": "-17.8%"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "AFFECTED_BY",
-      "end_node": "EVENT",
-      "properties": {
-        "impact": "decrease",
-        "percentage": "-7.6%"
+        "topic": "중소기업의 지역 경제 중요성"
       }
     }
   ]

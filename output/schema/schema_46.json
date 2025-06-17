@@ -1,131 +1,148 @@
 {
   "nodes": [
     {
-      "label": "PERSON",
-      "name": "김동선",
-      "properties": {
-        "full_name": "김동선",
-        "role": "부사장",
-        "nationality": "대한민국",
-        "age": ""
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "곽동신",
-      "properties": {
-        "full_name": "곽동신",
-        "role": "회장",
-        "nationality": "대한민국",
-        "age": ""
-      }
-    },
-    {
       "label": "COMPANY",
-      "name": "한화세미텍",
+      "name": "중소기업",
       "properties": {
-        "full_name": "한화세미텍",
-        "industry": "반도체 장비",
-        "headquarters": "",
-        "founded": "",
-        "ceo": "김동선"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "한미반도체",
-      "properties": {
-        "full_name": "한미반도체",
-        "industry": "반도체 장비",
-        "headquarters": "",
-        "founded": "1980",
-        "ceo": "곽동신"
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "SK하이닉스",
-      "properties": {
-        "full_name": "SK하이닉스",
-        "industry": "반도체",
-        "headquarters": "",
+        "full_name": "중소기업",
+        "industry": "다양한",
+        "headquarters": "대한민국",
         "founded": "",
         "ceo": ""
       }
     },
     {
       "label": "PRODUCT",
-      "name": "TC 본더",
+      "name": "화장품",
+      "properties": {
+        "category": "화장품",
+        "description": "중소기업 수출 1위 품목",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "자동차",
+        "description": "중소기업 수출 2위 품목",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "반도체 제조용 장비",
       "properties": {
         "category": "반도체 장비",
-        "description": "고대역폭 메모리(HBM) 제조 핵심 장비",
+        "description": "주력 수출 제품",
         "launch_date": "",
-        "company": ""
+        "company": "중소기업"
       }
     },
     {
-      "label": "TECHNOLOGY",
-      "name": "고대역폭 메모리(HBM)",
+      "label": "LOCATION",
+      "name": "미국",
       "properties": {
-        "category": "반도체",
-        "description": "인공지능(AI) 반도체에 탑재되는 메모리",
-        "field": "반도체"
+        "type": "국가",
+        "country": "미국",
+        "region": "북미"
       }
     },
     {
-      "label": "INVESTMENT",
-      "name": "R&D 투자",
+      "label": "LOCATION",
+      "name": "중국",
       "properties": {
-        "amount": "677억",
-        "date": "2022",
-        "type": "R&D"
+        "type": "국가",
+        "country": "중국",
+        "region": "아시아"
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "TC 본더 공급 계약",
+      "label": "LOCATION",
+      "name": "일본",
       "properties": {
-        "type": "공급 계약",
-        "date": "2023",
-        "description": "SK하이닉스와 한화세미텍 간의 TC 본더 공급 계약"
+        "type": "국가",
+        "country": "일본",
+        "region": "아시아"
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "특허 침해 소송",
+      "label": "LOCATION",
+      "name": "홍콩",
       "properties": {
-        "type": "소송",
-        "date": "2022",
-        "description": "한미반도체가 한화세미텍을 상대로 제기한 TC 본더 특허 침해 소송"
+        "type": "국가",
+        "country": "홍콩",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "국가",
+        "country": "대만",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "국가",
+        "country": "태국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "국가",
+        "country": "인도네시아",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "국가",
+        "country": "베트남",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "국가",
+        "country": "인도",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "국가",
+        "country": "멕시코",
+        "region": "중남미"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "대한민국",
+        "age": ""
       }
     }
   ],
   "relations": [
-    {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
-      "properties": {
-        "position": "부사장",
-        "since": "2023"
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": "2023"
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": "2022"
-      }
-    },
     {
       "start_node": "COMPANY",
       "relationship": "PRODUCES",
@@ -133,45 +150,38 @@
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "COMPETES_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "market": "TC 본더"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "공동 개발",
-        "date": "2017"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "RECEIVED_INVESTMENT",
-      "end_node": "INVESTMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
       "start_node": "PRODUCT",
       "relationship": "USES",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
+      "end_node": "LOCATION",
+      "properties": {
+        "market": "수출"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "270억달러",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "SPOKE_AT",
+      "end_node": "EVENT",
+      "properties": {
+        "topic": "중소기업 수출 지원"
+      }
     }
   ]
 }

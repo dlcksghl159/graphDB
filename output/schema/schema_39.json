@@ -1,87 +1,293 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "기술보증기금 지식재산공제센터",
+      "label": "COMPANY",
+      "name": "중소기업",
       "properties": {
-        "type": "Public Institution",
-        "description": "지식재산공제사업 활성화를 위한 기관",
-        "headquarters": "서울"
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "인천지식재산센터",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "type": "Public Institution",
-        "description": "인천지역의 지식재산 관련 지원 기관",
-        "headquarters": "인천"
+        "category": "Beauty",
+        "description": "Cosmetic products",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "label": "PRODUCT",
+      "name": "자동차",
       "properties": {
-        "type": "MOU",
-        "date": "2023-10-14",
-        "description": "지식재산공제사업 활성화를 위한 협력"
+        "category": "Automobile",
+        "description": "Vehicles",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "PROJECT",
-      "name": "지식재산공제사업",
+      "label": "PRODUCT",
+      "name": "플라스틱 제품",
       "properties": {
-        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이기 위한 금융제도",
-        "start_date": "2019",
-        "status": "Active"
+        "category": "Plastic",
+        "description": "Plastic products",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "특허청",
+      "label": "PRODUCT",
+      "name": "자동차 부품",
       "properties": {
-        "type": "Government Agency",
-        "description": "지식재산 관련 정부 기관",
-        "headquarters": "대전"
+        "category": "Automobile Parts",
+        "description": "Parts for vehicles",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "기타기계류",
+      "properties": {
+        "category": "Machinery",
+        "description": "Other machinery",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전자응용기기",
+      "properties": {
+        "category": "Electronics",
+        "description": "Electronic application devices",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "철강 제품",
+      "properties": {
+        "category": "Steel",
+        "description": "Steel products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알루미늄 제품",
+      "properties": {
+        "category": "Aluminum",
+        "description": "Aluminum products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "Country",
+        "country": "Japan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "Country",
+        "country": "Hong Kong",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "Country",
+        "country": "Taiwan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "Country",
+        "country": "Thailand",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "Country",
+        "country": "Indonesia",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "Country",
+        "country": "Vietnam",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "Country",
+        "country": "India",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "Country",
+        "country": "Mexico",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "Global Growth Policy Officer",
+        "nationality": "South Korean",
+        "age": ""
       }
     }
   ],
   "relations": [
     {
-      "start_node": "기술보증기금 지식재산공제센터",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "인천지식재산센터",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "270억 달러",
+        "date": "2023 Q1"
+      }
     },
     {
-      "start_node": "기술보증기금 지식재산공제센터",
-      "relationship": "LEADS",
-      "end_node": "지식재산공제사업",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "18억4천만 달러",
+        "date": "2023 Q1"
+      }
     },
     {
-      "start_node": "특허청",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "지식재산공제사업",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "17억4천만 달러",
+        "date": "2023 Q1"
+      }
     },
     {
-      "start_node": "기술보증기금 지식재산공제센터",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "지식재산공제사업",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "11억3천만 달러",
+        "date": "2023 Q1"
+      }
     },
     {
-      "start_node": "인천지식재산센터",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "지식재산공제사업",
-      "properties": {}
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "10억4천만 달러",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "-47.4%",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "-25.6%",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "-17.8%",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "-7.6%",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "Global Growth Policy Officer",
+        "since": ""
+      }
     }
   ]
 }

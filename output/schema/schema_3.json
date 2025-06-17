@@ -1,97 +1,109 @@
 {
   "nodes": [
     {
-      "label": "LOCATION",
-      "name": "경기도",
-      "properties": {
-        "type": "Province",
-        "country": "대한민국",
-        "region": "경기"
-      }
-    },
-    {
       "label": "ORGANIZATION",
-      "name": "고용노동부",
+      "name": "동반성장위원회",
       "properties": {
-        "type": "Government",
-        "description": "대한민국의 노동 정책을 담당하는 정부 부처",
-        "headquarters": "세종특별자치시"
+        "type": "위원회",
+        "description": "중소기업과 대기업 간의 동반 성장을 지원하는 조직",
+        "headquarters": "서울"
       }
     },
     {
-      "label": "ORGANIZATION",
-      "name": "직업건강간호협회",
+      "label": "COMPANY",
+      "name": "LG이노텍",
       "properties": {
-        "type": "Association",
-        "description": "직업 건강과 안전을 연구하고 교육하는 협회",
-        "headquarters": "대한민국"
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전기·전자",
+        "headquarters": "서울",
+        "founded": "1970",
+        "ceo": "정철동"
       }
     },
     {
-      "label": "PERSON",
-      "name": "임용규",
+      "label": "COMPANY",
+      "name": "에이피텍",
       "properties": {
-        "full_name": "임용규",
-        "role": "경기도 노동안전과장",
-        "nationality": "대한민국",
-        "age": ""
+        "full_name": "에이피텍 주식회사",
+        "industry": "핸드폰 카메라 모듈",
+        "headquarters": "인천",
+        "founded": "2000",
+        "ceo": "김영수"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "협력사 ESG 지원사업 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-09-14",
+        "description": "동반성장위원회와 LG이노텍 간의 협력사 ESG 지원사업을 위한 협약"
       }
     },
     {
       "label": "PROJECT",
-      "name": "찾아가는 산업재해 예방 교육",
+      "name": "협력사 ESG 지원사업",
       "properties": {
-        "description": "50인 미만 소규모 사업장을 대상으로 한 산업재해 예방 교육",
-        "start_date": "2020년",
-        "status": "Ongoing"
+        "description": "협력사의 ESG 평가지표 개발 및 진단·컨설팅·개선 활동 지원",
+        "start_date": "2022",
+        "status": "진행 중"
       }
     },
     {
-      "label": "EVENT",
-      "name": "산업재해 예방 교육",
+      "label": "PRODUCT",
+      "name": "핸드폰 카메라 모듈 생산 설비",
       "properties": {
-        "date": "2023년",
-        "type": "교육",
-        "description": "위험성 평가 실습 교육, 기업별 맞춤형 교육, VR 체험 교육 등",
-        "location": "경기도"
+        "category": "생산 설비",
+        "description": "핸드폰 카메라 모듈을 생산하는 설비",
+        "launch_date": "2015",
+        "company": "에이피텍"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "LOCATION",
-      "relationship": "LOCATED_IN",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
       "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "ESG 지원사업",
+        "date": "2023-09-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "MANAGES",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
       "relationship": "COLLABORATES_ON",
-      "end_node": "ORGANIZATION",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
-      "start_node": "EVENT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     }
   ]

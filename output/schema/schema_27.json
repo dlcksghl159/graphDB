@@ -1,89 +1,188 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "소상공인시장진흥공단",
-      "properties": {
-        "type": "Government Agency",
-        "description": "Small Enterprise and Market Service",
-        "headquarters": "Seoul, South Korea"
-      }
-    },
-    {
       "label": "COMPANY",
-      "name": "롯데웰푸드",
+      "name": "중소기업",
       "properties": {
-        "full_name": "Lotte Wellfood",
-        "industry": "Food Manufacturing",
-        "headquarters": "Seoul, South Korea",
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
         "founded": "",
         "ceo": ""
       }
     },
     {
-      "label": "PROJECT",
-      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "label": "PRODUCT",
+      "name": "화장품",
       "properties": {
-        "description": "Collaboration project for developing joint brands and products with long-standing small businesses.",
-        "start_date": "2023-03",
-        "status": "Ongoing"
-      }
-    },
-    {
-      "label": "AGREEMENT",
-      "name": "업무 협약",
-      "properties": {
-        "type": "Business Cooperation Agreement",
-        "date": "2023-03",
-        "description": "Agreement between 소진공 and 롯데웰푸드 for collaboration on the 상생 프로젝트."
+        "category": "Beauty",
+        "description": "Cosmetics exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "식사이론(Theory of SICSA)",
+      "name": "자동차",
       "properties": {
-        "category": "Food Brand",
-        "description": "Brand for commercializing 우수메뉴 from 백년가게.",
+        "category": "Automotive",
+        "description": "Cars exported by SMEs",
         "launch_date": "",
-        "company": "롯데웰푸드"
+        "company": "중소기업"
       }
     },
     {
-      "label": "EVENT",
-      "name": "백년소상공인 상생프로젝트 모집",
+      "label": "PRODUCT",
+      "name": "반도체제조용장비",
       "properties": {
-        "date": "2023-10-14 to 2023-10-23",
-        "type": "Recruitment",
-        "description": "Recruitment of participants for the 상생 프로젝트.",
-        "location": "Online"
+        "category": "Semiconductor Equipment",
+        "description": "Equipment for semiconductor manufacturing",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "Country",
+        "country": "Japan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "Region",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "Country",
+        "country": "Taiwan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "Country",
+        "country": "Thailand",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "Country",
+        "country": "Indonesia",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "Country",
+        "country": "Vietnam",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "Country",
+        "country": "India",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "Country",
+        "country": "Mexico",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "기타기계류",
+      "properties": {
+        "category": "Machinery",
+        "description": "Other machinery exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전자응용기기",
+      "properties": {
+        "category": "Electronics",
+        "description": "Electronic application devices exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "철강 제품",
+      "properties": {
+        "category": "Steel",
+        "description": "Steel products exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알루미늄 제품",
+      "properties": {
+        "category": "Aluminum",
+        "description": "Aluminum products exported by SMEs",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "South Korean",
+        "age": ""
       }
     }
   ],
   "relations": [
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
     {
       "start_node": "COMPANY",
       "relationship": "PRODUCES",
@@ -91,10 +190,79 @@
       "properties": {}
     },
     {
-      "start_node": "PROJECT",
-      "relationship": "HELD_IN",
-      "end_node": "EVENT",
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
       "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "화장품",
+        "amount": "18억400만 달러",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "자동차",
+        "amount": "17억4000만 달러",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "기타기계류",
+        "amount": "1억6000만 달러",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "전자응용기기",
+        "amount": "1억3000만 달러",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "철강 제품",
+        "amount": "",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "알루미늄 제품",
+        "amount": "",
+        "date": "2025년 1분기"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
     }
   ]
 }

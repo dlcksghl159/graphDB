@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "label": "ORGANIZATION",
+      "name": "동반성장위원회",
+      "properties": {
+        "type": "위원회",
+        "description": "중소기업과 대기업 간의 동반 성장을 지원하는 조직",
+        "headquarters": "서울"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "LG이노텍",
+      "properties": {
+        "full_name": "LG이노텍 주식회사",
+        "industry": "전기·전자",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "에이피텍",
+      "properties": {
+        "full_name": "에이피텍 주식회사",
+        "industry": "핸드폰 카메라 모듈",
+        "headquarters": "인천 송도",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "협력사 ESG 지원사업 업무협약",
+      "properties": {
+        "type": "업무협약",
+        "date": "2025년",
+        "description": "협력사 ESG 지원사업을 위한 동반성장위원회와 LG이노텍 간의 협약"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "협력사 ESG 지원사업",
+      "properties": {
+        "description": "협력사의 ESG 평가 및 개선을 지원하는 사업",
+        "start_date": "",
+        "status": "진행 중"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "핵심 협력사",
+        "date": ""
+      }
+    }
+  ]
+}

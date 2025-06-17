@@ -1,103 +1,76 @@
 {
   "nodes": [
     {
-      "label": "AGREEMENT",
-      "name": "String",
+      "label": "POLICY",
+      "name": "의약품 관세",
       "properties": {
-        "type": "상생 협력",
-        "date": "2023-03",
-        "description": "백년가게·소공인과 롯데웰푸드의 협력"
-      }
-    },
-    {
-      "label": "ORGANIZATION",
-      "name": "String",
-      "properties": {
-        "type": "기업",
-        "description": "창업 7년 이내 중소기업 또는 창업·벤처기업",
-        "headquarters": ""
-      }
-    },
-    {
-      "label": "COMPANY",
-      "name": "String",
-      "properties": {
-        "full_name": "한국서부발전",
-        "industry": "발전",
-        "headquarters": "태안",
-        "founded": "",
-        "ceo": ""
-      }
-    },
-    {
-      "label": "EVENT",
-      "name": "String",
-      "properties": {
-        "date": "",
-        "type": "지원사업",
-        "description": "협업 우수기업에 해외 실증 기회 제공",
-        "location": "해외"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "String",
-      "properties": {
-        "type": "지역",
-        "country": "대한민국",
-        "region": "경기"
-      }
-    },
-    {
-      "label": "PERSON",
-      "name": "String",
-      "properties": {
-        "full_name": "박치호",
-        "role": "기술연구소 팀장",
-        "nationality": "",
-        "age": ""
-      }
-    },
-    {
-      "label": "PROJECT",
-      "name": "String",
-      "properties": {
-        "description": "발전정보를 활용한 창의적인 기술 개발 및 실증 사업화 연계 프로그램",
-        "start_date": "",
-        "status": "공모 중"
-      }
-    },
-    {
-      "label": "INDUSTRY",
-      "name": "B2B",
-      "properties": {
-        "description": "소매업 산업"
+        "type": "Price Reduction",
+        "description": "Policy to reduce drug prices",
+        "date": "2023"
       }
     },
     {
       "label": "TECHNOLOGY",
       "name": "String",
       "properties": {
-        "category": "에너지 절약 기술",
-        "description": "주위 온도 감지 및 자동 조절",
-        "field": "사물인터넷(IoT)"
+        "category": "환기 기술",
+        "description": "냉방모드를 일정 시간 가동하면 자동으로 환기가 시작되는 시스템",
+        "field": "HVAC"
       }
     },
     {
-      "label": "MARKET",
-      "name": "건설경기",
+      "label": "EVENT",
+      "name": "String",
       "properties": {
-        "description": "건설 산업의 경기 상황"
+        "date": "2023-11-14",
+        "type": "현판식",
+        "description": "ESG 우수 중소기업으로 선정된 기업에 대한 현판식",
+        "location": "인천 송도 에이피텍"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "String",
+      "properties": {
+        "type": "공공기관",
+        "description": "부산항의 운영 및 관리",
+        "headquarters": "부산, 대한민국"
       }
     },
     {
       "label": "PRODUCT",
       "name": "String",
       "properties": {
-        "category": "가전제품",
-        "description": "창문형 에어컨, AI 모드, 환기 시스템",
-        "launch_date": "2023-09",
-        "company": "파세코"
+        "category": "가구",
+        "description": "소비자 대상 가구",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "String",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "Korean",
+        "age": ""
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "커머스",
+      "properties": {
+        "description": "소매 산업"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "String",
+      "properties": {
+        "description": "오피스 기반의 B2B 인테리어 사업",
+        "start_date": "",
+        "status": "확장 중"
       }
     },
     {
@@ -108,92 +81,135 @@
         "date": "",
         "type": "지원"
       }
+    },
+    {
+      "label": "COMPANY",
+      "name": "String",
+      "properties": {
+        "full_name": "현대리바트",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "String",
+      "properties": {
+        "type": "도시",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "REPORT",
+      "name": "2025 글로벌 소비자 트렌드 리포트",
+      "properties": {
+        "date": "",
+        "type": "소비자 트렌드",
+        "description": "다각형 소비를 정의",
+        "location": ""
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "String",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+      }
     }
   ],
   "relations": [
     {
-      "start_node": "정일산업",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "경기도 시화공단",
-      "properties": {}
-    },
-    {
-      "start_node": "기술보증기금 지식재산공제센터",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "date": "",
-        "purpose": "시장 확장"
-      }
-    },
-    {
-      "start_node": "LOCATION",
+      "start_node": "인천국제공항공사",
       "relationship": "LOCATED_IN",
-      "end_node": "ORGANIZATION",
+      "end_node": "인천",
       "properties": {}
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도",
-      "properties": {
-        "growth_rate": "감소세"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "CELEBRATES",
-      "end_node": "EVENT",
-      "properties": {}
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "중국",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "AFFECTED_BY",
-      "end_node": "MARKET",
-      "properties": {
-        "impact": "매출 감소"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
-      "properties": {
-        "amount": "1840000000 달러",
-        "date": "2023-01-01 to 2023-03-31"
-      }
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "HELD",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "ESG 지원",
+        "date": "2023-11-14"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": "2022"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
       "end_node": "EVENT",
+      "properties": {
+        "role": "구매방침 설명회 참여"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "원장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "셀트리온",
+      "relationship": "PRODUCES",
+      "end_node": "램시마SC",
       "properties": {}
     },
     {
-      "start_node": "중소기업",
+      "start_node": "삼성바이오로직스",
       "relationship": "PRODUCES",
-      "end_node": "반도체 제조용 장비",
+      "end_node": "피즈치바",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "REPORTED",
-      "end_node": "EVENT",
+      "relationship": "CEO_OF",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "OPERATES",
+      "end_node": "로스앤젤레스",
+      "properties": {
+        "type": "Overseas Logistics Center"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "Business Collaboration",
+        "date": "2023-03"
+      }
+    },
+    {
+      "start_node": "PROJECT",
+      "relationship": "LEADS",
+      "end_node": "ORGANIZATION",
       "properties": {}
     },
     {
@@ -201,167 +217,19 @@
       "relationship": "PARTICIPATED_IN",
       "end_node": "EVENT",
       "properties": {
-        "role": "방송 호스트"
+        "role": "기자"
       }
-    },
-    {
-      "start_node": "중소벤처기업부",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2023-04-14"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPORTS_TO",
-      "end_node": "LOCATION",
-      "properties": {
-        "country": "멕시코",
-        "description": "Decreased export market for SMEs"
-      }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "신송남",
-      "relationship": "WORKS_FOR",
-      "end_node": "정일산업",
-      "properties": {
-        "position": "작업자",
-        "since": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "공동 개발",
-        "date": "2017"
-      }
-    },
-    {
-      "start_node": "PROJECT",
-      "relationship": "HELD_IN",
-      "end_node": "EVENT",
-      "properties": {}
     },
     {
       "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "베트남",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "대웅제약",
-      "relationship": "PRODUCES",
-      "end_node": "나보타",
-      "properties": {}
-    },
-    {
-      "start_node": "중소벤처기업진흥공단",
-      "relationship": "PLANS_TO_EXPAND",
-      "end_node": "LOCATION",
-      "properties": {
-        "locations": [
-          "부산",
-          "인천",
-          "여수 광양"
-        ]
-      }
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "CONDUCTED",
-      "end_node": "EVENT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "트룩시마",
-      "properties": {}
-    },
-    {
-      "start_node": "알루미늄 제품",
-      "relationship": "AFFECTED_BY",
-      "end_node": "EVENT",
-      "properties": {
-        "impact": "수출 감소",
-        "percentage": "-7.6%"
-      }
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "베그젤마",
-      "properties": {}
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도네시아",
-      "properties": {
-        "growth_rate": "두 자릿수 증가율"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2023-04-14"
-      }
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "AFFECTED",
+      "relationship": "USES",
       "end_node": "PRODUCT",
-      "properties": {
-        "impact": "수출 감소",
-        "percentage": "7.6%",
-        "amount": "-17.8% for 철강, -7.6% for 알루미늄"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "홍콩",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "MADE_INVESTMENT",
-      "end_node": "INVESTMENT",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "SUBSIDIARY_OF",
-      "end_node": "COMPANY",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "MADE_INVESTMENT",
-      "end_node": "INVESTMENT",
+      "start_node": "유한양행",
+      "relationship": "PRODUCES",
+      "end_node": "렉라자",
       "properties": {}
     },
     {
@@ -375,28 +243,165 @@
     },
     {
       "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "LOCATED_IN",
+      "end_node": "서울",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "GC녹십자",
+      "relationship": "PRODUCES",
+      "end_node": "알리글로",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "-7.6%",
+        "date": "2023 Q1"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_INTO",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "ATTENDED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "POLICY",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "ORGANIZES",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
       "relationship": "SIGNED",
       "end_node": "AGREEMENT",
       "properties": {}
     },
     {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
+      "end_node": "부산",
+      "properties": {}
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "HELD_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "NEGOTIATED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "ANNOUNCED",
+      "end_node": "EVENT",
       "properties": {
-        "amount": "1840000000 달러",
-        "growth_rate": "+19.6%",
-        "increase_rate": "19.6%"
+        "date": "2023-04-14"
+      }
+    },
+    {
+      "start_node": "EVENT",
+      "relationship": "AFFECTED",
+      "end_node": "COMPANY",
+      "properties": {
+        "impact": "Negative",
+        "product": "철강, 알루미늄",
+        "percentage": "17.8%, 7.6%"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "ORGANIZATION",
+      "relationship": "PLANS_TO_PRODUCE",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "INVENTED",
+      "end_node": "TECHNOLOGY",
       "properties": {
-        "type": "지원사업",
-        "date": "2023"
+        "date": "string"
       }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "MADE_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "보령",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "HK이노엔",
+      "properties": {
+        "type": "Co-marketing",
+        "date": "2022"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
     },
     {
       "start_node": "PERSON",
@@ -408,25 +413,12 @@
       }
     },
     {
-      "start_node": "김대환",
-      "relationship": "WORKS_FOR",
-      "end_node": "정일산업",
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
       "properties": {
-        "position": "공장장",
-        "since": ""
+        "parent_company": "현대백화점그룹"
       }
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "ATTENDED",
-      "end_node": "EVENT",
-      "properties": {}
-    },
-    {
-      "start_node": "인천지식재산센터",
-      "relationship": "LOCATED_IN",
-      "end_node": "인천",
-      "properties": {}
     },
     {
       "start_node": "COMPANY",
@@ -435,114 +427,35 @@
       "properties": {}
     },
     {
-      "start_node": "셀트리온",
-      "relationship": "SUPPLIED",
-      "end_node": "CSC",
+      "start_node": "PERSON",
+      "relationship": "FOUNDER_OF",
+      "end_node": "COMPANY",
       "properties": {
-        "products": [
-          "트룩시마",
-          "허쥬마"
-        ],
-        "duration": "2023-2029"
+        "date": "string"
       }
     },
     {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "멕시코",
-      "properties": {
-        "growth_rate": "감소세"
-      }
-    },
-    {
-      "start_node": "EVENT",
-      "relationship": "HELD_IN",
-      "end_node": "LOCATION",
-      "properties": {
-        "location": "수원메쎄 1홀"
-      }
-    },
-    {
-      "start_node": "기술보증기금 지식재산공제센터",
+      "start_node": "PERSON",
       "relationship": "LEADS",
-      "end_node": "지식재산공제사업",
+      "end_node": "COMPANY",
       "properties": {}
     },
     {
       "start_node": "PERSON",
-      "relationship": "NEGOTIATED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "중소벤처기업진흥공단",
-      "relationship": "SIGNED",
-      "end_node": "글로벌 물류 지원 업무협약",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
-      "relationship": "HELD_IN",
+      "relationship": "LIVES_IN",
       "end_node": "LOCATION",
       "properties": {}
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "태국",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "AFFECTED_BY",
-      "end_node": "EVENT",
-      "properties": {
-        "impact": "decrease",
-        "percentage": "-7.6%"
-      }
-    },
-    {
-      "start_node": "인천지식재산센터",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "start_node": "COMPANY",
+      "relationship": "USES",
+      "end_node": "PRODUCT",
       "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
-      "end_node": "로스앤젤레스",
-      "properties": {}
-    },
-    {
-      "start_node": "TECHNOLOGY",
-      "relationship": "AWARDED_AT",
-      "end_node": "EVENT",
-      "properties": {
-        "award": "최고혁신상"
-      }
-    },
-    {
-      "start_node": "기술보증기금",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
-      "properties": {}
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "일본",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
     },
     {
       "start_node": "PERSON",
       "relationship": "WORKS_FOR",
-      "end_node": "ORGANIZATION",
+      "end_node": "COMPANY",
       "properties": {
         "position": "글로벌성장정책관",
         "since": ""
@@ -550,54 +463,17 @@
     },
     {
       "start_node": "PERSON",
-      "relationship": "CEO_OF",
-      "end_node": "COMPANY",
-      "properties": {
-        "since": "2022"
-      }
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "중국",
-      "properties": {
-        "growth_rate": "두 자릿수 증가율"
-      }
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "스페인",
+      "relationship": "MANAGES",
+      "end_node": "PROJECT",
       "properties": {}
-    },
-    {
-      "start_node": "정광용",
-      "relationship": "CEO_OF",
-      "end_node": "정일산업",
-      "properties": {
-        "since": ""
-      }
-    },
-    {
-      "start_node": "기술보증기금 지식재산공제센터",
-      "relationship": "SIGNED",
-      "end_node": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "PUBLISHED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2025-04-14"
-      }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SUPPLIES",
+      "relationship": "ACQUIRED",
       "end_node": "COMPANY",
       "properties": {
-        "product": "제조설비"
+        "date": "2023-02-02",
+        "amount": "145억 원"
       }
     },
     {
@@ -605,143 +481,25 @@
       "relationship": "SPOKE_AT",
       "end_node": "EVENT",
       "properties": {
-        "topic": "기술 혁신과 지속 가능한 미래"
-      }
-    },
-    {
-      "start_node": "종근당",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "셀트리온제약",
-      "properties": {
-        "type": "Product Distribution",
-        "date": "2022"
+        "topic": "중소기업 수출 지원"
       }
     },
     {
       "start_node": "중소벤처기업진흥공단",
-      "relationship": "PARTNERED_WITH",
+      "relationship": "COLLABORATES_ON",
       "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "date": "2023-10-14"
-      }
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "베트남",
-      "properties": {
-        "growth_rate": "감소세"
-      }
-    },
-    {
-      "start_node": "보령",
-      "relationship": "SIGNED",
-      "end_node": "케이캡 공동판매 계약",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "INVESTED_IN",
-      "end_node": "PRODUCT",
-      "properties": {
-        "amount": "",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "컨파마",
-      "properties": {
-        "type": "Distribution",
-        "date": ""
-      }
-    },
-    {
-      "start_node": "유한양행",
-      "relationship": "PRODUCES",
-      "end_node": "렉라자",
-      "properties": {}
-    },
-    {
       "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "방광호",
-      "relationship": "WORKS_FOR",
-      "end_node": "정일산업",
-      "properties": {
-        "position": "지게차 기사",
-        "since": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_INTO",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
-      "properties": {}
-    },
-    {
-      "start_node": "자동차",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
-      "properties": {
-        "amount": "1740000000 달러",
-        "growth_rate": "+67.4%",
-        "increase_rate": "67.4%"
-      }
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "홍콩",
-      "properties": {
-        "growth_rate": "두 자릿수 증가율"
-      }
-    },
-    {
-      "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
-      "end_node": "롱비치",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "ORGANIZATION",
-      "properties": {
-        "type": "지원사업",
-        "date": "2023"
-      }
-    },
-    {
-      "start_node": "중소벤처기업진흥공단",
-      "relationship": "SIGNED",
-      "end_node": "업무협약(MOU)",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
+      "relationship": "USES",
       "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "PROJECT",
       "properties": {}
     },
     {
@@ -749,22 +507,19 @@
       "relationship": "COMPETES_WITH",
       "end_node": "COMPANY",
       "properties": {
-        "market": "TC 본더"
+        "market": "가구"
       }
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "Business Cooperation",
-        "date": "2023-03"
-      }
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
     },
     {
-      "start_node": "EVENT",
-      "relationship": "AFFECTS",
-      "end_node": "COMPANY",
+      "start_node": "AGREEMENT",
+      "relationship": "SIGNED",
+      "end_node": "ORGANIZATION",
       "properties": {}
     },
     {
@@ -774,97 +529,76 @@
       "properties": {}
     },
     {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "허쥬마",
-      "properties": {}
-    },
-    {
-      "start_node": "인천지식재산센터",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "LOCATION",
-      "relationship": "IMPACTED_BY",
-      "end_node": "EVENT",
-      "properties": {
-        "impact": "수출 감소"
-      }
-    },
-    {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "인도네시아",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
       "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "기술보증기금",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2023-04-14",
-        "description": "중소기업 수출 증가 발표"
-      }
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "포르투갈",
-      "properties": {}
-    },
-    {
-      "start_node": "철강 제품",
-      "relationship": "AFFECTED_BY",
-      "end_node": "EVENT",
-      "properties": {
-        "impact": "수출 감소",
-        "percentage": "-17.8%"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "EVENT",
-      "properties": {
-        "role": "구매방침 설명회"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "SPONSORED",
-      "end_node": "EVENT",
-      "properties": {}
-    },
-    {
-      "start_node": "김두연",
-      "relationship": "WORKS_FOR",
-      "end_node": "정일산업",
-      "properties": {
-        "position": "고무 프레스 담당",
-        "since": ""
+        "product": "휴대전화 카메라 모듈 제조설비"
       }
     },
     {
       "start_node": "부산항만공사",
-      "relationship": "OPERATES",
-      "end_node": "LA·LB",
+      "relationship": "SIGNED",
+      "end_node": "물류 지원 업무협약",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "업무협약",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "부산항만공사",
+      "properties": {
+        "type": "Logistics Collaboration",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "event": "2025 경기도 동반성장 페어"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "INVESTED_IN",
+      "end_node": "INVESTMENT",
+      "properties": {
+        "amount": "677억",
+        "date": "2022"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
       "properties": {}
     },
     {
@@ -877,57 +611,18 @@
     },
     {
       "start_node": "ORGANIZATION",
-      "relationship": "PARTICIPATED_IN",
-      "end_node": "PROJECT",
+      "relationship": "PUBLISHED",
+      "end_node": "REPORT",
       "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "이순배",
-      "relationship": "WORKS_FOR",
-      "end_node": "중소벤처기업부",
-      "properties": {
-        "position": "글로벌성장정책관",
-        "since": ""
-      }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "ACQUIRED",
-      "end_node": "COMPANY",
-      "properties": {
-        "date": "2023-02-02",
-        "amount": "145억 원"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
-    },
-    {
-      "start_node": "특허청",
       "relationship": "PARTNERED_WITH",
-      "end_node": "지식재산공제사업",
-      "properties": {}
-    },
-    {
-      "start_node": "셀트리온",
-      "relationship": "PRODUCES",
-      "end_node": "램시마SC",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "ESG 지원",
+        "date": "2023-11-14"
+      }
     },
     {
       "start_node": "유한양행",
@@ -936,27 +631,10 @@
       "properties": {}
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "대만",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "기술보증기금",
-      "relationship": "LEADS",
-      "end_node": "지식재산공제사업",
+      "start_node": "ORGANIZATION",
+      "relationship": "HOSTED",
+      "end_node": "EVENT",
       "properties": {}
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "태국",
-      "properties": {
-        "growth_rate": "두 자릿수 증가율"
-      }
     },
     {
       "start_node": "대웅제약",
@@ -965,153 +643,94 @@
       "properties": {}
     },
     {
-      "start_node": "기술보증기금",
-      "relationship": "LOCATED_IN",
-      "end_node": "인천",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
+      "start_node": "종근당",
       "relationship": "PARTNERED_WITH",
-      "end_node": "ORGANIZATION",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "INVENTED",
-      "end_node": "TECHNOLOGY",
+      "end_node": "셀트리온제약",
       "properties": {
-        "date": "string"
-      }
-    },
-    {
-      "start_node": "삼성바이오로직스",
-      "relationship": "PRODUCES",
-      "end_node": "피즈치바",
-      "properties": {}
-    },
-    {
-      "start_node": "PROJECT",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
-    },
-    {
-      "start_node": "강석훈",
-      "relationship": "WORKS_FOR",
-      "end_node": "셀트리온",
-      "properties": {
-        "position": "법인장",
-        "since": ""
+        "type": "Co-marketing",
+        "date": "2022"
       }
     },
     {
       "start_node": "COMPANY",
-      "relationship": "FOCUSES_ON",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "strategy": "수익성 중심 경영"
-      }
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
     },
     {
-      "start_node": "PERSON",
-      "relationship": "FOUNDER_OF",
+      "start_node": "COMPANY",
+      "relationship": "INVESTED_IN",
       "end_node": "COMPANY",
       "properties": {
-        "date": "string"
+        "amount": "12억원",
+        "date": "2023-10-14"
       }
     },
     {
-      "start_node": "부산항만공사",
-      "relationship": "HEADQUARTERED_IN",
-      "end_node": "부산",
+      "start_node": "PERSON",
+      "relationship": "IMPLEMENTED",
+      "end_node": "POLICY",
+      "properties": {}
+    },
+    {
+      "start_node": "대웅제약",
+      "relationship": "PRODUCES",
+      "end_node": "나보타",
+      "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "SIGNED",
+      "end_node": "물류 지원 업무협약",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
+      "relationship": "DEVELOPS",
       "end_node": "PRODUCT",
       "properties": {}
     },
     {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "role": "Supplier",
+        "since": "2023"
+      }
+    },
+    {
       "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
-      "end_node": "부산",
-      "properties": {}
-    },
-    {
-      "start_node": "GC녹십자",
-      "relationship": "PRODUCES",
-      "end_node": "알리글로",
-      "properties": {}
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "일본",
+      "relationship": "OPERATES",
+      "end_node": "롱비치",
       "properties": {
-        "growth_rate": "두 자릿수 증가율"
+        "type": "Overseas Logistics Center"
       }
     },
     {
-      "start_node": "ORGANIZATION",
-      "relationship": "LEADS",
-      "end_node": "PROJECT",
-      "properties": {}
-    },
-    {
-      "start_node": "PERSON",
-      "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
-      "properties": {
-        "position": "기술연구소 팀장",
-        "since": ""
-      }
-    },
-    {
-      "start_node": "중소벤처기업진흥공단",
+      "start_node": "스마트트레이드허브",
       "relationship": "PARTNERED_WITH",
-      "end_node": "항공·해운 통합물류 지원 플랫폼 구축",
-      "properties": {}
+      "end_node": "인천국제공항공사",
+      "properties": {
+        "type": "Logistics Cost Reduction",
+        "date": ""
+      }
     },
     {
-      "start_node": "정일산업",
-      "relationship": "LOCATED_IN",
-      "end_node": "충북 충주",
-      "properties": {}
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "USES",
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
       "end_node": "LOCATION",
       "properties": {
-        "country": "중국",
-        "description": "Increased demand due to manufacturing boom"
+        "product": "반도체제조용장비",
+        "amount": "7억2000만 달러",
+        "date": "2023 Q1"
       }
-    },
-    {
-      "start_node": "조주현",
-      "relationship": "WORKS_FOR",
-      "end_node": "중소벤처기업연구원",
-      "properties": {
-        "position": "원장",
-        "since": ""
-      }
-    },
-    {
-      "start_node": "PRODUCT",
-      "relationship": "EXPORTED_TO",
-      "end_node": "멕시코",
-      "properties": {
-        "amount": "",
-        "date": "2023-01-01 to 2023-03-31"
-      }
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SUPPORTED_BY",
-      "end_node": "ORGANIZATION",
-      "properties": {}
     }
   ]
 }

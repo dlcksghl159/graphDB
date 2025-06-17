@@ -1,208 +1,152 @@
 {
   "nodes": [
     {
-      "label": "ORGANIZATION",
-      "name": "중소벤처기업부",
+      "label": "COMPANY",
+      "name": "패스트파이브",
       "properties": {
-        "type": "정부 기관",
-        "description": "중소기업 및 벤처기업 지원을 담당하는 정부 부처",
-        "headquarters": "대한민국"
+        "full_name": "패스트파이브",
+        "industry": "클라우드 및 IT 솔루션",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김대일"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "화장품",
+      "name": "파이브클라우드",
       "properties": {
-        "category": "뷰티",
-        "description": "K뷰티 열풍으로 수출 증가",
+        "category": "클라우드 및 IT 솔루션",
+        "description": "중소·중견기업 맞춤형 클라우드 및 IT 솔루션 통합 서비스",
         "launch_date": "",
-        "company": "중소기업"
+        "company": "패스트파이브"
       }
     },
     {
       "label": "PRODUCT",
-      "name": "자동차",
+      "name": "인테리어코드",
       "properties": {
-        "category": "자동차",
-        "description": "중소기업 수출 2위 품목",
+        "category": "통합 서비스",
+        "description": "패스트파이브의 인테리어 전문 브랜드 하이픈디자인과 협력한 통합 서비스",
         "launch_date": "",
-        "company": "중소기업"
+        "company": "패스트파이브"
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "반도체 제조용 장비",
+      "label": "COMPANY",
+      "name": "아마존웹서비스",
       "properties": {
-        "category": "전자",
-        "description": "수출 호조세",
-        "launch_date": "",
-        "company": "중소기업"
+        "full_name": "아마존웹서비스",
+        "industry": "클라우드 서비스",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "LOCATION",
-      "name": "미국",
+      "label": "COMPANY",
+      "name": "구글",
       "properties": {
-        "type": "국가",
-        "country": "미국",
-        "region": "북아메리카"
+        "full_name": "구글",
+        "industry": "클라우드 서비스",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
-      "label": "LOCATION",
-      "name": "중국",
+      "label": "COMPANY",
+      "name": "마이크로소프트",
       "properties": {
-        "type": "국가",
-        "country": "중국",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "일본",
-      "properties": {
-        "type": "국가",
-        "country": "일본",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "홍콩",
-      "properties": {
-        "type": "특별행정구",
-        "country": "중국",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "대만",
-      "properties": {
-        "type": "국가",
-        "country": "대만",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "태국",
-      "properties": {
-        "type": "국가",
-        "country": "태국",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도네시아",
-      "properties": {
-        "type": "국가",
-        "country": "인도네시아",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "베트남",
-      "properties": {
-        "type": "국가",
-        "country": "베트남",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인도",
-      "properties": {
-        "type": "국가",
-        "country": "인도",
-        "region": "아시아"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "멕시코",
-      "properties": {
-        "type": "국가",
-        "country": "멕시코",
-        "region": "북아메리카"
+        "full_name": "마이크로소프트",
+        "industry": "클라우드 서비스",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
       "label": "PERSON",
-      "name": "이순배",
+      "name": "김대일",
       "properties": {
-        "full_name": "이순배",
-        "role": "글로벌성장정책관",
-        "nationality": "대한민국",
+        "full_name": "김대일",
+        "role": "대표",
+        "nationality": "",
         "age": ""
       }
     },
     {
-      "label": "EVENT",
-      "name": "미국 관세 조치",
+      "label": "PROJECT",
+      "name": "AWS 어드밴스드 티어 파트너",
       "properties": {
-        "date": "2023-03-12",
-        "type": "정책",
-        "description": "미국 철강·알루미늄 및 파생상품 관세부과",
-        "location": "미국"
+        "description": "AWS 어드밴스드 티어 파트너 자격 취득",
+        "start_date": "2023",
+        "status": "취득 완료"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "AWS 한국파트너리그",
+      "properties": {
+        "date": "",
+        "type": "수상",
+        "description": "3회 연속 수상",
+        "location": "한국"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "중소벤처기업부",
-      "relationship": "ANNOUNCED",
-      "end_node": "EVENT",
-      "properties": {
-        "date": "2023-04-14"
-      }
-    },
-    {
-      "start_node": "중소기업",
+      "start_node": "COMPANY",
       "relationship": "PRODUCES",
-      "end_node": "화장품",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
-      "start_node": "중소기업",
-      "relationship": "PRODUCES",
-      "end_node": "자동차",
-      "properties": {}
-    },
-    {
-      "start_node": "중소기업",
-      "relationship": "PRODUCES",
-      "end_node": "반도체 제조용 장비",
-      "properties": {}
-    },
-    {
-      "start_node": "화장품",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "amount": "18억 4000만달러",
-        "increase_rate": "19.6%"
+        "type": "클라우드 솔루션 제공",
+        "date": ""
       }
     },
     {
-      "start_node": "자동차",
-      "relationship": "EXPORTED_TO",
-      "end_node": "미국",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "amount": "17억 4000만달러",
-        "increase_rate": "67.4%"
+        "type": "클라우드 솔루션 제공",
+        "date": ""
       }
     },
     {
-      "start_node": "이순배",
-      "relationship": "WORKS_FOR",
-      "end_node": "중소벤처기업부",
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
       "properties": {
-        "position": "글로벌성장정책관",
+        "type": "클라우드 솔루션 제공",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
         "since": ""
       }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
     }
   ]
 }

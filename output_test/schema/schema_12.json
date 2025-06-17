@@ -5,7 +5,7 @@
       "name": "중소벤처기업진흥공단",
       "properties": {
         "type": "Government Agency",
-        "description": "중소벤처기업의 지원을 위한 정부 기관",
+        "description": "중소벤처기업의 지원을 담당하는 공공기관",
         "headquarters": "대한민국"
       }
     },
@@ -13,8 +13,8 @@
       "label": "ORGANIZATION",
       "name": "부산항만공사",
       "properties": {
-        "type": "Government Agency",
-        "description": "부산항의 관리 및 운영을 담당하는 공사",
+        "type": "Port Authority",
+        "description": "부산항의 관리 및 운영을 담당하는 공공기관",
         "headquarters": "부산, 대한민국"
       }
     },
@@ -24,52 +24,25 @@
       "properties": {
         "type": "Logistics Center",
         "country": "미국",
-        "region": "로스앤젤레스, 롱비치"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "부산",
-      "properties": {
-        "type": "City",
-        "country": "대한민국",
-        "region": "부산광역시"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "인천",
-      "properties": {
-        "type": "City",
-        "country": "대한민국",
-        "region": "인천광역시"
-      }
-    },
-    {
-      "label": "LOCATION",
-      "name": "여수 광양",
-      "properties": {
-        "type": "City",
-        "country": "대한민국",
-        "region": "전라남도"
-      }
-    },
-    {
-      "label": "AGREEMENT",
-      "name": "물류 지원 업무협약",
-      "properties": {
-        "type": "MOU",
-        "date": "2023-10-14",
-        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+        "region": "로스앤젤레스 및 롱비치"
       }
     },
     {
       "label": "PROJECT",
-      "name": "스마트트레이드허브 연계 통합물류 지원 플랫폼",
+      "name": "스마트트레이드허브",
       "properties": {
         "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼 구축",
-        "start_date": "2023-10-14",
-        "status": "Planned"
+        "start_date": "N/A",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "중진공-BPA 업무협약",
+      "properties": {
+        "type": "MOU",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
       }
     }
   ],
@@ -77,37 +50,31 @@
     {
       "start_node": "중소벤처기업진흥공단",
       "relationship": "SIGNED",
-      "end_node": "물류 지원 업무협약",
+      "end_node": "중진공-BPA 업무협약",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "SIGNED",
-      "end_node": "물류 지원 업무협약",
+      "end_node": "중진공-BPA 업무협약",
       "properties": {}
     },
     {
       "start_node": "중소벤처기업진흥공단",
       "relationship": "COLLABORATES_ON",
-      "end_node": "스마트트레이드허브 연계 통합물류 지원 플랫폼",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "COLLABORATES_ON",
-      "end_node": "스마트트레이드허브 연계 통합물류 지원 플랫폼",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "LOCATED_IN",
-      "end_node": "부산",
-      "properties": {}
-    },
-    {
-      "start_node": "LA·LB 해외물류센터",
-      "relationship": "LOCATED_IN",
-      "end_node": "로스앤젤레스, 롱비치",
+      "end_node": "LA·LB 해외물류센터",
       "properties": {}
     }
   ]

@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "중소기업",
+      "properties": {
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "화장품",
+      "properties": {
+        "category": "Beauty",
+        "description": "Cosmetic products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "Automotive",
+        "description": "Automobiles",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "반도체 제조용 장비",
+      "properties": {
+        "category": "Semiconductor Equipment",
+        "description": "Equipment for semiconductor manufacturing",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "Country",
+        "country": "Japan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "Country",
+        "country": "Hong Kong",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "Country",
+        "country": "Taiwan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "Country",
+        "country": "Thailand",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "Country",
+        "country": "Indonesia",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "Country",
+        "country": "Vietnam",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "Country",
+        "country": "India",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "Country",
+        "country": "Mexico",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "Global Growth Policy Officer",
+        "nationality": "South Korean",
+        "age": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "화장품",
+        "amount": "18억4000만달러",
+        "increase": "19.6%"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "자동차",
+        "amount": "17억4000만달러",
+        "increase": "67.4%"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "기타기계류",
+        "amount": "1억6000만달러",
+        "decrease": "47.4%"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "전자응용기기",
+        "amount": "1억3000만달러",
+        "decrease": "25.6%"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "Global Growth Policy Officer",
+        "since": ""
+      }
+    }
+  ]
+}

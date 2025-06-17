@@ -1,0 +1,99 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "소상공인시장진흥공단",
+      "properties": {
+        "full_name": "소상공인시장진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "박성효"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
+      "properties": {
+        "full_name": "롯데웰푸드",
+        "industry": "Food Manufacturing",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "properties": {
+        "description": "백년가게와 백년소공인의 오랜 경험과 비법에 롯데웰푸드의 식품 제조 기술력을 접목하여 공동 상표 및 상품 개발",
+        "start_date": "2023-03",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무 협약",
+      "properties": {
+        "type": "Business Collaboration",
+        "date": "2023-03",
+        "description": "소진공과 롯데웰푸드 간의 협력 협약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "우수메뉴",
+      "properties": {
+        "category": "Food",
+        "description": "백년가게의 우수메뉴를 롯데웰푸드 브랜드와 접목하여 상품화",
+        "launch_date": "",
+        "company": "롯데웰푸드"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론(Theory of SICSA)",
+      "properties": {
+        "category": "Food Brand",
+        "description": "롯데웰푸드의 식품 브랜드",
+        "launch_date": "",
+        "company": "롯데웰푸드"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "Business Collaboration",
+        "date": "2023-03"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    }
+  ]
+}

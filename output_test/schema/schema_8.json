@@ -1,0 +1,83 @@
+{
+  "nodes": [
+    {
+      "label": "ORGANIZATION",
+      "name": "기술보증기금",
+      "properties": {
+        "type": "Public Institution",
+        "description": "기술보증기금은 기술보증 및 금융 지원을 제공하는 기관",
+        "headquarters": "대한민국"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "인천지식재산센터",
+      "properties": {
+        "type": "Public Institution",
+        "description": "인천 지역의 지식재산 관련 지원을 제공하는 기관",
+        "headquarters": "인천, 대한민국"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "지식재산공제사업",
+      "properties": {
+        "description": "중소·중견기업의 지식재산 비용 부담과 분쟁 리스크를 줄이고 해외 진출을 뒷받침하기 위한 금융제도",
+        "start_date": "2019",
+        "status": "Active"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "지식재산공제사업 활성화를 통한 공동발전 업무 협약",
+      "properties": {
+        "type": "Collaboration Agreement",
+        "date": "2023-10-14",
+        "description": "지식재산공제사업 활성화를 위한 양 기관의 협력 체계 구축"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "중소·중견기업",
+      "properties": {
+        "full_name": "중소·중견기업",
+        "industry": "Various",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "PROJECT",
+      "properties": {}
+    }
+  ]
+}

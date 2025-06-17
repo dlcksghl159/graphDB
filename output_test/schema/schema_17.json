@@ -5,10 +5,21 @@
       "name": "신일전자",
       "properties": {
         "full_name": "신일전자 주식회사",
-        "industry": "가전",
-        "headquarters": "대한민국 서울",
-        "founded": "1959",
-        "ceo": "이길원"
+        "industry": "전자제품",
+        "headquarters": "서울, 대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "GS홈쇼핑",
+      "properties": {
+        "full_name": "GS홈쇼핑 주식회사",
+        "industry": "홈쇼핑",
+        "headquarters": "서울, 대한민국",
+        "founded": "",
+        "ceo": ""
       }
     },
     {
@@ -17,27 +28,18 @@
       "properties": {
         "category": "가전제품",
         "description": "고성능·감성 디자인의 에어 서큘레이터",
-        "launch_date": "2023-05-14",
+        "launch_date": "2023-04-14",
         "company": "신일전자"
       }
     },
     {
       "label": "EVENT",
-      "name": "GS홈쇼핑 성유리 에디션 방송",
+      "name": "성유리 에디션 방송",
       "properties": {
-        "date": "2023-05-14",
-        "type": "제품 출시 방송",
-        "description": "신일전자의 신제품 BLDC 에어 서큘레이터 S10 SE를 소개하는 방송",
+        "date": "2023-04-14",
+        "type": "홈쇼핑 방송",
+        "description": "신일전자 신제품 출시 방송",
         "location": "GS홈쇼핑"
-      }
-    },
-    {
-      "label": "TECHNOLOGY",
-      "name": "BLDC 모터",
-      "properties": {
-        "category": "모터 기술",
-        "description": "고효율 브러시리스 직류 모터",
-        "field": "가전"
       }
     }
   ],
@@ -49,10 +51,13 @@
       "properties": {}
     },
     {
-      "start_node": "PRODUCT",
-      "relationship": "USES",
-      "end_node": "TECHNOLOGY",
-      "properties": {}
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "홈쇼핑 방송 협력",
+        "date": "2023-04-14"
+      }
     },
     {
       "start_node": "COMPANY",

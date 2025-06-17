@@ -1,0 +1,154 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "패스트파이브",
+      "properties": {
+        "full_name": "패스트파이브",
+        "industry": "클라우드 및 IT 솔루션",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "김대일"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "파이브클라우드",
+      "properties": {
+        "category": "클라우드 및 IT 솔루션",
+        "description": "중소·중견기업 맞춤형 클라우드 및 IT 솔루션 통합 서비스",
+        "launch_date": "",
+        "company": "패스트파이브"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "인테리어코드",
+      "properties": {
+        "category": "통합 서비스",
+        "description": "패스트파이브의 인테리어 전문 브랜드 '하이픈디자인'과 협력한 통합 서비스",
+        "launch_date": "",
+        "company": "패스트파이브"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "아마존웹서비스",
+      "properties": {
+        "full_name": "아마존웹서비스",
+        "industry": "클라우드 컴퓨팅",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "구글",
+      "properties": {
+        "full_name": "구글",
+        "industry": "기술",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "마이크로소프트",
+      "properties": {
+        "full_name": "마이크로소프트",
+        "industry": "기술",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김대일",
+      "properties": {
+        "full_name": "김대일",
+        "role": "대표",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "AWS 한국파트너리그",
+      "properties": {
+        "type": "기술 협회",
+        "description": "AWS 관련 기술 및 파트너십을 다루는 협회",
+        "headquarters": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "클라우드 솔루션 제공",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "클라우드 솔루션 제공",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "클라우드 솔루션 제공",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "ORGANIZATION",
+      "properties": {}
+    }
+  ]
+}

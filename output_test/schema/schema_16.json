@@ -23,20 +23,19 @@
       }
     },
     {
-      "label": "PRODUCT",
-      "name": "로봇 제어기",
+      "label": "PROJECT",
+      "name": "로봇 제어기 공동 개발",
       "properties": {
-        "category": "로봇 기술",
-        "description": "AMR/AGV의 두뇌 역할을 하는 로봇 제어기",
-        "launch_date": "",
-        "company": ""
+        "description": "AMR/AGV 로봇 제어기 공동 개발",
+        "start_date": "",
+        "status": "진행 중"
       }
     },
     {
       "label": "PROJECT",
       "name": "물류로봇 프로젝트",
       "properties": {
-        "description": "AMR/AGV 프로젝트 공동 수행",
+        "description": "물류로봇(AMR/AGV) 프로젝트 공동 수행",
         "start_date": "",
         "status": "진행 중"
       }
@@ -51,34 +50,28 @@
       }
     },
     {
-      "label": "AGREEMENT",
-      "name": "엠투아이와 벰로보틱스의 업무 협약",
+      "label": "TECHNOLOGY",
+      "name": "디지털전환(DX) 솔루션",
       "properties": {
-        "type": "업무 협약",
-        "date": "2023-10-14",
-        "description": "로봇 제어기 공동 개발 및 물류로봇 프로젝트 공동 수행"
+        "category": "디지털전환",
+        "description": "AI 자율 제조 시장을 위한 솔루션",
+        "field": "AI"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "위치측정 및 주행제어 기술",
+      "properties": {
+        "category": "물류로봇 기술",
+        "description": "물류로봇의 원천기술",
+        "field": "로봇 제어"
       }
     }
   ],
   "relations": [
     {
       "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "공동개발 및 프로젝트 수행",
-        "date": "2023-10-14"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "DEVELOPS",
-      "end_node": "PRODUCT",
-      "properties": {}
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "LEADS",
+      "relationship": "COLLABORATES_ON",
       "end_node": "PROJECT",
       "properties": {}
     },
@@ -90,14 +83,38 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "RECEIVED_INVESTMENT",
-      "end_node": "INVESTMENT",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "업무 협약",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "INVESTED_IN",
+      "end_node": "COMPANY",
+      "properties": {
+        "amount": "12억원",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
       "properties": {}
     }
   ]

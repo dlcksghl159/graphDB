@@ -5,8 +5,8 @@
       "name": "중소벤처기업진흥공단",
       "properties": {
         "type": "Government Agency",
-        "description": "Supports small and medium-sized enterprises (SMEs) in South Korea.",
-        "headquarters": "South Korea"
+        "description": "Supports small and medium-sized enterprises (SMEs) in Korea.",
+        "headquarters": "Korea"
       }
     },
     {
@@ -14,8 +14,26 @@
       "name": "부산항만공사",
       "properties": {
         "type": "Port Authority",
-        "description": "Manages and operates the port of Busan.",
-        "headquarters": "Busan, South Korea"
+        "description": "Manages the port of Busan.",
+        "headquarters": "Busan, Korea"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "인천국제공항공사",
+      "properties": {
+        "type": "Airport Authority",
+        "description": "Manages Incheon International Airport.",
+        "headquarters": "Incheon, Korea"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "스마트트레이드허브",
+      "properties": {
+        "description": "A collaboration model for reducing logistics costs for exporting SMEs.",
+        "start_date": "N/A",
+        "status": "Ongoing"
       }
     },
     {
@@ -23,8 +41,8 @@
       "name": "부산",
       "properties": {
         "type": "City",
-        "country": "South Korea",
-        "region": "Busan"
+        "country": "Korea",
+        "region": "South"
       }
     },
     {
@@ -46,21 +64,12 @@
       }
     },
     {
-      "label": "PROJECT",
-      "name": "통합물류 지원 플랫폼",
-      "properties": {
-        "description": "A platform to support integrated logistics for SMEs.",
-        "start_date": "N/A",
-        "status": "Planned"
-      }
-    },
-    {
       "label": "AGREEMENT",
-      "name": "업무협약",
+      "name": "중진공-BPA 업무협약",
       "properties": {
-        "type": "Business Cooperation",
+        "type": "Business Agreement",
         "date": "2023-10-14",
-        "description": "Agreement between 중소벤처기업진흥공단 and 부산항만공사 to support global logistics for SMEs."
+        "description": "Agreement to support logistics for exporting SMEs."
       }
     }
   ],
@@ -68,42 +77,48 @@
     {
       "start_node": "중소벤처기업진흥공단",
       "relationship": "SIGNED",
-      "end_node": "업무협약",
+      "end_node": "중진공-BPA 업무협약",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "SIGNED",
-      "end_node": "업무협약",
+      "end_node": "중진공-BPA 업무협약",
       "properties": {}
     },
     {
       "start_node": "중소벤처기업진흥공단",
-      "relationship": "COLLABORATES_ON",
-      "end_node": "통합물류 지원 플랫폼",
+      "relationship": "LEADS",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "COLLABORATES_ON",
-      "end_node": "통합물류 지원 플랫폼",
+      "end_node": "스마트트레이드허브",
       "properties": {}
     },
     {
-      "start_node": "부산항만공사",
-      "relationship": "LOCATED_IN",
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "HEADQUARTERED_IN",
       "end_node": "부산",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
-      "relationship": "OPERATES_IN",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "부산",
+      "properties": {}
+    },
+    {
+      "start_node": "부산항만공사",
+      "relationship": "LOCATED_IN",
       "end_node": "로스앤젤레스",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
-      "relationship": "OPERATES_IN",
+      "relationship": "LOCATED_IN",
       "end_node": "롱비치",
       "properties": {}
     }

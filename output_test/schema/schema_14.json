@@ -5,7 +5,7 @@
       "name": "롯데웰푸드",
       "properties": {
         "full_name": "롯데웰푸드",
-        "industry": "식품 제조업",
+        "industry": "식품 제조",
         "headquarters": "",
         "founded": "",
         "ceo": ""
@@ -16,7 +16,7 @@
       "name": "소상공인시장진흥공단",
       "properties": {
         "type": "공공기관",
-        "description": "소상공인 및 소공인 지원",
+        "description": "소상공인 지원 및 진흥",
         "headquarters": ""
       }
     },
@@ -24,7 +24,7 @@
       "label": "PROJECT",
       "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
       "properties": {
-        "description": "백년가게 및 백년소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
+        "description": "백년가게와 백년소공인의 경험과 비법을 롯데웰푸드의 기술력과 접목하여 공동 상표 및 상품 개발",
         "start_date": "2023-03",
         "status": "모집 중"
       }
@@ -73,20 +73,14 @@
     },
     {
       "start_node": "COMPANY",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
-      "properties": {}
-    },
-    {
-      "start_node": "ORGANIZATION",
-      "relationship": "SIGNED",
-      "end_node": "AGREEMENT",
+      "relationship": "DEVELOPS",
+      "end_node": "PRODUCT",
       "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
       "properties": {}
     }
   ]

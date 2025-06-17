@@ -65,11 +65,11 @@
       "label": "COMPANY",
       "name": "테슬라",
       "properties": {
-        "full_name": "테슬라",
+        "full_name": "Tesla, Inc.",
         "industry": "자동차",
         "headquarters": "미국",
-        "founded": "",
-        "ceo": ""
+        "founded": "2003",
+        "ceo": "Elon Musk"
       }
     },
     {
@@ -79,7 +79,7 @@
         "full_name": "현대자동차",
         "industry": "자동차",
         "headquarters": "한국",
-        "founded": "",
+        "founded": "1967",
         "ceo": ""
       }
     },
@@ -90,7 +90,7 @@
         "full_name": "기아자동차",
         "industry": "자동차",
         "headquarters": "한국",
-        "founded": "",
+        "founded": "1944",
         "ceo": ""
       }
     },
@@ -98,10 +98,10 @@
       "label": "COMPANY",
       "name": "BMW",
       "properties": {
-        "full_name": "BMW",
+        "full_name": "Bayerische Motoren Werke AG",
         "industry": "자동차",
         "headquarters": "독일",
-        "founded": "",
+        "founded": "1916",
         "ceo": ""
       }
     },
@@ -110,7 +110,7 @@
       "name": "바디킷",
       "properties": {
         "category": "자동차 부품",
-        "description": "공기역학 기반의 바디킷",
+        "description": "공기역학 기반의 차량 성능 개선 제품",
         "launch_date": "",
         "company": "에이드로"
       }
@@ -121,7 +121,7 @@
       "properties": {
         "category": "시뮬레이션",
         "description": "공기역학 최적화 기술",
-        "field": "자동차"
+        "field": "공학"
       }
     },
     {
@@ -129,7 +129,7 @@
       "name": "AOS",
       "properties": {
         "category": "소프트웨어",
-        "description": "에어로 옵티마이제이션 소프트웨어",
+        "description": "공기역학 기반 차량 디자인 최적화 소프트웨어",
         "field": "자동차"
       }
     },
@@ -139,7 +139,7 @@
       "properties": {
         "type": "국가",
         "country": "미국",
-        "region": ""
+        "region": "북미"
       }
     },
     {
@@ -148,95 +148,129 @@
       "properties": {
         "type": "국가",
         "country": "독일",
-        "region": ""
+        "region": "유럽"
       }
     }
   ],
   "relations": [
     {
-      "start_node": "PERSON",
+      "start_node": "윤승현",
       "relationship": "CEO_OF",
-      "end_node": "COMPANY",
+      "end_node": "에이드로",
       "properties": {
         "since": ""
       }
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "에이드로",
       "relationship": "PRODUCES",
-      "end_node": "PRODUCT",
+      "end_node": "바디킷",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "에이드로",
       "relationship": "DEVELOPS",
-      "end_node": "TECHNOLOGY",
+      "end_node": "전산유체역학",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "에이드로",
+      "relationship": "DEVELOPS",
+      "end_node": "AOS",
+      "properties": {}
+    },
+    {
+      "start_node": "에이드로",
       "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
+      "end_node": "테슬라",
       "properties": {
-        "type": "협력",
+        "type": "제품 협력",
         "date": ""
       }
     },
     {
-      "start_node": "COMPANY",
+      "start_node": "에이드로",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "현대",
+      "properties": {
+        "type": "제품 협력",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "에이드로",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "기아",
+      "properties": {
+        "type": "제품 협력",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "에이드로",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "BMW",
+      "properties": {
+        "type": "제품 협력",
+        "date": ""
+      }
+    },
+    {
+      "start_node": "에이드로",
       "relationship": "HEADQUARTERED_IN",
-      "end_node": "LOCATION",
+      "end_node": "한국",
       "properties": {}
     },
     {
-      "start_node": "COMPANY",
-      "relationship": "LOCATED_IN",
-      "end_node": "LOCATION",
-      "properties": {}
+      "start_node": "에이드로",
+      "relationship": "EXPANDED_TO",
+      "end_node": "미국",
+      "properties": {
+        "date": "2023"
+      }
     },
     {
-      "start_node": "PERSON",
+      "start_node": "에이드로",
+      "relationship": "EXPANDED_TO",
+      "end_node": "독일",
+      "properties": {
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "이용원",
       "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
+      "end_node": "에이드로",
       "properties": {
         "position": "최고디자인책임자",
         "since": ""
       }
     },
     {
-      "start_node": "PERSON",
+      "start_node": "스콧 비튼",
       "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
+      "end_node": "에이드로",
       "properties": {
         "position": "최고기술책임자",
         "since": ""
       }
     },
     {
-      "start_node": "PERSON",
+      "start_node": "유동완",
       "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
+      "end_node": "에이드로",
       "properties": {
         "position": "최고제품책임자",
         "since": ""
       }
     },
     {
-      "start_node": "PERSON",
+      "start_node": "윤반석",
       "relationship": "WORKS_FOR",
-      "end_node": "COMPANY",
+      "end_node": "에이드로",
       "properties": {
         "position": "최고전략책임자",
         "since": ""
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "PARTNERED_WITH",
-      "end_node": "COMPANY",
-      "properties": {
-        "type": "총판계약",
-        "date": "2023-01"
       }
     }
   ]

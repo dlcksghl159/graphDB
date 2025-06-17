@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "중소기업",
+      "properties": {
+        "full_name": "중소기업",
+        "industry": "Various",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "화장품",
+      "properties": {
+        "category": "Beauty",
+        "description": "Cosmetics",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "Automobile",
+        "description": "Cars",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "플라스틱 제품",
+      "properties": {
+        "category": "Plastic",
+        "description": "Plastic Products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차 부품",
+      "properties": {
+        "category": "Automobile Parts",
+        "description": "Car Parts",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "기타기계류",
+      "properties": {
+        "category": "Machinery",
+        "description": "Other Machinery",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전자응용기기",
+      "properties": {
+        "category": "Electronics",
+        "description": "Electronic Devices",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "철강 제품",
+      "properties": {
+        "category": "Steel",
+        "description": "Steel Products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "알루미늄 제품",
+      "properties": {
+        "category": "Aluminum",
+        "description": "Aluminum Products",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "Country",
+        "country": "United States",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "Country",
+        "country": "China",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "일본",
+      "properties": {
+        "type": "Country",
+        "country": "Japan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "홍콩",
+      "properties": {
+        "type": "Country",
+        "country": "Hong Kong",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "대만",
+      "properties": {
+        "type": "Country",
+        "country": "Taiwan",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "태국",
+      "properties": {
+        "type": "Country",
+        "country": "Thailand",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "Country",
+        "country": "Indonesia",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "베트남",
+      "properties": {
+        "type": "Country",
+        "country": "Vietnam",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도",
+      "properties": {
+        "type": "Country",
+        "country": "India",
+        "region": "Asia"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "멕시코",
+      "properties": {
+        "type": "Country",
+        "country": "Mexico",
+        "region": "North America"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이순배",
+      "properties": {
+        "full_name": "이순배",
+        "role": "글로벌성장정책관",
+        "nationality": "South Korean",
+        "age": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "270억 달러",
+        "date": "1분기"
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "EXPORTED_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "amount": "18억4천만 달러",
+        "date": "1분기"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "글로벌성장정책관",
+        "since": ""
+      }
+    }
+  ]
+}

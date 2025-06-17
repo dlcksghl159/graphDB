@@ -70,38 +70,183 @@ def preprocess_documents(output_root: str) -> int:
                 chunk_count += 1
                 
         except Exception as e:
-            print(f"파일 처리 오류 {doc_file.name}: {e}")  # st.warning → print로 변경
+            print(f"파일 처리 오류 {doc_file.name}: {e}")
             continue
     
     return chunk_count, len(document_files)
 
+@st.cache_data
+def load_module_safely(module_name: str):
+    """모듈을 안전하게 로드"""
+    try:
+        if module_name == "extract_schema":
+            import extract_schema
+            return extract_schema
+        elif module_name == "extract_node":
+            import extract_node
+            return extract_node
+        elif module_name == "extract_relation":
+            import extract_relation
+            return extract_relation
+        elif module_name == "deduplication":
+            import deduplication
+            return deduplication
+        elif module_name == "create_cypher":
+            import create_cypher
+            return create_cypher
+        elif module_name == "send_cypher":
+            import send_cypher
+            return send_cypher
+        else:
+            return None
+    except ImportError as e:
+        return None
+
 def run_step_safe(step_name: str, module_name: str, purpose: str = None) -> tuple[bool, str]:
-    """Streamlit 컨텍스트 외부에서 안전하게 실행되는 단계"""
+    """안전하게 파이프라인 단계 실행"""
     start_time = time.time()
     
     try:
+        # Windows 환경 변수 설정
+        env = os.environ.copy()
+        env['PYTHONIOENCODING'] = 'utf-8'
+        env['PYTHONUNBUFFERED'] = '1'
+        
         if module_name == "schema":
-            from extract_schema import main as run_schema
-            run_schema(purpose or "문서 분석")
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{os.getenv("OUTPUT_ROOT", "output")}'
+os.environ['PURPOSE'] = r'{purpose or "문서 분석"}'
+from extract_schema import main
+main(r'{purpose or "문서 분석"}')
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',  # 디코딩 오류 시 대체 문자 사용
+                env=env
+            )
+            if result.returncode != 0:
+                raise Exception(f"스키마 추출 실패: {result.stderr}")
+                
         elif module_name == "extract_node":
-            from extract_node import main as run_extract_nodes
-            run_extract_nodes(purpose or "문서 분석")
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{os.getenv("OUTPUT_ROOT", "output")}'
+os.environ['PURPOSE'] = r'{purpose or "문서 분석"}'
+from extract_node import main
+main(r'{purpose or "문서 분석"}')
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',
+                env=env
+            )
+            if result.returncode != 0:
+                raise Exception(f"노드 추출 실패: {result.stderr}")
+                
         elif module_name == "extract_relation":
-            from extract_relation import main as run_extract_relations
-            run_extract_relations(purpose or "문서 분석")
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{os.getenv("OUTPUT_ROOT", "output")}'
+os.environ['PURPOSE'] = r'{purpose or "문서 분석"}'
+from extract_relation import main
+main(r'{purpose or "문서 분석"}')
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',
+                env=env
+            )
+            if result.returncode != 0:
+                raise Exception(f"관계 추출 실패: {result.stderr}")
+                
         elif module_name == "deduplication":
-            from deduplication import deduplicate
-            output_root = os.getenv("OUTPUT_ROOT", "output")
-            result_file = f"{output_root}/result/result.json"
+            output_root_raw = os.getenv("OUTPUT_ROOT", "output")
+            result_file = f"{output_root_raw}/result/result.json"
             if not Path(result_file).exists():
-                return True, f"결과 파일이 없어 중복 제거를 건너뜁니다: {result_file}"
-            deduplicate(result_file)
+                return True, f"결과 파일이 없어 중복 제거를 건너뜁니다"
+            
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{output_root_raw}'
+from deduplication import deduplicate
+deduplicate(r'{result_file}')
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',
+                env=env
+            )
+            if result.returncode != 0:
+                raise Exception(f"중복 제거 실패: {result.stderr}")
+                
         elif module_name == "cypher":
-            from create_cypher import main as run_cypher
-            run_cypher()
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{os.getenv("OUTPUT_ROOT", "output")}'
+from create_cypher import main
+main()
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',
+                env=env
+            )
+            if result.returncode != 0:
+                raise Exception(f"Cypher 생성 실패: {result.stderr}")
+                
         elif module_name == "neo4j":
-            from send_cypher import main as run_send_cypher
-            run_send_cypher()
+            import subprocess
+            cmd = [sys.executable, "-c", f"""
+import sys
+import os
+sys.path.append('.')
+os.environ['OUTPUT_ROOT'] = r'{os.getenv("OUTPUT_ROOT", "output")}'
+from send_cypher import main
+main()
+"""]
+            result = subprocess.run(
+                cmd, 
+                capture_output=True, 
+                text=True, 
+                encoding='utf-8',
+                errors='replace',
+                env=env
+            )
+            if result.returncode != 0:
+                # Neo4j 실패는 경고로 처리 (선택적 기능)
+                return False, f"Neo4j 연결 실패 (파일 기반 모드로 동작): {result.stderr[:100]}"
+                
         else:
             raise ValueError(f"알 수 없는 모듈: {module_name}")
         
@@ -110,9 +255,7 @@ def run_step_safe(step_name: str, module_name: str, purpose: str = None) -> tupl
 
     except Exception as e:
         duration = time.time() - start_time
-        import traceback
-        error_detail = traceback.format_exc()
-        return False, f"{step_name} 실패 ({duration:.1f}초): {str(e)}\n{error_detail}"
+        return False, f"{step_name} 실패 ({duration:.1f}초): {str(e)}"
 
 def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
     """통합 파이프라인 실행"""
@@ -133,7 +276,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 2. 문서 전처리
         status_placeholder.info("🔄 문서 전처리 중...")
-        progress_bar.progress(0.2)
+        progress_bar.progress(0.15)
         chunk_count, file_count = preprocess_documents(output_root)
         if chunk_count == 0:
             raise Exception("처리할 문서가 없습니다.")
@@ -141,7 +284,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 3. 스키마 추출
         status_placeholder.info("🔄 스키마 추출 중...")
-        progress_bar.progress(0.3)
+        progress_bar.progress(0.25)
         success, message = run_step_safe("스키마 추출", "schema", purpose)
         if not success:
             st.error(f"❌ {message}")
@@ -152,7 +295,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 4. 노드 추출
         status_placeholder.info("🔄 엔티티(노드) 추출 중...")
-        progress_bar.progress(0.5)
+        progress_bar.progress(0.4)
         success, message = run_step_safe("노드 추출", "extract_node", purpose)
         if not success:
             st.error(f"❌ {message}")
@@ -163,7 +306,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 5. 관계 추출
         status_placeholder.info("🔄 관계 추출 중...")
-        progress_bar.progress(0.7)
+        progress_bar.progress(0.55)
         success, message = run_step_safe("관계 추출", "extract_relation", purpose)
         if not success:
             st.error(f"❌ {message}")
@@ -172,9 +315,9 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
             raise Exception("관계 추출 실패")
         st.success(f"✅ {message}")
 
-        # 6. 중복 제거
+        # 6. 중복 제거 및 정제
         status_placeholder.info("🔄 중복 제거 및 정제 중...")
-        progress_bar.progress(0.8)
+        progress_bar.progress(0.7)
         success, message = run_step_safe("중복 제거", "deduplication")
         if success:
             st.success(f"✅ {message}")
@@ -183,7 +326,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 7. Cypher 스크립트 생성
         status_placeholder.info("🔄 Cypher 스크립트 생성 중...")
-        progress_bar.progress(0.9)
+        progress_bar.progress(0.85)
         success, message = run_step_safe("Cypher 생성", "cypher")
         if not success:
             st.error(f"❌ {message}")
@@ -208,6 +351,18 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
         
         total_time = time.time() - pipeline_start
         st.success(f"🎉 '{purpose}' 목적의 RAG 시스템 구축 완료! (총 {total_time:.1f}초)")
+        
+        # 최종 결과 요약
+        result_file = Path(output_root) / "result" / "result.json"
+        if result_file.exists():
+            try:
+                import json
+                with open(result_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                st.info(f"📊 추출 결과: 엔티티 {len(data.get('nodes', []))}개, 관계 {len(data.get('relations', []))}개")
+            except:
+                pass
+        
         return True
         
     except Exception as e:

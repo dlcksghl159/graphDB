@@ -1,0 +1,198 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "에이텀",
+      "properties": {
+        "full_name": "에이텀",
+        "industry": "전자 부품 제조",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "DST",
+      "properties": {
+        "full_name": "DST",
+        "industry": "조선 및 방산 부품 제조",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "밸류파인더",
+      "properties": {
+        "full_name": "밸류파인더",
+        "industry": "리서치",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "이충헌",
+      "properties": {
+        "full_name": "이충헌",
+        "role": "연구원",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "삼성전자",
+      "properties": {
+        "full_name": "삼성전자",
+        "industry": "전자",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "HD현대중공업",
+      "properties": {
+        "full_name": "HD현대중공업",
+        "industry": "조선",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "HD현대마린솔루션",
+      "properties": {
+        "full_name": "HD현대마린솔루션",
+        "industry": "조선",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "STX엔진",
+      "properties": {
+        "full_name": "STX엔진",
+        "industry": "조선",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "TA트랜스",
+      "properties": {
+        "category": "휴대용 충전기",
+        "description": "휴대용 충전기에 탑재되는 트랜스",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "TV트랜스",
+      "properties": {
+        "category": "TV",
+        "description": "TV에 탑재되는 트랜스",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전기차용 트랜스",
+      "properties": {
+        "category": "전기차",
+        "description": "전기차에 사용되는 트랜스",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "DST 인수",
+      "properties": {
+        "amount": "145억 원",
+        "date": "2023-02-02",
+        "type": "지분 인수"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "ACQUIRED",
+      "end_node": "COMPANY",
+      "properties": {
+        "date": "2023-02-02",
+        "amount": "145억 원"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
+      "properties": {
+        "product": "45W 트랜스"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
+      "properties": {
+        "product": "전기차용 트랜스"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "연구원",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUPPLIES",
+      "end_node": "COMPANY",
+      "properties": {
+        "product": "실린더"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    }
+  ]
+}

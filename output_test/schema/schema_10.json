@@ -5,7 +5,7 @@
       "name": "중소벤처기업진흥공단",
       "properties": {
         "type": "Government Agency",
-        "description": "Supports small and medium-sized enterprises",
+        "description": "Support agency for small and medium enterprises",
         "headquarters": "South Korea"
       }
     },
@@ -47,20 +47,30 @@
     },
     {
       "label": "PROJECT",
-      "name": "항공·해운 통합물류 지원 플랫폼",
+      "name": "수출 중소벤처기업 물류 지원",
       "properties": {
-        "description": "Integrated logistics support platform for SMEs",
+        "description": "Logistics support for exporting SMEs",
         "start_date": "2023-10-14",
-        "status": "Planned"
+        "status": "Ongoing"
       }
     },
     {
       "label": "AGREEMENT",
-      "name": "업무협약",
+      "name": "중소벤처기업 물류 지원 업무협약",
       "properties": {
-        "type": "MOU",
+        "type": "Business Agreement",
         "date": "2023-10-14",
-        "description": "Agreement to support global logistics for SMEs"
+        "description": "Agreement to support logistics for exporting SMEs"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "강석진",
+      "properties": {
+        "full_name": "강석진",
+        "role": "이사장",
+        "nationality": "South Korean",
+        "age": ""
       }
     }
   ],
@@ -68,25 +78,25 @@
     {
       "start_node": "중소벤처기업진흥공단",
       "relationship": "SIGNED",
-      "end_node": "업무협약",
+      "end_node": "중소벤처기업 물류 지원 업무협약",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "SIGNED",
-      "end_node": "업무협약",
+      "end_node": "중소벤처기업 물류 지원 업무협약",
       "properties": {}
     },
     {
       "start_node": "중소벤처기업진흥공단",
       "relationship": "COLLABORATES_ON",
-      "end_node": "항공·해운 통합물류 지원 플랫폼",
+      "end_node": "수출 중소벤처기업 물류 지원",
       "properties": {}
     },
     {
       "start_node": "부산항만공사",
       "relationship": "COLLABORATES_ON",
-      "end_node": "항공·해운 통합물류 지원 플랫폼",
+      "end_node": "수출 중소벤처기업 물류 지원",
       "properties": {}
     },
     {
@@ -94,6 +104,24 @@
       "relationship": "HEADQUARTERED_IN",
       "end_node": "부산항만공사 본사",
       "properties": {}
+    },
+    {
+      "start_node": "중소벤처기업진흥공단",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "부산항만공사",
+      "properties": {
+        "type": "Logistics Support",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "강석진",
+      "relationship": "WORKS_FOR",
+      "end_node": "중소벤처기업진흥공단",
+      "properties": {
+        "position": "이사장",
+        "since": ""
+      }
     },
     {
       "start_node": "부산항만공사",

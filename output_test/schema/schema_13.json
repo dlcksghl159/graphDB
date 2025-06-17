@@ -44,11 +44,11 @@
     },
     {
       "label": "AGREEMENT",
-      "name": "업무 협약",
+      "name": "엘리스그룹-파인디 업무 협약",
       "properties": {
-        "type": "상호 협력",
+        "type": "업무 협약",
         "date": "2023-10-14",
-        "description": "한·일 B2B 비즈니스 확장을 위한 협력"
+        "description": "한·일 B2B 비즈니스 확장을 위한 상호 협력"
       }
     },
     {
@@ -56,7 +56,7 @@
       "name": "파인디 팀플러스",
       "properties": {
         "category": "엔지니어 조직 생산성 측정 서비스",
-        "description": "등록 서비스 유저 20만명, 등록 기업 수 3000개 확보",
+        "description": "IT 개발자를 위한 채용 플랫폼과 엔지니어 조직의 생산성 측정 서비스",
         "launch_date": "",
         "company": "파인디"
       }

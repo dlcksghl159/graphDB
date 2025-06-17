@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "중소기업",
+      "properties": {
+        "full_name": "중소기업",
+        "industry": "다양한 산업",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "화장품",
+      "properties": {
+        "category": "화장품",
+        "description": "K뷰티 인기 지속",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "자동차",
+      "properties": {
+        "category": "자동차",
+        "description": "한국산 중고차",
+        "launch_date": "",
+        "company": "중소기업"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "국가",
+        "country": "미국",
+        "region": "북아메리카"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "키르기스스탄",
+      "properties": {
+        "type": "국가",
+        "country": "키르기스스탄",
+        "region": "CIS"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "중국",
+      "properties": {
+        "type": "국가",
+        "country": "중국",
+        "region": "아시아"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "미국 관세 정책",
+      "properties": {
+        "date": "2023-03",
+        "type": "정책",
+        "description": "미국의 25% 관세 부과",
+        "location": "미국"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "화장품",
+        "amount": "18억4000만 달러",
+        "date": "2023-01"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPORTS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "product": "자동차",
+        "amount": "17억4000만 달러",
+        "date": "2023-01"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

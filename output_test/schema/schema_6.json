@@ -1,0 +1,93 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "한샘",
+      "properties": {
+        "full_name": "한샘",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "현대리바트",
+      "properties": {
+        "full_name": "현대리바트",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "B2B",
+      "properties": {
+        "description": "기업 간 거래"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "B2C",
+      "properties": {
+        "description": "기업과 소비자 간 거래"
+      }
+    },
+    {
+      "label": "MARKET",
+      "name": "오피스 인테리어",
+      "properties": {
+        "description": "오피스 기반의 인테리어 시장"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "한샘",
+      "relationship": "COMPETES_WITH",
+      "end_node": "현대리바트",
+      "properties": {
+        "market": "가구"
+      }
+    },
+    {
+      "start_node": "한샘",
+      "relationship": "OPERATES_IN",
+      "end_node": "B2B",
+      "properties": {}
+    },
+    {
+      "start_node": "현대리바트",
+      "relationship": "OPERATES_IN",
+      "end_node": "B2B",
+      "properties": {}
+    },
+    {
+      "start_node": "한샘",
+      "relationship": "OPERATES_IN",
+      "end_node": "B2C",
+      "properties": {}
+    },
+    {
+      "start_node": "현대리바트",
+      "relationship": "OPERATES_IN",
+      "end_node": "B2C",
+      "properties": {}
+    },
+    {
+      "start_node": "한샘",
+      "relationship": "EXPANDS_IN",
+      "end_node": "오피스 인테리어",
+      "properties": {}
+    },
+    {
+      "start_node": "현대리바트",
+      "relationship": "EXPANDS_IN",
+      "end_node": "오피스 인테리어",
+      "properties": {}
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "삼성바이오로직스",
+      "properties": {
+        "full_name": "삼성바이오로직스",
+        "industry": "바이오제약",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "셀트리온",
+      "properties": {
+        "full_name": "셀트리온",
+        "industry": "바이오제약",
+        "headquarters": "대한민국",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "미국",
+      "properties": {
+        "type": "국가",
+        "country": "미국",
+        "region": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "유럽",
+      "properties": {
+        "type": "지역",
+        "country": "",
+        "region": "유럽"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "램시마",
+      "properties": {
+        "category": "바이오시밀러",
+        "description": "",
+        "launch_date": "2019년 이전",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "트룩시마",
+      "properties": {
+        "category": "바이오시밀러",
+        "description": "",
+        "launch_date": "2019년 이전",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "옴리클로",
+      "properties": {
+        "category": "바이오시밀러",
+        "description": "",
+        "launch_date": "2023년 하반기 예정",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "아이덴젤트",
+      "properties": {
+        "category": "바이오시밀러",
+        "description": "",
+        "launch_date": "2023년 하반기 예정",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "약가인하 행정명령 서명",
+      "properties": {
+        "date": "2023년 12월 12일",
+        "type": "정책",
+        "description": "트럼프 대통령이 서명한 약가인하 행정명령",
+        "location": "미국"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

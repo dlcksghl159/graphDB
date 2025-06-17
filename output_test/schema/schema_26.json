@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "와디즈",
+      "properties": {
+        "full_name": "와디즈",
+        "industry": "펀딩 플랫폼",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "뉴에어론 풀 체어",
+      "properties": {
+        "category": "홈리빙",
+        "description": "고급 오피스 체어",
+        "launch_date": "",
+        "company": "허먼밀러"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "쿠자 멀티핸들 스텐팬",
+      "properties": {
+        "category": "홈리빙",
+        "description": "명품 스테인리스 사용",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "올리젯 청바지",
+      "properties": {
+        "category": "패션",
+        "description": "이탈리아산 프리미엄 데님 원단 사용",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "고급 매트리스",
+      "properties": {
+        "category": "홈리빙",
+        "description": "숙면 연구 기반",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "호텔급 낮잠이불",
+      "properties": {
+        "category": "홈리빙",
+        "description": "호텔급 품질",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "유로모니터",
+      "properties": {
+        "type": "시장조사기관",
+        "description": "글로벌 소비자 트렌드 리포트 발표",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "2025 글로벌 소비자 트렌드 리포트 발표",
+      "properties": {
+        "date": "",
+        "type": "리포트 발표",
+        "description": "글로벌 소비자 트렌드 분석",
+        "location": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PUBLISHED",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

@@ -16,7 +16,7 @@
       "name": "옴니프레젠트 AI 에이전트",
       "properties": {
         "category": "AI 에이전트",
-        "description": "프롬프트 없이 고객 행동을 예측해 응답하는 AI 에이전트",
+        "description": "프롬프트 없이 고객 행동을 예측하여 응답하는 AI 에이전트",
         "launch_date": "2023-10-14",
         "company": "센드버드"
       }
@@ -48,6 +48,11 @@
     },
     {
       "label": "INDUSTRY",
+      "name": "생활 밀착형 서비스",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
       "name": "여행 플랫폼",
       "properties": {}
     },
@@ -75,51 +80,14 @@
     {
       "start_node": "PRODUCT",
       "relationship": "USES",
-      "end_node": "TECHNOLOGY",
-      "properties": {
-        "category": "API 기반",
-        "description": "기업의 기존 FAQ나 CRM, 운영 워크플로우와 연동 가능"
-      }
+      "end_node": "INDUSTRY",
+      "properties": {}
     },
     {
       "start_node": "COMPANY",
-      "relationship": "EXPANDS_IN",
+      "relationship": "EXPANDS_INTO",
       "end_node": "INDUSTRY",
-      "properties": {
-        "type": "커머스"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_IN",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "type": "핀테크"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_IN",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "type": "리테일"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_IN",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "type": "여행 플랫폼"
-      }
-    },
-    {
-      "start_node": "COMPANY",
-      "relationship": "EXPANDS_IN",
-      "end_node": "INDUSTRY",
-      "properties": {
-        "type": "구독형 서비스"
-      }
+      "properties": {}
     }
   ]
 }

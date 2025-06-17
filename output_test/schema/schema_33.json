@@ -1,0 +1,151 @@
+{
+  "nodes": [
+    {
+      "label": "PERSON",
+      "name": "박미경",
+      "properties": {
+        "full_name": "박미경",
+        "role": "제7대 하이서울기업협회장",
+        "nationality": "대한민국",
+        "age": "unknown"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "포시에스",
+      "properties": {
+        "full_name": "포시에스",
+        "industry": "전자문서",
+        "headquarters": "서울 강남구",
+        "founded": "unknown",
+        "ceo": "박미경"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "하이서울기업협회",
+      "properties": {
+        "full_name": "하이서울기업협회",
+        "industry": "중소기업 네트워크",
+        "headquarters": "서울",
+        "founded": "2003",
+        "ceo": "박미경"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "서울산업진흥원",
+      "properties": {
+        "full_name": "서울산업진흥원",
+        "industry": "산업 지원",
+        "headquarters": "서울",
+        "founded": "unknown",
+        "ceo": "unknown"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "서울",
+      "properties": {
+        "type": "city",
+        "country": "대한민국",
+        "region": "서울특별시"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "country",
+        "country": "인도네시아",
+        "region": "동남아시아"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AI",
+      "properties": {
+        "category": "인공지능",
+        "description": "AI 기술 활용",
+        "field": "기술"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "AI 교육",
+      "properties": {
+        "description": "하이서울 기업들을 위한 AI 교육",
+        "start_date": "unknown",
+        "status": "ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "하이서울 프렌즈 인증",
+      "properties": {
+        "type": "인증",
+        "date": "unknown",
+        "description": "해외 우수거래처에 부여하는 인증"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "포시에스",
+      "properties": {
+        "since": "unknown"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "하이서울기업협회",
+      "properties": {
+        "since": "2023-02"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "서울",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "서울산업진흥원",
+      "properties": {
+        "type": "지원",
+        "date": "unknown"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_TO",
+      "end_node": "인도네시아",
+      "properties": {
+        "date": "unknown"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    }
+  ]
+}

@@ -391,7 +391,7 @@ if st.session_state.stage == "config":
         purpose = st.text_input("📌 RAG 시스템 구축 목적:", value="기업 판매 지원")
         
         raw_path = st.text_input(
-            "📁 문서 폴더 경로:",
+            "📁 문서 폴더 경로 (예: output/documents):",
             value="output/documents",
             help="분석할 문서들이 있는 폴더 경로"
         )

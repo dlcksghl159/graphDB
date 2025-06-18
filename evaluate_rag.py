@@ -6,7 +6,6 @@ from typing import List, Dict
 from rouge_score import rouge_scorer
 from bert_score import score as bert_score
 from rag import answer
-from tqdm import tqdm
 
 ######################################################################
 # QA Evaluation Script
@@ -34,11 +33,8 @@ def load_records(path: Path) -> List[Dict]:
 
 def evaluate(records: List[Dict]):
     # Split by type
-    short_q  = [r for r in records if r.get("type", "short") == "short"]
-    long_q   = [r for r in records]# if r.get("type", "short") == "short"]
+    long_q   = [r for r in records]
 
-    # --- Short answer accuracy ---
-    acc = sum(1 for r in short_q if r["prediction"].strip().lower() == r["reference"].strip().lower()) / max(1, len(short_q))
 
     # --- Long answer ROUGE + BERTScore ---
     rouge_l, bert_p, bert_r, bert_f = 0, 0, 0, 0
@@ -56,8 +52,6 @@ def evaluate(records: List[Dict]):
     lat = mean(float(r.get("latency", 0)) for r in records) if records else 0
 
     # --- Output ---
-    print("=== Short-answer (정답형) ===")
-    print(f"Samples: {len(short_q)}  Accuracy: {acc:.3f}\n")
 
     print("=== Long-answer (서술형) ===")
     print(f"Samples: {len(long_q)}  ROUGE-L: {rouge_l:.3f}  BERTScore(F): {bert_f:.3f}\n")
@@ -68,15 +62,15 @@ def evaluate(records: List[Dict]):
 
 def main():
     # 1) Run QA over RAG and build eval set
-    output_file = 'data/QA-set-eval.jsonl'
+    output_file = './data/QA-set-eval.jsonl'
     try:
-        with open('data/QA-set.json', 'r', encoding='utf-8') as f:
+        with open('./data/QA-set.json', 'r', encoding='utf-8') as f:
             records = json.load(f)
     except FileNotFoundError:
         records = []
 
     if records:
-        for rec in tqdm(records, desc="Evaluating QA records"):
+        for rec in records:
             question = rec['Q']
             ans = rec['A']
             before = time.time()
@@ -90,7 +84,7 @@ def main():
                 'reference': ans,
                 'prediction': prediction or "No answer found",
                 'latency': latency,
-                'type': 'long' if len(ans.split()) > 10 else 'short'
+                'type': 'long'
             })
         # Save intermediate eval file
         Path(output_file).parent.mkdir(parents=True, exist_ok=True)
@@ -99,7 +93,7 @@ def main():
                 f.write(json.dumps(rec, ensure_ascii=False) + '\n')
 
     # 2) Parse command-line argument (optional)
-    parser = argparse.ArgumentParser(description="Evaluate QA predictions (short vs long)")
+    parser = argparse.ArgumentParser(description="Evaluate QA predictions ")
     parser.add_argument('file', nargs='?', default=output_file,
                         help=f"Path to .jsonl or .csv file to evaluate (default: {output_file})")
     args = parser.parse_args()

@@ -10,6 +10,7 @@ seaborn
 # LangChain 및 관련 생태계
 langchain
 langchain-openai
+langchain_community
 langsmith
 huggingface-hub
 openai

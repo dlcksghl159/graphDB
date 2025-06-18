@@ -116,7 +116,7 @@ def extract_mp(max_workers: int = 15, purpose = "기업 판매"):
     print(f"🎉 모든 스키마 추출 및 병합 완료 → {merged_path}")
 
 def main(purpose="종합 뉴스 분석"):
-    extract_enhanced_schema_mp(max_workers=10, purpose=purpose)
+    extract_mp(max_workers=10, purpose=purpose)
 
 # ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":

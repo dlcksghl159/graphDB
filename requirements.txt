@@ -45,6 +45,7 @@ langchain-neo4j
 nltk
 bert-score
 rouge_score
+sentence_transformers
 
 # PDF 및 파일 처리
 pypdf

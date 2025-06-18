@@ -1,18 +1,18 @@
+# LangChain 및 관련 생태계
+langchain
+langchain-community
+langchain-openai
+langsmith
+huggingface-hub
+openai
+
 # 주요 AI/ML 및 데이터 처리
 transformers
 torch
 pandas
 numpy
-scikit-learn
 matplotlib
-seaborn
-
-# LangChain 및 관련 생태계
-langchain
-langchain-openai
-langsmith
-huggingface-hub
-openai
+scikit-learn
 
 # Streamlit & 시각화
 streamlit

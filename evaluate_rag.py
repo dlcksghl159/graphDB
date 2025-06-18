@@ -62,9 +62,9 @@ def evaluate(records: List[Dict]):
 
 def main():
     # 1) Run QA over RAG and build eval set
-    output_file = './data/QA-set-eval.jsonl'
+    output_file = './data/QAset-eval.jsonl'
     try:
-        with open('./data/QA-set.json', 'r', encoding='utf-8') as f:
+        with open('./data/QAset.json', 'r', encoding='utf-8') as f:
             records = json.load(f)
     except FileNotFoundError:
         records = []

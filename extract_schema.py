@@ -1,274 +1,125 @@
+# filename: schema_extract_mp.py
 import os, json, glob
 import multiprocessing as mp
 from dotenv import load_dotenv
 import openai
-from typing import Dict, List, Set
-from util import merge_json, parse_json
 
-# 환경 변수에서 설정 로드
-load_dotenv()
-OUTPUT_ROOT = os.getenv("OUTPUT_ROOT", "output")
-PURPOSE = os.getenv("PURPOSE", "문서 분석")
+from util import merge_json, parse_json   # 기존 util 그대로 사용
 
-SCHEMA_DIR = os.path.join(OUTPUT_ROOT, "schema")
-CHUNKS_DIR = os.path.join(OUTPUT_ROOT, "chunked_document")
+# ────────────────────────────────────────────────────────────────
+# 1. 전역 설정 ─ 프로세스들에서 공유 (읽기 전용)
+# ────────────────────────────────────────────────────────────────
+OUTPUT_ROOT   = os.getenv("OUTPUT_ROOT", "output")
+SCHEMA_DIR    = os.path.join(OUTPUT_ROOT, "schema")
+CHUNKS_DIR    = os.path.join(OUTPUT_ROOT, "chunked_document")
 os.makedirs(SCHEMA_DIR, exist_ok=True)
 
-# 확장된 뉴스 도메인 스키마 템플릿 (PDF 제안사항 반영)
-ENHANCED_NEWS_DOMAIN_SCHEMA = {
-    "nodes": [
-        {"label": "PERSON", "name": "String", "properties": {"full_name": "string", "role": "string", "nationality": "string", "age": "string"}},
-        {"label": "COMPANY", "name": "String", "properties": {"full_name": "string", "industry": "string", "headquarters": "string", "founded": "string", "ceo": "string"}},
-        {"label": "ORGANIZATION", "name": "String", "properties": {"type": "string", "description": "string", "headquarters": "string"}},
-        {"label": "LOCATION", "name": "String", "properties": {"type": "string", "country": "string", "region": "string"}},
-        {"label": "EVENT", "name": "String", "properties": {"date": "string", "type": "string", "description": "string", "location": "string"}},
-        {"label": "PRODUCT", "name": "String", "properties": {"category": "string", "description": "string", "launch_date": "string", "company": "string"}},
-        {"label": "TECHNOLOGY", "name": "String", "properties": {"category": "string", "description": "string", "field": "string"}},
-        {"label": "PROJECT", "name": "String", "properties": {"description": "string", "start_date": "string", "status": "string"}},
-        {"label": "INVESTMENT", "name": "String", "properties": {"amount": "string", "date": "string", "type": "string"}},
-        {"label": "AGREEMENT", "name": "String", "properties": {"type": "string", "date": "string", "description": "string"}}
-    ],
-    "relations": [
-        # 고용 관계
-        {"start_node": "PERSON", "relationship": "WORKS_FOR", "end_node": "COMPANY", "properties": {"position": "string", "since": "string"}},
-        {"start_node": "PERSON", "relationship": "CEO_OF", "end_node": "COMPANY", "properties": {"since": "string"}},
-        {"start_node": "PERSON", "relationship": "FOUNDER_OF", "end_node": "COMPANY", "properties": {"date": "string"}},
-        {"start_node": "PERSON", "relationship": "BOARD_MEMBER_OF", "end_node": "COMPANY", "properties": {"role": "string"}},
-        
-        # 위치 관계
-        {"start_node": "COMPANY", "relationship": "HEADQUARTERED_IN", "end_node": "LOCATION", "properties": {}},
-        {"start_node": "COMPANY", "relationship": "LOCATED_IN", "end_node": "LOCATION", "properties": {}},
-        {"start_node": "EVENT", "relationship": "HELD_IN", "end_node": "LOCATION", "properties": {}},
-        {"start_node": "PERSON", "relationship": "LIVES_IN", "end_node": "LOCATION", "properties": {}},
-        
-        # 비즈니스 관계
-        {"start_node": "COMPANY", "relationship": "ACQUIRED", "end_node": "COMPANY", "properties": {"date": "string", "amount": "string"}},
-        {"start_node": "COMPANY", "relationship": "PARTNERED_WITH", "end_node": "COMPANY", "properties": {"type": "string", "date": "string"}},
-        {"start_node": "COMPANY", "relationship": "INVESTED_IN", "end_node": "COMPANY", "properties": {"amount": "string", "date": "string"}},
-        {"start_node": "COMPANY", "relationship": "COMPETES_WITH", "end_node": "COMPANY", "properties": {"market": "string"}},
-        {"start_node": "COMPANY", "relationship": "SUBSIDIARY_OF", "end_node": "COMPANY", "properties": {}},
-        
-        # 제품/기술 관계
-        {"start_node": "COMPANY", "relationship": "PRODUCES", "end_node": "PRODUCT", "properties": {}},
-        {"start_node": "COMPANY", "relationship": "DEVELOPS", "end_node": "TECHNOLOGY", "properties": {}},
-        {"start_node": "PERSON", "relationship": "INVENTED", "end_node": "TECHNOLOGY", "properties": {"date": "string"}},
-        {"start_node": "PRODUCT", "relationship": "USES", "end_node": "TECHNOLOGY", "properties": {}},
-        
-        # 이벤트 관계
-        {"start_node": "PERSON", "relationship": "PARTICIPATED_IN", "end_node": "EVENT", "properties": {"role": "string"}},
-        {"start_node": "COMPANY", "relationship": "SPONSORED", "end_node": "EVENT", "properties": {}},
-        {"start_node": "PERSON", "relationship": "ATTENDED", "end_node": "EVENT", "properties": {}},
-        {"start_node": "PERSON", "relationship": "SPOKE_AT", "end_node": "EVENT", "properties": {"topic": "string"}},
-        
-        # 프로젝트 관계
-        {"start_node": "COMPANY", "relationship": "LEADS", "end_node": "PROJECT", "properties": {}},
-        {"start_node": "PERSON", "relationship": "MANAGES", "end_node": "PROJECT", "properties": {}},
-        {"start_node": "COMPANY", "relationship": "COLLABORATES_ON", "end_node": "PROJECT", "properties": {}},
-        
-        # 방문/만남 관계
-        {"start_node": "PERSON", "relationship": "VISITED", "end_node": "COMPANY", "properties": {"date": "string", "purpose": "string"}},
-        {"start_node": "PERSON", "relationship": "MET_WITH", "end_node": "PERSON", "properties": {"date": "string", "purpose": "string"}},
-        
-        # 투자 관계
-        {"start_node": "COMPANY", "relationship": "RECEIVED_INVESTMENT", "end_node": "INVESTMENT", "properties": {}},
-        {"start_node": "PERSON", "relationship": "MADE_INVESTMENT", "end_node": "INVESTMENT", "properties": {}},
-        
-        # 계약/협정 관계
-        {"start_node": "COMPANY", "relationship": "SIGNED", "end_node": "AGREEMENT", "properties": {}},
-        {"start_node": "PERSON", "relationship": "NEGOTIATED", "end_node": "AGREEMENT", "properties": {}}
-    ]
-}
+# 시스템 프롬프트 (전역 상수)
+SYSTEM_MSG = (
+    "당신은 RAG 시스템용 지식 그래프 스키마(엔티티/관계 타입)를 텍스트에서 추출합니다. "
+    "반드시 올바른 JSON 형식으로만 응답하세요."
+)
 
-# 한국어 관계 표현 매핑 (PDF 제안사항)
-KOREAN_RELATION_PATTERNS = {
-    "WORKS_FOR": ["일하다", "근무하다", "고용되다", "재직하다", "소속되다", "다니다"],
-    "CEO_OF": ["대표이사", "최고경영자", "CEO", "사장", "대표"],
-    "FOUNDER_OF": ["창립하다", "창업하다", "설립하다", "창설하다"],
-    "HEADQUARTERED_IN": ["본사", "본부", "사옥", "본점"],
-    "LOCATED_IN": ["위치하다", "자리하다", "있다"],
-    "ACQUIRED": ["인수하다", "매입하다", "사들이다", "인수합병"],
-    "PARTNERED_WITH": ["협력하다", "파트너십", "제휴하다", "협업하다"],
-    "INVESTED_IN": ["투자하다", "출자하다", "자금조달"],
-    "VISITED": ["방문하다", "찾아가다", "들르다"],
-    "MET_WITH": ["만나다", "면담하다", "회동하다", "미팅"],
-    "PARTICIPATED_IN": ["참가하다", "참여하다", "출석하다"],
-    "ATTENDED": ["참석하다", "출석하다", "참관하다"],
-    "SPOKE_AT": ["발표하다", "연설하다", "강연하다", "기조연설"]
-}
-
-ENHANCED_SYSTEM_MSG = """당신은 한국어 뉴스 기사에서 포괄적인 지식 그래프 스키마를 추출하는 전문가입니다.
-다양한 관계 타입을 인식하고 한국어 표현을 표준 관계로 매핑합니다.
-비즈니스, 기술, 정치, 사회 관계를 모두 포함합니다.
-반드시 올바른 JSON 형식으로만 응답하세요."""
-
-def _enhanced_process_chunk(args: tuple[int, str, str]) -> dict:
-    """향상된 청크별 스키마 추출 - 확장된 관계 타입 지원"""
+# ────────────────────────────────────────────────────────────────
+# 2. 워커 함수 – 프로세스마다 실행
+# ────────────────────────────────────────────────────────────────
+def _process_chunk(args: tuple[int, str, str]) -> dict:
+    """
+    파라미터
+      idx      : chunk 인덱스
+      purpose  : 사용자 입력 목적
+      system   : 시스템 프롬프트
+    반환값
+      parsed_json (dict) – 추출된 스키마
+    """
     idx, purpose, system = args
-    
+
+    # 각 프로세스에서 환경-변수, OpenAI client 초기화
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
-    client = openai.OpenAI(api_key=api_key)
-    
+    client  = openai.OpenAI(api_key=api_key)
+
     fname = f"{CHUNKS_DIR}/chunked_output_{idx}.txt"
     with open(fname, "r", encoding="utf-8") as f:
         content = f.read()
-    
-    # 관계 패턴 가이드 생성
-    relation_guide = ""
-    for rel_type, korean_patterns in KOREAN_RELATION_PATTERNS.items():
-        relation_guide += f"- {rel_type}: {', '.join(korean_patterns)}\n"
-    
-    prompt = f"""주어진 한국어 뉴스 기사 텍스트에서 **'{purpose}'** 목적의 확장된 지식 그래프 스키마를 추출하세요.
 
-### 확장된 기본 스키마 (참고 및 확장):
-{json.dumps(ENHANCED_NEWS_DOMAIN_SCHEMA, ensure_ascii=False, indent=2)}
+    prompt = f"""
+    주어진 텍스트 내용을 바탕으로 **'{purpose}'** 목적의 RAG 시스템을 구축하기 위한 지식 그래프의 **스키마(Schema)**를 JSON 형식으로 정의하세요.
 
-### 한국어 관계 표현 가이드:
-{relation_guide}
+    ### 작성 지침:
+    1. `nodes`에는 **지식 그래프에 반드시 포함되어야 할 주요 개체 유형**(Node)을 정의합니다.
+    2. 각 Node는 `label`, `name`, `properties` 필드를 포함해야 하며, `properties`의 각 항목 값은 `"string"`, `"int"` 등 **데이터 타입 문자열**로 기입합니다.
+    3. `relations`에는 개체 간의 **관계 유형(Relation)**을 정의하며, `start_node`, `end_node`에는 **노드의 라벨(label)**만 기입합니다.
+    4. **불필요하게 복잡한 속성은 생략**하고, **RAG 시스템 구축에 꼭 필요한 정보만 간결하게 포함**하세요.
+    5. 최종 출력은 **올바른 JSON 형식**으로 작성하세요. 추가 설명 없이 **JSON만 출력**하세요.
 
-### 스키마 설계 원칙:
-1. **포괄적 관계**: 단순한 WORKS_FOR를 넘어 CEO_OF, FOUNDER_OF, BOARD_MEMBER_OF 등 구체적 관계
-2. **비즈니스 관계**: ACQUIRED, PARTNERED_WITH, INVESTED_IN, COMPETES_WITH, SUBSIDIARY_OF
-3. **이벤트 관계**: PARTICIPATED_IN, ATTENDED, SPOKE_AT, SPONSORED
-4. **위치 관계**: HEADQUARTERED_IN (본사), LOCATED_IN (일반), HELD_IN (이벤트)
-5. **프로젝트 관계**: LEADS, MANAGES, COLLABORATES_ON
+    ### 출력 형식 예시:
+    {{
+        "nodes": [
+            {{"label": "NODE_LABEL", "name": "String", "properties": {{"key": "데이터타입"}}}}
+        ],
+        "relations": [
+            {{"start_node": "NodeLabel", "relationship": "RELATION_NAME", "end_node": "NodeLabel", "properties": {{"key": "데이터타입"}}}}
+        ]
+    }}
 
-### 확장 지침:
-- 텍스트에서 발견되는 새로운 관계 패턴을 추가하세요
-- 한국어 표현을 영어 표준 관계명으로 매핑하세요
-- 시간, 금액, 위치 등 관계의 속성(properties)을 포함하세요
-- 암시적 관계도 명시적으로 스키마에 포함하세요
-
-### 예시:
-- "삼성전자를 창업한 이병철" → FOUNDER_OF 관계 필요
-- "구글과 파트너십 체결" → PARTNERED_WITH 관계 필요
-- "AI 컨퍼런스에서 기조연설" → SPOKE_AT 관계 필요
-
-### 텍스트:
-{content}
-
-### 확장된 스키마 (JSON):"""
+    ### 텍스트:
+    {content}
+    """
 
     resp = client.chat.completions.create(
-        model="gpt-4o",
+        model="o4-mini",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system},
             {"role": "user", "content": prompt}
-        ],
-        temperature=0.2
+        ]
     )
-    
+
     parsed = parse_json(resp.choices[0].message.content)
-    
+
     # 개별 결과 저장
     out_path = os.path.join(SCHEMA_DIR, f"schema_{idx}.json")
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(parsed, f, ensure_ascii=False, indent=2)
-    
-    print(f"[{idx}] 확장된 스키마 추출 완료")
+
+    print(f"[{idx}] schema 추출 완료")
     return parsed
 
-def validate_and_refine_enhanced_schema(merged_schema: Dict) -> Dict:
-    """확장된 스키마 검증 및 정제"""
-    load_dotenv()
-    api_key = os.getenv("OPENAI_API_KEY")
-    client = openai.OpenAI(api_key=api_key)
-    
-    # 한국어 관계 매핑 정보 제공
-    korean_mapping_info = json.dumps(KOREAN_RELATION_PATTERNS, ensure_ascii=False, indent=2)
-    
-    prompt = f"""다음은 한국어 뉴스 기사에서 추출한 확장된 스키마입니다. 
-이를 검토하고 다음 기준에 따라 정제하고 표준화하세요:
 
-### 정제 기준:
-1. **관계 통합**: 유사한 의미의 관계를 표준명으로 통일
-   - EMPLOYED_BY, WORKS_AT → WORKS_FOR
-   - HEADQUARTERED_IN, BASED_IN → HEADQUARTERED_IN (본사의 경우)
-   - COLLABORATED_WITH → PARTNERED_WITH
-
-2. **한국어 매핑**: 한국어 관계 표현을 표준 영어명으로 변환
-{korean_mapping_info}
-
-3. **관계 계층화**: 더 구체적인 관계를 우선
-   - CEO_OF는 WORKS_FOR보다 구체적
-   - FOUNDER_OF는 일반적 소속보다 구체적
-
-4. **속성 표준화**: 날짜, 금액, 위치 등 일관된 형식
-   - date → "YYYY-MM-DD" 또는 "YYYY" 형식
-   - amount → 숫자와 단위 표준화
-
-5. **중복 제거**: 의미상 동일한 노드/관계 제거
-
-### 현재 스키마:
-{json.dumps(merged_schema, ensure_ascii=False, indent=2)}
-
-### 정제된 확장 스키마 (JSON):"""
-
-    resp = client.chat.completions.create(
-        model="gpt-4o",
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": "스키마 정제 및 표준화 전문가로서 포괄적이고 일관된 스키마를 생성합니다."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.1
-    )
-    
-    return parse_json(resp.choices[0].message.content)
-
-def extract_enhanced_schema_mp(max_workers: int = 10, purpose: str = "종합 뉴스 분석"):
-    """확장된 멀티프로세싱 스키마 추출"""
+# ────────────────────────────────────────────────────────────────
+# 3. 메인 – 파일 목록 수집 → 병렬 실행 → 머지
+# ────────────────────────────────────────────────────────────────
+def extract_mp(max_workers: int = 15, purpose = "기업 판매"):
+    # 처리할 chunk 파일 인덱스 계산
     files = sorted(glob.glob(os.path.join(CHUNKS_DIR, "chunked_output_*.txt")))
     if not files:
-        print("⚠️ chunked_document 폴더에 파일이 없습니다.")
+        print("⚠️  chunked_document 폴더에 파일이 없습니다.")
         return
-    
+
     indices = [int(os.path.splitext(os.path.basename(f))[0].split("_")[-1]) for f in files]
-    
-    # 1단계: 병렬 추출
-    print(f"🚀 1단계: 확장된 스키마 추출 (workers={max_workers}, 총 {len(indices)}개)")
+
+    # Pool 실행
+    print(f"🚀 멀티프로세싱 시작 (workers={max_workers}, 총 {len(indices)}개)…")
     with mp.Pool(processes=max_workers) as pool:
-        all_schemas = pool.map(_enhanced_process_chunk, [(i, purpose, ENHANCED_SYSTEM_MSG) for i in indices])
-    
-    # 병합 (확장된 기본 스키마에서 시작)
-    merged = ENHANCED_NEWS_DOMAIN_SCHEMA.copy()
-    for sc in all_schemas:
+        all_schemas = pool.map(_process_chunk, [(i, purpose, SYSTEM_MSG) for i in indices])
+
+    # ----------- 최종 머지 -----------
+    merged_path = os.path.join(SCHEMA_DIR, "schema.json")
+    merged = {}
+    for sc in all_schemas:                # 순서 상관없이 head-tail 머지
         merged = merge_json(merged, sc, node_key=("label",))
-    
-    # 중간 저장
-    temp_path = os.path.join(SCHEMA_DIR, "schema_merged_enhanced.json")
-    with open(temp_path, "w", encoding="utf-8") as f:
+
+    with open(merged_path, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
-    
-    # 2단계: 검증 및 정제
-    print("🔍 2단계: 확장된 스키마 검증 및 정제")
-    refined = validate_and_refine_enhanced_schema(merged)
-    
-    # 최종 저장
-    final_path = os.path.join(SCHEMA_DIR, "schema.json")
-    with open(final_path, "w", encoding="utf-8") as f:
-        json.dump(refined, f, ensure_ascii=False, indent=2)
-    
-    # 통계 출력
-    node_count = len(refined.get('nodes', []))
-    relation_count = len(refined.get('relations', []))
-    
-    print(f"✅ 확장된 스키마 추출 완료 → {final_path}")
-    print(f"📊 확장된 노드 타입: {node_count}개")
-    print(f"📊 확장된 관계 타입: {relation_count}개")
-    
-    # 관계 타입별 분류 출력
-    relation_types = [rel['relationship'] for rel in refined.get('relations', [])]
-    from collections import Counter
-    relation_stats = Counter(relation_types)
-    
-    print("📈 관계 타입 분포:")
-    for rel_type, count in relation_stats.most_common(10):
-        print(f"   {rel_type}: {count}")
 
-def main(purpose="종합 뉴스 분석"):
-    extract_enhanced_schema_mp(max_workers=min(10, os.cpu_count() or 10), purpose=purpose)
+    print(f"🎉 모든 스키마 추출 및 병합 완료 → {merged_path}")
 
+def main(purpose="기업 판매"):
+    extract_mp(max_workers=min(15, os.cpu_count() or 15), purpose = "기업 판매")
+
+# ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     main()
+    # CPU가 많아도 API rate-limit을 고려해 4~6개 정도가 안전
+    

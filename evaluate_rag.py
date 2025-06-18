@@ -6,6 +6,7 @@ from typing import List, Dict
 from rouge_score import rouge_scorer
 from bert_score import score as bert_score
 from rag import answer
+from tqdm import tqdm
 
 ######################################################################
 # QA Evaluation Script
@@ -34,7 +35,7 @@ def load_records(path: Path) -> List[Dict]:
 def evaluate(records: List[Dict]):
     # Split by type
     short_q  = [r for r in records if r.get("type", "short") == "short"]
-    long_q   = [r for r in records if r.get("type", "short") == "long"]
+    long_q   = [r for r in records]# if r.get("type", "short") == "short"]
 
     # --- Short answer accuracy ---
     acc = sum(1 for r in short_q if r["prediction"].strip().lower() == r["reference"].strip().lower()) / max(1, len(short_q))
@@ -76,7 +77,7 @@ def main():
 
     if records:
         i=0
-        for rec in records:
+        for rec in tqdm(records, desc="Evaluating QA records"):
             i+=1
             if i >10: 
                 break

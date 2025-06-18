@@ -101,7 +101,7 @@ JSON 형식으로 응답:
 
             try:
                 response = client.chat.completions.create(
-                    model="gpt-4o-mini",
+                    model="gpt-4.1",
                     response_format={"type": "json_object"},
                     messages=[
                         {"role": "system", "content": "엔티티 타입 추론 전문가입니다."},
@@ -228,7 +228,7 @@ def smart_deduplication(data_path: str):
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "지식 그래프 품질 개선 전문가입니다."},
                 {"role": "user", "content": enhanced_prompt}

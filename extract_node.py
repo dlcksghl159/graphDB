@@ -262,7 +262,7 @@ def enhanced_process_file(idx, filename, chunks_dir, result_dir, schema_json, ap
     print(f"[{idx}] {filename} 처리 중...")
     
     response = client.chat.completions.create(
-        model="gpt-4o",  # 더 강력한 모델 사용 (PDF 제안)
+        model="gpt-4.1",  # 더 강력한 모델 사용 (PDF 제안)
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_msg},
@@ -340,7 +340,7 @@ def main(purpose="뉴스 기사 분석"):
     n_files = len(file_list)
     
     # 배치 처리로 일관성 향상
-    chunk_size = 3  # 더 작은 배치로 일관성 확보
+    chunk_size = 15  # 더 작은 배치로 일관성 확보
     pbar = tqdm(range(0, n_files, chunk_size), desc="Processing batches", unit="batch")
     
     for start_idx in pbar:

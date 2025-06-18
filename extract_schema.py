@@ -150,7 +150,7 @@ def _enhanced_process_chunk(args: tuple[int, str, str]) -> dict:
 ### 확장된 스키마 (JSON):"""
 
     resp = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system},
@@ -206,7 +206,7 @@ def validate_and_refine_enhanced_schema(merged_schema: Dict) -> Dict:
 ### 정제된 확장 스키마 (JSON):"""
 
     resp = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": "스키마 정제 및 표준화 전문가로서 포괄적이고 일관된 스키마를 생성합니다."},
@@ -217,7 +217,7 @@ def validate_and_refine_enhanced_schema(merged_schema: Dict) -> Dict:
     
     return parse_json(resp.choices[0].message.content)
 
-def extract_enhanced_schema_mp(max_workers: int = 4, purpose: str = "종합 뉴스 분석"):
+def extract_enhanced_schema_mp(max_workers: int = 10, purpose: str = "종합 뉴스 분석"):
     """확장된 멀티프로세싱 스키마 추출"""
     files = sorted(glob.glob(os.path.join(CHUNKS_DIR, "chunked_output_*.txt")))
     if not files:
@@ -268,7 +268,7 @@ def extract_enhanced_schema_mp(max_workers: int = 4, purpose: str = "종합 뉴�
         print(f"   {rel_type}: {count}")
 
 def main(purpose="종합 뉴스 분석"):
-    extract_enhanced_schema_mp(max_workers=min(4, os.cpu_count() or 2), purpose=purpose)
+    extract_enhanced_schema_mp(max_workers=10, purpose=purpose)
 
 if __name__ == "__main__":
     main()

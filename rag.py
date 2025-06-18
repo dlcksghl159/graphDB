@@ -20,7 +20,7 @@ if not OPENAI_API_KEY:
     raise RuntimeError("OPENAI_API_KEY not set")
 
 _llm        = ChatOpenAI(openai_api_key=OPENAI_API_KEY,
-                         model="gpt-4o-mini",
+                         model="gpt-4.1",
                          temperature=0)
 _embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
@@ -66,5 +66,6 @@ def answer(question: str) -> str:
 
 # ── (C) CLI 테스트용 ──────────────────────────────────────────────
 if __name__ == "__main__":
-    q = input("질문: ")
-    print("답변:", answer(q))
+    while True:
+        q = input("질문: ")
+        print("답변:", answer(q))

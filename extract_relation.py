@@ -135,7 +135,7 @@ def cross_chunk_relation_extraction(document_entities: List[Dict], document_text
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4.1",
             response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": "문서 전체를 분석하여 엔티티 간 관계를 찾는 전문가입니다."},
@@ -216,7 +216,7 @@ def enhanced_process_file(filename, chunks_dir, result_dir, system_msg, nodes, a
 
     # LLM 관계 추출
     response = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_msg},
@@ -331,7 +331,7 @@ def main(purpose="뉴스 기사 분석"):
     document_entities_cache = {}  # 문서별 엔티티 캐시
 
     # 1차: 청크별 관계 추출
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=10) as executor:
         futures = {
             executor.submit(enhanced_process_file, filename, chunks_dir, result_dir, 
                           system_msg, nodes, api_key, document_entities_cache): filename

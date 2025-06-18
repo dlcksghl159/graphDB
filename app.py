@@ -289,13 +289,13 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
         st.success(f"문서 전처리 완료: {file_count}개 파일 → {chunk_count}개 청크")
 
         # 3. 스키마 추출
-        status_placeholder.info("🔄 스키마 추출 중...")
+        status_placeholder.info("스키마 추출 중...")
         progress_bar.progress(0.25)
         success, message, error_details = run_step_safe("스키마 추출", "schema", purpose)
         if not success:
             st.error(f"{message}")
             if error_details:
-                with st.expander("🔍 오류 상세 정보"):
+                with st.expander("오류 상세 정보"):
                     st.code(error_details)
             raise Exception("스키마 추출 실패")
         st.success(f"{message}")
@@ -307,7 +307,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
         if not success:
             st.error(f"{message}")
             if error_details:
-                with st.expander("🔍 오류 상세 정보"):
+                with st.expander("오류 상세 정보"):
                     st.code(error_details)
             raise Exception("노드 추출 실패")
         st.success(f"{message}")

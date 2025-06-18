@@ -265,8 +265,8 @@ main()
 
 def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
     """통합 파이프라인 실행"""
-    st.markdown("### 🔄 RAG 시스템 구축 진행 상황")
-    st.info(f"📌 구축 목적: **{purpose}**에 최적화된 RAG 시스템을 구축합니다.")
+    st.markdown("### RAG 시스템 구축 진행 상황")
+    st.info(f"1. 구축 목적: **{purpose}**에 최적화된 RAG 시스템을 구축합니다.")
     
     progress_bar = st.progress(0)
     status_placeholder = st.empty()
@@ -275,13 +275,13 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
     
     try:
         # 1. 환경 설정
-        status_placeholder.info("🔄 환경 설정 중...")
+        status_placeholder.info("환경 설정 중...")
         progress_bar.progress(0.1)
         setup_environment(output_root, purpose)
-        st.success("✅ 환경 설정 완료")
+        st.success("환경 설정 완료")
 
         # 2. 문서 전처리
-        status_placeholder.info("🔄 문서 전처리 중...")
+        status_placeholder.info("문서 전처리 중...")
         progress_bar.progress(0.15)
         chunk_count, file_count = preprocess_documents(output_root)
         if chunk_count == 0:
@@ -293,75 +293,75 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
         progress_bar.progress(0.25)
         success, message, error_details = run_step_safe("스키마 추출", "schema", purpose)
         if not success:
-            st.error(f"❌ {message}")
+            st.error(f"{message}")
             if error_details:
                 with st.expander("🔍 오류 상세 정보"):
                     st.code(error_details)
             raise Exception("스키마 추출 실패")
-        st.success(f"✅ {message}")
+        st.success(f"{message}")
 
         # 4. 노드 추출
-        status_placeholder.info("🔄 엔티티(노드) 추출 중...")
+        status_placeholder.info("엔티티(노드) 추출 중...")
         progress_bar.progress(0.4)
         success, message, error_details = run_step_safe("노드 추출", "extract_node", purpose)
         if not success:
-            st.error(f"❌ {message}")
+            st.error(f"{message}")
             if error_details:
                 with st.expander("🔍 오류 상세 정보"):
                     st.code(error_details)
             raise Exception("노드 추출 실패")
-        st.success(f"✅ {message}")
+        st.success(f"{message}")
 
         # 5. 관계 추출
-        status_placeholder.info("🔄 관계 추출 중...")
+        status_placeholder.info("관계 추출 중...")
         progress_bar.progress(0.55)
         success, message, error_details = run_step_safe("관계 추출", "extract_relation", purpose)
         if not success:
-            st.error(f"❌ {message}")
+            st.error(f"{message}")
             if error_details:
-                with st.expander("🔍 오류 상세 정보"):
+                with st.expander("!오류 상세 정보!"):
                     st.code(error_details)
             raise Exception("관계 추출 실패")
-        st.success(f"✅ {message}")
+        st.success(f"{message}")
 
         # 6. 중복 제거 및 정제
-        status_placeholder.info("🔄 중복 제거 및 정제 중...")
+        status_placeholder.info("중복 제거 및 정제 중...")
         progress_bar.progress(0.7)
         success, message, error_details = run_step_safe("중복 제거", "deduplication")
         if success:
-            st.success(f"✅ {message}")
+            st.success(f"{message}")
         else:
-            st.warning(f"⚠️ {message}")
+            st.warning(f"{message}")
             if error_details:
-                with st.expander("🔍 중복 제거 오류 상세 정보"):
+                with st.expander("중복 제거 오류 상세 정보"):
                     st.code(error_details)
 
         # 7. Cypher 스크립트 생성
-        status_placeholder.info("🔄 Cypher 스크립트 생성 중...")
+        status_placeholder.info("Cypher 스크립트 생성 중...")
         progress_bar.progress(0.85)
         success, message, error_details = run_step_safe("Cypher 생성", "cypher")
         if not success:
-            st.error(f"❌ {message}")
+            st.error(f"{message}")
             if error_details:
-                with st.expander("🔍 오류 상세 정보"):
+                with st.expander("!오류 상세 정보!"):
                     st.code(error_details)
             raise Exception("Cypher 스크립트 생성 실패")
-        st.success(f"✅ {message}")
+        st.success(f"{message}")
 
         # 8. Neo4j 데이터베이스 적재 - 오류 표시 강화
-        status_placeholder.info("🔄 Neo4j 데이터베이스 적재 중...")
+        status_placeholder.info("Neo4j 데이터베이스 적재 중...")
         progress_bar.progress(0.95)
         success, message, error_details = run_step_safe("Neo4j 적재", "neo4j")
         if success:
-            st.success(f"✅ {message}")
+            st.success(f"{message}")
         else:
             # Neo4j 실패를 명확한 오류로 표시
-            st.error(f"❌ Neo4j 데이터베이스 적재 실패")
-            st.error(f"🔌 Neo4j 서버가 실행 중인지 확인하세요!")
+            st.error(f"Neo4j 데이터베이스 적재 실패")
+            st.error(f"Neo4j 서버가 실행 중인지 확인하세요!")
             
             # 상세한 오류 정보 표시
             if error_details:
-                with st.expander("🔍 Neo4j 오류 상세 정보 (클릭해서 확인)"):
+                with st.expander("Neo4j 오류 상세 정보 (클릭해서 확인)"):
                     st.code(error_details)
                     st.markdown("""
                     **일반적인 해결 방법:**
@@ -373,7 +373,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
             
             # 파일 기반 모드 안내를 더 명확하게
             st.info("""
-            ℹ️ **파일 기반 모드로 계속 진행**
+            **파일 기반 모드로 계속 진행**
             
             Neo4j 연결에 실패했지만, RAG 시스템은 파일 기반으로 동작할 수 있습니다.
             생성된 Cypher 파일을 수동으로 Neo4j에 import하여 사용할 수 있습니다.
@@ -381,10 +381,10 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
 
         # 완료
         progress_bar.progress(1.0)
-        status_placeholder.success("✅ RAG 시스템 구축 완료!")
+        status_placeholder.success("RAG 시스템 구축 완료!")
         
         total_time = time.time() - pipeline_start
-        st.success(f"🎉 '{purpose}' 목적의 RAG 시스템 구축 완료! (총 {total_time:.1f}초)")
+        st.success(f"'{purpose}' 목적의 RAG 시스템 구축 완료! (총 {total_time:.1f}초)")
         
         # 최종 결과 요약
         result_file = Path(output_root) / "result" / "result.json"
@@ -393,7 +393,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
                 import json
                 with open(result_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
-                st.info(f"📊 추출 결과: 엔티티 {len(data.get('nodes', []))}개, 관계 {len(data.get('relations', []))}개")
+                st.info(f"추출 결과: 엔티티 {len(data.get('nodes', []))}개, 관계 {len(data.get('relations', []))}개")
             except:
                 pass
         
@@ -401,7 +401,7 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
         
     except Exception as e:
         total_time = time.time() - pipeline_start
-        st.error(f"❌ '{purpose}' RAG 시스템 구축 실패 ({total_time:.1f}초): {e}")
+        st.error(f"'{purpose}' RAG 시스템 구축 실패 ({total_time:.1f}초): {e}")
         return False
 
 # ───────────────────────────────────────
@@ -412,19 +412,19 @@ if "stage" not in st.session_state:
     st.session_state.stage = "config"
 
 if st.session_state.stage == "config":
-    st.title("📚 문서 기반 RAG 시스템 구축")
+    st.title("문서 기반 RAG 시스템 구축")
     
     st.markdown("""
-    ### 📋 사용 안내
+    ### 사용 안내
     1. **RAG 시스템 구축 목적**을 명확히 입력하세요
     2. **문서 폴더 경로**에 RAG 시스템에서 활용할 문서들이 있는지 확인하세요
     """)
 
     with st.form("config_form"):
-        purpose = st.text_input("📌 RAG 시스템 구축 목적:", value="기업 판매")
+        purpose = st.text_input("* RAG 시스템 구축 목적:", value="기업 판매")
         
         raw_path = st.text_input(
-            "📁 문서 폴더 경로 (예: output/documents):",
+            "* 문서 폴더 경로 (예: output/documents):",
             value="output/documents",
             help="분석할 문서들이 있는 폴더 경로"
         )
@@ -436,7 +436,7 @@ if st.session_state.stage == "config":
             p = p.parent
         output_root = p.as_posix()
         
-        submitted = st.form_submit_button("🚀 RAG 시스템 구축 시작", use_container_width=True)
+        submitted = st.form_submit_button("RAG 시스템 구축 시작", use_container_width=True)
 
     # 폴더 검증
     if output_root:
@@ -446,11 +446,11 @@ if st.session_state.stage == "config":
             for ext in ['*.txt', '*.md', '*.doc', '*.docx', '*.pdf']:
                 doc_files.extend(doc_path.glob(ext))
             if doc_files:
-                st.success(f"✅ {len(doc_files)}개 문서 파일 발견")
+                st.success(f"{len(doc_files)}개 문서 파일 발견")
             else:
-                st.warning("⚠️ documents 폴더에 지원되는 문서 파일이 없습니다.")
+                st.warning("documents 폴더에 지원되는 문서 파일이 없습니다.")
         else:
-            st.error("❌ documents 폴더가 존재하지 않습니다.")
+            st.error("documents 폴더가 존재하지 않습니다.")
 
     if submitted:
         if not purpose.strip():
@@ -470,16 +470,16 @@ if st.session_state.stage == "config":
             st.rerun()
 
 elif st.session_state.stage == "rag":
-    st.title("💬 RAG QA Interface")
+    st.title("RAG QA Interface")
 
     purpose = st.session_state.get("purpose", "문서 분석")
     output_root = st.session_state.get("output_root", "output")
 
     with st.sidebar:
-        st.header("📊 시스템 정보")
+        st.header("시스템 정보")
         st.write(f"**구축 목적:** {purpose}")
         st.write(f"**작업 디렉토리:** {output_root}")
-        if st.button("🔄 새로 구축", use_container_width=True):
+        if st.button("새로 구축", use_container_width=True):
             st.session_state.stage = "config"
             st.rerun()
 
@@ -490,29 +490,29 @@ elif st.session_state.stage == "rag":
             import json
             with open(result_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            st.success("✅ RAG 시스템 준비 완료")
-            st.info(f"📊 엔티티: {len(data.get('nodes', []))}개 | 관계: {len(data.get('relations', []))}개")
+            st.success("RAG 시스템 준비 완료")
+            st.info(f"엔티티: {len(data.get('nodes', []))}개 | 관계: {len(data.get('relations', []))}개")
         except Exception as e:
             st.error(f"결과 파일 읽기 오류: {e}")
     else:
-        st.error("❌ RAG 시스템 구축이 완료되지 않았습니다.")
+        st.error("RAG 시스템 구축이 완료되지 않았습니다.")
         st.stop()
 
     # 질문 입력 UI
-    st.markdown("### 💬 질문하기")
-    query = st.text_input("❓ 질문을 입력하세요:", placeholder=f"{purpose}와 관련된 질문을 입력하세요")
+    st.markdown("### 질문하기")
+    query = st.text_input("질문을 입력하세요:", placeholder=f"{purpose}와 관련된 질문을 입력하세요")
     
     col1, col2 = st.columns([4, 1])
     with col1:
-        ask_button = st.button("🔍 답변 생성", use_container_width=True)
+        ask_button = st.button("답변 생성", use_container_width=True)
     with col2:
-        clear_button = st.button("🗑️ 초기화", use_container_width=True)
+        clear_button = st.button("초기화", use_container_width=True)
     
     if clear_button:
         st.rerun()
     
     if ask_button and query.strip():
-        with st.spinner("🤔 답변을 생성하고 있습니다..."):
+        with st.spinner("답변을 생성하고 있습니다..."):
             try:
                 # RAG 모듈 동적 로드
                 import importlib.util
@@ -540,12 +540,12 @@ elif st.session_state.stage == "rag":
                     """
                 
                 st.markdown("---")
-                st.markdown("### 📝 답변")
+                st.markdown("### 답변")
                 st.markdown(answer)
                 
             except Exception as e:
                 st.error(f"답변 생성 중 오류가 발생했습니다: {str(e)}")
-                with st.expander("🔍 오류 상세 정보"):
+                with st.expander("!오류 상세 정보!"):
                     import traceback
                     st.code(traceback.format_exc())
 
@@ -553,6 +553,6 @@ elif st.session_state.stage == "rag":
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666; font-size: 12px;'>
-🤖 통합 RAG System Builder | Built with Streamlit + Neo4j + OpenAI
+통합 RAG System Builder | Built with Streamlit + Neo4j + OpenAI
 </div>
 """, unsafe_allow_html=True)

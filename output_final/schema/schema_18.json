@@ -1,0 +1,60 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "사람인",
+      "properties": {
+        "full_name": "사람인",
+        "industry": "인력관리",
+        "headquarters": "대한민국 서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김혜미",
+      "properties": {
+        "full_name": "김혜미",
+        "role": "기자",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "인생 이모작 조사",
+      "properties": {
+        "description": "직장인 965명을 대상으로 한 인생 이모작 의향 조사",
+        "start_date": "2023-10-14",
+        "status": "완료"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "인생 이모작 설문조사",
+      "properties": {
+        "date": "2023-10-14",
+        "type": "설문조사",
+        "description": "직장인들의 인생 이모작 의향에 대한 설문조사",
+        "location": "대한민국"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "PARTICIPATED_IN",
+      "end_node": "EVENT",
+      "properties": {
+        "role": "기자"
+      }
+    }
+  ]
+}

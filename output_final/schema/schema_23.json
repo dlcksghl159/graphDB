@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "센드버드",
+      "properties": {
+        "full_name": "Sendbird",
+        "industry": "AI 에이전트 플랫폼",
+        "headquarters": "서울, 대한민국",
+        "founded": "",
+        "ceo": "김동신"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "옴니프레젠트 AI 에이전트",
+      "properties": {
+        "category": "AI 에이전트",
+        "description": "프롬프트 없이 고객 행동을 예측해 응답하는 AI 에이전트",
+        "launch_date": "2023-10-14",
+        "company": "센드버드"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김동신",
+      "properties": {
+        "full_name": "김동신",
+        "role": "CEO",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "API 기반 연동",
+      "properties": {
+        "category": "API",
+        "description": "기업의 기존 시스템과 유연하게 연동 가능",
+        "field": "소프트웨어"
+      }
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "커머스",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "핀테크",
+      "properties": {}
+    },
+    {
+      "label": "INDUSTRY",
+      "name": "리테일",
+      "properties": {}
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "TARGETS",
+      "end_node": "INDUSTRY",
+      "properties": {
+        "description": "커머스, 핀테크, 리테일 산업 중심으로 확장"
+      }
+    }
+  ]
+}

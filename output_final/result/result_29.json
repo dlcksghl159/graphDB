@@ -1,0 +1,158 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "노루그룹",
+            "properties": {
+                "industry": "화학",
+                "headquarters": "안양",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "노루페인트",
+            "properties": {
+                "industry": "페인트",
+                "headquarters": "안양",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "2025 신기술·신제품 전시회",
+            "properties": {
+                "date": "2023-09-14 to 2023-09-18",
+                "type": "Exhibition",
+                "description": "노루그룹의 혁신 기술과 차세대 제품을 선보이는 전시회",
+                "location": "안양"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "방양국",
+            "properties": {
+                "full_name": "방양국",
+                "role": "연구소장",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "스텔스 도료",
+            "properties": {
+                "category": "도료",
+                "description": "경량화를 극대화한 도료",
+                "launch_date": "",
+                "company": "노루그룹"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "우레탄 난연 몰딩제",
+            "properties": {
+                "category": "배터리",
+                "description": "친환경·고성능 배터리 시장을 겨냥한 몰딩제",
+                "launch_date": "",
+                "company": "노루그룹"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "탄소 저감 건재용 도료",
+            "properties": {
+                "category": "도료",
+                "description": "탄소 저감 건재용 도료",
+                "launch_date": "",
+                "company": "노루그룹"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "VOC 저감형 아크릴 수지",
+            "properties": {
+                "category": "수지",
+                "description": "VOC 저감형 아크릴 수지",
+                "launch_date": "",
+                "company": "노루그룹"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "안양",
+            "properties": {
+                "type": "City",
+                "country": "South Korea",
+                "region": "Gyeonggi-do"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "섹션은제품",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "섹션은",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "VOC",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "노루그룹",
+            "relationship": "HOSTED",
+            "end_node": "2025 신기술·신제품 전시회",
+            "properties": {}
+        },
+        {
+            "start_node": "노루페인트",
+            "relationship": "LOCATED_IN",
+            "end_node": "안양",
+            "properties": {}
+        },
+        {
+            "start_node": "방양국",
+            "relationship": "WORKS_FOR",
+            "end_node": "노루페인트",
+            "properties": {
+                "position": "연구소장"
+            }
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "스텔스 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "우레탄 난연 몰딩제",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "탄소 저감 건재용 도료",
+            "properties": {}
+        },
+        {
+            "start_node": "노루그룹",
+            "relationship": "DEVELOPS",
+            "end_node": "VOC 저감형 아크릴 수지",
+            "properties": {}
+        }
+    ]
+}

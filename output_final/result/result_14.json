@@ -1,0 +1,417 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "에이드로",
+            "properties": {
+                "industry": "자동차",
+                "headquarters": "대한민국",
+                "founded": "",
+                "ceo": "윤승현"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "윤승현",
+            "properties": {
+                "full_name": "윤승현",
+                "role": "대표",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이용원",
+            "properties": {
+                "full_name": "이용원",
+                "role": "최고디자인책임자",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "스콧비튼",
+            "properties": {
+                "full_name": "스콧 비튼",
+                "role": "최고기술책임자",
+                "nationality": "",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "유동완",
+            "properties": {
+                "full_name": "유동완",
+                "role": "최고제품책임자",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "윤반석",
+            "properties": {
+                "full_name": "윤반석",
+                "role": "최고전략책임자",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "바디킷",
+            "properties": {
+                "category": "자동차 부품",
+                "description": "공기역학 기반의 바디킷",
+                "launch_date": "",
+                "company": "에이드로"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "에어로 옵티마이제이션 소프트웨어",
+            "properties": {
+                "category": "소프트웨어",
+                "description": "공기역학 기반 차량 디자인·설계 프로세스 혁신",
+                "launch_date": "2023 Q3",
+                "company": "에이드로"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Tesla",
+            "properties": {
+                "industry": "자동차",
+                "headquarters": "미국",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "현대",
+            "properties": {
+                "industry": "자동차",
+                "headquarters": "대한민국",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "기아",
+            "properties": {
+                "industry": "자동차",
+                "headquarters": "대한민국",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "BMW",
+            "properties": {
+                "industry": "자동차",
+                "headquarters": "독일",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "독일",
+            "properties": {
+                "type": "Country",
+                "country": "Germany",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "말레이시아",
+            "properties": {
+                "type": "Country",
+                "country": "Malaysia",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "싱가포르",
+            "properties": {
+                "type": "Country",
+                "country": "Singapore",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "영국",
+            "properties": {
+                "type": "Country",
+                "country": "UK",
+                "region": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "드로",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "는",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "는다른바디",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "에이드로",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "윤",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Aerodynamics",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "ADRO",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CFD",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "Computational Fluid Dynamics",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "BEV",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "ICE",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "HEV",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CDO",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CTO",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CPO",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CSO",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "TUV",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "AOS",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "윤승현",
+            "relationship": "CEO_OF",
+            "end_node": "에이드로",
+            "properties": {
+                "since": ""
+            }
+        },
+        {
+            "start_node": "이용원",
+            "relationship": "WORKS_FOR",
+            "end_node": "에이드로",
+            "properties": {
+                "position": "최고디자인책임자",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "스콧 비튼",
+            "relationship": "WORKS_FOR",
+            "end_node": "에이드로",
+            "properties": {
+                "position": "최고기술책임자",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "유동완",
+            "relationship": "WORKS_FOR",
+            "end_node": "에이드로",
+            "properties": {
+                "position": "최고제품책임자",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "윤반석",
+            "relationship": "WORKS_FOR",
+            "end_node": "에이드로",
+            "properties": {
+                "position": "최고전략책임자",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "DEVELOPS",
+            "end_node": "바디킷",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "DEVELOPS",
+            "end_node": "에어로 옵티마이제이션 소프트웨어",
+            "properties": {}
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "테슬라",
+            "properties": {
+                "type": "바디킷 공급",
+                "date": ""
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "현대",
+            "properties": {
+                "type": "바디킷 공급",
+                "date": ""
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "기아",
+            "properties": {
+                "type": "바디킷 공급",
+                "date": ""
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "BMW",
+            "properties": {
+                "type": "바디킷 공급",
+                "date": ""
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "미국",
+            "properties": {
+                "date": "2023",
+                "description": "오프라인 쇼룸 개설"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "독일",
+            "properties": {
+                "date": "2023",
+                "description": "법인 설립 및 TUV 인증"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "일본",
+            "properties": {
+                "date": "2023",
+                "description": "총판계약 체결"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "말레이시아",
+            "properties": {
+                "date": "2023",
+                "description": "시장 확장"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "싱가포르",
+            "properties": {
+                "date": "2023",
+                "description": "시장 확장"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "영국",
+            "properties": {
+                "date": "2023",
+                "description": "시장 확장"
+            }
+        },
+        {
+            "start_node": "에이드로",
+            "relationship": "EXPANDED_TO",
+            "end_node": "태국",
+            "properties": {
+                "date": "2023",
+                "description": "시장 확장"
+            }
+        }
+    ]
+}

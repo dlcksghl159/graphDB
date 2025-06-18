@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "label": "ORGANIZATION",
+      "name": "중소벤처기업진흥공단",
+      "properties": {
+        "type": "Government Agency",
+        "description": "중소벤처기업의 지원을 위한 정부 기관",
+        "headquarters": "대한민국"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "부산항만공사",
+      "properties": {
+        "type": "Port Authority",
+        "description": "부산항의 관리 및 운영을 담당하는 공사",
+        "headquarters": "부산, 대한민국"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "부산항만공사 본사",
+      "properties": {
+        "type": "Office",
+        "country": "대한민국",
+        "region": "부산"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "로스앤젤레스",
+      "properties": {
+        "type": "City",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "롱비치",
+      "properties": {
+        "type": "City",
+        "country": "미국",
+        "region": "캘리포니아"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "수출 중소벤처기업 글로벌 물류 지원",
+      "properties": {
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 프로젝트",
+        "start_date": "2023-10-14",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "중진공-BPA 업무협약",
+      "properties": {
+        "type": "Business Agreement",
+        "date": "2023-10-14",
+        "description": "수출 중소벤처기업의 글로벌 물류 지원을 위한 협약"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    }
+  ]
+}

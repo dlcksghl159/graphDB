@@ -1,0 +1,105 @@
+{
+    "nodes": [
+        {
+            "label": "EVENT",
+            "name": "미국의 관세 부과",
+            "properties": {
+                "date": "2023-03-12",
+                "type": "Trade Policy",
+                "description": "미국의 철강·알루미늄 및 파생상품에 대한 관세 부과",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "플라스틱 제품",
+            "properties": {
+                "category": "플라스틱",
+                "description": "중소기업의 주요 수출 품목",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "자동차 부품",
+            "properties": {
+                "category": "자동차 부품",
+                "description": "중소기업의 주요 수출 품목",
+                "launch_date": "",
+                "company": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "ANNOUNCED",
+            "end_node": "미국의 관세 부과",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "미국의 관세 부과",
+            "relationship": "AFFECTS",
+            "end_node": "철강 제품",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "미국의 관세 부과",
+            "relationship": "AFFECTS",
+            "end_node": "알루미늄 제품",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "18억4천만 달러",
+                "date": "1분기"
+            }
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "17억4천만 달러",
+                "date": "1분기"
+            }
+        },
+        {
+            "start_node": "플라스틱 제품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "11억3천만 달러",
+                "date": "1분기"
+            }
+        },
+        {
+            "start_node": "자동차 부품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "10억4천만 달러",
+                "date": "1분기"
+            }
+        }
+    ]
+}

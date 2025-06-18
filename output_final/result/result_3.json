@@ -1,0 +1,87 @@
+{
+    "nodes": [
+        {
+            "label": "ORGANIZATION",
+            "name": "기술보증기금",
+            "properties": {
+                "type": "Financial Institution",
+                "description": "Provides financial guarantees and support for technology-based companies.",
+                "headquarters": "대한민국"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "인천지식재산센터",
+            "properties": {
+                "type": "Intellectual Property Center",
+                "description": "Supports intellectual property initiatives in Incheon.",
+                "headquarters": "인천"
+            }
+        },
+        {
+            "label": "AGREEMENT",
+            "name": "지식재산공제사업 활성화 협약",
+            "properties": {
+                "type": "Business Agreement",
+                "date": "2023-10-14",
+                "description": "Agreement to enhance the intellectual property mutual aid project for joint development."
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "지식재산공제사업",
+            "properties": {
+                "description": "A financial system to support SMEs by reducing intellectual property costs and risks.",
+                "start_date": "2019",
+                "status": "Ongoing"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "특허청",
+            "properties": {
+                "type": "Government Agency",
+                "description": "Responsible for intellectual property rights in South Korea.",
+                "headquarters": "대한민국"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "기술보증기금",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "인천지식재산센터",
+            "relationship": "SIGNED",
+            "end_node": "지식재산공제사업 활성화 협약",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금",
+            "relationship": "LEADS",
+            "end_node": "지식재산공제사업",
+            "properties": {}
+        },
+        {
+            "start_node": "기술보증기금",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "인천지식재산센터",
+            "properties": {
+                "type": "Business Cooperation",
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "기술보증기금",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "특허청",
+            "properties": {
+                "type": "Business Cooperation",
+                "date": "2019"
+            }
+        }
+    ]
+}

@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "에이텀",
+      "properties": {
+        "full_name": "에이텀",
+        "industry": "전자 부품 제조",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "DST",
+      "properties": {
+        "full_name": "DST",
+        "industry": "조선 및 방산 부품",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "밸류파인더",
+      "properties": {
+        "full_name": "밸류파인더",
+        "industry": "독립 리서치",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "삼성전자",
+      "properties": {
+        "full_name": "삼성전자",
+        "industry": "전자",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "HD현대중공업",
+      "properties": {
+        "full_name": "HD현대중공업",
+        "industry": "조선",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "HD현대마린솔루션",
+      "properties": {
+        "full_name": "HD현대마린솔루션",
+        "industry": "해양 솔루션",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "STX엔진",
+      "properties": {
+        "full_name": "STX엔진",
+        "industry": "엔진 제조",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "TA트랜스",
+      "properties": {
+        "category": "휴대용 충전기",
+        "description": "스마트폰 충전기 등 휴대용 충전기에 탑재",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "TV트랜스",
+      "properties": {
+        "category": "TV",
+        "description": "TV에 탑재",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "전기차용 트랜스",
+      "properties": {
+        "category": "전기차",
+        "description": "전기차용 트랜스",
+        "launch_date": "",
+        "company": "에이텀"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "DST 인수",
+      "properties": {
+        "amount": "145억 원",
+        "date": "2023-02-02",
+        "type": "지분 인수"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "에이텀",
+      "relationship": "ACQUIRED",
+      "end_node": "DST",
+      "properties": {
+        "date": "2023-02-02",
+        "amount": "145억 원"
+      }
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "PRODUCES",
+      "end_node": "TA트랜스",
+      "properties": {}
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "PRODUCES",
+      "end_node": "TV트랜스",
+      "properties": {}
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "PRODUCES",
+      "end_node": "전기차용 트랜스",
+      "properties": {}
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "SUPPLIES",
+      "end_node": "삼성전자",
+      "properties": {
+        "product": "45W 트랜스"
+      }
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "SUPPLIES",
+      "end_node": "글로벌 완성차 업체 A사",
+      "properties": {
+        "product": "전기차용 트랜스",
+        "date": "2023-3분기"
+      }
+    },
+    {
+      "start_node": "에이텀",
+      "relationship": "NEGOTIATING_WITH",
+      "end_node": "글로벌 전창업체 B사",
+      "properties": {
+        "purpose": "거래선 등록 및 제품 공급"
+      }
+    },
+    {
+      "start_node": "DST",
+      "relationship": "SUPPLIES",
+      "end_node": "HD현대중공업",
+      "properties": {
+        "product": "힘센엔진 실린더"
+      }
+    },
+    {
+      "start_node": "DST",
+      "relationship": "SUPPLIES",
+      "end_node": "HD현대마린솔루션",
+      "properties": {}
+    },
+    {
+      "start_node": "DST",
+      "relationship": "SUPPLIES",
+      "end_node": "STX엔진",
+      "properties": {}
+    },
+    {
+      "start_node": "밸류파인더",
+      "relationship": "ANALYZED",
+      "end_node": "에이텀",
+      "properties": {
+        "date": "2023-02-14",
+        "report": "신성장동력 확보 평가"
+      }
+    }
+  ]
+}

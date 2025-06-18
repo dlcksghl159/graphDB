@@ -1,0 +1,222 @@
+{
+    "nodes": [
+        {
+            "label": "PERSON",
+            "name": "박미경",
+            "properties": {
+                "full_name": "박미경",
+                "role": "제7대 하이서울기업협회장",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "하이서울기업협회",
+            "properties": {
+                "type": "Business Association",
+                "description": "Network of excellent SMEs supported by Seoul City and SBA.",
+                "headquarters": "서울, South Korea"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "포시에스",
+            "properties": {
+                "full_name": "포시에스",
+                "industry": "전자문서",
+                "headquarters": "서울",
+                "founded": "1993",
+                "ceo": "박미경"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "미국의 고관세 정책",
+            "properties": {
+                "date": "",
+                "type": "Trade Policy",
+                "description": "미국의 고관세 부과 정책",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "AI 분과 신설",
+            "properties": {
+                "description": "AI 교육 및 활용 사례 공유",
+                "start_date": "2023",
+                "status": "진행 중"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "분과서",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "는최근서울강남",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "협이취임직후가장신경쓰는부분",
+            "properties": {
+                "role": "회장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "협은",
+            "properties": {
+                "role": "회장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "협은취임직후",
+            "properties": {
+                "role": "회장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "공유해기업",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "국내전자",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "으로박",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "하이서울기업협",
+            "properties": {
+                "role": "회장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "협",
+            "properties": {
+                "role": "회장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "기업",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "국내",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "박",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "SBA",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "박미경",
+            "relationship": "LEADS",
+            "end_node": "하이서울기업협회",
+            "properties": {}
+        },
+        {
+            "start_node": "박미경",
+            "relationship": "CEO_OF",
+            "end_node": "포시에스",
+            "properties": {
+                "since": "1993"
+            }
+        },
+        {
+            "start_node": "하이서울기업협회",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "포시에스",
+            "properties": {
+                "type": "Business Cooperation",
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPANDED_TO",
+            "end_node": "일본",
+            "properties": {
+                "date": "2023",
+                "description": "병원 전자동의서 공급 시작"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPANDED_TO",
+            "end_node": "베트남",
+            "properties": {
+                "date": "2023",
+                "description": "파트너사를 통한 진출"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPANDED_TO",
+            "end_node": "대만",
+            "properties": {
+                "date": "2023",
+                "description": "파트너사를 통한 진출"
+            }
+        },
+        {
+            "start_node": "포시에스",
+            "relationship": "EXPANDED_TO",
+            "end_node": "인도네시아",
+            "properties": {
+                "date": "2023",
+                "description": "추가 진출 계획"
+            }
+        },
+        {
+            "start_node": "하이서울기업협회",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국의 고관세 정책",
+            "properties": {}
+        },
+        {
+            "start_node": "하이서울기업협회",
+            "relationship": "LEADS",
+            "end_node": "AI 분과 신설",
+            "properties": {}
+        }
+    ]
+}

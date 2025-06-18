@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "한샘",
+      "properties": {
+        "full_name": "한샘",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "현대리바트",
+      "properties": {
+        "full_name": "현대리바트",
+        "industry": "가구",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "B2B 가구",
+      "properties": {
+        "category": "가구",
+        "description": "기업 간 거래용 가구",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "B2C 가구",
+      "properties": {
+        "category": "가구",
+        "description": "소비자 대상 가구",
+        "launch_date": "",
+        "company": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "오피스 인테리어 사업",
+      "properties": {
+        "description": "오피스 기반의 B2B 인테리어 사업 확장",
+        "start_date": "2025",
+        "status": "진행 중"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "COMPETES_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "가구"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+    "nodes": [
+        {
+            "label": "ORGANIZATION",
+            "name": "동반성장위원회",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "LG이노텍",
+            "properties": {
+                "industry": "전자"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "에이피텍",
+            "properties": {
+                "industry": "제조",
+                "description": "핸드폰 카메라 모듈 생산에 필요한 제조설비를 공급"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "박치형",
+            "properties": {
+                "role": "운영처장"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김준성",
+            "properties": {
+                "role": "상무"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "주재철",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "인천 송도",
+            "properties": {
+                "type": "City",
+                "country": "대한민국"
+            }
+        },
+        {
+            "label": "AGREEMENT",
+            "name": "협력사 ESG 지원 업무협약",
+            "properties": {
+                "type": "Business Agreement",
+                "date": "2023-10-14",
+                "description": "ESG 평가지표 공동 개발 및 협력사 지원"
+            }
+        },
+        {
+            "label": "AWARD",
+            "name": "ESG 우수 중소기업 확인서",
+            "properties": {
+                "date": "",
+                "type": "인증",
+                "description": "ESG 지표 준수율 83.0% 기록"
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "대·중소 자율형 ESG 지원사업",
+            "properties": {
+                "description": "ESG 지원 대상 협력사 확대",
+                "start_date": "2023",
+                "status": "진행 중"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "피텍등이참석",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "에이피텍",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "ESG",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "에이피텍",
+            "properties": {
+                "type": "핵심 협력사",
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "에이피텍",
+            "relationship": "RECEIVED",
+            "end_node": "ESG 우수 중소기업 확인서",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "대·중소 자율형 ESG 지원사업",
+            "properties": {}
+        },
+        {
+            "start_node": "박치형",
+            "relationship": "WORKS_FOR",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "position": "운영처장"
+            }
+        },
+        {
+            "start_node": "김준성",
+            "relationship": "WORKS_FOR",
+            "end_node": "LG이노텍",
+            "properties": {
+                "position": "상무"
+            }
+        },
+        {
+            "start_node": "주재철",
+            "relationship": "WORKS_FOR",
+            "end_node": "에이피텍",
+            "properties": {
+                "position": "대표"
+            }
+        },
+        {
+            "start_node": "협력사 ESG 지원 업무협약",
+            "relationship": "HELD_IN",
+            "end_node": "인천 송도",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "락앤락",
+      "properties": {
+        "full_name": "락앤락",
+        "industry": "생활용품",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "풀히트 푸드워머",
+      "properties": {
+        "category": "테이블웨어",
+        "description": "바닥 전체에 열선이 내장되어 10초 내 예열 가능",
+        "launch_date": "2023-10-14",
+        "company": "락앤락"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "프로모션",
+      "properties": {
+        "date": "2023-10-14 to 2023-10-21",
+        "type": "제품 출시 기념",
+        "description": "락앤락몰에서 제품 출시 기념 프로모션",
+        "location": "온라인"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

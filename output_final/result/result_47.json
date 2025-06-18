@@ -1,0 +1,82 @@
+{
+    "nodes": [
+        {
+            "label": "PRODUCT",
+            "name": "휴대전화 카메라 모듈 제조설비",
+            "properties": {
+                "category": "제조설비",
+                "description": "휴대전화 카메라 모듈 생산에 필요한 설비",
+                "launch_date": "",
+                "company": "LG이노텍"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SIGNED",
+            "end_node": "협력사 ESG 지원사업 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "SUPPLIES",
+            "end_node": "에이피텍",
+            "properties": {
+                "product": "휴대전화 카메라 모듈 제조설비",
+                "industry": "전자"
+            }
+        },
+        {
+            "start_node": "에이피텍",
+            "relationship": "RECEIVED",
+            "end_node": "AWARD",
+            "properties": {}
+        },
+        {
+            "start_node": "박치형",
+            "relationship": "WORKS_FOR",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "position": "운영처장",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "김준성",
+            "relationship": "WORKS_FOR",
+            "end_node": "LG이노텍",
+            "properties": {
+                "position": "상무",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "동반성장위원회",
+            "properties": {
+                "type": "협력사 ESG지원",
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "LG이노텍",
+            "relationship": "DEVELOPS",
+            "end_node": "PRODUCT",
+            "properties": {}
+        },
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "LOCATED_IN",
+            "end_node": "인천",
+            "properties": {}
+        }
+    ]
+}

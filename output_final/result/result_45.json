@@ -1,0 +1,127 @@
+{
+    "nodes": [
+        {
+            "label": "PROJECT",
+            "name": "수출 중소벤처기업 글로벌 물류 지원",
+            "properties": {
+                "description": "중소벤처기업의 글로벌 물류 지원을 위한 업무협약",
+                "start_date": "2023-10-14",
+                "status": "진행 중"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "여수",
+            "properties": {
+                "type": "City",
+                "country": "South Korea",
+                "region": "Jeollanam-do"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "광양",
+            "properties": {
+                "type": "City",
+                "country": "South Korea",
+                "region": "Jeollanam-do"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "미국 관세 정책",
+            "properties": {
+                "date": "2023",
+                "type": "Trade Policy",
+                "description": "미국의 25% 관세 부과",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "인천국제공항공사",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED",
+            "end_node": "글로벌 물류 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "SIGNED",
+            "end_node": "글로벌 물류 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "type": "Logistics Collaboration",
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "DEVELOPS",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "스마트트레이드허브",
+            "relationship": "LOCATED_IN",
+            "end_node": "인천",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "로스앤젤레스",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "롱비치",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "부산",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "LEADS",
+            "end_node": "수출 중소벤처기업 글로벌 물류 지원",
+            "properties": {}
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업진흥공단",
+            "properties": {
+                "position": "이사장",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "EVENT",
+            "relationship": "AFFECTS",
+            "end_node": "수출 중소벤처기업 글로벌 물류 지원",
+            "properties": {
+                "impact": "Negative"
+            }
+        }
+    ]
+}

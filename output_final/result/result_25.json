@@ -1,0 +1,78 @@
+{
+    "nodes": [
+        {
+            "label": "ORGANIZATION",
+            "name": "CSC",
+            "properties": {
+                "type": "입찰 기관",
+                "description": "스페인 대형 입찰 기관 중 하나로 카탈루냐주에 위치한 25개 공립병원의 의약품 공급을 관할"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Kern Pharma",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "셀트리온",
+            "relationship": "EXPANDED_TO",
+            "end_node": "스페인",
+            "properties": {
+                "date": "2023",
+                "strategy": "직판 체제 전환"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "EXPANDED_TO",
+            "end_node": "포르투갈",
+            "properties": {
+                "date": "2022-12",
+                "strategy": "직판 체제 전환"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "트룩시마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "허쥬마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "스테키마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "CSC",
+            "properties": {
+                "role": "Supplier",
+                "date": "2023"
+            }
+        },
+        {
+            "start_node": "강석훈",
+            "relationship": "WORKS_FOR",
+            "end_node": "셀트리온",
+            "properties": {
+                "position": "스페인 및 포르투갈 법인장"
+            }
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "nodes": [
+        {
+            "label": "EVENT",
+            "name": "미국 관세 조치",
+            "properties": {
+                "date": "2023-03",
+                "type": "Trade Policy",
+                "description": "미국의 25% 관세 부과",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "반도체제조용장비",
+            "properties": {
+                "category": "가구",
+                "description": "소비자 대상 가구",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "기타기계류",
+            "properties": {
+                "category": "가구",
+                "description": "소비자 대상 가구",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "전자응용기기",
+            "properties": {
+                "category": "가구",
+                "description": "소비자 대상 가구",
+                "launch_date": "",
+                "company": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "ANNOUNCED",
+            "end_node": "미국 관세 조치",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS",
+            "end_node": "철강 제품",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS",
+            "end_node": "알루미늄 제품",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS",
+            "end_node": "기타기계류",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "미국 관세 조치",
+            "relationship": "AFFECTS",
+            "end_node": "전자응용기기",
+            "properties": {
+                "impact": "Negative"
+            }
+        }
+    ]
+}

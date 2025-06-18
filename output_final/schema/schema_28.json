@@ -1,0 +1,122 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "삼성바이오로직스",
+      "properties": {
+        "full_name": "Samsung Biologics",
+        "industry": "Biotechnology",
+        "headquarters": "Incheon, South Korea",
+        "founded": "2011",
+        "ceo": "John Rim"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "셀트리온",
+      "properties": {
+        "full_name": "Celltrion",
+        "industry": "Biotechnology",
+        "headquarters": "Incheon, South Korea",
+        "founded": "2002",
+        "ceo": "Kee Woo-sung"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "도널드 트럼프",
+      "properties": {
+        "full_name": "Donald Trump",
+        "role": "Former President of the United States",
+        "nationality": "American",
+        "age": "77"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "램시마",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "Infliximab biosimilar",
+        "launch_date": "2013",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "트룩시마",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "Rituximab biosimilar",
+        "launch_date": "2017",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "옴리클로",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "New biosimilar product",
+        "launch_date": "2023",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "아이덴젤트",
+      "properties": {
+        "category": "Biosimilar",
+        "description": "New biosimilar product",
+        "launch_date": "2023",
+        "company": "셀트리온"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "약가인하 행정명령 서명",
+      "properties": {
+        "date": "2023-10-12",
+        "type": "Policy",
+        "description": "Executive order signed by Donald Trump to reduce drug prices",
+        "location": "United States"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COMPETES_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "market": "Biotechnology"
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "SIGNED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "AFFECTED_BY",
+      "end_node": "EVENT",
+      "properties": {
+        "impact": "Potential increase in biosimilar demand"
+      }
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "센드버드",
+            "properties": {
+                "industry": "AI 에이전트 플랫폼",
+                "headquarters": "",
+                "founded": "",
+                "ceo": "김동신"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김동신",
+            "properties": {
+                "full_name": "김동신",
+                "role": "대표",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "옴니프레젠트 AI 에이전트",
+            "properties": {
+                "category": "AI 에이전트",
+                "description": "프롬프트 없이 고객 행동을 예측해 응답하는 AI 에이전트",
+                "launch_date": "2023-10-14",
+                "company": "센드버드"
+            }
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "커머스",
+            "properties": {}
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "핀테크",
+            "properties": {}
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "리테일",
+            "properties": {}
+        },
+        {
+            "label": "PERSON",
+            "name": "버드",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "센드버드",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "FAQ",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "SNS",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "API",
+            "properties": {}
+        },
+        {
+            "label": "COMPANY",
+            "name": "CRM",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "센드버드",
+            "relationship": "DEVELOPS",
+            "end_node": "옴니프레젠트 AI 에이전트",
+            "properties": {}
+        },
+        {
+            "start_node": "김동신",
+            "relationship": "CEO_OF",
+            "end_node": "센드버드",
+            "properties": {
+                "since": ""
+            }
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
+            "end_node": "커머스",
+            "properties": {
+                "description": "커머스, 핀테크, 리테일 산업 중심으로 확장"
+            }
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
+            "end_node": "핀테크",
+            "properties": {
+                "description": "커머스, 핀테크, 리테일 산업 중심으로 확장"
+            }
+        },
+        {
+            "start_node": "옴니프레젠트 AI 에이전트",
+            "relationship": "TARGETS",
+            "end_node": "리테일",
+            "properties": {
+                "description": "커머스, 핀테크, 리테일 산업 중심으로 확장"
+            }
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import sys
 import time
 import shutil
 from pathlib import Path
-from typing import List
+from typing import List, Tuple, Optional
 import streamlit as st
 
 # Windows 환경에서 UTF-8 출력 설정
@@ -13,6 +13,18 @@ if sys.platform.startswith('win'):
     if sys.stdout.encoding != 'utf-8':
         sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
         sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
+
+# 파이프라인 단계 정의
+PIPELINE_STEPS = [
+    ("environment", "환경 설정"),
+    ("preprocess", "문서 전처리"),
+    ("schema", "스키마 추출"),
+    ("extract_node", "노드 추출"),
+    ("extract_relation", "관계 추출"),
+    ("deduplication", "중복 제거"),
+    ("cypher", "Cypher 생성"),
+    ("neo4j", "Neo4j 적재")
+]
 
 def setup_environment(output_root: str, purpose: str):
     """환경 변수 설정 및 디렉토리 구조 생성"""
@@ -31,7 +43,7 @@ def setup_environment(output_root: str, purpose: str):
     
     return True
 
-def preprocess_documents(output_root: str) -> int:
+def preprocess_documents(output_root: str) -> Tuple[int, int]:
     """documents 폴더의 파일들을 chunked_document로 복사/전처리"""
     documents_dir = Path(output_root) / "documents"
     chunked_dir = Path(output_root) / "chunked_document"
@@ -102,8 +114,8 @@ def load_module_safely(module_name: str):
     except ImportError as e:
         return None
 
-def run_step_safe(step_name: str, module_name: str, purpose: str = None) -> tuple[bool, str]:
-    """안전하게 파이프라인 단계 실행"""
+def run_step_safe(step_name: str, module_name: str, purpose: str = None) -> Tuple[bool, str, str]:
+    """안전하게 파이프라인 단계 실행 - Neo4j 오류 정보를 더 자세히 반환"""
     start_time = time.time()
     
     try:
@@ -182,7 +194,7 @@ main(r'{purpose or "문서 분석"}')
             output_root_raw = os.getenv("OUTPUT_ROOT", "output")
             result_file = f"{output_root_raw}/result/result.json"
             if not Path(result_file).exists():
-                return True, f"결과 파일이 없어 중복 제거를 건너뜁니다"
+                return True, f"결과 파일이 없어 중복 제거를 건너뜁니다", ""
             
             import subprocess
             cmd = [sys.executable, "-c", f"""
@@ -244,23 +256,39 @@ main()
                 env=env
             )
             if result.returncode != 0:
-                # Neo4j 실패는 경고로 처리 (선택적 기능)
-                return False, f"Neo4j 연결 실패 (파일 기반 모드로 동작): {result.stderr[:100]}"
+                # Neo4j 실패 시 상세한 오류 정보 반환
+                error_details = f"""
+리턴 코드: {result.returncode}
+표준 오류: {result.stderr}
+표준 출력: {result.stdout}
+                """.strip()
+                return False, f"Neo4j 연결 실패", error_details
                 
         else:
             raise ValueError(f"알 수 없는 모듈: {module_name}")
         
         duration = time.time() - start_time
-        return True, f"{step_name} 완료 ({duration:.1f}초)"
+        return True, f"{step_name} 완료 ({duration:.1f}초)", ""
 
     except Exception as e:
         duration = time.time() - start_time
-        return False, f"{step_name} 실패 ({duration:.1f}초): {str(e)}"
+        error_details = str(e)
+        return False, f"{step_name} 실패 ({duration:.1f}초)", error_details
 
-def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
-    """통합 파이프라인 실행"""
+def get_step_index(step_id: str) -> int:
+    """단계 ID로 인덱스 찾기"""
+    for i, (step_id_check, _) in enumerate(PIPELINE_STEPS):
+        if step_id_check == step_id:
+            return i
+    return 0
+
+def run_integrated_pipeline(purpose: str, output_root: str, start_from_step: int = 0) -> Tuple[bool, Optional[int]]:
+    """통합 파이프라인 실행 - 시작 단계 지정 가능"""
     st.markdown("### 🔄 RAG 시스템 구축 진행 상황")
     st.info(f"📌 구축 목적: **{purpose}**에 최적화된 RAG 시스템을 구축합니다.")
+    
+    if start_from_step > 0:
+        st.info(f"🔄 **{PIPELINE_STEPS[start_from_step][1]}** 단계부터 재시작합니다.")
     
     progress_bar = st.progress(0)
     status_placeholder = st.empty()
@@ -268,82 +296,107 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
     pipeline_start = time.time()
     
     try:
-        # 1. 환경 설정
-        status_placeholder.info("🔄 환경 설정 중...")
-        progress_bar.progress(0.1)
-        setup_environment(output_root, purpose)
-        st.success("✅ 환경 설정 완료")
-
-        # 2. 문서 전처리
-        status_placeholder.info("🔄 문서 전처리 중...")
-        progress_bar.progress(0.15)
-        chunk_count, file_count = preprocess_documents(output_root)
-        if chunk_count == 0:
-            raise Exception("처리할 문서가 없습니다.")
-        st.success(f"문서 전처리 완료: {file_count}개 파일 → {chunk_count}개 청크")
-
-        # 3. 스키마 추출
-        status_placeholder.info("🔄 스키마 추출 중...")
-        progress_bar.progress(0.25)
-        success, message = run_step_safe("스키마 추출", "schema", purpose)
-        if not success:
-            st.error(f"❌ {message}")
-            with st.expander("🔍 오류 상세 정보"):
-                st.code(message)
-            raise Exception("스키마 추출 실패")
-        st.success(f"✅ {message}")
-
-        # 4. 노드 추출
-        status_placeholder.info("🔄 엔티티(노드) 추출 중...")
-        progress_bar.progress(0.4)
-        success, message = run_step_safe("노드 추출", "extract_node", purpose)
-        if not success:
-            st.error(f"❌ {message}")
-            with st.expander("🔍 오류 상세 정보"):
-                st.code(message)
-            raise Exception("노드 추출 실패")
-        st.success(f"✅ {message}")
-
-        # 5. 관계 추출
-        status_placeholder.info("🔄 관계 추출 중...")
-        progress_bar.progress(0.55)
-        success, message = run_step_safe("관계 추출", "extract_relation", purpose)
-        if not success:
-            st.error(f"❌ {message}")
-            with st.expander("🔍 오류 상세 정보"):
-                st.code(message)
-            raise Exception("관계 추출 실패")
-        st.success(f"✅ {message}")
-
-        # 6. 중복 제거 및 정제
-        status_placeholder.info("🔄 중복 제거 및 정제 중...")
-        progress_bar.progress(0.7)
-        success, message = run_step_safe("중복 제거", "deduplication")
-        if success:
-            st.success(f"✅ {message}")
-        else:
-            st.warning(f"⚠️ {message}")
-
-        # 7. Cypher 스크립트 생성
-        status_placeholder.info("🔄 Cypher 스크립트 생성 중...")
-        progress_bar.progress(0.85)
-        success, message = run_step_safe("Cypher 생성", "cypher")
-        if not success:
-            st.error(f"❌ {message}")
-            with st.expander("🔍 오류 상세 정보"):
-                st.code(message)
-            raise Exception("Cypher 스크립트 생성 실패")
-        st.success(f"✅ {message}")
-
-        # 8. Neo4j 데이터베이스 적재
-        status_placeholder.info("🔄 Neo4j 데이터베이스 적재 중...")
-        progress_bar.progress(0.95)
-        success, message = run_step_safe("Neo4j 적재", "neo4j")
-        if success:
-            st.success(f"✅ {message}")
-        else:
-            st.warning(f"⚠️ Neo4j 적재 실패: {message.split(':')[0]}")
-            st.info("RAG 시스템은 파일 기반으로 동작합니다.")
+        total_steps = len(PIPELINE_STEPS)
+        
+        # 단계별 실행
+        for step_idx in range(start_from_step, total_steps):
+            step_id, step_name = PIPELINE_STEPS[step_idx]
+            progress = (step_idx + 0.5) / total_steps
+            
+            status_placeholder.info(f"🔄 {step_name} 중...")
+            progress_bar.progress(progress)
+            
+            # 단계별 실행
+            if step_id == "environment":
+                setup_environment(output_root, purpose)
+                st.success("✅ 환경 설정 완료")
+                
+            elif step_id == "preprocess":
+                chunk_count, file_count = preprocess_documents(output_root)
+                if chunk_count == 0:
+                    raise Exception("처리할 문서가 없습니다.")
+                st.success(f"✅ 문서 전처리 완료: {file_count}개 파일 → {chunk_count}개 청크")
+                
+            elif step_id == "schema":
+                success, message, error_details = run_step_safe("스키마 추출", "schema", purpose)
+                if not success:
+                    st.error(f"❌ {message}")
+                    if error_details:
+                        with st.expander("🔍 오류 상세 정보"):
+                            st.code(error_details)
+                    return False, step_idx
+                st.success(f"✅ {message}")
+                
+            elif step_id == "extract_node":
+                success, message, error_details = run_step_safe("노드 추출", "extract_node", purpose)
+                if not success:
+                    st.error(f"❌ {message}")
+                    if error_details:
+                        with st.expander("🔍 오류 상세 정보"):
+                            st.code(error_details)
+                    return False, step_idx
+                st.success(f"✅ {message}")
+                
+            elif step_id == "extract_relation":
+                success, message, error_details = run_step_safe("관계 추출", "extract_relation", purpose)
+                if not success:
+                    st.error(f"❌ {message}")
+                    if error_details:
+                        with st.expander("🔍 오류 상세 정보"):
+                            st.code(error_details)
+                    return False, step_idx
+                st.success(f"✅ {message}")
+                
+            elif step_id == "deduplication":
+                success, message, error_details = run_step_safe("중복 제거", "deduplication")
+                if success:
+                    st.success(f"✅ {message}")
+                else:
+                    st.warning(f"⚠️ {message}")
+                    if error_details:
+                        with st.expander("🔍 중복 제거 오류 상세 정보"):
+                            st.code(error_details)
+                
+            elif step_id == "cypher":
+                success, message, error_details = run_step_safe("Cypher 생성", "cypher")
+                if not success:
+                    st.error(f"❌ {message}")
+                    if error_details:
+                        with st.expander("🔍 오류 상세 정보"):
+                            st.code(error_details)
+                    return False, step_idx
+                st.success(f"✅ {message}")
+                
+            elif step_id == "neo4j":
+                success, message, error_details = run_step_safe("Neo4j 적재", "neo4j")
+                if success:
+                    st.success(f"✅ {message}")
+                else:
+                    # Neo4j 실패를 명확한 오류로 표시
+                    st.error(f"❌ Neo4j 데이터베이스 적재 실패")
+                    st.error(f"🔌 Neo4j 서버가 실행 중인지 확인하세요!")
+                    
+                    # 상세한 오류 정보 표시
+                    if error_details:
+                        with st.expander("🔍 Neo4j 오류 상세 정보 (클릭해서 확인)"):
+                            st.code(error_details)
+                            st.markdown("""
+                            **일반적인 해결 방법:**
+                            1. Neo4j Desktop 또는 Neo4j Server가 실행 중인지 확인
+                            2. 연결 정보 (URL, 사용자명, 비밀번호) 확인
+                            3. 방화벽 설정 확인
+                            4. Neo4j 로그 파일 확인
+                            """)
+                    
+                    # 파일 기반 모드 안내를 더 명확하게
+                    st.info("""
+                    ℹ️ **파일 기반 모드로 계속 진행**
+                    
+                    Neo4j 연결에 실패했지만, RAG 시스템은 파일 기반으로 동작할 수 있습니다.
+                    생성된 Cypher 파일을 수동으로 Neo4j에 import하여 사용할 수 있습니다.
+                    """)
+                    
+                    return False, step_idx
 
         # 완료
         progress_bar.progress(1.0)
@@ -363,12 +416,70 @@ def run_integrated_pipeline(purpose: str, output_root: str) -> bool:
             except:
                 pass
         
-        return True
+        return True, None
         
     except Exception as e:
         total_time = time.time() - pipeline_start
         st.error(f"❌ '{purpose}' RAG 시스템 구축 실패 ({total_time:.1f}초): {e}")
-        return False
+        # 현재 실행중인 단계에서 실패한 것으로 처리
+        current_step = start_from_step
+        for i in range(start_from_step, len(PIPELINE_STEPS)):
+            if PIPELINE_STEPS[i][1] in str(e):
+                current_step = i
+                break
+        return False, current_step
+
+def show_retry_buttons(failed_step_idx: int, purpose: str, output_root: str):
+    """재시도 버튼들을 표시"""
+    failed_step_name = PIPELINE_STEPS[failed_step_idx][1]
+    
+    st.markdown("---")
+    st.markdown("### 🔄 재시도 옵션")
+    st.error(f"**{failed_step_name}** 단계에서 오류가 발생했습니다.")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button(
+            f"🔄 {failed_step_name}부터 재시작", 
+            use_container_width=True,
+            help=f"{failed_step_name} 단계부터 다시 실행합니다",
+            key=f"retry_from_{failed_step_idx}"
+        ):
+            st.session_state.retry_from_step = failed_step_idx
+            st.session_state.retry_mode = True
+            st.session_state.purpose = purpose
+            st.session_state.output_root = output_root
+            st.rerun()
+    
+    with col2:
+        if st.button(
+            "🔄 처음부터 다시 시작", 
+            use_container_width=True,
+            help="전체 파이프라인을 처음부터 다시 실행합니다",
+            key="retry_from_start"
+        ):
+            st.session_state.retry_from_step = 0
+            st.session_state.retry_mode = True
+            st.session_state.purpose = purpose
+            st.session_state.output_root = output_root
+            st.rerun()
+    
+    with col3:
+        if st.button(
+            "❌ 중단", 
+            use_container_width=True,
+            help="오류 상태를 유지하고 설정 화면으로 돌아갑니다",
+            key="retry_abort"
+        ):
+            st.session_state.stage = "config"
+            if "failed_step" in st.session_state:
+                del st.session_state.failed_step
+            if "retry_mode" in st.session_state:
+                del st.session_state.retry_mode
+            if "retry_from_step" in st.session_state:
+                del st.session_state.retry_from_step
+            st.rerun()
 
 # ───────────────────────────────────────
 # Streamlit 인터페이스 시작
@@ -418,7 +529,8 @@ if st.session_state.stage == "config":
         else:
             st.error("❌ documents 폴더가 존재하지 않습니다.")
 
-    if submitted:
+    # 재시도 모드 확인 (form 제출 외부에서도 처리)
+    if st.session_state.get("retry_mode", False):
         if not purpose.strip():
             st.error("RAG 시스템 구축 목적을 입력해주세요.")
             st.stop()
@@ -428,12 +540,63 @@ if st.session_state.stage == "config":
             st.error(f"지정된 경로가 존재하지 않습니다: {output_root_path}")
             st.stop()
 
-        success = run_integrated_pipeline(purpose, str(output_root_path))
+        # 재시도 단계 가져오기
+        start_step = st.session_state.get("retry_from_step", 0)
+        
+        # 재시도 상태 초기화
+        st.session_state.retry_mode = False
+        if "retry_from_step" in st.session_state:
+            del st.session_state.retry_from_step
+
+        success, failed_step = run_integrated_pipeline(purpose, str(output_root_path), start_step)
+        
         if success:
             st.session_state.purpose = purpose
             st.session_state.output_root = str(output_root_path)
             st.session_state.stage = "rag"
+            # 실패 상태 정리
+            if "failed_step" in st.session_state:
+                del st.session_state.failed_step
             st.rerun()
+        else:
+            # 실패한 단계 저장
+            st.session_state.failed_step = failed_step
+            st.session_state.purpose = purpose
+            st.session_state.output_root = str(output_root_path)
+            
+            # 재시도 버튼 표시
+            if failed_step is not None:
+                show_retry_buttons(failed_step, purpose, str(output_root_path))
+
+    elif submitted:
+        if not purpose.strip():
+            st.error("RAG 시스템 구축 목적을 입력해주세요.")
+            st.stop()
+        
+        output_root_path = Path(output_root).expanduser().resolve()
+        if not output_root_path.exists():
+            st.error(f"지정된 경로가 존재하지 않습니다: {output_root_path}")
+            st.stop()
+
+        success, failed_step = run_integrated_pipeline(purpose, str(output_root_path), 0)
+        
+        if success:
+            st.session_state.purpose = purpose
+            st.session_state.output_root = str(output_root_path)
+            st.session_state.stage = "rag"
+            # 실패 상태 정리
+            if "failed_step" in st.session_state:
+                del st.session_state.failed_step
+            st.rerun()
+        else:
+            # 실패한 단계 저장
+            st.session_state.failed_step = failed_step
+            st.session_state.purpose = purpose
+            st.session_state.output_root = str(output_root_path)
+            
+            # 재시도 버튼 표시
+            if failed_step is not None:
+                show_retry_buttons(failed_step, purpose, str(output_root_path))
 
 elif st.session_state.stage == "rag":
     st.title("💬 RAG QA Interface")
@@ -447,6 +610,10 @@ elif st.session_state.stage == "rag":
         st.write(f"**작업 디렉토리:** {output_root}")
         if st.button("🔄 새로 구축", use_container_width=True):
             st.session_state.stage = "config"
+            # 상태 초기화
+            for key in ["failed_step", "retry_mode", "retry_from_step"]:
+                if key in st.session_state:
+                    del st.session_state[key]
             st.rerun()
 
     # 시스템 상태 확인

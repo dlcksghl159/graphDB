@@ -1,0 +1,69 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "신일전자",
+      "properties": {
+        "full_name": "신일전자",
+        "industry": "전자제품",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "BLDC 에어 서큘레이터 S10 SE",
+      "properties": {
+        "category": "가전제품",
+        "description": "고성능·감성 디자인 제품, BLDC 모터 탑재",
+        "launch_date": "2023-04-14",
+        "company": "신일전자"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "GS홈쇼핑 성유리 에디션 방송",
+      "properties": {
+        "date": "2023-04-14",
+        "type": "제품 출시",
+        "description": "신제품 BLDC 에어 서큘레이터 S10 SE 첫 선",
+        "location": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "GS홈쇼핑",
+      "properties": {
+        "full_name": "GS홈쇼핑",
+        "industry": "소매",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "방송 협력",
+        "date": "2023-04-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

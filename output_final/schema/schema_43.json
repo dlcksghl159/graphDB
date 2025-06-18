@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "소상공인시장진흥공단",
+      "properties": {
+        "full_name": "소상공인시장진흥공단",
+        "industry": "지원 서비스",
+        "headquarters": "",
+        "founded": "",
+        "ceo": "박성효"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
+      "properties": {
+        "full_name": "롯데웰푸드",
+        "industry": "식품 제조",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "properties": {
+        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
+        "start_date": "2023-03",
+        "status": "모집 중"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무 협약",
+      "properties": {
+        "type": "협력",
+        "date": "2023-03",
+        "description": "소진공과 롯데웰푸드 간의 협력 협약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론",
+      "properties": {
+        "category": "식품",
+        "description": "롯데웰푸드의 브랜드",
+        "launch_date": "",
+        "company": "롯데웰푸드"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년가게",
+      "properties": {
+        "type": "음식점",
+        "description": "음식점업을 하는 업력 30년 이상의 우수 소상인",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "백년소공인",
+      "properties": {
+        "type": "식품 제조업",
+        "description": "식품 제조업에서 15년 이상 업력을 가진 숙련된 소공인",
+        "headquarters": ""
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTICIPATES_IN",
+      "end_node": "PROJECT",
+      "properties": {}
+    }
+  ]
+}

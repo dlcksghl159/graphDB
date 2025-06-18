@@ -1,0 +1,49 @@
+{
+    "nodes": [
+        {
+            "label": "ORGANIZATION",
+            "name": "사람인",
+            "properties": {
+                "type": "Employment Platform",
+                "description": "Conducts surveys and provides employment-related services.",
+                "headquarters": "South Korea"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "김혜미",
+            "properties": {
+                "full_name": "김혜미",
+                "role": "기자",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "인생 이모작 의향 조사",
+            "properties": {
+                "date": "2023-10-14",
+                "type": "Survey",
+                "description": "Survey on the intention of career change after retirement.",
+                "location": "South Korea"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "사람인",
+            "relationship": "CONDUCTED",
+            "end_node": "인생 이모작 의향 조사",
+            "properties": {}
+        },
+        {
+            "start_node": "김혜미",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "인생 이모작 의향 조사",
+            "properties": {
+                "role": "기자"
+            }
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "한샘",
+            "properties": {
+                "full_name": "한샘",
+                "industry": "가구",
+                "headquarters": "서울",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "현대리바트",
+            "properties": {
+                "full_name": "현대리바트",
+                "industry": "가구",
+                "headquarters": "서울",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PROJECT",
+            "name": "오피스 인테리어 사업 확장",
+            "properties": {
+                "description": "오피스 기반의 B2B 인테리어 사업 확장",
+                "start_date": "2025",
+                "status": "진행 중"
+            }
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "B2B",
+            "properties": {}
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "B2C",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "한샘",
+            "relationship": "COMPETES_WITH",
+            "end_node": "현대리바트",
+            "properties": {
+                "market": "가구"
+            }
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "오피스 인테리어 사업 확장",
+            "properties": {}
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "오피스 인테리어 사업 확장",
+            "properties": {}
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "AFFECTED_BY",
+            "end_node": "B2B",
+            "properties": {}
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "AFFECTED_BY",
+            "end_node": "B2B",
+            "properties": {}
+        },
+        {
+            "start_node": "한샘",
+            "relationship": "AFFECTED_BY",
+            "end_node": "B2C",
+            "properties": {}
+        },
+        {
+            "start_node": "현대리바트",
+            "relationship": "AFFECTED_BY",
+            "end_node": "B2C",
+            "properties": {}
+        }
+    ]
+}

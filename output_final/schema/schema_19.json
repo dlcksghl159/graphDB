@@ -1,0 +1,109 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "엠투아이",
+      "properties": {
+        "full_name": "엠투아이",
+        "industry": "디지털전환 솔루션",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "벰로보틱스",
+      "properties": {
+        "full_name": "벰로보틱스",
+        "industry": "산업용 물류로봇",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "로봇 제어기 공동 개발",
+      "properties": {
+        "description": "로봇 제어기 공동 개발과 물류로봇(AMR/AGV) 프로젝트 공동 수행",
+        "start_date": "",
+        "status": "진행 중"
+      }
+    },
+    {
+      "label": "INVESTMENT",
+      "name": "엠투아이의 벰로보틱스 지분투자",
+      "properties": {
+        "amount": "12억원",
+        "date": "",
+        "type": "전략적 지분투자"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "디지털전환(DX) 솔루션",
+      "properties": {
+        "category": "디지털전환",
+        "description": "AI 자율 제조 시장을 선도하는 솔루션",
+        "field": "AI"
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "로봇 제어 기술",
+      "properties": {
+        "category": "로봇 제어",
+        "description": "로봇 제어기의 두뇌 역할",
+        "field": "로봇"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "공동개발 및 프로젝트 수행",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "RECEIVED_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "MADE_INVESTMENT",
+      "end_node": "INVESTMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    }
+  ]
+}

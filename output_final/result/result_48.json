@@ -1,0 +1,55 @@
+{
+    "nodes": [],
+    "relations": [
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "부산항만공사",
+            "properties": {
+                "type": "Logistics Collaboration",
+                "date": "2023-10-14"
+            }
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "DEVELOPS",
+            "end_node": "스마트트레이드허브",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "로스앤젤레스",
+            "properties": {}
+        },
+        {
+            "start_node": "부산항만공사",
+            "relationship": "LOCATED_IN",
+            "end_node": "롱비치",
+            "properties": {}
+        },
+        {
+            "start_node": "중소벤처기업진흥공단",
+            "relationship": "SIGNED",
+            "end_node": "글로벌 물류 지원 업무협약",
+            "properties": {}
+        },
+        {
+            "start_node": "미국의 관세 정책",
+            "relationship": "AFFECTS",
+            "end_node": "중소벤처기업진흥공단",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "강석진",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업진흥공단",
+            "properties": {
+                "position": "이사장",
+                "since": ""
+            }
+        }
+    ]
+}

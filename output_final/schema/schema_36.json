@@ -1,0 +1,116 @@
+{
+  "nodes": [
+    {
+      "label": "PERSON",
+      "name": "박미경",
+      "properties": {
+        "full_name": "박미경",
+        "role": "제7대 하이서울기업협회장",
+        "nationality": "대한민국",
+        "age": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "포시에스",
+      "properties": {
+        "full_name": "포시에스",
+        "industry": "전자문서",
+        "headquarters": "서울 강남구",
+        "founded": "",
+        "ceo": "박미경"
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "하이서울기업협회",
+      "properties": {
+        "type": "기업협회",
+        "description": "서울시와 서울산업진흥원이 지원하는 우수 중소기업 네트워크",
+        "headquarters": "서울"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "서울",
+      "properties": {
+        "type": "도시",
+        "country": "대한민국",
+        "region": "서울특별시"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인도네시아",
+      "properties": {
+        "type": "국가",
+        "country": "인도네시아",
+        "region": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AI",
+      "properties": {
+        "category": "인공지능",
+        "description": "AI 기술을 활용한 문서 생성 자동화 및 계약서 내용 분석",
+        "field": "기술"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "AI 교육",
+      "properties": {
+        "description": "하이서울 기업들을 위한 AI 교육 및 활용 사례 공유",
+        "start_date": "",
+        "status": "진행 중"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "PERSON",
+      "relationship": "CEO_OF",
+      "end_node": "COMPANY",
+      "properties": {
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "position": "회장",
+        "since": "2023-02"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "DEVELOPS",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "EXPANDS_TO",
+      "end_node": "LOCATION",
+      "properties": {
+        "date": "",
+        "strategy": "파트너사를 통한 진출"
+      }
+    }
+  ]
+}

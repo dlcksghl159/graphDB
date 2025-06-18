@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "현대이지웰",
+      "properties": {
+        "full_name": "현대이지웰",
+        "industry": "토탈복지솔루션",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "현대백화점그룹",
+      "properties": {
+        "full_name": "현대백화점그룹",
+        "industry": "유통",
+        "headquarters": "",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "ORGANIZATION",
+      "name": "한국중소벤처기업유통원",
+      "properties": {
+        "type": "정부기관",
+        "description": "중소벤처기업부 산하 기관",
+        "headquarters": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "경기도",
+      "properties": {
+        "type": "지역",
+        "country": "대한민국",
+        "region": "경기도"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "소상공인 온라인쇼핑몰 판매지원사업",
+      "properties": {
+        "description": "소상공인 제품의 온라인 판매 활성화 지원",
+        "start_date": "",
+        "status": "진행 중"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "SUBSIDIARY_OF",
+      "end_node": "COMPANY",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "ORGANIZATION",
+      "properties": {
+        "type": "지원사업",
+        "date": "2023"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    }
+  ]
+}

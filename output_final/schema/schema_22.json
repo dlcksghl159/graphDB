@@ -1,0 +1,114 @@
+{
+  "nodes": [
+    {
+      "label": "ORGANIZATION",
+      "name": "소상공인시장진흥공단",
+      "properties": {
+        "type": "Government Agency",
+        "description": "Small Enterprise and Market Service",
+        "headquarters": "Seoul, South Korea"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
+      "properties": {
+        "full_name": "Lotte Wellfood",
+        "industry": "Food Manufacturing",
+        "headquarters": "Seoul, South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "properties": {
+        "description": "Collaboration project for developing joint brands and products with long-standing small businesses",
+        "start_date": "2023-03",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무 협약",
+      "properties": {
+        "type": "Business Cooperation Agreement",
+        "date": "2023-03",
+        "description": "Agreement between 소진공 and 롯데웰푸드 for collaboration"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론(Theory of SICSA)",
+      "properties": {
+        "category": "Food Product",
+        "description": "Brand for 백년가게's '우수메뉴' products",
+        "launch_date": "",
+        "company": "롯데웰푸드"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "서울",
+      "properties": {
+        "type": "City",
+        "country": "South Korea",
+        "region": "Seoul"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "Business Cooperation",
+        "date": "2023-03"
+      }
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "ORGANIZATION",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    }
+  ]
+}

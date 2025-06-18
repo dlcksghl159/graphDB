@@ -1,0 +1,127 @@
+{
+    "nodes": [
+        {
+            "label": "EVENT",
+            "name": "미국의 25% 관세 부과",
+            "properties": {
+                "date": "2023-03",
+                "type": "Trade Policy",
+                "description": "미국의 25% 관세 부과",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "REPORT",
+            "name": "2025년도 1분기 중소기업 수출 동향",
+            "properties": {
+                "date": "2023-04-14",
+                "type": "Export Report",
+                "description": "2025년도 1분기 중소기업 수출 동향 발표",
+                "location": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "철강",
+            "properties": {
+                "category": "철강",
+                "description": "소비자 대상 철강",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "알루미늄",
+            "properties": {
+                "category": "알루미늄",
+                "description": "소비자 대상 알루미늄",
+                "launch_date": "",
+                "company": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "키르기스스탄",
+            "properties": {
+                "type": "Country",
+                "country": "Kyrgyzstan",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "독립국가연합",
+            "properties": {
+                "type": "Region",
+                "country": "",
+                "region": "CIS"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "CIS",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "PUBLISHED",
+            "end_node": "2025년도 1분기 중소기업 수출 동향",
+            "properties": {}
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "미국의 25% 관세 부과",
+            "relationship": "AFFECTS",
+            "end_node": "철강",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "미국의 25% 관세 부과",
+            "relationship": "AFFECTS",
+            "end_node": "알루미늄",
+            "properties": {
+                "impact": "Negative"
+            }
+        },
+        {
+            "start_node": "화장품",
+            "relationship": "EXPORTED_TO",
+            "end_node": "미국",
+            "properties": {
+                "amount": "18억4000만 달러",
+                "date": "1분기"
+            }
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "키르기스스탄",
+            "properties": {
+                "amount": "17억4000만 달러",
+                "date": "1분기"
+            }
+        },
+        {
+            "start_node": "자동차",
+            "relationship": "EXPORTED_TO",
+            "end_node": "독립국가연합",
+            "properties": {
+                "amount": "17억4000만 달러",
+                "date": "1분기"
+            }
+        }
+    ]
+}

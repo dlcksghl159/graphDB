@@ -1,0 +1,102 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "파세코",
+      "properties": {
+        "full_name": "파세코",
+        "industry": "가전",
+        "headquarters": "안산시 단원구",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "창문형 에어컨",
+      "properties": {
+        "category": "가전제품",
+        "description": "창문형 에어컨, AI 모드, 환기 시스템",
+        "launch_date": "2023년",
+        "company": "파세코"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "6세대 창문형 에어컨",
+      "properties": {
+        "category": "가전제품",
+        "description": "6세대 창문형 에어컨, AI 제어 모드, 환기 시스템",
+        "launch_date": "2023년 9월",
+        "company": "파세코"
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "김상우",
+      "properties": {
+        "full_name": "김상우",
+        "role": "리테일사업부 상무",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "PERSON",
+      "name": "박치호",
+      "properties": {
+        "full_name": "박치호",
+        "role": "기술연구소 팀장",
+        "nationality": "",
+        "age": ""
+      }
+    },
+    {
+      "label": "TECHNOLOGY",
+      "name": "AI 에너지 세이빙",
+      "properties": {
+        "category": "에너지 절약 기술",
+        "description": "주위 온도를 감지하고 방의 크기와 자주 설정하는 희망 온도 등을 학습해 컴프레서와 풍속 단수를 자동 조절",
+        "field": "인공지능"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "리테일사업부 상무",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PERSON",
+      "relationship": "WORKS_FOR",
+      "end_node": "COMPANY",
+      "properties": {
+        "position": "기술연구소 팀장",
+        "since": ""
+      }
+    },
+    {
+      "start_node": "PRODUCT",
+      "relationship": "USES",
+      "end_node": "TECHNOLOGY",
+      "properties": {}
+    }
+  ]
+}

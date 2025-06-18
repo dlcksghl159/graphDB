@@ -1,0 +1,165 @@
+{
+    "nodes": [
+        {
+            "label": "INDUSTRY",
+            "name": "화장품",
+            "properties": {}
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "자동차",
+            "properties": {}
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "반도체 제조용 장비",
+            "properties": {}
+        },
+        {
+            "label": "LOCATION",
+            "name": "미국",
+            "properties": {
+                "type": "Country",
+                "country": "USA",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "중국",
+            "properties": {
+                "type": "Country",
+                "country": "China",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "일본",
+            "properties": {
+                "type": "Country",
+                "country": "Japan",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "홍콩",
+            "properties": {
+                "type": "Region",
+                "country": "China",
+                "region": "Hong Kong"
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "대만",
+            "properties": {
+                "type": "Country",
+                "country": "Taiwan",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "태국",
+            "properties": {
+                "type": "Country",
+                "country": "Thailand",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "인도네시아",
+            "properties": {
+                "type": "Country",
+                "country": "Indonesia",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "베트남",
+            "properties": {
+                "type": "Country",
+                "country": "Vietnam",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "인도",
+            "properties": {
+                "type": "Country",
+                "country": "India",
+                "region": ""
+            }
+        },
+        {
+            "label": "LOCATION",
+            "name": "멕시코",
+            "properties": {
+                "type": "Country",
+                "country": "Mexico",
+                "region": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "미국의 철강·알루미늄 및 파생 상품 관세부과",
+            "properties": {
+                "date": "2023-03-12",
+                "type": "Trade Policy",
+                "description": "미국의 철강·알루미늄 및 파생 상품에 대한 관세 부과",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이순배",
+            "properties": {
+                "full_name": "이순배",
+                "role": "글로벌성장정책관",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "중소벤처기업부",
+            "properties": {
+                "type": "Government",
+                "description": "중소기업 및 벤처기업 지원을 담당하는 한국 정부 부처",
+                "headquarters": "서울, 대한민국"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "중소벤처기업부",
+            "relationship": "ANNOUNCED",
+            "end_node": "2025년도 1분기 중소기업 수출 동향",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        },
+        {
+            "start_node": "이순배",
+            "relationship": "WORKS_FOR",
+            "end_node": "중소벤처기업부",
+            "properties": {
+                "position": "글로벌성장정책관",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "미국의 철강·알루미늄 및 파생 상품 관세부과",
+            "relationship": "AFFECTS",
+            "end_node": "중소기업",
+            "properties": {
+                "impact": "Negative"
+            }
+        }
+    ]
+}

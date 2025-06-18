@@ -1,0 +1,204 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "에이텀",
+            "properties": {
+                "industry": "전자",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "DST",
+            "properties": {
+                "industry": "조선 및 방산",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "밸류파인더",
+            "properties": {
+                "industry": "리서치",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이충헌",
+            "properties": {
+                "full_name": "이충헌",
+                "role": "연구원",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Samsung",
+            "properties": {
+                "industry": "전자",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대중공업",
+            "properties": {
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HD현대마린솔루션",
+            "properties": {
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "STX엔진",
+            "properties": {
+                "industry": "조선",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TA트랜스",
+            "properties": {
+                "category": "전자",
+                "description": "휴대용 충전기에 탑재되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "TV트랜스",
+            "properties": {
+                "category": "전자",
+                "description": "TV에 탑재되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "전기차용 트랜스",
+            "properties": {
+                "category": "전자",
+                "description": "전기차에 사용되는 트랜스",
+                "launch_date": "",
+                "company": "에이텀"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "힘센엔진 실린더",
+            "properties": {
+                "category": "조선",
+                "description": "힘센엔진에 사용되는 실린더",
+                "launch_date": "",
+                "company": "DST"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "HiMSEN",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "에이텀",
+            "relationship": "ACQUIRED",
+            "end_node": "DST",
+            "properties": {
+                "date": "2023-02-02",
+                "amount": "145억 원"
+            }
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "SUPPLIES",
+            "end_node": "삼성전자",
+            "properties": {
+                "product": "45W 트랜스"
+            }
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대중공업",
+            "properties": {
+                "product": "힘센엔진 실린더"
+            }
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "HD현대마린솔루션",
+            "properties": {}
+        },
+        {
+            "start_node": "DST",
+            "relationship": "SUPPLIES",
+            "end_node": "STX엔진",
+            "properties": {}
+        },
+        {
+            "start_node": "밸류파인더",
+            "relationship": "ANALYZED",
+            "end_node": "에이텀",
+            "properties": {
+                "date": "2023-02-14",
+                "report": "신성장동력 확보 평가"
+            }
+        },
+        {
+            "start_node": "이충헌",
+            "relationship": "WORKS_FOR",
+            "end_node": "밸류파인더",
+            "properties": {
+                "position": "연구원",
+                "since": ""
+            }
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "TA트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "TV트랜스",
+            "properties": {}
+        },
+        {
+            "start_node": "에이텀",
+            "relationship": "PRODUCES",
+            "end_node": "전기차용 트랜스",
+            "properties": {}
+        }
+    ]
+}

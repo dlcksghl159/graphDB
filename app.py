@@ -443,33 +443,42 @@ def show_retry_buttons(failed_step_idx: int, purpose: str, output_root: str):
         if st.button(
             f"🔄 {failed_step_name}부터 재시작", 
             use_container_width=True,
-            help=f"{failed_step_name} 단계부터 다시 실행합니다"
+            help=f"{failed_step_name} 단계부터 다시 실행합니다",
+            key=f"retry_from_{failed_step_idx}"
         ):
             st.session_state.retry_from_step = failed_step_idx
             st.session_state.retry_mode = True
+            st.session_state.purpose = purpose
+            st.session_state.output_root = output_root
             st.rerun()
     
     with col2:
         if st.button(
             "🔄 처음부터 다시 시작", 
             use_container_width=True,
-            help="전체 파이프라인을 처음부터 다시 실행합니다"
+            help="전체 파이프라인을 처음부터 다시 실행합니다",
+            key="retry_from_start"
         ):
             st.session_state.retry_from_step = 0
             st.session_state.retry_mode = True
+            st.session_state.purpose = purpose
+            st.session_state.output_root = output_root
             st.rerun()
     
     with col3:
         if st.button(
             "❌ 중단", 
             use_container_width=True,
-            help="오류 상태를 유지하고 설정 화면으로 돌아갑니다"
+            help="오류 상태를 유지하고 설정 화면으로 돌아갑니다",
+            key="retry_abort"
         ):
             st.session_state.stage = "config"
             if "failed_step" in st.session_state:
                 del st.session_state.failed_step
             if "retry_mode" in st.session_state:
                 del st.session_state.retry_mode
+            if "retry_from_step" in st.session_state:
+                del st.session_state.retry_from_step
             st.rerun()
 
 # ───────────────────────────────────────
@@ -520,7 +529,8 @@ if st.session_state.stage == "config":
         else:
             st.error("❌ documents 폴더가 존재하지 않습니다.")
 
-    if submitted:
+    # 재시도 모드 확인 (form 제출 외부에서도 처리)
+    if st.session_state.get("retry_mode", False):
         if not purpose.strip():
             st.error("RAG 시스템 구축 목적을 입력해주세요.")
             st.stop()
@@ -530,15 +540,45 @@ if st.session_state.stage == "config":
             st.error(f"지정된 경로가 존재하지 않습니다: {output_root_path}")
             st.stop()
 
-        # 재시도 모드 확인
+        # 재시도 단계 가져오기
         start_step = st.session_state.get("retry_from_step", 0)
-        if st.session_state.get("retry_mode", False):
-            # 재시도 상태 초기화
-            st.session_state.retry_mode = False
-            if "retry_from_step" in st.session_state:
-                del st.session_state.retry_from_step
+        
+        # 재시도 상태 초기화
+        st.session_state.retry_mode = False
+        if "retry_from_step" in st.session_state:
+            del st.session_state.retry_from_step
 
         success, failed_step = run_integrated_pipeline(purpose, str(output_root_path), start_step)
+        
+        if success:
+            st.session_state.purpose = purpose
+            st.session_state.output_root = str(output_root_path)
+            st.session_state.stage = "rag"
+            # 실패 상태 정리
+            if "failed_step" in st.session_state:
+                del st.session_state.failed_step
+            st.rerun()
+        else:
+            # 실패한 단계 저장
+            st.session_state.failed_step = failed_step
+            st.session_state.purpose = purpose
+            st.session_state.output_root = str(output_root_path)
+            
+            # 재시도 버튼 표시
+            if failed_step is not None:
+                show_retry_buttons(failed_step, purpose, str(output_root_path))
+
+    elif submitted:
+        if not purpose.strip():
+            st.error("RAG 시스템 구축 목적을 입력해주세요.")
+            st.stop()
+        
+        output_root_path = Path(output_root).expanduser().resolve()
+        if not output_root_path.exists():
+            st.error(f"지정된 경로가 존재하지 않습니다: {output_root_path}")
+            st.stop()
+
+        success, failed_step = run_integrated_pipeline(purpose, str(output_root_path), 0)
         
         if success:
             st.session_state.purpose = purpose

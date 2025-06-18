@@ -1,0 +1,136 @@
+{
+    "nodes": [
+        {
+            "label": "EVENT",
+            "name": "2025 경기도 동반성장 페어",
+            "properties": {
+                "date": "2023-10-13",
+                "type": "Trade Fair",
+                "description": "경기도와 동반성장위원회가 공동으로 개최한 상생협력 프로그램",
+                "location": "수원메쎄 1홀"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "경기도",
+            "properties": {
+                "type": "Local Government",
+                "description": "대한민국의 지방자치단체",
+                "headquarters": "경기도, 대한민국"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "Naver",
+            "properties": {
+                "full_name": "네이버 주식회사",
+                "industry": "인터넷 서비스",
+                "headquarters": "성남, 대한민국",
+                "founded": "1999",
+                "ceo": "최수연"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "대상",
+            "properties": {
+                "full_name": "대상 주식회사",
+                "industry": "식품",
+                "headquarters": "서울, 대한민국",
+                "founded": "1956",
+                "ceo": "임정배"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "현대모비스",
+            "properties": {
+                "full_name": "현대모비스 주식회사",
+                "industry": "자동차 부품",
+                "headquarters": "서울, 대한민국",
+                "founded": "1977",
+                "ceo": "조성환"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "경기도경제과학진흥원",
+            "properties": {
+                "type": "Public Organization",
+                "description": "경기도의 경제 및 과학 진흥을 위한 기관",
+                "headquarters": "경기도, 대한민국"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "이달곤",
+            "properties": {
+                "full_name": "이달곤",
+                "role": "위원장",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "프로",
+            "properties": {
+                "role": "대표"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "동반성장위원회",
+            "relationship": "ORGANIZED",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "경기도",
+            "relationship": "ORGANIZED",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {}
+        },
+        {
+            "start_node": "네이버",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회 참여"
+            }
+        },
+        {
+            "start_node": "대상",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회 참여"
+            }
+        },
+        {
+            "start_node": "현대모비스",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "구매방침 설명회 참여"
+            }
+        },
+        {
+            "start_node": "경기도경제과학진흥원",
+            "relationship": "PARTICIPATED_IN",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "role": "중소기업 지원사업 컨설팅"
+            }
+        },
+        {
+            "start_node": "이달곤",
+            "relationship": "SPOKE_AT",
+            "end_node": "2025 경기도 동반성장 페어",
+            "properties": {
+                "topic": "중소기업의 지역 경제 성장 중요성"
+            }
+        }
+    ]
+}

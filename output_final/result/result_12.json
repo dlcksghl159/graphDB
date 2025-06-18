@@ -1,0 +1,34 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "에이스침대",
+            "properties": {
+                "industry": "가구",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "1분기 실적 발표",
+            "properties": {
+                "date": "2023-04-14",
+                "type": "Financial Report",
+                "description": "에이스침대의 1분기 매출 및 영업이익 발표",
+                "location": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "에이스침대",
+            "relationship": "ANNOUNCED",
+            "end_node": "1분기 실적 발표",
+            "properties": {
+                "date": "2023-04-14"
+            }
+        }
+    ]
+}

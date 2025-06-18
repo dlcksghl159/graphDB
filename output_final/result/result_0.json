@@ -1,0 +1,84 @@
+{
+    "nodes": [
+        {
+            "label": "LOCATION",
+            "name": "경기도",
+            "properties": {
+                "type": "Province",
+                "country": "South Korea"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "date": "2023",
+                "type": "Safety Education",
+                "description": "산업재해 예방을 위한 교육 프로그램",
+                "location": "경기도"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "고용노동부",
+            "properties": {
+                "type": "Government",
+                "description": "노동 관련 정책을 담당하는 정부 부처",
+                "headquarters": "South Korea"
+            }
+        },
+        {
+            "label": "ORGANIZATION",
+            "name": "직업건강간호협회 직업건강안전연구소",
+            "properties": {
+                "type": "Research Institute",
+                "description": "직업 건강 및 안전 연구를 수행하는 기관",
+                "headquarters": "South Korea"
+            }
+        },
+        {
+            "label": "PERSON",
+            "name": "임용규",
+            "properties": {
+                "full_name": "임용규",
+                "role": "노동안전과장",
+                "nationality": "South Korean",
+                "age": ""
+            }
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "경기도",
+            "relationship": "HOSTS",
+            "end_node": "찾아가는 산업재해 예방 교육",
+            "properties": {}
+        },
+        {
+            "start_node": "고용노동부",
+            "relationship": "PROVIDES_STATISTICS",
+            "end_node": "EVENT",
+            "properties": {
+                "date": "2023",
+                "description": "산업재해 사고 사망자 통계"
+            }
+        },
+        {
+            "start_node": "직업건강간호협회 직업건강안전연구소",
+            "relationship": "SUPPORTS",
+            "end_node": "찾아가는 산업재해 예방 교육",
+            "properties": {
+                "contact": "032-668-9030",
+                "email": "hsl@kaohn.or.kr"
+            }
+        },
+        {
+            "start_node": "임용규",
+            "relationship": "WORKS_FOR",
+            "end_node": "경기도",
+            "properties": {
+                "position": "노동안전과장"
+            }
+        }
+    ]
+}

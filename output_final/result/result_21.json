@@ -1,0 +1,123 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "삼성바이오로직스",
+            "properties": {
+                "industry": "바이오",
+                "headquarters": "대한민국",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "미국 의약품 관세 부과",
+            "properties": {
+                "date": "2023",
+                "type": "Trade Policy",
+                "description": "미국의 의약품에 대한 관세 부과 정책",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "램시마",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "셀트리온의 바이오시밀러 제품",
+                "launch_date": "2019",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "옴리클로",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "셀트리온의 신규 바이오시밀러 제품",
+                "launch_date": "2023 하반기",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "아이덴젤트",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "셀트리온의 신규 바이오시밀러 제품",
+                "launch_date": "2023 하반기",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "EVENT",
+            "name": "약가인하 행정명령",
+            "properties": {
+                "date": "2023-12-12",
+                "type": "Policy",
+                "description": "트럼프 대통령이 서명한 약가인하 행정명령",
+                "location": "미국"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "CMO",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 의약품 관세 부과",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "AFFECTED_BY",
+            "end_node": "미국 의약품 관세 부과",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "램시마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "트룩시마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "옴리클로",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "아이덴젤트",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "AFFECTED_BY",
+            "end_node": "약가인하 행정명령",
+            "properties": {
+                "impact": "Potential increase in biosimilar demand"
+            }
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "AFFECTED_BY",
+            "end_node": "약가인하 행정명령",
+            "properties": {
+                "impact": "Potential increase in biosimilar demand"
+            }
+        }
+    ]
+}

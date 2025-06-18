@@ -1,0 +1,329 @@
+{
+    "nodes": [
+        {
+            "label": "COMPANY",
+            "name": "유한양행",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "GC녹십자",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "대웅제약",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "한미약품",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "종근당",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "보령",
+            "properties": {
+                "industry": "제약",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "LG화학",
+            "properties": {
+                "industry": "화학",
+                "headquarters": "",
+                "founded": "",
+                "ceo": ""
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "피즈치바",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "스텔라라 시밀러",
+                "launch_date": "2023 Q1",
+                "company": "삼성바이오에피스"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "램시마SC",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "자가면역질환 치료제",
+                "launch_date": "2022 Q1",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "유플라이마",
+            "properties": {
+                "category": "바이오시밀러",
+                "description": "",
+                "launch_date": "",
+                "company": "셀트리온"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "렉라자",
+            "properties": {
+                "category": "신약",
+                "description": "폐암 치료제",
+                "launch_date": "",
+                "company": "유한양행"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "알리글로",
+            "properties": {
+                "category": "신약",
+                "description": "",
+                "launch_date": "",
+                "company": "GC녹십자"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "펙수클루",
+            "properties": {
+                "category": "신약",
+                "description": "위식도역류질환 치료제",
+                "launch_date": "",
+                "company": "대웅제약"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "나보타",
+            "properties": {
+                "category": "신약",
+                "description": "보툴리눔톡신",
+                "launch_date": "",
+                "company": "대웅제약"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "고덱스",
+            "properties": {
+                "category": "간장약",
+                "description": "",
+                "launch_date": "",
+                "company": "셀트리온제약"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "케이캡",
+            "properties": {
+                "category": "위식도역류질환 치료제",
+                "description": "",
+                "launch_date": "",
+                "company": "HK이노엔"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "성장호르몬",
+            "properties": {
+                "category": "치료제",
+                "description": "",
+                "launch_date": "",
+                "company": "LG화학"
+            }
+        },
+        {
+            "label": "PRODUCT",
+            "name": "당뇨병치료제",
+            "properties": {
+                "category": "치료제",
+                "description": "",
+                "launch_date": "",
+                "company": "LG화학"
+            }
+        },
+        {
+            "label": "INDUSTRY",
+            "name": "제약바이오",
+            "properties": {}
+        },
+        {
+            "label": "PERSON",
+            "name": "바이",
+            "properties": {
+                "role": "대표"
+            }
+        },
+        {
+            "label": "COMPANY",
+            "name": "CDMO",
+            "properties": {}
+        }
+    ],
+    "relations": [
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PRODUCES",
+            "end_node": "피즈치바",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "램시마SC",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "유플라이마",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PRODUCES",
+            "end_node": "베그젤마",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "PRODUCES",
+            "end_node": "렉라자",
+            "properties": {}
+        },
+        {
+            "start_node": "GC녹십자",
+            "relationship": "PRODUCES",
+            "end_node": "알리글로",
+            "properties": {}
+        },
+        {
+            "start_node": "대웅제약",
+            "relationship": "PRODUCES",
+            "end_node": "펙수클루",
+            "properties": {}
+        },
+        {
+            "start_node": "대웅제약",
+            "relationship": "PRODUCES",
+            "end_node": "나보타",
+            "properties": {}
+        },
+        {
+            "start_node": "종근당",
+            "relationship": "SIGNED",
+            "end_node": "고덱스 공동판매 계약",
+            "properties": {}
+        },
+        {
+            "start_node": "보령",
+            "relationship": "SIGNED",
+            "end_node": "케이캡 공동판매 계약",
+            "properties": {}
+        },
+        {
+            "start_node": "LG화학",
+            "relationship": "PRODUCES",
+            "end_node": "성장호르몬",
+            "properties": {}
+        },
+        {
+            "start_node": "LG화학",
+            "relationship": "PRODUCES",
+            "end_node": "당뇨병치료제",
+            "properties": {}
+        },
+        {
+            "start_node": "삼성바이오로직스",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "셀트리온",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "유한양행",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "GC녹십자",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "대웅제약",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "한미약품",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "종근당",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "보령",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        },
+        {
+            "start_node": "LG화학",
+            "relationship": "PART_OF",
+            "end_node": "제약바이오",
+            "properties": {}
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "소상공인시장진흥공단",
+      "properties": {
+        "full_name": "소상공인시장진흥공단",
+        "industry": "Government",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": "박성효"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "롯데웰푸드",
+      "properties": {
+        "full_name": "롯데웰푸드",
+        "industry": "Food Manufacturing",
+        "headquarters": "서울",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+      "properties": {
+        "description": "백년가게·소공인의 경험과 롯데웰푸드의 기술력을 접목하여 공동 상표 및 상품 개발",
+        "start_date": "2023-03",
+        "status": "Ongoing"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무 협약",
+      "properties": {
+        "type": "Business Partnership",
+        "date": "2023-03",
+        "description": "소진공과 롯데웰푸드 간의 업무 협약"
+      }
+    },
+    {
+      "label": "PRODUCT",
+      "name": "식사이론(Theory of SICSA)",
+      "properties": {
+        "category": "Food",
+        "description": "백년가게의 우수메뉴와 접목한 상품",
+        "launch_date": "",
+        "company": "롯데웰푸드"
+      }
+    },
+    {
+      "label": "EVENT",
+      "name": "상생프로젝트 참여업체 모집",
+      "properties": {
+        "date": "2023-10-14 to 2023-10-23",
+        "type": "Recruitment",
+        "description": "백년가게·백년소공인X롯데웰푸드 상생 프로젝트 참여 업체 모집",
+        "location": "온라인"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "COLLABORATES_ON",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "PRODUCES",
+      "end_node": "PRODUCT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SPONSORED",
+      "end_node": "EVENT",
+      "properties": {}
+    }
+  ]
+}

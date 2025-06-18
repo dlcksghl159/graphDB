@@ -1,0 +1,40 @@
+{
+    "nodes": [],
+    "relations": [
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "롯데웰푸드",
+            "properties": {
+                "type": "Business Cooperation",
+                "date": "2023-03"
+            }
+        },
+        {
+            "start_node": "소상공인시장진흥공단",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "PARTNERED_WITH",
+            "end_node": "2025 백년가게·백년소공인X롯데웰푸드 상생 프로젝트",
+            "properties": {}
+        },
+        {
+            "start_node": "롯데웰푸드",
+            "relationship": "PRODUCES",
+            "end_node": "밀키트",
+            "properties": {}
+        },
+        {
+            "start_node": "박성효",
+            "relationship": "WORKS_FOR",
+            "end_node": "소상공인시장진흥공단",
+            "properties": {
+                "position": "이사장"
+            }
+        }
+    ]
+}

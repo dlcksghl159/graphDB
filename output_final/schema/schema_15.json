@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "label": "COMPANY",
+      "name": "중소벤처기업진흥공단",
+      "properties": {
+        "full_name": "중소벤처기업진흥공단",
+        "industry": "Government Agency",
+        "headquarters": "South Korea",
+        "founded": "",
+        "ceo": "강석진"
+      }
+    },
+    {
+      "label": "COMPANY",
+      "name": "부산항만공사",
+      "properties": {
+        "full_name": "부산항만공사",
+        "industry": "Port Management",
+        "headquarters": "Busan, South Korea",
+        "founded": "",
+        "ceo": ""
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "LA·LB 해외물류센터",
+      "properties": {
+        "type": "Logistics Center",
+        "country": "USA",
+        "region": "Los Angeles, Long Beach"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "부산",
+      "properties": {
+        "type": "City",
+        "country": "South Korea",
+        "region": "Busan"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "인천",
+      "properties": {
+        "type": "City",
+        "country": "South Korea",
+        "region": "Incheon"
+      }
+    },
+    {
+      "label": "LOCATION",
+      "name": "여수 광양",
+      "properties": {
+        "type": "City",
+        "country": "South Korea",
+        "region": "Yeosu, Gwangyang"
+      }
+    },
+    {
+      "label": "AGREEMENT",
+      "name": "업무협약",
+      "properties": {
+        "type": "MOU",
+        "date": "2023-10-14",
+        "description": "글로벌 물류 지원을 위한 업무협약"
+      }
+    },
+    {
+      "label": "PROJECT",
+      "name": "스마트트레이드허브 연계 통합물류 지원 플랫폼",
+      "properties": {
+        "description": "중소기업 전용 항공·해운 통합물류 지원 플랫폼 구축",
+        "start_date": "",
+        "status": "Planned"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "start_node": "COMPANY",
+      "relationship": "PARTNERED_WITH",
+      "end_node": "COMPANY",
+      "properties": {
+        "type": "MOU",
+        "date": "2023-10-14"
+      }
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "SIGNED",
+      "end_node": "AGREEMENT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "LEADS",
+      "end_node": "PROJECT",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "COMPANY",
+      "relationship": "HEADQUARTERED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    },
+    {
+      "start_node": "LOCATION",
+      "relationship": "LOCATED_IN",
+      "end_node": "LOCATION",
+      "properties": {}
+    }
+  ]
+}

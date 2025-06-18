@@ -150,7 +150,7 @@ def _enhanced_process_chunk(args: tuple[int, str, str]) -> dict:
 ### 확장된 스키마 (JSON):"""
 
     resp = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system},

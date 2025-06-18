@@ -207,7 +207,7 @@ def process_file_general_relations(filename, chunks_dir, result_dir, system_msg,
 }}"""
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_msg},

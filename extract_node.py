@@ -248,7 +248,7 @@ def process_file_general(idx, filename, chunks_dir, result_dir, schema_json, api
     print(f"[{idx}] {filename} 처리 중...")
     
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4.1",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_msg},

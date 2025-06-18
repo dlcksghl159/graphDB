@@ -5,6 +5,7 @@
 ## 사용방법
 **(선택적) 목적 기반 뉴스 기사 자동 추출**
 ```
+python crawling.py
 python save_news.py
 ```
 

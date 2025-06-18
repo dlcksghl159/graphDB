@@ -23,3 +23,19 @@ streamlit run app.py
 python evaluate_rag.py
 ```
 
+## 환경설정
+**python 3.10.16**
+```
+pip install -r requirements.txt
+```
+
+## 개별 실행 방법 
+**app.py를 통한 통합 인터페이스가 아닌 개별 파일로 각 step을 실행하고 싶다면 아래와 같은 순서로 실행 가능하다.**
+1. crawling.py (뉴스 기사 수집)
+2. save_news.py (뉴스 기사 저장 -> output/documents)
+3. extract_schema.py (output/schema/schema.json)
+4. extract_node.py (output/result/result.json)
+5. extract_relation.py (output/result/result.json)
+6. creat_cypher.py (output/graph.cypher)
+7. send_cypher.py
+8. rag.py

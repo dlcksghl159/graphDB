@@ -35,7 +35,7 @@ pip install -r requirements.txt
 1. crawling.py (뉴스 기사 수집)
 2. save_news.py (뉴스 기사 저장 -> output/documents)
 3. extract_schema.py (output/schema/schema.json)
-4. extract_node.py (output/result/result.json)
+4. extract_node.py (output/result/result.json) 
 5. extract_relation.py (output/result/result.json)
 6. creat_cypher.py (output/graph.cypher)
 7. send_cypher.py

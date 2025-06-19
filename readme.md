@@ -41,7 +41,7 @@ pip install -r requirements.txt
 7. send_cypher.py
 8. rag.py
 
-**각 지식그래프 및 RAG 시스템에 대해 성능을 평가하고 싶다면 아래와 같이 실행 가능합니다.**\\
+**각 지식그래프 및 RAG 시스템에 대해 성능을 평가하고 싶다면 아래와 같이 실행 가능합니다.**\n
 (1) 지식그래프 평가 
 1. data/answer.json 으로 정답 스키마를 저장한다.
 2. evaluate_json.py --gold data/answer.json --pred output/result/result.json 을 실행한다.

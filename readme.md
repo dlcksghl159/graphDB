@@ -49,4 +49,4 @@ pip install -r requirements.txt
    
 &nbsp;&nbsp;(2) RAG 평가
 1. data/QAset.json 으로 각 정답 질의응답 데이터를 저장한다.
-2. evaluate_rag.py를 실행한다.
+2. evaluate_rag.py를 실행한다. 

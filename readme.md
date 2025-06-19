@@ -17,7 +17,7 @@ cp your_files/* output/documents
 **2. 전체 파이프라인 실행**
 ```
 streamlit run app.py
-```
+``` 
 **3. 성능 평가**
 ```
 python evaluate_rag.py
